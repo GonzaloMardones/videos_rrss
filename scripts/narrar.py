@@ -14,11 +14,15 @@ Lee `guion.json` del capítulo, sintetiza cada frase y las une con pausas natura
 Motores (campo "motor" del guion):
   - "kokoro": voz neuronal Kokoro v1.0 (por defecto em_alex, con fonética latinoamericana es-419)
   - "piper" : voces Piper vía sherpa-onnx (p. ej. es_MX-claude-high)
+  - "elevenlabs": API de ElevenLabs. "voz" es el voice_id; lee la clave de la variable de entorno
+    ELEVENLABS_API_KEY. Cada frase se genera con la anterior y la siguiente como contexto, para
+    que la entonación fluya como un solo relato. Ver scripts/voces_elevenlabs.py para elegir voz.
 
 Cada frase puede definir su propia "pausa" (segundos de silencio después) y "velocidad".
 Con --verificar transcribe cada frase con Whisper para revisar que la pronunciación se entienda.
 
 Requisitos: pip install kokoro-onnx sherpa-onnx soundfile numpy, y ffmpeg. Modelos: ver README.
+Con ElevenLabs, <carpeta-modelos> solo se usa para Whisper (--verificar).
 """
 
 import json
@@ -29,6 +33,9 @@ import tempfile
 
 import numpy as np
 import soundfile as sf
+
+# Solo empareja el volumen: para voces que ya suenan naturales (ElevenLabs).
+PROCESADO_SUAVE = "highpass=f=60,loudnorm=I=-16:TP=-1.5:LRA=9"
 
 # Cadena de procesado de la voz: quita graves de ruido, da cuerpo y presencia,
 # empareja el volumen y agrega una sala muy corta para que no suene "en seco".
@@ -52,7 +59,7 @@ class Kokoro:
         self.modelo = Modelo(os.path.join(modelos, "kokoro-v1.0.onnx"), os.path.join(modelos, "voices-v1.0.bin"))
         self.voz, self.idioma, self.sample_rate = voz, idioma, 24000
 
-    def decir(self, texto: str, velocidad: float) -> np.ndarray:
+    def decir(self, texto: str, velocidad: float, **_) -> np.ndarray:
         audio, self.sample_rate = self.modelo.create(texto, voice=self.voz, speed=velocidad, lang=self.idioma)
         return np.asarray(audio, dtype=np.float32)
 
@@ -75,8 +82,44 @@ class Piper:
         self.tts = sherpa_onnx.OfflineTts(config)
         self.sample_rate = self.tts.sample_rate
 
-    def decir(self, texto: str, velocidad: float) -> np.ndarray:
+    def decir(self, texto: str, velocidad: float, **_) -> np.ndarray:
         return np.asarray(self.tts.generate(texto, sid=0, speed=velocidad).samples, dtype=np.float32)
+
+
+class ElevenLabs:
+    URL = "https://api.elevenlabs.io/v1/text-to-speech/{voz}?output_format=mp3_44100_128"
+
+    def __init__(self, voz: str, modelo: str, ajustes: dict):
+        self.clave = os.environ.get("ELEVENLABS_API_KEY")
+        if not self.clave:
+            sys.exit("Falta la variable de entorno ELEVENLABS_API_KEY")
+        self.voz, self.modelo, self.ajustes, self.sample_rate = voz, modelo, ajustes, 44100
+
+    def decir(self, texto: str, velocidad: float, previo: str = "", siguiente: str = "") -> np.ndarray:
+        import urllib.request
+
+        cuerpo = {
+            "text": texto,
+            "model_id": self.modelo,
+            "previous_text": previo,
+            "next_text": siguiente,
+            "voice_settings": {**self.ajustes, "speed": max(0.7, min(1.2, velocidad))},
+        }
+        pedido = urllib.request.Request(
+            self.URL.format(voz=self.voz),
+            data=json.dumps(cuerpo).encode(),
+            headers={"xi-api-key": self.clave, "Content-Type": "application/json", "Accept": "audio/mpeg"},
+        )
+        with urllib.request.urlopen(pedido, timeout=120) as r:
+            mp3 = r.read()
+        # Decodifica el MP3 a muestras con ffmpeg.
+        pcm = subprocess.run(
+            ["ffmpeg", "-loglevel", "error", "-i", "pipe:0", "-f", "f32le", "-ac", "1", "-ar", str(self.sample_rate), "pipe:1"],
+            input=mp3,
+            capture_output=True,
+            check=True,
+        ).stdout
+        return np.frombuffer(pcm, dtype=np.float32).copy()
 
 
 def cargar_transcriptor(modelos: str):
@@ -110,11 +153,11 @@ def recortar_silencio(audio: np.ndarray, sr: int, umbral: float = 0.006) -> np.n
     return audio[inicio:fin]
 
 
-def guardar_voz(archivo: str, audio: np.ndarray, sr: int) -> None:
+def guardar_voz(archivo: str, audio: np.ndarray, sr: int, procesado: str = PROCESADO_VOZ) -> None:
     with tempfile.NamedTemporaryFile(suffix=".wav") as tmp:
         sf.write(tmp.name, audio, sr)
         subprocess.run(
-            ["ffmpeg", "-y", "-loglevel", "error", "-i", tmp.name, "-af", PROCESADO_VOZ, "-ar", "44100", "-b:a", "192k", archivo],
+            ["ffmpeg", "-y", "-loglevel", "error", "-i", tmp.name, "-af", procesado, "-ar", "44100", "-b:a", "192k", archivo],
             check=True,
         )
 
@@ -126,7 +169,10 @@ def main() -> None:
     with open(os.path.join(capitulo, "guion.json"), encoding="utf-8") as f:
         guion = json.load(f)
 
-    if guion.get("motor", "piper") == "kokoro":
+    motor = guion.get("motor", "piper")
+    if motor == "elevenlabs":
+        voz = ElevenLabs(guion["voz"], guion.get("modelo", "eleven_multilingual_v2"), guion.get("ajustes", {}))
+    elif motor == "kokoro":
         voz = Kokoro(modelos, guion["voz"], guion.get("idioma", "es-419"))
     else:
         voz = Piper(modelos, guion["voz"])
@@ -137,10 +183,15 @@ def main() -> None:
     escenas, frases = [], []
     sr = None
 
+    todas = [f["dice"] for e in guion["escenas"] for f in e["frases"]]
+    k = 0
     for escena in guion["escenas"]:
         inicio_escena = t
         for i, frase in enumerate(escena["frases"]):
-            muestras = voz.decir(frase["dice"], frase.get("velocidad", guion["velocidad"]))
+            previo = todas[k - 1] if k > 0 else ""
+            siguiente = todas[k + 1] if k + 1 < len(todas) else ""
+            k += 1
+            muestras = voz.decir(frase["dice"], frase.get("velocidad", guion["velocidad"]), previo=previo, siguiente=siguiente)
             sr = voz.sample_rate
             if not piezas:
                 piezas.append(np.zeros(int(t * sr), dtype=np.float32))
@@ -170,7 +221,7 @@ def main() -> None:
     narracion = np.concatenate(piezas)
     narracion = narracion / max(1e-6, np.max(np.abs(narracion))) * 0.89
     os.makedirs(publico, exist_ok=True)
-    guardar_voz(os.path.join(publico, "narracion.mp3"), narracion, sr)
+    guardar_voz(os.path.join(publico, "narracion.mp3"), narracion, sr, PROCESADO_SUAVE if motor == "elevenlabs" else PROCESADO_VOZ)
 
     with open(os.path.join(capitulo, "timeline.json"), "w", encoding="utf-8") as f:
         json.dump({"duracion": round(t, 3), "escenas": escenas, "frases": frases}, f, ensure_ascii=False, indent=1)

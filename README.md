@@ -40,6 +40,16 @@ python3 scripts/musica.py 136 public/cap01/musica.mp3 public/sfx
 
 Otras voces Kokoro en español: `ef_dora` (femenina), `em_santa`. También funcionan voces Piper (`"motor": "piper"`, p. ej. `es_MX-claude-high`). Se cambia en `guion.json`.
 
+### Voz con ElevenLabs (recomendada)
+
+```console
+export ELEVENLABS_API_KEY=...          # nunca la escribas en el repo
+python3 scripts/voces_elevenlabs.py buscar chilean male     # voces con acento chileno
+python3 scripts/voces_elevenlabs.py agregar <public_owner_id> <voice_id> "Narrador"
+```
+
+Luego, en `guion.json`: `"motor": "elevenlabs"`, `"voz": "<voice_id>"` y, opcionalmente, `"modelo"` y `"ajustes"` (stability, similarity_boost, style). Cada frase se genera con la anterior y la siguiente como contexto para que el relato fluya. El capítulo 1 usa unos 2.300 caracteres, dentro del plan gratis.
+
 Para la voz más humana posible, graba la tuya leyendo el guion de `GUION.md` y reemplaza `narracion.mp3` (ajustando los tiempos de `timeline.json`).
 
 ## Commands
