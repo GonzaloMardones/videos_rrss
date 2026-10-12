@@ -1,0 +1,316 @@
+{
+ "duracion": 102.412,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 7.587
+  },
+  {
+   "id": "titulo",
+   "inicio": 7.587,
+   "fin": 12.235
+  },
+  {
+   "id": "crecimiento",
+   "inicio": 12.235,
+   "fin": 21.814
+  },
+  {
+   "id": "cobre",
+   "inicio": 21.814,
+   "fin": 32.621
+  },
+  {
+   "id": "inflacion",
+   "inicio": 32.621,
+   "fin": 46.096
+  },
+  {
+   "id": "tasa",
+   "inicio": 46.096,
+   "fin": 58.986
+  },
+  {
+   "id": "empleo",
+   "inicio": 58.986,
+   "fin": 67.287
+  },
+  {
+   "id": "fiscal",
+   "inicio": 67.287,
+   "fin": 78.094
+  },
+  {
+   "id": "futuro",
+   "inicio": 78.094,
+   "fin": 87.471
+  },
+  {
+   "id": "cierre",
+   "inicio": 87.471,
+   "fin": 102.412
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 3.052,
+   "texto": "El cobre está en el precio más alto de su historia.",
+   "cue": "cobre"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 3.102,
+   "fin": 5.936,
+   "texto": "Y aun así, Chile casi no va a crecer este año.",
+   "cue": "pib"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.986,
+   "fin": 7.287,
+   "texto": "¿Cómo puede pasar eso?",
+   "cue": "pregunta"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 7.587,
+   "fin": 9.746,
+   "texto": "Capítulo 1 de Economía en simple.",
+   "cue": null
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.796,
+   "fin": 11.935,
+   "texto": "¿Cómo está Chile en 2026?",
+   "cue": null
+  },
+  {
+   "escena": "crecimiento",
+   "inicio": 12.235,
+   "fin": 15.676,
+   "texto": "Partamos por el PIB: todo lo que produce el país en un año.",
+   "cue": "definicion"
+  },
+  {
+   "escena": "crecimiento",
+   "inicio": 15.726,
+   "fin": 18.439,
+   "texto": "El año pasado creció 2,5%.",
+   "cue": "barras"
+  },
+  {
+   "escena": "crecimiento",
+   "inicio": 18.489,
+   "fin": 21.514,
+   "texto": "Para este año, el Banco Central espera menos de 1%.",
+   "cue": "proyeccion"
+  },
+  {
+   "escena": "cobre",
+   "inicio": 21.814,
+   "fin": 23.213,
+   "texto": "¿Por qué? Por el cobre.",
+   "cue": null
+  },
+  {
+   "escena": "cobre",
+   "inicio": 23.263,
+   "fin": 25.422,
+   "texto": "Lo que ganamos es precio × cantidad.",
+   "cue": "ecuacion"
+  },
+  {
+   "escena": "cobre",
+   "inicio": 25.472,
+   "fin": 27.171,
+   "texto": "El precio está por las nubes,",
+   "cue": "precio"
+  },
+  {
+   "escena": "cobre",
+   "inicio": 27.221,
+   "fin": 30.401,
+   "texto": "pero en agosto la minería produjo 17% menos.",
+   "cue": "cantidad"
+  },
+  {
+   "escena": "cobre",
+   "inicio": 30.451,
+   "fin": 32.321,
+   "texto": "Y arrastró a toda la economía.",
+   "cue": "total"
+  },
+  {
+   "escena": "inflacion",
+   "inicio": 32.621,
+   "fin": 34.431,
+   "texto": "Segundo problema: los precios.",
+   "cue": null
+  },
+  {
+   "escena": "inflacion",
+   "inicio": 34.481,
+   "fin": 37.772,
+   "texto": "La meta del Banco Central es que suban 3% al año.",
+   "cue": "meta"
+  },
+  {
+   "escena": "inflacion",
+   "inicio": 37.822,
+   "fin": 39.751,
+   "texto": "Partimos el año bajo la meta,",
+   "cue": "linea"
+  },
+  {
+   "escena": "inflacion",
+   "inicio": 39.801,
+   "fin": 42.829,
+   "texto": "pero la guerra en Medio Oriente disparó los combustibles.",
+   "cue": "guerra"
+  },
+  {
+   "escena": "inflacion",
+   "inicio": 42.879,
+   "fin": 45.796,
+   "texto": "Hoy la inflación está en 4,1%.",
+   "cue": "hoy"
+  },
+  {
+   "escena": "tasa",
+   "inicio": 46.096,
+   "fin": 48.482,
+   "texto": "Y aquí está el dilema del Banco Central.",
+   "cue": null
+  },
+  {
+   "escena": "tasa",
+   "inicio": 48.532,
+   "fin": 53.128,
+   "texto": "Con la economía débil, convendría bajar la tasa y abaratar los créditos.",
+   "cue": "bajar"
+  },
+  {
+   "escena": "tasa",
+   "inicio": 53.178,
+   "fin": 55.564,
+   "texto": "Pero con los precios subiendo, es arriesgado.",
+   "cue": "esperar"
+  },
+  {
+   "escena": "tasa",
+   "inicio": 55.614,
+   "fin": 58.686,
+   "texto": "Por eso la dejó quieta, en 4,5%.",
+   "cue": "quieta"
+  },
+  {
+   "escena": "empleo",
+   "inicio": 58.986,
+   "fin": 60.359,
+   "texto": "Y el empleo lo resiente.",
+   "cue": null
+  },
+  {
+   "escena": "empleo",
+   "inicio": 60.409,
+   "fin": 63.027,
+   "texto": "El desempleo llegó a 9,6%.",
+   "cue": "tasa"
+  },
+  {
+   "escena": "empleo",
+   "inicio": 63.077,
+   "fin": 66.987,
+   "texto": "Casi 1 de cada 10 personas que quiere trabajar no encuentra empleo.",
+   "cue": "personas"
+  },
+  {
+   "escena": "fiscal",
+   "inicio": 67.287,
+   "fin": 70.024,
+   "texto": "¿Y el Estado? Sigue gastando más de lo que recauda.",
+   "cue": null
+  },
+  {
+   "escena": "fiscal",
+   "inicio": 70.074,
+   "fin": 75.117,
+   "texto": "Pero el déficit baja: pasa de 2,8% a 1,8% del PIB.",
+   "cue": "deficit"
+  },
+  {
+   "escena": "fiscal",
+   "inicio": 75.167,
+   "fin": 77.794,
+   "texto": "Y la deuda se mantiene bajo el límite prudente.",
+   "cue": "deuda"
+  },
+  {
+   "escena": "futuro",
+   "inicio": 78.094,
+   "fin": 80.606,
+   "texto": "La apuesta para salir de esto es la inversión.",
+   "cue": "apuesta"
+  },
+  {
+   "escena": "futuro",
+   "inicio": 80.656,
+   "fin": 82.551,
+   "texto": "Con la nueva Ley de Reconstrucción,",
+   "cue": "ley"
+  },
+  {
+   "escena": "futuro",
+   "inicio": 82.601,
+   "fin": 87.171,
+   "texto": "el Banco Central espera volver a crecer entre 2% y 3% el próximo año.",
+   "cue": "rebote"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 87.471,
+   "fin": 90.261,
+   "texto": "En pocas palabras: la economía crece poco,",
+   "cue": "uno"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 90.311,
+   "fin": 91.725,
+   "texto": "los precios presionan,",
+   "cue": "dos"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 91.775,
+   "fin": 92.776,
+   "texto": "y falta empleo.",
+   "cue": "tres"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 92.826,
+   "fin": 97.035,
+   "texto": "Pero ojo: el cobre vale oro, y la inversión puede cambiar la historia.",
+   "cue": "pero"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 97.085,
+   "fin": 100.414,
+   "texto": "Estoy aprendiendo esto en el magíster y lo comparto contigo.",
+   "cue": "autor"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 100.464,
+   "fin": 102.112,
+   "texto": "Sígueme para el capítulo 2.",
+   "cue": "cta"
+  }
+ ]
+}

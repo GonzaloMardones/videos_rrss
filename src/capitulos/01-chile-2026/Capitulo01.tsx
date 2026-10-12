@@ -1,55 +1,97 @@
 import React from "react";
-import { linearTiming, TransitionSeries } from "@remotion/transitions";
-import { fade } from "@remotion/transitions/fade";
-import { Cierre, Gancho, Titulo } from "./escenas/Portada";
-import { Cobre, Crecimiento, Empleo, Fiscal, Inflacion, LoQueViene, Tasa } from "./escenas/Indicadores";
-import { Resumen } from "./escenas/Resumen";
+import { AbsoluteFill, Html5Audio, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { Background } from "../../components/Background";
+import { Captions } from "../../components/Captions";
+import { SceneProvider, type Timeline } from "../../components/narracion";
+import { clamp } from "../../components/motion";
+import { gradients, VIDEO } from "../../theme";
+import { Cierre } from "./escenas/Cierre";
+import { Gancho, Titulo } from "./escenas/Apertura";
+import { Cobre, Crecimiento, Empleo, Fiscal, Futuro, Inflacion, Tasa } from "./escenas/Indicadores";
 import { CORTE } from "./data";
+import timelineJson from "./timeline.json";
+
+const timeline = timelineJson as Timeline;
 
 export type Capitulo01Props = {
   serie: string;
   programa: string;
   autor: string;
+  volumenMusica: number;
 };
 
-const TRANSITION = 12;
+// La escena entra un poco antes de que empiece su voz y se cruza con la siguiente.
+const LEAD = 10;
+const OVERLAP = 8;
+const OUTRO = 2.4; // segundos que se mantiene el cierre tras la última palabra
 
-// Duración de cada escena en frames (30 fps). Las láminas con gráfico dan ~10 s para leer.
-const scenes: { id: string; frames: number; render: (p: Capitulo01Props) => React.ReactNode }[] = [
-  { id: "gancho", frames: 180, render: () => <Gancho /> },
-  { id: "titulo", frames: 120, render: (p) => <Titulo {...p} /> },
-  { id: "crecimiento", frames: 300, render: () => <Crecimiento /> },
-  { id: "cobre", frames: 345, render: () => <Cobre /> },
-  { id: "inflacion", frames: 330, render: () => <Inflacion /> },
-  { id: "tasa", frames: 315, render: () => <Tasa /> },
-  { id: "empleo", frames: 300, render: () => <Empleo /> },
-  { id: "fiscal", frames: 285, render: () => <Fiscal /> },
-  { id: "lo-que-viene", frames: 300, render: () => <LoQueViene /> },
-  { id: "resumen", frames: 270, render: () => <Resumen /> },
-  { id: "cierre", frames: 210, render: (p) => <Cierre autor={p.autor} corte={CORTE} /> },
-];
+export const CAPITULO01_FRAMES = Math.ceil((timeline.duracion + OUTRO) * VIDEO.fps);
 
-export const CAPITULO01_FRAMES =
-  scenes.reduce((sum, s) => sum + s.frames, 0) - TRANSITION * (scenes.length - 1);
+// Momentos en que suena un "pop": cuando aparece una cifra clave.
+const POPS = ["cobre", "pib", "barras", "proyeccion", "precio", "cantidad", "hoy", "quieta", "tasa", "deficit", "deuda", "rebote", "cta"];
 
-export const Capitulo01: React.FC<Capitulo01Props> = (props) => (
-  <TransitionSeries>
-    {scenes.flatMap((scene, i) => {
-      const seq = (
-        <TransitionSeries.Sequence key={scene.id} durationInFrames={scene.frames}>
-          {scene.render(props)}
-        </TransitionSeries.Sequence>
-      );
-      return i === 0
-        ? [seq]
-        : [
-            <TransitionSeries.Transition
-              key={`${scene.id}-in`}
-              presentation={fade()}
-              timing={linearTiming({ durationInFrames: TRANSITION })}
-            />,
-            seq,
-          ];
-    })}
-  </TransitionSeries>
-);
+const ProgressBar: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  return (
+    <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 8, background: "rgba(255,255,255,0.08)" }}>
+      <div style={{ width: `${(frame / durationInFrames) * 100}%`, height: "100%", background: gradients.brand }} />
+    </div>
+  );
+};
+
+export const Capitulo01: React.FC<Capitulo01Props> = ({ serie, programa, autor, volumenMusica }) => {
+  const { fps, durationInFrames } = useVideoConfig();
+  const escenas: Record<string, React.ReactNode> = {
+    gancho: <Gancho />,
+    titulo: <Titulo serie={serie} autor={autor} programa={programa} />,
+    crecimiento: <Crecimiento />,
+    cobre: <Cobre />,
+    inflacion: <Inflacion />,
+    tasa: <Tasa />,
+    empleo: <Empleo />,
+    fiscal: <Fiscal />,
+    futuro: <Futuro />,
+    cierre: <Cierre autor={autor} programa={programa} corte={CORTE} />,
+  };
+
+  return (
+    <AbsoluteFill>
+      <Background />
+
+      {timeline.escenas.map((e, i) => {
+        const last = i === timeline.escenas.length - 1;
+        const from = i === 0 ? 0 : Math.round(e.inicio * fps) - LEAD;
+        const to = last ? durationInFrames : Math.round(e.fin * fps) + OVERLAP;
+        return (
+          <Sequence key={e.id} from={from} durationInFrames={to - from} name={e.id}>
+            <SceneProvider id={e.id} from={from} duration={to - from} timeline={timeline}>
+              {escenas[e.id]}
+            </SceneProvider>
+          </Sequence>
+        );
+      })}
+
+      <Captions timeline={timeline} />
+      <ProgressBar />
+
+      <Html5Audio src={staticFile("cap01/narracion.mp3")} />
+      <Html5Audio
+        src={staticFile("cap01/musica.mp3")}
+        volume={(f) => volumenMusica * interpolate(f, [durationInFrames - 2 * fps, durationInFrames], [1, 0], clamp)}
+      />
+      {timeline.escenas.slice(1).map((e) => (
+        <Sequence key={`whoosh-${e.id}`} from={Math.max(0, Math.round(e.inicio * fps) - LEAD - 4)} durationInFrames={20}>
+          <Html5Audio src={staticFile("sfx/whoosh.wav")} volume={0.32} />
+        </Sequence>
+      ))}
+      {timeline.frases
+        .filter((f) => f.cue && POPS.includes(f.cue))
+        .map((f) => (
+          <Sequence key={`pop-${f.escena}-${f.cue}`} from={Math.round(f.inicio * fps) + 4} durationInFrames={8}>
+            <Html5Audio src={staticFile("sfx/pop.wav")} volume={0.22} />
+          </Sequence>
+        ))}
+    </AbsoluteFill>
+  );
+};

@@ -1,0 +1,236 @@
+{
+  "voz": "es_MX-claude-high",
+  "velocidad": 1.2,
+  "pausaFrase": 0.05,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "El cobre está en el precio más alto de su historia.",
+          "muestra": "El cobre está en el precio más alto de su historia.",
+          "cue": "cobre"
+        },
+        {
+          "dice": "Y aun así, Chile casi no va a crecer este año.",
+          "muestra": "Y aun así, Chile casi no va a crecer este año.",
+          "cue": "pib"
+        },
+        {
+          "dice": "¿Cómo puede pasar eso?",
+          "muestra": "¿Cómo puede pasar eso?",
+          "cue": "pregunta"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Capítulo uno de Economía en simple.",
+          "muestra": "Capítulo 1 de Economía en simple."
+        },
+        {
+          "dice": "Cómo está Chile en dos mil veintiséis.",
+          "muestra": "¿Cómo está Chile en 2026?"
+        }
+      ]
+    },
+    {
+      "id": "crecimiento",
+      "frases": [
+        {
+          "dice": "Partamos por el PIB: todo lo que produce el país en un año.",
+          "muestra": "Partamos por el PIB: todo lo que produce el país en un año.",
+          "cue": "definicion"
+        },
+        {
+          "dice": "El año pasado creció dos coma cinco por ciento.",
+          "muestra": "El año pasado creció 2,5%.",
+          "cue": "barras"
+        },
+        {
+          "dice": "Para este año, el Banco Central espera menos de uno.",
+          "muestra": "Para este año, el Banco Central espera menos de 1%.",
+          "cue": "proyeccion"
+        }
+      ]
+    },
+    {
+      "id": "cobre",
+      "frases": [
+        {
+          "dice": "¿Por qué? Por el cobre.",
+          "muestra": "¿Por qué? Por el cobre."
+        },
+        {
+          "dice": "Lo que ganamos es precio por cantidad.",
+          "muestra": "Lo que ganamos es precio × cantidad.",
+          "cue": "ecuacion"
+        },
+        {
+          "dice": "El precio está por las nubes,",
+          "muestra": "El precio está por las nubes,",
+          "cue": "precio"
+        },
+        {
+          "dice": "pero en agosto la minería produjo diecisiete por ciento menos.",
+          "muestra": "pero en agosto la minería produjo 17% menos.",
+          "cue": "cantidad"
+        },
+        {
+          "dice": "Y arrastró a toda la economía.",
+          "muestra": "Y arrastró a toda la economía.",
+          "cue": "total"
+        }
+      ]
+    },
+    {
+      "id": "inflacion",
+      "frases": [
+        {
+          "dice": "Segundo problema: los precios.",
+          "muestra": "Segundo problema: los precios."
+        },
+        {
+          "dice": "La meta del Banco Central es que suban tres por ciento al año.",
+          "muestra": "La meta del Banco Central es que suban 3% al año.",
+          "cue": "meta"
+        },
+        {
+          "dice": "Partimos el año bajo la meta,",
+          "muestra": "Partimos el año bajo la meta,",
+          "cue": "linea"
+        },
+        {
+          "dice": "pero la guerra en Medio Oriente disparó los combustibles.",
+          "muestra": "pero la guerra en Medio Oriente disparó los combustibles.",
+          "cue": "guerra"
+        },
+        {
+          "dice": "Hoy la inflación está en cuatro coma uno por ciento.",
+          "muestra": "Hoy la inflación está en 4,1%.",
+          "cue": "hoy"
+        }
+      ]
+    },
+    {
+      "id": "tasa",
+      "frases": [
+        {
+          "dice": "Y aquí está el dilema del Banco Central.",
+          "muestra": "Y aquí está el dilema del Banco Central."
+        },
+        {
+          "dice": "Con la economía débil, convendría bajar la tasa de interés y abaratar los créditos.",
+          "muestra": "Con la economía débil, convendría bajar la tasa y abaratar los créditos.",
+          "cue": "bajar"
+        },
+        {
+          "dice": "Pero con los precios subiendo, es arriesgado.",
+          "muestra": "Pero con los precios subiendo, es arriesgado.",
+          "cue": "esperar"
+        },
+        {
+          "dice": "Por eso la dejó quieta, en cuatro coma cinco por ciento.",
+          "muestra": "Por eso la dejó quieta, en 4,5%.",
+          "cue": "quieta"
+        }
+      ]
+    },
+    {
+      "id": "empleo",
+      "frases": [
+        {
+          "dice": "Y el empleo lo resiente.",
+          "muestra": "Y el empleo lo resiente."
+        },
+        {
+          "dice": "El desempleo llegó a nueve coma seis por ciento.",
+          "muestra": "El desempleo llegó a 9,6%.",
+          "cue": "tasa"
+        },
+        {
+          "dice": "Casi una de cada diez personas que quiere trabajar, no encuentra empleo.",
+          "muestra": "Casi 1 de cada 10 personas que quiere trabajar no encuentra empleo.",
+          "cue": "personas"
+        }
+      ]
+    },
+    {
+      "id": "fiscal",
+      "frases": [
+        {
+          "dice": "¿Y el Estado? Sigue gastando más de lo que recauda.",
+          "muestra": "¿Y el Estado? Sigue gastando más de lo que recauda."
+        },
+        {
+          "dice": "Pero el déficit baja: pasa de dos coma ocho, a uno coma ocho por ciento del PIB.",
+          "muestra": "Pero el déficit baja: pasa de 2,8% a 1,8% del PIB.",
+          "cue": "deficit"
+        },
+        {
+          "dice": "Y la deuda se mantiene bajo el límite prudente.",
+          "muestra": "Y la deuda se mantiene bajo el límite prudente.",
+          "cue": "deuda"
+        }
+      ]
+    },
+    {
+      "id": "futuro",
+      "frases": [
+        {
+          "dice": "La apuesta para salir de esto es la inversión.",
+          "muestra": "La apuesta para salir de esto es la inversión.",
+          "cue": "apuesta"
+        },
+        {
+          "dice": "Con la nueva Ley de Reconstrucción,",
+          "muestra": "Con la nueva Ley de Reconstrucción,",
+          "cue": "ley"
+        },
+        {
+          "dice": "el Banco Central espera volver a crecer entre dos y tres por ciento el próximo año.",
+          "muestra": "el Banco Central espera volver a crecer entre 2% y 3% el próximo año.",
+          "cue": "rebote"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "En pocas palabras: la economía crece poco,",
+          "muestra": "En pocas palabras: la economía crece poco,",
+          "cue": "uno"
+        },
+        {
+          "dice": "los precios presionan,",
+          "muestra": "los precios presionan,",
+          "cue": "dos"
+        },
+        {
+          "dice": "y falta empleo.",
+          "muestra": "y falta empleo.",
+          "cue": "tres"
+        },
+        {
+          "dice": "Pero ojo: el cobre vale oro, y la inversión puede cambiar la historia.",
+          "muestra": "Pero ojo: el cobre vale oro, y la inversión puede cambiar la historia.",
+          "cue": "pero"
+        },
+        {
+          "dice": "Estoy aprendiendo esto en el magíster, y lo comparto contigo.",
+          "muestra": "Estoy aprendiendo esto en el magíster y lo comparto contigo.",
+          "cue": "autor"
+        },
+        {
+          "dice": "Sígueme para el capítulo dos.",
+          "muestra": "Sígueme para el capítulo 2.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

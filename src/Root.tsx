@@ -16,8 +16,9 @@ export const RemotionRoot: React.FC = () => {
         height={VIDEO.height}
         defaultProps={{
           serie: "Economía en simple",
-          programa: "Apuntes del MAE Weekend · FEN",
+          programa: "Aprendiendo en el MAE Weekend · FEN",
           autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
         }}
       />
       <MyComposition />

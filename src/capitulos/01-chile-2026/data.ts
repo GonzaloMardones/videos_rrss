@@ -1,7 +1,7 @@
 // Cifras del Capítulo 1, con su fuente oficial. Corte de información: 12 de octubre de 2026.
 // Al actualizar un dato, cambia también su fuente y fecha.
 
-export const CORTE = "Datos al 12 de octubre de 2026";
+export const CORTE = "Datos al 12-10-2026";
 
 export const crecimiento = {
   // Banco Central de Chile, Cuentas Nacionales (publicadas el 18-03-2026; 2023 y 2024 revisados).
@@ -14,7 +14,7 @@ export const crecimiento = {
   proyeccion2026: { min: 0.25, max: 0.75 },
   proyeccion2027: { min: 2, max: 3 },
   proyeccion2028: { min: 2.25, max: 3.25 },
-  fuente: "Fuente: Banco Central de Chile, Cuentas Nacionales (mar. 2026) e IPoM (sept. 2026).",
+  fuente: "Banco Central · Cuentas Nacionales (mar. 2026) e IPoM sept. 2026",
 };
 
 export const mineria = {
@@ -24,7 +24,7 @@ export const mineria = {
   imacec: -1.0,
   imacecMinero: -17.4,
   imacecNoMinero: 1.4,
-  fuente: "Fuentes: Banco Central de Chile, Imacec agosto 2026; Cochilco (precio del cobre, ago. 2026).",
+  fuente: "Banco Central · Imacec ago. 2026 · Cochilco",
 };
 
 export const inflacion = {
@@ -45,14 +45,14 @@ export const inflacion = {
   rango: { min: 2, max: 4 },
   // Banco Central de Chile, IPoM septiembre 2026.
   proyeccionCierre2026: 4.3,
-  fuente: "Fuentes: INE, IPC (dic. 2025 a sept. 2026); Banco Central de Chile, IPoM sept. 2026.",
+  fuente: "INE · IPC dic. 2025–sept. 2026 · Banco Central",
 };
 
 export const tasa = {
   // Banco Central de Chile: recorte a 4,5% en diciembre de 2025; se mantuvo en abril, junio y septiembre de 2026.
   tpm: 4.5,
   desde: "dic. 2025",
-  fuente: "Fuente: Banco Central de Chile, Reunión de Política Monetaria (8 sept. 2026) e IPoM sept. 2026.",
+  fuente: "Banco Central · Reunión de Política Monetaria, 8 sept. 2026",
 };
 
 export const empleo = {
@@ -69,7 +69,7 @@ export const empleo = {
   ocupados: -0.9, // % anual
   mujeres: 10.3,
   hombres: 9.1,
-  fuente: "Fuente: INE, Encuesta Nacional de Empleo (trimestre jun–ago 2026, publicado el 30-09-2026).",
+  fuente: "INE · Encuesta Nacional de Empleo, jun–ago 2026",
 };
 
 export const fiscal = {
@@ -78,12 +78,12 @@ export const fiscal = {
   deficit2026: 1.8,
   deuda2026: 42.7,
   nivelPrudente: 45,
-  fuente: "Fuente: Dipres, Informe de Finanzas Públicas, tercer trimestre de 2026.",
+  fuente: "Dipres · Informe de Finanzas Públicas, 3.er trimestre 2026",
 };
 
 export const reconstruccion = {
   // Ministerio de Hacienda / Congreso: Ley de Reconstrucción Nacional y Desarrollo Económico y Social (2026).
   impuestoDesde: 27,
   impuestoHasta: 23,
-  fuente: "Fuentes: Banco Central de Chile, IPoM sept. 2026; Ministerio de Hacienda.",
+  fuente: "Banco Central · IPoM sept. 2026 · Ministerio de Hacienda",
 };
