@@ -11,7 +11,13 @@ Proyecto Remotion dedicado a crear videos para redes sociales (formato vertical 
   </a>
 </p>
 
-Welcome to your Remotion project!
+## Capítulos
+
+| # | Composición | Tema | Guion y fuentes |
+| --- | --- | --- | --- |
+| 1 | `Cap01-Chile2026` | ¿Cómo está Chile en 2026? | [GUION.md](src/capitulos/01-chile-2026/GUION.md) |
+
+Cada capítulo vive en `src/capitulos/<nn>-<tema>/` con sus cifras y fuentes en `data.ts`. Los componentes compartidos (gráficos, tarjetas, láminas) están en `src/components/` y la paleta en `src/theme.ts`.
 
 ## Commands
 
@@ -30,7 +36,7 @@ npm run dev
 **Render video**
 
 ```console
-npm run render   # -> out/video.mp4
+npm run render   # -> out/cap01-chile-2026.mp4
 ```
 
 **Upgrade Remotion**
