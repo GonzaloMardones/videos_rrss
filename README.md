@@ -57,7 +57,7 @@ npm run dev
 **Render video**
 
 ```console
-npm run render   # -> out/cap01-chile-2026.mp4
+npm run render   # -> out/cap01-chile-2026.mp4 (audio normalizado a -14 LUFS para redes)
 ```
 
 **Upgrade Remotion**
