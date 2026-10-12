@@ -3,67 +3,34 @@ import { interpolate, useCurrentFrame } from "remotion";
 import { SceneShell } from "../../../components/SceneShell";
 import { GlowBars, GlowLine } from "../../../components/charts";
 import { clamp, Pop, useEase, useSpring } from "../../../components/motion";
-import { useCue } from "../../../components/narracion";
-import { Counter, fmt, fmtSigned, Glass, GradientText, Label, Pill } from "../../../components/ui";
+import { useCue, useCueAt } from "../../../components/narracion";
+import { Counter, fmt, fmtSigned, Glass, GradientText, Note } from "../../../components/ui";
 import { colors, fonts, gradients } from "../../../theme";
-import { crecimiento, empleo, fiscal, inflacion, mineria, reconstruccion, tasa } from "../data";
+import { crecimiento, empleo, fiscal, inflacion, mineria, tasa } from "../data";
+import { Arrow, Title } from "./comun";
 
-const Title: React.FC<{ at?: number; gradient: string; children: React.ReactNode; sub?: string }> = ({
-  at = 6,
-  gradient,
-  children,
-  sub,
-}) => (
-  <div style={{ marginBottom: 18 }}>
-    <Pop at={at} from="zoom" style={{ transformOrigin: "left center" }}>
-      <div style={{ fontFamily: fonts.serif, fontStyle: "italic", fontSize: 124, lineHeight: 1, letterSpacing: -2 }}>
-        <GradientText gradient={gradient}>{children}</GradientText>
-      </div>
-    </Pop>
-    {sub ? (
-      <Pop at={at + 6}>
-        <Label style={{ marginTop: 10 }}>{sub}</Label>
-      </Pop>
-    ) : null}
-  </div>
-);
+const num: React.CSSProperties = { fontFamily: fonts.display, fontWeight: 800, letterSpacing: -4, lineHeight: 1 };
 
-const Arrow: React.FC<{ up: boolean; color: string; size?: number }> = ({ up, color, size = 70 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" style={{ filter: `drop-shadow(0 0 14px ${color})` }}>
-    <path
-      d={up ? "M12 3 L20 12 H15 V21 H9 V12 H4 Z" : "M12 21 L20 12 H15 V3 H9 V12 H4 Z"}
-      fill={color}
-    />
-  </svg>
-);
-
-// 01 · Crecimiento
+// Crecimiento
 export const Crecimiento: React.FC = () => {
   const cDef = useCue("definicion");
   const cBarras = useCue("barras");
   const cProy = useCue("proyeccion");
   return (
-    <SceneShell entrada="rise" step={{ n: 1, title: "Crecimiento", color: colors.cyan }} source={crecimiento.fuente}>
-      <Pop at={cDef}>
-        <Glass style={{ display: "flex", alignItems: "center", gap: 28 }} glow="rgba(59,130,246,0.35)">
-          <div style={{ fontSize: 110, fontWeight: 900, letterSpacing: -4 }}>
-            <GradientText gradient={gradients.cool}>PIB</GradientText>
-          </div>
-          <div style={{ fontFamily: fonts.serif, fontStyle: "italic", fontSize: 50, lineHeight: 1.05, color: colors.text }}>
-            = todo lo que produce un país en un año
-          </div>
-        </Glass>
-      </Pop>
+    <SceneShell entrada="rise" source={crecimiento.fuente}>
+      <Title at={cDef} gradient={gradients.cool} sub="Todo lo que produce el país en un año: el tamaño de la torta.">
+        El PIB
+      </Title>
       <Pop at={cBarras - 4}>
-        <Label style={{ marginTop: 44, marginBottom: 6 }}>Crecimiento anual del PIB</Label>
+        <Note style={{ marginTop: 20 }}>Cuánto creció cada año</Note>
       </Pop>
       <GlowBars
         width={900}
-        height={540}
+        height={580}
         max={3.2}
         items={[
           ...crecimiento.historico.map((d, i) => ({ label: d.label, value: d.value, tone: "cool" as const, at: cBarras + i * 6 })),
-          { label: "2026 proy.", range: crecimiento.proyeccion2026, tone: "warm" as const, at: cProy + 6 },
+          { label: "2026", range: crecimiento.proyeccion2026, tone: "warm" as const, at: cProy + 6 },
         ]}
       />
     </SceneShell>
@@ -71,17 +38,6 @@ export const Crecimiento: React.FC = () => {
 };
 
 // Barras horizontales que nacen desde el cero: negativas a la izquierda, positivas a la derecha.
-const Diverging: React.FC<{ at: number; rows: { label: string; value: number; strong?: boolean }[] }> = ({ at, rows }) => {
-  const half = 270;
-  return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-      {rows.map((r, i) => (
-        <DivergingRow key={r.label} at={at + i * 6} half={half} {...r} />
-      ))}
-    </div>
-  );
-};
-
 const DivergingRow: React.FC<{ at: number; half: number; label: string; value: number; strong?: boolean }> = ({
   at,
   half,
@@ -94,7 +50,7 @@ const DivergingRow: React.FC<{ at: number; half: number; label: string; value: n
   const neg = value < 0;
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 16, opacity: Math.min(1, p * 2) }}>
-      <div style={{ width: 250, fontSize: 30, fontWeight: strong ? 800 : 600, color: strong ? colors.text : colors.dim }}>{label}</div>
+      <div style={{ width: 250, fontSize: 32, fontWeight: strong ? 800 : 600, color: strong ? colors.text : colors.dim }}>{label}</div>
       <div style={{ position: "relative", width: half * 2, height: 46 }}>
         <div style={{ position: "absolute", left: half - 1, top: -8, bottom: -8, width: 2, background: colors.line }} />
         <div
@@ -112,9 +68,10 @@ const DivergingRow: React.FC<{ at: number; half: number; label: string; value: n
         <div
           style={{
             position: "absolute",
-            top: 2,
-            fontSize: 34,
-            fontWeight: 900,
+            top: 0,
+            fontFamily: fonts.display,
+            fontSize: 36,
+            fontWeight: 800,
             color: neg ? colors.pink : colors.cyan,
             ...(neg ? { right: half + w + 12 } : { left: half + w + 12 }),
           }}
@@ -126,7 +83,7 @@ const DivergingRow: React.FC<{ at: number; half: number; label: string; value: n
   );
 };
 
-// 02 · El cobre
+// El cobre
 export const Cobre: React.FC = () => {
   const cEc = useCue("ecuacion");
   const cPrecio = useCue("precio");
@@ -134,11 +91,13 @@ export const Cobre: React.FC = () => {
   const cTotal = useCue("total");
   const term = (label: string, at: number) => (
     <Pop at={at} from="zoom" style={{ flex: 1 }}>
-      <Glass style={{ textAlign: "center", padding: "22px 10px", fontSize: 60, fontWeight: 900, letterSpacing: -2 }}>{label}</Glass>
+      <Glass style={{ textAlign: "center", padding: "22px 10px", fontFamily: fonts.display, fontSize: 62, fontWeight: 800, letterSpacing: -2 }}>
+        {label}
+      </Glass>
     </Pop>
   );
   return (
-    <SceneShell entrada="slide" step={{ n: 2, title: "La paradoja del cobre", color: colors.gold }} source={mineria.fuente}>
+    <SceneShell entrada="slide" source={mineria.fuente}>
       <Title gradient={gradients.gold}>El cobre</Title>
       <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
         {term("Precio", cEc + 2)}
@@ -151,40 +110,39 @@ export const Cobre: React.FC = () => {
         <Pop at={cPrecio + 2} style={{ flex: 1 }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <Arrow up color={colors.cyan} />
-            <div style={{ fontSize: 76, fontWeight: 900, letterSpacing: -3 }}>
+            <div style={{ ...num, fontSize: 78 }}>
               <GradientText gradient={gradients.cool}>US${fmt(mineria.cobreRecord, 2)}</GradientText>
             </div>
-            <div style={{ fontSize: 28, color: colors.dim }}>récord por libra</div>
+            <Note style={{ fontSize: 28 }}>récord por libra</Note>
           </div>
         </Pop>
         <Pop at={cCant + 8} style={{ flex: 1 }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
             <Arrow up={false} color={colors.pink} />
-            <div style={{ fontSize: 76, fontWeight: 900, letterSpacing: -3 }}>
+            <div style={{ ...num, fontSize: 78 }}>
               <GradientText gradient={gradients.warm}>{fmtSigned(mineria.imacecMinero)}%</GradientText>
             </div>
-            <div style={{ fontSize: 28, color: colors.dim }}>producción minera, agosto</div>
+            <Note style={{ fontSize: 28 }}>producción minera, agosto</Note>
           </div>
         </Pop>
       </div>
       <Pop at={cTotal} style={{ marginTop: 34 }}>
         <Glass style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <Label>Imacec agosto 2026 · variación anual</Label>
-          <Diverging
-            at={cTotal + 6}
-            rows={[
-              { label: "Minería", value: mineria.imacecMinero },
-              { label: "Resto", value: mineria.imacecNoMinero },
-              { label: "Economía total", value: mineria.imacec, strong: true },
-            ]}
-          />
+          <Note style={{ fontSize: 28 }}>Actividad de agosto vs. un año antes</Note>
+          {[
+            { label: "Minería", value: mineria.imacecMinero },
+            { label: "Resto", value: mineria.imacecNoMinero },
+            { label: "Economía total", value: mineria.imacec, strong: true },
+          ].map((r, i) => (
+            <DivergingRow key={r.label} at={cTotal + 6 + i * 6} half={270} {...r} />
+          ))}
         </Glass>
       </Pop>
     </SceneShell>
   );
 };
 
-// 03 · Inflación
+// Inflación
 export const Inflacion: React.FC = () => {
   const frame = useCurrentFrame();
   const cMeta = useCue("meta");
@@ -197,12 +155,12 @@ export const Inflacion: React.FC = () => {
     [0, 3, 4, 7, inflacion.serie.length - 1],
     clamp,
   );
-  const meta = useEase(cMeta + 6, 16);
+  const meta = useEase(useCueAt("meta", 0.75), 16);
   const war = interpolate(frame, [cGuerra, cGuerra + 12], [0, 1], clamp);
   return (
-    <SceneShell entrada="tilt" step={{ n: 3, title: "Inflación", color: colors.pink }} source={inflacion.fuente}>
-      <Title gradient={gradients.warm} sub="IPC · variación en 12 meses">
-        Los precios
+    <SceneShell entrada="tilt" source={inflacion.fuente}>
+      <Title at={cMeta} gradient={gradients.warm} sub="Cuánto suben los precios en 12 meses.">
+        La inflación
       </Title>
       <GlowLine
         data={inflacion.serie}
@@ -210,7 +168,7 @@ export const Inflacion: React.FC = () => {
         yMax={4.9}
         reached={reached}
         width={900}
-        height={680}
+        height={660}
         tone="warm"
         band={{ min: inflacion.rango.min, max: inflacion.rango.max, label: "Rango meta 2%–4%", opacity: meta }}
         target={{ value: inflacion.meta, label: "Meta 3%", opacity: meta }}
@@ -238,7 +196,7 @@ const Seesaw: React.FC<{ cBajar: number; cEsperar: number }> = ({ cBajar, cEsper
     <div style={{ position: "absolute", left: pos.x - 150, top: pos.y - 222, width: 300 }}>
       <Pop at={at} from="down" distance={260}>
         <Glass glow={glow} style={{ padding: "22px 24px", textAlign: "center" }}>
-          <div style={{ fontSize: 46, fontWeight: 900, letterSpacing: -1 }}>
+          <div style={{ fontFamily: fonts.display, fontSize: 50, fontWeight: 800, letterSpacing: -1 }}>
             <GradientText gradient={gradient}>{title}</GradientText>
           </div>
           <div style={{ fontSize: 28, lineHeight: 1.25, color: colors.dim, marginTop: 6 }}>{text}</div>
@@ -269,28 +227,26 @@ const Seesaw: React.FC<{ cBajar: number; cEsperar: number }> = ({ cBajar, cEsper
   );
 };
 
-// 04 · Tasa de política monetaria
+// Tasa de política monetaria
 export const Tasa: React.FC = () => {
   const cBajar = useCue("bajar");
   const cEsperar = useCue("esperar");
   const cQuieta = useCue("quieta");
   return (
-    <SceneShell entrada="zoom" step={{ n: 4, title: "Tasa de interés", color: colors.violet }} source={tasa.fuente}>
-      <Title gradient={gradients.brand} sub="Tasa de política monetaria · el «precio del dinero»">
+    <SceneShell entrada="zoom" source={tasa.fuente}>
+      <Title at={cBajar} gradient={gradients.brand}>
         El dilema
       </Title>
-      <div style={{ height: 230, display: "flex", alignItems: "center", gap: 26 }}>
+      <div style={{ height: 230, display: "flex", alignItems: "center", gap: 28 }}>
         <Pop at={cQuieta + 2} from="zoom" style={{ transformOrigin: "left center" }}>
-          <div style={{ fontSize: 180, fontWeight: 900, letterSpacing: -8, lineHeight: 1 }}>
+          <div style={{ ...num, fontSize: 200, letterSpacing: -8 }}>
             <GradientText gradient={gradients.brand}>
               <Counter to={tasa.tpm} from={0} at={cQuieta + 2} duration={26} suffix="%" />
             </GradientText>
           </div>
         </Pop>
         <Pop at={cQuieta + 10}>
-          <Pill dot={colors.violet} style={{ fontSize: 26, whiteSpace: "nowrap" }}>
-            Sin cambios desde {tasa.desde}
-          </Pill>
+          <Note style={{ width: 300 }}>sin cambios desde {tasa.desde}</Note>
         </Pop>
       </div>
       <Seesaw cBajar={cBajar} cEsperar={cEsperar} />
@@ -308,7 +264,10 @@ const Person: React.FC<{ lit: number; alert: number }> = ({ lit, alert }) => {
           <stop offset="100%" stopColor={colors.pink} />
         </linearGradient>
       </defs>
-      <g style={{ filter: alert > 0.5 ? `drop-shadow(0 0 18px ${colors.pink})` : undefined }} transform={`translate(37 65) scale(${1 + alert * 0.18}) translate(-37 -65)`}>
+      <g
+        style={{ filter: alert > 0.5 ? `drop-shadow(0 0 18px ${colors.pink})` : undefined }}
+        transform={`translate(37 65) scale(${1 + alert * 0.18}) translate(-37 -65)`}
+      >
         <circle cx={37} cy={24} r={20} fill={fill} />
         <path d="M6 126 V82 Q6 52 37 52 Q68 52 68 82 V126 Z" fill={fill} />
       </g>
@@ -316,51 +275,81 @@ const Person: React.FC<{ lit: number; alert: number }> = ({ lit, alert }) => {
   );
 };
 
-const People: React.FC<{ at: number }> = ({ at }) => {
-  const frame = useCurrentFrame();
-  return (
-    <div style={{ display: "flex", justifyContent: "space-between", width: 900 }}>
-      {Array.from({ length: 10 }, (_, i) => (
-        <Person
-          key={i}
-          lit={interpolate(frame, [at + i * 3, at + i * 3 + 8], [0, 1], clamp)}
-          alert={i === 9 ? interpolate(frame, [at + 40, at + 50], [0, 1], clamp) : 0}
-        />
-      ))}
-    </div>
-  );
-};
-
-// 05 · Empleo
+// Empleo
 export const Empleo: React.FC = () => {
   const frame = useCurrentFrame();
   const cTasa = useCue("tasa");
   const cPersonas = useCue("personas");
   const reached = interpolate(frame, [cTasa + 10, cTasa + 50], [0, empleo.serie.length - 1], clamp);
   return (
-    <SceneShell entrada="rise" step={{ n: 5, title: "Empleo", color: colors.orange }} source={empleo.fuente}>
-      <Title gradient={gradients.warm} sub="Tasa de desocupación">
+    <SceneShell entrada="rise" source={empleo.fuente}>
+      <Title at={cTasa} gradient={gradients.warm} sub={`Desempleo, ${empleo.serie[empleo.serie.length - 1].label.toLowerCase()} 2026`}>
         El empleo
       </Title>
-      <div style={{ display: "flex", alignItems: "center", gap: 26 }}>
-        <Pop at={cTasa} from="zoom" style={{ transformOrigin: "left center" }}>
-          <div style={{ fontSize: 190, fontWeight: 900, letterSpacing: -8, lineHeight: 1 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
+        <Pop at={cTasa + 4} from="zoom" style={{ transformOrigin: "left center" }}>
+          <div style={{ ...num, fontSize: 190, letterSpacing: -8 }}>
             <GradientText gradient={gradients.warm}>
-              <Counter to={empleo.serie[empleo.serie.length - 1].value} from={7} at={cTasa} duration={30} suffix="%" />
+              <Counter to={empleo.serie[empleo.serie.length - 1].value} from={7} at={cTasa + 4} duration={30} suffix="%" />
             </GradientText>
           </div>
         </Pop>
-        <Pop at={cTasa + 12}>
-          <Pill dot={colors.orange} style={{ fontSize: 26, whiteSpace: "nowrap" }}>
-            +{fmt(empleo.alzaDoceMeses)} pp en un año
-          </Pill>
+        <Pop at={cTasa + 16}>
+          <Note style={{ width: 280 }}>+{fmt(empleo.alzaDoceMeses)} punto en un año</Note>
         </Pop>
       </div>
-      <GlowLine data={empleo.serie} yMin={8.5} yMax={9.9} reached={reached} width={900} height={300} tone="warm" labelSize={22} />
-      <Pop at={cPersonas} style={{ marginTop: 26 }}>
-        <People at={cPersonas + 4} />
+      <GlowLine data={empleo.serie} yMin={8.5} yMax={9.9} reached={reached} width={900} height={280} tone="warm" labelSize={22} />
+      <Pop at={cPersonas} style={{ marginTop: 24 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", width: 900 }}>
+          {Array.from({ length: 10 }, (_, i) => (
+            <Person
+              key={i}
+              lit={interpolate(frame, [cPersonas + 4 + i * 3, cPersonas + 12 + i * 3], [0, 1], clamp)}
+              alert={i === 9 ? interpolate(frame, [cPersonas + 44, cPersonas + 54], [0, 1], clamp) : 0}
+            />
+          ))}
+        </div>
       </Pop>
     </SceneShell>
+  );
+};
+
+// Ingresos contra gastos: el déficit es la parte que falta y se cubre con deuda.
+const DeficitDiagram: React.FC<{ at: number }> = ({ at }) => {
+  const a = useEase(at, 22);
+  const b = useEase(at + 14, 22);
+  const gap = useEase(at + 34, 18);
+  const W = 900;
+  const ingresos = 0.78 * W;
+  const row = (label: string, width: number, p: number, gradient: string) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+      <div style={{ width: 170, fontSize: 32, fontWeight: 700, color: colors.dim }}>{label}</div>
+      <div style={{ height: 56, width: (width - 190) * p, borderRadius: 18, background: gradient }} />
+    </div>
+  );
+  return (
+    <div style={{ position: "relative", display: "flex", flexDirection: "column", gap: 16 }}>
+      {row("Recauda", ingresos, a, gradients.cool)}
+      {row("Gasta", W, b, gradients.warm)}
+      <div
+        style={{
+          position: "absolute",
+          left: ingresos,
+          top: -14,
+          height: 154,
+          width: W - ingresos - 10,
+          border: `3px dashed ${colors.gold}`,
+          borderRadius: 18,
+          opacity: gap,
+        }}
+      />
+      <div style={{ position: "absolute", left: ingresos - 30, top: 150, width: 260, textAlign: "center", opacity: gap }}>
+        <div style={{ fontFamily: fonts.display, fontSize: 40, fontWeight: 800 }}>
+          <GradientText gradient={gradients.gold}>Déficit</GradientText>
+        </div>
+        <div style={{ fontSize: 26, color: colors.dim }}>se paga con deuda</div>
+      </div>
+    </div>
   );
 };
 
@@ -372,7 +361,7 @@ const DebtGauge: React.FC<{ at: number }> = ({ at }) => {
   const mark = (fiscal.nivelPrudente / max) * W;
   return (
     <Glass style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-      <Label>Deuda bruta del Gobierno Central · % del PIB, 2026</Label>
+      <Note style={{ fontSize: 28 }}>Deuda del Estado, % del PIB (2026)</Note>
       <div style={{ position: "relative", width: W, height: 64, marginTop: 50 }}>
         <div style={{ position: "absolute", inset: 0, borderRadius: 32, background: "rgba(255,255,255,0.08)" }} />
         <div
@@ -387,7 +376,7 @@ const DebtGauge: React.FC<{ at: number }> = ({ at }) => {
             boxShadow: "0 0 40px rgba(59,130,246,0.6)",
           }}
         />
-        <div style={{ position: "absolute", left: Math.max(16, fill - 190), top: 8, fontSize: 42, fontWeight: 900, color: colors.bg, opacity: p }}>
+        <div style={{ position: "absolute", left: Math.max(16, fill - 190), top: 6, fontFamily: fonts.display, fontSize: 44, fontWeight: 800, color: colors.bg, opacity: p }}>
           {fmt(fiscal.deuda2026 * p)}%
         </div>
         <div style={{ position: "absolute", left: mark - 3, top: -18, bottom: -18, width: 6, borderRadius: 3, background: colors.pink, boxShadow: `0 0 18px ${colors.pink}` }} />
@@ -399,70 +388,36 @@ const DebtGauge: React.FC<{ at: number }> = ({ at }) => {
   );
 };
 
-// 06 · Cuentas fiscales
+// Cuentas fiscales
 export const Fiscal: React.FC = () => {
-  const cDef = useCue("deficit");
+  const cDef = useCue("definicion");
+  const cDeficit = useCue("deficit");
   const cDeuda = useCue("deuda");
   return (
-    <SceneShell entrada="slide" step={{ n: 6, title: "Cuentas fiscales", color: colors.blue }} source={fiscal.fuente}>
-      <Title gradient={gradients.cool} sub="Déficit fiscal efectivo · % del PIB">
+    <SceneShell entrada="slide" source={fiscal.fuente}>
+      <Title at={cDef} gradient={gradients.cool}>
         El Estado
       </Title>
-      <GlowBars
-        width={900}
-        height={420}
-        max={3.2}
-        items={[
-          { label: "2025", value: fiscal.deficit2025, tone: "warm", at: cDef + 4 },
-          { label: "2026 proy.", value: fiscal.deficit2026, tone: "cool", at: cDef + 30 },
-        ]}
-      />
-      <Pop at={cDeuda} style={{ marginTop: 30 }}>
+      <DeficitDiagram at={useCueAt("definicion", 0.25)} />
+      <Pop at={cDeficit} style={{ marginTop: 130 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+          <div style={{ ...num, fontSize: 104 }}>
+            <GradientText gradient={gradients.warm}>{fmt(fiscal.deficit2025)}%</GradientText>
+          </div>
+          <Pop at={cDeficit + 8} from="right">
+            <div style={{ fontSize: 70, color: colors.dim }}>→</div>
+          </Pop>
+          <Pop at={cDeficit + 14} from="right">
+            <div style={{ ...num, fontSize: 104 }}>
+              <GradientText gradient={gradients.cool}>{fmt(fiscal.deficit2026)}%</GradientText>
+            </div>
+          </Pop>
+          <Note style={{ fontSize: 28, width: 210 }}>déficit, % del PIB (2025 → 2026)</Note>
+        </div>
+      </Pop>
+      <Pop at={cDeuda} style={{ marginTop: 34 }}>
         <DebtGauge at={cDeuda + 6} />
       </Pop>
     </SceneShell>
   );
 };
-
-// 07 · Lo que viene
-export const Futuro: React.FC = () => {
-  const cApuesta = useCue("apuesta");
-  const cLey = useCue("ley");
-  const cRebote = useCue("rebote");
-  const check = (text: string, at: number) => (
-    <Pop at={at} from="right">
-      <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 32, color: colors.text }}>
-        <span style={{ width: 16, height: 16, borderRadius: 8, background: gradients.gold, boxShadow: `0 0 14px ${colors.gold}` }} />
-        {text}
-      </div>
-    </Pop>
-  );
-  return (
-    <SceneShell entrada="tilt" step={{ n: 7, title: "Lo que viene", color: colors.gold }} source={reconstruccion.fuente}>
-      <Title at={cApuesta} gradient={gradients.gold} sub="La apuesta: la inversión">
-        Lo que viene
-      </Title>
-      <Pop at={cLey}>
-        <Glass glow="rgba(255,193,94,0.25)" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          <div style={{ fontSize: 40, fontWeight: 800, letterSpacing: -1 }}>Ley de Reconstrucción Nacional</div>
-          {check("Agiliza proyectos de inversión", cLey + 8)}
-          {check(`Impuesto a empresas: ${reconstruccion.impuestoDesde}% → ${reconstruccion.impuestoHasta}%, gradual`, cLey + 14)}
-        </Glass>
-      </Pop>
-      <Pop at={cRebote - 2}>
-        <Label style={{ marginTop: 34 }}>Crecimiento proyectado del PIB</Label>
-      </Pop>
-      <GlowBars
-        width={900}
-        height={430}
-        max={3.6}
-        items={[
-          { label: "2026", range: crecimiento.proyeccion2026, tone: "warm", at: cRebote + 2 },
-          { label: "2027", range: crecimiento.proyeccion2027, tone: "cool", at: cRebote + 12 },
-          { label: "2028", range: crecimiento.proyeccion2028, tone: "cool", at: cRebote + 22 },
-        ]}
-      />
-    </SceneShell>
-  );
-};
-

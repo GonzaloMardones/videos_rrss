@@ -34,7 +34,7 @@ export const GlowBars: React.FC<{ items: GlowBar[]; max: number; width?: number;
   const y = (v: number) => base - (v / max) * (base - padTop);
 
   return (
-    <svg width={width} height={height} style={{ overflow: "visible", fontFamily: fonts.sans }}>
+    <svg width={width} height={height} style={{ overflow: "visible", fontFamily: fonts.display }}>
       <defs>
         {Object.entries(stops).map(([k, [a, b]]) => (
           <linearGradient key={k} id={`${id}-${k}`} x1="0" y1="0" x2="0" y2="1">
@@ -146,7 +146,7 @@ export const GlowLine: React.FC<LineProps> = ({
   const pulse = 1 + Math.sin(frame * 0.25) * 0.25;
 
   return (
-    <svg width={width} height={height} style={{ overflow: "visible", fontFamily: fonts.sans }}>
+    <svg width={width} height={height} style={{ overflow: "visible", fontFamily: fonts.display }}>
       <defs>
         <linearGradient id={`${id}-stroke`} x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stopColor={b} />

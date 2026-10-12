@@ -7,7 +7,8 @@ import { clamp } from "../../components/motion";
 import { gradients, VIDEO } from "../../theme";
 import { Cierre } from "./escenas/Cierre";
 import { Gancho, Titulo } from "./escenas/Apertura";
-import { Cobre, Crecimiento, Empleo, Fiscal, Futuro, Inflacion, Tasa } from "./escenas/Indicadores";
+import { Cobre, Crecimiento, Empleo, Fiscal, Inflacion, Tasa } from "./escenas/Indicadores";
+import { BancoCentral, Deuda, Futuro, ParaTi } from "./escenas/Contexto";
 import { CORTE } from "./data";
 import timelineJson from "./timeline.json";
 
@@ -15,7 +16,6 @@ const timeline = timelineJson as Timeline;
 
 export type Capitulo01Props = {
   serie: string;
-  programa: string;
   autor: string;
   volumenMusica: number;
 };
@@ -28,7 +28,7 @@ const OUTRO = 2.4; // segundos que se mantiene el cierre tras la última palabra
 export const CAPITULO01_FRAMES = Math.ceil((timeline.duracion + OUTRO) * VIDEO.fps);
 
 // Momentos en que suena un "pop": cuando aparece una cifra clave.
-const POPS = ["cobre", "pib", "barras", "proyeccion", "precio", "cantidad", "hoy", "quieta", "tasa", "deficit", "deuda", "rebote", "cta"];
+const POPS = ["cobre", "pib", "barras", "proyeccion", "precio", "cantidad", "hoy", "mision", "quieta", "tasa", "deficit", "intereses", "regla", "rebote", "sueldo", "creditos", "colchon", "cta"];
 
 const ProgressBar: React.FC = () => {
   const frame = useCurrentFrame();
@@ -40,19 +40,22 @@ const ProgressBar: React.FC = () => {
   );
 };
 
-export const Capitulo01: React.FC<Capitulo01Props> = ({ serie, programa, autor, volumenMusica }) => {
+export const Capitulo01: React.FC<Capitulo01Props> = ({ serie, autor, volumenMusica }) => {
   const { fps, durationInFrames } = useVideoConfig();
   const escenas: Record<string, React.ReactNode> = {
     gancho: <Gancho />,
-    titulo: <Titulo serie={serie} autor={autor} programa={programa} />,
+    titulo: <Titulo serie={serie} autor={autor} />,
     crecimiento: <Crecimiento />,
     cobre: <Cobre />,
     inflacion: <Inflacion />,
+    bancocentral: <BancoCentral />,
     tasa: <Tasa />,
     empleo: <Empleo />,
     fiscal: <Fiscal />,
+    deuda: <Deuda />,
     futuro: <Futuro />,
-    cierre: <Cierre autor={autor} programa={programa} corte={CORTE} />,
+    tu: <ParaTi />,
+    cierre: <Cierre autor={autor} corte={CORTE} />,
   };
 
   return (

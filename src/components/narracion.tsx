@@ -31,6 +31,15 @@ export const useCue = (cue: string, offset = 0): number => {
   return Math.round(frase.inicio * fps) - from + offset;
 };
 
+// Frame en un punto intermedio de la frase (0 = inicio, 1 = fin), para sincronizar con una palabra.
+export const useCueAt = (cue: string, fraccion: number): number => {
+  const { fps } = useVideoConfig();
+  const { id, from, timeline } = useScene();
+  const frase = timeline.frases.find((f) => f.escena === id && f.cue === cue);
+  if (!frase) throw new Error(`No existe el cue "${cue}" en la escena "${id}"`);
+  return Math.round((frase.inicio + (frase.fin - frase.inicio) * fraccion) * fps) - from;
+};
+
 // Frames transcurridos desde un cue (negativo si aún no llega).
 export const useSinceCue = (cue: string, offset = 0): number => {
   const frame = useCurrentFrame();

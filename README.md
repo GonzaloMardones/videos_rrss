@@ -21,24 +21,26 @@ Cada capítulo vive en `src/capitulos/<nn>-<tema>/`: el guion de la voz en `guio
 
 ## Voz en off, música y efectos
 
-La voz se genera localmente con una voz neuronal Piper (`es_MX-claude-high`) a través de [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx), y se verifica con Whisper. Las animaciones se sincronizan con cada frase mediante `timeline.json`.
+La voz se genera localmente con [Kokoro](https://github.com/thewh1teagle/kokoro-onnx) (voz `em_alex` con fonética latinoamericana `es-419`), se procesa con ffmpeg para que suene más cálida y se verifica con Whisper vía [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx). Las animaciones se sincronizan con cada frase mediante `timeline.json`.
 
 ```console
-pip install sherpa-onnx soundfile numpy
+pip install kokoro-onnx sherpa-onnx soundfile numpy
 
 # Modelos (una sola vez), en una carpeta fuera del repo, p. ej. ~/modelos-voz
-for m in tts-models/vits-piper-es_MX-claude-high asr-models/sherpa-onnx-whisper-small; do
-  curl -L "https://github.com/k2-fsa/sherpa-onnx/releases/download/$m.tar.bz2" | tar xj -C ~/modelos-voz
-done
+curl -L -o ~/modelos-voz/kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+curl -L -o ~/modelos-voz/voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+curl -L https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-small.tar.bz2 | tar xj -C ~/modelos-voz
 
 # Voz + línea de tiempo (con --verificar transcribe cada frase para revisar la pronunciación)
 python3 scripts/narrar.py src/capitulos/01-chile-2026 public/cap01 ~/modelos-voz --verificar
 
 # Música de fondo y efectos (sintetizados, sin derechos de autor)
-python3 scripts/musica.py 112 public/cap01/musica.mp3 public/sfx
+python3 scripts/musica.py 136 public/cap01/musica.mp3 public/sfx
 ```
 
-Otras voces disponibles en el mismo formato: `es_AR-daniela-high` (femenina), `es_MX-ald-medium`. Se cambia en `guion.json` (`"voz"`).
+Otras voces Kokoro en español: `ef_dora` (femenina), `em_santa`. También funcionan voces Piper (`"motor": "piper"`, p. ej. `es_MX-claude-high`). Se cambia en `guion.json`.
+
+Para la voz más humana posible, graba la tuya leyendo el guion de `GUION.md` y reemplaza `narracion.mp3` (ajustando los tiempos de `timeline.json`).
 
 ## Commands
 

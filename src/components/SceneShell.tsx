@@ -3,7 +3,6 @@ import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { colors, fonts, SAFE } from "../theme";
 import { clamp } from "./motion";
 import { useScene } from "./narracion";
-import { Pill } from "./ui";
 
 export type Transition = "zoom" | "rise" | "slide" | "tilt" | "none";
 
@@ -12,7 +11,6 @@ export const EXIT = 14;
 
 type Props = {
   entrada?: Transition;
-  step?: { n: number; title: string; color: string };
   source?: string;
   children: React.ReactNode;
 };
@@ -37,8 +35,8 @@ const enterStyle = (kind: Transition, p: number): React.CSSProperties => {
   }
 };
 
-// Envoltorio de cada escena: transición de entrada y salida, cabecera del indicador y fuente.
-export const SceneShell: React.FC<Props> = ({ entrada = "zoom", step, source, children }) => {
+// Envoltorio de cada escena: transición de entrada y salida, y la fuente al pie.
+export const SceneShell: React.FC<Props> = ({ entrada = "zoom", source, children }) => {
   const frame = useCurrentFrame();
   const { duration } = useScene();
   const pIn = entrada === "none" ? 1 : interpolate(frame, [0, ENTER], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
@@ -55,32 +53,10 @@ export const SceneShell: React.FC<Props> = ({ entrada = "zoom", step, source, ch
         color: colors.text,
       }}
     >
-      {step ? (
-        <div
-          style={{
-            position: "absolute",
-            top: SAFE.top,
-            left: SAFE.left,
-            right: SAFE.right,
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Pill dot={step.color}>
-            <span style={{ color: colors.faint, fontVariantNumeric: "tabular-nums" }}>0{step.n}</span>
-            {step.title}
-          </Pill>
-          <span style={{ fontSize: 24, fontWeight: 600, letterSpacing: 3, textTransform: "uppercase", color: colors.faint }}>
-            Cap. 1
-          </span>
-        </div>
-      ) : null}
-
       <div
         style={{
           position: "absolute",
-          top: step ? SAFE.top + 110 : SAFE.top,
+          top: SAFE.top + 20,
           left: SAFE.left,
           right: SAFE.right,
           bottom: 1920 - SAFE.contentBottom + 56,
@@ -97,28 +73,13 @@ export const SceneShell: React.FC<Props> = ({ entrada = "zoom", step, source, ch
             position: "absolute",
             left: SAFE.left,
             right: SAFE.right,
-            top: SAFE.contentBottom - 40,
-            fontSize: 21,
+            top: SAFE.contentBottom - 36,
+            fontSize: 22,
             fontWeight: 500,
             color: colors.faint,
-            display: "flex",
-            gap: 10,
-            alignItems: "center",
           }}
         >
-          <span
-            style={{
-              fontSize: 17,
-              fontWeight: 800,
-              letterSpacing: 2,
-              padding: "4px 10px",
-              borderRadius: 8,
-              border: `1.5px solid ${colors.line}`,
-            }}
-          >
-            FUENTE
-          </span>
-          {source}
+          Fuente: {source}
         </div>
       ) : null}
     </AbsoluteFill>

@@ -81,6 +81,19 @@ export const fiscal = {
   fuente: "Dipres · Informe de Finanzas Públicas, 3.er trimestre 2026",
 };
 
+export const deuda = {
+  // Dipres: gasto en intereses de la deuda del Gobierno Central en 2025 (US$ 4.886 millones, +7,1% anual; 1,2% del PIB).
+  intereses2025: 4886,
+  interesesPib2025: 1.2,
+  fuente: "Dipres · ejecución presupuestaria 2025",
+};
+
+export const bancoCentral = {
+  // Autonomía constitucional desde 1989 (Ley 18.840). Meta: inflación de 3% en un horizonte de dos años.
+  meta: 3,
+  fuente: "Banco Central · Marco de Política Monetaria",
+};
+
 export const reconstruccion = {
   // Ministerio de Hacienda / Congreso: Ley de Reconstrucción Nacional y Desarrollo Económico y Social (2026).
   impuestoDesde: 27,

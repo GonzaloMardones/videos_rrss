@@ -53,32 +53,6 @@ export const Glass: React.FC<{ style?: React.CSSProperties; glow?: string; child
   </div>
 );
 
-export const Pill: React.FC<{ dot?: string; style?: React.CSSProperties; children: React.ReactNode }> = ({
-  dot,
-  style,
-  children,
-}) => (
-  <div
-    style={{
-      display: "inline-flex",
-      alignItems: "center",
-      gap: 14,
-      padding: "12px 24px",
-      borderRadius: 999,
-      background: colors.glassStrong,
-      border: `1.5px solid ${colors.line}`,
-      fontFamily: fonts.sans,
-      fontSize: 28,
-      fontWeight: 600,
-      color: colors.text,
-      ...style,
-    }}
-  >
-    {dot ? <span style={{ width: 14, height: 14, borderRadius: 7, background: dot, boxShadow: `0 0 16px ${dot}` }} /> : null}
-    {children}
-  </div>
-);
-
 // Cifra que se cuenta frente al espectador.
 export const Counter: React.FC<{
   to: number;
@@ -91,7 +65,8 @@ export const Counter: React.FC<{
   signed?: boolean;
 }> = ({ to, from = 0, at, duration = 28, decimals = 1, prefix = "", suffix = "", signed = false }) => {
   const frame = useCurrentFrame();
-  const v = interpolate(frame - at, [0, duration], [from, to], { ...clamp, easing: Easing.out(Easing.exp) });
+  // Easing.cubic llega exactamente al valor final (la curva exponencial se queda en 99,9%).
+  const v = interpolate(frame - at, [0, duration], [from, to], { ...clamp, easing: Easing.out(Easing.cubic) });
   const sign = signed && to > 0 ? "+" : v < -0.0001 ? "−" : "";
   return (
     <span style={{ fontVariantNumeric: "tabular-nums" }}>
@@ -103,18 +78,9 @@ export const Counter: React.FC<{
   );
 };
 
-export const Label: React.FC<{ style?: React.CSSProperties; children: React.ReactNode }> = ({ style, children }) => (
-  <div
-    style={{
-      fontFamily: fonts.sans,
-      fontSize: 24,
-      fontWeight: 700,
-      letterSpacing: 3,
-      textTransform: "uppercase",
-      color: colors.faint,
-      ...style,
-    }}
-  >
+// Texto de apoyo bajo un título o sobre un gráfico: frase corta, sin mayúsculas forzadas.
+export const Note: React.FC<{ style?: React.CSSProperties; children: React.ReactNode }> = ({ style, children }) => (
+  <div style={{ fontFamily: fonts.sans, fontSize: 32, fontWeight: 500, lineHeight: 1.3, color: colors.dim, ...style }}>
     {children}
   </div>
 );

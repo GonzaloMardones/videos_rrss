@@ -1,12 +1,15 @@
 // Fuentes empaquetadas en el proyecto (no dependen de internet al renderizar).
-import "@fontsource/inter-tight/400.css";
-import "@fontsource/inter-tight/500.css";
-import "@fontsource/inter-tight/600.css";
-import "@fontsource/inter-tight/700.css";
-import "@fontsource/inter-tight/800.css";
-import "@fontsource/inter-tight/900.css";
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
+// Bricolage Grotesque: titulares y cifras, con carácter. Figtree: subtítulos y textos, cercana y legible.
+import "@fontsource/bricolage-grotesque/400.css";
+import "@fontsource/bricolage-grotesque/600.css";
+import "@fontsource/bricolage-grotesque/700.css";
+import "@fontsource/bricolage-grotesque/800.css";
+import "@fontsource/figtree/400.css";
+import "@fontsource/figtree/500.css";
+import "@fontsource/figtree/600.css";
+import "@fontsource/figtree/700.css";
+import "@fontsource/figtree/800.css";
+import "@fontsource/figtree/900.css";
 
 import { continueRender, delayRender } from "remotion";
 
@@ -14,11 +17,11 @@ import { continueRender, delayRender } from "remotion";
 const fontsHandle = delayRender("Cargando fuentes");
 Promise.all(
   [
-    "400 32px 'Inter Tight'",
-    "700 32px 'Inter Tight'",
-    "800 32px 'Inter Tight'",
-    "900 32px 'Inter Tight'",
-    "italic 400 32px 'Instrument Serif'",
+    "400 32px 'Bricolage Grotesque'",
+    "700 32px 'Bricolage Grotesque'",
+    "800 32px 'Bricolage Grotesque'",
+    "500 32px 'Figtree'",
+    "800 32px 'Figtree'",
   ].map((font) => document.fonts.load(font)),
 ).then(
   () => continueRender(fontsHandle),
@@ -26,8 +29,8 @@ Promise.all(
 );
 
 export const fonts = {
-  sans: "'Inter Tight', 'Helvetica Neue', Arial, sans-serif",
-  serif: "'Instrument Serif', Georgia, serif",
+  display: "'Bricolage Grotesque', 'Figtree', sans-serif",
+  sans: "'Figtree', 'Helvetica Neue', Arial, sans-serif",
 };
 
 // Paleta oscura con degradados vivos, inspirada en sitios como lovable.dev.
