@@ -60,7 +60,7 @@ export const GlowBars: React.FC<{ items: GlowBar[]; max: number; width?: number;
         const top = it.range ? it.range.max : solid;
         const solidTop = y(solid * p);
         const fill = `url(#${id}-${it.tone})`;
-        const label = it.range ? `${fmtAuto(it.range.min)}–${fmtAuto(it.range.max)}${unit}` : `${fmt(solid * Math.min(1, p))}${unit}`;
+        const label = it.range ? `${fmtAuto(it.range.min)}–${fmtAuto(it.range.max)}${unit}` : `${fmtAuto(Math.round(solid * Math.min(1, p) * 10) / 10)}${unit}`;
         const shown = interpolate(frame - it.at, [0, 6], [0, 1], clamp);
         return (
           <g key={it.label} opacity={shown}>

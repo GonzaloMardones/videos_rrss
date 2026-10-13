@@ -184,3 +184,72 @@ export const Flecha: React.FC<{ up: boolean; color: string; size?: number }> = (
     <path d={up ? "M12 3 L20 12 H15 V21 H9 V12 H4 Z" : "M12 21 L20 12 H15 V3 H9 V12 H4 Z"} fill={color} />
   </svg>
 );
+
+// Edificio institucional con columnas (Hacienda, Banco Central).
+export const Edificio: React.FC<Props> = ({ size = 160, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M50 8 L92 30 H8 Z" fill={g.fill} />
+      <rect x={12} y={32} width={76} height={6} rx={2} fill={g.fill} />
+      {[20, 36, 52, 68].map((x) => (
+        <rect key={x} x={x} y={42} width={10} height={36} rx={3} fill={g.fill} opacity={0.85} />
+      ))}
+      <rect x={8} y={80} width={84} height={10} rx={3} fill={g.fill} />
+    </svg>
+  );
+};
+
+// Surtidor de combustible.
+export const Surtidor: React.FC<Props> = ({ size = 160, paleta = paletas.calido, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <rect x={14} y={10} width={48} height={82} rx={8} fill={g.fill} />
+      <rect x={22} y={20} width={32} height={22} rx={4} fill={colors.bg} opacity={0.6} />
+      <path d="M62 30 H72 C78 30 82 34 82 40 V70 C82 76 86 78 88 74 V46 L80 38" stroke={paleta[1]} strokeWidth={5} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M38 52 C32 60 32 66 38 70 C44 66 44 60 38 52 Z" fill={colors.bg} opacity={0.55} />
+    </svg>
+  );
+};
+
+// Barril de petróleo.
+export const Barril: React.FC<Props> = ({ size = 150, paleta = ["#4B4A5C", "#1E1D29"], style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 0 18px #8B5CF655)", ...style }}>
+      {g.defs}
+      <rect x={20} y={8} width={60} height={84} rx={10} fill={g.fill} stroke="#8B8AA3" strokeWidth={2} />
+      <path d="M20 32 H80 M20 68 H80" stroke="#8B8AA3" strokeWidth={4} />
+      <path d="M50 40 C42 50 42 56 50 60 C58 56 58 50 50 40 Z" fill="#F7F5FF" opacity={0.8} />
+    </svg>
+  );
+};
+
+// Reloj de arena.
+export const RelojArena: React.FC<Props> = ({ size = 140, paleta = paletas.cobre, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <rect x={20} y={8} width={60} height={8} rx={4} fill={g.fill} />
+      <rect x={20} y={84} width={60} height={8} rx={4} fill={g.fill} />
+      <path d="M28 16 H72 C72 36 56 44 52 50 C56 56 72 64 72 84 H28 C28 64 44 56 48 50 C44 44 28 36 28 16 Z" fill="none" stroke={g.fill} strokeWidth={4} />
+      <path d="M36 28 H64 C62 38 54 44 50 48 C46 44 38 38 36 28 Z M34 82 C38 70 46 66 50 64 C54 66 62 70 66 82 Z" fill={g.fill} opacity={0.85} />
+    </svg>
+  );
+};
+
+// Escudo: la autonomía protege las decisiones.
+export const Escudo: React.FC<Props> = ({ size = 160, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M50 6 L86 18 V46 C86 70 70 86 50 94 C30 86 14 70 14 46 V18 Z" fill={g.fill} />
+      <path d="M34 50 L46 62 L68 38" stroke={colors.bg} strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+};

@@ -4,6 +4,7 @@ import { MyComposition } from "./Composition";
 import { VIDEO } from "./theme";
 import { Capitulo01, CAPITULO01_FRAMES } from "./capitulos/01-chile-2026/Capitulo01";
 import { Capitulo02, CAPITULO02_FRAMES } from "./capitulos/02-stolper-samuelson/Capitulo02";
+import { Capitulo03, CAPITULO03_FRAMES } from "./capitulos/03-inflacion-autonomia/Capitulo03";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -25,6 +26,19 @@ export const RemotionRoot: React.FC = () => {
         id="Cap02-StolperSamuelson"
         component={Capitulo02}
         durationInFrames={CAPITULO02_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Economía en simple",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap03-InflacionAutonomia"
+        component={Capitulo03}
+        durationInFrames={CAPITULO03_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

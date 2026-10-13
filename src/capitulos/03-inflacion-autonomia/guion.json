@@ -1,0 +1,187 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.14,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "La inflación no baja, y el ministro de Hacienda dijo que es responsabilidad del Banco Central.",
+          "muestra": "La inflación no baja, y el ministro de Hacienda dijo que es responsabilidad del Banco Central.",
+          "cue": "quiroz",
+          "pausa": 0.25
+        },
+        {
+          "dice": "¿Tiene razón? Veamos los números.",
+          "muestra": "¿Tiene razón? Veamos los números.",
+          "cue": "numeros"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Capítulo tres: quién tiene la culpa de la inflación.",
+          "muestra": "Capítulo 3: ¿quién tiene la culpa de la inflación?"
+        }
+      ]
+    },
+    {
+      "id": "mandato",
+      "frases": [
+        {
+          "dice": "Primero, en lo formal, el ministro tiene razón.",
+          "muestra": "Primero, en lo formal, el ministro tiene razón.",
+          "cue": "formal"
+        },
+        {
+          "dice": "La ley le encarga al Banco Central que los precios suban cerca de tres por ciento al año.",
+          "muestra": "La ley le encarga al Banco Central que los precios suban cerca de 3% al año.",
+          "cue": "meta"
+        },
+        {
+          "dice": "Y hoy van en cuatro coma uno.",
+          "muestra": "Y hoy van en 4,1%.",
+          "cue": "hoy"
+        }
+      ]
+    },
+    {
+      "id": "volatiles",
+      "frases": [
+        {
+          "dice": "Pero miremos de dónde viene esa inflación.",
+          "muestra": "Pero miremos de dónde viene esa inflación.",
+          "cue": "donde"
+        },
+        {
+          "dice": "Si sacamos los precios más volátiles, como los combustibles, queda entre tres coma dos y tres coma cuatro: casi en la meta.",
+          "muestra": "Si sacamos los precios más volátiles, como los combustibles, queda entre 3,2% y 3,4%: casi en la meta.",
+          "cue": "sinvolatiles"
+        },
+        {
+          "dice": "El problema son los combustibles.",
+          "muestra": "El problema son los combustibles.",
+          "cue": "combustibles"
+        }
+      ]
+    },
+    {
+      "id": "abril",
+      "frases": [
+        {
+          "dice": "En abril, los precios subieron uno coma tres por ciento en un solo mes,",
+          "muestra": "En abril, los precios subieron 1,3% en un solo mes,",
+          "cue": "abril"
+        },
+        {
+          "dice": "y tres cuartas partes de ese salto vinieron de los combustibles.",
+          "muestra": "y tres cuartas partes de ese salto vinieron de los combustibles.",
+          "cue": "tresCuartos"
+        },
+        {
+          "dice": "¿Por qué? Por la guerra en Medio Oriente,",
+          "muestra": "¿Por qué? Por la guerra en Medio Oriente,",
+          "cue": "guerra"
+        },
+        {
+          "dice": "y por un cambio al Mepco, el mecanismo que suaviza el precio de los combustibles, que hizo el propio Ministerio de Hacienda.",
+          "muestra": "y por un cambio al Mepco, el mecanismo que suaviza el precio de los combustibles, que hizo el propio Ministerio de Hacienda.",
+          "cue": "mepco"
+        }
+      ]
+    },
+    {
+      "id": "herramienta",
+      "frases": [
+        {
+          "dice": "Ahora, el Banco Central tiene una herramienta: la tasa de interés.",
+          "muestra": "Ahora, el Banco Central tiene una herramienta: la tasa de interés.",
+          "cue": "tasa"
+        },
+        {
+          "dice": "Pero la tasa no baja el precio del petróleo, y tarda entre uno y dos años en hacer efecto.",
+          "muestra": "Pero la tasa no baja el precio del petróleo, y tarda entre 1 y 2 años en hacer efecto.",
+          "cue": "rezago"
+        },
+        {
+          "dice": "Y subirla hoy enfriaría una economía que casi no crece, con casi diez por ciento de desempleo.",
+          "muestra": "Y subirla hoy enfriaría una economía que casi no crece, con casi 10% de desempleo.",
+          "cue": "costo"
+        }
+      ]
+    },
+    {
+      "id": "autonomia",
+      "frases": [
+        {
+          "dice": "Por eso el Banco Central es autónomo: para decidir mirando el largo plazo, y no la próxima elección.",
+          "muestra": "Por eso el Banco Central es autónomo: para decidir mirando el largo plazo, y no la próxima elección.",
+          "cue": "autonomo"
+        },
+        {
+          "dice": "Antes de su autonomía, entre mil novecientos cuarenta y mil novecientos ochenta y nueve, la inflación promedió cincuenta y cinco por ciento al año.",
+          "muestra": "Antes de su autonomía, entre 1940 y 1989, la inflación promedió 55% al año.",
+          "cue": "antes"
+        },
+        {
+          "dice": "En las dos décadas antes de la pandemia: tres coma dos.",
+          "muestra": "En las dos décadas antes de la pandemia: 3,2%.",
+          "cue": "despues"
+        }
+      ]
+    },
+    {
+      "id": "turquia",
+      "frases": [
+        {
+          "dice": "¿Y qué pasa cuando un gobierno presiona a su banco central?",
+          "muestra": "¿Y qué pasa cuando un gobierno presiona a su banco central?",
+          "cue": "presion",
+          "pausa": 0.2
+        },
+        {
+          "dice": "En Turquía, el presidente pidió bajar las tasas con la inflación alta.",
+          "muestra": "En Turquía, el presidente pidió bajar las tasas con la inflación alta.",
+          "cue": "turquia"
+        },
+        {
+          "dice": "En octubre de dos mil veintidós, la inflación llegó a ochenta y cinco por ciento.",
+          "muestra": "En octubre de 2022, la inflación llegó a 85%.",
+          "cue": "ochenta"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Entonces, ¿quién tiene la culpa?",
+          "muestra": "Entonces, ¿quién tiene la culpa?",
+          "cue": "culpa",
+          "pausa": 0.25
+        },
+        {
+          "dice": "El Banco Central responde por la meta, pero esta inflación vino sobre todo de los combustibles: de la guerra, y del Mepco.",
+          "muestra": "El Banco Central responde por la meta, pero esta inflación vino sobre todo de los combustibles: de la guerra, y del Mepco.",
+          "cue": "reparto"
+        },
+        {
+          "dice": "La clave es que Hacienda y el Banco Central se coordinen, cada uno con su herramienta.",
+          "muestra": "La clave es que Hacienda y el Banco Central se coordinen, cada uno con su herramienta.",
+          "cue": "coordinar"
+        },
+        {
+          "dice": "Si te sirvió, compártelo. Y sígueme para el capítulo cuatro.",
+          "muestra": "Si te sirvió, compártelo. Y sígueme para el capítulo 4.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}
