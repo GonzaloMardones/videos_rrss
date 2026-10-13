@@ -6,7 +6,7 @@ import { useCue, useCueAt } from "../../../components/narracion";
 import { Counter, fmt, Glass, GradientText, Note } from "../../../components/ui";
 import { colors, fonts, gradients } from "../../../theme";
 import { bancoCentral, crecimiento, deuda, inflacion, reconstruccion, tasa } from "../data";
-import { Icon, IconGradients, Title } from "./comun";
+import { Icon, IconGradients, Title } from "../../../components/comun";
 
 // Fila con ícono, idea en grande y una línea de explicación.
 const Idea: React.FC<{ at: number; icon: string; tone: "warm" | "cool" | "gold"; title: string; text: string }> = ({

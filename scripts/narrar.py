@@ -148,7 +148,7 @@ def recortar_silencio(audio: np.ndarray, sr: int, umbral: float = 0.006) -> np.n
     activos = np.where(np.abs(audio) > umbral)[0]
     if len(activos) == 0:
         return audio
-    inicio = max(0, activos[0] - int(0.06 * sr))
+    inicio = max(0, activos[0] - int(0.12 * sr))
     fin = min(len(audio), activos[-1] + int(0.15 * sr))
     return audio[inicio:fin]
 

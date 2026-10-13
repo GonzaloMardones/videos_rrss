@@ -7,7 +7,7 @@ import { useCue, useCueAt } from "../../../components/narracion";
 import { Counter, fmt, fmtSigned, Glass, GradientText, Note } from "../../../components/ui";
 import { colors, fonts, gradients } from "../../../theme";
 import { crecimiento, empleo, fiscal, inflacion, mineria, tasa } from "../data";
-import { Arrow, Title } from "./comun";
+import { Arrow, Title } from "../../../components/comun";
 
 const num: React.CSSProperties = { fontFamily: fonts.display, fontWeight: 800, letterSpacing: -4, lineHeight: 1 };
 

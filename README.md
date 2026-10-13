@@ -16,8 +16,9 @@ Proyecto Remotion dedicado a crear videos para redes sociales (formato vertical 
 | # | Composición | Tema | Guion y fuentes |
 | --- | --- | --- | --- |
 | 1 | `Cap01-Chile2026` | ¿Cómo está Chile en 2026? | [GUION.md](src/capitulos/01-chile-2026/GUION.md) |
+| 2 | `Cap02-StolperSamuelson` | Cuando sube el cobre, ¿quién gana? | [GUION.md](src/capitulos/02-stolper-samuelson/GUION.md) |
 
-Cada capítulo vive en `src/capitulos/<nn>-<tema>/`: el guion de la voz en `guion.json`, las cifras y fuentes en `data.ts` y las escenas en `escenas/`. Los componentes compartidos (fondo animado, subtítulos, gráficos, transiciones) están en `src/components/` y la paleta en `src/theme.ts`.
+Cada capítulo vive en `src/capitulos/<nn>-<tema>/`: el guion de la voz en `guion.json`, las cifras y fuentes en `data.ts` y las escenas en `escenas/`. Los componentes compartidos (estructura de capítulo, fondo animado, subtítulos, gráficos, ilustraciones y transiciones) están en `src/components/` y la paleta en `src/theme.ts`.
 
 ## Voz en off, música y efectos
 

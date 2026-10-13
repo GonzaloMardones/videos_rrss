@@ -1,7 +1,7 @@
 import React from "react";
-import { Pop } from "../../../components/motion";
-import { GradientText, Note } from "../../../components/ui";
-import { fonts } from "../../../theme";
+import { Pop } from "./motion";
+import { GradientText, Note } from "./ui";
+import { fonts } from "../theme";
 
 // Titular de cada escena: grande, en Bricolage Grotesque y con degradado.
 export const Title: React.FC<{ at?: number; gradient: string; size?: number; sub?: string; children: React.ReactNode }> = ({
