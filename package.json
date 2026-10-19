@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
-    "render": "remotion render Cap01-Chile2026 out/cap01-chile-2026-raw.mp4 && ffmpeg -y -v error -i out/cap01-chile-2026-raw.mp4 -c:v copy -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 -c:a aac -b:a 192k out/cap01-chile-2026.mp4",
+    "render": "bash scripts/render.sh",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },

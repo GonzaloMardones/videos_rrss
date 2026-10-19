@@ -72,7 +72,9 @@ npm run dev
 **Render video**
 
 ```console
-npm run render   # -> out/cap01-chile-2026.mp4 (audio normalizado a -14 LUFS para redes)
+npm run render -- Cap04-ZanjaFrontera cap04-zanja-frontera
+# -> out/cap04-zanja-frontera.mp4 y out/cap04-zanja-frontera-movil.mp4
+#    (un solo .mp4 con video y audio: -14 LUFS, 48 kHz, faststart)
 ```
 
 **Upgrade Remotion**
