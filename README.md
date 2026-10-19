@@ -20,6 +20,7 @@ Proyecto Remotion dedicado a crear videos para redes sociales (formato vertical 
 | 3 | `Cap03-InflacionAutonomia` | ¿Quién tiene la culpa de la inflación? | [GUION.md](src/capitulos/03-inflacion-autonomia/GUION.md) |
 | 4 | `Cap04-ZanjaFrontera` | La zanja de la frontera norte | [GUION.md](src/capitulos/04-zanja-frontera/GUION.md) |
 | 5 | `Cap05-ApuestaAFP` | La apuesta de las AFP (swaps y fondo E) | [GUION.md](src/capitulos/05-apuesta-afp/GUION.md) |
+| 6 | `Cap06-QuienGana` | ¿Quién gana cuando el fondo pierde? (incentivos y política) | [GUION.md](src/capitulos/06-quien-gana/GUION.md) |
 
 Cada capítulo vive en `src/capitulos/<nn>-<tema>/`: el guion de la voz en `guion.json`, las cifras y fuentes en `data.ts` y las escenas en `escenas/`. Los componentes compartidos (estructura de capítulo, fondo animado, subtítulos, gráficos, ilustraciones y transiciones) están en `src/components/` y la paleta en `src/theme.ts`.
 

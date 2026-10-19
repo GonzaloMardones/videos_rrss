@@ -7,6 +7,7 @@ import { Capitulo02, CAPITULO02_FRAMES } from "./capitulos/02-stolper-samuelson/
 import { Capitulo03, CAPITULO03_FRAMES } from "./capitulos/03-inflacion-autonomia/Capitulo03";
 import { Capitulo04, CAPITULO04_FRAMES } from "./capitulos/04-zanja-frontera/Capitulo04";
 import { Capitulo05, CAPITULO05_FRAMES } from "./capitulos/05-apuesta-afp/Capitulo05";
+import { Capitulo06, CAPITULO06_FRAMES } from "./capitulos/06-quien-gana/Capitulo06";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -67,6 +68,19 @@ export const RemotionRoot: React.FC = () => {
         id="Cap05-ApuestaAFP"
         component={Capitulo05}
         durationInFrames={CAPITULO05_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Economía en simple",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap06-QuienGana"
+        component={Capitulo06}
+        durationInFrames={CAPITULO06_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

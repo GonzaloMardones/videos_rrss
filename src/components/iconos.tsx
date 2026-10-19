@@ -434,3 +434,48 @@ export const Documento: React.FC<Props> = ({ size = 130, paleta = paletas.blanco
     </svg>
   );
 };
+
+// Puerta giratoria: del regulado al regulador.
+export const Puerta: React.FC<Props & { giro?: number }> = ({ size = 140, paleta = paletas.calido, style, giro = 0 }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <ellipse cx={50} cy={86} rx={40} ry={8} fill={g.fill} opacity={0.5} />
+      <g transform={`rotate(${giro} 50 50)`}>
+        <rect x={47} y={14} width={6} height={72} rx={3} fill={g.fill} />
+        <rect x={14} y={47} width={72} height={6} rx={3} fill={g.fill} />
+      </g>
+      <circle cx={50} cy={50} r={6} fill={colors.bg} />
+      <path d="M12 86 V22 M88 86 V22" stroke={g.fill} strokeWidth={5} strokeLinecap="round" opacity={0.6} />
+    </svg>
+  );
+};
+
+// Martillo de juez.
+export const Martillo: React.FC<Props> = ({ size = 130, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <rect x={26} y={18} width={36} height={22} rx={6} fill={g.fill} transform="rotate(-40 44 29)" />
+      <path d="M46 42 L78 74" stroke={g.fill} strokeWidth={10} strokeLinecap="round" />
+      <rect x={18} y={82} width={52} height={10} rx={5} fill={g.fill} opacity={0.8} />
+    </svg>
+  );
+};
+
+// Bolsa de dinero.
+export const Bolsa: React.FC<Props> = ({ size = 130, paleta = paletas.cobre, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M38 22 H62 L56 32 H44 Z" fill={g.fill} />
+      <path d="M44 32 H56 C76 44 84 60 84 72 C84 86 70 94 50 94 C30 94 16 86 16 72 C16 60 24 44 44 32 Z" fill={g.fill} />
+      <text x={50} y={78} textAnchor="middle" fontSize={34} fontWeight={900} fill={colors.bg} fontFamily="Figtree, sans-serif">
+        $
+      </text>
+    </svg>
+  );
+};
