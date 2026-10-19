@@ -366,3 +366,71 @@ export const Ojo: React.FC<Props & { cerrado?: number }> = ({ size = 140, paleta
     </svg>
   );
 };
+
+// Intercambio: dos flechas que se cruzan (un swap).
+export const Intercambio: React.FC<Props> = ({ size = 160, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M14 36 H70 L60 24 M70 36 L60 48" stroke={g.fill} strokeWidth={9} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M86 64 H30 L40 52 M30 64 L40 76" stroke={g.fill} strokeWidth={9} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={0.75} />
+    </svg>
+  );
+};
+
+// Persona mayor con bastón.
+export const Jubilado: React.FC<Props> = ({ size = 140, paleta = paletas.calido, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <circle cx={46} cy={16} r={10} fill={g.fill} />
+      <path d="M40 30 C50 28 58 34 58 44 V62 H36 V38 C36 33 37 31 40 30 Z" fill={g.fill} />
+      <rect x={37} y={60} width={9} height={34} rx={4.5} fill={g.fill} />
+      <rect x={48} y={60} width={9} height={34} rx={4.5} fill={g.fill} opacity={0.85} />
+      <path d="M62 46 L72 94" stroke={g.fill} strokeWidth={5} strokeLinecap="round" />
+      <path d="M57 46 H66" stroke={g.fill} strokeWidth={6} strokeLinecap="round" />
+    </svg>
+  );
+};
+
+// Candado: lo que queda fijo (una renta vitalicia).
+export const Candado: React.FC<Props> = ({ size = 130, paleta = paletas.calido, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M30 44 V32 C30 20 38 12 50 12 C62 12 70 20 70 32 V44" stroke={g.fill} strokeWidth={9} fill="none" strokeLinecap="round" />
+      <rect x={18} y={42} width={64} height={48} rx={12} fill={g.fill} />
+      <circle cx={50} cy={62} r={7} fill={colors.bg} />
+      <rect x={47} y={64} width={6} height={14} rx={3} fill={colors.bg} />
+    </svg>
+  );
+};
+
+// Triángulo de alerta.
+export const Alerta: React.FC<Props> = ({ size = 130, paleta = paletas.cobre, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M50 10 L92 84 H8 Z" fill={g.fill} />
+      <rect x={45} y={34} width={10} height={28} rx={5} fill={colors.bg} />
+      <circle cx={50} cy={72} r={6} fill={colors.bg} />
+    </svg>
+  );
+};
+
+// Documento: un informe.
+export const Documento: React.FC<Props> = ({ size = 130, paleta = paletas.blanco, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M22 8 H62 L80 26 V92 H22 Z" fill={g.fill} />
+      <path d="M62 8 V26 H80" fill={colors.bg} opacity={0.35} />
+      <path d="M32 44 H70 M32 56 H70 M32 68 H58" stroke={colors.bg} strokeOpacity={0.5} strokeWidth={5} strokeLinecap="round" />
+    </svg>
+  );
+};
