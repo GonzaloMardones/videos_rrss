@@ -253,3 +253,116 @@ export const Escudo: React.FC<Props> = ({ size = 160, paleta = paletas.frio, sty
     </svg>
   );
 };
+
+// Auto (vehículos que cruzan por pasos no habilitados).
+export const Auto: React.FC<Props> = ({ size = 200, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size * 0.6} viewBox="0 0 160 96" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M14 62 V50 C14 44 18 42 24 41 L44 38 L60 20 C63 17 66 16 70 16 H104 C110 16 114 18 118 23 L132 40 L144 43 C148 44 150 47 150 52 V62 C150 66 148 68 144 68 H20 C16 68 14 66 14 62 Z" fill={g.fill} />
+      <path d="M66 24 H86 V40 H52 Z M92 24 H106 C109 24 111 25 113 28 L122 40 H92 Z" fill={colors.bg} opacity={0.55} />
+      {[44, 120].map((cx) => (
+        <g key={cx}>
+          <circle cx={cx} cy={70} r={15} fill="#1C1A26" stroke="#FFFFFF" strokeOpacity={0.8} strokeWidth={4} />
+          <circle cx={cx} cy={70} r={5} fill="#FFFFFF" />
+        </g>
+      ))}
+    </svg>
+  );
+};
+
+// Persona caminando con mochila.
+export const Persona: React.FC<Props & { paso?: number }> = ({ size = 140, paleta = paletas.calido, style, paso = 0 }) => {
+  const g = useGrad(paleta);
+  const a = Math.sin(paso) * 16;
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <circle cx={54} cy={14} r={9} fill={g.fill} />
+      <rect x={30} y={28} width={14} height={26} rx={5} fill={g.fill} opacity={0.75} />
+      <path d="M48 26 C56 26 60 30 60 38 V58 H44 V34 C44 29 45 26 48 26 Z" fill={g.fill} />
+      <g transform={`rotate(${a} 52 58)`}>
+        <rect x={46} y={56} width={9} height={36} rx={4.5} fill={g.fill} />
+      </g>
+      <g transform={`rotate(${-a} 52 58)`}>
+        <rect x={50} y={56} width={9} height={36} rx={4.5} fill={g.fill} opacity={0.8} />
+      </g>
+      <g transform={`rotate(${-a * 0.8} 56 32)`}>
+        <rect x={56} y={30} width={7} height={26} rx={3.5} fill={g.fill} opacity={0.9} />
+      </g>
+    </svg>
+  );
+};
+
+// Cordillera con nieve: el altiplano.
+export const Montana: React.FC<Props> = ({ size = 220, paleta = ["#8B5CF6", "#3B2A6B"], style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size * 0.6} viewBox="0 0 160 96" style={{ ...glow(paleta[0]), ...style }}>
+      {g.defs}
+      <path d="M0 92 L48 22 L72 52 L100 8 L160 92 Z" fill={g.fill} />
+      <path d="M48 22 L58 36 L52 34 L44 40 L40 34 Z M100 8 L114 28 L106 26 L98 32 L90 24 Z" fill="#FFFFFF" opacity={0.9} />
+    </svg>
+  );
+};
+
+// Dron de vigilancia.
+export const Dron: React.FC<Props> = ({ size = 160, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size * 0.6} viewBox="0 0 160 96" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M30 34 H130" stroke={g.fill} strokeWidth={6} strokeLinecap="round" />
+      {[22, 138].map((x) => (
+        <g key={x}>
+          <rect x={x - 3} y={22} width={6} height={14} rx={3} fill={g.fill} />
+          <ellipse cx={x} cy={20} rx={22} ry={4} fill={g.fill} opacity={0.7} />
+        </g>
+      ))}
+      <rect x={58} y={30} width={44} height={22} rx={10} fill={g.fill} />
+      <circle cx={80} cy={60} r={9} fill={g.fill} />
+      <circle cx={80} cy={60} r={4} fill={colors.bg} />
+    </svg>
+  );
+};
+
+// Hoja: el entorno natural.
+export const Hoja: React.FC<Props> = ({ size = 140, paleta = paletas.hoja, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M18 82 C14 40 44 14 88 12 C88 56 62 86 18 82 Z" fill={g.fill} />
+      <path d="M18 82 C36 60 52 44 74 28" stroke={colors.bg} strokeOpacity={0.45} strokeWidth={4} fill="none" strokeLinecap="round" />
+    </svg>
+  );
+};
+
+// Gota de agua.
+export const Gota: React.FC<Props> = ({ size = 120, paleta = ["#7DD3FC", "#3B82F6"], style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M50 8 C36 30 22 46 22 62 C22 78 34 90 50 90 C66 90 78 78 78 62 C78 46 64 30 50 8 Z" fill={g.fill} />
+      <path d="M36 62 C36 70 40 76 48 78" stroke="#FFFFFF" strokeOpacity={0.6} strokeWidth={5} fill="none" strokeLinecap="round" />
+    </svg>
+  );
+};
+
+// Ojo: lo que se ve (detecciones).
+export const Ojo: React.FC<Props & { cerrado?: number }> = ({ size = 140, paleta = paletas.frio, style, cerrado = 0 }) => {
+  const g = useGrad(paleta);
+  const k = 1 - cerrado * 0.9;
+  return (
+    <svg width={size} height={size * 0.7} viewBox="0 0 100 70" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <g transform={`translate(0 ${35 * (1 - k)}) scale(1 ${k})`}>
+        <path d="M4 35 C20 8 80 8 96 35 C80 62 20 62 4 35 Z" fill={g.fill} />
+        <circle cx={50} cy={35} r={15} fill={colors.bg} />
+        <circle cx={55} cy={30} r={5} fill="#FFFFFF" />
+      </g>
+    </svg>
+  );
+};
