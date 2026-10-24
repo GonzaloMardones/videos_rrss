@@ -1,55 +1,55 @@
 {
- "duracion": 135.418,
+ "duracion": 134.757,
  "escenas": [
   {
    "id": "gancho",
    "inicio": 0.25,
-   "fin": 8.601
+   "fin": 8.451
   },
   {
    "id": "titulo",
-   "inicio": 8.601,
-   "fin": 13.146
+   "inicio": 8.451,
+   "fin": 12.997
   },
   {
    "id": "capas",
-   "inicio": 13.146,
-   "fin": 39.547
+   "inicio": 12.997,
+   "fin": 39.249
   },
   {
    "id": "porque",
-   "inicio": 39.547,
-   "fin": 51.927
+   "inicio": 39.249,
+   "fin": 51.437
   },
   {
    "id": "como",
-   "inicio": 51.927,
-   "fin": 70.451
+   "inicio": 51.437,
+   "fin": 69.961
   },
   {
    "id": "busqueda",
-   "inicio": 70.451,
-   "fin": 85.967
+   "inicio": 69.961,
+   "fin": 85.477
   },
   {
    "id": "agente",
-   "inicio": 85.967,
-   "fin": 102.337
+   "inicio": 85.477,
+   "fin": 101.675
   },
   {
    "id": "saber",
-   "inicio": 102.337,
-   "fin": 118.813
+   "inicio": 101.675,
+   "fin": 118.151
   },
   {
    "id": "acelera",
-   "inicio": 118.813,
-   "fin": 128.79
+   "inicio": 118.151,
+   "fin": 128.129
   },
   {
    "id": "cierre",
-   "inicio": 128.79,
-   "fin": 135.418
+   "inicio": 128.129,
+   "fin": 134.757
   }
  ],
  "frases": [
@@ -63,182 +63,182 @@
   {
    "escena": "gancho",
    "inicio": 4.077,
-   "fin": 8.301,
+   "fin": 8.151,
    "texto": "Estas son las 5 capas que debe tener, y por qué el RAG es la que más acelera.",
    "cue": "capas"
   },
   {
    "escena": "titulo",
-   "inicio": 8.601,
-   "fin": 12.846,
+   "inicio": 8.451,
+   "fin": 12.697,
    "texto": "Cápsula técnica: anatomía de un proyecto de IA.",
    "cue": null
   },
   {
    "escena": "capas",
-   "inicio": 13.146,
-   "fin": 17.839,
+   "inicio": 12.997,
+   "fin": 17.69,
    "texto": "Capa 1, ingesta: convertir documentos y transcripciones en texto limpio.",
    "cue": "ingesta"
   },
   {
    "escena": "capas",
-   "inicio": 17.959,
-   "fin": 24.103,
+   "inicio": 17.81,
+   "fin": 23.805,
    "texto": "Capa 2, conocimiento. Aquí vive el RAG: tus documentos convertidos en vectores que el modelo puede consultar.",
    "cue": "conocimiento"
   },
   {
    "escena": "capas",
-   "inicio": 24.223,
-   "fin": 28.362,
+   "inicio": 23.925,
+   "fin": 28.063,
    "texto": "Capa 3, orquestación: un agente con pasos definidos, no un prompt gigante.",
    "cue": "orquestacion"
   },
   {
    "escena": "capas",
-   "inicio": 28.482,
-   "fin": 33.175,
+   "inicio": 28.183,
+   "fin": 32.877,
    "texto": "Capa 4, integraciones: herramientas externas y otros agentes, con autenticación seria.",
    "cue": "integraciones"
   },
   {
    "escena": "capas",
-   "inicio": 33.295,
-   "fin": 39.247,
+   "inicio": 32.997,
+   "fin": 38.949,
    "texto": "Capa 5, persistencia y resiliencia: metadatos, memoria por tema, y un plan B para cada llamada al modelo.",
    "cue": "persistencia"
   },
   {
    "escena": "porque",
-   "inicio": 39.547,
-   "fin": 43.11,
+   "inicio": 39.249,
+   "fin": 42.619,
    "texto": "¿Por qué importa el RAG? Porque el modelo no conoce tus documentos.",
    "cue": "noconoce"
   },
   {
    "escena": "porque",
-   "inicio": 43.23,
-   "fin": 46.878,
+   "inicio": 42.739,
+   "fin": 46.387,
    "texto": "El problema: reentrenarlo es caro, lento, y queda obsoleto en semanas.",
    "cue": "caro"
   },
   {
    "escena": "porque",
-   "inicio": 46.998,
-   "fin": 51.627,
+   "inicio": 46.507,
+   "fin": 51.137,
    "texto": "Con RAG, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
    "cue": "minutos"
   },
   {
    "escena": "como",
-   "inicio": 51.927,
-   "fin": 59.65,
+   "inicio": 51.437,
+   "fin": 59.159,
    "texto": "¿Cómo se compone? Primero, partes el texto en trozos de unos 800 caracteres, con 150 de traslape para no cortar ideas a la mitad.",
    "cue": "chunks"
   },
   {
    "escena": "como",
-   "inicio": 59.77,
-   "fin": 65.53,
+   "inicio": 59.279,
+   "fin": 65.039,
    "texto": "Segundo, cada trozo pasa por un modelo de embeddings y se vuelve un vector de 768 números.",
    "cue": "vector"
   },
   {
    "escena": "como",
-   "inicio": 65.65,
-   "fin": 70.151,
+   "inicio": 65.159,
+   "fin": 69.661,
    "texto": "Tercero, lo guardas en una base vectorial, junto a su metadata: documento, tipo y dueño.",
    "cue": "guardar"
   },
   {
    "escena": "busqueda",
-   "inicio": 70.451,
-   "fin": 73.673,
+   "inicio": 69.961,
+   "fin": 73.182,
    "texto": "Cuando alguien pregunta, la pregunta también se vuelve vector.",
    "cue": "pregunta"
   },
   {
    "escena": "busqueda",
-   "inicio": 73.793,
-   "fin": 79.595,
+   "inicio": 73.302,
+   "fin": 79.105,
    "texto": "Comparas con similitud coseno, te quedas con los 3 más cercanos, y se los pasas al modelo como contexto.",
    "cue": "coseno"
   },
   {
    "escena": "busqueda",
-   "inicio": 79.715,
-   "fin": 85.667,
+   "inicio": 79.225,
+   "fin": 85.177,
    "texto": "Detalle que importa: usa el modo correcto de embedding. Documentos, consultas y similitud no son intercambiables.",
    "cue": "modos"
   },
   {
    "escena": "agente",
-   "inicio": 85.967,
-   "fin": 91.471,
+   "inicio": 85.477,
+   "fin": 90.981,
    "texto": "Tu agente debe ser un grafo de estados con pocos nodos: reunir contexto, razonar, y guardar lo aprendido.",
    "cue": "grafo"
   },
   {
    "escena": "agente",
-   "inicio": 91.591,
-   "fin": 95.751,
+   "inicio": 91.101,
+   "fin": 95.261,
    "texto": "Exige la salida en JSON con esquema, y valídala antes de que llegue al usuario.",
    "cue": "json"
   },
   {
    "escena": "agente",
-   "inicio": 95.871,
-   "fin": 102.037,
+   "inicio": 95.381,
+   "fin": 101.375,
    "texto": "Y cada nodo tiene plan B: sin contexto si el RAG falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
    "cue": "fallback"
   },
   {
    "escena": "saber",
-   "inicio": 102.337,
-   "fin": 107.969,
+   "inicio": 101.675,
+   "fin": 107.307,
    "texto": "Ahora, tres cosas más que necesitas saber. El tamaño del trozo es un equilibrio entre precisión y contexto.",
    "cue": "tradeoff"
   },
   {
    "escena": "saber",
-   "inicio": 108.089,
-   "fin": 112.995,
+   "inicio": 107.427,
+   "fin": 112.334,
    "texto": "Segunda: el umbral de similitud se afina con datos reales, y debe ser configuración, no código.",
    "cue": "umbral"
   },
   {
    "escena": "saber",
-   "inicio": 113.115,
-   "fin": 118.513,
+   "inicio": 112.454,
+   "fin": 117.851,
    "texto": "Y la tercera: la búsqueda en memoria aguanta unos miles de vectores. Después, migra a una base vectorial.",
    "cue": "escala"
   },
   {
    "escena": "acelera",
-   "inicio": 118.813,
-   "fin": 123.826,
+   "inicio": 118.151,
+   "fin": 123.165,
    "texto": "¿Qué acelera? Incorporar conocimiento nuevo pasa de semanas de reentrenamiento a minutos de ingesta.",
    "cue": "semanas"
   },
   {
    "escena": "acelera",
-   "inicio": 123.946,
-   "fin": 128.49,
+   "inicio": 123.285,
+   "fin": 127.829,
    "texto": "Y cada respuesta llega con sus fuentes: la revisión humana es más rápida y confiable.",
    "cue": "fuentes"
   },
   {
    "escena": "cierre",
-   "inicio": 128.79,
-   "fin": 132.587,
+   "inicio": 128.129,
+   "fin": 131.926,
    "texto": "Entonces: si tu proyecto no tiene estas 5 capas, todavía es una demo.",
    "cue": "demo"
   },
   {
    "escena": "cierre",
-   "inicio": 132.707,
-   "fin": 135.118,
+   "inicio": 132.046,
+   "fin": 134.457,
    "texto": "Compártelo y sígueme para la siguiente cápsula.",
    "cue": "cta"
   }
