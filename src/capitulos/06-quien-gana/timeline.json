@@ -1,0 +1,232 @@
+{
+ "duracion": 130.655,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 8.515
+  },
+  {
+   "id": "titulo",
+   "inicio": 8.515,
+   "fin": 11.269
+  },
+  {
+   "id": "comision",
+   "inicio": 11.269,
+   "fin": 23.905
+  },
+  {
+   "id": "utilidades",
+   "inicio": 23.905,
+   "fin": 35.951
+  },
+  {
+   "id": "encaje",
+   "inicio": 35.951,
+   "fin": 54.006
+  },
+  {
+   "id": "bonos",
+   "inicio": 54.006,
+   "fin": 65.498
+  },
+  {
+   "id": "iguales",
+   "inicio": 65.498,
+   "fin": 73.171
+  },
+  {
+   "id": "otrolado",
+   "inicio": 73.171,
+   "fin": 95.591
+  },
+  {
+   "id": "politica",
+   "inicio": 95.591,
+   "fin": 114.755
+  },
+  {
+   "id": "cierre",
+   "inicio": 114.755,
+   "fin": 130.655
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 4.837,
+   "texto": "Este año, las AFP perdieron más de US$7.000 millones de los ahorros de la gente.",
+   "cue": "perdieron"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.037,
+   "fin": 8.215,
+   "texto": "¿Y a las administradoras, cuánto les costó? Veamos los números.",
+   "cue": "cuanto"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 8.515,
+   "fin": 10.969,
+   "texto": "Capítulo 6: ¿quién gana cuando el fondo pierde?",
+   "cue": null
+  },
+  {
+   "escena": "comision",
+   "inicio": 11.269,
+   "fin": 16.325,
+   "texto": "Primero, la comisión. Las AFP cobran un porcentaje de tu sueldo, no de lo que tienes ahorrado.",
+   "cue": "comision"
+  },
+  {
+   "escena": "comision",
+   "inicio": 16.445,
+   "fin": 20.861,
+   "texto": "Entre 0,46% y 1,45%, según la AFP.",
+   "cue": "rango"
+  },
+  {
+   "escena": "comision",
+   "inicio": 20.981,
+   "fin": 23.605,
+   "texto": "Y si el fondo sube o baja, la comisión es la misma.",
+   "cue": "misma"
+  },
+  {
+   "escena": "utilidades",
+   "inicio": 23.905,
+   "fin": 30.731,
+   "texto": "Resultado: en el primer semestre, mientras el fondo E caía, las siete AFP ingresaron $622 mil millones.",
+   "cue": "ingresos"
+  },
+  {
+   "escena": "utilidades",
+   "inicio": 30.851,
+   "fin": 35.651,
+   "texto": "Y ganaron $378 mil millones: 13% más que el año anterior.",
+   "cue": "ganaron"
+  },
+  {
+   "escena": "encaje",
+   "inicio": 35.951,
+   "fin": 42.223,
+   "texto": "Entonces, ¿las AFP no pierden nada? Un poco. Deben tener un 1% de cada fondo con plata propia: el encaje.",
+   "cue": "encaje"
+  },
+  {
+   "escena": "encaje",
+   "inicio": 42.343,
+   "fin": 46.439,
+   "texto": "En el fondo E, eso son unos US$28 millones de pérdida entre las siete.",
+   "cue": "veintiocho"
+  },
+  {
+   "escena": "encaje",
+   "inicio": 46.559,
+   "fin": 53.706,
+   "texto": "Y hay otra regla: la rentabilidad mínima compara a cada AFP con el promedio. Si todas pierden juntas, ninguna tiene que compensar.",
+   "cue": "minima"
+  },
+  {
+   "escena": "bonos",
+   "inicio": 54.006,
+   "fin": 58.507,
+   "texto": "¿Y qué pasa con los bonos de los ejecutivos? Nadie lo sabe: son información reservada.",
+   "cue": "bonos"
+  },
+  {
+   "escena": "bonos",
+   "inicio": 58.627,
+   "fin": 65.198,
+   "texto": "Mario Marcel, exministro de Hacienda, pidió conocerlos. Hasta hoy, no hay antecedentes públicos que liguen bonos a estas operaciones.",
+   "cue": "marcel"
+  },
+  {
+   "escena": "iguales",
+   "inicio": 65.498,
+   "fin": 67.482,
+   "texto": "¿Todas hicieron lo mismo? Sí, las siete.",
+   "cue": "todas"
+  },
+  {
+   "escena": "iguales",
+   "inicio": 67.602,
+   "fin": 72.871,
+   "texto": "La que más cayó perdió 10,9%; la que menos, 9,9%. Un punto de diferencia.",
+   "cue": "punto"
+  },
+  {
+   "escena": "otrolado",
+   "inicio": 73.171,
+   "fin": 78.227,
+   "texto": "¿Quién está al otro lado? Un swap es un juego de suma cero: lo que pierde el fondo, lo gana la contraparte.",
+   "cue": "sumacero"
+  },
+  {
+   "escena": "otrolado",
+   "inicio": 78.347,
+   "fin": 85.217,
+   "texto": "Hasta septiembre, las mayores eran Bank of America, Société Générale y BNP Paribas, con más de US$1.000 millones cada uno.",
+   "cue": "bancos"
+  },
+  {
+   "escena": "otrolado",
+   "inicio": 85.337,
+   "fin": 90.734,
+   "texto": "Los dueños de las AFP son grupos como Sura, MetLife, Principal, Prudential y Generali, entre otros.",
+   "cue": "duenos"
+  },
+  {
+   "escena": "otrolado",
+   "inicio": 90.854,
+   "fin": 95.291,
+   "texto": "Y no hay evidencia pública de vínculos entre esos grupos y los bancos de la contraparte.",
+   "cue": "sinvinculo"
+  },
+  {
+   "escena": "politica",
+   "inicio": 95.591,
+   "fin": 105.063,
+   "texto": "Veamos ahora el lado político. El superintendente actual fue gerente de inversiones y presidente de Provida, y director en filiales de Habitat. Sus críticos hablan de puerta giratoria.",
+   "cue": "puerta"
+  },
+  {
+   "escena": "politica",
+   "inicio": 105.183,
+   "fin": 109.365,
+   "texto": "El gobierno culpa al gobierno anterior. El anterior responde que se hagan cargo.",
+   "cue": "culpa"
+  },
+  {
+   "escena": "politica",
+   "inicio": 109.485,
+   "fin": 114.455,
+   "texto": "Y hay denuncias por administración desleal en Fiscalía, y una comisión investigadora en trámite.",
+   "cue": "fiscalia"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 114.755,
+   "fin": 122.755,
+   "texto": "Entonces, la pregunta no es solo si hubo mala intención. Es que el diseño no alinea incentivos: comisión fija, pérdidas compartidas y bonos reservados.",
+   "cue": "diseno"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 122.875,
+   "fin": 127.931,
+   "texto": "Por eso hoy se discute cobrar sobre el saldo, transparentar los bonos y poner límites de duración.",
+   "cue": "propuestas"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 128.051,
+   "fin": 130.355,
+   "texto": "Compártelo y sígueme para el capítulo 7.",
+   "cue": "cta"
+  }
+ ]
+}

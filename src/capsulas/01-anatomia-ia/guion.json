@@ -1,0 +1,195 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Un proyecto de inteligencia artificial no es un prompt. Es un sistema.",
+          "muestra": "Un proyecto de inteligencia artificial no es un prompt. Es un sistema.",
+          "cue": "sistema",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Estas son las cinco capas que debe tener, y por qué el rag es la que más acelera.",
+          "muestra": "Estas son las 5 capas que debe tener, y por qué el RAG es la que más acelera.",
+          "cue": "capas"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es una cápsula técnica: anatomía de un proyecto de inteligencia artificial.",
+          "muestra": "Cápsula técnica: anatomía de un proyecto de IA."
+        }
+      ]
+    },
+    {
+      "id": "capas",
+      "frases": [
+        {
+          "dice": "La primera capa es la ingesta: convertir documentos y transcripciones en texto limpio.",
+          "muestra": "Capa 1, ingesta: convertir documentos y transcripciones en texto limpio.",
+          "cue": "ingesta"
+        },
+        {
+          "dice": "La segunda es conocimiento. Aquí vive el rag: tus documentos convertidos en vectores que el modelo puede consultar.",
+          "muestra": "Capa 2, conocimiento. Aquí vive el RAG: tus documentos convertidos en vectores que el modelo puede consultar.",
+          "cue": "conocimiento"
+        },
+        {
+          "dice": "La tercera es orquestación: un agente con pasos definidos, no un prompt gigante.",
+          "muestra": "Capa 3, orquestación: un agente con pasos definidos, no un prompt gigante.",
+          "cue": "orquestacion"
+        },
+        {
+          "dice": "La cuarta, integraciones: herramientas externas y otros agentes, con autenticación seria.",
+          "muestra": "Capa 4, integraciones: herramientas externas y otros agentes, con autenticación seria.",
+          "cue": "integraciones"
+        },
+        {
+          "dice": "Y la quinta, persistencia y resiliencia: metadatos, memoria por tema, y un plan B para cada llamada al modelo.",
+          "muestra": "Capa 5, persistencia y resiliencia: metadatos, memoria por tema, y un plan B para cada llamada al modelo.",
+          "cue": "persistencia"
+        }
+      ]
+    },
+    {
+      "id": "porque",
+      "frases": [
+        {
+          "dice": "¿Por qué importa el rag? Porque el modelo no conoce tus documentos.",
+          "muestra": "¿Por qué importa el RAG? Porque el modelo no conoce tus documentos.",
+          "cue": "noconoce"
+        },
+        {
+          "dice": "El problema: reentrenarlo es caro, lento, y queda obsoleto en semanas.",
+          "muestra": "El problema: reentrenarlo es caro, lento, y queda obsoleto en semanas.",
+          "cue": "caro"
+        },
+        {
+          "dice": "Con rag, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
+          "muestra": "Con RAG, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
+          "cue": "minutos"
+        }
+      ]
+    },
+    {
+      "id": "como",
+      "frases": [
+        {
+          "dice": "¿Cómo se compone? Primero, partes el texto en trozos de unos ochocientos caracteres, con ciento cincuenta de traslape para no cortar ideas a la mitad.",
+          "muestra": "¿Cómo se compone? Primero, partes el texto en trozos de unos 800 caracteres, con 150 de traslape para no cortar ideas a la mitad.",
+          "cue": "chunks"
+        },
+        {
+          "dice": "Segundo, cada trozo pasa por un modelo de embeddings y se vuelve un vector de setecientos sesenta y ocho números.",
+          "muestra": "Segundo, cada trozo pasa por un modelo de embeddings y se vuelve un vector de 768 números.",
+          "cue": "vector"
+        },
+        {
+          "dice": "Tercero, lo guardas en una base vectorial, junto a su metadata: documento, tipo y dueño.",
+          "muestra": "Tercero, lo guardas en una base vectorial, junto a su metadata: documento, tipo y dueño.",
+          "cue": "guardar"
+        }
+      ]
+    },
+    {
+      "id": "busqueda",
+      "frases": [
+        {
+          "dice": "Cuando alguien pregunta, la pregunta también se vuelve vector.",
+          "muestra": "Cuando alguien pregunta, la pregunta también se vuelve vector.",
+          "cue": "pregunta"
+        },
+        {
+          "dice": "Comparas con similitud coseno, te quedas con los tres más cercanos, y se los pasas al modelo como contexto.",
+          "muestra": "Comparas con similitud coseno, te quedas con los 3 más cercanos, y se los pasas al modelo como contexto.",
+          "cue": "coseno"
+        },
+        {
+          "dice": "Detalle que importa: usa el modo correcto de embedding. Documentos, consultas y similitud no son intercambiables.",
+          "muestra": "Detalle que importa: usa el modo correcto de embedding. Documentos, consultas y similitud no son intercambiables.",
+          "cue": "modos"
+        }
+      ]
+    },
+    {
+      "id": "agente",
+      "frases": [
+        {
+          "dice": "Tu agente debe ser un grafo de estados con pocos nodos: reunir contexto, razonar, y guardar lo aprendido.",
+          "muestra": "Tu agente debe ser un grafo de estados con pocos nodos: reunir contexto, razonar, y guardar lo aprendido.",
+          "cue": "grafo"
+        },
+        {
+          "dice": "Exige la salida en yeison con esquema, y valídala antes de que llegue al usuario.",
+          "muestra": "Exige la salida en JSON con esquema, y valídala antes de que llegue al usuario.",
+          "cue": "json"
+        },
+        {
+          "dice": "Y cada nodo tiene plan B: sin contexto si el rag falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
+          "muestra": "Y cada nodo tiene plan B: sin contexto si el RAG falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
+          "cue": "fallback"
+        }
+      ]
+    },
+    {
+      "id": "saber",
+      "frases": [
+        {
+          "dice": "Ahora, tres cosas más que necesitas saber. El tamaño del trozo es un equilibrio entre precisión y contexto.",
+          "muestra": "Ahora, tres cosas más que necesitas saber. El tamaño del trozo es un equilibrio entre precisión y contexto.",
+          "cue": "tradeoff"
+        },
+        {
+          "dice": "Segunda: el umbral de similitud se afina con datos reales, y debe ser configuración, no código.",
+          "muestra": "Segunda: el umbral de similitud se afina con datos reales, y debe ser configuración, no código.",
+          "cue": "umbral"
+        },
+        {
+          "dice": "Y la tercera: la búsqueda en memoria aguanta unos miles de vectores. Después, migra a una base vectorial.",
+          "muestra": "Y la tercera: la búsqueda en memoria aguanta unos miles de vectores. Después, migra a una base vectorial.",
+          "cue": "escala"
+        }
+      ]
+    },
+    {
+      "id": "acelera",
+      "frases": [
+        {
+          "dice": "¿Qué acelera? Incorporar conocimiento nuevo pasa de semanas de reentrenamiento a minutos de ingesta.",
+          "muestra": "¿Qué acelera? Incorporar conocimiento nuevo pasa de semanas de reentrenamiento a minutos de ingesta.",
+          "cue": "semanas"
+        },
+        {
+          "dice": "Y cada respuesta llega con sus fuentes: la revisión humana es más rápida y confiable.",
+          "muestra": "Y cada respuesta llega con sus fuentes: la revisión humana es más rápida y confiable.",
+          "cue": "fuentes"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Entonces: si tu proyecto no tiene estas cinco capas, todavía es una demo.",
+          "muestra": "Entonces: si tu proyecto no tiene estas 5 capas, todavía es una demo.",
+          "cue": "demo"
+        },
+        {
+          "dice": "Compártelo y sígueme para la siguiente cápsula.",
+          "muestra": "Compártelo y sígueme para la siguiente cápsula.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

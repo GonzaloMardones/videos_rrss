@@ -1,0 +1,305 @@
+{
+ "duracion": 124.026,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 9.091
+  },
+  {
+   "id": "titulo",
+   "inicio": 9.091,
+   "fin": 11.973
+  },
+  {
+   "id": "tamano",
+   "inicio": 11.973,
+   "fin": 20.598
+  },
+  {
+   "id": "costo",
+   "inicio": 20.598,
+   "fin": 30.845
+  },
+  {
+   "id": "resultados",
+   "inicio": 30.845,
+   "fin": 43.318
+  },
+  {
+   "id": "trampa",
+   "inicio": 43.318,
+   "fin": 55.117
+  },
+  {
+   "id": "causas",
+   "inicio": 55.117,
+   "fin": 66.131
+  },
+  {
+   "id": "beneficio",
+   "inicio": 66.131,
+   "fin": 75.61
+  },
+  {
+   "id": "riesgos",
+   "inicio": 75.61,
+   "fin": 87.619
+  },
+  {
+   "id": "calculo",
+   "inicio": 87.619,
+   "fin": 104.386
+  },
+  {
+   "id": "falta",
+   "inicio": 104.386,
+   "fin": 114.931
+  },
+  {
+   "id": "cierre",
+   "inicio": 114.931,
+   "fin": 124.026
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 4.879,
+   "texto": "Hoy, en el norte de Chile se construye una zanja de 3 metros de ancho y 3 de profundidad.",
+   "cue": "zanja"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.079,
+   "fin": 8.791,
+   "texto": "La promesa es frenar el ingreso irregular. ¿Funciona? Veamos los números.",
+   "cue": "numeros"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.091,
+   "fin": 11.673,
+   "texto": "Capítulo 4: la zanja de la frontera norte.",
+   "cue": null
+  },
+  {
+   "escena": "tamano",
+   "inicio": 11.973,
+   "fin": 14.618,
+   "texto": "La meta del gobierno es cavar 60 kilómetros.",
+   "cue": "meta"
+  },
+  {
+   "escena": "tamano",
+   "inicio": 14.738,
+   "fin": 17.405,
+   "texto": "Pero la frontera norte mide más de 1.000 kilómetros.",
+   "cue": "frontera"
+  },
+  {
+   "escena": "tamano",
+   "inicio": 17.525,
+   "fin": 20.298,
+   "texto": "La zanja cubre apenas un 6% del total.",
+   "cue": "seis"
+  },
+  {
+   "escena": "costo",
+   "inicio": 20.598,
+   "fin": 24.139,
+   "texto": "¿Y cuánto cuesta? Construirla, cerca de $4.000 millones.",
+   "cue": "obras"
+  },
+  {
+   "escena": "costo",
+   "inicio": 24.259,
+   "fin": 26.883,
+   "texto": "Mantener las obras, unos $6.000 millones al año.",
+   "cue": "anual"
+  },
+  {
+   "escena": "costo",
+   "inicio": 27.003,
+   "fin": 30.545,
+   "texto": "Y lo que cuestan los 1.100 militares desplegados, no se ha informado.",
+   "cue": "militares"
+  },
+  {
+   "escena": "resultados",
+   "inicio": 30.845,
+   "fin": 38.141,
+   "texto": "Según el gobierno, entre enero y agosto las personas detectadas por la PDI en la frontera norte bajaron un 93%.",
+   "cue": "noventa"
+  },
+  {
+   "escena": "resultados",
+   "inicio": 38.261,
+   "fin": 43.018,
+   "texto": "En Colchane, pasaron de 4.087 personas a solo 85.",
+   "cue": "colchane"
+  },
+  {
+   "escena": "trampa",
+   "inicio": 43.318,
+   "fin": 46.241,
+   "texto": "Pero ojo: detectar menos no es lo mismo que entrar menos.",
+   "cue": "ojo"
+  },
+  {
+   "escena": "trampa",
+   "inicio": 46.441,
+   "fin": 50.003,
+   "texto": "Si la gente evita los puntos vigilados, también bajan las detecciones.",
+   "cue": "evita"
+  },
+  {
+   "escena": "trampa",
+   "inicio": 50.123,
+   "fin": 54.817,
+   "texto": "De hecho, las denuncias por ingreso clandestino cayeron solo un 33%.",
+   "cue": "denuncias"
+  },
+  {
+   "escena": "causas",
+   "inicio": 55.117,
+   "fin": 56.93,
+   "texto": "Además, la zanja no llegó sola.",
+   "cue": "sola"
+  },
+  {
+   "escena": "causas",
+   "inicio": 57.05,
+   "fin": 60.954,
+   "texto": "Llegaron más militares, más controles y más tecnología al mismo tiempo.",
+   "cue": "juntos"
+  },
+  {
+   "escena": "causas",
+   "inicio": 61.074,
+   "fin": 65.831,
+   "texto": "Y los ingresos ya venían bajando desde antes. Separar el efecto de la zanja no es fácil.",
+   "cue": "antes"
+  },
+  {
+   "escena": "beneficio",
+   "inicio": 66.131,
+   "fin": 68.115,
+   "texto": "Entonces, ¿cuál es el beneficio real?",
+   "cue": "real"
+  },
+  {
+   "escena": "beneficio",
+   "inicio": 68.235,
+   "fin": 72.289,
+   "texto": "La zanja frena sobre todo a los vehículos: el contrabando y los autos robados.",
+   "cue": "autos"
+  },
+  {
+   "escena": "beneficio",
+   "inicio": 72.409,
+   "fin": 75.31,
+   "texto": "Pero una persona a pie puede rodearla en pocos minutos.",
+   "cue": "pie"
+  },
+  {
+   "escena": "riesgos",
+   "inicio": 75.61,
+   "fin": 76.698,
+   "texto": "Y tiene riesgos.",
+   "cue": "riesgos"
+  },
+  {
+   "escena": "riesgos",
+   "inicio": 76.818,
+   "fin": 80.871,
+   "texto": "Quienes igual cruzan buscan rutas más peligrosas, con frío extremo y sin agua.",
+   "cue": "rutas"
+  },
+  {
+   "escena": "riesgos",
+   "inicio": 80.991,
+   "fin": 83.871,
+   "texto": "Las obras pueden dañar bofedales y fauna del altiplano.",
+   "cue": "bofedales"
+  },
+  {
+   "escena": "riesgos",
+   "inicio": 83.991,
+   "fin": 87.319,
+   "texto": "Y mantener a tantos militares por años es difícil de sostener.",
+   "cue": "sostener"
+  },
+  {
+   "escena": "calculo",
+   "inicio": 87.619,
+   "fin": 89.091,
+   "texto": "Hagamos un cálculo propio.",
+   "cue": "calculo"
+  },
+  {
+   "escena": "calculo",
+   "inicio": 89.211,
+   "fin": 92.561,
+   "texto": "Cada kilómetro cuesta unos $67 millones.",
+   "cue": "km"
+  },
+  {
+   "escena": "calculo",
+   "inicio": 92.681,
+   "fin": 97.182,
+   "texto": "Cubrir toda la frontera costaría casi $70.000 millones, sin contar la mantención.",
+   "cue": "total"
+  },
+  {
+   "escena": "calculo",
+   "inicio": 97.302,
+   "fin": 104.086,
+   "texto": "Y si toda la baja de denuncias fuera por el plan, cada ingreso menos costaría más de $600 mil al año, solo en mantención.",
+   "cue": "porIngreso"
+  },
+  {
+   "escena": "falta",
+   "inicio": 104.386,
+   "fin": 107.863,
+   "texto": "¿Qué falta? Primero, conocer el costo total, incluidos los militares.",
+   "cue": "falta"
+  },
+  {
+   "escena": "falta",
+   "inicio": 107.983,
+   "fin": 112.229,
+   "texto": "Segundo, evaluar con un grupo de comparación: tramos con zanja y tramos sin ella.",
+   "cue": "comparar"
+  },
+  {
+   "escena": "falta",
+   "inicio": 112.349,
+   "fin": 114.631,
+   "texto": "Y tercero, coordinarse con Perú y Bolivia.",
+   "cue": "vecinos"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 114.931,
+   "fin": 118.451,
+   "texto": "La zanja puede ayudar en algunos tramos, pero no basta por sí sola.",
+   "cue": "ayuda"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 118.571,
+   "fin": 121.323,
+   "texto": "Y si no se mide bien, nunca sabremos si valió la pena.",
+   "cue": "medir"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 121.443,
+   "fin": 123.726,
+   "texto": "Compártelo y sígueme para el capítulo 5.",
+   "cue": "cta"
+  }
+ ]
+}

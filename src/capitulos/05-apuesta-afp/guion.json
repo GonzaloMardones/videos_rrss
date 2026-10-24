@@ -1,0 +1,226 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "El fondo más seguro de las pensiones perdió más de diez por ciento este año.",
+          "muestra": "El fondo más seguro de las pensiones perdió más de 10% este año.",
+          "cue": "diez",
+          "pausa": 0.2
+        },
+        {
+          "dice": "¿Cómo pasó? Veamos los números.",
+          "muestra": "¿Cómo pasó? Veamos los números.",
+          "cue": "numeros"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Capítulo cinco: la apuesta de las a efe pe.",
+          "muestra": "Capítulo 5: la apuesta de las AFP."
+        }
+      ]
+    },
+    {
+      "id": "apuesta",
+      "frases": [
+        {
+          "dice": "Resulta que las siete a efe pe firmaron contratos llamados suaps: ganaban si las tasas de Estados Unidos bajaban, y perdían si subían.",
+          "muestra": "Resulta que las siete AFP firmaron contratos llamados swaps: ganaban si las tasas de Estados Unidos bajaban, y perdían si subían.",
+          "cue": "swap"
+        },
+        {
+          "dice": "Esos contratos llegaron a casi setecientos mil millones de dólares: tres veces todo lo que administran.",
+          "muestra": "Esos contratos llegaron a casi US$700.000 millones: 3 veces todo lo que administran.",
+          "cue": "nocional"
+        }
+      ]
+    },
+    {
+      "id": "giro",
+      "frases": [
+        {
+          "dice": "Hace un año iban ganando mil cuatrocientos millones de dólares.",
+          "muestra": "Hace un año iban ganando US$1.400 millones.",
+          "cue": "ganaban"
+        },
+        {
+          "dice": "Pero vino la guerra en Irán, y la tasa a diez años pasó de casi cuatro a más de cinco por ciento.",
+          "muestra": "Pero vino la guerra en Irán, y la tasa a 10 años pasó de casi 4% a más de 5%.",
+          "cue": "tasa"
+        },
+        {
+          "dice": "Ahora esos contratos pierden siete mil setecientos millones de dólares.",
+          "muestra": "Ahora esos contratos pierden US$7.700 millones.",
+          "cue": "pierden"
+        }
+      ]
+    },
+    {
+      "id": "fondoE",
+      "frases": [
+        {
+          "dice": "El golpe se concentra en el fondo E, el que usan quienes están por jubilar.",
+          "muestra": "El golpe se concentra en el fondo E, el que usan quienes están por jubilar.",
+          "cue": "fondoE"
+        },
+        {
+          "dice": "Entre enero y septiembre cayó diez coma cuatro por ciento: su segundo peor año desde dos mil dos.",
+          "muestra": "Entre enero y septiembre cayó 10,4%: su segundo peor año desde 2002.",
+          "cue": "caida"
+        }
+      ]
+    },
+    {
+      "id": "personas",
+      "frases": [
+        {
+          "dice": "¿Qué significa para una persona? Con cincuenta millones ahorrados, son más de cinco millones menos.",
+          "muestra": "¿Qué significa para una persona? Con $50 millones ahorrados, son más de $5 millones menos.",
+          "cue": "saldo"
+        },
+        {
+          "dice": "Y si se pensiona hoy, una pensión de cuatrocientos mil queda en unos trescientos sesenta mil.",
+          "muestra": "Y si se pensiona hoy, una pensión de $400.000 queda en unos $360.000.",
+          "cue": "pension"
+        },
+        {
+          "dice": "Son setecientas setenta mil personas.",
+          "muestra": "Son 770.000 personas.",
+          "cue": "personas"
+        }
+      ]
+    },
+    {
+      "id": "calculo",
+      "frases": [
+        {
+          "dice": "La regla es simple: mientras más largo es el plazo de un bono, más cae cuando sube la tasa.",
+          "muestra": "La regla es simple: mientras más largo es el plazo de un bono, más cae cuando sube la tasa.",
+          "cue": "regla"
+        },
+        {
+          "dice": "Con los suaps, las a efe pe alargaron el plazo del fondo E a catorce años.",
+          "muestra": "Con los swaps, las AFP alargaron el plazo del fondo E a 14 años.",
+          "cue": "duracion"
+        },
+        {
+          "dice": "Con eso, cada punto que sube la tasa cuesta cerca de catorce por ciento del fondo.",
+          "muestra": "Con eso, cada punto que sube la tasa cuesta cerca de 14% del fondo.",
+          "cue": "catorce"
+        }
+      ]
+    },
+    {
+      "id": "verlo",
+      "frases": [
+        {
+          "dice": "¿Y esto se podía ver antes? Sí, se podía.",
+          "muestra": "¿Y esto se podía ver antes? Sí, se podía.",
+          "cue": "verlo",
+          "pausa": 0.2
+        },
+        {
+          "dice": "La Superintendencia publica cada mes la posición en derivados de cada fondo.",
+          "muestra": "La Superintendencia publica cada mes la posición en derivados de cada fondo.",
+          "cue": "super"
+        },
+        {
+          "dice": "El Banco Central lo advirtió en dos informes de estabilidad financiera.",
+          "muestra": "El Banco Central lo advirtió en dos Informes de Estabilidad Financiera.",
+          "cue": "central"
+        },
+        {
+          "dice": "Y las propias a efe pe pidieron límites en privado, porque ninguna quería salir sola.",
+          "muestra": "Y las propias AFP pidieron límites en privado, porque ninguna quería salir sola.",
+          "cue": "privado"
+        }
+      ]
+    },
+    {
+      "id": "manada",
+      "frases": [
+        {
+          "dice": "Eso se llama efecto manada: la regla castiga a la a efe pe que se aleja del promedio.",
+          "muestra": "Eso se llama efecto manada: la regla castiga a la AFP que se aleja del promedio.",
+          "cue": "manada"
+        },
+        {
+          "dice": "Por eso las siete hicieron lo mismo, y las siete perdieron casi igual.",
+          "muestra": "Por eso las siete hicieron lo mismo, y las siete perdieron casi igual.",
+          "cue": "iguales"
+        }
+      ]
+    },
+    {
+      "id": "mitigar",
+      "frases": [
+        {
+          "dice": "Entonces, ¿qué hacer si estás en el fondo E? Primero, no cambiarse por pánico: la pérdida solo se hace real si vendes.",
+          "muestra": "Entonces, ¿qué hacer si estás en el fondo E? Primero, no cambiarse por pánico: la pérdida solo se hace real si vendes.",
+          "cue": "panico"
+        },
+        {
+          "dice": "Segundo, si vas a jubilar, elegir retiro programado y no una renta vitalicia ahora, porque esa fija la pérdida para siempre.",
+          "muestra": "Segundo, si vas a jubilar, elegir retiro programado y no una renta vitalicia ahora, porque esa fija la pérdida para siempre.",
+          "cue": "retiro"
+        },
+        {
+          "dice": "Y tercero: si puedes, postergar unos meses.",
+          "muestra": "Y tercero: si puedes, postergar unos meses.",
+          "cue": "postergar"
+        }
+      ]
+    },
+    {
+      "id": "denuevo",
+      "frases": [
+        {
+          "dice": "¿Puede pasar de nuevo? Desde noviembre hay un límite: el fondo E no puede arriesgar más de dos por ciento si la tasa sube cero coma cuatro puntos.",
+          "muestra": "¿Puede pasar de nuevo? Desde noviembre hay un límite: el fondo E no puede arriesgar más de 2% si la tasa sube 0,4 puntos.",
+          "cue": "limite"
+        },
+        {
+          "dice": "Pero este año la tasa subió uno coma uno: casi tres veces ese escenario.",
+          "muestra": "Pero este año la tasa subió 1,1: casi 3 veces ese escenario.",
+          "cue": "triple"
+        },
+        {
+          "dice": "Además, el incentivo a seguir a la manada sigue ahí.",
+          "muestra": "Además, el incentivo a seguir a la manada sigue ahí.",
+          "cue": "sigue"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Una lección: conservador no es lo mismo que sin riesgo.",
+          "muestra": "Una lección: conservador no es lo mismo que sin riesgo.",
+          "cue": "leccion"
+        },
+        {
+          "dice": "Y los datos para verlo estaban publicados.",
+          "muestra": "Y los datos para verlo estaban publicados.",
+          "cue": "datos"
+        },
+        {
+          "dice": "Compártelo y sígueme para el capítulo seis.",
+          "muestra": "Compártelo y sígueme para el capítulo 6.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}
