@@ -108,3 +108,4 @@ Serie aparte, para profesionales que trabajan en IA. Misma tubería (guion → n
 | # | Composición | Tema | Guion |
 |---|---|---|---|
 | 01 | `Tec01-AnatomiaIA` | Anatomía de un proyecto de IA: las 5 capas y por qué el RAG acelera | [GUION.md](src/capsulas/01-anatomia-ia/GUION.md) |
+| 02 | `Tec02-AgenteGrafo` | El agente como grafo de estados y cómo conversa con frontend, backend y nube | [GUION.md](src/capsulas/02-agente-grafo/GUION.md) |

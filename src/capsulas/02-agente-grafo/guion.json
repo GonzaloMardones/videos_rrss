@@ -1,0 +1,190 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "¿Dónde vive tu agente de inteligencia artificial? No vive en el prompt que escribes.",
+          "muestra": "¿Dónde vive tu agente de IA? No vive en el prompt que escribes.",
+          "cue": "donde",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Tu agente vive en un grafo, detrás de un servidor, sobre una nube. Veamos cómo conversan.",
+          "muestra": "Tu agente vive en un grafo, detrás de un servidor, sobre una nube. Veamos cómo conversan.",
+          "cue": "conversan"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la cápsula técnica dos: el agente como grafo de estados, y sus conexiones.",
+          "muestra": "Cápsula técnica 02: el agente como grafo de estados."
+        }
+      ]
+    },
+    {
+      "id": "estado",
+      "frases": [
+        {
+          "dice": "Tu agente es un grafo de estados. El estado es un objeto: la petición, el usuario, el contexto recuperado, la respuesta.",
+          "muestra": "Tu agente es un grafo de estados. El estado es un objeto: la petición, el usuario, el contexto recuperado, la respuesta.",
+          "cue": "objeto"
+        },
+        {
+          "dice": "Cada nodo lo lee, lo enriquece, y lo pasa al siguiente.",
+          "muestra": "Cada nodo lo lee, lo enriquece, y lo pasa al siguiente.",
+          "cue": "pasa"
+        }
+      ]
+    },
+    {
+      "id": "nodos",
+      "frases": [
+        {
+          "dice": "Con tres nodos basta. El primero reúne contexto: lanza en paralelo la búsqueda en el rag y la memoria del tema.",
+          "muestra": "Con 3 nodos basta. El primero reúne contexto: lanza en paralelo la búsqueda en el RAG y la memoria del tema.",
+          "cue": "reunir"
+        },
+        {
+          "dice": "El segundo razona: arma el prompt con ese contexto, llama al modelo, y valida la salida contra un esquema.",
+          "muestra": "El segundo razona: arma el prompt con ese contexto, llama al modelo, y valida la salida contra un esquema.",
+          "cue": "razonar"
+        },
+        {
+          "dice": "El tercero guarda: persiste lo aprendido, solo si se cumple una condición.",
+          "muestra": "El tercero guarda: persiste lo aprendido, solo si se cumple una condición.",
+          "cue": "guardar"
+        }
+      ]
+    },
+    {
+      "id": "porque",
+      "frases": [
+        {
+          "dice": "¿Por qué un grafo y no una cadena de prompts? Porque cada nodo se prueba solo, se mide solo, y tiene su propio plan B.",
+          "muestra": "¿Por qué un grafo y no una cadena de prompts? Porque cada nodo se prueba solo, se mide solo, y tiene su propio plan B.",
+          "cue": "planb"
+        },
+        {
+          "dice": "Y si el grafo entero falla, el backend llama al modelo directo. El usuario nunca ve el error.",
+          "muestra": "Y si el grafo entero falla, el backend llama al modelo directo. El usuario nunca ve el error.",
+          "cue": "directo"
+        }
+      ]
+    },
+    {
+      "id": "frontend",
+      "frases": [
+        {
+          "dice": "¿Cómo conversa con el frontend? El frontend no sabe que hay un grafo.",
+          "muestra": "¿Cómo conversa con el frontend? El frontend no sabe que hay un grafo.",
+          "cue": "nosabe"
+        },
+        {
+          "dice": "Solo hace una petición a un endpoint, muestra un estado de carga, y recibe un objeto tipado: tipo, confianza, recomendación.",
+          "muestra": "Solo hace una petición a un endpoint, muestra un estado de carga, y recibe un objeto tipado: tipo, confianza, recomendación.",
+          "cue": "tipado"
+        },
+        {
+          "dice": "Su única tarea es renderizar, no razonar. Así puedes cambiar el agente sin tocar la interfaz.",
+          "muestra": "Su única tarea es renderizar, no razonar. Así puedes cambiar el agente sin tocar la interfaz.",
+          "cue": "renderizar"
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "frases": [
+        {
+          "dice": "Y del lado del servidor, el código se organiza en rebanadas verticales. Por cada capacidad: un router que solo habla HTTP, un servicio con la lógica, y un esquema con los tipos.",
+          "muestra": "Y en el backend, el código se organiza en rebanadas verticales. Por cada capacidad: un router que solo habla HTTP, un servicio con la lógica, y un esquema con los tipos.",
+          "cue": "rebanadas"
+        },
+        {
+          "dice": "Tu agente es un servicio más. Y la autenticación se inyecta como dependencia: ningún endpoint la implementa a mano.",
+          "muestra": "Tu agente es un servicio más. Y la autenticación se inyecta como dependencia: ningún endpoint la implementa a mano.",
+          "cue": "auth"
+        }
+      ]
+    },
+    {
+      "id": "nube",
+      "frases": [
+        {
+          "dice": "Vamos a la nube. El modelo y los embeddings son servicios administrados en una región.",
+          "muestra": "Vamos a la nube. El modelo y los embeddings son servicios administrados en una región.",
+          "cue": "administrados"
+        },
+        {
+          "dice": "Los vectores van a una base de documentos; los metadatos, a una relacional.",
+          "muestra": "Los vectores van a una base de documentos; los metadatos, a una relacional.",
+          "cue": "bases"
+        },
+        {
+          "dice": "Y la aplicación corre en contenedores sin servidor, detrás de un proxy que valida la identidad de cada usuario.",
+          "muestra": "Y la aplicación corre en contenedores sin servidor, detrás de un proxy que valida la identidad de cada usuario.",
+          "cue": "proxy"
+        }
+      ]
+    },
+    {
+      "id": "config",
+      "frases": [
+        {
+          "dice": "Todo lo que cambia entre ambientes, local, desarrollo y producción, vive en configuración: el modelo, los umbrales, el tamaño de los trozos.",
+          "muestra": "Todo lo que cambia entre ambientes (local, desarrollo y producción) vive en configuración: el modelo, los umbrales, el tamaño de los trozos.",
+          "cue": "ambientes"
+        },
+        {
+          "dice": "Y la infraestructura se declara como código, con un espacio de trabajo por ambiente.",
+          "muestra": "Y la infraestructura se declara como código, con un espacio de trabajo por ambiente.",
+          "cue": "iac"
+        }
+      ]
+    },
+    {
+      "id": "detalles",
+      "frases": [
+        {
+          "dice": "Dos detalles de producción. Toda llamada a la nube es asíncrona, para no bloquear el servidor.",
+          "muestra": "Dos detalles de producción. Toda llamada a la nube es asíncrona, para no bloquear el servidor.",
+          "cue": "async"
+        },
+        {
+          "dice": "Y los clientes de cada servicio se crean una sola vez y se reutilizan.",
+          "muestra": "Y los clientes de cada servicio se crean una sola vez y se reutilizan.",
+          "cue": "singleton"
+        },
+        {
+          "dice": "Y un endpoint de salud, sin autenticación, para que la plataforma sepa que el servicio sigue vivo.",
+          "muestra": "Y un endpoint de salud, sin autenticación, para que la plataforma sepa que el servicio sigue vivo.",
+          "cue": "salud"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Tu agente es el cerebro. Pero sin servidor, interfaz y nube, es solo un experimento.",
+          "muestra": "Tu agente es el cerebro. Pero sin servidor, interfaz y nube, es solo un experimento.",
+          "cue": "cerebro"
+        },
+        {
+          "dice": "Compártelo y sígueme para la cápsula tres de esta serie.",
+          "muestra": "Compártelo y sígueme para la cápsula 3.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

@@ -29,13 +29,14 @@ type Props = {
   carpeta: string; // carpeta en public/ con narracion.mp3 y musica.mp3
   volumenMusica: number;
   pops: string[]; // cues en que suena un "pop" (cuando aparece una cifra clave)
+  tono?: number; // rotación de matiz en grados: otra paleta sin tocar las escenas (0 = la de la serie)
 };
 
 // Estructura común de cada capítulo: fondo, escenas sincronizadas con la voz, subtítulos, música y efectos.
-export const Capitulo: React.FC<Props> = ({ timeline, escenas, carpeta, volumenMusica, pops }) => {
+export const Capitulo: React.FC<Props> = ({ timeline, escenas, carpeta, volumenMusica, pops, tono = 0 }) => {
   const { fps, durationInFrames } = useVideoConfig();
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={tono ? { filter: `hue-rotate(${tono}deg)` } : undefined}>
       <Background />
 
       {timeline.escenas.map((e, i) => {
