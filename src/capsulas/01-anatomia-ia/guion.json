@@ -16,7 +16,7 @@
           "pausa": 0.2
         },
         {
-          "dice": "Estas son las cinco capas que debe tener, y por qué el RAG es la que más acelera.",
+          "dice": "Estas son las cinco capas que debe tener, y por qué el rag es la que más acelera.",
           "muestra": "Estas son las 5 capas que debe tener, y por qué el RAG es la que más acelera.",
           "cue": "capas"
         }
@@ -40,7 +40,7 @@
           "cue": "ingesta"
         },
         {
-          "dice": "La segunda es conocimiento. Aquí vive el RAG: tus documentos convertidos en vectores que el modelo puede consultar.",
+          "dice": "La segunda es conocimiento. Aquí vive el rag: tus documentos convertidos en vectores que el modelo puede consultar.",
           "muestra": "Capa 2, conocimiento. Aquí vive el RAG: tus documentos convertidos en vectores que el modelo puede consultar.",
           "cue": "conocimiento"
         },
@@ -65,7 +65,7 @@
       "id": "porque",
       "frases": [
         {
-          "dice": "¿Por qué importa el RAG? Porque el modelo no conoce tus documentos.",
+          "dice": "¿Por qué importa el rag? Porque el modelo no conoce tus documentos.",
           "muestra": "¿Por qué importa el RAG? Porque el modelo no conoce tus documentos.",
           "cue": "noconoce"
         },
@@ -75,7 +75,7 @@
           "cue": "caro"
         },
         {
-          "dice": "Con RAG, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
+          "dice": "Con rag, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
           "muestra": "Con RAG, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
           "cue": "minutos"
         }
@@ -135,7 +135,7 @@
           "cue": "json"
         },
         {
-          "dice": "Y cada nodo tiene plan B: sin contexto si el RAG falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
+          "dice": "Y cada nodo tiene plan B: sin contexto si el rag falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
           "muestra": "Y cada nodo tiene plan B: sin contexto si el RAG falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
           "cue": "fallback"
         }
