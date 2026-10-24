@@ -100,3 +100,11 @@ Found an issue with Remotion? [File an issue here](https://github.com/remotion-d
 ## License
 
 Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+
+## Cápsulas técnicas
+
+Serie aparte, para profesionales que trabajan en IA. Misma tubería (guion → narración → escenas), carpeta `src/capsulas/`.
+
+| # | Composición | Tema | Guion |
+|---|---|---|---|
+| 01 | `Tec01-AnatomiaIA` | Anatomía de un proyecto de IA: las 5 capas y por qué el RAG acelera | [GUION.md](src/capsulas/01-anatomia-ia/GUION.md) |

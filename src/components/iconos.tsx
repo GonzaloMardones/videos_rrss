@@ -479,3 +479,69 @@ export const Bolsa: React.FC<Props> = ({ size = 130, paleta = paletas.cobre, sty
     </svg>
   );
 };
+
+// Chip: el modelo.
+export const Chip: React.FC<Props> = ({ size = 140, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  const pins = [26, 38, 50, 62, 74];
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      {pins.map((p) => (
+        <g key={p}>
+          <rect x={p - 3} y={8} width={6} height={14} rx={3} fill={g.fill} />
+          <rect x={p - 3} y={78} width={6} height={14} rx={3} fill={g.fill} />
+          <rect x={8} y={p - 3} width={14} height={6} rx={3} fill={g.fill} />
+          <rect x={78} y={p - 3} width={14} height={6} rx={3} fill={g.fill} />
+        </g>
+      ))}
+      <rect x={22} y={22} width={56} height={56} rx={12} fill={g.fill} />
+      <rect x={36} y={36} width={28} height={28} rx={6} fill={colors.bg} opacity={0.6} />
+    </svg>
+  );
+};
+
+// Base de datos: cilindro.
+export const BaseDatos: React.FC<Props> = ({ size = 130, paleta = paletas.frio, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M18 24 V76 C18 86 32 92 50 92 C68 92 82 86 82 76 V24 Z" fill={g.fill} />
+      <ellipse cx={50} cy={24} rx={32} ry={12} fill={g.fill} />
+      <ellipse cx={50} cy={24} rx={32} ry={12} fill="#FFFFFF" opacity={0.25} />
+      <path d="M18 46 C18 56 32 62 50 62 C68 62 82 56 82 46 M18 64 C18 74 32 80 50 80 C68 80 82 74 82 64" stroke={colors.bg} strokeOpacity={0.4} strokeWidth={3} fill="none" />
+    </svg>
+  );
+};
+
+// Burbuja de prompt.
+export const Burbuja: React.FC<Props & { texto?: string }> = ({ size = 160, paleta = paletas.calido, style, texto = "" }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size * 0.75} viewBox="0 0 160 120" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <path d="M16 12 H144 C152 12 156 16 156 24 V80 C156 88 152 92 144 92 H56 L30 112 V92 H16 C8 92 4 88 4 80 V24 C4 16 8 12 16 12 Z" fill={g.fill} />
+      {texto ? (
+        <text x={80} y={60} textAnchor="middle" fontSize={26} fontWeight={800} fill={colors.bg} fontFamily="'Bricolage Grotesque', sans-serif">
+          {texto}
+        </text>
+      ) : (
+        <path d="M30 40 H120 M30 56 H130 M30 72 H90" stroke={colors.bg} strokeOpacity={0.5} strokeWidth={6} strokeLinecap="round" />
+      )}
+    </svg>
+  );
+};
+
+// Lupa.
+export const Lupa: React.FC<Props> = ({ size = 120, paleta = paletas.cobre, style }) => {
+  const g = useGrad(paleta);
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" style={{ ...glow(paleta[1]), ...style }}>
+      {g.defs}
+      <circle cx={42} cy={42} r={28} fill="none" stroke={g.fill} strokeWidth={10} />
+      <path d="M62 62 L88 88" stroke={g.fill} strokeWidth={12} strokeLinecap="round" />
+      <circle cx={42} cy={42} r={16} fill={g.fill} opacity={0.25} />
+    </svg>
+  );
+};
