@@ -116,7 +116,6 @@ export const RemotionRoot: React.FC = () => {
           serie: "Cápsulas técnicas",
           autor: "Gonzalo Mardones",
           volumenMusica: 0.14,
-          tono: 300,
         }}
       />
       <MyComposition />

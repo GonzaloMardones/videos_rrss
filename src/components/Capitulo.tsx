@@ -13,12 +13,12 @@ const OUTRO = 2.4; // segundos que se mantiene el cierre tras la última palabra
 
 export const duracionCapitulo = (timeline: Timeline) => Math.ceil((timeline.duracion + OUTRO) * VIDEO.fps);
 
-const ProgressBar: React.FC = () => {
+const ProgressBar: React.FC<{ color?: string; alto?: number }> = ({ color = gradients.brand, alto = 8 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   return (
-    <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 8, background: "rgba(255,255,255,0.08)" }}>
-      <div style={{ width: `${(frame / durationInFrames) * 100}%`, height: "100%", background: gradients.brand }} />
+    <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: alto, background: "rgba(255,255,255,0.08)" }}>
+      <div style={{ width: `${(frame / durationInFrames) * 100}%`, height: "100%", background: color }} />
     </div>
   );
 };
@@ -30,14 +30,18 @@ type Props = {
   volumenMusica: number;
   pops: string[]; // cues en que suena un "pop" (cuando aparece una cifra clave)
   tono?: number; // rotación de matiz en grados: otra paleta sin tocar las escenas (0 = la de la serie)
+  // Para series con identidad propia: fondo, subtítulos y color de la barra de avance.
+  fondo?: React.ReactNode;
+  Subtitulos?: React.FC<{ timeline: Timeline }>;
+  progreso?: { color: string; alto: number };
 };
 
 // Estructura común de cada capítulo: fondo, escenas sincronizadas con la voz, subtítulos, música y efectos.
-export const Capitulo: React.FC<Props> = ({ timeline, escenas, carpeta, volumenMusica, pops, tono = 0 }) => {
+export const Capitulo: React.FC<Props> = ({ timeline, escenas, carpeta, volumenMusica, pops, tono = 0, fondo, Subtitulos = Captions, progreso }) => {
   const { fps, durationInFrames } = useVideoConfig();
   return (
     <AbsoluteFill style={tono ? { filter: `hue-rotate(${tono}deg)` } : undefined}>
-      <Background />
+      {fondo ?? <Background />}
 
       {timeline.escenas.map((e, i) => {
         const last = i === timeline.escenas.length - 1;
@@ -52,8 +56,8 @@ export const Capitulo: React.FC<Props> = ({ timeline, escenas, carpeta, volumenM
         );
       })}
 
-      <Captions timeline={timeline} />
-      <ProgressBar />
+      <Subtitulos timeline={timeline} />
+      <ProgressBar color={progreso?.color} alto={progreso?.alto} />
 
       <Html5Audio src={staticFile(`${carpeta}/narracion.mp3`)} />
       <Html5Audio

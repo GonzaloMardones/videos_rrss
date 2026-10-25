@@ -8,6 +8,7 @@
   "dependencies": {
     "@fontsource/bricolage-grotesque": "^5.3.0",
     "@fontsource/figtree": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
     "@remotion/cli": "4.0.535",
     "@remotion/tailwind-v4": "4.0.535",
     "@remotion/transitions": "^4.0.535",

@@ -1,189 +1,139 @@
 import React from "react";
-import { interpolate, useCurrentFrame } from "remotion";
-import { SceneShell } from "../../components/SceneShell";
-import { clamp, Pop, useEase, useSpring, WordsIn } from "../../components/motion";
+import { Easing, interpolate, useCurrentFrame } from "remotion";
 import { useCue, useCueAt } from "../../components/narracion";
-import { Glass, GradientText, Note } from "../../components/ui";
-import { Title } from "../../components/comun";
-import {
-  BaseDatos,
-  Burbuja,
-  Chip,
-  Documento,
-  Engranaje,
-  Escudo,
-  Flecha,
-  Lupa,
-  paletas,
-  Persona,
-  RelojArena,
-} from "../../components/iconos";
-import { colors, fonts, gradients } from "../../theme";
-import { ambientes, configurable, estado, nodos, nube, rebanada, respuesta } from "./data";
+import { Constelacion } from "../../estilos/vacio/Particulas";
+import { fuente, tipo, v } from "../../estilos/vacio/tokens";
+import { Acento, Cuerpo, Escena, Pildora, Rotulo, Sube, Titular } from "../../estilos/vacio/ui";
+import { ambientes, estado, nodos, nube, respuesta } from "./data";
 
-const big: React.CSSProperties = { fontFamily: fonts.display, fontWeight: 800, letterSpacing: -5, lineHeight: 1 };
-const mono: React.CSSProperties = { fontFamily: "'Figtree', monospace", fontWeight: 700, letterSpacing: 0 };
+const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
-const Float: React.FC<{ children: React.ReactNode; amp?: number; phase?: number }> = ({ children, amp = 10, phase = 0 }) => {
-  const frame = useCurrentFrame();
-  return <div style={{ transform: `translateY(${Math.sin(frame * 0.06 + phase) * amp}px)` }}>{children}</div>;
-};
-
-const Etiq: React.FC<{ children: React.ReactNode; color?: string; size?: number }> = ({ children, color = colors.dim, size = 34 }) => (
-  <div style={{ fontFamily: fonts.display, fontSize: size, fontWeight: 700, color, textAlign: "center", whiteSpace: "nowrap" }}>{children}</div>
-);
-
-// Nodo circular del grafo.
-const Nodo: React.FC<{ icono: React.ReactNode; texto: string; activo: boolean; listo: boolean; size?: number }> = ({ icono, texto, activo, listo, size = 130 }) => (
-  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, width: size + 40 }}>
-    <div
-      style={{
-        width: size,
-        height: size,
-        borderRadius: size / 2,
-        background: listo ? gradients.cool : colors.glassStrong,
-        border: `2px solid ${colors.line}`,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        boxShadow: activo ? "0 0 40px rgba(34,211,238,0.6)" : "none",
-        transform: `scale(${activo ? 1.08 : 1})`,
-      }}
-    >
-      {icono}
+// Fila de lista: número fino, nombre en blanco y detalle liviano. Sin cajas.
+const Item: React.FC<{ at: number; n: string; nombre: React.ReactNode; detalle?: React.ReactNode; activo?: boolean }> = ({ at, n, nombre, detalle, activo = true }) => (
+  <Sube at={at} dist={24}>
+    <div style={{ display: "flex", alignItems: "baseline", gap: 28, opacity: activo ? 1 : 0.35 }}>
+      <div style={{ ...tipo.dato, color: v.ceniza, width: 56, fontVariantNumeric: "tabular-nums" }}>{n}</div>
+      <div>
+        <div style={{ ...tipo.item, color: v.hueso }}>{nombre}</div>
+        {detalle ? <div style={{ ...tipo.dato, color: v.niebla, marginTop: 6 }}>{detalle}</div> : null}
+      </div>
     </div>
-    <Etiq size={24} color={colors.text}>
-      {texto}
-    </Etiq>
-  </div>
+  </Sube>
 );
 
-// Tres cajas: interfaz, servidor, nube.
-const Caja: React.FC<{ icono: React.ReactNode; texto: string; activa?: boolean; gradient?: string }> = ({ icono, texto, activa = false, gradient = gradients.cool }) => (
+// Nodo del grafo: un círculo de trazo fino; el activo se llena de violeta.
+const Punto: React.FC<{ activo: boolean; listo: boolean; size?: number }> = ({ activo, listo, size = 34 }) => (
   <div
     style={{
-      flex: 1,
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: 8,
-      padding: "18px 10px",
-      borderRadius: 24,
-      background: activa ? gradient : colors.glass,
-      border: `1.5px solid ${colors.line}`,
-      boxShadow: activa ? "0 0 40px rgba(34,211,238,0.4)" : "none",
+      width: size,
+      height: size,
+      borderRadius: size / 2,
+      border: `2px solid ${listo ? v.iris : v.ceniza}`,
+      background: activo ? v.iris : "transparent",
+      boxShadow: activo ? `0 0 0 10px rgba(128,82,255,0.18)` : "none",
     }}
-  >
-    {icono}
-    <Etiq size={28} color={activa ? colors.bg : colors.text}>
-      {texto}
-    </Etiq>
-  </div>
+  />
 );
 
-// Gancho: el prompt tachado y las tres capas donde vive el agente.
+// Gancho: la constelación se arma mientras aparece la pregunta.
 export const Gancho: React.FC = () => {
   const frame = useCurrentFrame();
   const cDonde = useCue("donde");
   const cNo = useCueAt("donde", 0.55);
   const cConv = useCue("conversan");
-  const tacha = useSpring(cNo, { damping: 10 });
-  const latido = 1 + 0.04 * Math.sin(frame * 0.2);
+  const tacha = interpolate(frame - cNo, [0, 14], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   return (
-    <SceneShell entrada="none">
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 46 }}>
-        <Pop at={cDonde} from="zoom">
-          <div style={{ ...big, fontSize: 120, textAlign: "center", transform: `scale(${latido})` }}>
-            <GradientText gradient={gradients.cool}>¿Dónde vive?</GradientText>
-          </div>
-        </Pop>
-        <Pop at={cDonde + 8} from="zoom" style={{ position: "relative" }}>
-          <Burbuja size={260} texto="prompt" />
-          <div style={{ position: "absolute", left: 80, top: -30, ...big, fontSize: 190, color: colors.pink, opacity: tacha, transform: `scale(${0.6 + 0.4 * tacha}) rotate(-12deg)` }}>✕</div>
-        </Pop>
-        <div style={{ display: "flex", gap: 16, width: 880 }}>
-          {[
-            { at: cConv, icono: <Engranaje size={80} />, texto: "grafo" },
-            { at: cConv + 6, icono: <Escudo size={80} />, texto: "servidor" },
-            { at: cConv + 12, icono: <BaseDatos size={80} />, texto: "nube" },
-          ].map((c) => (
-            <Pop key={c.texto} at={c.at} from="up" style={{ flex: 1, display: "flex" }}>
-              <Caja icono={c.icono} texto={c.texto} />
-            </Pop>
-          ))}
-        </div>
+    <Escena>
+      <div style={{ position: "absolute", left: -80, right: -80, top: -70, display: "flex", justifyContent: "center" }}>
+        <Constelacion at={cDonde - 10} ancho={820} />
       </div>
-    </SceneShell>
+      <div style={{ marginTop: 600 }}>
+        <Titular at={cDonde} size="titulo" style={{ fontSize: 100 }}>
+          ¿Dónde vive
+          <br />
+          tu agente?
+        </Titular>
+        <Sube at={cNo} style={{ marginTop: 26, display: "flex", alignItems: "center", gap: 20 }}>
+          <div style={{ ...tipo.subtitulo, fontSize: 56, color: v.ceniza, position: "relative" }}>
+            No en el prompt.
+            <div style={{ position: "absolute", left: 0, top: "55%", height: 3, width: `${tacha * 100}%`, background: v.azafran }} />
+          </div>
+        </Sube>
+        <Sube at={cConv} style={{ marginTop: 24 }}>
+          <div style={{ ...tipo.subtitulo, fontSize: 56 }}>
+            grafo <Acento color={v.ceniza}>·</Acento> servidor <Acento color={v.ceniza}>·</Acento> nube
+          </div>
+        </Sube>
+      </div>
+    </Escena>
   );
 };
 
 export const Titulo: React.FC<{ serie: string; autor: string }> = ({ serie, autor }) => (
-  <SceneShell entrada="zoom">
-    <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", gap: 16 }}>
-      <Pop at={2}>
-        <div style={{ fontFamily: fonts.display, fontSize: 40, fontWeight: 600, color: colors.dim }}>{serie} · 02</div>
-      </Pop>
-      <div style={{ ...big, letterSpacing: -6, lineHeight: 0.98 }}>
-        <Pop at={4} from="zoom" style={{ transformOrigin: "left center" }}>
-          <div style={{ fontSize: 160, letterSpacing: -8 }}>
-            <GradientText gradient={gradients.cool}>El agente</GradientText>
-          </div>
-        </Pop>
-        <WordsIn at={12} stagger={3} text="como grafo de estados" style={{ fontSize: 112, display: "block", marginTop: 10 }} />
-      </div>
-      <Pop at={24}>
-        <Note style={{ fontSize: 30, marginTop: 20 }}>por {autor}</Note>
-      </Pop>
+  <Escena>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 0, display: "flex", justifyContent: "center" }}>
+      <Constelacion at={-60} ancho={700} forma="red" cantidad={520} />
     </div>
-  </SceneShell>
+    <div style={{ marginTop: 470 }}>
+      <Rotulo at={2}>{serie} · 02</Rotulo>
+      <Titular at={6} size="display">
+        El agente
+        <br />
+        como <Acento>grafo</Acento>
+        <br />
+        de estados.
+      </Titular>
+      <Cuerpo at={18}>por {autor}</Cuerpo>
+    </div>
+  </Escena>
 );
 
-// El estado: un objeto que se va llenando al pasar por los nodos.
+// El estado: un objeto que se llena al pasar por los tres nodos.
 export const Estado: React.FC = () => {
   const frame = useCurrentFrame();
   const cObj = useCue("objeto");
   const cCampos = useCueAt("objeto", 0.45);
   const cPasa = useCue("pasa");
-  const avanza = useEase(cPasa + 4, 50);
+  const avanza = interpolate(frame - cPasa - 4, [0, 50], [0, 1], clamp);
   const paso = Math.min(2, Math.floor(avanza * 3));
+  const lleno = (i: number) => i < 2 || ((i === 2 || i === 3) && paso >= 1 && frame >= cPasa) || (i === 4 && paso >= 2);
   return (
-    <SceneShell entrada="rise">
-      <Title at={cObj} gradient={gradients.cool} size={104} sub="un objeto que viaja por los nodos">
-        El estado
-      </Title>
-      <Pop at={cObj + 6} style={{ display: "flex", justifyContent: "center" }}>
-        <Glass style={{ width: 620, padding: "26px 34px" }}>
-          <div style={{ ...mono, fontSize: 30, color: colors.dim }}>estado {"{"}</div>
-          {estado.map((k, i) => {
-            const vis = interpolate(frame, [cCampos + i * 6, cCampos + i * 6 + 8], [0, 1], clamp);
-            const lleno = i < 2 || (i === 2 && paso >= 1) || (i === 3 && paso >= 1) || (i === 4 && paso >= 2);
-            return (
-              <div key={k} style={{ display: "flex", alignItems: "center", gap: 16, marginLeft: 30, marginTop: 8, opacity: vis }}>
-                <div style={{ ...mono, fontSize: 30, color: colors.cyan }}>{k}:</div>
-                <div style={{ height: 22, width: lleno ? 160 : 60, borderRadius: 11, background: lleno ? gradients.gold : colors.glassStrong, border: `1.5px solid ${colors.line}` }} />
-              </div>
-            );
-          })}
-          <div style={{ ...mono, fontSize: 30, color: colors.dim, marginTop: 8 }}>{"}"}</div>
-        </Glass>
-      </Pop>
-      <Pop at={cPasa} style={{ marginTop: 40, display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-        {nodos.map((n, i) => (
-          <React.Fragment key={n.nombre}>
-            <Nodo icono={[<Lupa size={64} paleta={paletas.blanco} key="l" />, <Chip size={64} paleta={paletas.blanco} key="c" />, <BaseDatos size={64} paleta={paletas.blanco} key="b" />][i]} texto={n.nombre} activo={paso === i} listo={paso >= i} size={120} />
-            {i < 2 ? (
-              <div style={{ marginTop: 40, opacity: paso > i ? 1 : 0.3 }}>
-                <Flecha up color={colors.cyan} size={50} />
-              </div>
-            ) : null}
-          </React.Fragment>
+    <Escena>
+      <Rotulo at={cObj}>El estado</Rotulo>
+      <Titular at={cObj + 4}>
+        Un objeto
+        <br />
+        que <Acento>viaja.</Acento>
+      </Titular>
+      <div style={{ marginTop: 50, display: "flex", flexDirection: "column", gap: 14 }}>
+        {estado.map((k, i) => (
+          <Sube key={k} at={cCampos + i * 6} dist={14}>
+            <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+              <div style={{ ...tipo.dato, fontSize: 36, color: lleno(i) ? v.hueso : v.ceniza, width: 340 }}>{k}</div>
+              <div style={{ height: 2, flex: 1, background: lleno(i) ? v.azafran : "rgba(255,255,255,0.14)" }} />
+            </div>
+          </Sube>
         ))}
-      </Pop>
-    </SceneShell>
+      </div>
+      <Sube at={cPasa} style={{ marginTop: 70 }}>
+        <div style={{ position: "relative", height: 120 }}>
+          <div style={{ position: "absolute", left: 17, right: 17, top: 16, height: 2, background: "rgba(255,255,255,0.14)" }} />
+          <div style={{ position: "absolute", left: 17, top: 16, height: 2, width: `calc((100% - 34px) * ${avanza})`, background: v.iris }} />
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            {nodos.map((n, i) => (
+              <div key={n.nombre} style={{ display: "flex", flexDirection: "column", alignItems: i === 0 ? "flex-start" : i === 2 ? "flex-end" : "center", gap: 18 }}>
+                <Punto activo={paso === i && frame >= cPasa} listo={paso >= i && frame >= cPasa} />
+                <div style={{ ...tipo.dato, color: paso >= i ? v.hueso : v.ceniza }}>{n.nombre}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Sube>
+    </Escena>
   );
 };
 
-// Los tres nodos en detalle, con la rama paralela del primero.
+// Los tres nodos, uno debajo del otro.
 export const Nodos: React.FC = () => {
   const frame = useCurrentFrame();
   const cReunir = useCue("reunir");
@@ -192,285 +142,221 @@ export const Nodos: React.FC = () => {
   const cValida = useCueAt("razonar", 0.75);
   const cGuardar = useCue("guardar");
   const cCond = useCueAt("guardar", 0.6);
-  const ok = useSpring(cValida, { damping: 10 });
-  const cond = useSpring(cCond, { damping: 10 });
-  const fila = (at: number, n: string, icono: React.ReactNode, texto: string, contenido: React.ReactNode) => (
-    <Pop at={at} from="left">
-      <Glass style={{ display: "flex", alignItems: "center", gap: 22, padding: "18px 26px", height: 230 }}>
-        <div style={{ ...big, fontSize: 70, width: 50 }}>
-          <GradientText gradient={gradients.cool}>{n}</GradientText>
-        </div>
-        <div style={{ width: 100, display: "flex", justifyContent: "center" }}>{icono}</div>
-        <div style={{ flex: 1 }}>
-          <Etiq color={colors.text} size={36}>
-            {texto}
-          </Etiq>
-          <div style={{ marginTop: 10 }}>{contenido}</div>
-        </div>
-      </Glass>
-    </Pop>
-  );
-  const pastilla = (t: string, on: boolean, g = gradients.gold) => (
-    <div style={{ padding: "8px 16px", borderRadius: 999, background: on ? g : colors.glassStrong, border: `1.5px solid ${colors.line}`, fontSize: 24, fontWeight: 700, color: on ? colors.bg : colors.dim, whiteSpace: "nowrap" }}>{t}</div>
-  );
+  const activo = frame >= cGuardar ? 2 : frame >= cRazonar ? 1 : 0;
   return (
-    <SceneShell entrada="zoom">
-      <Title at={cReunir} gradient={gradients.gold} size={104}>
-        Tres nodos
-      </Title>
-      <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-        {fila(
-          cReunir,
-          "1",
-          <Lupa size={80} />,
-          "reunir contexto",
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {pastilla("búsqueda RAG", frame >= cParalelo)}
-              {pastilla("memoria del tema", frame >= cParalelo)}
-            </div>
-            <Note style={{ fontSize: 26, opacity: frame >= cParalelo ? 1 : 0 }}>en paralelo</Note>
-          </div>,
-        )}
-        {fila(
-          cRazonar,
-          "2",
-          <Chip size={80} />,
-          "razonar",
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            {pastilla("prompt + contexto", true, gradients.cool)}
-            <Flecha up color={colors.cyan} size={30} />
-            {pastilla("modelo", true, gradients.cool)}
-            <Flecha up color={colors.cyan} size={30} />
-            <div style={{ position: "relative" }}>
-              {pastilla("esquema", ok > 0.5, "linear-gradient(135deg,#7CF29A,#22B07D)")}
-              <div style={{ position: "absolute", right: -16, top: -20, ...big, fontSize: 40, color: "#7CF29A", opacity: ok, transform: `scale(${ok})` }}>✓</div>
-            </div>
-          </div>,
-        )}
-        {fila(
-          cGuardar,
-          "3",
-          <BaseDatos size={80} />,
-          "guardar",
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ ...mono, fontSize: 26, color: colors.gold, opacity: cond }}>si tipo == producto</div>
-            <Flecha up color={colors.gold} size={30} />
-            {pastilla("persistir aprendizajes", cond > 0.5)}
-          </div>,
-        )}
+    <Escena>
+      <Rotulo at={cReunir}>Tres nodos</Rotulo>
+      <Titular at={cReunir + 4} size="subtitulo" style={{ fontSize: 80 }}>
+        Con tres <Acento>basta.</Acento>
+      </Titular>
+      <div style={{ marginTop: 80, display: "flex", flexDirection: "column", gap: 80 }}>
+        <Item
+          at={cReunir + 8}
+          n="01"
+          activo={activo === 0}
+          nombre="Reunir contexto"
+          detalle={
+            <>
+              búsqueda RAG <Acento>+</Acento> memoria del tema
+              <span style={{ color: v.azafran, opacity: frame >= cParalelo ? 1 : 0 }}> · en paralelo</span>
+            </>
+          }
+        />
+        <Item
+          at={cRazonar}
+          n="02"
+          activo={activo === 1}
+          nombre="Razonar"
+          detalle={
+            <>
+              prompt → modelo → esquema <span style={{ color: v.azafran, opacity: frame >= cValida ? 1 : 0 }}>✓ validado</span>
+            </>
+          }
+        />
+        <Item
+          at={cGuardar}
+          n="03"
+          activo={activo === 2}
+          nombre="Guardar"
+          detalle={
+            <>
+              persiste lo aprendido <span style={{ color: v.azafran, opacity: frame >= cCond ? 1 : 0 }}>· solo si se cumple la condición</span>
+            </>
+          }
+        />
       </div>
-    </SceneShell>
+    </Escena>
   );
 };
 
-// Por qué grafo: cada nodo se prueba y tiene plan B; si todo falla, llamada directa.
+// Por qué un grafo: el desvío cuando el grafo entero falla.
 export const Porque: React.FC = () => {
   const frame = useCurrentFrame();
   const cPlanB = useCue("planb");
   const cCada = useCueAt("planb", 0.5);
   const cDirecto = useCue("directo");
   const cNunca = useCueAt("directo", 0.6);
-  const rompe = useSpring(cDirecto + 4, { damping: 8 });
-  const directo = useEase(cDirecto + 14, 30);
+  const rompe = interpolate(frame - cDirecto - 4, [0, 12], [0, 1], clamp);
+  const desvio = interpolate(frame - cDirecto - 14, [0, 30], [0, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) });
   return (
-    <SceneShell entrada="tilt">
-      <Title at={cPlanB} gradient={gradients.cool} size={104} sub="y no una cadena de prompts">
-        ¿Por qué un grafo?
-      </Title>
-      <Pop at={cCada} style={{ display: "flex", justifyContent: "space-between", gap: 10 }}>
-        {["se prueba solo", "se mide solo", "plan B propio"].map((t, i) => (
-          <Pop key={t} at={cCada + i * 6} from="up" style={{ flex: 1, display: "flex" }}>
-            <Glass style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 8, padding: "18px 10px" }}>
-              {[<Lupa size={60} key="l" />, <Engranaje size={60} key="e" />, <Escudo size={60} paleta={paletas.cobre} key="s" />][i]}
-              <Etiq size={26} color={colors.text}>
-                {t}
-              </Etiq>
-            </Glass>
-          </Pop>
-        ))}
-      </Pop>
-      <Pop at={cDirecto} style={{ position: "relative", height: 330, marginTop: 40 }}>
-        <svg width={900} height={330} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-          <line x1={120} y1={90} x2={780} y2={90} stroke={colors.line} strokeWidth={6} />
-          <g opacity={rompe}>
-            <path d={`M${450 - 30 * rompe} ${60} L${450} ${90} L${450 - 30 * rompe} ${120}`} stroke={colors.pink} strokeWidth={8} fill="none" strokeLinecap="round" />
-            <path d={`M${450 + 30 * rompe} ${60} L${450} ${90} L${450 + 30 * rompe} ${120}`} stroke={colors.pink} strokeWidth={8} fill="none" strokeLinecap="round" />
+    <Escena>
+      <Rotulo at={cPlanB}>¿Por qué un grafo?</Rotulo>
+      <Titular at={cPlanB + 4}>
+        Cada nodo
+        <br />
+        se prueba <Acento>solo.</Acento>
+      </Titular>
+      <Sube at={cCada} style={{ marginTop: 30 }}>
+        <div style={{ ...tipo.cuerpo, color: v.niebla }}>se mide solo · tiene su propio plan B</div>
+      </Sube>
+      <Sube at={cDirecto} style={{ marginTop: 90 }}>
+        <svg width={912} height={300} style={{ overflow: "visible" }}>
+          <line x1={40} y1={80} x2={872} y2={80} stroke="rgba(255,255,255,0.2)" strokeWidth={2} />
+          <circle cx={40} cy={80} r={16} fill={v.iris} />
+          <circle cx={456} cy={80} r={16} fill="none" stroke={v.ceniza} strokeWidth={2} opacity={1 - rompe * 0.7} />
+          <circle cx={872} cy={80} r={16} fill="none" stroke={v.hueso} strokeWidth={2} />
+          <g opacity={rompe} stroke={v.azafran} strokeWidth={3} strokeLinecap="round">
+            <line x1={440} y1={64} x2={472} y2={96} />
+            <line x1={472} y1={64} x2={440} y2={96} />
           </g>
-          <path d="M120 90 C 120 260, 780 260, 780 90" stroke={colors.gold} strokeWidth={8} fill="none" strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - directo} />
-          <text x={450} y={250} textAnchor="middle" fontSize={30} fontWeight={800} fill={colors.gold} fontFamily="'Bricolage Grotesque', sans-serif" opacity={directo}>
-            llamada directa al modelo
+          <path d="M40 80 C 40 250, 872 250, 872 80" stroke={v.iris} strokeWidth={3} fill="none" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - desvio} />
+          <text x={40} y={40} fill={v.ceniza} fontFamily={fuente} fontSize={26} fontWeight={200}>
+            servidor
+          </text>
+          <text x={456} y={40} fill={v.ceniza} fontFamily={fuente} fontSize={26} fontWeight={200} textAnchor="middle">
+            grafo
+          </text>
+          <text x={872} y={40} fill={v.ceniza} fontFamily={fuente} fontSize={26} fontWeight={200} textAnchor="end">
+            modelo
+          </text>
+          <text x={456} y={260} fill={v.hueso} fontFamily={fuente} fontSize={32} fontWeight={400} textAnchor="middle" opacity={desvio}>
+            llamada directa
           </text>
         </svg>
-        <div style={{ position: "absolute", left: 50, top: 20 }}>
-          <Escudo size={130} />
-        </div>
-        <div style={{ position: "absolute", left: 385, top: 30, opacity: 1 - rompe * 0.6 }}>
-          <Engranaje size={120} />
-        </div>
-        <div style={{ position: "absolute", left: 720, top: 20 }}>
-          <Chip size={130} />
-        </div>
-        <div style={{ position: "absolute", left: 0, right: 0, top: 290, textAlign: "center", opacity: interpolate(frame, [cNunca, cNunca + 10], [0, 1], clamp) }}>
-          <Etiq size={34} color={colors.text}>
-            el usuario nunca ve el error
-          </Etiq>
-        </div>
-      </Pop>
-    </SceneShell>
+      </Sube>
+      <Cuerpo at={cNunca} style={{ color: v.hueso, fontSize: 44, fontWeight: 400, letterSpacing: "-0.02em" }}>
+        El usuario nunca ve el error.
+      </Cuerpo>
+    </Escena>
   );
 };
 
-// Frontend: petición, carga, objeto tipado.
+// La interfaz: petición, espera, objeto tipado.
 export const Frontend: React.FC = () => {
   const frame = useCurrentFrame();
   const cNoSabe = useCue("nosabe");
   const cTipado = useCue("tipado");
-  const cCarga = useCueAt("tipado", 0.35);
   const cRecibe = useCueAt("tipado", 0.6);
   const cRender = useCue("renderizar");
-  const viaja = useEase(cTipado + 4, 24);
-  const vuelve = useEase(cRecibe, 24);
-  const gira = frame * 6;
+  const ida = interpolate(frame - cTipado - 4, [0, 24], [0, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) });
+  const vuelta = interpolate(frame - cRecibe, [0, 24], [0, 1], { ...clamp, easing: Easing.inOut(Easing.cubic) });
+  const enViaje = ida > 0 && vuelta < 1;
+  const x = vuelta > 0 ? 1 - vuelta : ida;
   return (
-    <SceneShell entrada="slide">
-      <Title at={cNoSabe} gradient={gradients.gold} size={104} sub="no sabe que hay un grafo">
-        La interfaz
-      </Title>
-      <Pop at={cNoSabe + 6} style={{ position: "relative", height: 260 }}>
-        <div style={{ position: "absolute", left: 0, top: 20, display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-          <Persona size={130} />
-          <Etiq size={26}>interfaz</Etiq>
+    <Escena>
+      <Rotulo at={cNoSabe}>La interfaz</Rotulo>
+      <Titular at={cNoSabe + 4}>
+        No sabe
+        <br />
+        que hay un <Acento>grafo.</Acento>
+      </Titular>
+      <Sube at={cTipado} style={{ marginTop: 70, position: "relative", height: 90 }}>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 30, height: 2, background: "rgba(255,255,255,0.14)" }} />
+        <div style={{ position: "absolute", left: 0, top: 50, ...tipo.dato, color: v.niebla }}>interfaz</div>
+        <div style={{ position: "absolute", right: 0, top: 50, ...tipo.dato, color: v.niebla }}>endpoint</div>
+        <div style={{ position: "absolute", left: 0, top: 14, width: 32, height: 32, borderRadius: 16, background: v.hueso }} />
+        <div style={{ position: "absolute", right: 0, top: 14, width: 32, height: 32, borderRadius: 16, border: `2px solid ${v.hueso}` }} />
+        <div style={{ position: "absolute", left: `calc(${x * 100}% - ${x * 32}px)`, top: -30, opacity: enViaje ? 1 : 0, ...tipo.rotulo, fontSize: 24, color: vuelta > 0 ? v.azafran : v.iris }}>
+          {vuelta > 0 ? "JSON" : "POST"}
         </div>
-        <div style={{ position: "absolute", right: 0, top: 20, display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-          <Glass style={{ padding: "16px 20px", borderRadius: 24 }}>
-            <Engranaje size={90} />
-          </Glass>
-          <Etiq size={26}>endpoint</Etiq>
-        </div>
-        <div style={{ position: "absolute", left: 150 + viaja * 560, top: 40, opacity: viaja > 0 && vuelve < 1 ? 1 : 0 }}>
-          <Burbuja size={120} texto="POST" paleta={paletas.calido} />
-        </div>
-        <div style={{ position: "absolute", left: 150 + (1 - vuelve) * 560, top: 140, opacity: vuelve > 0 ? 1 : 0 }}>
-          <Documento size={90} paleta={paletas.frio} />
-        </div>
-        <div style={{ position: "absolute", left: 60, top: 170, opacity: frame >= cCarga && vuelve < 1 ? 1 : 0, transform: `rotate(${gira}deg)` }}>
-          <RelojArena size={60} />
-        </div>
-      </Pop>
-      <Pop at={cRecibe} from="zoom" style={{ display: "flex", justifyContent: "center" }}>
-        <Glass glow="rgba(34,211,238,0.3)" style={{ width: 560, padding: "22px 30px" }}>
-          <div style={{ ...mono, fontSize: 28, color: colors.dim }}>{"{"}</div>
+      </Sube>
+      <Sube at={cRecibe} style={{ marginTop: 60 }}>
+        <div style={{ ...tipo.dato, fontSize: 36, lineHeight: 1.55 }}>
           {respuesta.campos.map((c, i) => (
-            <div key={c.k} style={{ ...mono, fontSize: 28, marginLeft: 30, opacity: interpolate(frame, [cRecibe + 10 + i * 5, cRecibe + 16 + i * 5], [0, 1], clamp) }}>
-              <span style={{ color: colors.cyan }}>"{c.k}"</span>: <span style={{ color: colors.gold }}>{c.v}</span>
+            <div key={c.k} style={{ opacity: interpolate(frame, [cRecibe + 8 + i * 5, cRecibe + 14 + i * 5], [0, 1], clamp) }}>
+              <span style={{ color: v.ceniza }}>{c.k}</span>
+              <span style={{ color: v.ceniza }}> → </span>
+              <span style={{ color: v.hueso, fontWeight: 400 }}>{c.v.replace(/"/g, "")}</span>
             </div>
           ))}
-          <div style={{ ...mono, fontSize: 28, color: colors.dim }}>{"}"}</div>
-        </Glass>
-      </Pop>
-      <Pop at={cRender} from="zoom" style={{ marginTop: 30, textAlign: "center" }}>
-        <div style={{ ...big, fontSize: 70, letterSpacing: -2 }}>
-          <GradientText gradient={gradients.gold}>renderizar, no razonar</GradientText>
         </div>
-      </Pop>
-    </SceneShell>
+      </Sube>
+      <Titular at={cRender} size="subtitulo" style={{ marginTop: 50 }}>
+        Renderiza. <Acento>No razona.</Acento>
+      </Titular>
+    </Escena>
   );
 };
 
-// Backend: rebanadas verticales y auth como dependencia.
+// El servidor: rebanadas verticales y auth inyectada.
 export const Backend: React.FC = () => {
   const frame = useCurrentFrame();
   const cReb = useCue("rebanadas");
   const cCapas = useCueAt("rebanadas", 0.45);
   const cAuth = useCue("auth");
   const cInyecta = useCueAt("auth", 0.5);
-  const inyecta = useSpring(cInyecta, { damping: 12 });
   const columnas = ["agente", "conocimiento", "usuarios", "calendario"];
+  const capas = ["router", "service", "schema"];
+  const auth = interpolate(frame - cInyecta, [0, 20], [0, 1], clamp);
   return (
-    <SceneShell entrada="rise">
-      <Title at={cReb} gradient={gradients.cool} size={104} sub="rebanadas verticales">
-        El servidor
-      </Title>
-      <Pop at={cReb + 6} style={{ display: "flex", gap: 14 }}>
+    <Escena>
+      <Rotulo at={cReb}>El servidor</Rotulo>
+      <Titular at={cReb + 4}>
+        Rebanadas
+        <br />
+        <Acento>verticales.</Acento>
+      </Titular>
+      <div style={{ marginTop: 60, display: "flex", gap: 22 }}>
         {columnas.map((c, i) => (
-          <Pop key={c} at={cReb + 8 + i * 4} from="up" style={{ flex: 1, display: "flex" }}>
-            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
-              <Etiq size={24} color={i === 0 ? colors.gold : colors.dim}>
-                {c}
-              </Etiq>
-              {rebanada.map((r, j) => (
-                <div
-                  key={r}
-                  style={{
-                    height: 86,
-                    borderRadius: 16,
-                    background: i === 0 ? gradients.cool : colors.glassStrong,
-                    border: `1.5px solid ${colors.line}`,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: 22,
-                    fontWeight: 700,
-                    color: i === 0 ? colors.bg : colors.dim,
-                    textAlign: "center",
-                    padding: "0 8px",
-                    opacity: interpolate(frame, [cCapas + j * 6, cCapas + j * 6 + 8], [0, 1], clamp),
-                  }}
-                >
-                  {i === 0 ? r : r.split(" · ")[0]}
-                </div>
-              ))}
-            </div>
-          </Pop>
+          <Sube key={c} at={cReb + 10 + i * 4} style={{ flex: 1 }}>
+            <div style={{ ...tipo.dato, fontSize: 28, color: i === 0 ? v.azafran : v.ceniza, fontWeight: i === 0 ? 400 : 200 }}>{c}</div>
+            {capas.map((k, j) => (
+              <div key={k} style={{ marginTop: 18, opacity: interpolate(frame, [cCapas + j * 6, cCapas + j * 6 + 8], [0, 1], clamp) }}>
+                <div style={{ height: 2, background: i === 0 ? v.iris : "rgba(255,255,255,0.2)" }} />
+                <div style={{ ...tipo.dato, fontSize: 30, color: i === 0 ? v.hueso : v.ceniza, marginTop: 10 }}>{k}</div>
+              </div>
+            ))}
+          </Sube>
         ))}
-      </Pop>
-      <Pop at={cAuth} style={{ marginTop: 40 }}>
-        <Glass glow="rgba(255,193,94,0.3)" style={{ display: "flex", alignItems: "center", gap: 24, padding: "22px 30px" }}>
-          <div style={{ transform: `translateX(${(1 - inyecta) * -40}px)`, opacity: 0.4 + 0.6 * inyecta }}>
-            <Escudo size={110} paleta={paletas.cobre} />
-          </div>
-          <Flecha up color={colors.gold} size={44} />
-          <div>
-            <Etiq color={colors.text} size={38}>
-              auth como dependencia
-            </Etiq>
-            <Note style={{ fontSize: 28 }}>se inyecta en cada endpoint · nadie la implementa a mano</Note>
-          </div>
-        </Glass>
-      </Pop>
-    </SceneShell>
+      </div>
+      <Sube at={cAuth} style={{ marginTop: 80 }}>
+        <div style={{ ...tipo.subtitulo, fontSize: 56 }}>
+          La <Acento>auth</Acento> se inyecta.
+        </div>
+        <div style={{ display: "flex", gap: 22, marginTop: 24 }}>
+          {columnas.map((c) => (
+            <div key={c} style={{ flex: 1, height: 2, background: v.azafran, opacity: auth, transform: `scaleX(${auth})`, transformOrigin: "left" }} />
+          ))}
+        </div>
+        <div style={{ ...tipo.dato, color: v.niebla, marginTop: 16 }}>ningún endpoint la implementa a mano</div>
+      </Sube>
+    </Escena>
   );
 };
 
-// La nube: servicios administrados, dos bases, contenedores, proxy de identidad.
+// La nube: lista sobria de cinco piezas.
 export const Nube: React.FC = () => {
   const cAdm = useCue("administrados");
   const cBases = useCue("bases");
   const cProxy = useCue("proxy");
-  const cues = [cAdm, cBases, cBases + 8, cProxy, cProxy + 10];
-  const iconos = [<Chip size={70} key="c" />, <BaseDatos size={70} key="b1" />, <BaseDatos size={70} paleta={paletas.cobre} key="b2" />, <Engranaje size={70} key="e" />, <Escudo size={70} paleta={paletas.cobre} key="s" />];
+  const cues = [cAdm + 8, cBases, cBases + 10, cProxy, cProxy + 12];
   return (
-    <SceneShell entrada="zoom">
-      <Title at={cAdm} gradient={gradients.gold} size={104} sub="todo administrado, nada que parchar">
-        La nube
-      </Title>
-      <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+    <Escena>
+      <div style={{ position: "absolute", right: -420, top: 330, opacity: 0.32 }}>
+        <Constelacion at={cAdm - 20} ancho={760} forma="anillo" cantidad={300} semilla={23} />
+      </div>
+      <Rotulo at={cAdm}>La nube</Rotulo>
+      <Titular at={cAdm + 4}>
+        Todo
+        <br />
+        <Acento>administrado.</Acento>
+      </Titular>
+      <div style={{ marginTop: 60, display: "flex", flexDirection: "column", gap: 34 }}>
         {nube.map((n, i) => (
-          <Pop key={n.nombre} at={cues[i]} from="right">
-            <Glass style={{ display: "flex", alignItems: "center", gap: 22, padding: "16px 26px", height: 128 }}>
-              <div style={{ width: 90, display: "flex", justifyContent: "center" }}>{iconos[i]}</div>
-              <div>
-                <Etiq color={colors.text} size={34}>
-                  {n.nombre}
-                </Etiq>
-                <Note style={{ fontSize: 26 }}>{n.detalle}</Note>
-              </div>
-            </Glass>
-          </Pop>
+          <Item key={n.nombre} at={cues[i]} n={`0${i + 1}`} nombre={n.nombre} detalle={n.detalle} />
         ))}
       </div>
-    </SceneShell>
+    </Escena>
   );
 };
 
@@ -481,160 +367,114 @@ export const Config: React.FC = () => {
   const cVive = useCueAt("ambientes", 0.55);
   const cIac = useCue("iac");
   const sel = Math.min(2, Math.floor(interpolate(frame, [cAmb + 6, cAmb + 60], [0, 3], clamp)));
+  const lineas = [
+    ["modelo", "configurable"],
+    ["umbral", "0.87"],
+    ["trozo", "800 / 150"],
+  ];
   return (
-    <SceneShell entrada="slide">
-      <Title at={cAmb} gradient={gradients.cool} size={104}>
-        Configuración
-      </Title>
-      <Pop at={cAmb + 4} style={{ display: "flex", gap: 14 }}>
+    <Escena>
+      <Rotulo at={cAmb}>Configuración</Rotulo>
+      <Titular at={cAmb + 4}>
+        Lo que cambia,
+        <br />
+        <Acento>no es código.</Acento>
+      </Titular>
+      <Sube at={cAmb + 10} style={{ marginTop: 60, display: "flex", gap: 40 }}>
         {ambientes.map((a, i) => (
-          <div key={a} style={{ flex: 1, padding: "16px 10px", borderRadius: 999, textAlign: "center", background: sel === i ? gradients.gold : colors.glassStrong, border: `1.5px solid ${colors.line}`, fontFamily: fonts.display, fontSize: 30, fontWeight: 800, color: sel === i ? colors.bg : colors.dim }}>
-            {a}
+          <div key={a}>
+            <div style={{ ...tipo.item, fontSize: 44, color: sel === i ? v.hueso : v.ceniza }}>{a}</div>
+            <div style={{ height: 3, marginTop: 10, background: v.azafran, opacity: sel === i ? 1 : 0 }} />
           </div>
         ))}
-      </Pop>
-      <Pop at={cVive} style={{ marginTop: 30, display: "flex", justifyContent: "center" }}>
-        <Glass style={{ width: 700, padding: "22px 30px" }}>
-          <div style={{ ...mono, fontSize: 26, color: colors.dim }}># application-{ambientes[sel].slice(0, 4)}.yaml</div>
-          {configurable.map((c, i) => (
-            <div key={c} style={{ ...mono, fontSize: 30, marginTop: 8, opacity: interpolate(frame, [cVive + i * 6, cVive + i * 6 + 8], [0, 1], clamp) }}>
-              <span style={{ color: colors.cyan }}>{c.split(" ")[0]}</span>: <span style={{ color: colors.gold }}>{c.split(" ").slice(1).join(" ") || "…"}</span>
-            </div>
-          ))}
-        </Glass>
-      </Pop>
-      <Pop at={cIac} from="zoom" style={{ marginTop: 40 }}>
-        <Glass glow="rgba(34,211,238,0.3)" style={{ display: "flex", alignItems: "center", gap: 24, padding: "22px 30px" }}>
-          <Documento size={100} paleta={paletas.frio} />
-          <div>
-            <Etiq color={colors.text} size={38}>
-              infraestructura como código
-            </Etiq>
-            <div style={{ display: "flex", gap: 10, marginTop: 8 }}>
-              {ambientes.map((a, i) => (
-                <div key={a} style={{ padding: "6px 14px", borderRadius: 999, background: colors.glassStrong, border: `1.5px solid ${colors.line}`, fontSize: 24, fontWeight: 700, opacity: interpolate(frame, [cIac + 10 + i * 5, cIac + 16 + i * 5], [0, 1], clamp) }}>
-                  workspace {a}
-                </div>
-              ))}
-            </div>
+      </Sube>
+      <Sube at={cVive} style={{ marginTop: 50 }}>
+        {lineas.map(([k, val], i) => (
+          <div key={k} style={{ ...tipo.dato, fontSize: 36, opacity: interpolate(frame, [cVive + i * 6, cVive + i * 6 + 8], [0, 1], clamp) }}>
+            <span style={{ color: v.ceniza }}>{k}: </span>
+            <span style={{ color: v.hueso, fontWeight: 400 }}>{val}</span>
           </div>
-        </Glass>
-      </Pop>
-    </SceneShell>
+        ))}
+      </Sube>
+      <Sube at={cIac} style={{ marginTop: 70 }}>
+        <div style={{ ...tipo.subtitulo, fontSize: 56 }}>
+          Infraestructura <Acento>como código.</Acento>
+        </div>
+        <div style={{ ...tipo.dato, color: v.niebla, marginTop: 12 }}>un espacio de trabajo por ambiente</div>
+      </Sube>
+    </Escena>
   );
 };
 
-// Detalles de producción: asíncrono, clientes reutilizados, endpoint de salud.
+// Detalles de producción: tres afirmaciones grandes.
 export const Detalles: React.FC = () => {
   const frame = useCurrentFrame();
   const cAsync = useCue("async");
   const cSingle = useCue("singleton");
   const cSalud = useCue("salud");
-  const t = ((frame - cAsync) % 60) / 60;
-  const pulso = 0.5 + 0.5 * Math.sin(frame * 0.25);
-  const fila = (at: number, icono: React.ReactNode, texto: string, sub: string, extra: React.ReactNode) => (
-    <Pop at={at} from="left">
-      <Glass style={{ display: "flex", alignItems: "center", gap: 22, padding: "18px 26px", height: 200 }}>
-        <div style={{ width: 100, display: "flex", justifyContent: "center" }}>{icono}</div>
-        <div style={{ flex: 1 }}>
-          <Etiq color={colors.text} size={36}>
-            {texto}
-          </Etiq>
-          <Note style={{ fontSize: 26 }}>{sub}</Note>
+  const late = 0.5 + 0.5 * Math.sin(frame * 0.2);
+  const fila = (at: number, n: string, grande: React.ReactNode, chico: string) => (
+    <Sube at={at}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: 28 }}>
+        <div style={{ ...tipo.dato, color: v.ceniza, width: 56 }}>{n}</div>
+        <div>
+          <div style={{ ...tipo.titulo, fontSize: 96 }}>{grande}</div>
+          <div style={{ ...tipo.dato, color: v.niebla, marginTop: 6 }}>{chico}</div>
         </div>
-        <div style={{ width: 220, display: "flex", justifyContent: "center" }}>{extra}</div>
-      </Glass>
-    </Pop>
+      </div>
+    </Sube>
   );
   return (
-    <SceneShell entrada="tilt">
-      <Title at={cAsync} gradient={gradients.gold} size={104}>
-        En producción
-      </Title>
-      <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-        {fila(
-          cAsync,
-          <RelojArena size={80} />,
-          "todo asíncrono",
-          "ninguna llamada bloquea el servidor",
-          <div style={{ display: "flex", flexDirection: "column", gap: 8, width: 200 }}>
-            {[0, 1, 2].map((i) => (
-              <div key={i} style={{ height: 14, borderRadius: 7, background: colors.glassStrong, overflow: "hidden" }}>
-                <div style={{ height: "100%", width: `${((t + i * 0.33) % 1) * 100}%`, background: gradients.cool }} />
-              </div>
-            ))}
-          </div>,
-        )}
+    <Escena>
+      <Rotulo at={cAsync}>En producción</Rotulo>
+      <div style={{ marginTop: 60, display: "flex", flexDirection: "column", gap: 70 }}>
+        {fila(cAsync, "01", "Asíncrono.", "ninguna llamada a la nube bloquea el servidor")}
         {fila(
           cSingle,
-          <Chip size={80} />,
-          "clientes reutilizados",
-          "se crean una vez, viven todo el proceso",
-          <div style={{ ...big, fontSize: 70, letterSpacing: -2 }}>
-            <GradientText gradient={gradients.gold}>×1</GradientText>
-          </div>,
+          "02",
+          <>
+            Clientes <Acento>×1.</Acento>
+          </>,
+          "se crean una vez y se reutilizan",
         )}
         {fila(
           cSalud,
-          <Escudo size={80} paleta={paletas.cobre} />,
-          "endpoint de salud",
-          "sin auth · la plataforma sabe que vive",
-          <div style={{ ...mono, fontSize: 30, color: "#7CF29A", textShadow: `0 0 ${20 * pulso}px #7CF29A` }}>/health · 200</div>,
+          "03",
+          <>
+            /health <span style={{ color: v.azafran, opacity: 0.6 + 0.4 * late }}>200</span>
+          </>,
+          "sin auth: la plataforma sabe que sigue vivo",
         )}
       </div>
-    </SceneShell>
+    </Escena>
   );
 };
 
 export const Cierre: React.FC<{ autor: string }> = ({ autor }) => {
-  const frame = useCurrentFrame();
   const cCerebro = useCue("cerebro");
   const cSin = useCueAt("cerebro", 0.4);
   const cCta = useCue("cta");
-  const pulse = 0.5 + 0.5 * Math.sin(frame * 0.18);
   return (
-    <SceneShell entrada="zoom">
-      <Title at={cCerebro} gradient={gradients.cool} size={104}>
-        Cerebro con cuerpo
-      </Title>
-      <Pop at={cCerebro + 6} style={{ display: "flex", justifyContent: "center" }}>
-        <Float>
-          <Chip size={170} />
-        </Float>
-      </Pop>
-      <div style={{ display: "flex", gap: 16, marginTop: 20 }}>
-        {[
-          { icono: <Persona size={70} />, texto: "interfaz" },
-          { icono: <Engranaje size={70} />, texto: "servidor" },
-          { icono: <BaseDatos size={70} />, texto: "nube" },
-        ].map((c, i) => (
-          <Pop key={c.texto} at={cSin + i * 6} from="up" style={{ flex: 1, display: "flex" }}>
-            <Caja icono={c.icono} texto={c.texto} activa />
-          </Pop>
-        ))}
+    <Escena>
+      <div style={{ position: "absolute", left: -80, right: -80, top: -70, display: "flex", justifyContent: "center" }}>
+        <Constelacion at={cCerebro - 30} ancho={780} forma="cerebro" desde="red" cambio={cCerebro} />
       </div>
-      <Pop at={cCta} from="zoom" style={{ marginTop: 50 }}>
-        <div
-          style={{
-            display: "inline-flex",
-            padding: "24px 40px",
-            borderRadius: 999,
-            background: gradients.brand,
-            color: colors.bg,
-            fontFamily: fonts.display,
-            fontSize: 42,
-            fontWeight: 800,
-            letterSpacing: -1,
-            whiteSpace: "nowrap",
-            boxShadow: `0 0 ${50 + 40 * pulse}px rgba(255,77,141,${0.35 + 0.3 * pulse})`,
-          }}
-        >
-          Compártelo · Sígueme →
+      <div style={{ marginTop: 570 }}>
+        <Titular at={cCerebro} size="titulo" style={{ fontSize: 100 }}>
+          Cerebro
+          <br />
+          con <Acento>cuerpo.</Acento>
+        </Titular>
+        <Sube at={cSin} style={{ marginTop: 26 }}>
+          <div style={{ ...tipo.subtitulo, fontSize: 48, color: v.niebla }}>interfaz · servidor · nube</div>
+        </Sube>
+        <div style={{ marginTop: 44, display: "flex", alignItems: "center", gap: 28 }}>
+          <Pildora at={cCta}>Compártelo · Sígueme</Pildora>
+          <Sube at={cCta + 8}>
+            <div style={{ ...tipo.dato, color: v.ceniza }}>{autor}</div>
+          </Sube>
         </div>
-      </Pop>
-      <Pop at={cCta + 8}>
-        <Note style={{ fontSize: 30, marginTop: 18 }}>{autor}</Note>
-      </Pop>
-    </SceneShell>
+      </div>
+    </Escena>
   );
 };
