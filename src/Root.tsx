@@ -10,6 +10,7 @@ import { Capitulo05, CAPITULO05_FRAMES } from "./capitulos/05-apuesta-afp/Capitu
 import { Capitulo06, CAPITULO06_FRAMES } from "./capitulos/06-quien-gana/Capitulo06";
 import { Capsula01, CAPSULA01_FRAMES } from "./capsulas/01-anatomia-ia/Capsula01";
 import { Capsula02, CAPSULA02_FRAMES } from "./capsulas/02-agente-grafo/Capsula02";
+import { Piezas } from "./capsulas/02-agente-grafo/Piezas";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -118,6 +119,7 @@ export const RemotionRoot: React.FC = () => {
           volumenMusica: 0.14,
         }}
       />
+      <Composition id="Tec02-Piezas" component={Piezas} durationInFrames={1} fps={VIDEO.fps} width={960} height={540} defaultProps={{ pieza: 0 }} />
       <MyComposition />
     </>
   );

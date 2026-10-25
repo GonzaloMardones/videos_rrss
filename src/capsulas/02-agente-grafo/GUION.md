@@ -54,3 +54,11 @@ Nota de voz: "RAG" se escribe `rag` en minúscula en el campo `dice` para que Ko
 > Sin servidor, interfaz y nube, el agente es solo un experimento. ¿Cómo lo tienes montado tú?
 >
 > #IA #agentes #LangGraph #RAG #arquitectura #cloud
+
+## Motion design (versión 3)
+
+- **Estilo "vacío"** (`src/estilos/vacio/`): negro puro, constelación de triángulos como firma, Inter liviana, ámbar para el énfasis y violeta solo para lo activo y el botón final.
+- **Ilustraciones isométricas** (`iso.tsx`) en el lenguaje de hairline (@lucasmarkes/hairline, MIT): cámara 2:1 a 45°, sólidos redondeados con silueta clara y un pliegue tenue, placas opacas pintadas de atrás hacia adelante, un solo realce y nada de texto dentro del dibujo. El paquete anima con su propio reloj y el puntero, que Remotion no puede capturar cuadro a cuadro, así que las figuras se dibujan desde el número de cuadro.
+- **framer-motion** (`movimiento.tsx`) como motor de curvas y resortes: `cubicBezier(.32,.72,0,1)` para los cambios discretos (el reloj de hairline), `expo.out` para los titulares divididos, `expo.inOut` para los recorridos, y su `spring` (k 100 · c 18 · m 1) evaluado en el tiempo del cuadro. No se usa `<motion.div>`: sus animaciones corren con el reloj del navegador.
+- **Pautas de UI UX Pro Max** (motion.csv): titulares divididos de menos de 8 palabras a 400–700 ms, escalonado de 20–40 ms, morph de 500–800 ms, paralaje con velocidades distintas por capa.
+- **Carrusel curvo** del gancho: `src/components/ui/tilted-grid-hero.tsx` (shadcn/ui) con tres props opcionales para render cuadro a cuadro (`time`, `size`, `ImageComponent`). Las piezas son imágenes locales generadas por la composición `Tec02-Piezas` (Unsplash está bloqueado en el contenedor de render).

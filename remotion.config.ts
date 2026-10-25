@@ -6,10 +6,20 @@
  */
 
 import { Config } from "@remotion/cli/config";
-import { enableTailwind } from '@remotion/tailwind-v4';
+import path from "node:path";
+import { enableTailwind } from "@remotion/tailwind-v4";
 
 Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 Config.setDefaultPremountInSeconds(2);
-Config.overrideBundlerConfig(enableTailwind);
+// Tailwind v4 y el alias "@/" → src/ (estructura de shadcn/ui: @/components/ui, @/lib/utils).
+Config.overrideBundlerConfig((config) =>
+  enableTailwind({
+    ...config,
+    resolve: {
+      ...config.resolve,
+      alias: { ...(config.resolve?.alias as Record<string, string> | undefined), "@": path.join(process.cwd(), "src") },
+    },
+  }),
+);
