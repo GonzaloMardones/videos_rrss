@@ -62,3 +62,25 @@ Nota de voz: "RAG" se escribe `rag` en minúscula en el campo `dice` para que Ko
 - **framer-motion** (`movimiento.tsx`) como motor de curvas y resortes: `cubicBezier(.32,.72,0,1)` para los cambios discretos (el reloj de hairline), `expo.out` para los titulares divididos, `expo.inOut` para los recorridos, y su `spring` (k 100 · c 18 · m 1) evaluado en el tiempo del cuadro. No se usa `<motion.div>`: sus animaciones corren con el reloj del navegador.
 - **Pautas de UI UX Pro Max** (motion.csv): titulares divididos de menos de 8 palabras a 400–700 ms, escalonado de 20–40 ms, morph de 500–800 ms, paralaje con velocidades distintas por capa.
 - **Carrusel curvo** del gancho: `src/components/ui/tilted-grid-hero.tsx` (shadcn/ui) con tres props opcionales para render cuadro a cuadro (`time`, `size`, `ImageComponent`). Las piezas son imágenes locales generadas por la composición `Tec02-Piezas` (Unsplash está bloqueado en el contenedor de render).
+
+## Diagramas técnicos (versión 4)
+
+La versión 3 ganó movimiento, pero sus figuras isométricas eran tan abstractas que no se reconocía qué era
+una base de datos, el RAG, el frontend, el backend o la nube. La versión 4 cambia las ilustraciones por
+diagramas técnicos con nombre (`src/estilos/vacio/tecnico.tsx`), sin tocar la narración:
+
+- **Tarjetas** con ícono de lucide-react, rol (qué hace) y tecnología (con qué): Firestore como base vectorial,
+  una base SQL para la memoria, FastAPI, LangGraph, Gemini en Vertex AI. Ningún texto bajo 20 px, para que
+  se lea en un teléfono.
+- **Cables** con flecha, etiqueta (`RAG`, `POST /api/agente`, `plan B · directo`, `persistir`) y paquetes de datos
+  que los recorren cuando la voz lo dice.
+- **El estado** es un objeto JSON que se desliza bajo el nodo que lo está leyendo y se va llenando.
+- **El RAG** se ve: la base vectorial alimenta al nodo Reunir, que muestra los tres trozos más similares.
+- **El frontend** es un navegador con el botón, la carga y el resultado tipado; el backend, carpetas por
+  capacidad con `router.py`, `service.py` y `schema.py`, y la autenticación inyectada a cada router.
+- **La nube** nombra los servicios de Google Cloud (IAP, Cloud Run, Vertex AI, Firestore, Cloud SQL) y bajo cada uno
+  su equivalente en AWS y en Azure.
+- **La configuración** es un `application-<ambiente>.yaml` que cambia de local a prod, y un `main.tf` con un
+  workspace por ambiente.
+
+Se nombran servicios, no código del proyecto: nada de rutas internas, nombres de cliente ni identificadores.
