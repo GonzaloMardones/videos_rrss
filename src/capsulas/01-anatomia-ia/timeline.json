@@ -1,55 +1,65 @@
 {
- "duracion": 134.757,
+ "duracion": 172.199,
  "escenas": [
   {
    "id": "gancho",
    "inicio": 0.25,
-   "fin": 8.451
+   "fin": 7.449
   },
   {
    "id": "titulo",
-   "inicio": 8.451,
-   "fin": 12.997
+   "inicio": 7.449,
+   "fin": 12.122
   },
   {
    "id": "capas",
-   "inicio": 12.997,
-   "fin": 39.249
+   "inicio": 12.122,
+   "fin": 29.243
   },
   {
    "id": "porque",
-   "inicio": 39.249,
-   "fin": 51.437
+   "inicio": 29.243,
+   "fin": 38.751
   },
   {
-   "id": "como",
-   "inicio": 51.437,
-   "fin": 69.961
+   "id": "trozos",
+   "inicio": 38.751,
+   "fin": 65.046
   },
   {
-   "id": "busqueda",
-   "inicio": 69.961,
-   "fin": 85.477
+   "id": "vector",
+   "inicio": 65.046,
+   "fin": 76.658
   },
   {
-   "id": "agente",
-   "inicio": 85.477,
-   "fin": 101.675
+   "id": "coseno",
+   "inicio": 76.658,
+   "fin": 97.841
   },
   {
-   "id": "saber",
-   "inicio": 101.675,
-   "fin": 118.151
+   "id": "ejemplo",
+   "inicio": 97.841,
+   "fin": 114.701
+  },
+  {
+   "id": "bigo",
+   "inicio": 114.701,
+   "fin": 143.483
+  },
+  {
+   "id": "umbral",
+   "inicio": 143.483,
+   "fin": 154.847
   },
   {
    "id": "acelera",
-   "inicio": 118.151,
-   "fin": 128.129
+   "inicio": 154.847,
+   "fin": 163.843
   },
   {
    "id": "cierre",
-   "inicio": 128.129,
-   "fin": 134.757
+   "inicio": 163.843,
+   "fin": 172.199
   }
  ],
  "frases": [
@@ -57,189 +67,259 @@
    "escena": "gancho",
    "inicio": 0.25,
    "fin": 3.877,
-   "texto": "Un proyecto de inteligencia artificial no es un prompt. Es un sistema.",
+   "texto": "Un proyecto de IA no es un prompt. Es un sistema.",
    "cue": "sistema"
   },
   {
    "escena": "gancho",
    "inicio": 4.077,
-   "fin": 8.151,
-   "texto": "Estas son las 5 capas que debe tener, y por qué el RAG es la que más acelera.",
+   "fin": 7.149,
+   "texto": "5 capas, y 3 cuentas que deciden si escala o se cae.",
    "cue": "capas"
   },
   {
    "escena": "titulo",
-   "inicio": 8.451,
-   "fin": 12.697,
-   "texto": "Cápsula técnica: anatomía de un proyecto de IA.",
+   "inicio": 7.449,
+   "fin": 11.822,
+   "texto": "Cápsula técnica 01: anatomía de un proyecto de IA.",
    "cue": null
   },
   {
    "escena": "capas",
-   "inicio": 12.997,
-   "fin": 17.69,
-   "texto": "Capa 1, ingesta: convertir documentos y transcripciones en texto limpio.",
+   "inicio": 12.122,
+   "fin": 15.087,
+   "texto": "1. Ingesta: documentos convertidos en texto limpio.",
    "cue": "ingesta"
   },
   {
    "escena": "capas",
-   "inicio": 17.81,
-   "fin": 23.805,
-   "texto": "Capa 2, conocimiento. Aquí vive el RAG: tus documentos convertidos en vectores que el modelo puede consultar.",
+   "inicio": 15.207,
+   "fin": 18.493,
+   "texto": "2. Conocimiento: aquí vive el RAG, tus documentos como vectores.",
    "cue": "conocimiento"
   },
   {
    "escena": "capas",
-   "inicio": 23.925,
-   "fin": 28.063,
-   "texto": "Capa 3, orquestación: un agente con pasos definidos, no un prompt gigante.",
+   "inicio": 18.613,
+   "fin": 21.237,
+   "texto": "3. Orquestación: un agente con pasos definidos.",
    "cue": "orquestacion"
   },
   {
    "escena": "capas",
-   "inicio": 28.183,
-   "fin": 32.877,
-   "texto": "Capa 4, integraciones: herramientas externas y otros agentes, con autenticación seria.",
+   "inicio": 21.357,
+   "fin": 24.983,
+   "texto": "4. Integraciones: herramientas y otros agentes, con autenticación.",
    "cue": "integraciones"
   },
   {
    "escena": "capas",
-   "inicio": 32.997,
-   "fin": 38.949,
-   "texto": "Capa 5, persistencia y resiliencia: metadatos, memoria por tema, y un plan B para cada llamada al modelo.",
+   "inicio": 25.103,
+   "fin": 28.943,
+   "texto": "5. Persistencia: memoria, y un plan B para cada llamada al modelo.",
    "cue": "persistencia"
   },
   {
    "escena": "porque",
-   "inicio": 39.249,
-   "fin": 42.619,
+   "inicio": 29.243,
+   "fin": 32.763,
    "texto": "¿Por qué importa el RAG? Porque el modelo no conoce tus documentos.",
    "cue": "noconoce"
   },
   {
    "escena": "porque",
-   "inicio": 42.739,
-   "fin": 46.387,
-   "texto": "El problema: reentrenarlo es caro, lento, y queda obsoleto en semanas.",
+   "inicio": 32.883,
+   "fin": 38.451,
+   "texto": "Reentrenarlo es caro y lento. Con RAG, subes un documento y en minutos responde con él, citando la fuente.",
    "cue": "caro"
   },
   {
-   "escena": "porque",
-   "inicio": 46.507,
-   "fin": 51.137,
-   "texto": "Con RAG, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
-   "cue": "minutos"
+   "escena": "trozos",
+   "inicio": 38.751,
+   "fin": 44.895,
+   "texto": "Cuenta 1, los trozos. Cada trozo mide t = 800 caracteres, y se traslapa o = 150 con el anterior.",
+   "cue": "trozo"
   },
   {
-   "escena": "como",
-   "inicio": 51.437,
-   "fin": 59.159,
-   "texto": "¿Cómo se compone? Primero, partes el texto en trozos de unos 800 caracteres, con 150 de traslape para no cortar ideas a la mitad.",
-   "cue": "chunks"
+   "escena": "trozos",
+   "inicio": 45.015,
+   "fin": 49.623,
+   "texto": "Entonces cada trozo avanza t − o = 650.",
+   "cue": "paso"
   },
   {
-   "escena": "como",
-   "inicio": 59.279,
-   "fin": 65.039,
-   "texto": "Segundo, cada trozo pasa por un modelo de embeddings y se vuelve un vector de 768 números.",
+   "escena": "trozos",
+   "inicio": 49.743,
+   "fin": 55.653,
+   "texto": "Y el número de trozos, n, es: el largo L menos el traslape, dividido por el paso, redondeado hacia arriba.",
+   "cue": "formula"
+  },
+  {
+   "escena": "trozos",
+   "inicio": 55.773,
+   "fin": 59.655,
+   "texto": "Por ejemplo: 10 páginas, 30.000 caracteres, son 46 trozos.",
+   "cue": "ejemplo"
+  },
+  {
+   "escena": "trozos",
+   "inicio": 59.775,
+   "fin": 64.746,
+   "texto": "El precio: guardas un 23% más de texto. A cambio, ninguna idea queda cortada.",
+   "cue": "costo"
+  },
+  {
+   "escena": "vector",
+   "inicio": 65.046,
+   "fin": 70.315,
+   "texto": "Cada trozo pasa por un modelo de embeddings y se vuelve un vector de 768 números.",
    "cue": "vector"
   },
   {
-   "escena": "como",
-   "inicio": 65.159,
-   "fin": 69.661,
-   "texto": "Tercero, lo guardas en una base vectorial, junto a su metadata: documento, tipo y dueño.",
+   "escena": "vector",
+   "inicio": 70.435,
+   "fin": 73.358,
+   "texto": "Piensa en una flecha: su dirección es el significado.",
+   "cue": "flecha"
+  },
+  {
+   "escena": "vector",
+   "inicio": 73.478,
+   "fin": 76.358,
+   "texto": "Y se guarda con su metadata: documento, tipo y dueño.",
    "cue": "guardar"
   },
   {
-   "escena": "busqueda",
-   "inicio": 69.961,
-   "fin": 73.182,
-   "texto": "Cuando alguien pregunta, la pregunta también se vuelve vector.",
+   "escena": "coseno",
+   "inicio": 76.658,
+   "fin": 82.354,
+   "texto": "Cuenta 2, el coseno. La pregunta también se vuelve un vector, q. Y se compara con el vector de cada trozo, d.",
    "cue": "pregunta"
   },
   {
-   "escena": "busqueda",
-   "inicio": 73.302,
-   "fin": 79.105,
-   "texto": "Comparas con similitud coseno, te quedas con los 3 más cercanos, y se los pasas al modelo como contexto.",
-   "cue": "coseno"
+   "escena": "coseno",
+   "inicio": 82.474,
+   "fin": 88.106,
+   "texto": "Arriba, el producto punto: multiplicas dimensión por dimensión y sumas. Mide cuánto apuntan al mismo lado.",
+   "cue": "numerador"
   },
   {
-   "escena": "busqueda",
-   "inicio": 79.225,
-   "fin": 85.177,
-   "texto": "Detalle que importa: usa el modo correcto de embedding. Documentos, consultas y similitud no son intercambiables.",
-   "cue": "modos"
+   "escena": "coseno",
+   "inicio": 88.226,
+   "fin": 93.111,
+   "texto": "Abajo, el largo de cada vector. Dividir por ellos borra el tamaño, y deja solo la dirección.",
+   "cue": "denominador"
   },
   {
-   "escena": "agente",
-   "inicio": 85.477,
-   "fin": 90.981,
-   "texto": "Tu agente debe ser un grafo de estados con pocos nodos: reunir contexto, razonar, y guardar lo aprendido.",
-   "cue": "grafo"
+   "escena": "coseno",
+   "inicio": 93.231,
+   "fin": 97.541,
+   "texto": "El resultado va de −1 a 1: 1 es el mismo sentido; 0, nada en común.",
+   "cue": "rango"
   },
   {
-   "escena": "agente",
-   "inicio": 91.101,
-   "fin": 95.261,
-   "texto": "Exige la salida en JSON con esquema, y valídala antes de que llegue al usuario.",
-   "cue": "json"
+   "escena": "ejemplo",
+   "inicio": 97.841,
+   "fin": 103.131,
+   "texto": "Con 3 dimensiones: 0,8 × 0,6 + 0,6 × 0,8 + 0 × 0.",
+   "cue": "producto"
   },
   {
-   "escena": "agente",
-   "inicio": 95.381,
-   "fin": 101.375,
-   "texto": "Y cada nodo tiene plan B: sin contexto si el RAG falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
-   "cue": "fallback"
+   "escena": "ejemplo",
+   "inicio": 103.251,
+   "fin": 109.203,
+   "texto": "Da 0,96. Los dos miden 1, así que el coseno es 0,96: casi idénticos.",
+   "cue": "resultado"
   },
   {
-   "escena": "saber",
-   "inicio": 101.675,
-   "fin": 107.307,
-   "texto": "Ahora, tres cosas más que necesitas saber. El tamaño del trozo es un equilibrio entre precisión y contexto.",
-   "cue": "tradeoff"
+   "escena": "ejemplo",
+   "inicio": 109.323,
+   "fin": 114.401,
+   "texto": "Repites esto con cada trozo, ordenas, y los 3 más altos son el contexto del modelo.",
+   "cue": "top"
   },
   {
-   "escena": "saber",
-   "inicio": 107.427,
-   "fin": 112.334,
-   "texto": "Segunda: el umbral de similitud se afina con datos reales, y debe ser configuración, no código.",
+   "escena": "bigo",
+   "inicio": 114.701,
+   "fin": 117.282,
+   "texto": "Cuenta 3: el costo, en notación Big O.",
+   "cue": "costo"
+  },
+  {
+   "escena": "bigo",
+   "inicio": 117.402,
+   "fin": 122.607,
+   "texto": "Comparar contra todo es O(n·d): n trozos, por d = 768 dimensiones.",
+   "cue": "lineal"
+  },
+  {
+   "escena": "bigo",
+   "inicio": 122.727,
+   "fin": 126.759,
+   "texto": "Con 911 trozos: 700 mil multiplicaciones. Milisegundos.",
+   "cue": "hoy"
+  },
+  {
+   "escena": "bigo",
+   "inicio": 126.879,
+   "fin": 131.85,
+   "texto": "Con un millón: 768 millones por pregunta, y más de 3 GB en memoria.",
+   "cue": "millon"
+  },
+  {
+   "escena": "bigo",
+   "inicio": 131.97,
+   "fin": 137.538,
+   "texto": "Ordenar todo cuesta n·log n. Quedarte solo con los 3 mejores, n·log k.",
+   "cue": "orden"
+  },
+  {
+   "escena": "bigo",
+   "inicio": 137.658,
+   "fin": 143.183,
+   "texto": "Por eso, pasados unos miles de vectores, migras a un índice aproximado, que crece como log n.",
+   "cue": "indice"
+  },
+  {
+   "escena": "umbral",
+   "inicio": 143.483,
+   "fin": 150.139,
+   "texto": "Un último número: el umbral. Si una reunión supera 0,87, se suma a un tema existente; si no, abre uno nuevo.",
    "cue": "umbral"
   },
   {
-   "escena": "saber",
-   "inicio": 112.454,
-   "fin": 117.851,
-   "texto": "Y la tercera: la búsqueda en memoria aguanta unos miles de vectores. Después, migra a una base vectorial.",
-   "cue": "escala"
+   "escena": "umbral",
+   "inicio": 150.259,
+   "fin": 154.547,
+   "texto": "Si lo subes, fragmentas. Si lo bajas, mezclas. Por eso es configuración, y no código.",
+   "cue": "mueve"
   },
   {
    "escena": "acelera",
-   "inicio": 118.151,
-   "fin": 123.165,
-   "texto": "¿Qué acelera? Incorporar conocimiento nuevo pasa de semanas de reentrenamiento a minutos de ingesta.",
-   "cue": "semanas"
+   "inicio": 154.847,
+   "fin": 160.095,
+   "texto": "¿Qué acelera? Ingerir es lineal: 46 trozos, en lotes de 5, son 10 llamadas.",
+   "cue": "lotes"
   },
   {
    "escena": "acelera",
-   "inicio": 123.285,
-   "fin": 127.829,
-   "texto": "Y cada respuesta llega con sus fuentes: la revisión humana es más rápida y confiable.",
+   "inicio": 160.215,
+   "fin": 163.543,
+   "texto": "Minutos, no semanas. Y cada respuesta llega con sus fuentes.",
    "cue": "fuentes"
   },
   {
    "escena": "cierre",
-   "inicio": 128.129,
-   "fin": 131.926,
-   "texto": "Entonces: si tu proyecto no tiene estas 5 capas, todavía es una demo.",
+   "inicio": 163.843,
+   "fin": 167.939,
+   "texto": "5 capas y 3 cuentas. Si tu proyecto no las tiene, todavía es una demo.",
    "cue": "demo"
   },
   {
    "escena": "cierre",
-   "inicio": 132.046,
-   "fin": 134.457,
-   "texto": "Compártelo y sígueme para la siguiente cápsula.",
+   "inicio": 168.059,
+   "fin": 171.899,
+   "texto": "Compártelo y sígueme para la cápsula 2: el agente como grafo de estados.",
    "cue": "cta"
   }
  ]

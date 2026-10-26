@@ -11,13 +11,13 @@
       "frases": [
         {
           "dice": "Un proyecto de inteligencia artificial no es un prompt. Es un sistema.",
-          "muestra": "Un proyecto de inteligencia artificial no es un prompt. Es un sistema.",
+          "muestra": "Un proyecto de IA no es un prompt. Es un sistema.",
           "cue": "sistema",
           "pausa": 0.2
         },
         {
-          "dice": "Estas son las cinco capas que debe tener, y por qué el rag es la que más acelera.",
-          "muestra": "Estas son las 5 capas que debe tener, y por qué el RAG es la que más acelera.",
+          "dice": "Cinco capas, y tres cuentas que deciden si escala o se cae.",
+          "muestra": "5 capas, y 3 cuentas que deciden si escala o se cae.",
           "cue": "capas"
         }
       ]
@@ -26,8 +26,8 @@
       "id": "titulo",
       "frases": [
         {
-          "dice": "Esta es una cápsula técnica: anatomía de un proyecto de inteligencia artificial.",
-          "muestra": "Cápsula técnica: anatomía de un proyecto de IA."
+          "dice": "Esta es la cápsula técnica uno: anatomía de un proyecto de inteligencia artificial.",
+          "muestra": "Cápsula técnica 01: anatomía de un proyecto de IA."
         }
       ]
     },
@@ -35,28 +35,28 @@
       "id": "capas",
       "frases": [
         {
-          "dice": "La primera capa es la ingesta: convertir documentos y transcripciones en texto limpio.",
-          "muestra": "Capa 1, ingesta: convertir documentos y transcripciones en texto limpio.",
+          "dice": "Uno, ingesta: documentos convertidos en texto limpio.",
+          "muestra": "1. Ingesta: documentos convertidos en texto limpio.",
           "cue": "ingesta"
         },
         {
-          "dice": "La segunda es conocimiento. Aquí vive el rag: tus documentos convertidos en vectores que el modelo puede consultar.",
-          "muestra": "Capa 2, conocimiento. Aquí vive el RAG: tus documentos convertidos en vectores que el modelo puede consultar.",
+          "dice": "Dos, conocimiento: aquí vive el rag, tus documentos como vectores.",
+          "muestra": "2. Conocimiento: aquí vive el RAG, tus documentos como vectores.",
           "cue": "conocimiento"
         },
         {
-          "dice": "La tercera es orquestación: un agente con pasos definidos, no un prompt gigante.",
-          "muestra": "Capa 3, orquestación: un agente con pasos definidos, no un prompt gigante.",
+          "dice": "Tres, orquestación: un agente con pasos definidos.",
+          "muestra": "3. Orquestación: un agente con pasos definidos.",
           "cue": "orquestacion"
         },
         {
-          "dice": "La cuarta, integraciones: herramientas externas y otros agentes, con autenticación seria.",
-          "muestra": "Capa 4, integraciones: herramientas externas y otros agentes, con autenticación seria.",
+          "dice": "Cuatro, integraciones: herramientas y otros agentes, con autenticación.",
+          "muestra": "4. Integraciones: herramientas y otros agentes, con autenticación.",
           "cue": "integraciones"
         },
         {
-          "dice": "Y la quinta, persistencia y resiliencia: metadatos, memoria por tema, y un plan B para cada llamada al modelo.",
-          "muestra": "Capa 5, persistencia y resiliencia: metadatos, memoria por tema, y un plan B para cada llamada al modelo.",
+          "dice": "Y cinco, persistencia: memoria, y un plan B para cada llamada al modelo.",
+          "muestra": "5. Persistencia: memoria, y un plan B para cada llamada al modelo.",
           "cue": "persistencia"
         }
       ]
@@ -65,99 +65,159 @@
       "id": "porque",
       "frases": [
         {
-          "dice": "¿Por qué importa el rag? Porque el modelo no conoce tus documentos.",
+          "dice": "¿Y por qué importa el rag? Porque el modelo no conoce tus documentos.",
           "muestra": "¿Por qué importa el RAG? Porque el modelo no conoce tus documentos.",
           "cue": "noconoce"
         },
         {
-          "dice": "El problema: reentrenarlo es caro, lento, y queda obsoleto en semanas.",
-          "muestra": "El problema: reentrenarlo es caro, lento, y queda obsoleto en semanas.",
+          "dice": "Reentrenarlo es caro y lento. Con rag, subes un documento y en minutos responde con él, citando la fuente.",
+          "muestra": "Reentrenarlo es caro y lento. Con RAG, subes un documento y en minutos responde con él, citando la fuente.",
           "cue": "caro"
-        },
-        {
-          "dice": "Con rag, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
-          "muestra": "Con RAG, subes un documento y en minutos ya responde con él. Y puede citar de dónde salió.",
-          "cue": "minutos"
         }
       ]
     },
     {
-      "id": "como",
+      "id": "trozos",
       "frases": [
         {
-          "dice": "¿Cómo se compone? Primero, partes el texto en trozos de unos ochocientos caracteres, con ciento cincuenta de traslape para no cortar ideas a la mitad.",
-          "muestra": "¿Cómo se compone? Primero, partes el texto en trozos de unos 800 caracteres, con 150 de traslape para no cortar ideas a la mitad.",
-          "cue": "chunks"
+          "dice": "Primera cuenta: los trozos. Cada trozo mide ochocientos caracteres, y se traslapa ciento cincuenta con el anterior.",
+          "muestra": "Cuenta 1, los trozos. Cada trozo mide t = 800 caracteres, y se traslapa o = 150 con el anterior.",
+          "cue": "trozo"
         },
         {
-          "dice": "Segundo, cada trozo pasa por un modelo de embeddings y se vuelve un vector de setecientos sesenta y ocho números.",
-          "muestra": "Segundo, cada trozo pasa por un modelo de embeddings y se vuelve un vector de 768 números.",
+          "dice": "Entonces cada trozo avanza ochocientos menos ciento cincuenta: seiscientos cincuenta.",
+          "muestra": "Entonces cada trozo avanza t − o = 650.",
+          "cue": "paso"
+        },
+        {
+          "dice": "Y el número de trozos de un documento es: su largo menos el traslape, dividido por el paso, redondeado hacia arriba.",
+          "muestra": "Y el número de trozos, n, es: el largo L menos el traslape, dividido por el paso, redondeado hacia arriba.",
+          "cue": "formula"
+        },
+        {
+          "dice": "Por ejemplo: diez páginas, treinta mil caracteres, son cuarenta y seis trozos.",
+          "muestra": "Por ejemplo: 10 páginas, 30.000 caracteres, son 46 trozos.",
+          "cue": "ejemplo"
+        },
+        {
+          "dice": "El precio: guardas un veintitrés por ciento más de texto. A cambio, ninguna idea queda cortada.",
+          "muestra": "El precio: guardas un 23% más de texto. A cambio, ninguna idea queda cortada.",
+          "cue": "costo"
+        }
+      ]
+    },
+    {
+      "id": "vector",
+      "frases": [
+        {
+          "dice": "Cada trozo pasa por un modelo de embeddings y se vuelve un vector de setecientos sesenta y ocho números.",
+          "muestra": "Cada trozo pasa por un modelo de embeddings y se vuelve un vector de 768 números.",
           "cue": "vector"
         },
         {
-          "dice": "Tercero, lo guardas en una base vectorial, junto a su metadata: documento, tipo y dueño.",
-          "muestra": "Tercero, lo guardas en una base vectorial, junto a su metadata: documento, tipo y dueño.",
+          "dice": "Piensa en una flecha: su dirección es el significado.",
+          "muestra": "Piensa en una flecha: su dirección es el significado.",
+          "cue": "flecha"
+        },
+        {
+          "dice": "Y se guarda con su metadata: documento, tipo y dueño.",
+          "muestra": "Y se guarda con su metadata: documento, tipo y dueño.",
           "cue": "guardar"
         }
       ]
     },
     {
-      "id": "busqueda",
+      "id": "coseno",
       "frases": [
         {
-          "dice": "Cuando alguien pregunta, la pregunta también se vuelve vector.",
-          "muestra": "Cuando alguien pregunta, la pregunta también se vuelve vector.",
+          "dice": "Segunda cuenta: el coseno. La pregunta también se vuelve un vector. Y se compara con el vector de cada trozo.",
+          "muestra": "Cuenta 2, el coseno. La pregunta también se vuelve un vector, q. Y se compara con el vector de cada trozo, d.",
           "cue": "pregunta"
         },
         {
-          "dice": "Comparas con similitud coseno, te quedas con los tres más cercanos, y se los pasas al modelo como contexto.",
-          "muestra": "Comparas con similitud coseno, te quedas con los 3 más cercanos, y se los pasas al modelo como contexto.",
-          "cue": "coseno"
+          "dice": "Arriba, el producto punto: multiplicas dimensión por dimensión y sumas. Mide cuánto apuntan al mismo lado.",
+          "muestra": "Arriba, el producto punto: multiplicas dimensión por dimensión y sumas. Mide cuánto apuntan al mismo lado.",
+          "cue": "numerador"
         },
         {
-          "dice": "Detalle que importa: usa el modo correcto de embedding. Documentos, consultas y similitud no son intercambiables.",
-          "muestra": "Detalle que importa: usa el modo correcto de embedding. Documentos, consultas y similitud no son intercambiables.",
-          "cue": "modos"
+          "dice": "Abajo, el largo de cada vector. Dividir por ellos borra el tamaño, y deja solo la dirección.",
+          "muestra": "Abajo, el largo de cada vector. Dividir por ellos borra el tamaño, y deja solo la dirección.",
+          "cue": "denominador"
+        },
+        {
+          "dice": "El resultado va de menos uno a uno: uno es el mismo sentido; cero, nada en común.",
+          "muestra": "El resultado va de −1 a 1: 1 es el mismo sentido; 0, nada en común.",
+          "cue": "rango"
         }
       ]
     },
     {
-      "id": "agente",
+      "id": "ejemplo",
       "frases": [
         {
-          "dice": "Tu agente debe ser un grafo de estados con pocos nodos: reunir contexto, razonar, y guardar lo aprendido.",
-          "muestra": "Tu agente debe ser un grafo de estados con pocos nodos: reunir contexto, razonar, y guardar lo aprendido.",
-          "cue": "grafo"
+          "dice": "Con tres dimensiones: cero coma ocho por cero coma seis, más cero coma seis por cero coma ocho, más cero.",
+          "muestra": "Con 3 dimensiones: 0,8 × 0,6 + 0,6 × 0,8 + 0 × 0.",
+          "cue": "producto"
         },
         {
-          "dice": "Exige la salida en yeison con esquema, y valídala antes de que llegue al usuario.",
-          "muestra": "Exige la salida en JSON con esquema, y valídala antes de que llegue al usuario.",
-          "cue": "json"
+          "dice": "Eso da cero coma noventa y seis. Los dos miden uno, así que el coseno es cero coma noventa y seis: casi idénticos.",
+          "muestra": "Da 0,96. Los dos miden 1, así que el coseno es 0,96: casi idénticos.",
+          "cue": "resultado"
         },
         {
-          "dice": "Y cada nodo tiene plan B: sin contexto si el rag falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
-          "muestra": "Y cada nodo tiene plan B: sin contexto si el RAG falla, llamada directa si el grafo falla. Nada bloquea al usuario.",
-          "cue": "fallback"
+          "dice": "Y ahora repites esto con cada trozo, ordenas, y los tres más altos son el contexto del modelo.",
+          "muestra": "Repites esto con cada trozo, ordenas, y los 3 más altos son el contexto del modelo.",
+          "cue": "top"
         }
       ]
     },
     {
-      "id": "saber",
+      "id": "bigo",
       "frases": [
         {
-          "dice": "Ahora, tres cosas más que necesitas saber. El tamaño del trozo es un equilibrio entre precisión y contexto.",
-          "muestra": "Ahora, tres cosas más que necesitas saber. El tamaño del trozo es un equilibrio entre precisión y contexto.",
-          "cue": "tradeoff"
+          "dice": "Tercera cuenta: el costo, en notación o grande.",
+          "muestra": "Cuenta 3: el costo, en notación Big O.",
+          "cue": "costo"
         },
         {
-          "dice": "Segunda: el umbral de similitud se afina con datos reales, y debe ser configuración, no código.",
-          "muestra": "Segunda: el umbral de similitud se afina con datos reales, y debe ser configuración, no código.",
+          "dice": "Comparar contra todo es orden ene por de: ene trozos, por setecientas sesenta y ocho dimensiones.",
+          "muestra": "Comparar contra todo es O(n·d): n trozos, por d = 768 dimensiones.",
+          "cue": "lineal"
+        },
+        {
+          "dice": "Con novecientos once trozos: setecientas mil multiplicaciones. Milisegundos.",
+          "muestra": "Con 911 trozos: 700 mil multiplicaciones. Milisegundos.",
+          "cue": "hoy"
+        },
+        {
+          "dice": "Con un millón: setecientos sesenta y ocho millones por pregunta, y más de tres gigas en memoria.",
+          "muestra": "Con un millón: 768 millones por pregunta, y más de 3 GB en memoria.",
+          "cue": "millon"
+        },
+        {
+          "dice": "Ordenar todo cuesta ene por logaritmo de ene. Quedarte solo con los tres mejores, ene por logaritmo de ka.",
+          "muestra": "Ordenar todo cuesta n·log n. Quedarte solo con los 3 mejores, n·log k.",
+          "cue": "orden"
+        },
+        {
+          "dice": "Por eso, pasados unos miles de vectores, migras a un índice aproximado, que crece como el logaritmo de ene.",
+          "muestra": "Por eso, pasados unos miles de vectores, migras a un índice aproximado, que crece como log n.",
+          "cue": "indice"
+        }
+      ]
+    },
+    {
+      "id": "umbral",
+      "frases": [
+        {
+          "dice": "Y un último número: el umbral. Si una reunión supera cero coma ochenta y siete, se suma a un tema existente; si no, abre uno nuevo.",
+          "muestra": "Un último número: el umbral. Si una reunión supera 0,87, se suma a un tema existente; si no, abre uno nuevo.",
           "cue": "umbral"
         },
         {
-          "dice": "Y la tercera: la búsqueda en memoria aguanta unos miles de vectores. Después, migra a una base vectorial.",
-          "muestra": "Y la tercera: la búsqueda en memoria aguanta unos miles de vectores. Después, migra a una base vectorial.",
-          "cue": "escala"
+          "dice": "Si lo subes, fragmentas. Si lo bajas, mezclas. Por eso es configuración, y no código.",
+          "muestra": "Si lo subes, fragmentas. Si lo bajas, mezclas. Por eso es configuración, y no código.",
+          "cue": "mueve"
         }
       ]
     },
@@ -165,13 +225,13 @@
       "id": "acelera",
       "frases": [
         {
-          "dice": "¿Qué acelera? Incorporar conocimiento nuevo pasa de semanas de reentrenamiento a minutos de ingesta.",
-          "muestra": "¿Qué acelera? Incorporar conocimiento nuevo pasa de semanas de reentrenamiento a minutos de ingesta.",
-          "cue": "semanas"
+          "dice": "Y entonces, ¿qué acelera? Ingerir es lineal: cuarenta y seis trozos, en lotes de cinco, son diez llamadas.",
+          "muestra": "¿Qué acelera? Ingerir es lineal: 46 trozos, en lotes de 5, son 10 llamadas.",
+          "cue": "lotes"
         },
         {
-          "dice": "Y cada respuesta llega con sus fuentes: la revisión humana es más rápida y confiable.",
-          "muestra": "Y cada respuesta llega con sus fuentes: la revisión humana es más rápida y confiable.",
+          "dice": "Minutos, no semanas. Y cada respuesta llega con sus fuentes.",
+          "muestra": "Minutos, no semanas. Y cada respuesta llega con sus fuentes.",
           "cue": "fuentes"
         }
       ]
@@ -180,13 +240,13 @@
       "id": "cierre",
       "frases": [
         {
-          "dice": "Entonces: si tu proyecto no tiene estas cinco capas, todavía es una demo.",
-          "muestra": "Entonces: si tu proyecto no tiene estas 5 capas, todavía es una demo.",
+          "dice": "Cinco capas y tres cuentas. Si tu proyecto no las tiene, todavía es una demo.",
+          "muestra": "5 capas y 3 cuentas. Si tu proyecto no las tiene, todavía es una demo.",
           "cue": "demo"
         },
         {
-          "dice": "Compártelo y sígueme para la siguiente cápsula.",
-          "muestra": "Compártelo y sígueme para la siguiente cápsula.",
+          "dice": "Compártelo y sígueme para la cápsula dos: el agente como grafo de estados.",
+          "muestra": "Compártelo y sígueme para la cápsula 2: el agente como grafo de estados.",
           "cue": "cta"
         }
       ]
