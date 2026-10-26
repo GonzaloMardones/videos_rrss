@@ -60,3 +60,23 @@ nombres de producto, proveedores, URLs ni código: solo patrones y parámetros d
 > ¿Qué capa te ha costado más en tus proyectos? Te leo.
 >
 > #IA #RAG #LLM #agentes #MLOps #ingenieríadesoftware
+
+## Versión 2: estilo de la cápsula 02 y las tres cuentas
+
+La cápsula se rehízo con el estilo vacío (negro, violeta y ámbar, diagramas con nombre) y un guion nuevo
+que descompone la matemática del RAG. Cada fórmula aparece término por término: la variable que nombra la
+voz se enciende en su color y las demás se atenúan (`src/estilos/vacio/mate.tsx`).
+
+| Cuenta | Fórmula | Ejemplo en pantalla | Verificación |
+|---|---|---|---|
+| Trozos | n = ⌈(L − o) / (t − o)⌉ | L = 30.000, t = 800, o = 150 → ⌈29.850 / 650⌉ = ⌈45,9⌉ = 46 | equivale a ⌈(L − t) / (t − o)⌉ + 1 = 46 |
+| Costo del traslape | n·t / L ≈ t / (t − o) | 800 / 650 = 1,23 → +23 % de texto guardado | 46 · 800 / 30.000 = 1,227 |
+| Similitud coseno | cos θ = q·d / (‖q‖‖d‖) = Σ qᵢdᵢ / (√Σqᵢ² √Σdᵢ²) | q = (0,8; 0,6; 0), d = (0,6; 0,8; 0) → 0,96 / (1·1) = 0,96 | ‖q‖ = √(0,64 + 0,36) = 1 |
+| Búsqueda exacta | O(n·d) | 911 × 768 = 699.648; 1.000.000 × 768 = 768.000.000 | 10⁶ × 768 × 4 bytes = 3,07 GB en float32 (6,1 GB en float64) |
+| Ordenar | O(n log n) → top-k O(n log k) | con n = 10⁶ y k = 3: 19,9 M → 1,6 M (log₂) | |
+| Índice aproximado | ≈ O(d · log n) | HNSW, ScaNN | crece con log n en vez de n |
+| Umbral | similitud ≥ 0,87 → tema existente | 9 reuniones: 4 se suman, 5 abren tema; a 0,94 se fragmentan, a 0,78 se mezclan | |
+| Ingesta | llamadas = ⌈n / b⌉ | ⌈46 / 5⌉ = 10, lineal en n | |
+
+Los 911 trozos, el traslape de 150, los lotes de 5 y el umbral 0,87 son los de la arquitectura de referencia;
+los vectores del ejemplo y los puntajes de las reuniones son ilustrativos.

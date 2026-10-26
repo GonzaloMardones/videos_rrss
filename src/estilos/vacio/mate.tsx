@@ -41,7 +41,6 @@ export const V: React.FC<{ id?: string; color?: string; children: React.ReactNod
         borderRadius: 10,
         background: activa ? `${color}22` : "transparent",
         boxShadow: activa ? `0 0 0 2px ${color}88` : "none",
-        transition: "none",
         ...style,
       }}
     >
