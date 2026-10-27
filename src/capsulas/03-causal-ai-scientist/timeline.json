@@ -1,0 +1,362 @@
+{
+ "duracion": 186.049,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 9.795
+  },
+  {
+   "id": "titulo",
+   "inicio": 9.795,
+   "fin": 15.983
+  },
+  {
+   "id": "correlacion",
+   "inicio": 15.983,
+   "fin": 28.363
+  },
+  {
+   "id": "contrafactual",
+   "inicio": 28.363,
+   "fin": 42.983
+  },
+  {
+   "id": "experimento",
+   "inicio": 42.983,
+   "fin": 51.915
+  },
+  {
+   "id": "metodos",
+   "inicio": 51.915,
+   "fin": 67.949
+  },
+  {
+   "id": "problema",
+   "inicio": 67.949,
+   "fin": 75.395
+  },
+  {
+   "id": "cais",
+   "inicio": 75.395,
+   "fin": 85.266
+  },
+  {
+   "id": "etapas",
+   "inicio": 85.266,
+   "fin": 98.769
+  },
+  {
+   "id": "arbol",
+   "inicio": 98.769,
+   "fin": 115.863
+  },
+  {
+   "id": "validacion",
+   "inicio": 115.863,
+   "fin": 133.697
+  },
+  {
+   "id": "balance",
+   "inicio": 133.697,
+   "fin": 148.786
+  },
+  {
+   "id": "ejemplo",
+   "inicio": 148.786,
+   "fin": 163.598
+  },
+  {
+   "id": "limites",
+   "inicio": 163.598,
+   "fin": 175.495
+  },
+  {
+   "id": "cierre",
+   "inicio": 175.495,
+   "fin": 186.049
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 3.599,
+   "texto": "Las ventas subieron en diciembre. ¿Fue la campaña, o fue diciembre?",
+   "cue": "ventas"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 3.799,
+   "fin": 9.495,
+   "texto": "Esa pregunta se llama causalidad. Y ahora, un agente de IA intenta responderla solo.",
+   "cue": "agente"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.795,
+   "fin": 15.683,
+   "texto": "Cápsula técnica 03: Causal AI Scientist. Inferencia causal de punta a punta, con modelos de lenguaje.",
+   "cue": null
+  },
+  {
+   "escena": "correlacion",
+   "inicio": 15.983,
+   "fin": 20.698,
+   "texto": "Empecemos simple. Correlación: dos cosas se mueven juntas. Causalidad: una mueve a la otra.",
+   "cue": "juntas"
+  },
+  {
+   "escena": "correlacion",
+   "inicio": 20.818,
+   "fin": 25.213,
+   "texto": "En verano suben los helados, y también los ahogamientos. Los helados no ahogan a nadie.",
+   "cue": "helados"
+  },
+  {
+   "escena": "correlacion",
+   "inicio": 25.333,
+   "fin": 28.063,
+   "texto": "El calor mueve a los dos. Eso se llama un confusor.",
+   "cue": "confusor"
+  },
+  {
+   "escena": "contrafactual",
+   "inicio": 28.363,
+   "fin": 33.014,
+   "texto": "La pregunta causal de verdad es: ¿qué habría pasado con la misma persona, sin el tratamiento?",
+   "cue": "mundos"
+  },
+  {
+   "escena": "contrafactual",
+   "inicio": 33.134,
+   "fin": 38.723,
+   "texto": "El efecto es la diferencia entre esos dos mundos: Y(1), con tratamiento, menos Y(0), sin él.",
+   "cue": "formula"
+  },
+  {
+   "escena": "contrafactual",
+   "inicio": 38.843,
+   "fin": 42.683,
+   "texto": "El problema: de cada persona solo vemos un mundo. El otro hay que estimarlo.",
+   "cue": "nunca"
+  },
+  {
+   "escena": "experimento",
+   "inicio": 42.983,
+   "fin": 47.271,
+   "texto": "La forma más limpia es un experimento: sorteas quién recibe el tratamiento.",
+   "cue": "sorteo"
+  },
+  {
+   "escena": "experimento",
+   "inicio": 47.391,
+   "fin": 51.615,
+   "texto": "Con el azar, los dos grupos se parecen en todo lo demás. Y basta restar los promedios.",
+   "cue": "promedios"
+  },
+  {
+   "escena": "metodos",
+   "inicio": 51.915,
+   "fin": 55.201,
+   "texto": "Pero casi nunca puedes sortear. Y la econometría tiene trucos.",
+   "cue": "trucos"
+  },
+  {
+   "escena": "metodos",
+   "inicio": 55.321,
+   "fin": 58.158,
+   "texto": "Si hay un antes y un después: diferencias en diferencias.",
+   "cue": "did"
+  },
+  {
+   "escena": "metodos",
+   "inicio": 58.278,
+   "fin": 60.411,
+   "texto": "Si hay un umbral: regresión discontinua.",
+   "cue": "rdd"
+  },
+  {
+   "escena": "metodos",
+   "inicio": 60.531,
+   "fin": 64.563,
+   "texto": "Si algo empuja el tratamiento sin tocar el resultado: variable instrumental.",
+   "cue": "iv"
+  },
+  {
+   "escena": "metodos",
+   "inicio": 64.683,
+   "fin": 67.649,
+   "texto": "Y si mides los confusores, emparejas casos parecidos.",
+   "cue": "emparejar"
+  },
+  {
+   "escena": "problema",
+   "inicio": 67.949,
+   "fin": 75.095,
+   "texto": "Elegir bien exige años de formación. Si se lo preguntas directo a un modelo de lenguaje, puede elegir mal, o escribir código que falla.",
+   "cue": "directo"
+  },
+  {
+   "escena": "cais",
+   "inicio": 75.395,
+   "fin": 80.686,
+   "texto": "Ahí entra Causal AI Scientist. Le das una pregunta en lenguaje natural, los datos, y su descripción.",
+   "cue": "entrada"
+  },
+  {
+   "escena": "cais",
+   "inicio": 80.806,
+   "fin": 84.966,
+   "texto": "Y responde con un efecto, su incertidumbre, y una explicación en palabras simples.",
+   "cue": "salida"
+  },
+  {
+   "escena": "etapas",
+   "inicio": 85.266,
+   "fin": 91.239,
+   "texto": "Funciona en 4 etapas. 1: el modelo lee la pregunta y los datos, y separa tratamiento, resultado y covariables.",
+   "cue": "leer"
+  },
+  {
+   "escena": "etapas",
+   "inicio": 91.359,
+   "fin": 93.514,
+   "texto": "2: un árbol de decisión elige el método.",
+   "cue": "elegir"
+  },
+  {
+   "escena": "etapas",
+   "inicio": 93.634,
+   "fin": 95.085,
+   "texto": "3: valida los supuestos.",
+   "cue": "validar"
+  },
+  {
+   "escena": "etapas",
+   "inicio": 95.205,
+   "fin": 98.469,
+   "texto": "4: ejecuta código ya probado, y explica el resultado.",
+   "cue": "ejecutar"
+  },
+  {
+   "escena": "arbol",
+   "inicio": 98.769,
+   "fin": 103.398,
+   "texto": "La clave es el árbol. ¿Hubo sorteo? Diferencia de medias, o regresión si hay covariables.",
+   "cue": "sorteo"
+  },
+  {
+   "escena": "arbol",
+   "inicio": 103.518,
+   "fin": 110.878,
+   "texto": "Si no hubo sorteo: ¿hay un antes y un después? DiD. ¿Hay un umbral? RDD. ¿Hay un instrumento? Variable instrumental.",
+   "cue": "ramas"
+  },
+  {
+   "escena": "arbol",
+   "inicio": 110.998,
+   "fin": 115.563,
+   "texto": "Si no, emparejamiento por propensión. No elige a ciegas: sigue reglas que puedes auditar.",
+   "cue": "auditar"
+  },
+  {
+   "escena": "validacion",
+   "inicio": 115.863,
+   "fin": 122.498,
+   "texto": "Y antes de responder, prueba sus supuestos. En DiD, que las tendencias sean paralelas antes del tratamiento.",
+   "cue": "paralelas"
+  },
+  {
+   "escena": "validacion",
+   "inicio": 122.618,
+   "fin": 127.269,
+   "texto": "En IV, que el instrumento sea fuerte: un estadístico F mayor que 10.",
+   "cue": "fuerte"
+  },
+  {
+   "escena": "validacion",
+   "inicio": 127.389,
+   "fin": 130.354,
+   "texto": "En RDD, que nadie haga trampa justo en el umbral.",
+   "cue": "umbral"
+  },
+  {
+   "escena": "validacion",
+   "inicio": 130.474,
+   "fin": 133.397,
+   "texto": "Si una prueba falla, descarta el método, y vuelve al árbol.",
+   "cue": "vuelve"
+  },
+  {
+   "escena": "balance",
+   "inicio": 133.697,
+   "fin": 139.307,
+   "texto": "Veamos una en detalle: el balance. Para cada covariable, restas el promedio de tratados menos el de controles.",
+   "cue": "resta"
+  },
+  {
+   "escena": "balance",
+   "inicio": 139.427,
+   "fin": 143.673,
+   "texto": "Y divides por la desviación estándar combinada, para que no importen las unidades.",
+   "cue": "divide"
+  },
+  {
+   "escena": "balance",
+   "inicio": 143.793,
+   "fin": 148.486,
+   "texto": "Si queda bajo 0,1, los grupos se parecen. Si no, la comparación está sesgada.",
+   "cue": "umbral"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 148.786,
+   "fin": 152.989,
+   "texto": "Un ejemplo del propio proyecto: ¿un programa de capacitación sube los ingresos?",
+   "cue": "pregunta"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 153.109,
+   "fin": 158.762,
+   "texto": "Datos observacionales, tratamiento sí o no, covariables como edad y estudios. El árbol propone emparejar.",
+   "cue": "camino"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 158.882,
+   "fin": 163.298,
+   "texto": "Revisa el balance, estima el efecto con su intervalo, y dice qué supuestos lo sostienen.",
+   "cue": "resultado"
+  },
+  {
+   "escena": "limites",
+   "inicio": 163.598,
+   "fin": 169.507,
+   "texto": "Lo probaron con estudios reales, sintéticos y de libros, y reporta menos errores que dejar al modelo elegir solo.",
+   "cue": "bench"
+  },
+  {
+   "escena": "limites",
+   "inicio": 169.627,
+   "fin": 175.195,
+   "texto": "Pero ojo: hay supuestos que ningún dato prueba, como que no haya confusores ocultos. Esos siguen siendo tuyos.",
+   "cue": "ocultos"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 175.495,
+   "fin": 183.218,
+   "texto": "La idea de fondo: que la IA no adivine la causalidad, sino que siga el método. Pregunta, supuestos, prueba, y recién ahí, respuesta.",
+   "cue": "metodo"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 183.338,
+   "fin": 185.749,
+   "texto": "Compártelo y sígueme para la próxima cápsula.",
+   "cue": "cta"
+  }
+ ]
+}

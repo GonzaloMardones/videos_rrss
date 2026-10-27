@@ -10,6 +10,7 @@ import { Capitulo05, CAPITULO05_FRAMES } from "./capitulos/05-apuesta-afp/Capitu
 import { Capitulo06, CAPITULO06_FRAMES } from "./capitulos/06-quien-gana/Capitulo06";
 import { Capsula01, CAPSULA01_FRAMES } from "./capsulas/01-anatomia-ia/Capsula01";
 import { Capsula02, CAPSULA02_FRAMES } from "./capsulas/02-agente-grafo/Capsula02";
+import { Capsula03, CAPSULA03_FRAMES } from "./capsulas/03-causal-ai-scientist/Capsula03";
 import { Piezas } from "./capsulas/02-agente-grafo/Piezas";
 
 export const RemotionRoot: React.FC = () => {
@@ -110,6 +111,19 @@ export const RemotionRoot: React.FC = () => {
         id="Tec02-AgenteGrafo"
         component={Capsula02}
         durationInFrames={CAPSULA02_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Tec03-CausalAIScientist"
+        component={Capsula03}
+        durationInFrames={CAPSULA03_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

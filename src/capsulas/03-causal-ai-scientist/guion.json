@@ -1,0 +1,285 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Las ventas subieron en diciembre. ¿Fue la campaña, o fue diciembre?",
+          "muestra": "Las ventas subieron en diciembre. ¿Fue la campaña, o fue diciembre?",
+          "cue": "ventas",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Esa pregunta se llama causalidad. Y ahora, un agente de inteligencia artificial intenta responderla solo.",
+          "muestra": "Esa pregunta se llama causalidad. Y ahora, un agente de IA intenta responderla solo.",
+          "cue": "agente"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la cápsula técnica tres: Cósal Ei Ai Sáientist. Inferencia causal de punta a punta, con modelos de lenguaje.",
+          "muestra": "Cápsula técnica 03: Causal AI Scientist. Inferencia causal de punta a punta, con modelos de lenguaje."
+        }
+      ]
+    },
+    {
+      "id": "correlacion",
+      "frases": [
+        {
+          "dice": "Empecemos simple. Correlación: dos cosas se mueven juntas. Causalidad: una mueve a la otra.",
+          "muestra": "Empecemos simple. Correlación: dos cosas se mueven juntas. Causalidad: una mueve a la otra.",
+          "cue": "juntas"
+        },
+        {
+          "dice": "En verano suben los helados, y también los ahogamientos. Los helados no ahogan a nadie.",
+          "muestra": "En verano suben los helados, y también los ahogamientos. Los helados no ahogan a nadie.",
+          "cue": "helados"
+        },
+        {
+          "dice": "El calor mueve a los dos. Eso se llama un confusor.",
+          "muestra": "El calor mueve a los dos. Eso se llama un confusor.",
+          "cue": "confusor"
+        }
+      ]
+    },
+    {
+      "id": "contrafactual",
+      "frases": [
+        {
+          "dice": "Pero la pregunta causal de verdad es: ¿qué habría pasado con la misma persona, sin el tratamiento?",
+          "muestra": "La pregunta causal de verdad es: ¿qué habría pasado con la misma persona, sin el tratamiento?",
+          "cue": "mundos"
+        },
+        {
+          "dice": "El efecto es la diferencia entre esos dos mundos: el resultado con tratamiento, menos el resultado sin él.",
+          "muestra": "El efecto es la diferencia entre esos dos mundos: Y(1), con tratamiento, menos Y(0), sin él.",
+          "cue": "formula"
+        },
+        {
+          "dice": "El problema: de cada persona solo vemos un mundo. El otro hay que estimarlo.",
+          "muestra": "El problema: de cada persona solo vemos un mundo. El otro hay que estimarlo.",
+          "cue": "nunca"
+        }
+      ]
+    },
+    {
+      "id": "experimento",
+      "frases": [
+        {
+          "dice": "Y la forma más limpia es un experimento: sorteas quién recibe el tratamiento.",
+          "muestra": "La forma más limpia es un experimento: sorteas quién recibe el tratamiento.",
+          "cue": "sorteo"
+        },
+        {
+          "dice": "Con el azar, los dos grupos se parecen en todo lo demás. Y basta restar los promedios.",
+          "muestra": "Con el azar, los dos grupos se parecen en todo lo demás. Y basta restar los promedios.",
+          "cue": "promedios"
+        }
+      ]
+    },
+    {
+      "id": "metodos",
+      "frases": [
+        {
+          "dice": "Pero casi nunca puedes sortear. Y la econometría tiene trucos.",
+          "muestra": "Pero casi nunca puedes sortear. Y la econometría tiene trucos.",
+          "cue": "trucos"
+        },
+        {
+          "dice": "Si hay un antes y un después, diferencias en diferencias.",
+          "muestra": "Si hay un antes y un después: diferencias en diferencias.",
+          "cue": "did"
+        },
+        {
+          "dice": "Si hay un umbral, regresión discontinua.",
+          "muestra": "Si hay un umbral: regresión discontinua.",
+          "cue": "rdd"
+        },
+        {
+          "dice": "Si algo empuja el tratamiento sin tocar el resultado, variable instrumental.",
+          "muestra": "Si algo empuja el tratamiento sin tocar el resultado: variable instrumental.",
+          "cue": "iv"
+        },
+        {
+          "dice": "Y si mides los confusores, emparejas casos parecidos.",
+          "muestra": "Y si mides los confusores, emparejas casos parecidos.",
+          "cue": "emparejar"
+        }
+      ]
+    },
+    {
+      "id": "problema",
+      "frases": [
+        {
+          "dice": "Y elegir bien exige años de formación. Si se lo preguntas directo a un modelo de lenguaje, puede elegir mal, o escribir código que falla.",
+          "muestra": "Elegir bien exige años de formación. Si se lo preguntas directo a un modelo de lenguaje, puede elegir mal, o escribir código que falla.",
+          "cue": "directo"
+        }
+      ]
+    },
+    {
+      "id": "cais",
+      "frases": [
+        {
+          "dice": "Ahí entra Cósal Ei Ai Sáientist. Le das una pregunta en lenguaje natural, los datos, y su descripción.",
+          "muestra": "Ahí entra Causal AI Scientist. Le das una pregunta en lenguaje natural, los datos, y su descripción.",
+          "cue": "entrada"
+        },
+        {
+          "dice": "Y responde con un efecto, su incertidumbre, y una explicación en palabras simples.",
+          "muestra": "Y responde con un efecto, su incertidumbre, y una explicación en palabras simples.",
+          "cue": "salida"
+        }
+      ]
+    },
+    {
+      "id": "etapas",
+      "frases": [
+        {
+          "dice": "Funciona en cuatro etapas. Uno: el modelo lee la pregunta y los datos, y separa tratamiento, resultado y covariables.",
+          "muestra": "Funciona en 4 etapas. 1: el modelo lee la pregunta y los datos, y separa tratamiento, resultado y covariables.",
+          "cue": "leer"
+        },
+        {
+          "dice": "Dos: un árbol de decisión elige el método.",
+          "muestra": "2: un árbol de decisión elige el método.",
+          "cue": "elegir"
+        },
+        {
+          "dice": "Tres: valida los supuestos.",
+          "muestra": "3: valida los supuestos.",
+          "cue": "validar"
+        },
+        {
+          "dice": "Y cuatro: ejecuta código ya probado, y explica el resultado.",
+          "muestra": "4: ejecuta código ya probado, y explica el resultado.",
+          "cue": "ejecutar"
+        }
+      ]
+    },
+    {
+      "id": "arbol",
+      "frases": [
+        {
+          "dice": "Y la clave es el árbol. ¿Hubo sorteo? Diferencia de medias, o regresión si hay covariables.",
+          "muestra": "La clave es el árbol. ¿Hubo sorteo? Diferencia de medias, o regresión si hay covariables.",
+          "cue": "sorteo"
+        },
+        {
+          "dice": "Si no hubo sorteo: ¿hay un antes y un después? Diferencias en diferencias. ¿Hay un umbral? Discontinuidad. ¿Hay un instrumento? Variable instrumental.",
+          "muestra": "Si no hubo sorteo: ¿hay un antes y un después? DiD. ¿Hay un umbral? RDD. ¿Hay un instrumento? Variable instrumental.",
+          "cue": "ramas"
+        },
+        {
+          "dice": "Si no, emparejamiento por propensión. No elige a ciegas: sigue reglas que puedes auditar.",
+          "muestra": "Si no, emparejamiento por propensión. No elige a ciegas: sigue reglas que puedes auditar.",
+          "cue": "auditar"
+        }
+      ]
+    },
+    {
+      "id": "validacion",
+      "frases": [
+        {
+          "dice": "Y antes de responder, prueba sus supuestos. En diferencias en diferencias, que las tendencias sean paralelas antes del tratamiento.",
+          "muestra": "Y antes de responder, prueba sus supuestos. En DiD, que las tendencias sean paralelas antes del tratamiento.",
+          "cue": "paralelas"
+        },
+        {
+          "dice": "En variable instrumental, que el instrumento sea fuerte: un estadístico efe mayor que diez.",
+          "muestra": "En IV, que el instrumento sea fuerte: un estadístico F mayor que 10.",
+          "cue": "fuerte"
+        },
+        {
+          "dice": "En discontinuidad, que nadie haga trampa justo en el umbral.",
+          "muestra": "En RDD, que nadie haga trampa justo en el umbral.",
+          "cue": "umbral"
+        },
+        {
+          "dice": "Si una prueba falla, descarta el método, y vuelve al árbol.",
+          "muestra": "Si una prueba falla, descarta el método, y vuelve al árbol.",
+          "cue": "vuelve"
+        }
+      ]
+    },
+    {
+      "id": "balance",
+      "frases": [
+        {
+          "dice": "Veamos una en detalle: el balance. Para cada covariable, restas el promedio de tratados menos el de controles.",
+          "muestra": "Veamos una en detalle: el balance. Para cada covariable, restas el promedio de tratados menos el de controles.",
+          "cue": "resta"
+        },
+        {
+          "dice": "Y divides por la desviación estándar combinada, para que no importen las unidades.",
+          "muestra": "Y divides por la desviación estándar combinada, para que no importen las unidades.",
+          "cue": "divide"
+        },
+        {
+          "dice": "Si queda bajo cero coma uno, los grupos se parecen. Si no, la comparación está sesgada.",
+          "muestra": "Si queda bajo 0,1, los grupos se parecen. Si no, la comparación está sesgada.",
+          "cue": "umbral"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo",
+      "frases": [
+        {
+          "dice": "Un ejemplo del propio proyecto: ¿un programa de capacitación sube los ingresos?",
+          "muestra": "Un ejemplo del propio proyecto: ¿un programa de capacitación sube los ingresos?",
+          "cue": "pregunta"
+        },
+        {
+          "dice": "Datos observacionales, tratamiento sí o no, covariables como edad y estudios. El árbol propone emparejar.",
+          "muestra": "Datos observacionales, tratamiento sí o no, covariables como edad y estudios. El árbol propone emparejar.",
+          "cue": "camino"
+        },
+        {
+          "dice": "Revisa el balance, estima el efecto con su intervalo, y dice qué supuestos lo sostienen.",
+          "muestra": "Revisa el balance, estima el efecto con su intervalo, y dice qué supuestos lo sostienen.",
+          "cue": "resultado"
+        }
+      ]
+    },
+    {
+      "id": "limites",
+      "frases": [
+        {
+          "dice": "Lo probaron con estudios reales, sintéticos y de libros, y reporta menos errores que dejar al modelo elegir solo.",
+          "muestra": "Lo probaron con estudios reales, sintéticos y de libros, y reporta menos errores que dejar al modelo elegir solo.",
+          "cue": "bench"
+        },
+        {
+          "dice": "Pero ojo: hay supuestos que ningún dato prueba, como que no haya confusores ocultos. Esos siguen siendo tuyos.",
+          "muestra": "Pero ojo: hay supuestos que ningún dato prueba, como que no haya confusores ocultos. Esos siguen siendo tuyos.",
+          "cue": "ocultos"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "La idea de fondo: que la inteligencia artificial no adivine la causalidad, sino que siga el método. Pregunta, supuestos, prueba, y recién ahí, respuesta.",
+          "muestra": "La idea de fondo: que la IA no adivine la causalidad, sino que siga el método. Pregunta, supuestos, prueba, y recién ahí, respuesta.",
+          "cue": "metodo"
+        },
+        {
+          "dice": "Compártelo y sígueme para la próxima cápsula.",
+          "muestra": "Compártelo y sígueme para la próxima cápsula.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}
