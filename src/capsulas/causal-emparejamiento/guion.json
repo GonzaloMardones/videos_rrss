@@ -1,0 +1,155 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Quienes hicieron un curso de capacitación ganan más. ¿Por el curso, o porque ya eran distintos?",
+          "muestra": "Quienes hicieron un curso de capacitación ganan más. ¿Por el curso, o porque ya eran distintos?",
+          "cue": "pregunta",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Si no puedes sortear, puedes buscar gemelos.",
+          "muestra": "Si no puedes sortear, puedes buscar gemelos.",
+          "cue": "gemelos"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la serie métodos causales: emparejamiento.",
+          "muestra": "Métodos causales: emparejamiento."
+        }
+      ]
+    },
+    {
+      "id": "idea",
+      "frases": [
+        {
+          "dice": "La idea: para cada persona que hizo el curso, buscas a alguien que no lo hizo, pero que se le parece en todo lo que puedes medir: edad, estudios, ingreso previo.",
+          "muestra": "La idea: para cada persona que hizo el curso, buscas a alguien que no lo hizo, pero que se le parece en todo lo que puedes medir: edad, estudios, ingreso previo.",
+          "cue": "parecido"
+        },
+        {
+          "dice": "Comparas cada pareja, y promedias las diferencias.",
+          "muestra": "Comparas cada pareja, y promedias las diferencias.",
+          "cue": "promedia"
+        }
+      ]
+    },
+    {
+      "id": "formula",
+      "frases": [
+        {
+          "dice": "En fórmula: el promedio, sobre los tratados, de su resultado menos el de su gemelo.",
+          "muestra": "En fórmula: el promedio, sobre los tratados, de su resultado menos el de su gemelo.",
+          "cue": "formula"
+        },
+        {
+          "dice": "Ese es el efecto en los tratados.",
+          "muestra": "Ese es el efecto en los tratados.",
+          "cue": "att"
+        }
+      ]
+    },
+    {
+      "id": "dimension",
+      "frases": [
+        {
+          "dice": "El problema: con muchas características, ya no hay gemelos exactos. Con veinte características de sí o no, hay más de un millón de combinaciones posibles.",
+          "muestra": "El problema: con muchas características, ya no hay gemelos exactos. Con 20 características de sí o no, hay más de un millón de combinaciones.",
+          "cue": "combinaciones"
+        },
+        {
+          "dice": "La mayoría de las celdas quedan vacías.",
+          "muestra": "La mayoría de las celdas quedan vacías.",
+          "cue": "vacias"
+        }
+      ]
+    },
+    {
+      "id": "propension",
+      "frases": [
+        {
+          "dice": "La solución de Rosenbaum y Rubin: el puntaje de propensión. La probabilidad de recibir el tratamiento, dadas tus características.",
+          "muestra": "La solución de Rosenbaum y Rubin: el puntaje de propensión. La probabilidad de recibir el tratamiento, dadas tus características.",
+          "cue": "puntaje"
+        },
+        {
+          "dice": "Y resume veinte columnas en un solo número entre cero y uno, y emparejas por ese número.",
+          "muestra": "Resume 20 columnas en un solo número entre 0 y 1, y emparejas por ese número.",
+          "cue": "resume"
+        }
+      ]
+    },
+    {
+      "id": "logistica",
+      "frases": [
+        {
+          "dice": "Se estima con una regresión logística: una suma ponderada de tus características, pasada por una curva que la deja entre cero y uno.",
+          "muestra": "Se estima con una regresión logística: una suma ponderada de tus características, pasada por una curva que la deja entre 0 y 1.",
+          "cue": "logistica"
+        }
+      ]
+    },
+    {
+      "id": "costo",
+      "frases": [
+        {
+          "dice": "Y el costo: buscar el vecino más cercano comparando contra todos es tratados por controles. Mil por diez mil son diez millones de comparaciones.",
+          "muestra": "Y el costo: buscar el vecino más cercano comparando contra todos es O(n_T · n_C). 1.000 por 10.000 son 10 millones de comparaciones.",
+          "cue": "fuerza"
+        },
+        {
+          "dice": "Si ordenas por el puntaje, cada búsqueda es binaria, y el costo baja a ene logaritmo de ene.",
+          "muestra": "Si ordenas por el puntaje, cada búsqueda es binaria, y el costo baja a O(n log n).",
+          "cue": "ordenar"
+        }
+      ]
+    },
+    {
+      "id": "pruebas",
+      "frases": [
+        {
+          "dice": "Las pruebas: el balance, con diferencias estandarizadas bajo cero coma uno, y el solapamiento: que existan gemelos para todos.",
+          "muestra": "Las pruebas: el balance, con diferencias estandarizadas bajo 0,1, y el solapamiento: que existan gemelos para todos.",
+          "cue": "balance"
+        }
+      ]
+    },
+    {
+      "id": "limite",
+      "frases": [
+        {
+          "dice": "El límite: solo empareja lo que mides. Si la motivación no está en tus datos, sigue sesgando.",
+          "muestra": "El límite: solo empareja lo que mides. Si la motivación no está en tus datos, sigue sesgando.",
+          "cue": "oculto"
+        },
+        {
+          "dice": "En mil novecientos ochenta y seis, Lalónd mostró que métodos sin experimento no lograban reproducir el resultado de un experimento de capacitación. Desde entonces, se valida con cuidado.",
+          "muestra": "En 1986, LaLonde mostró que métodos sin experimento no lograban reproducir el resultado de un experimento de capacitación. Desde entonces, se valida con cuidado.",
+          "cue": "lalonde"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Y así: gemelos, un puntaje, y una pregunta honesta sobre lo que no ves. Compártelo y sígueme para más métodos.",
+          "muestra": "Gemelos, un puntaje, y una pregunta honesta sobre lo que no ves. Compártelo y sígueme para más métodos.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

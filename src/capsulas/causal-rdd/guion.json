@@ -1,0 +1,155 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Una beca se entrega a quien saca seiscientos puntos o más. ¿La beca mejora las notas en la universidad?",
+          "muestra": "Una beca se entrega a quien saca 600 puntos o más. ¿La beca mejora las notas en la universidad?",
+          "cue": "beca",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Comparar becados con no becados no sirve: los becados ya eran mejores alumnos.",
+          "muestra": "Comparar becados con no becados no sirve: los becados ya eran mejores alumnos.",
+          "cue": "sesgo"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la serie métodos causales: regresión discontinua.",
+          "muestra": "Métodos causales: regresión discontinua."
+        }
+      ]
+    },
+    {
+      "id": "idea",
+      "frases": [
+        {
+          "dice": "Pero mira el borde. Un alumno con quinientos noventa y nueve puntos, y otra con seiscientos uno, son casi idénticos.",
+          "muestra": "Pero mira el borde. Un alumno con 599 puntos, y otra con 601, son casi idénticos.",
+          "cue": "borde"
+        },
+        {
+          "dice": "La única diferencia real es que una recibió la beca. Junto al corte, es casi como un sorteo.",
+          "muestra": "La única diferencia real es que una recibió la beca. Junto al corte, es casi como un sorteo.",
+          "cue": "sorteo"
+        }
+      ]
+    },
+    {
+      "id": "piezas",
+      "frases": [
+        {
+          "dice": "Tres piezas. La variable de asignación: el puntaje.",
+          "muestra": "Tres piezas. La variable de asignación: el puntaje.",
+          "cue": "asignacion"
+        },
+        {
+          "dice": "El corte: seiscientos.",
+          "muestra": "El corte: 600.",
+          "cue": "corte"
+        },
+        {
+          "dice": "Y el tratamiento, que se activa al cruzar el corte.",
+          "muestra": "Y el tratamiento, que se activa al cruzar el corte.",
+          "cue": "tratamiento"
+        }
+      ]
+    },
+    {
+      "id": "salto",
+      "frases": [
+        {
+          "dice": "Ahora graficas la nota universitaria contra el puntaje. Si la beca tiene efecto, la curva salta justo en el corte.",
+          "muestra": "Graficas la nota universitaria contra el puntaje. Si la beca tiene efecto, la curva salta justo en el corte.",
+          "cue": "grafico"
+        },
+        {
+          "dice": "El efecto es ese salto: el límite por la derecha, menos el límite por la izquierda.",
+          "muestra": "El efecto es ese salto: el límite por la derecha, menos el límite por la izquierda.",
+          "cue": "formula"
+        }
+      ]
+    },
+    {
+      "id": "estimar",
+      "frases": [
+        {
+          "dice": "Para medirlo, ajustas una recta a cada lado, solo con datos cerca del corte.",
+          "muestra": "Para medirlo, ajustas una recta a cada lado, solo con datos cerca del corte.",
+          "cue": "rectas"
+        },
+        {
+          "dice": "Ese ancho de ventana es un equilibrio: angosta, menos sesgo pero más ruido. Ancha, más datos pero más sesgo.",
+          "muestra": "Ese ancho de ventana es un equilibrio: angosta, menos sesgo pero más ruido. Ancha, más datos pero más sesgo.",
+          "cue": "ventana"
+        }
+      ]
+    },
+    {
+      "id": "difusa",
+      "frases": [
+        {
+          "dice": "Si cruzar el corte no garantiza la beca, sino que solo la hace más probable, el diseño es difuso.",
+          "muestra": "Si cruzar el corte no garantiza la beca, sino que solo la hace más probable, el diseño es difuso.",
+          "cue": "difusa"
+        },
+        {
+          "dice": "Entonces divides el salto en la nota por el salto en la probabilidad de tener beca.",
+          "muestra": "Entonces divides el salto en la nota por el salto en la probabilidad de tener beca.",
+          "cue": "division"
+        }
+      ]
+    },
+    {
+      "id": "pruebas",
+      "frases": [
+        {
+          "dice": "Las pruebas: que nadie manipule su puntaje para quedar justo arriba. Si se amontonan en el borde, hay trampa.",
+          "muestra": "Las pruebas: que nadie manipule su puntaje para quedar justo arriba. Si se amontonan en el borde, hay trampa.",
+          "cue": "manipulacion"
+        },
+        {
+          "dice": "Y que las demás características no salten en el corte.",
+          "muestra": "Y que las demás características no salten en el corte.",
+          "cue": "placebo"
+        }
+      ]
+    },
+    {
+      "id": "limite",
+      "frases": [
+        {
+          "dice": "Su límite: el efecto vale cerca del corte. Para quien sacó cuatrocientos, no dice nada.",
+          "muestra": "Su límite: el efecto vale cerca del corte. Para quien sacó 400, no dice nada.",
+          "cue": "local"
+        },
+        {
+          "dice": "El diseño nació en mil novecientos sesenta, estudiando premios al mérito escolar.",
+          "muestra": "El diseño nació en 1960, estudiando premios al mérito escolar.",
+          "cue": "origen"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Un corte, un salto, y mucha honestidad con el borde. Compártelo y sígueme para el siguiente método.",
+          "muestra": "Un corte, un salto, y mucha honestidad con el borde. Compártelo y sígueme para el siguiente método.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

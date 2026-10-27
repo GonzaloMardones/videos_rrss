@@ -1,0 +1,190 @@
+{
+ "duracion": 92.879,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 10.03
+  },
+  {
+   "id": "titulo",
+   "inicio": 10.03,
+   "fin": 13.701
+  },
+  {
+   "id": "trampas",
+   "inicio": 13.701,
+   "fin": 24.851
+  },
+  {
+   "id": "idea",
+   "inicio": 24.851,
+   "fin": 35.341
+  },
+  {
+   "id": "formula",
+   "inicio": 35.341,
+   "fin": 45.033
+  },
+  {
+   "id": "ejemplo",
+   "inicio": 45.033,
+   "fin": 62.661
+  },
+  {
+   "id": "regresion",
+   "inicio": 62.661,
+   "fin": 70.334
+  },
+  {
+   "id": "supuesto",
+   "inicio": 70.334,
+   "fin": 80.119
+  },
+  {
+   "id": "cuidado",
+   "inicio": 80.119,
+   "fin": 88.505
+  },
+  {
+   "id": "cierre",
+   "inicio": 88.505,
+   "fin": 92.879
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.349,
+   "texto": "En 1992, Nueva Jersey subió el salario mínimo. Pensilvania, su vecino, no.",
+   "cue": "sube"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.549,
+   "fin": 9.73,
+   "texto": "¿Se perdieron empleos? Si solo miras el antes y el después, te engañas.",
+   "cue": "engano"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 10.03,
+   "fin": 13.401,
+   "texto": "Métodos causales: diferencias en diferencias.",
+   "cue": null
+  },
+  {
+   "escena": "trampas",
+   "inicio": 13.701,
+   "fin": 20.25,
+   "texto": "Primero, la idea simple. Comparar antes y después mezcla el efecto con todo lo que cambió en el tiempo: la temporada, la economía.",
+   "cue": "tiempo"
+  },
+  {
+   "escena": "trampas",
+   "inicio": 20.37,
+   "fin": 24.551,
+   "texto": "Y comparar un estado con otro mezcla el efecto con lo que ya los hacía distintos.",
+   "cue": "grupos"
+  },
+  {
+   "escena": "idea",
+   "inicio": 24.851,
+   "fin": 30.995,
+   "texto": "Diferencias en diferencias resta las dos cosas. Mide cuánto cambió el grupo tratado, y le resta cuánto cambió el control.",
+   "cue": "resta"
+  },
+  {
+   "escena": "idea",
+   "inicio": 31.115,
+   "fin": 35.041,
+   "texto": "El cambio del control es lo que habría pasado sin la medida: el contrafactual.",
+   "cue": "contrafactual"
+  },
+  {
+   "escena": "formula",
+   "inicio": 35.341,
+   "fin": 38.797,
+   "texto": "En fórmula: el cambio de los tratados, menos el cambio del control.",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 38.917,
+   "fin": 41.626,
+   "texto": "La primera resta borra lo que es fijo en cada grupo.",
+   "cue": "primera"
+  },
+  {
+   "escena": "formula",
+   "inicio": 41.746,
+   "fin": 44.733,
+   "texto": "Y la segunda borra lo que les pasó a los dos al mismo tiempo.",
+   "cue": "segunda"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 45.033,
+   "fin": 52.371,
+   "texto": "Con los datos de Card y Krueger: en Nueva Jersey, el empleo por local subió 0,59. En Pensilvania, bajó 2,16.",
+   "cue": "datos"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 52.491,
+   "fin": 57.739,
+   "texto": "La diferencia en diferencias da casi 2,8 empleos más por local. No hubo pérdida de empleo.",
+   "cue": "resultado"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 57.859,
+   "fin": 62.361,
+   "texto": "Ese trabajo es parte del Nobel de Economía 2021 que recibió David Card.",
+   "cue": "nobel"
+  },
+  {
+   "escena": "regresion",
+   "inicio": 62.661,
+   "fin": 66.074,
+   "texto": "En una regresión, es un término de interacción: tratado por después.",
+   "cue": "interaccion"
+  },
+  {
+   "escena": "regresion",
+   "inicio": 66.194,
+   "fin": 70.034,
+   "texto": "Su coeficiente, β₃, es exactamente la diferencia en diferencias.",
+   "cue": "beta"
+  },
+  {
+   "escena": "supuesto",
+   "inicio": 70.334,
+   "fin": 74.75,
+   "texto": "El supuesto clave: sin la medida, los dos grupos habrían seguido tendencias paralelas.",
+   "cue": "paralelas"
+  },
+  {
+   "escena": "supuesto",
+   "inicio": 74.87,
+   "fin": 79.819,
+   "texto": "No se puede probar después, pero sí antes: si las tendencias previas ya se separaban, desconfía.",
+   "cue": "previas"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 80.119,
+   "fin": 88.205,
+   "texto": "Ojo también con efectos que se anticipan, con contagios al grupo de control, y con tratamientos que llegan en fechas distintas: ahí usa estimadores modernos.",
+   "cue": "riesgos"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 88.505,
+   "fin": 92.579,
+   "texto": "Dos restas y un supuesto. Compártelo y sígueme para el siguiente método.",
+   "cue": "cta"
+  }
+ ]
+}

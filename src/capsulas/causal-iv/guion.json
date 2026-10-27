@@ -1,0 +1,150 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "¿Estudiar un año más sube tu sueldo? Parece fácil de medir: quienes estudian más, ganan más.",
+          "muestra": "¿Estudiar un año más sube tu sueldo? Parece fácil de medir: quienes estudian más, ganan más.",
+          "cue": "pregunta",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Pero los más motivados estudian más, y también ganan más. La motivación no se ve, y lo confunde todo.",
+          "muestra": "Pero los más motivados estudian más, y también ganan más. La motivación no se ve, y lo confunde todo.",
+          "cue": "motivacion"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la serie métodos causales: variable instrumental.",
+          "muestra": "Métodos causales: variable instrumental."
+        }
+      ]
+    },
+    {
+      "id": "idea",
+      "frases": [
+        {
+          "dice": "La idea: busca algo que empuje a estudiar más, pero que no toque el sueldo por ningún otro camino.",
+          "muestra": "La idea: busca algo que empuje a estudiar más, pero que no toque el sueldo por ningún otro camino.",
+          "cue": "empuje"
+        },
+        {
+          "dice": "Eso es un instrumento. Usas solo la parte de los estudios que el instrumento movió, y esa parte no viene de la motivación.",
+          "muestra": "Eso es un instrumento. Usas solo la parte de los estudios que el instrumento movió, y esa parte no viene de la motivación.",
+          "cue": "parte"
+        }
+      ]
+    },
+    {
+      "id": "condiciones",
+      "frases": [
+        {
+          "dice": "Un buen instrumento cumple tres condiciones. Uno, relevancia: de verdad mueve el tratamiento.",
+          "muestra": "Un buen instrumento cumple tres condiciones. Uno, relevancia: de verdad mueve el tratamiento.",
+          "cue": "relevancia"
+        },
+        {
+          "dice": "Dos, exclusión: afecta el resultado solo a través del tratamiento.",
+          "muestra": "Dos, exclusión: afecta el resultado solo a través del tratamiento.",
+          "cue": "exclusion"
+        },
+        {
+          "dice": "Y tres, independencia: no está relacionado con lo que no ves.",
+          "muestra": "Y tres, independencia: no está relacionado con lo que no ves.",
+          "cue": "independencia"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo",
+      "frases": [
+        {
+          "dice": "Un ejemplo famoso, de Ángrist y Krúguer: el trimestre de nacimiento.",
+          "muestra": "Un ejemplo famoso, de Angrist y Krueger: el trimestre de nacimiento.",
+          "cue": "trimestre"
+        },
+        {
+          "dice": "Por las leyes de escolaridad obligatoria, según cuándo naciste podías dejar el colegio con un poco más o menos de estudios.",
+          "muestra": "Por las leyes de escolaridad obligatoria, según cuándo naciste podías dejar el colegio con un poco más o menos de estudios.",
+          "cue": "leyes"
+        }
+      ]
+    },
+    {
+      "id": "wald",
+      "frases": [
+        {
+          "dice": "La cuenta más simple es una división. Arriba, cuánto cambia el sueldo con el instrumento.",
+          "muestra": "La cuenta más simple es una división. Arriba, cuánto cambia el sueldo con el instrumento.",
+          "cue": "arriba"
+        },
+        {
+          "dice": "Abajo, cuánto cambian los estudios con el instrumento.",
+          "muestra": "Abajo, cuánto cambian los estudios con el instrumento.",
+          "cue": "abajo"
+        },
+        {
+          "dice": "Si el instrumento sube el sueldo un uno por ciento, y los estudios en un décimo de año, cada año vale un diez por ciento.",
+          "muestra": "Si el instrumento sube el sueldo un 1%, y los estudios en 0,1 años, cada año vale un 10%.",
+          "cue": "cuenta"
+        }
+      ]
+    },
+    {
+      "id": "etapas",
+      "frases": [
+        {
+          "dice": "En la práctica se hace en dos etapas. Primero, predices los estudios usando el instrumento.",
+          "muestra": "En la práctica se hace en dos etapas. Primero, predices los estudios usando el instrumento.",
+          "cue": "primera"
+        },
+        {
+          "dice": "Después, explicas el sueldo con esa predicción. Por eso se llama mínimos cuadrados en dos etapas.",
+          "muestra": "Después, explicas el sueldo con esa predicción. Por eso se llama mínimos cuadrados en dos etapas.",
+          "cue": "segunda"
+        }
+      ]
+    },
+    {
+      "id": "debil",
+      "frases": [
+        {
+          "dice": "Si el instrumento mueve poco el tratamiento, es débil, y el resultado se vuelve poco confiable. La regla clásica: estadístico efe mayor que diez.",
+          "muestra": "Si el instrumento mueve poco el tratamiento, es débil, y el resultado se vuelve poco confiable. La regla clásica: estadístico F mayor que 10.",
+          "cue": "debil"
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "frases": [
+        {
+          "dice": "Y un detalle fino: el efecto vale para quienes el instrumento hizo cambiar. A eso se le llama efecto local. Por ese tipo de ideas, Ángrist e Imbens ganaron el Nobel de dos mil veintiuno.",
+          "muestra": "Un detalle fino: el efecto vale para quienes el instrumento hizo cambiar. Se llama efecto local (LATE). Por ideas como esa, Angrist e Imbens ganaron el Nobel 2021.",
+          "cue": "local"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Un empujón limpio, tres condiciones, y una división. Compártelo y sígueme para el siguiente método.",
+          "muestra": "Un empujón limpio, tres condiciones, y una división. Compártelo y sígueme para el siguiente método.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

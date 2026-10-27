@@ -11,6 +11,10 @@ import { Capitulo06, CAPITULO06_FRAMES } from "./capitulos/06-quien-gana/Capitul
 import { Capsula01, CAPSULA01_FRAMES } from "./capsulas/01-anatomia-ia/Capsula01";
 import { Capsula02, CAPSULA02_FRAMES } from "./capsulas/02-agente-grafo/Capsula02";
 import { Capsula03, CAPSULA03_FRAMES } from "./capsulas/03-causal-ai-scientist/Capsula03";
+import { CausalDiD, CAUSALDID_FRAMES } from "./capsulas/causal-did/CausalDiD";
+import { CausalRDD, CAUSALRDD_FRAMES } from "./capsulas/causal-rdd/CausalRDD";
+import { CausalIV, CAUSALIV_FRAMES } from "./capsulas/causal-iv/CausalIV";
+import { CausalEmparejamiento, CAUSALEMPAREJAMIENTO_FRAMES } from "./capsulas/causal-emparejamiento/CausalEmparejamiento";
 import { Piezas } from "./capsulas/02-agente-grafo/Piezas";
 
 export const RemotionRoot: React.FC = () => {
@@ -129,6 +133,58 @@ export const RemotionRoot: React.FC = () => {
         height={VIDEO.height}
         defaultProps={{
           serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Causal-DiD"
+        component={CausalDiD}
+        durationInFrames={CAUSALDID_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Métodos causales",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Causal-RDD"
+        component={CausalRDD}
+        durationInFrames={CAUSALRDD_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Métodos causales",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Causal-IV"
+        component={CausalIV}
+        durationInFrames={CAUSALIV_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Métodos causales",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Causal-Emparejamiento"
+        component={CausalEmparejamiento}
+        durationInFrames={CAUSALEMPAREJAMIENTO_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Métodos causales",
           autor: "Gonzalo Mardones",
           volumenMusica: 0.14,
         }}
