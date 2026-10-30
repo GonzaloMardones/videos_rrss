@@ -1,0 +1,164 @@
+{
+ "duracion": 133.518,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.259
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.259,
+   "fin": 17.063
+  },
+  {
+   "id": "grafo",
+   "inicio": 17.063,
+   "fin": 33.227
+  },
+  {
+   "id": "confusor",
+   "inicio": 33.227,
+   "fin": 51.546
+  },
+  {
+   "id": "puerta",
+   "inicio": 51.546,
+   "fin": 76.15
+  },
+  {
+   "id": "colisionador",
+   "inicio": 76.15,
+   "fin": 91.994
+  },
+  {
+   "id": "mediador",
+   "inicio": 91.994,
+   "fin": 106.793
+  },
+  {
+   "id": "regla",
+   "inicio": 106.793,
+   "fin": 123.533
+  },
+  {
+   "id": "cierre",
+   "inicio": 123.533,
+   "fin": 133.518
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 10.959,
+   "texto": "Entre los actores famosos, los más carismáticos parecen tener menos talento. Pero en la población, talento y carisma no tienen ninguna relación. La correlación la creaste tú, al mirar solo a los famosos.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.259,
+   "fin": 16.763,
+   "texto": "Idea 14 del mapa de la experimentación: grafos causales, puertas traseras y colisionadores.",
+   "cue": null
+  },
+  {
+   "escena": "grafo",
+   "inicio": 17.063,
+   "fin": 25.533,
+   "texto": "Un grafo causal es un dibujo de tus supuestos. Cada flecha dice: esto causa aquello. Sin ciclos: grafo acíclico dirigido, o DAG.",
+   "cue": "grafo"
+  },
+  {
+   "escena": "grafo",
+   "inicio": 25.653,
+   "fin": 32.927,
+   "texto": "Con tres variables solo hay tres formas de conectarlas: la cadena, la bifurcación y el colisionador. Y cada una se trata distinto.",
+   "cue": "piezas"
+  },
+  {
+   "escena": "confusor",
+   "inicio": 33.227,
+   "fin": 41.419,
+   "texto": "Empecemos por la bifurcación. Las ciudades grandes hacen más publicidad, y también venden más. El tamaño de la ciudad es un confusor: causa las dos cosas.",
+   "cue": "ciudad"
+  },
+  {
+   "escena": "confusor",
+   "inicio": 41.539,
+   "fin": 51.246,
+   "texto": "En la simulación, el efecto real de la publicidad es 0,5. La regresión ingenua dice 1,47: casi el triple. Controlando por el tamaño, vuelve a 0,5.",
+   "cue": "sesgo"
+  },
+  {
+   "escena": "puerta",
+   "inicio": 51.546,
+   "fin": 58.927,
+   "texto": "Ese camino (publicidad ← ciudad → ventas) es una puerta trasera: un camino que entra a la causa por detrás, con una flecha que apunta hacia ella.",
+   "cue": "trasera"
+  },
+  {
+   "escena": "puerta",
+   "inicio": 59.047,
+   "fin": 66.983,
+   "texto": "El criterio de la puerta trasera: si bloqueas todas las puertas traseras, sin tocar nada que la causa produce, el efecto se puede estimar.",
+   "cue": "criterio"
+  },
+  {
+   "escena": "puerta",
+   "inicio": 67.103,
+   "fin": 75.85,
+   "texto": "Fórmula de ajuste: P(Y | do(X)) = Σ_z P(Y | X, z) · P(z).",
+   "cue": "ajuste"
+  },
+  {
+   "escena": "colisionador",
+   "inicio": 76.15,
+   "fin": 81.91,
+   "texto": "Ahora el colisionador: dos flechas que chocan en una misma variable. El talento y el carisma causan la fama.",
+   "cue": "choque"
+  },
+  {
+   "escena": "colisionador",
+   "inicio": 82.03,
+   "fin": 91.694,
+   "texto": "Un colisionador bloquea el camino por sí solo. Pero si lo controlas (si miras solo a los famosos), lo abres. En la simulación, la correlación pasa de 0 a −0,68.",
+   "cue": "abre"
+  },
+  {
+   "escena": "mediador",
+   "inicio": 91.994,
+   "fin": 97.37,
+   "texto": "La cadena: la publicidad atrae visitas, y las visitas generan ventas. Las visitas son un mediador.",
+   "cue": "cadena"
+  },
+  {
+   "escena": "mediador",
+   "inicio": 97.49,
+   "fin": 106.493,
+   "texto": "Si controlas por el mediador, borras parte del efecto que quieres medir. En la simulación, el efecto total es 0,5, y controlando por visitas queda en 0,2.",
+   "cue": "borra"
+  },
+  {
+   "escena": "regla",
+   "inicio": 106.793,
+   "fin": 114.558,
+   "texto": "La regla práctica: controla los confusores, que vienen antes de la causa. Nunca controles colisionadores, ni nada que la causa produce.",
+   "cue": "regla"
+  },
+  {
+   "escena": "regla",
+   "inicio": 114.678,
+   "fin": 123.233,
+   "texto": "Revisar si un conjunto de variables bloquea todos los caminos es rápido: un algoritmo de alcanzabilidad lo hace en tiempo lineal, O(V + E).",
+   "cue": "lineal"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 123.533,
+   "fin": 133.218,
+   "texto": "Más controles no es mejor. Los controles correctos, sí. En la próxima idea: qué tan grande tendría que ser un confusor oculto para cambiar tu conclusión. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}
