@@ -29,6 +29,7 @@ import { Exp09Hte, EXP09HTE_FRAMES } from "./capsulas/exp-09-hte/Exp09Hte";
 import { Exp10Uplift, EXP10UPLIFT_FRAMES } from "./capsulas/exp-10-uplift/Exp10Uplift";
 import { Exp11Bandits, EXP11BANDITS_FRAMES } from "./capsulas/exp-11-bandits/Exp11Bandits";
 import { Exp12Sintetico, EXP12SINTETICO_FRAMES } from "./capsulas/exp-12-sintetico/Exp12Sintetico";
+import { Exp13Series, EXP13SERIES_FRAMES } from "./capsulas/exp-13-series/Exp13Series";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -362,6 +363,19 @@ export const RemotionRoot: React.FC = () => {
         id="Exp12-Sintetico"
         component={Exp12Sintetico}
         durationInFrames={EXP12SINTETICO_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "El mapa de la experimentación",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Exp13-Series"
+        component={Exp13Series}
+        durationInFrames={EXP13SERIES_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
