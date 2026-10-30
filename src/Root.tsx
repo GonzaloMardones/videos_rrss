@@ -24,6 +24,7 @@ import { Exp04Multiples, EXP04MULTIPLES_FRAMES } from "./capsulas/exp-04-multipl
 import { Exp05Srm, EXP05SRM_FRAMES } from "./capsulas/exp-05-srm/Exp05Srm";
 import { Exp06Guardas, EXP06GUARDAS_FRAMES } from "./capsulas/exp-06-guardas/Exp06Guardas";
 import { Exp07Interferencia, EXP07INTERFERENCIA_FRAMES } from "./capsulas/exp-07-interferencia/Exp07Interferencia";
+import { Exp08Zoo, EXP08ZOO_FRAMES } from "./capsulas/exp-08-zoo/Exp08Zoo";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -292,6 +293,19 @@ export const RemotionRoot: React.FC = () => {
         id="Exp07-Interferencia"
         component={Exp07Interferencia}
         durationInFrames={EXP07INTERFERENCIA_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "El mapa de la experimentación",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Exp08-Zoo"
+        component={Exp08Zoo}
+        durationInFrames={EXP08ZOO_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
