@@ -33,6 +33,7 @@ import { Exp13Series, EXP13SERIES_FRAMES } from "./capsulas/exp-13-series/Exp13S
 import { Exp14Dags, EXP14DAGS_FRAMES } from "./capsulas/exp-14-dags/Exp14Dags";
 import { Exp15Sensibilidad, EXP15SENSIBILIDAD_FRAMES } from "./capsulas/exp-15-sensibilidad/Exp15Sensibilidad";
 import { Exp16DML, EXP16DML_FRAMES } from "./capsulas/exp-16-dml/Exp16DML";
+import { Exp17Mediacion, EXP17MEDIACION_FRAMES } from "./capsulas/exp-17-mediacion/Exp17Mediacion";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -418,6 +419,19 @@ export const RemotionRoot: React.FC = () => {
         id="Exp16-DML"
         component={Exp16DML}
         durationInFrames={EXP16DML_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "El mapa de la experimentación",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Exp17-Mediacion"
+        component={Exp17Mediacion}
+        durationInFrames={EXP17MEDIACION_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
