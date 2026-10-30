@@ -1,0 +1,155 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que lanzaste un experimento, y no salió significativo. ¿Es que no funciona, o tu experimento era demasiado chico para verlo?",
+          "muestra": "Lanzaste un experimento, y no salió significativo. ¿Es que no funciona, o tu experimento era demasiado chico para verlo?",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea uno del mapa de la experimentación: el efecto mínimo detectable.",
+          "muestra": "Idea 1 del mapa de la experimentación: el efecto mínimo detectable (MDE)."
+        }
+      ]
+    },
+    {
+      "id": "errores",
+      "frases": [
+        {
+          "dice": "Todo experimento puede equivocarse de dos formas. Falso positivo: dices que funciona, y no funciona. Su probabilidad es alfa, normalmente cinco por ciento.",
+          "muestra": "Todo experimento puede equivocarse de dos formas. Falso positivo: dices que funciona, y no funciona. Su probabilidad es α, normalmente 5%.",
+          "cue": "positivo"
+        },
+        {
+          "dice": "Y falso negativo: el efecto existe, y no lo ves. Su probabilidad es beta. Uno menos beta es el poder: la probabilidad de detectar un efecto real.",
+          "muestra": "Y falso negativo: el efecto existe, y no lo ves. Su probabilidad es β. 1 − β es el poder: la probabilidad de detectar un efecto real.",
+          "cue": "negativo"
+        }
+      ]
+    },
+    {
+      "id": "curvas",
+      "frases": [
+        {
+          "dice": "Imagina dos campanas. Una, si no hay efecto. Otra, corrida en el tamaño del efecto.",
+          "muestra": "Imagina dos campanas. Una, si no hay efecto. Otra, corrida en el tamaño del efecto.",
+          "cue": "campanas"
+        },
+        {
+          "dice": "El umbral de significancia las corta. Lo que cae de la segunda campana a la izquierda del corte, es beta. Si las campanas están muy encimadas, el poder se cae.",
+          "muestra": "El umbral de significancia las corta. Lo que cae de la segunda campana a la izquierda del corte, es beta. Si las campanas están muy encimadas, el poder se cae.",
+          "cue": "corte"
+        }
+      ]
+    },
+    {
+      "id": "formula",
+      "frases": [
+        {
+          "dice": "De ahí sale la fórmula del efecto mínimo detectable.",
+          "muestra": "De ahí sale la fórmula del efecto mínimo detectable.",
+          "cue": "formula"
+        },
+        {
+          "dice": "Arriba, cuánta seguridad pides: el valor zeta de alfa, más el de beta.",
+          "muestra": "Arriba, cuánta seguridad pides: z de α más z de β.",
+          "cue": "z"
+        },
+        {
+          "dice": "Después, cuánto ruido tiene tu métrica: sigma.",
+          "muestra": "Después, cuánto ruido tiene tu métrica: σ.",
+          "cue": "sigma"
+        },
+        {
+          "dice": "Y al final, el tamaño de muestra, dentro de una raíz.",
+          "muestra": "Y al final, el tamaño de muestra, dentro de una raíz.",
+          "cue": "raiz"
+        }
+      ]
+    },
+    {
+      "id": "regla",
+      "frases": [
+        {
+          "dice": "Con cinco por ciento de significancia, ochenta de poder, y grupos iguales, todo se resume en un número: dieciséis. Necesitas dieciséis sigma al cuadrado, sobre delta al cuadrado, por grupo.",
+          "muestra": "Con 5% de significancia, 80% de poder y grupos iguales, todo se resume en 16: necesitas 16·σ²/δ² por grupo.",
+          "cue": "regla"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo",
+      "frases": [
+        {
+          "dice": "Un ejemplo. Tu conversión es diez por ciento, y quieres detectar un punto más. La varianza es cero coma cero nueve.",
+          "muestra": "Un ejemplo. Tu conversión es 10%, y quieres detectar un punto más. La varianza es p(1 − p) = 0,09.",
+          "cue": "conversion"
+        },
+        {
+          "dice": "Dieciséis por cero coma cero nueve, dividido por cero coma cero uno al cuadrado: catorce mil cuatrocientas personas por grupo.",
+          "muestra": "16 × 0,09 / 0,01² = 14.400 personas por grupo.",
+          "cue": "cuenta"
+        },
+        {
+          "dice": "Con dos mil visitas al día, son unas dos semanas.",
+          "muestra": "Con 2.000 visitas al día, son unas dos semanas.",
+          "cue": "dias"
+        }
+      ]
+    },
+    {
+      "id": "cuadruple",
+      "frases": [
+        {
+          "dice": "Y si quieres detectar medio punto, no necesitas el doble, sino el cuádruple: cincuenta y siete mil seiscientas por grupo. El efecto entra al cuadrado.",
+          "muestra": "Y si quieres detectar medio punto, no necesitas el doble, sino el cuádruple: 57.600 por grupo. El efecto entra al cuadrado.",
+          "cue": "mitad"
+        }
+      ]
+    },
+    {
+      "id": "palancas",
+      "frases": [
+        {
+          "dice": "Para bajar el efecto mínimo tienes tres palancas: más muestra, menos ruido, y grupos parejos. Repartir noventa diez en vez de cincuenta cincuenta te obliga a tener casi el triple de datos.",
+          "muestra": "Para bajar el MDE tienes tres palancas: más muestra, menos ruido, y grupos parejos. Repartir 90/10 en vez de 50/50 te obliga a tener casi el triple de datos.",
+          "cue": "palancas"
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "frases": [
+        {
+          "dice": "Y la trampa más común: no significativo no es lo mismo que no hay efecto. Con catorce mil cuatrocientas por grupo, un efecto real de medio punto solo se detecta tres de cada diez veces.",
+          "muestra": "La trampa más común: no significativo no es lo mismo que no hay efecto. Con 14.400 por grupo, un efecto real de medio punto solo se detecta 3 de cada 10 veces.",
+          "cue": "trampa"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Calcula el efecto mínimo antes de lanzar, no después. Y en la próxima idea, cómo bajar el ruido gratis. Compártelo y sígueme.",
+          "muestra": "Calcula el MDE antes de lanzar, no después. En la próxima idea: cómo bajar el ruido gratis (CUPED). Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}
