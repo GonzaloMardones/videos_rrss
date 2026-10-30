@@ -1,0 +1,153 @@
+{
+ "duracion": 99.299,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 8.742
+  },
+  {
+   "id": "titulo",
+   "inicio": 8.742,
+   "fin": 12.818
+  },
+  {
+   "id": "cate",
+   "inicio": 12.818,
+   "fin": 24.779
+  },
+  {
+   "id": "interaccion",
+   "inicio": 24.779,
+   "fin": 40.623
+  },
+  {
+   "id": "trampa",
+   "inicio": 40.623,
+   "fin": 47.003
+  },
+  {
+   "id": "slearner",
+   "inicio": 47.003,
+   "fin": 55.901
+  },
+  {
+   "id": "tlearner",
+   "inicio": 55.901,
+   "fin": 62.387
+  },
+  {
+   "id": "xlearner",
+   "inicio": 62.387,
+   "fin": 71.071
+  },
+  {
+   "id": "bosque",
+   "inicio": 71.071,
+   "fin": 81.185
+  },
+  {
+   "id": "validar",
+   "inicio": 81.185,
+   "fin": 92.002
+  },
+  {
+   "id": "cierre",
+   "inicio": 92.002,
+   "fin": 99.299
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.442,
+   "texto": "Imagina que tu campaña sube las ventas +3,3 en promedio. Pero en jóvenes sube +8, y en mayores baja −1. El promedio te escondía a quién le sirve.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 8.742,
+   "fin": 12.518,
+   "texto": "Idea 9 del mapa de la experimentación: efectos heterogéneos (HTE).",
+   "cue": null
+  },
+  {
+   "escena": "cate",
+   "inicio": 12.818,
+   "fin": 18.514,
+   "texto": "El objeto se llama CATE: el efecto esperado, dadas tus características. τ(x).",
+   "cue": "formula"
+  },
+  {
+   "escena": "cate",
+   "inicio": 18.634,
+   "fin": 24.479,
+   "texto": "x puede ser la edad, el país, o cuánto compraste el mes pasado. Siempre algo medido antes del tratamiento.",
+   "cue": "x"
+  },
+  {
+   "escena": "interaccion",
+   "inicio": 24.779,
+   "fin": 32.545,
+   "texto": "La forma más simple: una regresión con interacción. Y = β₀ + β₁T + β₂x + β₃·T·x.",
+   "cue": "interaccion"
+  },
+  {
+   "escena": "interaccion",
+   "inicio": 32.665,
+   "fin": 40.323,
+   "texto": "β₃ dice cuánto cambia el efecto por cada unidad de x. Si β₃ = −0,25, cada año de edad le quita un cuarto de punto al efecto.",
+   "cue": "beta3"
+  },
+  {
+   "escena": "trampa",
+   "inicio": 40.623,
+   "fin": 46.703,
+   "texto": "Cuidado con buscar subgrupos a mano: si pruebas 20 cortes, alguno sale por azar. Es la idea 04 otra vez.",
+   "cue": "trampa"
+  },
+  {
+   "escena": "slearner",
+   "inicio": 47.003,
+   "fin": 55.601,
+   "texto": "Con muchas variables, se usan meta-learners. El S-learner entrena un solo modelo, con T como una variable más, y resta su predicción con y sin tratamiento.",
+   "cue": "slearner"
+  },
+  {
+   "escena": "tlearner",
+   "inicio": 55.901,
+   "fin": 62.087,
+   "texto": "El T-learner entrena dos modelos: μ₁ con los tratados, μ₀ con el control. τ(x) = μ₁(x) − μ₀(x).",
+   "cue": "tlearner"
+  },
+  {
+   "escena": "xlearner",
+   "inicio": 62.387,
+   "fin": 70.771,
+   "texto": "El X-learner imputa el efecto de cada persona usando el modelo del otro grupo, y luego aprende ese efecto. Funciona mejor cuando un grupo es mucho más chico.",
+   "cue": "xlearner"
+  },
+  {
+   "escena": "bosque",
+   "inicio": 71.071,
+   "fin": 80.885,
+   "texto": "El bosque causal (Wager y Athey, 2018) hace árboles que no buscan predecir ventas, sino dividir donde el efecto cambia más. Y estima con datos distintos a los que usó para dividir: honestidad.",
+   "cue": "bosque"
+  },
+  {
+   "escena": "validar",
+   "inicio": 81.185,
+   "fin": 91.702,
+   "texto": "¿Cómo validas algo que nunca observas? Ordenas a las personas por su efecto predicho, las agrupas, y comparas el efecto real de cada grupo en datos nuevos. Si sube en escalera, el modelo encontró algo.",
+   "cue": "validar"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 92.002,
+   "fin": 98.999,
+   "texto": "El promedio dice si funciona. El CATE dice para quién. En la próxima idea: cómo usar eso para decidir a quién tratar (uplift). Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}
