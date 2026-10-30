@@ -18,6 +18,7 @@ import { CausalEmparejamiento, CAUSALEMPAREJAMIENTO_FRAMES } from "./capsulas/ca
 import { CausalMapa, CAUSALMAPA_FRAMES } from "./capsulas/causal-mapa/CausalMapa";
 import { Piezas } from "./capsulas/02-agente-grafo/Piezas";
 import { Exp01Mde, EXP01MDE_FRAMES } from "./capsulas/exp-01-mde/Exp01Mde";
+import { Exp02Cuped, EXP02CUPED_FRAMES } from "./capsulas/exp-02-cuped/Exp02Cuped";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -208,6 +209,19 @@ export const RemotionRoot: React.FC = () => {
         id="Exp01-MDE"
         component={Exp01Mde}
         durationInFrames={EXP01MDE_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "El mapa de la experimentación",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Exp02-CUPED"
+        component={Exp02Cuped}
+        durationInFrames={EXP02CUPED_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

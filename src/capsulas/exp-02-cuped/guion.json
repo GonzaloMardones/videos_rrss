@@ -1,0 +1,150 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que tu experimento necesita un mes. ¿Y si con los mismos usuarios pudieras terminarlo en dos semanas?",
+          "muestra": "Imagina que tu experimento necesita un mes. ¿Y si con los mismos usuarios pudieras terminarlo en dos semanas?",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea dos del mapa de la experimentación: kiúped, reducir la varianza con datos de antes.",
+          "muestra": "Idea 2 del mapa de la experimentación: CUPED, reducir la varianza con datos de antes del experimento."
+        }
+      ]
+    },
+    {
+      "id": "ruido",
+      "frases": [
+        {
+          "dice": "¿De dónde viene el ruido? De que las personas ya eran muy distintas antes del experimento. Unos compran todas las semanas, otros casi nunca.",
+          "muestra": "¿De dónde viene el ruido? De que las personas ya eran muy distintas antes del experimento. Unos compran todas las semanas, otros casi nunca.",
+          "cue": "distintas"
+        },
+        {
+          "dice": "Esa diferencia previa no tiene nada que ver con tu tratamiento, pero esconde su efecto.",
+          "muestra": "Esa diferencia previa no tiene nada que ver con tu tratamiento, pero esconde su efecto.",
+          "cue": "esconde"
+        }
+      ]
+    },
+    {
+      "id": "idea",
+      "frases": [
+        {
+          "dice": "La idea de kiúped, de Microsoft, en dos mil trece: usa la misma métrica, medida antes del experimento, para restar la parte que ya era predecible.",
+          "muestra": "La idea de CUPED (Microsoft, 2013): usa la misma métrica, medida antes del experimento, para restar la parte que ya era predecible.",
+          "cue": "idea"
+        }
+      ]
+    },
+    {
+      "id": "formula",
+      "frases": [
+        {
+          "dice": "En fórmula: ye prima es igual a ye, menos theta, multiplicado por equis menos su promedio.",
+          "muestra": "En fórmula: Y′ = Y − θ(X − X̄).",
+          "cue": "formula"
+        },
+        {
+          "dice": "Primero, equis menos su promedio: cuánto más compraba esta persona que el resto, antes de empezar.",
+          "muestra": "X − X̄: cuánto más compraba esta persona que el resto, antes de empezar.",
+          "cue": "x"
+        },
+        {
+          "dice": "Y theta es la pendiente: cuánto de esa diferencia se repite después.",
+          "muestra": "θ = Cov(Y, X) / Var(X): la pendiente, cuánto de esa diferencia se repite después.",
+          "cue": "theta"
+        }
+      ]
+    },
+    {
+      "id": "varianza",
+      "frases": [
+        {
+          "dice": "El resultado: la varianza se multiplica por uno menos ro al cuadrado, donde ro es la correlación entre el antes y el durante.",
+          "muestra": "El resultado: la varianza se multiplica por (1 − ρ²), donde ρ es la correlación entre el antes y el durante.",
+          "cue": "varianza"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo",
+      "frases": [
+        {
+          "dice": "Si ro es cero coma siete, uno menos cero coma cuarenta y nueve da cero coma cincuenta y uno. La varianza queda en la mitad.",
+          "muestra": "Si ρ = 0,7: 1 − 0,49 = 0,51. La varianza queda en la mitad.",
+          "cue": "rho"
+        },
+        {
+          "dice": "Y como la muestra necesaria es proporcional a la varianza, el mes se convierte en dos semanas.",
+          "muestra": "Y como la muestra necesaria es proporcional a la varianza, el mes se convierte en dos semanas.",
+          "cue": "semanas"
+        }
+      ]
+    },
+    {
+      "id": "sesgo",
+      "frases": [
+        {
+          "dice": "¿Y no sesga el resultado? No. Como equis se midió antes, y el grupo se sorteó, en promedio los dos grupos tienen el mismo equis. Solo quitas ruido, no efecto.",
+          "muestra": "¿Y no sesga el resultado? No. Como X se midió antes, y el grupo se sorteó, en promedio los dos grupos tienen el mismo X. Solo quitas ruido, no efecto.",
+          "cue": "sesgo"
+        }
+      ]
+    },
+    {
+      "id": "cuidado",
+      "frases": [
+        {
+          "dice": "Y ahora, tres cuidados. Equis tiene que medirse antes del tratamiento, nunca durante.",
+          "muestra": "Tres cuidados. Equis tiene que medirse antes del tratamiento, nunca durante.",
+          "cue": "antes"
+        },
+        {
+          "dice": "Los usuarios nuevos no tienen historia: necesitan otra covariable.",
+          "muestra": "Los usuarios nuevos no tienen historia: necesitan otra covariable.",
+          "cue": "nuevos"
+        },
+        {
+          "dice": "Y funciona mejor con métricas estables, como compras o sesiones.",
+          "muestra": "Y funciona mejor con métricas estables, como compras o sesiones.",
+          "cue": "estables"
+        }
+      ]
+    },
+    {
+      "id": "extension",
+      "frases": [
+        {
+          "dice": "Y su versión moderna, kiúpak, usa la predicción de un modelo de aprendizaje automático como covariable.",
+          "muestra": "Su versión moderna, CUPAC, usa la predicción de un modelo de machine learning como covariable.",
+          "cue": "cupac"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Menos ruido, mismo experimento, la mitad del tiempo. En la próxima idea, por qué no debes mirar el resultado todos los días. Compártelo y sígueme.",
+          "muestra": "Menos ruido, mismo experimento, la mitad del tiempo. En la próxima idea, por qué no debes mirar el resultado todos los días. Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}
