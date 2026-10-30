@@ -15,6 +15,7 @@ import { CausalDiD, CAUSALDID_FRAMES } from "./capsulas/causal-did/CausalDiD";
 import { CausalRDD, CAUSALRDD_FRAMES } from "./capsulas/causal-rdd/CausalRDD";
 import { CausalIV, CAUSALIV_FRAMES } from "./capsulas/causal-iv/CausalIV";
 import { CausalEmparejamiento, CAUSALEMPAREJAMIENTO_FRAMES } from "./capsulas/causal-emparejamiento/CausalEmparejamiento";
+import { CausalMapa, CAUSALMAPA_FRAMES } from "./capsulas/causal-mapa/CausalMapa";
 import { Piezas } from "./capsulas/02-agente-grafo/Piezas";
 
 export const RemotionRoot: React.FC = () => {
@@ -180,6 +181,19 @@ export const RemotionRoot: React.FC = () => {
         id="Causal-Emparejamiento"
         component={CausalEmparejamiento}
         durationInFrames={CAUSALEMPAREJAMIENTO_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Métodos causales",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Causal-Mapa"
+        component={CausalMapa}
+        durationInFrames={CAUSALMAPA_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

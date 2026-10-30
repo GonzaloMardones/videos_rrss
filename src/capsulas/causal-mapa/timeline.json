@@ -1,0 +1,261 @@
+{
+ "duracion": 135.914,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 7.939
+  },
+  {
+   "id": "titulo",
+   "inicio": 7.939,
+   "fin": 11.674
+  },
+  {
+   "id": "mde",
+   "inicio": 11.674,
+   "fin": 23.955
+  },
+  {
+   "id": "cuped",
+   "inicio": 23.955,
+   "fin": 31.679
+  },
+  {
+   "id": "peeking",
+   "inicio": 31.679,
+   "fin": 38.657
+  },
+  {
+   "id": "multiples",
+   "inicio": 38.657,
+   "fin": 47.49
+  },
+  {
+   "id": "srm",
+   "inicio": 47.49,
+   "fin": 55.299
+  },
+  {
+   "id": "guardas",
+   "inicio": 55.299,
+   "fin": 61.807
+  },
+  {
+   "id": "interferencia",
+   "inicio": 61.807,
+   "fin": 68.23
+  },
+  {
+   "id": "zoo",
+   "inicio": 68.23,
+   "fin": 74.29
+  },
+  {
+   "id": "hte",
+   "inicio": 74.29,
+   "fin": 80.286
+  },
+  {
+   "id": "uplift",
+   "inicio": 80.286,
+   "fin": 86.346
+  },
+  {
+   "id": "bandits",
+   "inicio": 86.346,
+   "fin": 92.982
+  },
+  {
+   "id": "sintetico",
+   "inicio": 92.982,
+   "fin": 99.533
+  },
+  {
+   "id": "impacto",
+   "inicio": 99.533,
+   "fin": 105.742
+  },
+  {
+   "id": "dags",
+   "inicio": 105.742,
+   "fin": 112.058
+  },
+  {
+   "id": "sensibilidad",
+   "inicio": 112.058,
+   "fin": 118.545
+  },
+  {
+   "id": "dml",
+   "inicio": 118.545,
+   "fin": 125.501
+  },
+  {
+   "id": "mediacion",
+   "inicio": 125.501,
+   "fin": 130.494
+  },
+  {
+   "id": "cierre",
+   "inicio": 130.494,
+   "fin": 135.914
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.626,
+   "texto": "Antes de lanzar un experimento, hay 17 ideas que separan un resultado real de un falso positivo.",
+   "cue": "lanzar"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.826,
+   "fin": 7.639,
+   "texto": "Este es el mapa, en tres partes.",
+   "cue": "mapa"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 7.939,
+   "fin": 11.374,
+   "texto": "Métodos causales: el mapa de la experimentación.",
+   "cue": null
+  },
+  {
+   "escena": "mde",
+   "inicio": 11.674,
+   "fin": 20.634,
+   "texto": "1. El efecto mínimo detectable (MDE). Con 5% de significancia y 80% de poder, necesitas unas 16·σ²/δ² observaciones por grupo.",
+   "cue": "mde"
+  },
+  {
+   "escena": "mde",
+   "inicio": 20.754,
+   "fin": 23.655,
+   "texto": "Detectar la mitad del efecto exige el cuádruple de datos.",
+   "cue": "cuadruple"
+  },
+  {
+   "escena": "cuped",
+   "inicio": 23.955,
+   "fin": 31.379,
+   "texto": "2. CUPED. Restas lo que ya predecía el comportamiento previo, y la varianza baja en (1 − ρ²). Es como tener más tráfico, gratis.",
+   "cue": "cuped"
+  },
+  {
+   "escena": "peeking",
+   "inicio": 31.679,
+   "fin": 38.357,
+   "texto": "3. No mires el resultado todos los días. Cada vistazo es otra oportunidad de un falso positivo. Usa pruebas secuenciales.",
+   "cue": "peeking"
+  },
+  {
+   "escena": "multiples",
+   "inicio": 38.657,
+   "fin": 47.19,
+   "texto": "4. Con 20 métricas al 5%, esperas un falso positivo solo por azar. Corrige con Bonferroni, o controla la tasa de falsos descubrimientos.",
+   "cue": "multiples"
+  },
+  {
+   "escena": "srm",
+   "inicio": 47.49,
+   "fin": 54.999,
+   "texto": "5. Si pediste mitad y mitad, y llegó otra proporción, el experimento puede estar roto (SRM). Revísalo con χ² antes de mirar nada más.",
+   "cue": "srm"
+  },
+  {
+   "escena": "guardas",
+   "inicio": 55.299,
+   "fin": 61.507,
+   "texto": "6. Define métricas de guarda, que no pueden empeorar. Y en métricas de razón, calcula la varianza con el método delta.",
+   "cue": "guardas"
+  },
+  {
+   "escena": "interferencia",
+   "inicio": 61.807,
+   "fin": 67.93,
+   "texto": "7. Si tratar a uno afecta a otro, como en un marketplace, aleatoriza por grupos, por zonas, o alternando en el tiempo.",
+   "cue": "interferencia"
+  },
+  {
+   "escena": "zoo",
+   "inicio": 68.23,
+   "fin": 73.99,
+   "texto": "8. El zoológico de efectos: ATE en todos, ATT en los tratados, LATE en quienes el instrumento movió, y CATE en un subgrupo.",
+   "cue": "zoo"
+  },
+  {
+   "escena": "hte",
+   "inicio": 74.29,
+   "fin": 79.986,
+   "texto": "9. Efectos heterogéneos (HTE): el efecto, dado quién eres. Se estima con meta-learners, o con bosques causales.",
+   "cue": "hte"
+  },
+  {
+   "escena": "uplift",
+   "inicio": 80.286,
+   "fin": 86.046,
+   "texto": "10. Uplift: usas ese efecto para tratar solo a quien cambia gracias al tratamiento, y lo mides con la curva Qini.",
+   "cue": "uplift"
+  },
+  {
+   "escena": "bandits",
+   "inicio": 86.346,
+   "fin": 92.682,
+   "texto": "11. Bandits: en vez de dividir fijo, el algoritmo manda más tráfico a la variante que va ganando, mientras sigue explorando.",
+   "cue": "bandits"
+  },
+  {
+   "escena": "sintetico",
+   "inicio": 92.982,
+   "fin": 99.233,
+   "texto": "12. Control sintético: si solo una región recibe la política, construyes su gemelo ponderando otras regiones.",
+   "cue": "sintetico"
+  },
+  {
+   "escena": "impacto",
+   "inicio": 99.533,
+   "fin": 105.442,
+   "texto": "13. Series de tiempo interrumpidas (CausalImpact): predices qué habría pasado sin la campaña, y lo comparas con lo que pasó.",
+   "cue": "impacto"
+  },
+  {
+   "escena": "dags",
+   "inicio": 105.742,
+   "fin": 111.758,
+   "texto": "14. Grafos causales (DAGs): te dicen qué variables controlar, y cuáles no tocar, como un mediador o un colisionador.",
+   "cue": "dags"
+  },
+  {
+   "escena": "sensibilidad",
+   "inicio": 112.058,
+   "fin": 118.245,
+   "texto": "15. Análisis de sensibilidad: el E-value dice qué tan fuerte tendría que ser un confusor oculto para borrar tu efecto.",
+   "cue": "sensibilidad"
+  },
+  {
+   "escena": "dml",
+   "inicio": 118.545,
+   "fin": 125.201,
+   "texto": "16. Double machine learning: limpias el tratamiento y el resultado con modelos, y estimas el efecto con lo que queda.",
+   "cue": "dml"
+  },
+  {
+   "escena": "mediacion",
+   "inicio": 125.501,
+   "fin": 130.194,
+   "texto": "17. Mediación: separas cuánto del efecto pasa por un mecanismo, y cuánto va directo.",
+   "cue": "mediacion"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 130.494,
+   "fin": 135.614,
+   "texto": "17 ideas, una cápsula para cada una. Dime cuál quieres primero, compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}
