@@ -1,0 +1,135 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que tienes veinte métricas, y una salió significativa. ¿Celebras? Probablemente es puro azar.",
+          "muestra": "Imagina que tienes 20 métricas, y una salió significativa. ¿Celebras? Probablemente es puro azar.",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea cuatro del mapa de la experimentación: comparaciones múltiples.",
+          "muestra": "Idea 4 del mapa de la experimentación: comparaciones múltiples."
+        }
+      ]
+    },
+    {
+      "id": "cuenta",
+      "frases": [
+        {
+          "dice": "Cada prueba tiene un cinco por ciento de falso positivo. Con veinte pruebas, esperas uno solo por azar.",
+          "muestra": "Cada prueba tiene un 5% de falso positivo. Con 20 pruebas, esperas uno solo por azar: 20 × 0,05 = 1.",
+          "cue": "esperado"
+        },
+        {
+          "dice": "Y la probabilidad de ver al menos uno es uno menos cero coma noventa y cinco elevado a veinte: sesenta y cuatro por ciento.",
+          "muestra": "Y la probabilidad de ver al menos uno es 1 − 0,95²⁰ = 64%.",
+          "cue": "almenos"
+        }
+      ]
+    },
+    {
+      "id": "curva",
+      "frases": [
+        {
+          "dice": "Con cinco métricas, veintitrés por ciento. Con diez, cuarenta. Con cincuenta, noventa y dos. Y ojo: cada segmento que miras, por país o por dispositivo, también cuenta como una prueba.",
+          "muestra": "Con 5 métricas, 23%. Con 10, 40%. Con 50, 92%. Y ojo: cada segmento que miras, por país o por dispositivo, también cuenta como una prueba.",
+          "cue": "curva"
+        }
+      ]
+    },
+    {
+      "id": "bonferroni",
+      "frases": [
+        {
+          "dice": "La corrección más simple es la de Bonferroni: divide el cinco por ciento por el número de pruebas. Con veinte, cada una necesita cero coma cero cero veinticinco.",
+          "muestra": "La corrección más simple es Bonferroni: divide el 5% por el número de pruebas. Con 20, cada una necesita p ≤ 0,0025.",
+          "cue": "bonferroni"
+        },
+        {
+          "dice": "Con eso, la probabilidad de cualquier falso positivo queda bajo cinco por ciento. El precio: pierdes poder.",
+          "muestra": "Así, la probabilidad de cualquier falso positivo queda bajo 5%. El precio: pierdes poder.",
+          "cue": "precio"
+        }
+      ]
+    },
+    {
+      "id": "holm",
+      "frases": [
+        {
+          "dice": "Y la corrección de Holm mejora eso: ordenas los p-valores, comparas el menor con alfa sobre eme, el siguiente con alfa sobre eme menos uno, y te detienes en el primero que falla.",
+          "muestra": "Holm mejora eso: ordenas los p-valores, comparas el menor con α/m, el siguiente con α/(m − 1), y te detienes en el primero que falla.",
+          "cue": "holm"
+        }
+      ]
+    },
+    {
+      "id": "bh",
+      "frases": [
+        {
+          "dice": "Y Benjamini y Hochberg cambian la pregunta: en vez de evitar cualquier error, controlan qué proporción de tus descubrimientos son falsos.",
+          "muestra": "Y Benjamini-Hochberg cambian la pregunta: en vez de evitar cualquier error, controlan qué proporción de tus descubrimientos son falsos.",
+          "cue": "bh"
+        },
+        {
+          "dice": "Para eso, ordenas los p-valores, y cada uno se compara con su posición, por alfa, sobre eme.",
+          "muestra": "Ordenas los p-valores, y el de posición k se compara con k·α/m.",
+          "cue": "umbral"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo",
+      "frases": [
+        {
+          "dice": "Un ejemplo con diez métricas. Sin corregir, cinco salen significativas. Con Bonferroni, una. Con Holm, una. Con Benjamini y Hochberg, tres.",
+          "muestra": "Un ejemplo con 10 métricas. Sin corregir, 5 salen significativas. Con Bonferroni, 1. Con Holm, 1. Con Benjamini-Hochberg, 3.",
+          "cue": "ejemplo"
+        }
+      ]
+    },
+    {
+      "id": "cual",
+      "frases": [
+        {
+          "dice": "Y entonces, ¿cuál usar? Si un solo falso positivo es caro, como decidir un lanzamiento, controla el error familiar con Holm. Si estás explorando muchas métricas, controla la tasa de falsos descubrimientos.",
+          "muestra": "¿Cuál usar? Si un solo falso positivo es caro, como decidir un lanzamiento, controla el error familiar (Holm). Si estás explorando muchas métricas, controla la tasa de falsos descubrimientos (BH).",
+          "cue": "cual"
+        }
+      ]
+    },
+    {
+      "id": "principal",
+      "frases": [
+        {
+          "dice": "Y lo mejor: elige una métrica principal antes de lanzar. Las demás son secundarias, o de guarda.",
+          "muestra": "Y lo mejor: elige una métrica principal antes de lanzar. Las demás son secundarias, o de guarda.",
+          "cue": "principal"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Más métricas no es más evidencia. En la próxima idea, cómo saber si tu experimento está roto antes de mirarlo. Compártelo y sígueme.",
+          "muestra": "Más métricas no es más evidencia. En la próxima idea, cómo saber si tu experimento está roto antes de mirarlo. Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

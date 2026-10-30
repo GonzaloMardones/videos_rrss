@@ -1,0 +1,160 @@
+{
+ "duracion": 99.398,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 5.905
+  },
+  {
+   "id": "titulo",
+   "inicio": 5.905,
+   "fin": 10.109
+  },
+  {
+   "id": "cuenta",
+   "inicio": 10.109,
+   "fin": 22.305
+  },
+  {
+   "id": "curva",
+   "inicio": 22.305,
+   "fin": 32.397
+  },
+  {
+   "id": "bonferroni",
+   "inicio": 32.397,
+   "fin": 46.577
+  },
+  {
+   "id": "holm",
+   "inicio": 46.577,
+   "fin": 55.986
+  },
+  {
+   "id": "bh",
+   "inicio": 55.986,
+   "fin": 68.331
+  },
+  {
+   "id": "ejemplo",
+   "inicio": 68.331,
+   "fin": 75.863
+  },
+  {
+   "id": "cual",
+   "inicio": 75.863,
+   "fin": 86.809
+  },
+  {
+   "id": "principal",
+   "inicio": 86.809,
+   "fin": 92.101
+  },
+  {
+   "id": "cierre",
+   "inicio": 92.101,
+   "fin": 99.398
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.605,
+   "texto": "Imagina que tienes 20 métricas, y una salió significativa. ¿Celebras? Probablemente es puro azar.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 5.905,
+   "fin": 9.809,
+   "texto": "Idea 4 del mapa de la experimentación: comparaciones múltiples.",
+   "cue": null
+  },
+  {
+   "escena": "cuenta",
+   "inicio": 10.109,
+   "fin": 15.634,
+   "texto": "Cada prueba tiene un 5% de falso positivo. Con 20 pruebas, esperas uno solo por azar: 20 × 0,05 = 1.",
+   "cue": "esperado"
+  },
+  {
+   "escena": "cuenta",
+   "inicio": 15.754,
+   "fin": 22.005,
+   "texto": "Y la probabilidad de ver al menos uno es 1 − 0,95²⁰ = 64%.",
+   "cue": "almenos"
+  },
+  {
+   "escena": "curva",
+   "inicio": 22.305,
+   "fin": 32.097,
+   "texto": "Con 5 métricas, 23%. Con 10, 40%. Con 50, 92%. Y ojo: cada segmento que miras, por país o por dispositivo, también cuenta como una prueba.",
+   "cue": "curva"
+  },
+  {
+   "escena": "bonferroni",
+   "inicio": 32.397,
+   "fin": 40.61,
+   "texto": "La corrección más simple es Bonferroni: divide el 5% por el número de pruebas. Con 20, cada una necesita p ≤ 0,0025.",
+   "cue": "bonferroni"
+  },
+  {
+   "escena": "bonferroni",
+   "inicio": 40.73,
+   "fin": 46.277,
+   "texto": "Así, la probabilidad de cualquier falso positivo queda bajo 5%. El precio: pierdes poder.",
+   "cue": "precio"
+  },
+  {
+   "escena": "holm",
+   "inicio": 46.577,
+   "fin": 55.686,
+   "texto": "Holm mejora eso: ordenas los p-valores, comparas el menor con α/m, el siguiente con α/(m − 1), y te detienes en el primero que falla.",
+   "cue": "holm"
+  },
+  {
+   "escena": "bh",
+   "inicio": 55.986,
+   "fin": 63.069,
+   "texto": "Y Benjamini-Hochberg cambian la pregunta: en vez de evitar cualquier error, controlan qué proporción de tus descubrimientos son falsos.",
+   "cue": "bh"
+  },
+  {
+   "escena": "bh",
+   "inicio": 63.189,
+   "fin": 68.031,
+   "texto": "Ordenas los p-valores, y el de posición k se compara con k·α/m.",
+   "cue": "umbral"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 68.331,
+   "fin": 75.563,
+   "texto": "Un ejemplo con 10 métricas. Sin corregir, 5 salen significativas. Con Bonferroni, 1. Con Holm, 1. Con Benjamini-Hochberg, 3.",
+   "cue": "ejemplo"
+  },
+  {
+   "escena": "cual",
+   "inicio": 75.863,
+   "fin": 86.509,
+   "texto": "¿Cuál usar? Si un solo falso positivo es caro, como decidir un lanzamiento, controla el error familiar (Holm). Si estás explorando muchas métricas, controla la tasa de falsos descubrimientos (BH).",
+   "cue": "cual"
+  },
+  {
+   "escena": "principal",
+   "inicio": 86.809,
+   "fin": 91.801,
+   "texto": "Y lo mejor: elige una métrica principal antes de lanzar. Las demás son secundarias, o de guarda.",
+   "cue": "principal"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 92.101,
+   "fin": 99.098,
+   "texto": "Más métricas no es más evidencia. En la próxima idea, cómo saber si tu experimento está roto antes de mirarlo. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}
