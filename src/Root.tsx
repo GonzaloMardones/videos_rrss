@@ -21,6 +21,7 @@ import { Exp01Mde, EXP01MDE_FRAMES } from "./capsulas/exp-01-mde/Exp01Mde";
 import { Exp02Cuped, EXP02CUPED_FRAMES } from "./capsulas/exp-02-cuped/Exp02Cuped";
 import { Exp03Peeking, EXP03PEEKING_FRAMES } from "./capsulas/exp-03-peeking/Exp03Peeking";
 import { Exp04Multiples, EXP04MULTIPLES_FRAMES } from "./capsulas/exp-04-multiples/Exp04Multiples";
+import { Exp05Srm, EXP05SRM_FRAMES } from "./capsulas/exp-05-srm/Exp05Srm";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -250,6 +251,19 @@ export const RemotionRoot: React.FC = () => {
         id="Exp04-Multiples"
         component={Exp04Multiples}
         durationInFrames={EXP04MULTIPLES_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "El mapa de la experimentación",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Exp05-SRM"
+        component={Exp05Srm}
+        durationInFrames={EXP05SRM_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
