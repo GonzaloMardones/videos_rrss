@@ -1,0 +1,176 @@
+{
+ "duracion": 139.877,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 12.923
+  },
+  {
+   "id": "titulo",
+   "inicio": 12.923,
+   "fin": 16.829
+  },
+  {
+   "id": "problema",
+   "inicio": 16.829,
+   "fin": 31.457
+  },
+  {
+   "id": "receta",
+   "inicio": 31.457,
+   "fin": 47.514
+  },
+  {
+   "id": "formula",
+   "inicio": 47.514,
+   "fin": 73.313
+  },
+  {
+   "id": "ajuste",
+   "inicio": 73.313,
+   "fin": 82.103
+  },
+  {
+   "id": "efecto",
+   "inicio": 82.103,
+   "fin": 96.027
+  },
+  {
+   "id": "placebo",
+   "inicio": 96.027,
+   "fin": 116.287
+  },
+  {
+   "id": "cuidado",
+   "inicio": 116.287,
+   "fin": 131.001
+  },
+  {
+   "id": "cierre",
+   "inicio": 131.001,
+   "fin": 139.877
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 12.623,
+   "texto": "En 1988, California aprobó la Proposición 99: 25 centavos más de impuesto por cajetilla. ¿Bajó el consumo por eso? No puedes repetir la historia sin el impuesto. Pero sí puedes construirla.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 12.923,
+   "fin": 16.529,
+   "texto": "Idea 12 del mapa de la experimentación: control sintético.",
+   "cue": null
+  },
+  {
+   "escena": "problema",
+   "inicio": 16.829,
+   "fin": 21.522,
+   "texto": "El problema: hay un solo estado tratado, y ningún estado se parece a California.",
+   "cue": "uno"
+  },
+  {
+   "escena": "problema",
+   "inicio": 21.642,
+   "fin": 31.157,
+   "texto": "Si lo comparas con el promedio de los otros 38, las curvas ya se separaban antes del impuesto. Diferencias en diferencias necesita tendencias paralelas, y aquí no las hay.",
+   "cue": "promedio"
+  },
+  {
+   "escena": "receta",
+   "inicio": 31.457,
+   "fin": 40.31,
+   "texto": "La idea de Alberto Abadie: si no existe un gemelo, lo fabricas. Mezclas estados de control con pesos, hasta que la mezcla copie a California antes del impuesto.",
+   "cue": "mezcla"
+  },
+  {
+   "escena": "receta",
+   "inicio": 40.43,
+   "fin": 47.214,
+   "texto": "En este caso: Utah 33%, Nevada 23%, Montana 20%, Colorado 16% y Connecticut 7%.",
+   "cue": "pesos"
+  },
+  {
+   "escena": "formula",
+   "inicio": 47.514,
+   "fin": 56.047,
+   "texto": "En fórmula: el California sintético en el año t es la suma, sobre cada estado donante j, de su peso w_j por su consumo en ese año.",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 56.167,
+   "fin": 62.994,
+   "texto": "Los pesos tienen dos reglas: no son negativos, y suman uno. Así, el gemelo nunca sale del rango de los datos reales: no extrapola.",
+   "cue": "reglas"
+  },
+  {
+   "escena": "formula",
+   "inicio": 63.114,
+   "fin": 73.013,
+   "texto": "Se eligen minimizando la distancia con California antes del tratamiento. Con J donantes, es un problema cuadrático de J variables: con 38 estados, se resuelve al instante.",
+   "cue": "minimo"
+  },
+  {
+   "escena": "ajuste",
+   "inicio": 73.313,
+   "fin": 81.803,
+   "texto": "Antes de 1989, el gemelo calza casi perfecto: se equivoca, en promedio, en menos de dos cajetillas por persona al año.",
+   "cue": "ajuste"
+  },
+  {
+   "escena": "efecto",
+   "inicio": 82.103,
+   "fin": 89.997,
+   "texto": "Después, las curvas se abren. En el año 2000, California vende unas 42 cajetillas por persona. Su gemelo, unas 67.",
+   "cue": "abre"
+  },
+  {
+   "escena": "efecto",
+   "inicio": 90.117,
+   "fin": 95.727,
+   "texto": "Esa brecha es el efecto: casi 26 cajetillas menos por persona, cerca de 40%.",
+   "cue": "brecha"
+  },
+  {
+   "escena": "placebo",
+   "inicio": 96.027,
+   "fin": 103.771,
+   "texto": "¿Y si fue suerte? Se hace un placebo: aplicas el mismo método a cada uno de los otros 38 estados, como si ellos hubieran subido el impuesto.",
+   "cue": "placebo"
+  },
+  {
+   "escena": "placebo",
+   "inicio": 103.891,
+   "fin": 115.987,
+   "texto": "California queda en el extremo. En el estudio original, su brecha (relativa a qué tan bien calzaba antes) es la mayor de los 39 estados. Por puro azar, eso pasaría 1 vez en 39: menos de 3%.",
+   "cue": "extremo"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 116.287,
+   "fin": 127.231,
+   "texto": "Ojo con tres cosas: necesitas muchos años antes del tratamiento; los donantes no pueden recibir el efecto (gente que cruza la frontera a comprar); y no puede haber otro cambio al mismo tiempo.",
+   "cue": "ojo"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 127.351,
+   "fin": 130.701,
+   "texto": "Si el gemelo no calza antes, no confíes en lo que dice después.",
+   "cue": "calza"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 131.001,
+   "fin": 139.577,
+   "texto": "Si no tienes grupo de control, constrúyelo. En la próxima idea: series de tiempo interrumpidas, cuando no tienes ni siquiera donantes. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

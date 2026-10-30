@@ -1,0 +1,188 @@
+{
+ "duracion": 97.078,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 7.705
+  },
+  {
+   "id": "titulo",
+   "inicio": 7.705,
+   "fin": 10.65
+  },
+  {
+   "id": "idea",
+   "inicio": 10.65,
+   "fin": 21.289
+  },
+  {
+   "id": "formula",
+   "inicio": 21.289,
+   "fin": 27.682
+  },
+  {
+   "id": "dimension",
+   "inicio": 27.682,
+   "fin": 37.937
+  },
+  {
+   "id": "propension",
+   "inicio": 37.937,
+   "fin": 49.642
+  },
+  {
+   "id": "logistica",
+   "inicio": 49.642,
+   "fin": 56.897
+  },
+  {
+   "id": "costo",
+   "inicio": 56.897,
+   "fin": 69.562
+  },
+  {
+   "id": "pruebas",
+   "inicio": 69.562,
+   "fin": 76.454
+  },
+  {
+   "id": "limite",
+   "inicio": 76.454,
+   "fin": 91.253
+  },
+  {
+   "id": "cierre",
+   "inicio": 91.253,
+   "fin": 97.078
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 4.943,
+   "texto": "Quienes hicieron un curso de capacitación ganan más. ¿Por el curso, o porque ya eran distintos?",
+   "cue": "pregunta"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.143,
+   "fin": 7.405,
+   "texto": "Si no puedes sortear, puedes buscar gemelos.",
+   "cue": "gemelos"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 7.705,
+   "fin": 10.35,
+   "texto": "Métodos causales: emparejamiento.",
+   "cue": null
+  },
+  {
+   "escena": "idea",
+   "inicio": 10.65,
+   "fin": 18.117,
+   "texto": "La idea: para cada persona que hizo el curso, buscas a alguien que no lo hizo, pero que se le parece en todo lo que puedes medir: edad, estudios, ingreso previo.",
+   "cue": "parecido"
+  },
+  {
+   "escena": "idea",
+   "inicio": 18.237,
+   "fin": 20.989,
+   "texto": "Comparas cada pareja, y promedias las diferencias.",
+   "cue": "promedia"
+  },
+  {
+   "escena": "formula",
+   "inicio": 21.289,
+   "fin": 25.534,
+   "texto": "En fórmula: el promedio, sobre los tratados, de su resultado menos el de su gemelo.",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 25.654,
+   "fin": 27.382,
+   "texto": "Ese es el efecto en los tratados.",
+   "cue": "att"
+  },
+  {
+   "escena": "dimension",
+   "inicio": 27.682,
+   "fin": 35.511,
+   "texto": "El problema: con muchas características, ya no hay gemelos exactos. Con 20 características de sí o no, hay más de un millón de combinaciones.",
+   "cue": "combinaciones"
+  },
+  {
+   "escena": "dimension",
+   "inicio": 35.631,
+   "fin": 37.637,
+   "texto": "La mayoría de las celdas quedan vacías.",
+   "cue": "vacias"
+  },
+  {
+   "escena": "propension",
+   "inicio": 37.937,
+   "fin": 44.593,
+   "texto": "La solución de Rosenbaum y Rubin: el puntaje de propensión. La probabilidad de recibir el tratamiento, dadas tus características.",
+   "cue": "puntaje"
+  },
+  {
+   "escena": "propension",
+   "inicio": 44.713,
+   "fin": 49.342,
+   "texto": "Resume 20 columnas en un solo número entre 0 y 1, y emparejas por ese número.",
+   "cue": "resume"
+  },
+  {
+   "escena": "logistica",
+   "inicio": 49.642,
+   "fin": 56.597,
+   "texto": "Se estima con una regresión logística: una suma ponderada de tus características, pasada por una curva que la deja entre 0 y 1.",
+   "cue": "logistica"
+  },
+  {
+   "escena": "costo",
+   "inicio": 56.897,
+   "fin": 64.449,
+   "texto": "Y el costo: buscar el vecino más cercano comparando contra todos es O(n_T · n_C). 1.000 por 10.000 son 10 millones de comparaciones.",
+   "cue": "fuerza"
+  },
+  {
+   "escena": "costo",
+   "inicio": 64.569,
+   "fin": 69.262,
+   "texto": "Si ordenas por el puntaje, cada búsqueda es binaria, y el costo baja a O(n log n).",
+   "cue": "ordenar"
+  },
+  {
+   "escena": "pruebas",
+   "inicio": 69.562,
+   "fin": 76.154,
+   "texto": "Las pruebas: el balance, con diferencias estandarizadas bajo 0,1, y el solapamiento: que existan gemelos para todos.",
+   "cue": "balance"
+  },
+  {
+   "escena": "limite",
+   "inicio": 76.454,
+   "fin": 80.934,
+   "texto": "El límite: solo empareja lo que mides. Si la motivación no está en tus datos, sigue sesgando.",
+   "cue": "oculto"
+  },
+  {
+   "escena": "limite",
+   "inicio": 81.054,
+   "fin": 90.953,
+   "texto": "En 1986, LaLonde mostró que métodos sin experimento no lograban reproducir el resultado de un experimento de capacitación. Desde entonces, se valida con cuidado.",
+   "cue": "lalonde"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 91.253,
+   "fin": 96.778,
+   "texto": "Gemelos, un puntaje, y una pregunta honesta sobre lo que no ves. Compártelo y sígueme para más métodos.",
+   "cue": "cta"
+  }
+ ]
+}

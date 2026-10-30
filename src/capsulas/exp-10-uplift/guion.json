@@ -1,0 +1,130 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que mandar un cupón a tus diez mil clientes te da cuatrocientas compras extra. Y mandarlo solo a dos mil te da seiscientas. Menos cupones, más ventas.",
+          "muestra": "Imagina que mandar un cupón a tus 10.000 clientes te da 400 compras extra. Y mandarlo solo a 2.000 te da 600. Menos cupones, más ventas.",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea diez del mapa de la experimentación: áplift, tratar solo a quien cambia.",
+          "muestra": "Idea 10 del mapa de la experimentación: uplift, tratar solo a quien cambia."
+        }
+      ]
+    },
+    {
+      "id": "segmentos",
+      "frases": [
+        {
+          "dice": "Cada cliente cae en uno de cuatro grupos.",
+          "muestra": "Cada cliente cae en uno de cuatro grupos.",
+          "cue": "cuatro"
+        },
+        {
+          "dice": "Los persuadibles compran solo si les mandas el cupón.",
+          "muestra": "Los persuadibles compran solo si les mandas el cupón.",
+          "cue": "persuadibles"
+        },
+        {
+          "dice": "Los seguros compran igual: el cupón es plata regalada.",
+          "muestra": "Los seguros compran igual: el cupón es plata regalada.",
+          "cue": "seguros"
+        },
+        {
+          "dice": "Los perdidos no compran nunca.",
+          "muestra": "Los perdidos no compran nunca.",
+          "cue": "perdidos"
+        },
+        {
+          "dice": "Y los de no molestar compran menos si los contactas: el mensaje los espanta.",
+          "muestra": "Y los de no molestar compran menos si los contactas: el mensaje los espanta.",
+          "cue": "molestar"
+        }
+      ]
+    },
+    {
+      "id": "propension",
+      "frases": [
+        {
+          "dice": "Y el error clásico es elegir a quién mandarle el cupón con un modelo que predice quién va a comprar. Ese modelo elige primero a los seguros, que compran igual.",
+          "muestra": "El error clásico: elegir a quién mandarle el cupón con un modelo que predice quién va a comprar. Ese modelo elige primero a los seguros, que compran igual.",
+          "cue": "propension"
+        }
+      ]
+    },
+    {
+      "id": "formula",
+      "frases": [
+        {
+          "dice": "En cambio, el áplift mide otra cosa: cuánto sube la probabilidad de comprar si lo tratas, comparado con no tratarlo. Es el cate de la idea nueve, usado para decidir.",
+          "muestra": "El uplift mide otra cosa: u(x) = P(compra | T = 1, x) − P(compra | T = 0, x). Es el CATE de la idea 09, usado para decidir.",
+          "cue": "formula"
+        }
+      ]
+    },
+    {
+      "id": "cuenta",
+      "frases": [
+        {
+          "dice": "Ahora, hagamos la cuenta. Dos mil persuadibles con más treinta por ciento: seiscientas compras. Mil de no molestar con menos veinte por ciento: menos doscientas. Mandarlo a todos da cuatrocientas. Mandarlo solo a los persuadibles, seiscientas.",
+          "muestra": "La cuenta: 2.000 persuadibles × 30% = +600. 1.000 de no molestar × −20% = −200. A todos: +400. Solo a persuadibles: +600.",
+          "cue": "cuenta"
+        }
+      ]
+    },
+    {
+      "id": "qini",
+      "frases": [
+        {
+          "dice": "¿Cómo sabes si tu modelo de áplift es bueno? Con la curva Quini. Ordenas a los clientes por áplift predicho, y vas sumando las compras extra a medida que tratas a más.",
+          "muestra": "¿Cómo sabes si tu modelo de uplift es bueno? Con la curva Qini. Ordenas a los clientes por uplift predicho, y vas sumando las compras extra a medida que tratas a más.",
+          "cue": "qini"
+        },
+        {
+          "dice": "Si eliges al azar, es una línea recta. Un buen modelo sube rápido al principio, se aplana, y cae al final, cuando llegas a los que no hay que molestar.",
+          "muestra": "Si eliges al azar, es una línea recta. Un buen modelo sube rápido al principio, se aplana, y cae al final, cuando llegas a los que no hay que molestar.",
+          "cue": "forma"
+        },
+        {
+          "dice": "El área entre la curva y la recta es el coeficiente Quini: cuánto mejor que el azar.",
+          "muestra": "El área entre la curva y la recta es el coeficiente Qini: cuánto mejor que el azar.",
+          "cue": "area"
+        }
+      ]
+    },
+    {
+      "id": "datos",
+      "frases": [
+        {
+          "dice": "Y algo clave: para entrenar un modelo de áplift necesitas un experimento previo, con tratados y control al azar. Sin eso, el modelo aprende sesgos, no efectos.",
+          "muestra": "Clave: para entrenar un modelo de uplift necesitas un experimento previo, con tratados y control al azar. Sin eso, el modelo aprende sesgos, no efectos.",
+          "cue": "datos"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "No trates a quien va a comprar. Trata a quien cambia. En la próxima idea, experimentos que aprenden mientras corren: los bándits. Compártelo y sígueme.",
+          "muestra": "No trates a quien va a comprar. Trata a quien cambia. En la próxima idea: experimentos que aprenden mientras corren (bandits). Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

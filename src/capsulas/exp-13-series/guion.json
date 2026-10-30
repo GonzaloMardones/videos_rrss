@@ -1,0 +1,140 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y un día subes el precio de tu app. En los meses siguientes vendes once más al día que antes. ¿Te fue bien? No. En realidad, pierdes unas treinta y tres ventas diarias.",
+     "muestra": "Subes el precio de tu app. En los meses siguientes vendes 11 más al día que antes. ¿Te fue bien? No: en realidad pierdes unas 33 ventas diarias.",
+     "cue": "gancho",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la idea trece del mapa de la experimentación: series de tiempo interrumpidas.",
+     "muestra": "Idea 13 del mapa de la experimentación: series de tiempo interrumpidas."
+    }
+   ]
+  },
+  {
+   "id": "idea",
+   "frases": [
+    {
+     "dice": "Y cuando no tienes grupo de control, ni donantes para un control sintético, el control es tu propio pasado.",
+     "muestra": "Cuando no tienes grupo de control, ni donantes para un control sintético, el control es tu propio pasado.",
+     "cue": "pasado"
+    },
+    {
+     "dice": "Entonces aprendes la tendencia y la estacionalidad antes del cambio, y las proyectas hacia adelante. Esa proyección es lo que habría pasado sin el cambio.",
+     "muestra": "Aprendes la tendencia y la estacionalidad antes del cambio, y las proyectas hacia adelante. Esa proyección es lo que habría pasado sin el cambio.",
+     "cue": "proyecta"
+    }
+   ]
+  },
+  {
+   "id": "formula",
+   "frases": [
+    {
+     "dice": "Y la herramienta clásica es la regresión segmentada. Las ventas en el mes t dependen de cuatro cosas.",
+     "muestra": "La herramienta clásica es la regresión segmentada. Las ventas en el mes t dependen de cuatro cosas.",
+     "cue": "formula"
+    },
+    {
+     "dice": "Beta uno es la tendencia de antes: subías uno coma cinco ventas por mes.",
+     "muestra": "β₁ es la tendencia de antes: subías 1,5 ventas por mes.",
+     "cue": "b1"
+    },
+    {
+     "dice": "Y la variable de, es un interruptor: vale cero antes del cambio y uno después. Y beta dos es el salto de nivel: menos veintitrés de golpe.",
+     "muestra": "D es un interruptor: vale 0 antes del cambio y 1 después. β₂ es el salto de nivel: −23 de golpe.",
+     "cue": "b2"
+    },
+    {
+     "dice": "Por último, beta tres mide el cambio de pendiente: cada mes, ocho décimas menos que antes. Se suma la estacionalidad, y listo.",
+     "muestra": "β₃ es el cambio de pendiente: cada mes, 0,8 menos que antes. Se suma la estacionalidad, y listo.",
+     "cue": "b3"
+    }
+   ]
+  },
+  {
+   "id": "lectura",
+   "frases": [
+    {
+     "dice": "Y en el gráfico se ve así. La línea punteada sigue la tendencia de antes. La real cae de golpe, y además sube más lento.",
+     "muestra": "En el gráfico: la línea punteada sigue la tendencia de antes. La real cae de golpe, y además sube más lento.",
+     "cue": "grafico"
+    },
+    {
+     "dice": "Entonces el efecto es la distancia entre ambas: en promedio, treinta y tres ventas menos al día. Por eso, comparar antes y después, sin más, te engaña: ignora que venías subiendo.",
+     "muestra": "El efecto es la distancia entre ambas: en promedio, 33 ventas menos al día. Por eso el antes y después ingenuo engaña: ignora que venías subiendo.",
+     "cue": "efecto"
+    }
+   ]
+  },
+  {
+   "id": "impacto",
+   "frases": [
+    {
+     "dice": "Y Google llevó esta idea más lejos con CausalImpact: un modelo bayesiano de series de tiempo.",
+     "muestra": "Google llevó esta idea más lejos con CausalImpact: un modelo bayesiano de series de tiempo.",
+     "cue": "google"
+    },
+    {
+     "dice": "Además de tu pasado, usa series de control que el cambio no tocó: por ejemplo, búsquedas, o ventas en otro país. Con eso pronostica el contrafactual, con una banda de incertidumbre que se abre con el tiempo.",
+     "muestra": "Además de tu pasado, usa series de control que el cambio no tocó: búsquedas, o ventas en otro país. Con eso pronostica el contrafactual, con una banda de incertidumbre que se abre con el tiempo.",
+     "cue": "banda"
+    },
+    {
+     "dice": "Y el efecto acumulado es la suma de todas las brechas, mes a mes.",
+     "muestra": "El efecto acumulado es la suma de todas las brechas, mes a mes.",
+     "cue": "acumulado"
+    }
+   ]
+  },
+  {
+   "id": "real",
+   "frases": [
+    {
+     "dice": "Y así se evaluó, por ejemplo, la prohibición de fumar en lugares públicos en Italia, en dos mil cinco. Los ingresos hospitalarios por eventos coronarios en menores de setenta años bajaron cerca de cuatro por ciento.",
+     "muestra": "Así se evaluó la prohibición de fumar en lugares públicos en Italia (2005): los ingresos hospitalarios por eventos coronarios en menores de 70 años bajaron cerca de 4%.",
+     "cue": "real"
+    }
+   ]
+  },
+  {
+   "id": "cuidado",
+   "frases": [
+    {
+     "dice": "Pero ojo con cuatro trampas. Otro evento en la misma fecha. Errores que se arrastran de un mes al siguiente, que achican tus intervalos falsamente. Pocos meses antes y después. Y efectos que se anticipan, o que llegan de a poco.",
+     "muestra": "Ojo con cuatro trampas: otro evento en la misma fecha; errores que se arrastran de un mes al siguiente (achican falsamente tus intervalos); pocos meses antes y después; y efectos que se anticipan o llegan de a poco.",
+     "cue": "ojo"
+    },
+    {
+     "dice": "Y si puedes sumar un grupo de control, hazlo: vuelves a diferencias en diferencias, o a control sintético.",
+     "muestra": "Si puedes sumar un grupo de control, hazlo: vuelves a diferencias en diferencias, o a control sintético.",
+     "cue": "control"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: sin grupo de control, tu pasado es el control. En la próxima idea: grafos causales, puertas traseras y colisionadores. Compártelo y sígueme.",
+     "muestra": "Sin grupo de control, tu pasado es el control. En la próxima idea: grafos causales, puertas traseras y colisionadores. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

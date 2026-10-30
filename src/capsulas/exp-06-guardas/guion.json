@@ -1,0 +1,130 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que tu cambio sube la conversión dos por ciento, y las cancelaciones casi cuatro. ¿Lo lanzas?",
+          "muestra": "Imagina que tu cambio sube la conversión 2%, y las cancelaciones casi 4%. ¿Lo lanzas?",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea seis del mapa de la experimentación: métricas de guarda, y métricas de razón.",
+          "muestra": "Idea 6 del mapa de la experimentación: métricas de guarda, y métricas de razón."
+        }
+      ]
+    },
+    {
+      "id": "oec",
+      "frases": [
+        {
+          "dice": "Un buen experimento tiene una métrica principal, la que decide. Y métricas de guarda: las que no pueden empeorar, aunque la principal mejore.",
+          "muestra": "Un buen experimento tiene una métrica principal, la que decide. Y métricas de guarda: las que no pueden empeorar, aunque la principal mejore.",
+          "cue": "oec"
+        }
+      ]
+    },
+    {
+      "id": "tipos",
+      "frases": [
+        {
+          "dice": "Hay guardas de negocio, como cancelaciones, quejas o ingresos.",
+          "muestra": "Hay guardas de negocio, como cancelaciones, quejas o ingresos.",
+          "cue": "negocio"
+        },
+        {
+          "dice": "Y guardas de confianza, que avisan si el experimento mismo falla: el desbalance de muestra, la latencia, los errores de carga.",
+          "muestra": "Y guardas de confianza, que avisan si el experimento mismo falla: el desbalance de muestra, la latencia, los errores de carga.",
+          "cue": "confianza"
+        }
+      ]
+    },
+    {
+      "id": "margen",
+      "frases": [
+        {
+          "dice": "¿Cómo se prueba una guarda? No preguntas si cambió. Preguntas si empeoró menos que un margen que fijaste antes.",
+          "muestra": "¿Cómo se prueba una guarda? No preguntas si cambió. Preguntas si empeoró menos que un margen que fijaste antes.",
+          "cue": "margen"
+        },
+        {
+          "dice": "Si todo el intervalo de confianza queda bajo ese margen, la guarda pasa. Si lo cruza, no lanzas.",
+          "muestra": "Si todo el intervalo de confianza queda bajo ese margen, la guarda pasa. Si lo cruza, no lanzas.",
+          "cue": "intervalo"
+        }
+      ]
+    },
+    {
+      "id": "razon",
+      "frases": [
+        {
+          "dice": "Ahora, las métricas de razón, como clics por sesión. El problema: sorteas usuarios, pero mides sesiones.",
+          "muestra": "Ahora, las métricas de razón, como clics por sesión. El problema: sorteas usuarios, pero mides sesiones.",
+          "cue": "razon"
+        },
+        {
+          "dice": "Y las sesiones de una misma persona se parecen entre sí. Si las tratas como independientes, subestimas el ruido.",
+          "muestra": "Las sesiones de una misma persona se parecen entre sí. Si las tratas como independientes, subestimas el ruido.",
+          "cue": "parecen"
+        }
+      ]
+    },
+    {
+      "id": "delta",
+      "frases": [
+        {
+          "dice": "La solución es el método delta. La varianza de una razón depende del ruido del numerador, del ruido del denominador, y de cuánto se mueven juntos.",
+          "muestra": "La solución es el método delta. La varianza de una razón depende del ruido del numerador, del ruido del denominador, y de cuánto se mueven juntos.",
+          "cue": "delta"
+        },
+        {
+          "dice": "Como clics y sesiones suben juntos, la covarianza resta. Pero calcularla por usuario, y no por sesión, suele dar un error más grande que el ingenuo.",
+          "muestra": "Como clics y sesiones suben juntos, la covarianza resta. Pero calcularla por usuario, y no por sesión, suele dar un error más grande que el ingenuo.",
+          "cue": "covarianza"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo",
+      "frases": [
+        {
+          "dice": "Un ejemplo. Efecto de cero coma cero dos clics por sesión. Con el error ingenuo, zeta es dos coma cinco, y p es cero coma cero uno. Con el método delta, el error crece un cincuenta por ciento, y p sube a cero coma diez. Ya no es significativo.",
+          "muestra": "Un ejemplo: efecto de 0,02 clics por sesión. Con el error ingenuo, z = 2,5 y p = 0,01. Con el método delta, el error crece 50%, y p sube a 0,10. Ya no es significativo.",
+          "cue": "ejemplo"
+        }
+      ]
+    },
+    {
+      "id": "regla",
+      "frases": [
+        {
+          "dice": "La regla: analiza en la misma unidad que sorteaste. Para métricas de razón, usa el método delta, o un bootstrap por usuario.",
+          "muestra": "La regla: analiza en la misma unidad que sorteaste. Para métricas de razón, usa el método delta, o un bootstrap por usuario.",
+          "cue": "regla"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Una métrica decide, las otras protegen. En la próxima idea, qué pasa cuando tratar a uno afecta a otro. Compártelo y sígueme.",
+          "muestra": "Una métrica decide, las otras protegen. En la próxima idea, qué pasa cuando tratar a uno afecta a otro. Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

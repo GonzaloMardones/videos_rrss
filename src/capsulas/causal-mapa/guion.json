@@ -1,0 +1,220 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Antes de lanzar un experimento, hay diecisiete ideas que separan un resultado real de un falso positivo.",
+          "muestra": "Antes de lanzar un experimento, hay 17 ideas que separan un resultado real de un falso positivo.",
+          "cue": "lanzar",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Este es el mapa, en tres partes.",
+          "muestra": "Este es el mapa, en tres partes.",
+          "cue": "mapa"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la serie métodos causales: el mapa de la experimentación.",
+          "muestra": "Métodos causales: el mapa de la experimentación."
+        }
+      ]
+    },
+    {
+      "id": "mde",
+      "frases": [
+        {
+          "dice": "Uno: el efecto mínimo detectable. Con cinco por ciento de significancia y ochenta de poder, necesitas unas dieciséis sigma al cuadrado, sobre delta al cuadrado, por grupo.",
+          "muestra": "1. El efecto mínimo detectable (MDE). Con 5% de significancia y 80% de poder, necesitas unas 16·σ²/δ² observaciones por grupo.",
+          "cue": "mde"
+        },
+        {
+          "dice": "Detectar la mitad del efecto exige el cuádruple de datos.",
+          "muestra": "Detectar la mitad del efecto exige el cuádruple de datos.",
+          "cue": "cuadruple"
+        }
+      ]
+    },
+    {
+      "id": "cuped",
+      "frases": [
+        {
+          "dice": "Dos: kiúped. Restas lo que ya predecía el comportamiento previo, y la varianza baja en uno menos ro al cuadrado. Es como tener más tráfico, gratis.",
+          "muestra": "2. CUPED. Restas lo que ya predecía el comportamiento previo, y la varianza baja en (1 − ρ²). Es como tener más tráfico, gratis.",
+          "cue": "cuped"
+        }
+      ]
+    },
+    {
+      "id": "peeking",
+      "frases": [
+        {
+          "dice": "Tres: no mires el resultado todos los días. Cada vistazo es otra oportunidad de un falso positivo. Usa pruebas secuenciales.",
+          "muestra": "3. No mires el resultado todos los días. Cada vistazo es otra oportunidad de un falso positivo. Usa pruebas secuenciales.",
+          "cue": "peeking"
+        }
+      ]
+    },
+    {
+      "id": "multiples",
+      "frases": [
+        {
+          "dice": "Cuatro: con veinte métricas al cinco por ciento, esperas un falso positivo solo por azar. Corrige con Bonferroni, o controla la tasa de falsos descubrimientos.",
+          "muestra": "4. Con 20 métricas al 5%, esperas un falso positivo solo por azar. Corrige con Bonferroni, o controla la tasa de falsos descubrimientos.",
+          "cue": "multiples"
+        }
+      ]
+    },
+    {
+      "id": "srm",
+      "frases": [
+        {
+          "dice": "Cinco: si pediste mitad y mitad, y llegó otra proporción, el experimento puede estar roto. Revísalo con chi cuadrado antes de mirar nada más.",
+          "muestra": "5. Si pediste mitad y mitad, y llegó otra proporción, el experimento puede estar roto (SRM). Revísalo con χ² antes de mirar nada más.",
+          "cue": "srm"
+        }
+      ]
+    },
+    {
+      "id": "guardas",
+      "frases": [
+        {
+          "dice": "Y seis: define métricas de guarda, que no pueden empeorar. Y en métricas de razón, calcula la varianza con el método delta.",
+          "muestra": "6. Define métricas de guarda, que no pueden empeorar. Y en métricas de razón, calcula la varianza con el método delta.",
+          "cue": "guardas"
+        }
+      ]
+    },
+    {
+      "id": "interferencia",
+      "frases": [
+        {
+          "dice": "Y siete: si tratar a uno afecta a otro, como en un marketplace, aleatoriza por grupos, por zonas, o alternando en el tiempo.",
+          "muestra": "7. Si tratar a uno afecta a otro, como en un marketplace, aleatoriza por grupos, por zonas, o alternando en el tiempo.",
+          "cue": "interferencia"
+        }
+      ]
+    },
+    {
+      "id": "zoo",
+      "frases": [
+        {
+          "dice": "Ocho: el zoológico de efectos. El promedio en todos, en los tratados, en quienes el instrumento movió, y en un subgrupo.",
+          "muestra": "8. El zoológico de efectos: ATE en todos, ATT en los tratados, LATE en quienes el instrumento movió, y CATE en un subgrupo.",
+          "cue": "zoo"
+        }
+      ]
+    },
+    {
+      "id": "hte",
+      "frases": [
+        {
+          "dice": "Nueve: efectos heterogéneos. El efecto, dado quién eres. Se estima con meta aprendices, o con bosques causales.",
+          "muestra": "9. Efectos heterogéneos (HTE): el efecto, dado quién eres. Se estima con meta-learners, o con bosques causales.",
+          "cue": "hte"
+        }
+      ]
+    },
+    {
+      "id": "uplift",
+      "frases": [
+        {
+          "dice": "Diez: áplift. Usas ese efecto para tratar solo a quien cambia gracias al tratamiento, y lo mides con la curva Quini.",
+          "muestra": "10. Uplift: usas ese efecto para tratar solo a quien cambia gracias al tratamiento, y lo mides con la curva Qini.",
+          "cue": "uplift"
+        }
+      ]
+    },
+    {
+      "id": "bandits",
+      "frases": [
+        {
+          "dice": "Once: bándits. En vez de dividir fijo, el algoritmo manda más tráfico a la variante que va ganando, mientras sigue explorando.",
+          "muestra": "11. Bandits: en vez de dividir fijo, el algoritmo manda más tráfico a la variante que va ganando, mientras sigue explorando.",
+          "cue": "bandits"
+        }
+      ]
+    },
+    {
+      "id": "sintetico",
+      "frases": [
+        {
+          "dice": "Y doce: control sintético. Si solo una región recibe la política, construyes su gemelo ponderando otras regiones.",
+          "muestra": "12. Control sintético: si solo una región recibe la política, construyes su gemelo ponderando otras regiones.",
+          "cue": "sintetico"
+        }
+      ]
+    },
+    {
+      "id": "impacto",
+      "frases": [
+        {
+          "dice": "Y trece: series de tiempo interrumpidas. Predices qué habría pasado sin la campaña, y lo comparas con lo que pasó.",
+          "muestra": "13. Series de tiempo interrumpidas (CausalImpact): predices qué habría pasado sin la campaña, y lo comparas con lo que pasó.",
+          "cue": "impacto"
+        }
+      ]
+    },
+    {
+      "id": "dags",
+      "frases": [
+        {
+          "dice": "Catorce: grafos causales. Te dicen qué variables controlar, y cuáles no tocar, como un mediador o un colisionador.",
+          "muestra": "14. Grafos causales (DAGs): te dicen qué variables controlar, y cuáles no tocar, como un mediador o un colisionador.",
+          "cue": "dags"
+        }
+      ]
+    },
+    {
+      "id": "sensibilidad",
+      "frases": [
+        {
+          "dice": "Quince: análisis de sensibilidad. El valor E dice qué tan fuerte tendría que ser un confusor oculto para borrar tu efecto.",
+          "muestra": "15. Análisis de sensibilidad: el E-value dice qué tan fuerte tendría que ser un confusor oculto para borrar tu efecto.",
+          "cue": "sensibilidad"
+        }
+      ]
+    },
+    {
+      "id": "dml",
+      "frases": [
+        {
+          "dice": "Dieciséis: doble aprendizaje automático. Limpias el tratamiento y el resultado con modelos, y estimas el efecto con lo que queda.",
+          "muestra": "16. Double machine learning: limpias el tratamiento y el resultado con modelos, y estimas el efecto con lo que queda.",
+          "cue": "dml"
+        }
+      ]
+    },
+    {
+      "id": "mediacion",
+      "frases": [
+        {
+          "dice": "Diecisiete: mediación. Separas cuánto del efecto pasa por un mecanismo, y cuánto va directo.",
+          "muestra": "17. Mediación: separas cuánto del efecto pasa por un mecanismo, y cuánto va directo.",
+          "cue": "mediacion"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Y así: diecisiete ideas, una cápsula para cada una. Dime cuál quieres primero, compártelo y sígueme.",
+          "muestra": "17 ideas, una cápsula para cada una. Dime cuál quieres primero, compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

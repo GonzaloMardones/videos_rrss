@@ -1,0 +1,155 @@
+{
+ "duracion": 91.943,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 5.777
+  },
+  {
+   "id": "titulo",
+   "inicio": 5.777,
+   "fin": 10.813
+  },
+  {
+   "id": "oec",
+   "inicio": 10.813,
+   "fin": 18.025
+  },
+  {
+   "id": "tipos",
+   "inicio": 18.025,
+   "fin": 27.874
+  },
+  {
+   "id": "margen",
+   "inicio": 27.874,
+   "fin": 39.046
+  },
+  {
+   "id": "razon",
+   "inicio": 39.046,
+   "fin": 50.794
+  },
+  {
+   "id": "delta",
+   "inicio": 50.794,
+   "fin": 66.339
+  },
+  {
+   "id": "ejemplo",
+   "inicio": 66.339,
+   "fin": 78.842
+  },
+  {
+   "id": "regla",
+   "inicio": 78.842,
+   "fin": 85.35
+  },
+  {
+   "id": "cierre",
+   "inicio": 85.35,
+   "fin": 91.943
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.477,
+   "texto": "Imagina que tu cambio sube la conversión 2%, y las cancelaciones casi 4%. ¿Lo lanzas?",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 5.777,
+   "fin": 10.513,
+   "texto": "Idea 6 del mapa de la experimentación: métricas de guarda, y métricas de razón.",
+   "cue": null
+  },
+  {
+   "escena": "oec",
+   "inicio": 10.813,
+   "fin": 17.725,
+   "texto": "Un buen experimento tiene una métrica principal, la que decide. Y métricas de guarda: las que no pueden empeorar, aunque la principal mejore.",
+   "cue": "oec"
+  },
+  {
+   "escena": "tipos",
+   "inicio": 18.025,
+   "fin": 21.182,
+   "texto": "Hay guardas de negocio, como cancelaciones, quejas o ingresos.",
+   "cue": "negocio"
+  },
+  {
+   "escena": "tipos",
+   "inicio": 21.302,
+   "fin": 27.574,
+   "texto": "Y guardas de confianza, que avisan si el experimento mismo falla: el desbalance de muestra, la latencia, los errores de carga.",
+   "cue": "confianza"
+  },
+  {
+   "escena": "margen",
+   "inicio": 27.874,
+   "fin": 33.485,
+   "texto": "¿Cómo se prueba una guarda? No preguntas si cambió. Preguntas si empeoró menos que un margen que fijaste antes.",
+   "cue": "margen"
+  },
+  {
+   "escena": "margen",
+   "inicio": 33.605,
+   "fin": 38.746,
+   "texto": "Si todo el intervalo de confianza queda bajo ese margen, la guarda pasa. Si lo cruza, no lanzas.",
+   "cue": "intervalo"
+  },
+  {
+   "escena": "razon",
+   "inicio": 39.046,
+   "fin": 44.507,
+   "texto": "Ahora, las métricas de razón, como clics por sesión. El problema: sorteas usuarios, pero mides sesiones.",
+   "cue": "razon"
+  },
+  {
+   "escena": "razon",
+   "inicio": 44.627,
+   "fin": 50.494,
+   "texto": "Las sesiones de una misma persona se parecen entre sí. Si las tratas como independientes, subestimas el ruido.",
+   "cue": "parecen"
+  },
+  {
+   "escena": "delta",
+   "inicio": 50.794,
+   "fin": 58.367,
+   "texto": "La solución es el método delta. La varianza de una razón depende del ruido del numerador, del ruido del denominador, y de cuánto se mueven juntos.",
+   "cue": "delta"
+  },
+  {
+   "escena": "delta",
+   "inicio": 58.487,
+   "fin": 66.039,
+   "texto": "Como clics y sesiones suben juntos, la covarianza resta. Pero calcularla por usuario, y no por sesión, suele dar un error más grande que el ingenuo.",
+   "cue": "covarianza"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 66.339,
+   "fin": 78.542,
+   "texto": "Un ejemplo: efecto de 0,02 clics por sesión. Con el error ingenuo, z = 2,5 y p = 0,01. Con el método delta, el error crece 50%, y p sube a 0,10. Ya no es significativo.",
+   "cue": "ejemplo"
+  },
+  {
+   "escena": "regla",
+   "inicio": 78.842,
+   "fin": 85.05,
+   "texto": "La regla: analiza en la misma unidad que sorteaste. Para métricas de razón, usa el método delta, o un bootstrap por usuario.",
+   "cue": "regla"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 85.35,
+   "fin": 91.643,
+   "texto": "Una métrica decide, las otras protegen. En la próxima idea, qué pasa cuando tratar a uno afecta a otro. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

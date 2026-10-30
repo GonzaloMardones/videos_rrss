@@ -1,0 +1,120 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y tu capacitación subió las ventas en diez al mes. Ya sabes que funciona. Pero, ¿por qué? ¿Porque tus vendedores hacen más llamadas, o porque venden mejor en cada una? La respuesta cambia qué vas a escalar.",
+     "muestra": "Tu capacitación subió las ventas en 10 al mes. Ya sabes que funciona. Pero ¿por qué? ¿Porque tus vendedores hacen más llamadas, o porque venden mejor en cada una? La respuesta cambia qué vas a escalar.",
+     "cue": "gancho",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la idea diecisiete, la última del mapa de la experimentación: análisis de mediación.",
+     "muestra": "Idea 17, la última del mapa de la experimentación: análisis de mediación."
+    }
+   ]
+  },
+  {
+   "id": "caminos",
+   "frases": [
+    {
+     "dice": "Y el efecto total se divide en dos caminos. El indirecto, que pasa por un mediador: las llamadas. Y el directo: todo lo demás.",
+     "muestra": "El efecto total se divide en dos caminos. El indirecto, que pasa por un mediador: las llamadas. Y el directo: todo lo demás.",
+     "cue": "caminos"
+    }
+   ]
+  },
+  {
+   "id": "producto",
+   "frases": [
+    {
+     "dice": "Entonces, la cuenta clásica, de Bárron y Kéni, en el caso lineal. La letra a, es cuánto sube el mediador con la capacitación: tres llamadas más al día.",
+     "muestra": "La cuenta clásica (Baron y Kenny), en el caso lineal. a es cuánto sube el mediador con la capacitación: tres llamadas más al día.",
+     "cue": "a"
+    },
+    {
+     "dice": "Y la letra be, es cuánto suben las ventas por cada llamada, a capacitación fija: dos.",
+     "muestra": "b es cuánto suben las ventas por cada llamada, a capacitación fija: dos.",
+     "cue": "b"
+    },
+    {
+     "dice": "Y el indirecto es a por be: seis. El directo, ce prima, es cuatro. Total, diez. El sesenta por ciento pasa por las llamadas.",
+     "muestra": "El indirecto es a·b: seis. El directo, c′, es cuatro. Total, diez. El 60% pasa por las llamadas.",
+     "cue": "suma"
+    }
+   ]
+  },
+  {
+   "id": "contrafactual",
+   "frases": [
+    {
+     "dice": "Y la versión moderna usa resultados potenciales. El efecto indirecto natural compara dos mundos: capacitado, con las llamadas de un capacitado, versus capacitado, con las llamadas que habría hecho sin capacitación.",
+     "muestra": "La versión moderna usa resultados potenciales. El efecto indirecto natural compara: capacitado con las llamadas de un capacitado, versus capacitado con las llamadas que habría hecho sin capacitación.",
+     "cue": "nie"
+    },
+    {
+     "dice": "Ese segundo mundo nunca se observa. Por eso la mediación siempre necesita supuestos.",
+     "muestra": "Ese segundo mundo nunca se observa. Por eso la mediación siempre necesita supuestos.",
+     "cue": "nunca"
+    }
+   ]
+  },
+  {
+   "id": "trampa",
+   "frases": [
+    {
+     "dice": "Y aquí está la gran trampa: aleatorizaste la capacitación, no las llamadas. Si el talento sube las llamadas y también las ventas, el camino del mediador al resultado está confundido.",
+     "muestra": "La gran trampa: aleatorizaste la capacitación, no las llamadas. Si el talento sube las llamadas y también las ventas, el camino del mediador al resultado está confundido.",
+     "cue": "talento"
+    },
+    {
+     "dice": "Y en la simulación, el total sigue siendo diez: eso sí es experimental. Pero el indirecto sale diez coma cinco, y el directo, menos cero coma cinco. Ambos falsos.",
+     "muestra": "En la simulación, el total sigue siendo 10: eso sí es experimental. Pero el indirecto sale 10,5, y el directo, −0,5. Ambos falsos.",
+     "cue": "falso"
+    }
+   ]
+  },
+  {
+   "id": "cuidado",
+   "frases": [
+    {
+     "dice": "Por eso, mide los confusores entre el mediador y el resultado. Haz análisis de sensibilidad. Usa bootstrap para el intervalo del indirecto, porque un producto no se distribuye normal. Y si el efecto de cada llamada cambia con la capacitación, usa las definiciones contrafactuales, no el producto.",
+     "muestra": "Mide los confusores entre mediador y resultado. Haz análisis de sensibilidad. Usa bootstrap para el intervalo del indirecto (un producto no se distribuye normal). Y si el efecto de cada llamada cambia con la capacitación, usa las definiciones contrafactuales, no el producto.",
+     "cue": "ojo"
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "frases": [
+    {
+     "dice": "Y con esto cerramos el mapa de la experimentación: diecisiete ideas, desde el efecto mínimo detectable hasta la mediación. Cada una, una herramienta para decidir con evidencia.",
+     "muestra": "Con esto cerramos el mapa de la experimentación: 17 ideas, desde el efecto mínimo detectable hasta la mediación. Cada una, una herramienta para decidir con evidencia.",
+     "cue": "mapa"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: saber que algo funciona es el comienzo. Saber por qué, es lo que te deja escalarlo. Compártelo, y sígueme para la próxima serie.",
+     "muestra": "Saber que algo funciona es el comienzo. Saber por qué es lo que te deja escalarlo. Compártelo, y sígueme para la próxima serie.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

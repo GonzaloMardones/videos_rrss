@@ -1,0 +1,190 @@
+{
+ "duracion": 85.434,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 10.307
+  },
+  {
+   "id": "titulo",
+   "inicio": 10.307,
+   "fin": 13.722
+  },
+  {
+   "id": "idea",
+   "inicio": 13.722,
+   "fin": 24.915
+  },
+  {
+   "id": "piezas",
+   "inicio": 24.915,
+   "fin": 32.026
+  },
+  {
+   "id": "salto",
+   "inicio": 32.026,
+   "fin": 42.622
+  },
+  {
+   "id": "estimar",
+   "inicio": 42.622,
+   "fin": 52.663
+  },
+  {
+   "id": "difusa",
+   "inicio": 52.663,
+   "fin": 62.385
+  },
+  {
+   "id": "pruebas",
+   "inicio": 62.385,
+   "fin": 71.061
+  },
+  {
+   "id": "limite",
+   "inicio": 71.061,
+   "fin": 80.185
+  },
+  {
+   "id": "cierre",
+   "inicio": 80.185,
+   "fin": 85.434
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.498,
+   "texto": "Una beca se entrega a quien saca 600 puntos o más. ¿La beca mejora las notas en la universidad?",
+   "cue": "beca"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.698,
+   "fin": 10.007,
+   "texto": "Comparar becados con no becados no sirve: los becados ya eran mejores alumnos.",
+   "cue": "sesgo"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 10.307,
+   "fin": 13.422,
+   "texto": "Métodos causales: regresión discontinua.",
+   "cue": null
+  },
+  {
+   "escena": "idea",
+   "inicio": 13.722,
+   "fin": 19.674,
+   "texto": "Pero mira el borde. Un alumno con 599 puntos, y otra con 601, son casi idénticos.",
+   "cue": "borde"
+  },
+  {
+   "escena": "idea",
+   "inicio": 19.794,
+   "fin": 24.615,
+   "texto": "La única diferencia real es que una recibió la beca. Junto al corte, es casi como un sorteo.",
+   "cue": "sorteo"
+  },
+  {
+   "escena": "piezas",
+   "inicio": 24.915,
+   "fin": 27.646,
+   "texto": "Tres piezas. La variable de asignación: el puntaje.",
+   "cue": "asignacion"
+  },
+  {
+   "escena": "piezas",
+   "inicio": 27.766,
+   "fin": 29.067,
+   "texto": "El corte: 600.",
+   "cue": "corte"
+  },
+  {
+   "escena": "piezas",
+   "inicio": 29.187,
+   "fin": 31.726,
+   "texto": "Y el tratamiento, que se activa al cruzar el corte.",
+   "cue": "tratamiento"
+  },
+  {
+   "escena": "salto",
+   "inicio": 32.026,
+   "fin": 38.042,
+   "texto": "Graficas la nota universitaria contra el puntaje. Si la beca tiene efecto, la curva salta justo en el corte.",
+   "cue": "grafico"
+  },
+  {
+   "escena": "salto",
+   "inicio": 38.162,
+   "fin": 42.322,
+   "texto": "El efecto es ese salto: el límite por la derecha, menos el límite por la izquierda.",
+   "cue": "formula"
+  },
+  {
+   "escena": "estimar",
+   "inicio": 42.622,
+   "fin": 46.633,
+   "texto": "Para medirlo, ajustas una recta a cada lado, solo con datos cerca del corte.",
+   "cue": "rectas"
+  },
+  {
+   "escena": "estimar",
+   "inicio": 46.753,
+   "fin": 52.363,
+   "texto": "Ese ancho de ventana es un equilibrio: angosta, menos sesgo pero más ruido. Ancha, más datos pero más sesgo.",
+   "cue": "ventana"
+  },
+  {
+   "escena": "difusa",
+   "inicio": 52.663,
+   "fin": 57.655,
+   "texto": "Si cruzar el corte no garantiza la beca, sino que solo la hace más probable, el diseño es difuso.",
+   "cue": "difusa"
+  },
+  {
+   "escena": "difusa",
+   "inicio": 57.775,
+   "fin": 62.085,
+   "texto": "Entonces divides el salto en la nota por el salto en la probabilidad de tener beca.",
+   "cue": "division"
+  },
+  {
+   "escena": "pruebas",
+   "inicio": 62.385,
+   "fin": 67.846,
+   "texto": "Las pruebas: que nadie manipule su puntaje para quedar justo arriba. Si se amontonan en el borde, hay trampa.",
+   "cue": "manipulacion"
+  },
+  {
+   "escena": "pruebas",
+   "inicio": 67.966,
+   "fin": 70.761,
+   "texto": "Y que las demás características no salten en el corte.",
+   "cue": "placebo"
+  },
+  {
+   "escena": "limite",
+   "inicio": 71.061,
+   "fin": 75.605,
+   "texto": "Su límite: el efecto vale cerca del corte. Para quien sacó 400, no dice nada.",
+   "cue": "local"
+  },
+  {
+   "escena": "limite",
+   "inicio": 75.725,
+   "fin": 79.885,
+   "texto": "El diseño nació en 1960, estudiando premios al mérito escolar.",
+   "cue": "origen"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 80.185,
+   "fin": 85.134,
+   "texto": "Un corte, un salto, y mucha honestidad con el borde. Compártelo y sígueme para el siguiente método.",
+   "cue": "cta"
+  }
+ ]
+}

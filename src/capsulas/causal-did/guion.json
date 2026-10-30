@@ -1,0 +1,155 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "En mil novecientos noventa y dos, Nueva Jersey subió el salario mínimo. Pensilvania, su vecino, no.",
+          "muestra": "En 1992, Nueva Jersey subió el salario mínimo. Pensilvania, su vecino, no.",
+          "cue": "sube",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Y entonces, ¿se perdieron empleos? Si solo miras el antes y el después, te engañas.",
+          "muestra": "¿Se perdieron empleos? Si solo miras el antes y el después, te engañas.",
+          "cue": "engano"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la serie métodos causales: diferencias en diferencias.",
+          "muestra": "Métodos causales: diferencias en diferencias."
+        }
+      ]
+    },
+    {
+      "id": "trampas",
+      "frases": [
+        {
+          "dice": "Primero, la idea simple. Comparar antes y después mezcla el efecto con todo lo que cambió en el tiempo: la temporada, la economía.",
+          "muestra": "Primero, la idea simple. Comparar antes y después mezcla el efecto con todo lo que cambió en el tiempo: la temporada, la economía.",
+          "cue": "tiempo"
+        },
+        {
+          "dice": "Y comparar un estado con otro mezcla el efecto con lo que ya los hacía distintos.",
+          "muestra": "Y comparar un estado con otro mezcla el efecto con lo que ya los hacía distintos.",
+          "cue": "grupos"
+        }
+      ]
+    },
+    {
+      "id": "idea",
+      "frases": [
+        {
+          "dice": "Diferencias en diferencias resta las dos cosas. Mide cuánto cambió el grupo tratado, y le resta cuánto cambió el control.",
+          "muestra": "Diferencias en diferencias resta las dos cosas. Mide cuánto cambió el grupo tratado, y le resta cuánto cambió el control.",
+          "cue": "resta"
+        },
+        {
+          "dice": "El cambio del control es lo que habría pasado sin la medida: el contrafactual.",
+          "muestra": "El cambio del control es lo que habría pasado sin la medida: el contrafactual.",
+          "cue": "contrafactual"
+        }
+      ]
+    },
+    {
+      "id": "formula",
+      "frases": [
+        {
+          "dice": "En fórmula: el cambio de los tratados, menos el cambio del control.",
+          "muestra": "En fórmula: el cambio de los tratados, menos el cambio del control.",
+          "cue": "formula"
+        },
+        {
+          "dice": "La primera resta borra lo que es fijo en cada grupo.",
+          "muestra": "La primera resta borra lo que es fijo en cada grupo.",
+          "cue": "primera"
+        },
+        {
+          "dice": "Y la segunda borra lo que les pasó a los dos al mismo tiempo.",
+          "muestra": "Y la segunda borra lo que les pasó a los dos al mismo tiempo.",
+          "cue": "segunda"
+        }
+      ]
+    },
+    {
+      "id": "ejemplo",
+      "frases": [
+        {
+          "dice": "Con los datos de Card y Krúguer: en Nueva Jersey, el empleo por local subió cero coma cincuenta y nueve. En Pensilvania, bajó dos coma dieciséis.",
+          "muestra": "Con los datos de Card y Krueger: en Nueva Jersey, el empleo por local subió 0,59. En Pensilvania, bajó 2,16.",
+          "cue": "datos"
+        },
+        {
+          "dice": "La diferencia en diferencias da casi dos coma ocho empleos más por local. No hubo pérdida de empleo.",
+          "muestra": "La diferencia en diferencias da casi 2,8 empleos más por local. No hubo pérdida de empleo.",
+          "cue": "resultado"
+        },
+        {
+          "dice": "Ese trabajo es parte del Nobel de Economía de dos mil veintiuno que recibió David Card.",
+          "muestra": "Ese trabajo es parte del Nobel de Economía 2021 que recibió David Card.",
+          "cue": "nobel"
+        }
+      ]
+    },
+    {
+      "id": "regresion",
+      "frases": [
+        {
+          "dice": "En una regresión, es un término de interacción: tratado por después.",
+          "muestra": "En una regresión, es un término de interacción: tratado por después.",
+          "cue": "interaccion"
+        },
+        {
+          "dice": "Su coeficiente, beta tres, es exactamente la diferencia en diferencias.",
+          "muestra": "Su coeficiente, β₃, es exactamente la diferencia en diferencias.",
+          "cue": "beta"
+        }
+      ]
+    },
+    {
+      "id": "supuesto",
+      "frases": [
+        {
+          "dice": "El supuesto clave: sin la medida, los dos grupos habrían seguido tendencias paralelas.",
+          "muestra": "El supuesto clave: sin la medida, los dos grupos habrían seguido tendencias paralelas.",
+          "cue": "paralelas"
+        },
+        {
+          "dice": "No se puede probar después, pero sí antes: si las tendencias previas ya se separaban, desconfía.",
+          "muestra": "No se puede probar después, pero sí antes: si las tendencias previas ya se separaban, desconfía.",
+          "cue": "previas"
+        }
+      ]
+    },
+    {
+      "id": "cuidado",
+      "frases": [
+        {
+          "dice": "Ojo también con efectos que se anticipan, con contagios al grupo de control, y con tratamientos que llegan en fechas distintas: ahí usa estimadores modernos.",
+          "muestra": "Ojo también con efectos que se anticipan, con contagios al grupo de control, y con tratamientos que llegan en fechas distintas: ahí usa estimadores modernos.",
+          "cue": "riesgos"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Y así: dos restas y un supuesto. Compártelo y sígueme para el siguiente método.",
+          "muestra": "Dos restas y un supuesto. Compártelo y sígueme para el siguiente método.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y tu estudio dice: los clientes que usan la app renuevan uno coma ocho veces más. Alguien pregunta: ¿y si hay un confusor que no mediste? No lo puedes descartar. Pero sí puedes medir qué tan fuerte tendría que ser.",
+     "muestra": "Tu estudio dice: los clientes que usan la app renuevan 1,8 veces más. Alguien pregunta: ¿y si hay un confusor que no mediste? No lo puedes descartar. Pero sí puedes medir qué tan fuerte tendría que ser.",
+     "cue": "gancho",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la idea quince del mapa de la experimentación: análisis de sensibilidad, y el i válu.",
+     "muestra": "Idea 15 del mapa de la experimentación: análisis de sensibilidad, y el E-value."
+    }
+   ]
+  },
+  {
+   "id": "problema",
+   "frases": [
+    {
+     "dice": "Y ningún estudio observacional controla todo. Siempre puede quedar una variable oculta, como la motivación, que empuja a usar la app y también a renovar.",
+     "muestra": "Ningún estudio observacional controla todo. Siempre puede quedar una variable oculta, como la motivación, que empuja a usar la app y también a renovar.",
+     "cue": "oculta"
+    },
+    {
+     "dice": "Entonces, la pregunta útil no es si existe. Es qué tan fuerte tendría que ser para borrar tu efecto.",
+     "muestra": "La pregunta útil no es si existe. Es qué tan fuerte tendría que ser para borrar tu efecto.",
+     "cue": "pregunta"
+    }
+   ]
+  },
+  {
+   "id": "cornfield",
+   "frases": [
+    {
+     "dice": "Y esta idea tiene historia. En mil novecientos cincuenta y nueve, Cornfield respondió a quienes decían que el cigarro no causaba cáncer.",
+     "muestra": "Esta idea tiene historia. En 1959, Cornfield respondió a quienes decían que el cigarro no causaba cáncer.",
+     "cue": "historia"
+    },
+    {
+     "dice": "Si los fumadores tienen nueve veces más riesgo, y no es por el cigarro sino por una hormona oculta, esa hormona tendría que ser al menos nueve veces más común en los fumadores. Algo poco creíble.",
+     "muestra": "Si los fumadores tienen 9 veces más riesgo, y no es por el cigarro sino por una hormona oculta, esa hormona tendría que ser al menos 9 veces más común en los fumadores. Algo poco creíble.",
+     "cue": "nueve"
+    }
+   ]
+  },
+  {
+   "id": "formula",
+   "frases": [
+    {
+     "dice": "Y hoy se usa el factor de sesgo. Depende de dos fuerzas del confusor oculto.",
+     "muestra": "Hoy se usa el factor de sesgo. Depende de dos fuerzas del confusor oculto.",
+     "cue": "sesgo"
+    },
+    {
+     "dice": "La primera: cuántas veces más común es entre quienes usan la app.",
+     "muestra": "La primera: cuántas veces más común es entre quienes usan la app.",
+     "cue": "ux"
+    },
+    {
+     "dice": "Y la segunda: cuántas veces aumenta la probabilidad de renovar.",
+     "muestra": "La segunda: cuántas veces aumenta la probabilidad de renovar.",
+     "cue": "uy"
+    },
+    {
+     "dice": "Y el sesgo máximo que pueden crear juntas es su producto, dividido por su suma menos uno. Si ese sesgo alcanza tu efecto observado, el confusor lo puede explicar entero.",
+     "muestra": "El sesgo máximo que pueden crear juntas es su producto, dividido por su suma menos uno. Si ese sesgo alcanza tu efecto observado, el confusor lo puede explicar entero.",
+     "cue": "maximo"
+    }
+   ]
+  },
+  {
+   "id": "evalue",
+   "frases": [
+    {
+     "dice": "Y el i válu responde con un solo número: la fuerza mínima, igual en ambos lados, que borraría el efecto. Es el riesgo relativo, más la raíz del riesgo relativo, por el riesgo relativo menos uno.",
+     "muestra": "El E-value responde con un solo número: la fuerza mínima, igual en ambos lados, que borraría el efecto. E = RR + √(RR · (RR − 1)).",
+     "cue": "valor"
+    },
+    {
+     "dice": "Con uno coma ocho: uno coma ocho, más la raíz de uno coma cuarenta y cuatro, da tres. El confusor tendría que triplicar a la vez el uso de la app y la renovación.",
+     "muestra": "Con 1,8: 1,8 + √1,44 = 3. El confusor tendría que triplicar a la vez el uso de la app y la renovación.",
+     "cue": "tres"
+    },
+    {
+     "dice": "Y para el límite inferior del intervalo, uno coma tres, el i válu es uno coma nueve.",
+     "muestra": "Para el límite inferior del intervalo (1,3), el E-value es 1,9.",
+     "cue": "limite"
+    }
+   ]
+  },
+  {
+   "id": "curva",
+   "frases": [
+    {
+     "dice": "Y no tiene que ser igual en ambos lados. Esta curva muestra todas las combinaciones que borran el efecto. Un confusor que duplica el uso, tendría que multiplicar por nueve la renovación.",
+     "muestra": "No tiene que ser igual en ambos lados. Esta curva muestra todas las combinaciones que borran el efecto. Un confusor que duplica el uso tendría que multiplicar por nueve la renovación.",
+     "cue": "curva"
+    },
+    {
+     "dice": "Entonces, compáralo con lo que sí mediste. Si tu variable observada más fuerte tiene uno coma cinco en ambos lados, solo genera un sesgo de uno coma uno. Un oculto tendría que ser mucho más fuerte que todo lo que conoces.",
+     "muestra": "Compáralo con lo que sí mediste. Si tu variable observada más fuerte tiene 1,5 en ambos lados, solo genera un sesgo de 1,1. Un oculto tendría que ser mucho más fuerte que todo lo que conoces.",
+     "cue": "comparar"
+    }
+   ]
+  },
+  {
+   "id": "cuidado",
+   "frases": [
+    {
+     "dice": "Pero ojo: el i válu no prueba causalidad, y no es un valor pe. Un i válu alto no dice que no hay confusión. Dice que, para borrar el efecto, tendría que ser fuerte. Reporta siempre el del estimado, y el del intervalo.",
+     "muestra": "Ojo: el E-value no prueba causalidad, y no es un p-valor. Un E-value alto no dice que no hay confusión: dice que, para borrar el efecto, tendría que ser fuerte. Reporta el del estimado y el del intervalo.",
+     "cue": "ojo"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: no digas que no hay confusores. Di qué tan fuertes tendrían que ser. En la próxima idea: double machine learning. Compártelo y sígueme.",
+     "muestra": "No digas que no hay confusores. Di qué tan fuertes tendrían que ser. En la próxima idea: double machine learning. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}
