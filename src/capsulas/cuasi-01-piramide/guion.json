@@ -1,0 +1,155 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y en mil novecientos noventa y seis, un estudio con miles de enfermeras concluyó que la terapia hormonal con progestina bajaba el riesgo coronario en sesenta y uno por ciento.",
+     "muestra": "En 1996, un estudio con miles de enfermeras concluyó que la terapia hormonal con progestina bajaba el riesgo coronario en 61%.",
+     "cue": "obs"
+    },
+    {
+     "dice": "En dos mil dos, un experimento aleatorizado con la misma terapia encontró lo contrario: veintinueve por ciento más riesgo. ¿A cuál le crees?",
+     "muestra": "En 2002, un experimento aleatorizado con la misma terapia encontró lo contrario: 29% más riesgo. ¿A cuál le crees?",
+     "cue": "rct",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo uno: la pirámide de la evidencia.",
+     "muestra": "Cuasi-experimentos, capítulo 1: la pirámide de la evidencia."
+    }
+   ]
+  },
+  {
+   "id": "piramide",
+   "frases": [
+    {
+     "dice": "Y la medicina basada en evidencia ordena los estudios en una pirámide. Abajo, la opinión de expertos y los casos aislados. Luego, los estudios observacionales: caso control y cohortes.",
+     "muestra": "La medicina basada en evidencia ordena los estudios en una pirámide. Abajo, la opinión de expertos y los casos aislados. Luego, los estudios observacionales: caso-control y cohortes.",
+     "cue": "base"
+    },
+    {
+     "dice": "Y más arriba, los cuasi experimentos. Después, los experimentos aleatorizados. Y en la cima, las revisiones sistemáticas que combinan muchos estudios.",
+     "muestra": "Más arriba, los cuasi-experimentos. Después, los experimentos aleatorizados. Y en la cima, las revisiones sistemáticas que combinan muchos estudios.",
+     "cue": "cima"
+    },
+    {
+     "dice": "Y en una empresa de tecnología es igual: la anécdota, el dashboard, el despliegue por región, la prueba a be, y el meta análisis de muchas pruebas.",
+     "muestra": "En tecnología es igual: la anécdota, el dashboard, el despliegue por región, el A/B y el meta-análisis de muchas pruebas.",
+     "cue": "tech"
+    }
+   ]
+  },
+  {
+   "id": "ecm",
+   "frases": [
+    {
+     "dice": "¿Y por qué ese orden? Por una fórmula. El error cuadrático de una estimación es el sesgo al cuadrado, más la varianza dividida por ene.",
+     "muestra": "¿Por qué ese orden? Por una fórmula: el error cuadrático de una estimación es el sesgo al cuadrado más la varianza dividida por n.",
+     "cue": "mse"
+    },
+    {
+     "dice": "Más datos achican la varianza, del orden de uno sobre ene. Pero el sesgo no se mueve con más datos: es de orden uno. Subir en la pirámide es achicar el sesgo, no la muestra.",
+     "muestra": "Más datos achican la varianza, del orden de 1/n. Pero el sesgo no se mueve con más datos: es de orden 1. Subir en la pirámide es achicar el sesgo, no la muestra.",
+     "cue": "orden"
+    }
+   ]
+  },
+  {
+   "id": "meng",
+   "frases": [
+    {
+     "dice": "Entonces, ¿un millón de datos no vale nada? el estadístico Méng, de Járvard, lo calculó para las encuestas de la elección de Estados Unidos de dos mil dieciséis.",
+     "muestra": "¿Un millón de datos no vale nada? Xiao-Li Meng (Harvard) lo calculó para las encuestas de la elección de EE. UU. de 2016.",
+     "cue": "meng"
+    },
+    {
+     "dice": "Con una correlación de apenas cero coma cero cero cinco entre responder y la respuesta, dos coma tres millones de respuestas equivalían a una muestra al azar de unas cuatrocientas personas.",
+     "muestra": "Con una correlación de apenas 0,005 entre responder y la respuesta, 2,3 millones de respuestas equivalían a una muestra al azar de unas 400 personas.",
+     "cue": "cuatrocientos"
+    }
+   ]
+  },
+  {
+   "id": "bayes",
+   "frases": [
+    {
+     "dice": "Y ahora, la mirada bayesiana. Partes con una creencia, y cada estudio la actualiza. Si todo es normal, la creencia final es un promedio ponderado: cada estudio pesa uno sobre su varianza.",
+     "muestra": "La mirada bayesiana: partes con una creencia, y cada estudio la actualiza. Si todo es normal, la creencia final es un promedio ponderado: cada estudio pesa 1 sobre su varianza.",
+     "cue": "prior"
+    },
+    {
+     "dice": "Pero si un estudio puede tener sesgo, a su varianza se le suma la incertidumbre del sesgo, tau al cuadrado. Y su peso queda con un techo: uno sobre tau al cuadrado.",
+     "muestra": "Si un estudio puede tener sesgo, a su varianza se le suma la incertidumbre del sesgo, τ². Y su peso queda con un techo: 1/τ².",
+     "cue": "tau"
+    },
+    {
+     "dice": "En este ejemplo, un estudio observacional infinito vale lo mismo que un experimento de cien personas. Por eso los datos masivos no te suben en la pirámide.",
+     "muestra": "En este ejemplo, un estudio observacional infinito vale lo mismo que un experimento de 100 personas. Por eso los datos masivos no te suben en la pirámide.",
+     "cue": "techo"
+    }
+   ]
+  },
+  {
+   "id": "grade",
+   "frases": [
+    {
+     "dice": "Pero ojo: la pirámide no es una ley. El sistema GRADE baja la confianza de un experimento con problemas: sesgo, resultados inconsistentes, imprecisión, evidencia indirecta, o sesgo de publicación.",
+     "muestra": "Pero la pirámide no es una ley. El sistema GRADE baja la confianza de un experimento con problemas: sesgo, inconsistencia, imprecisión, evidencia indirecta o sesgo de publicación.",
+     "cue": "baja"
+    },
+    {
+     "dice": "Y sube la de un estudio observacional con un efecto muy grande, o con dosis y respuesta. Un buen cuasi experimento puede valer más que un mal experimento.",
+     "muestra": "Y sube la de un observacional con un efecto muy grande, o con dosis-respuesta. Un buen cuasi-experimento puede valer más que un mal experimento.",
+     "cue": "sube"
+    }
+   ]
+  },
+  {
+   "id": "kohavi",
+   "frases": [
+    {
+     "dice": "Y la base de la pirámide, la intuición, falla más de lo que crees. En Microsoft, Rónni Kojávi y su equipo encontraron que solo un tercio de las ideas probadas mejoraba la métrica que buscaba.",
+     "muestra": "La base de la pirámide, la intuición, falla más de lo que crees. En Microsoft, Ronny Kohavi y su equipo encontraron que solo un tercio de las ideas probadas mejoraba la métrica que buscaba.",
+     "cue": "tercio"
+    }
+   ]
+  },
+  {
+   "id": "ia",
+   "frases": [
+    {
+     "dice": "Entonces, ¿cuánta evidencia pedir antes de poner un agente de inteligencia artificial en producción? Depende de cuánto cuesta equivocarse.",
+     "muestra": "¿Cuánta evidencia pedir antes de poner un agente de IA en producción? Depende de cuánto cuesta equivocarse.",
+     "cue": "costo"
+    },
+    {
+     "dice": "Y un cambio de prompt que puedes revertir en un minuto puede salir con un cuasi experimento. Reemplazar un proceso humano exige un experimento aleatorizado.",
+     "muestra": "Un cambio de prompt que puedes revertir en un minuto puede salir con un cuasi-experimento. Reemplazar un proceso humano exige un experimento aleatorizado.",
+     "cue": "revertir"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: la pregunta no es cuántos datos tienes, sino de qué nivel. En el próximo capítulo: qué es exactamente un cuasi experimento. Compártelo y sígueme.",
+     "muestra": "La pregunta no es cuántos datos tienes, sino de qué nivel. En el próximo capítulo: qué es exactamente un cuasi-experimento. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}
