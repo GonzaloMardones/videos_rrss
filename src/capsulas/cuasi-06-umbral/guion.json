@@ -1,0 +1,120 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y un camión minero tiene una cámara que mide la fatiga del operador. Si el puntaje pasa de cero coma seis, suena una alarma.",
+     "muestra": "Un camión minero tiene una cámara que mide la fatiga del operador. Si el puntaje pasa de 0,6, suena una alarma.",
+     "cue": "camion"
+    },
+    {
+     "dice": "Comparas las horas con alarma y sin alarma: con alarma hay más incidentes. ¿La alarma empeora las cosas? No. La alarma suena justo cuando hay más fatiga.",
+     "muestra": "Comparas horas con y sin alarma: con alarma hay más incidentes. ¿La alarma empeora las cosas? No: suena justo cuando hay más fatiga.",
+     "cue": "paradoja",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo seis: umbrales, y la regresión discontinua.",
+     "muestra": "Cuasi-experimentos, capítulo 6: umbrales y regresión discontinua."
+    }
+   ]
+  },
+  {
+   "id": "idea",
+   "frases": [
+    {
+     "dice": "Y la idea nació en mil novecientos sesenta, con Tíslthueit y Cámpbel. Justo en el umbral, un operador con cero coma cincuenta y nueve, y otro con cero coma sesenta y uno, son prácticamente iguales.",
+     "muestra": "La idea nació en 1960, con Thistlethwaite y Campbell. Justo en el umbral, un operador con 0,59 y otro con 0,61 son prácticamente iguales.",
+     "cue": "umbral"
+    },
+    {
+     "dice": "La única diferencia es que a uno le sonó la alarma. Ahí, la regla funciona como un sorteo.",
+     "muestra": "La única diferencia es que a uno le sonó la alarma. Ahí, la regla funciona como un sorteo.",
+     "cue": "sorteo"
+    }
+   ]
+  },
+  {
+   "id": "salto",
+   "frases": [
+    {
+     "dice": "Entonces, graficas incidentes según el puntaje. La curva sube con la fatiga, y en cero coma seis, cae de golpe. Ese salto es el efecto de la alarma.",
+     "muestra": "Graficas incidentes según el puntaje. La curva sube con la fatiga, y en 0,6 cae de golpe. Ese salto es el efecto de la alarma.",
+     "cue": "grafico"
+    },
+    {
+     "dice": "Y en la simulación: la comparación ingenua dice más cuatro puntos de incidentes. La discontinuidad dice menos seis coma tres, y el efecto real es menos seis.",
+     "muestra": "En la simulación: la comparación ingenua dice +4 puntos de incidentes. La discontinuidad dice −6,3, y el efecto real es −6.",
+     "cue": "numeros"
+    }
+   ]
+  },
+  {
+   "id": "formula",
+   "frases": [
+    {
+     "dice": "Y en fórmula: el efecto es el límite de la curva justo a la derecha del corte, menos el límite justo a la izquierda.",
+     "muestra": "En fórmula: el efecto es el límite de la curva justo a la derecha del corte menos el límite justo a la izquierda.",
+     "cue": "limites"
+    },
+    {
+     "dice": "Para estimarlo, ajustas una recta a cada lado, solo con los datos cerca del corte, dentro de un ancho de banda hache. Más angosto, menos sesgo pero más ruido. Más ancho, al revés.",
+     "muestra": "Para estimarlo ajustas una recta a cada lado, solo con datos cerca del corte, dentro de un ancho de banda h. Más angosto: menos sesgo, más ruido. Más ancho: al revés.",
+     "cue": "banda"
+    }
+   ]
+  },
+  {
+   "id": "trampa",
+   "frases": [
+    {
+     "dice": "Pero ojo con la manipulación. Si las personas pueden mover su puntaje para quedar del lado que les conviene, el corte deja de ser un sorteo.",
+     "muestra": "Ojo con la manipulación: si las personas pueden mover su puntaje para quedar del lado que les conviene, el corte deja de ser un sorteo.",
+     "cue": "manipula"
+    },
+    {
+     "dice": "La prueba de McCrary revisa eso: si hay un amontonamiento de casos justo a un lado del umbral, desconfía.",
+     "muestra": "La prueba de McCrary lo revisa: si hay un amontonamiento de casos justo a un lado del umbral, desconfía.",
+     "cue": "mccrary"
+    }
+   ]
+  },
+  {
+   "id": "ia",
+   "frases": [
+    {
+     "dice": "Y la inteligencia artificial está llena de umbrales. Si la confianza del modelo es menor a cero coma siete, el caso va a un geólogo. Si el riesgo supera un valor, se detiene el equipo.",
+     "muestra": "La IA está llena de umbrales: si la confianza del modelo es menor a 0,7, el caso va a un geólogo; si el riesgo supera un valor, se detiene el equipo.",
+     "cue": "confianza"
+    },
+    {
+     "dice": "Si guardas el puntaje continuo, no solo la decisión, cada umbral te regala una regresión discontinua.",
+     "muestra": "Si guardas el puntaje continuo, no solo la decisión, cada umbral te regala una regresión discontinua.",
+     "cue": "guarda"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: donde hay un umbral, hay un experimento escondido. En el próximo capítulo: experimentos naturales, con minas en Perú y en Ghana. Compártelo y sígueme.",
+     "muestra": "Donde hay un umbral, hay un experimento escondido. Próximo capítulo: experimentos naturales, con minas en Perú y Ghana. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

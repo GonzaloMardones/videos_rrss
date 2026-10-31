@@ -1,0 +1,152 @@
+{
+ "duracion": 115.767,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 13.747
+  },
+  {
+   "id": "titulo",
+   "inicio": 13.747,
+   "fin": 18.143
+  },
+  {
+   "id": "idea",
+   "inicio": 18.143,
+   "fin": 33.582
+  },
+  {
+   "id": "formula",
+   "inicio": 33.582,
+   "fin": 48.466
+  },
+  {
+   "id": "simulacion",
+   "inicio": 48.466,
+   "fin": 63.201
+  },
+  {
+   "id": "bayes",
+   "inicio": 63.201,
+   "fin": 90.13
+  },
+  {
+   "id": "ia",
+   "inicio": 90.13,
+   "fin": 105.057
+  },
+  {
+   "id": "cierre",
+   "inicio": 105.057,
+   "fin": 115.767
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 7.909,
+   "texto": "Después de su peor año en accidentes, una faena lanza un programa de seguridad. Al año siguiente, los accidentes bajan 20%. ¿Funcionó?",
+   "cue": "faena"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 8.029,
+   "fin": 13.447,
+   "texto": "En una simulación sin ningún programa, las faenas con el peor año también bajaron 20%. Solas.",
+   "cue": "solas"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 13.747,
+   "fin": 17.843,
+   "texto": "Cuasi-experimentos, capítulo 4: la regresión a la media.",
+   "cue": null
+  },
+  {
+   "escena": "idea",
+   "inicio": 18.143,
+   "fin": 26.826,
+   "texto": "La idea es simple: cada resultado es una parte estable más una parte de suerte. Un año extremo suele tener mucha suerte, buena o mala. Y la suerte no se repite.",
+   "cue": "suerte"
+  },
+  {
+   "escena": "idea",
+   "inicio": 26.946,
+   "fin": 33.282,
+   "texto": "Francis Galton lo vio en 1886: los hijos de padres muy altos eran altos, pero menos que sus padres.",
+   "cue": "galton"
+  },
+  {
+   "escena": "formula",
+   "inicio": 33.582,
+   "fin": 41.774,
+   "texto": "En fórmula: lo que esperas el segundo año es la media, más ρ por la distancia a la media del primer año. ρ es la correlación entre un año y el siguiente.",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 41.894,
+   "fin": 48.166,
+   "texto": "Si ρ = 1, todo es estable y no hay regresión. Si ρ = 0, todo es suerte, y vuelves entero a la media.",
+   "cue": "rho"
+  },
+  {
+   "escena": "simulacion",
+   "inicio": 48.466,
+   "fin": 53.949,
+   "texto": "Simulé 2.000 faenas con su tasa real de accidentes, y dos años, sin ninguna intervención.",
+   "cue": "sim"
+  },
+  {
+   "escena": "simulacion",
+   "inicio": 54.069,
+   "fin": 62.901,
+   "texto": "El 10% con peor primer año tuvo 19,4 accidentes en promedio. Al año siguiente, 15,6. Una baja de 20%, sin hacer nada.",
+   "cue": "baja"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 63.201,
+   "fin": 73.057,
+   "texto": "Aquí la estadística bayesiana es la herramienta. La mejor estimación del riesgo real de una faena no es su último año: es un promedio ponderado entre su año y la media de faenas parecidas.",
+   "cue": "encoge"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 73.177,
+   "fin": 82.457,
+   "texto": "El peso es la varianza real entre faenas dividida por la varianza total. En la simulación, 0,55. Y la predicción encogida, 15,2, casi lo que pasó.",
+   "cue": "peso"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 82.577,
+   "fin": 89.83,
+   "texto": "Ezra Hauer convirtió esto en el método bayesiano empírico, el estándar para evaluar medidas de seguridad vial. Sirve igual para una faena.",
+   "cue": "hauer"
+  },
+  {
+   "escena": "ia",
+   "inicio": 90.13,
+   "fin": 98.898,
+   "texto": "En IA pasa todo el tiempo: reentrenas el modelo después de su peor semana, o reescribes los prompts con peor puntaje, y mejoran. En parte, solos.",
+   "cue": "modelo"
+  },
+  {
+   "escena": "ia",
+   "inicio": 99.018,
+   "fin": 104.757,
+   "texto": "La defensa es la misma: un grupo de comparación también elegido por mal desempeño, o un sorteo entre los peores.",
+   "cue": "defensa"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 105.057,
+   "fin": 115.467,
+   "texto": "Si eliges por lo extremo, el siguiente dato vuelve hacia la media. No lo confundas con tu efecto. Próximo capítulo: despliegues escalonados, con camiones autónomos. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "duracion": 116.023,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 17.054
+  },
+  {
+   "id": "titulo",
+   "inicio": 17.054,
+   "fin": 21.493
+  },
+  {
+   "id": "escalon",
+   "inicio": 21.493,
+   "fin": 35.395
+  },
+  {
+   "id": "twfe",
+   "inicio": 35.395,
+   "fin": 48.402
+  },
+  {
+   "id": "prohibidas",
+   "inicio": 48.402,
+   "fin": 68.598
+  },
+  {
+   "id": "eventos",
+   "inicio": 68.598,
+   "fin": 92.967
+  },
+  {
+   "id": "nube",
+   "inicio": 92.967,
+   "fin": 106.891
+  },
+  {
+   "id": "cierre",
+   "inicio": 106.891,
+   "fin": 116.023
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 9.21,
+   "texto": "En 2008, la división Gabriela Mistral de Codelco fue el primer despliegue comercial de camiones autónomos de Komatsu. Hoy su flota es 100% autónoma.",
+   "cue": "gaby"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 9.33,
+   "fin": 16.754,
+   "texto": "¿Cuánto aumentó la productividad por la autonomía? No hay un estudio controlado que lo responda. Y la forma de responderlo tiene una trampa.",
+   "cue": "trampa"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 17.054,
+   "fin": 21.193,
+   "texto": "Cuasi-experimentos, capítulo 5: despliegues escalonados.",
+   "cue": null
+  },
+  {
+   "escena": "escalon",
+   "inicio": 21.493,
+   "fin": 29.685,
+   "texto": "La tecnología casi nunca llega a todas las faenas el mismo día. Llega por olas: unas el año 3, otras el 5, otras el 7, y algunas nunca.",
+   "cue": "olas"
+  },
+  {
+   "escena": "escalon",
+   "inicio": 29.805,
+   "fin": 35.095,
+   "texto": "Eso parece ideal para diferencias en diferencias: siempre hay alguien que todavía no recibe el cambio.",
+   "cue": "ideal"
+  },
+  {
+   "escena": "twfe",
+   "inicio": 35.395,
+   "fin": 42.329,
+   "texto": "La receta clásica es la regresión de efectos fijos en dos sentidos: un efecto por faena, uno por año, y un β para el tratamiento.",
+   "cue": "receta"
+  },
+  {
+   "escena": "twfe",
+   "inicio": 42.449,
+   "fin": 48.102,
+   "texto": "Pero si el efecto crece con el tiempo, como pasa cuando los operadores y el sistema aprenden, esa β se rompe.",
+   "cue": "crece"
+  },
+  {
+   "escena": "prohibidas",
+   "inicio": 48.402,
+   "fin": 57.405,
+   "texto": "¿Por qué? Porque la regresión usa a las faenas que ya se automatizaron como control de las que se automatizan después. Y ese control trae su propio efecto creciendo.",
+   "cue": "usa"
+  },
+  {
+   "escena": "prohibidas",
+   "inicio": 57.525,
+   "fin": 68.298,
+   "texto": "Andrew Goodman-Bacon mostró esas comparaciones problemáticas. En la simulación, el efecto real promedio es 6,8. La regresión clásica dice 3,4: la mitad.",
+   "cue": "mitad"
+  },
+  {
+   "escena": "eventos",
+   "inicio": 68.598,
+   "fin": 76.897,
+   "texto": "La solución moderna. Primero, un estudio de eventos: alineas cada faena según los años desde su propia adopción y miras el efecto año a año.",
+   "cue": "alinea"
+  },
+  {
+   "escena": "eventos",
+   "inicio": 77.017,
+   "fin": 83.822,
+   "texto": "Los años antes de adoptar deben dar cero: es tu prueba de tendencias paralelas. Y los años después muestran cómo crece el efecto.",
+   "cue": "previos"
+  },
+  {
+   "escena": "eventos",
+   "inicio": 83.942,
+   "fin": 92.667,
+   "texto": "Segundo, el estimador de Callaway y Sant'Anna: compara cada ola solo contra faenas que todavía no adoptan. En la simulación recupera 7,1, cerca del real.",
+   "cue": "callaway"
+  },
+  {
+   "escena": "nube",
+   "inicio": 92.967,
+   "fin": 99.773,
+   "texto": "En la nube es igual: un agente nuevo que se activa región por región con una bandera de configuración es un despliegue escalonado.",
+   "cue": "bandera"
+  },
+  {
+   "escena": "nube",
+   "inicio": 99.893,
+   "fin": 106.591,
+   "texto": "Si guardas la fecha de activación de cada región, y dejas alguna sin activar por un tiempo, tienes todo para un estudio de eventos.",
+   "cue": "guarda"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 106.891,
+   "fin": 115.723,
+   "texto": "Cuando el cambio llega por olas, compara cada ola contra quien todavía no lo recibe. Próximo capítulo: umbrales y alarmas de fatiga. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

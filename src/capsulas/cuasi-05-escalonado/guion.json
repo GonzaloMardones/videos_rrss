@@ -1,0 +1,125 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y en dos mil ocho, la división Gabriela Mistral de Codelco fue el primer despliegue comercial de camiones autónomos de Komatsu. Hoy su flota es cien por ciento autónoma.",
+     "muestra": "En 2008, la división Gabriela Mistral de Codelco fue el primer despliegue comercial de camiones autónomos de Komatsu. Hoy su flota es 100% autónoma.",
+     "cue": "gaby"
+    },
+    {
+     "dice": "Y entonces, ¿cuánto aumentó la productividad por la autonomía? No hay un estudio controlado que lo responda. Y la forma de responderlo tiene una trampa.",
+     "muestra": "¿Cuánto aumentó la productividad por la autonomía? No hay un estudio controlado que lo responda. Y la forma de responderlo tiene una trampa.",
+     "cue": "trampa",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo cinco: despliegues escalonados.",
+     "muestra": "Cuasi-experimentos, capítulo 5: despliegues escalonados."
+    }
+   ]
+  },
+  {
+   "id": "escalon",
+   "frases": [
+    {
+     "dice": "Y la tecnología casi nunca llega a todas las faenas el mismo día. Llega por olas: unas el año tres, otras el cinco, otras el siete, y algunas nunca.",
+     "muestra": "La tecnología casi nunca llega a todas las faenas el mismo día. Llega por olas: unas el año 3, otras el 5, otras el 7, y algunas nunca.",
+     "cue": "olas"
+    },
+    {
+     "dice": "Eso parece ideal para diferencias en diferencias: siempre hay alguien que todavía no recibe el cambio.",
+     "muestra": "Eso parece ideal para diferencias en diferencias: siempre hay alguien que todavía no recibe el cambio.",
+     "cue": "ideal"
+    }
+   ]
+  },
+  {
+   "id": "twfe",
+   "frases": [
+    {
+     "dice": "Y la receta clásica es la regresión de efectos fijos en dos sentidos: un efecto por faena, uno por año, y un beta para el tratamiento.",
+     "muestra": "La receta clásica es la regresión de efectos fijos en dos sentidos: un efecto por faena, uno por año, y un β para el tratamiento.",
+     "cue": "receta"
+    },
+    {
+     "dice": "Pero si el efecto crece con el tiempo, como pasa cuando los operadores y el sistema aprenden, esa beta se rompe.",
+     "muestra": "Pero si el efecto crece con el tiempo, como pasa cuando los operadores y el sistema aprenden, esa β se rompe.",
+     "cue": "crece"
+    }
+   ]
+  },
+  {
+   "id": "prohibidas",
+   "frases": [
+    {
+     "dice": "¿Por qué? Porque la regresión usa a las faenas que ya se automatizaron como control de las que se automatizan después. Y esas faenas de control traen su propio efecto creciendo.",
+     "muestra": "¿Por qué? Porque la regresión usa a las faenas que ya se automatizaron como control de las que se automatizan después. Y ese control trae su propio efecto creciendo.",
+     "cue": "usa"
+    },
+    {
+     "dice": "Andrú Gúdman Béicon descompuso esa regresión, y mostró estas comparaciones problemáticas. En la simulación, el efecto real promedio es seis coma ocho. La regresión clásica dice tres coma cuatro: la mitad.",
+     "muestra": "Andrew Goodman-Bacon mostró esas comparaciones problemáticas. En la simulación, el efecto real promedio es 6,8. La regresión clásica dice 3,4: la mitad.",
+     "cue": "mitad"
+    }
+   ]
+  },
+  {
+   "id": "eventos",
+   "frases": [
+    {
+     "dice": "Entonces, la solución moderna. Primero, un estudio de eventos: alineas cada faena según los años desde su propia adopción, y miras el efecto año a año.",
+     "muestra": "La solución moderna. Primero, un estudio de eventos: alineas cada faena según los años desde su propia adopción y miras el efecto año a año.",
+     "cue": "alinea"
+    },
+    {
+     "dice": "Los años antes de adoptar deben dar cero: es tu prueba de tendencias paralelas. Y los años después muestran cómo crece el efecto.",
+     "muestra": "Los años antes de adoptar deben dar cero: es tu prueba de tendencias paralelas. Y los años después muestran cómo crece el efecto.",
+     "cue": "previos"
+    },
+    {
+     "dice": "Y segundo, el estimador de Cálowei y Santána: compara cada ola solo contra faenas que todavía no adoptan. En la simulación, recupera siete coma uno, cerca del real.",
+     "muestra": "Segundo, el estimador de Callaway y Sant'Anna: compara cada ola solo contra faenas que todavía no adoptan. En la simulación recupera 7,1, cerca del real.",
+     "cue": "callaway"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en la nube es igual. Un agente nuevo que se activa región por región, con una bandera de configuración, es un despliegue escalonado.",
+     "muestra": "En la nube es igual: un agente nuevo que se activa región por región con una bandera de configuración es un despliegue escalonado.",
+     "cue": "bandera"
+    },
+    {
+     "dice": "Si guardas la fecha de activación de cada región, y dejas alguna sin activar por un tiempo, tienes todo para un estudio de eventos.",
+     "muestra": "Si guardas la fecha de activación de cada región, y dejas alguna sin activar por un tiempo, tienes todo para un estudio de eventos.",
+     "cue": "guarda"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: cuando el cambio llega por olas, compara cada ola contra quien todavía no lo recibe. En el próximo capítulo: umbrales y alarmas de fatiga. Compártelo y sígueme.",
+     "muestra": "Cuando el cambio llega por olas, compara cada ola contra quien todavía no lo recibe. Próximo capítulo: umbrales y alarmas de fatiga. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}
