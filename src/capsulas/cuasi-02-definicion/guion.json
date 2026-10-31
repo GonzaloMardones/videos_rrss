@@ -1,0 +1,145 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y un banco aprueba créditos solo con puntaje mayor a seiscientos cincuenta. Una ley rige desde el primero de marzo. Una app lanza una función en Chile antes que en Perú.",
+     "muestra": "Un banco aprueba créditos solo con puntaje ≥ 650. Una ley rige desde el 1 de marzo. Una app lanza una función en Chile antes que en Perú.",
+     "cue": "casos"
+    },
+    {
+     "dice": "Ninguno se sorteó. Pero en los tres puedes medir un efecto causal.",
+     "muestra": "Ninguno se sorteó. Pero en los tres puedes medir un efecto causal.",
+     "cue": "sorteo",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo dos: qué es un cuasi experimento.",
+     "muestra": "Cuasi-experimentos, capítulo 2: qué es un cuasi-experimento."
+    }
+   ]
+  },
+  {
+   "id": "definicion",
+   "frases": [
+    {
+     "dice": "Y un cuasi experimento tiene lo mismo que un experimento: un tratamiento y un grupo de comparación. Le falta una sola cosa: el sorteo.",
+     "muestra": "Un cuasi-experimento tiene lo mismo que un experimento: un tratamiento y un grupo de comparación. Le falta una sola cosa: el sorteo.",
+     "cue": "falta"
+    },
+    {
+     "dice": "Quién recibe el tratamiento lo decide una regla, una fecha, o las propias personas. Así lo definen Shádish, Cuk y Cámpbel.",
+     "muestra": "Quién recibe el tratamiento lo decide una regla, una fecha o las propias personas. Así lo definen Shadish, Cook y Campbell.",
+     "cue": "decide"
+    }
+   ]
+  },
+  {
+   "id": "mecanismo",
+   "frases": [
+    {
+     "dice": "Entonces, la pieza clave es el mecanismo de asignación: la probabilidad de recibir el tratamiento, según tus características y tus resultados posibles.",
+     "muestra": "La pieza clave es el mecanismo de asignación: la probabilidad de recibir el tratamiento, según tus características y tus resultados posibles.",
+     "cue": "mecanismo"
+    },
+    {
+     "dice": "En un experimento, esa probabilidad la fijas tú, por ejemplo cincuenta por ciento, y no depende de nada. En un cuasi experimento sí depende de algo. Y tu trabajo es saber de qué.",
+     "muestra": "En un experimento, esa probabilidad la fijas tú (por ejemplo 50%) y no depende de nada. En un cuasi-experimento sí depende de algo. Y tu trabajo es saber de qué.",
+     "cue": "depende"
+    }
+   ]
+  },
+  {
+   "id": "sesgo",
+   "frases": [
+    {
+     "dice": "¿Y por qué importa? Porque la diferencia que observas entre tratados y no tratados es la suma de dos cosas: el efecto en los tratados, más el sesgo de selección.",
+     "muestra": "¿Por qué importa? Porque la diferencia observada entre tratados y no tratados es la suma de dos cosas: el efecto en los tratados más el sesgo de selección.",
+     "cue": "formula"
+    },
+    {
+     "dice": "El sesgo de selección es cuánto se diferenciaban los grupos aunque nadie hubiera recibido nada.",
+     "muestra": "El sesgo de selección es cuánto se diferenciaban los grupos aunque nadie hubiera recibido nada.",
+     "cue": "sel"
+    },
+    {
+     "dice": "Por ejemplo: lanzas un agente de inteligencia artificial en las regiones con más demanda. Ves doce ventas más. Pero siete ya venían por la demanda. El efecto real es cinco.",
+     "muestra": "Ejemplo: lanzas un agente de IA en las regiones con más demanda. Ves 12 ventas más. Pero 7 ya venían por la demanda. El efecto real es 5.",
+     "cue": "ejemplo"
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "frases": [
+    {
+     "dice": "Y cada diseño cuasi experimental borra ese sesgo con un supuesto distinto, según de qué depende la asignación.",
+     "muestra": "Cada diseño cuasi-experimental borra ese sesgo con un supuesto distinto, según de qué depende la asignación.",
+     "cue": "mapa"
+    },
+    {
+     "dice": "Si depende de la fecha: series de tiempo interrumpidas. De un grupo y una fecha: diferencias en diferencias. De un umbral: regresión discontinua. De un empujón externo: variable instrumental. Y si hay una sola unidad tratada: control sintético.",
+     "muestra": "Si depende de la fecha: series de tiempo interrumpidas. De un grupo y una fecha: diferencias en diferencias. De un umbral: regresión discontinua. De un empujón externo: variable instrumental. Con una sola unidad tratada: control sintético.",
+     "cue": "disenos"
+    }
+   ]
+  },
+  {
+   "id": "asignacion",
+   "frases": [
+    {
+     "dice": "Y en la nube, el mecanismo de asignación es literalmente una función en tu código.",
+     "muestra": "En la nube, el mecanismo de asignación es literalmente una función en tu código.",
+     "cue": "funcion"
+    },
+    {
+     "dice": "Si asignas con el jash del usuario, módulo cien, menor que diez, es un experimento. Si asignas por región, por un umbral de confianza, o desde una fecha, es un cuasi experimento.",
+     "muestra": "Si asignas con hash(usuario) mod 100 < 10, es un experimento. Si asignas por región, por un umbral de confianza o desde una fecha, es un cuasi-experimento.",
+     "cue": "hash"
+    },
+    {
+     "dice": "Y si guardas esa regla en el log, junto con el puntaje y la fecha, guardas la mitad de tu diseño.",
+     "muestra": "Si guardas esa regla en el log, junto con el puntaje y la fecha, guardas la mitad de tu diseño.",
+     "cue": "log"
+    }
+   ]
+  },
+  {
+   "id": "bayes",
+   "frases": [
+    {
+     "dice": "Y la mirada bayesiana lo resume. Donald Rubin mostró en mil novecientos setenta y ocho que, si la asignación no depende de los resultados que no ves, puedes ignorarla al calcular el efecto.",
+     "muestra": "La mirada bayesiana lo resume. Donald Rubin mostró en 1978 que, si la asignación no depende de los resultados que no ves, puedes ignorarla al calcular el efecto.",
+     "cue": "rubin"
+    },
+    {
+     "dice": "Y el sorteo te lo garantiza. En un cuasi experimento, tienes que argumentarlo, o modelar la regla de asignación.",
+     "muestra": "El sorteo te lo garantiza. En un cuasi-experimento, tienes que argumentarlo o modelar la regla de asignación.",
+     "cue": "garantiza"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: cuasi no significa casi. Es un experimento donde el sorteo se reemplaza por un supuesto que debes defender. En el próximo capítulo: las amenazas a la validez. Compártelo y sígueme.",
+     "muestra": "Cuasi no significa «casi». Es un experimento donde el sorteo se reemplaza por un supuesto que debes defender. Próximo capítulo: las amenazas a la validez. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

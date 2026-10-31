@@ -35,6 +35,7 @@ import { Exp15Sensibilidad, EXP15SENSIBILIDAD_FRAMES } from "./capsulas/exp-15-s
 import { Exp16DML, EXP16DML_FRAMES } from "./capsulas/exp-16-dml/Exp16DML";
 import { Exp17Mediacion, EXP17MEDIACION_FRAMES } from "./capsulas/exp-17-mediacion/Exp17Mediacion";
 import { Cuasi01Piramide, CUASI01PIRAMIDE_FRAMES } from "./capsulas/cuasi-01-piramide/Cuasi01Piramide";
+import { Cuasi02Definicion, CUASI02DEFINICION_FRAMES } from "./capsulas/cuasi-02-definicion/Cuasi02Definicion";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -446,6 +447,19 @@ export const RemotionRoot: React.FC = () => {
         id="Cuasi01-Piramide"
         component={Cuasi01Piramide}
         durationInFrames={CUASI01PIRAMIDE_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cuasi-experimentos",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cuasi02-Definicion"
+        component={Cuasi02Definicion}
+        durationInFrames={CUASI02DEFINICION_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

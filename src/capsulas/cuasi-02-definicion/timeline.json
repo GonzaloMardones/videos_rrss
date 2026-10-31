@@ -1,0 +1,178 @@
+{
+ "duracion": 134.889,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 12.937
+  },
+  {
+   "id": "titulo",
+   "inicio": 12.937,
+   "fin": 17.418
+  },
+  {
+   "id": "definicion",
+   "inicio": 17.418,
+   "fin": 30.851
+  },
+  {
+   "id": "mecanismo",
+   "inicio": 30.851,
+   "fin": 48.231
+  },
+  {
+   "id": "sesgo",
+   "inicio": 48.231,
+   "fin": 70.659
+  },
+  {
+   "id": "mapa",
+   "inicio": 70.659,
+   "fin": 89.554
+  },
+  {
+   "id": "asignacion",
+   "inicio": 89.554,
+   "fin": 108.419
+  },
+  {
+   "id": "bayes",
+   "inicio": 108.419,
+   "fin": 124.455
+  },
+  {
+   "id": "cierre",
+   "inicio": 124.455,
+   "fin": 134.889
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 9.103,
+   "texto": "Un banco aprueba créditos solo con puntaje ≥ 650. Una ley rige desde el 1 de marzo. Una app lanza una función en Chile antes que en Perú.",
+   "cue": "casos"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 9.223,
+   "fin": 12.637,
+   "texto": "Ninguno se sorteó. Pero en los tres puedes medir un efecto causal.",
+   "cue": "sorteo"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 12.937,
+   "fin": 17.118,
+   "texto": "Cuasi-experimentos, capítulo 2: qué es un cuasi-experimento.",
+   "cue": null
+  },
+  {
+   "escena": "definicion",
+   "inicio": 17.418,
+   "fin": 24.223,
+   "texto": "Un cuasi-experimento tiene lo mismo que un experimento: un tratamiento y un grupo de comparación. Le falta una sola cosa: el sorteo.",
+   "cue": "falta"
+  },
+  {
+   "escena": "definicion",
+   "inicio": 24.343,
+   "fin": 30.551,
+   "texto": "Quién recibe el tratamiento lo decide una regla, una fecha o las propias personas. Así lo definen Shadish, Cook y Campbell.",
+   "cue": "decide"
+  },
+  {
+   "escena": "mecanismo",
+   "inicio": 30.851,
+   "fin": 38.83,
+   "texto": "La pieza clave es el mecanismo de asignación: la probabilidad de recibir el tratamiento, según tus características y tus resultados posibles.",
+   "cue": "mecanismo"
+  },
+  {
+   "escena": "mecanismo",
+   "inicio": 38.95,
+   "fin": 47.931,
+   "texto": "En un experimento, esa probabilidad la fijas tú (por ejemplo 50%) y no depende de nada. En un cuasi-experimento sí depende de algo. Y tu trabajo es saber de qué.",
+   "cue": "depende"
+  },
+  {
+   "escena": "sesgo",
+   "inicio": 48.231,
+   "fin": 56.274,
+   "texto": "¿Por qué importa? Porque la diferencia observada entre tratados y no tratados es la suma de dos cosas: el efecto en los tratados más el sesgo de selección.",
+   "cue": "formula"
+  },
+  {
+   "escena": "sesgo",
+   "inicio": 56.394,
+   "fin": 61.386,
+   "texto": "El sesgo de selección es cuánto se diferenciaban los grupos aunque nadie hubiera recibido nada.",
+   "cue": "sel"
+  },
+  {
+   "escena": "sesgo",
+   "inicio": 61.506,
+   "fin": 70.359,
+   "texto": "Ejemplo: lanzas un agente de IA en las regiones con más demanda. Ves 12 ventas más. Pero 7 ya venían por la demanda. El efecto real es 5.",
+   "cue": "ejemplo"
+  },
+  {
+   "escena": "mapa",
+   "inicio": 70.659,
+   "fin": 76.505,
+   "texto": "Cada diseño cuasi-experimental borra ese sesgo con un supuesto distinto, según de qué depende la asignación.",
+   "cue": "mapa"
+  },
+  {
+   "escena": "mapa",
+   "inicio": 76.625,
+   "fin": 89.254,
+   "texto": "Si depende de la fecha: series de tiempo interrumpidas. De un grupo y una fecha: diferencias en diferencias. De un umbral: regresión discontinua. De un empujón externo: variable instrumental. Con una sola unidad tratada: control sintético.",
+   "cue": "disenos"
+  },
+  {
+   "escena": "asignacion",
+   "inicio": 89.554,
+   "fin": 93.735,
+   "texto": "En la nube, el mecanismo de asignación es literalmente una función en tu código.",
+   "cue": "funcion"
+  },
+  {
+   "escena": "asignacion",
+   "inicio": 93.855,
+   "fin": 103.007,
+   "texto": "Si asignas con hash(usuario) mod 100 < 10, es un experimento. Si asignas por región, por un umbral de confianza o desde una fecha, es un cuasi-experimento.",
+   "cue": "hash"
+  },
+  {
+   "escena": "asignacion",
+   "inicio": 103.127,
+   "fin": 108.119,
+   "texto": "Si guardas esa regla en el log, junto con el puntaje y la fecha, guardas la mitad de tu diseño.",
+   "cue": "log"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 108.419,
+   "fin": 118.019,
+   "texto": "La mirada bayesiana lo resume. Donald Rubin mostró en 1978 que, si la asignación no depende de los resultados que no ves, puedes ignorarla al calcular el efecto.",
+   "cue": "rubin"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 118.139,
+   "fin": 124.155,
+   "texto": "El sorteo te lo garantiza. En un cuasi-experimento, tienes que argumentarlo o modelar la regla de asignación.",
+   "cue": "garantiza"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 124.455,
+   "fin": 134.589,
+   "texto": "Cuasi no significa «casi». Es un experimento donde el sorteo se reemplaza por un supuesto que debes defender. Próximo capítulo: las amenazas a la validez. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}
