@@ -1,0 +1,140 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y una planta concentradora instala un control experto en su molino. Al mes siguiente, procesa ocho por ciento más toneladas por hora. ¿Fue el control?",
+     "muestra": "Una planta concentradora instala un control experto en su molino. Al mes siguiente procesa 8% más toneladas por hora. ¿Fue el control?",
+     "cue": "molino"
+    },
+    {
+     "dice": "Ese mismo mes, la mina empezó a enviar mineral más blando.",
+     "muestra": "Ese mismo mes, la mina empezó a enviar mineral más blando.",
+     "cue": "blando",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo tres: las amenazas a la validez, en una planta minera.",
+     "muestra": "Cuasi-experimentos, capítulo 3: las amenazas a la validez, en una planta minera."
+    }
+   ]
+  },
+  {
+   "id": "amenazas",
+   "frases": [
+    {
+     "dice": "Y en mil novecientos sesenta y tres, Cámpbel y Stánli listaron los enemigos de cualquier estudio sin sorteo. Veamos seis, en una concentradora.",
+     "muestra": "En 1963, Campbell y Stanley listaron los enemigos de cualquier estudio sin sorteo. Veamos seis, en una concentradora.",
+     "cue": "lista"
+    },
+    {
+     "dice": "Uno, historia: algo más cambió en la misma fecha. La dureza del mineral, la mezcla de la mina, o el agua disponible.",
+     "muestra": "1. Historia: algo más cambió en la misma fecha. La dureza del mineral, la mezcla de la mina o el agua disponible.",
+     "cue": "historia"
+    },
+    {
+     "dice": "Y dos, maduración. El sistema cambia solo con el tiempo. Los revestimientos del molino se gastan, y los operadores aprenden.",
+     "muestra": "2. Maduración: el sistema cambia solo con el tiempo. Los revestimientos del molino se gastan y los operadores aprenden.",
+     "cue": "maduracion"
+    },
+    {
+     "dice": "Y tres, selección: pruebas el reactivo nuevo en la línea que recibe el mejor mineral.",
+     "muestra": "3. Selección: pruebas el reactivo nuevo en la línea que recibe el mejor mineral.",
+     "cue": "seleccion"
+    },
+    {
+     "dice": "Cuatro, regresión a la media: intervienes después de la peor semana de recuperación, y la semana siguiente mejora sola.",
+     "muestra": "4. Regresión a la media: intervienes después de la peor semana de recuperación, y la semana siguiente mejora sola.",
+     "cue": "regresion"
+    },
+    {
+     "dice": "Cinco, instrumentación: se recalibra el analizador en línea, o se reentrena el modelo que estima la ley. Cambió la regla con que mides.",
+     "muestra": "5. Instrumentación: se recalibra el analizador en línea, o se reentrena el modelo que estima la ley. Cambió la regla con que mides.",
+     "cue": "instrumento"
+    },
+    {
+     "dice": "Y seis, desgaste de la muestra: descartas los días con detenciones, pero solo durante la prueba.",
+     "muestra": "6. Desgaste de la muestra: descartas los días con detenciones, pero solo durante la prueba.",
+     "cue": "desgaste"
+    }
+   ]
+  },
+  {
+   "id": "autocorr",
+   "frases": [
+    {
+     "dice": "Y hay una séptima, más silenciosa: los datos de planta están autocorrelacionados. Si hoy la recuperación fue alta, mañana probablemente también.",
+     "muestra": "Hay una séptima, más silenciosa: los datos de planta están autocorrelacionados. Si hoy la recuperación fue alta, mañana probablemente también.",
+     "cue": "silenciosa"
+    },
+    {
+     "dice": "Entonces, sesenta días no son sesenta datos. Con autocorrelación rho, el tamaño efectivo es ene, por uno menos rho, sobre uno más rho. Con rho cero coma siete, sesenta días valen once.",
+     "muestra": "Sesenta días no son sesenta datos. Con autocorrelación ρ, el tamaño efectivo es n·(1 − ρ)/(1 + ρ). Con ρ = 0,7, 60 días valen 11.",
+     "cue": "neff"
+    },
+    {
+     "dice": "Tim Nápier Mun, del centro Julius Kruttschnitt, propuso una prueba te corregida justamente para esto.",
+     "muestra": "Tim Napier-Munn (JKMRC) propuso una prueba t corregida justamente para esto.",
+     "cue": "napier"
+    }
+   ]
+  },
+  {
+   "id": "onoff",
+   "frases": [
+    {
+     "dice": "¿Y la solución? Un ensayo de encendido y apagado. Alternas el control experto, o el reactivo, por días o turnos, en un orden sorteado.",
+     "muestra": "¿La solución? Un ensayo de encendido y apagado: alternas el control experto o el reactivo por días o turnos, en un orden sorteado.",
+     "cue": "alterna"
+    },
+    {
+     "dice": "Y así, la historia y la maduración afectan por igual a los dos brazos, y comparas pares de días vecinos.",
+     "muestra": "Así, la historia y la maduración afectan por igual a los dos brazos, y comparas pares de días vecinos.",
+     "cue": "pares"
+    },
+    {
+     "dice": "Y en la mina de níquel Ráglan, en Canadá, una prueba de colector se diseñó así, para bloquear la autocorrelación.",
+     "muestra": "En la mina de níquel Raglan, en Canadá, una prueba de colector se diseñó así, para bloquear la autocorrelación.",
+     "cue": "raglan"
+    }
+   ]
+  },
+  {
+   "id": "agentes",
+   "frases": [
+    {
+     "dice": "Y aquí entra la inteligencia artificial. Un agente de control puede alternar los modos según un calendario sorteado, y registrar cada turno.",
+     "muestra": "Aquí entra la IA: un agente de control puede alternar los modos según un calendario sorteado y registrar cada turno.",
+     "cue": "agente"
+    },
+    {
+     "dice": "Y si otro agente, el de planificación de la mina, le avisa por protocolo a dos a a cuando cambia la mezcla de mineral, la amenaza de historia queda registrada, no escondida.",
+     "muestra": "Y si el agente de planificación de la mina le avisa por protocolo A2A cuando cambia la mezcla de mineral, la amenaza de historia queda registrada, no escondida.",
+     "cue": "a2a"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: en una planta, el enemigo no es el ruido. Es todo lo que cambia al mismo tiempo que tu prueba. En el próximo capítulo: regresión a la media. Compártelo y sígueme.",
+     "muestra": "En una planta, el enemigo no es el ruido: es todo lo que cambia al mismo tiempo que tu prueba. Próximo capítulo: regresión a la media. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

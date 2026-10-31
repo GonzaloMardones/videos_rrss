@@ -1,0 +1,175 @@
+{
+ "duracion": 127.822,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.571
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.571,
+   "fin": 17.141
+  },
+  {
+   "id": "amenazas",
+   "inicio": 17.141,
+   "fin": 59.931
+  },
+  {
+   "id": "autocorr",
+   "inicio": 59.931,
+   "fin": 84.023
+  },
+  {
+   "id": "onoff",
+   "inicio": 84.023,
+   "fin": 102.419
+  },
+  {
+   "id": "agentes",
+   "inicio": 102.419,
+   "fin": 118.647
+  },
+  {
+   "id": "cierre",
+   "inicio": 118.647,
+   "fin": 127.822
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.015,
+   "texto": "Una planta concentradora instala un control experto en su molino. Al mes siguiente procesa 8% más toneladas por hora. ¿Fue el control?",
+   "cue": "molino"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 8.135,
+   "fin": 11.271,
+   "texto": "Ese mismo mes, la mina empezó a enviar mineral más blando.",
+   "cue": "blando"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.571,
+   "fin": 16.841,
+   "texto": "Cuasi-experimentos, capítulo 3: las amenazas a la validez, en una planta minera.",
+   "cue": null
+  },
+  {
+   "escena": "amenazas",
+   "inicio": 17.141,
+   "fin": 24.415,
+   "texto": "En 1963, Campbell y Stanley listaron los enemigos de cualquier estudio sin sorteo. Veamos seis, en una concentradora.",
+   "cue": "lista"
+  },
+  {
+   "escena": "amenazas",
+   "inicio": 24.535,
+   "fin": 30.338,
+   "texto": "1. Historia: algo más cambió en la misma fecha. La dureza del mineral, la mezcla de la mina o el agua disponible.",
+   "cue": "historia"
+  },
+  {
+   "escena": "amenazas",
+   "inicio": 30.458,
+   "fin": 37.029,
+   "texto": "2. Maduración: el sistema cambia solo con el tiempo. Los revestimientos del molino se gastan y los operadores aprenden.",
+   "cue": "maduracion"
+  },
+  {
+   "escena": "amenazas",
+   "inicio": 37.149,
+   "fin": 41.501,
+   "texto": "3. Selección: pruebas el reactivo nuevo en la línea que recibe el mejor mineral.",
+   "cue": "seleccion"
+  },
+  {
+   "escena": "amenazas",
+   "inicio": 41.621,
+   "fin": 47.722,
+   "texto": "4. Regresión a la media: intervienes después de la peor semana de recuperación, y la semana siguiente mejora sola.",
+   "cue": "regresion"
+  },
+  {
+   "escena": "amenazas",
+   "inicio": 47.842,
+   "fin": 54.626,
+   "texto": "5. Instrumentación: se recalibra el analizador en línea, o se reentrena el modelo que estima la ley. Cambió la regla con que mides.",
+   "cue": "instrumento"
+  },
+  {
+   "escena": "amenazas",
+   "inicio": 54.746,
+   "fin": 59.631,
+   "texto": "6. Desgaste de la muestra: descartas los días con detenciones, pero solo durante la prueba.",
+   "cue": "desgaste"
+  },
+  {
+   "escena": "autocorr",
+   "inicio": 59.931,
+   "fin": 67.526,
+   "texto": "Hay una séptima, más silenciosa: los datos de planta están autocorrelacionados. Si hoy la recuperación fue alta, mañana probablemente también.",
+   "cue": "silenciosa"
+  },
+  {
+   "escena": "autocorr",
+   "inicio": 67.646,
+   "fin": 78.419,
+   "texto": "Sesenta días no son sesenta datos. Con autocorrelación ρ, el tamaño efectivo es n·(1 − ρ)/(1 + ρ). Con ρ = 0,7, 60 días valen 11.",
+   "cue": "neff"
+  },
+  {
+   "escena": "autocorr",
+   "inicio": 78.539,
+   "fin": 83.723,
+   "texto": "Tim Napier-Munn (JKMRC) propuso una prueba t corregida justamente para esto.",
+   "cue": "napier"
+  },
+  {
+   "escena": "onoff",
+   "inicio": 84.023,
+   "fin": 91.085,
+   "texto": "¿La solución? Un ensayo de encendido y apagado: alternas el control experto o el reactivo por días o turnos, en un orden sorteado.",
+   "cue": "alterna"
+  },
+  {
+   "escena": "onoff",
+   "inicio": 91.205,
+   "fin": 96.581,
+   "texto": "Así, la historia y la maduración afectan por igual a los dos brazos, y comparas pares de días vecinos.",
+   "cue": "pares"
+  },
+  {
+   "escena": "onoff",
+   "inicio": 96.701,
+   "fin": 102.119,
+   "texto": "En la mina de níquel Raglan, en Canadá, una prueba de colector se diseñó así, para bloquear la autocorrelación.",
+   "cue": "raglan"
+  },
+  {
+   "escena": "agentes",
+   "inicio": 102.419,
+   "fin": 109.801,
+   "texto": "Aquí entra la IA: un agente de control puede alternar los modos según un calendario sorteado y registrar cada turno.",
+   "cue": "agente"
+  },
+  {
+   "escena": "agentes",
+   "inicio": 109.921,
+   "fin": 118.347,
+   "texto": "Y si el agente de planificación de la mina le avisa por protocolo A2A cuando cambia la mezcla de mineral, la amenaza de historia queda registrada, no escondida.",
+   "cue": "a2a"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 118.647,
+   "fin": 127.522,
+   "texto": "En una planta, el enemigo no es el ruido: es todo lo que cambia al mismo tiempo que tu prueba. Próximo capítulo: regresión a la media. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}
