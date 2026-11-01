@@ -22,4 +22,4 @@ Nota de voz: Sumit Agarwal como `Súmit Agárwal`; A2A como `a dos a`.
 - Agarwal S, Chomsisengphet S, Mahoney N, Stroebel J (2018). "Do banks pass through credit expansions to consumers who want to borrow?". *Quarterly Journal of Economics* 133(1):129–190. NBER WP 21567.
 - Especificación Agent2Agent (A2A), a2a-protocol.org: Agent Card y ciclo de vida de tareas (submitted, working, input-required, completed, failed, canceled, rejected).
 - Gelman A, Loken E (2014). "The statistical crisis in science". *American Scientist* 102(6):460–465.
-- Chen T et al. (2025). Causal AI Scientist (cápsula técnica 03 de esta serie de videos), como antecedente de agentes para inferencia causal.
+- Verma V, Acharya S, Bhardwaj D, Simko S, Yang Y, Haghighat A et al. Causal AI Scientist (repositorio github.com/causalNLP/causal-agent; ver la cápsula técnica 03), como antecedente de agentes para inferencia causal.
