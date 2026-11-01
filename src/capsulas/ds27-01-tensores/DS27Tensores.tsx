@@ -3,7 +3,7 @@ import { Capitulo, duracionCapitulo } from "../../components/Capitulo";
 import type { Timeline } from "../../components/narracion";
 import { FondoNube, SubtitulosNube } from "../../estilos/nube/kit";
 import { n } from "../../estilos/nube/tokens";
-import { Autograd, Cierre, Entrevista, Fusion, Gancho, Memoria, Nube, Precision, Roofline, Strides, Titulo } from "./escenas";
+import { Autograd, Bases, Cierre, Fusion, Gancho, Mantisa, Memoria, Nube, Precision, Roofline, Strides, Titulo } from "./escenas";
 import timelineJson from "./timeline.json";
 
 const timeline = timelineJson as Timeline;
@@ -12,7 +12,7 @@ export type DS27TensoresProps = { serie: string; autor: string; volumenMusica: n
 
 export const DS27TENSORES_FRAMES = duracionCapitulo(timeline);
 
-const POPS = ["pesos", "etapa", "plano", "bytes", "direccion", "grafo", "inverso", "custom", "piramide", "h100", "intensidad", "casos", "seis", "dos", "bits", "fp16", "fp8", "tpu", "preguntas", "cta"];
+const POPS = ["pesos", "etapa", "plano", "bytes", "direccion", "grafo", "inverso", "custom", "piramide", "h100", "intensidad", "casos", "seis", "dos", "flotante", "partes", "pi", "bits", "fp16", "fp8", "tpu", "bases", "cta"];
 
 export const DS27Tensores: React.FC<DS27TensoresProps> = ({ serie, autor, volumenMusica }) => (
   <Capitulo
@@ -31,9 +31,10 @@ export const DS27Tensores: React.FC<DS27TensoresProps> = ({ serie, autor, volume
       memoria: <Memoria />,
       roofline: <Roofline />,
       fusion: <Fusion />,
+      mantisa: <Mantisa />,
       precision: <Precision />,
       nube: <Nube />,
-      entrevista: <Entrevista />,
+      bases: <Bases />,
       cierre: <Cierre autor={autor} />,
     }}
   />

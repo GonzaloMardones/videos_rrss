@@ -1,8 +1,10 @@
 # Data Scientist 2027 · Etapa 1 · Tensores y PyTorch por dentro
 
-Serie **Data Scientist 2027** (12 etapas). Estilo **nube** (`src/estilos/nube`): fondo blanco, Google Sans y Google Sans Code (OFL-1.1), acentos azul, rojo, amarillo y verde, tarjetas con borde fino. Sin logotipos ni marcas.
-Composición: `DS27-01-Tensores` · 1080×1920 · 30 fps · ~2:56.
-Nota de voz: PyTorch como `páitorch`; strides como `stráids`; backward/forward como `bákuard`/`fóruard`; FP32, BF16, FP8 como `efe pe…`, `be efe…`; H100 como `hache cien`; TPU como `te pe u`.
+Serie **Data Scientist 2027** (12 etapas). Estilo **nube** (`src/estilos/nube`): fondo blanco, Google Sans y Google Sans Code (OFL-1.1), barra de tres colores, tarjetas con borde fino. Sin logotipos ni marcas.
+
+**Formato bilingüe:** todo el texto en pantalla está en inglés; la voz explica en español; los subtítulos muestran el español (con la palabra activa) y debajo la traducción al inglés (campo `en` de cada frase en `guion.json`).
+Composición: `DS27-01-Tensores` · 1080×1920 · 30 fps · ~2:57.
+Nota de voz: los términos que aparecen en inglés se pronuncian en inglés con grafía fonética en `dice`: byte → `bait`, FP32 → `ef pi térti tu`, BF16 → `bi ef sixtín`, FP8 → `ef pi eit`, E5M2 → `i faiv em tu`, E4M3 → `i for em tri`, H100 → `eich uan jándred`, GPU → `yi pi iú`, TPU → `ti pi iú`, A3 → `ei tri`, HBM → `eich bi em`, L2 cache → `el tu cash`, kernel → `kérnel`, autograd → `ótograd`, backward/forward → `bákuerd`/`fóruerd`, torch.compile → `torch dot compáil`, FlashAttention → `flash aténshon`, roofline → `rúflain`, floating point → `flóuting point`, data scientist → `deita sáientist`, Google Cloud → `gúgol claud`.
 
 ## Guion (resumen)
 
@@ -12,9 +14,10 @@ Nota de voz: PyTorch como `páitorch`; strides como `stráids`; backward/forward
 4. **memoria.** Pirámide: registros, memoria compartida, caché L2 (50 MB) y HBM (80 GB, 3,35 TB/s) en una H100 SXM; 989 TFLOPS BF16 densos.
 5. **roofline.** Rendimiento = min(pico, ancho de banda × intensidad). Punto de quiebre 989/3,35 ≈ 295 FLOP/byte. Suma BF16: 1/6 FLOP/byte (limitada por memoria); matmul 4096×4096 en BF16: 2n³/(3n²·2 bytes) ≈ 1.365 FLOP/byte (limitada por cómputo).
 6. **fusion.** Tres operaciones elemento a elemento: 6 viajes a HBM; fusionadas: 2 (3× menos tráfico). torch.compile; FlashAttention.
-7. **precision.** FP32 (1·8·23), BF16 (1·8·7, mismo rango que FP32), FP16 (1·5·10, máx 65.504, requiere escalar la pérdida), FP8 E4M3 (máx 448, pesos y activaciones) y E5M2 (máx 57.344, gradientes).
-8. **nube.** Cloud TPU: matmul en BF16 con acumulación FP32. VM A3 con H100: FP8.
-9. **entrevista.** Tres preguntas típicas.
+7. **mantisa.** x = (−1)ˢ × mantisa × 2^exponente: el exponente da la escala (rango) y la mantisa los dígitos significativos (precisión). π en FP32 = 3,141593; en BF16 (7 bits de mantisa) = 3,140625.
+8. **precision.** FP = floating point; BF = brain floating point. FP32 (1·8·23), BF16 (1·8·7, mismo rango que FP32), FP16 (1·5·10, máx 65.504, requiere escalar la pérdida), FP8 E4M3 (máx 448, pesos y activaciones) y E5M2 (máx 57.344, gradientes).
+9. **nube.** Cloud TPU: matmul en BF16 con acumulación FP32. VM A3 con H100: FP8.
+10. **bases.** Transponer es una vista y no una copia (solo cambian los strides, O(1)); intensidad baja = limitado por memoria → fusionar; BF16 conserva el rango de FP32 → casi nunca escala la pérdida.
 
 ## Cuentas (verificadas en Python)
 

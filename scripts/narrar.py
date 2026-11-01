@@ -204,6 +204,7 @@ def main() -> None:
                     "fin": round(t + duracion, 3),
                     "texto": frase["muestra"],
                     "cue": frase.get("cue"),
+                    **({"en": frase["en"]} if "en" in frase else {}),
                 }
             )
             piezas.append(muestras)

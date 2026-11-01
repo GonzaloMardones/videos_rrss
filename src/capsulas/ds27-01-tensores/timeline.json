@@ -1,209 +1,259 @@
 {
- "duracion": 173.966,
+ "duracion": 174.965,
  "escenas": [
   {
    "id": "gancho",
    "inicio": 0.25,
-   "fin": 13.555
+   "fin": 10.038
   },
   {
    "id": "titulo",
-   "inicio": 13.555,
-   "fin": 18.975
+   "inicio": 10.038,
+   "fin": 15.267
   },
   {
    "id": "strides",
-   "inicio": 18.975,
-   "fin": 40.934
+   "inicio": 15.267,
+   "fin": 34.542
   },
   {
    "id": "autograd",
-   "inicio": 40.934,
-   "fin": 61.25
+   "inicio": 34.542,
+   "fin": 52.387
   },
   {
    "id": "memoria",
-   "inicio": 61.25,
-   "fin": 78.929
+   "inicio": 52.387,
+   "fin": 68.575
   },
   {
    "id": "roofline",
-   "inicio": 78.929,
-   "fin": 99.807
+   "inicio": 68.575,
+   "fin": 87.217
   },
   {
    "id": "fusion",
-   "inicio": 99.807,
-   "fin": 117.699
+   "inicio": 87.217,
+   "fin": 100.333
+  },
+  {
+   "id": "mantisa",
+   "inicio": 100.333,
+   "fin": 121.165
   },
   {
    "id": "precision",
-   "inicio": 117.699,
-   "fin": 146.954
+   "inicio": 121.165,
+   "fin": 151.725
   },
   {
    "id": "nube",
-   "inicio": 146.954,
-   "fin": 156.47
+   "inicio": 151.725,
+   "fin": 159.919
   },
   {
-   "id": "entrevista",
-   "inicio": 156.47,
-   "fin": 166.157
+   "id": "bases",
+   "inicio": 159.919,
+   "fin": 170.525
   },
   {
    "id": "cierre",
-   "inicio": 166.157,
-   "fin": 173.966
+   "inicio": 170.525,
+   "fin": 174.965
   }
  ],
  "frases": [
   {
    "escena": "gancho",
    "inicio": 0.25,
-   "fin": 7.866,
-   "texto": "Un modelo de 7.000 millones de parámetros pesa 28 GB en FP32. En BF16, 14. En FP8, 7.",
-   "cue": "pesos"
+   "fin": 7.077,
+   "texto": "Un modelo de 7.000 millones de parámetros pesa 28 GB en FP32, 14 en BF16 y 7 en FP8.",
+   "cue": "pesos",
+   "en": "A 7-billion-parameter model weighs 28 GB in FP32, 14 in BF16, and 7 in FP8."
   },
   {
    "escena": "gancho",
-   "inicio": 7.986,
-   "fin": 13.255,
-   "texto": "Entender cómo vive un número en la memoria es la primera etapa del data scientist de 2027.",
-   "cue": "etapa"
+   "inicio": 7.177,
+   "fin": 9.758,
+   "texto": "La diferencia está en cómo se guarda cada número.",
+   "cue": "etapa",
+   "en": "The difference is how each number is stored."
   },
   {
    "escena": "titulo",
-   "inicio": 13.555,
-   "fin": 18.675,
+   "inicio": 10.038,
+   "fin": 14.987,
    "texto": "Data Scientist 2027, etapa 1: tensores y PyTorch por dentro.",
-   "cue": null
+   "cue": null,
+   "en": "Data Scientist 2027, stage 1: tensors and PyTorch internals."
   },
   {
    "escena": "strides",
-   "inicio": 18.975,
-   "fin": 24.095,
-   "texto": "Un tensor no es una tabla. Es un bloque plano de memoria, más una receta para recorrerlo: los strides.",
-   "cue": "plano"
+   "inicio": 15.267,
+   "fin": 20.281,
+   "texto": "Un tensor no es una tabla: es un bloque plano de memoria, más una receta para recorrerlo, los strides.",
+   "cue": "plano",
+   "en": "A tensor isn't a table: it's a flat block of memory plus a recipe to walk it, the strides."
   },
   {
    "escena": "strides",
-   "inicio": 24.215,
-   "fin": 30.85,
-   "texto": "En una matriz de 2×3 en FP32, para bajar una fila saltas 12 bytes, y para avanzar una columna, 4.",
-   "cue": "bytes"
+   "inicio": 20.381,
+   "fin": 25.927,
+   "texto": "En una matriz de 2×3 en FP32, bajar una fila salta 12 bytes, y avanzar una columna, 4.",
+   "cue": "bytes",
+   "en": "In a 2×3 FP32 matrix, moving down a row skips 12 bytes; moving across a column, 4."
   },
   {
    "escena": "strides",
-   "inicio": 30.97,
-   "fin": 40.634,
-   "texto": "La dirección de cada elemento es el inicio más la suma de cada índice por su stride. Transponer no copia nada: solo intercambia los strides. Por eso el resultado deja de ser contiguo.",
-   "cue": "direccion"
+   "inicio": 26.027,
+   "fin": 34.262,
+   "texto": "La dirección de cada elemento es la base más cada índice por su stride. Transponer no copia nada: solo intercambia los strides, y el resultado deja de ser contiguo.",
+   "cue": "direccion",
+   "en": "Each element's address is the base plus each index times its stride. Transposing copies nothing: it just swaps the strides, so the result is no longer contiguous."
   },
   {
    "escena": "autograd",
-   "inicio": 40.934,
-   "fin": 48.102,
-   "texto": "El autograd: PyTorch anota cada operación en un grafo, y al llamar backward lo recorre al revés, aplicando la regla de la cadena.",
-   "cue": "grafo"
+   "inicio": 34.542,
+   "fin": 40.579,
+   "texto": "Autograd: PyTorch anota cada operación en un grafo, y backward lo recorre al revés con la regla de la cadena.",
+   "cue": "grafo",
+   "en": "Autograd: PyTorch records every operation in a graph, and backward walks it in reverse with the chain rule."
   },
   {
    "escena": "autograd",
-   "inicio": 48.222,
-   "fin": 56.051,
-   "texto": "El modo inverso obtiene millones de derivadas por el costo de una pasada hacia adelante. El modo directo necesitaría una pasada por cada parámetro.",
-   "cue": "inverso"
+   "inicio": 40.679,
+   "fin": 47.911,
+   "texto": "El modo inverso obtiene millones de derivadas por el costo de una pasada hacia adelante. El modo directo necesitaría una pasada por parámetro.",
+   "cue": "inverso",
+   "en": "Reverse mode gets millions of derivatives for the cost of one forward pass. Forward mode would need one pass per parameter."
   },
   {
    "escena": "autograd",
-   "inicio": 56.171,
-   "fin": 60.95,
-   "texto": "Si necesitas un gradiente a medida, defines tu propia función con su forward y su backward.",
-   "cue": "custom"
+   "inicio": 48.011,
+   "fin": 52.107,
+   "texto": "Para un gradiente a medida, defines tu propia función con su forward y su backward.",
+   "cue": "custom",
+   "en": "For a custom gradient, you define your own function with its forward and backward."
   },
   {
    "escena": "memoria",
-   "inicio": 61.25,
-   "fin": 69.058,
-   "texto": "En la GPU, la memoria es una pirámide: registros, memoria compartida, caché L2 y la memoria principal (HBM). Más abajo, más grande y más lenta.",
-   "cue": "piramide"
+   "inicio": 52.387,
+   "fin": 58.979,
+   "texto": "En la GPU, la memoria es una pirámide: registros, memoria compartida, caché L2 y HBM. Más abajo, más grande y más lenta.",
+   "cue": "piramide",
+   "en": "On a GPU, memory is a pyramid: registers, shared memory, L2 cache, and HBM. Lower means bigger and slower."
   },
   {
    "escena": "memoria",
-   "inicio": 69.178,
-   "fin": 78.629,
-   "texto": "Una H100 hace 989 billones de operaciones por segundo en BF16. Pero su memoria entrega 3,35 terabytes por segundo.",
-   "cue": "h100"
+   "inicio": 59.079,
+   "fin": 68.295,
+   "texto": "Una H100 hace 989 billones de operaciones por segundo en BF16, pero su memoria entrega 3,35 terabytes por segundo.",
+   "cue": "h100",
+   "en": "An H100 does 989 trillion operations per second in BF16, but its memory delivers 3.35 terabytes per second."
   },
   {
    "escena": "roofline",
-   "inicio": 78.929,
-   "fin": 88.678,
-   "texto": "Para no esperar datos, necesitas unas 295 operaciones por cada byte que lees. Esa razón se llama intensidad aritmética, y es la base del modelo roofline.",
-   "cue": "intensidad"
+   "inicio": 68.575,
+   "fin": 77.535,
+   "texto": "Para no esperar datos, necesitas unas 295 operaciones por cada byte que lees. Esa razón es la intensidad aritmética, la base del modelo roofline.",
+   "cue": "intensidad",
+   "en": "To avoid waiting on data, you need about 295 operations per byte read. That ratio is arithmetic intensity, the basis of the roofline model."
   },
   {
    "escena": "roofline",
-   "inicio": 88.798,
-   "fin": 99.507,
-   "texto": "Una suma elemento a elemento hace apenas 1/6 de operación por byte: está limitada por la memoria. Una multiplicación de matrices de 4096 hace más de mil: está limitada por el cómputo.",
-   "cue": "casos"
+   "inicio": 77.635,
+   "fin": 86.937,
+   "texto": "Una suma elemento a elemento hace 1/6 de operación por byte: la limita la memoria. Una multiplicación de matrices de 4096 hace más de mil: la limita el cómputo.",
+   "cue": "casos",
+   "en": "An element-wise add does 1/6 of an operation per byte: memory-bound. A 4096 matrix multiply does over a thousand: compute-bound."
   },
   {
    "escena": "fusion",
-   "inicio": 99.807,
-   "fin": 107.786,
-   "texto": "Por eso existe la fusión de operadores. Si encadenas tres operaciones elemento a elemento, cada una lee y escribe en la memoria principal: seis viajes.",
-   "cue": "seis"
+   "inicio": 87.217,
+   "fin": 92.763,
+   "texto": "Por eso se fusionan operadores. Tres operaciones elemento a elemento leen y escriben en memoria: seis viajes.",
+   "cue": "seis",
+   "en": "That's why we fuse operators. Three element-wise ops each read and write memory: six trips."
   },
   {
    "escena": "fusion",
-   "inicio": 107.906,
-   "fin": 117.399,
-   "texto": "Fusionadas en un solo kernel, el dato se lee una vez y se escribe una vez: dos viajes, tres veces menos tráfico. Es lo que hace torch.compile, y la idea detrás de FlashAttention.",
-   "cue": "dos"
+   "inicio": 92.863,
+   "fin": 100.053,
+   "texto": "Fusionadas en un solo kernel son dos viajes: tres veces menos tráfico. Es lo que hace torch.compile, y la idea detrás de FlashAttention.",
+   "cue": "dos",
+   "en": "Fused into one kernel, it's two trips: 3× less traffic. That's what torch.compile does, and the idea behind FlashAttention."
+  },
+  {
+   "escena": "mantisa",
+   "inicio": 100.333,
+   "fin": 106.434,
+   "texto": "¿Qué es la mantisa? Un número de punto flotante se guarda como signo × mantisa × 2 elevado al exponente.",
+   "cue": "flotante",
+   "en": "What is the mantissa? A floating-point number is stored as sign × mantissa × 2 to the exponent."
+  },
+  {
+   "escena": "mantisa",
+   "inicio": 106.534,
+   "fin": 112.635,
+   "texto": "El exponente da la escala: qué tan grande o pequeño puede ser. La mantisa guarda los dígitos significativos: la precisión.",
+   "cue": "partes",
+   "en": "The exponent sets the scale: how big or small it can be. The mantissa holds the significant digits: the precision."
+  },
+  {
+   "escena": "mantisa",
+   "inicio": 112.735,
+   "fin": 120.885,
+   "texto": "Por ejemplo, π en FP32 es 3,141593. Con los 7 bits de mantisa de BF16, queda en 3,1406.",
+   "cue": "pi",
+   "en": "For example, π in FP32 is 3.141593. With BF16's 7 mantissa bits, it becomes 3.1406."
   },
   {
    "escena": "precision",
-   "inicio": 117.699,
-   "fin": 128.921,
-   "texto": "Precisión mixta: FP32 usa 8 bits de exponente y 23 de mantisa. BF16 conserva los 8 de exponente y deja 7 de mantisa: el mismo rango, con menos precisión.",
-   "cue": "bits"
+   "inicio": 121.165,
+   "fin": 133.325,
+   "texto": "FP significa floating point. FP32 usa 8 bits de exponente y 23 de mantisa. BF16 (brain floating point) conserva los 8 de exponente y deja 7 de mantisa: el mismo rango, con menos precisión.",
+   "cue": "bits",
+   "en": "FP means floating point. FP32 uses 8 exponent bits and 23 mantissa bits. BF16 (brain floating point) keeps the 8 exponent bits and leaves 7 for the mantissa: same range, less precision."
   },
   {
    "escena": "precision",
-   "inicio": 129.041,
-   "fin": 135.953,
-   "texto": "FP16 tiene más mantisa, pero su máximo es 65.504, y por eso necesita escalar la pérdida.",
-   "cue": "fp16"
+   "inicio": 133.425,
+   "fin": 140.699,
+   "texto": "FP16 tiene más mantisa pero menos exponente: su máximo es 65.504, y por eso hay que escalar la pérdida.",
+   "cue": "fp16",
+   "en": "FP16 has more mantissa but less exponent: its max is 65,504, so you need loss scaling."
   },
   {
    "escena": "precision",
-   "inicio": 136.073,
-   "fin": 146.654,
-   "texto": "FP8 tiene dos versiones: E4M3, hasta 448, para pesos y activaciones; y E5M2, hasta 57.344, para gradientes.",
-   "cue": "fp8"
+   "inicio": 140.799,
+   "fin": 151.445,
+   "texto": "FP8 es punto flotante en solo 8 bits. El nombre dice el reparto: E5M2 son 5 bits de exponente y 2 de mantisa, para gradientes. E4M3 son 4 y 3, para pesos y activaciones.",
+   "cue": "fp8",
+   "en": "FP8 is floating point in just 8 bits. The name tells the split: E5M2 is 5 exponent bits and 2 mantissa bits, for gradients. E4M3 is 4 and 3, for weights and activations."
   },
   {
    "escena": "nube",
-   "inicio": 146.954,
-   "fin": 156.17,
-   "texto": "En Google Cloud: las TPU multiplican matrices en BF16 y acumulan en FP32. Y las máquinas A3, con H100, permiten entrenar en FP8.",
-   "cue": "tpu"
+   "inicio": 151.725,
+   "fin": 159.639,
+   "texto": "En Google Cloud, las TPU multiplican en BF16 y acumulan en FP32. Y las máquinas A3, con H100, entrenan en FP8.",
+   "cue": "tpu",
+   "en": "On Google Cloud, TPUs multiply in BF16 and accumulate in FP32. And A3 machines with H100s train in FP8."
   },
   {
-   "escena": "entrevista",
-   "inicio": 156.47,
-   "fin": 165.857,
-   "texto": "¿Qué te van a preguntar en una entrevista? Por qué transponer no copia. Cuándo una operación está limitada por memoria. Y por qué BF16 casi nunca necesita escalar la pérdida.",
-   "cue": "preguntas"
+   "escena": "bases",
+   "inicio": 159.919,
+   "fin": 170.245,
+   "texto": "Con esto tienes las bases: transponer no copia, porque solo cambian los strides. Con intensidad baja, manda la memoria: fusiona. Y BF16 no escala la pérdida, porque tiene el rango de FP32.",
+   "cue": "bases",
+   "en": "Now you have the basics: transposing doesn't copy, because only the strides change. Low intensity means memory-bound: fuse. And BF16 skips loss scaling, because it has FP32's range."
   },
   {
    "escena": "cierre",
-   "inicio": 166.157,
-   "fin": 173.666,
-   "texto": "Primero entiende cómo viven los números en la memoria. Próxima etapa: curación de datos y pipelines sintéticos. Compártelo y sígueme.",
-   "cue": "cta"
+   "inicio": 170.525,
+   "fin": 174.685,
+   "texto": "Próxima etapa: curación de datos y pipelines sintéticos. Compártelo y sígueme.",
+   "cue": "cta",
+   "en": "Next stage: data curation and synthetic pipelines. Share and follow."
   }
  ]
 }

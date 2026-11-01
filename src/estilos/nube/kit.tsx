@@ -73,7 +73,7 @@ export const Cinetico: React.FC<{ at: number; texto: string; tam?: number; acent
   );
 };
 
-// Encabezado de escena: rótulo de la serie con una línea de cuatro colores y el titular.
+// Encabezado de escena: rótulo de la serie con una línea de tres colores y el titular.
 export const Cabeza: React.FC<{ at: number; serie: string; titulo: string; tam?: number }> = ({ at, serie, titulo, tam }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -82,7 +82,7 @@ export const Cabeza: React.FC<{ at: number; serie: string; titulo: string; tam?:
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: 14, opacity: k }}>
         <div style={{ display: "flex", gap: 4 }}>
-          {[n.azul, n.rojo, n.amarillo, n.verde].map((c) => (
+          {[n.azul, n.amarillo, n.verde].map((c) => (
             <div key={c} style={{ width: 22 * k, height: 6, borderRadius: 3, background: c }} />
           ))}
         </div>
@@ -236,7 +236,29 @@ export const Frac: React.FC<{ arriba: React.ReactNode; abajo: React.ReactNode }>
   </span>
 );
 
-// Subtítulos: texto oscuro sobre una franja blanca; la palabra que suena, en azul.
+// Tarjeta de fórmula: la fórmula grande en STIX y, debajo, qué significa cada símbolo.
+export const FormulaCard: React.FC<{ at: number; tam?: number; formula: React.ReactNode; leyenda?: [React.ReactNode, string, string][]; columnas?: number; style?: React.CSSProperties }> = ({ at, tam = 60, formula, leyenda = [], columnas = 1, style }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const k = transicion(frame, at, fps, 500, EXPO_OUT);
+  return (
+    <div style={{ background: n.superficie, border: `2px solid ${n.borde}`, borderRadius: 20, padding: "22px 28px", opacity: k, transform: `translateY(${(1 - k) * 14}px)`, ...style }}>
+      <Formula tam={tam}>{formula}</Formula>
+      {leyenda.length ? (
+        <div style={{ display: "grid", gridTemplateColumns: `repeat(${columnas}, 1fr)`, columnGap: 24, rowGap: 8, marginTop: 16 }}>
+          {leyenda.map(([sim, col, txt], i) => (
+            <div key={i} style={{ display: "flex", alignItems: "baseline", gap: 12, opacity: transicion(frame, at + 8 + i * 5, fps, 400, EXPO_OUT) }}>
+              <span style={{ fontFamily: serif, fontStyle: "italic", fontSize: 34, color: col, minWidth: 34 }}>{sim}</span>
+              <span style={{ fontSize: 24, color: n.texto2 }}>{txt}</span>
+            </div>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+// Subtítulos bilingües: español con la palabra que suena en azul y, debajo, la traducción al inglés.
 export const SubtitulosNube: React.FC<{ timeline: Timeline }> = ({ timeline }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -256,7 +278,7 @@ export const SubtitulosNube: React.FC<{ timeline: Timeline }> = ({ timeline }) =
   const entra = interpolate(frame - Math.round(frase.inicio * fps), [0, 10], [0, 1], clamp);
   return (
     <div style={{ position: "absolute", left: 60, right: 60, top: SAFE.captionsTop, opacity: entra, transform: `translateY(${(1 - entra) * 12}px)` }}>
-      <div style={{ fontFamily: fuente, fontWeight: 500, fontSize: 48, lineHeight: 1.25, color: n.texto, background: "rgba(255,255,255,0.92)", borderRadius: 24, padding: "18px 24px", border: `2px solid ${n.borde}` }}>
+      <div style={{ fontFamily: fuente, fontWeight: 500, fontSize: frase.en ? 42 : 48, lineHeight: 1.22, color: n.texto, background: "rgba(255,255,255,0.94)", borderRadius: 24, padding: "18px 24px", border: `2px solid ${n.borde}` }}>
         {palabras.map((w, i) => {
           const activa = t >= inicios[i] && (i === palabras.length - 1 || t < inicios[i + 1]);
           const dicha = t >= inicios[i];
@@ -266,6 +288,12 @@ export const SubtitulosNube: React.FC<{ timeline: Timeline }> = ({ timeline }) =
             </span>
           );
         })}
+        {frase.en ? (
+          <div style={{ marginTop: 12, paddingTop: 12, borderTop: `2px solid ${n.borde}`, fontSize: 32, fontWeight: 400, lineHeight: 1.25, color: n.texto2 }}>
+            <span style={{ fontFamily: codigo, fontSize: 20, fontWeight: 500, color: n.azul, marginRight: 12, verticalAlign: "2px" }}>EN</span>
+            {frase.en}
+          </div>
+        ) : null}
       </div>
     </div>
   );
