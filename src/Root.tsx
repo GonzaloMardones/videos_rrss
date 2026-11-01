@@ -41,6 +41,10 @@ import { Cuasi04Regresion, CUASI04REGRESION_FRAMES } from "./capsulas/cuasi-04-r
 import { Cuasi05Escalonado, CUASI05ESCALONADO_FRAMES } from "./capsulas/cuasi-05-escalonado/Cuasi05Escalonado";
 import { Cuasi06Umbral, CUASI06UMBRAL_FRAMES } from "./capsulas/cuasi-06-umbral/Cuasi06Umbral";
 import { Cuasi07Natural, CUASI07NATURAL_FRAMES } from "./capsulas/cuasi-07-natural/Cuasi07Natural";
+import { Cuasi08Interferencia, CUASI08INTERFERENCIA_FRAMES } from "./capsulas/cuasi-08-interferencia/Cuasi08Interferencia";
+import { Cuasi09Cadena, CUASI09CADENA_FRAMES } from "./capsulas/cuasi-09-cadena/Cuasi09Cadena";
+import { Cuasi10Juez, CUASI10JUEZ_FRAMES } from "./capsulas/cuasi-10-juez/Cuasi10Juez";
+import { Cuasi11Equipo, CUASI11EQUIPO_FRAMES } from "./capsulas/cuasi-11-equipo/Cuasi11Equipo";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -530,6 +534,58 @@ export const RemotionRoot: React.FC = () => {
         id="Cuasi07-Natural"
         component={Cuasi07Natural}
         durationInFrames={CUASI07NATURAL_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cuasi-experimentos",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cuasi08-Interferencia"
+        component={Cuasi08Interferencia}
+        durationInFrames={CUASI08INTERFERENCIA_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cuasi-experimentos",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cuasi09-Cadena"
+        component={Cuasi09Cadena}
+        durationInFrames={CUASI09CADENA_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cuasi-experimentos",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cuasi10-Juez"
+        component={Cuasi10Juez}
+        durationInFrames={CUASI10JUEZ_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cuasi-experimentos",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cuasi11-Equipo"
+        component={Cuasi11Equipo}
+        durationInFrames={CUASI11EQUIPO_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

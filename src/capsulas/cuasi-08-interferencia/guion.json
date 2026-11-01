@@ -1,0 +1,130 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y un banco prueba un nuevo agente de inteligencia artificial que clasifica alertas de fraude. En la prueba a be, los casos del agente nuevo se resuelven cuarenta y uno por ciento más rápido.",
+     "muestra": "Un banco prueba un nuevo agente de IA que clasifica alertas de fraude. En la prueba A/B, los casos del agente nuevo se resuelven 41% más rápido.",
+     "cue": "ab"
+    },
+    {
+     "dice": "Lo lanzan para todos los casos. Y la mejora desaparece.",
+     "muestra": "Lo lanzan para todos los casos. Y la mejora desaparece.",
+     "cue": "desaparece",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo ocho: interferencia entre agentes.",
+     "muestra": "Cuasi-experimentos, capítulo 8: interferencia entre agentes."
+    }
+   ]
+  },
+  {
+   "id": "pipeline",
+   "frases": [
+    {
+     "dice": "Y el sistema tiene dos agentes que se hablan por protocolo a dos a. El primero clasifica cada alerta y marca las urgentes. El segundo resuelve los casos, y atiende primero los urgentes.",
+     "muestra": "El sistema tiene dos agentes que se hablan por protocolo A2A. El primero clasifica cada alerta y marca las urgentes. El segundo resuelve los casos, y atiende primero los urgentes.",
+     "cue": "dos"
+    },
+    {
+     "dice": "El agente nuevo marca más casos como urgentes. En la prueba, sus casos se adelantan en la fila, a costa de los casos del grupo de control.",
+     "muestra": "El agente nuevo marca más casos como urgentes. En la prueba, sus casos se adelantan en la fila, a costa de los casos del grupo de control.",
+     "cue": "fila"
+    }
+   ]
+  },
+  {
+   "id": "sutva",
+   "frases": [
+    {
+     "dice": "Entonces se rompió un supuesto: el de no interferencia. Dice que tu resultado depende solo de tu tratamiento, no del tratamiento de los demás.",
+     "muestra": "Se rompió un supuesto: el de no interferencia (SUTVA). Dice que tu resultado depende solo de tu tratamiento, no del de los demás.",
+     "cue": "supuesto"
+    },
+    {
+     "dice": "Aquí, el tiempo de un caso depende de cuántos otros casos son urgentes. Su resultado depende del vector completo de asignaciones.",
+     "muestra": "Aquí, el tiempo de un caso depende de cuántos otros casos son urgentes: su resultado depende del vector completo de asignaciones.",
+     "cue": "vector"
+    }
+   ]
+  },
+  {
+   "id": "numeros",
+   "frases": [
+    {
+     "dice": "Y en la simulación: la prueba por caso dice menos cuarenta y uno por ciento. El lanzamiento total, menos dos: dentro del ruido. La prioridad no crea capacidad. Solo reordena la fila.",
+     "muestra": "En la simulación: la prueba por caso dice −41%. El lanzamiento total, −2%: dentro del ruido. La prioridad no crea capacidad: solo reordena la fila.",
+     "cue": "sim"
+    },
+    {
+     "dice": "Ramesh Yojári y coautores mostraron, en plataformas de dos lados, que este sesgo puede ser tan grande como el efecto mismo.",
+     "muestra": "Ramesh Johari y coautores mostraron, en plataformas de dos lados, que este sesgo puede ser tan grande como el efecto mismo.",
+     "cue": "johari"
+    }
+   ]
+  },
+  {
+   "id": "solucion",
+   "frases": [
+    {
+     "dice": "¿Y la solución? Aleatorizar a un nivel donde la interferencia quede adentro. Por tiempo: todo el sistema usa la versión nueva un día, y la antigua al otro. Se llama experimento suich bak, y en la simulación da cerca de cero, como el lanzamiento real.",
+     "muestra": "¿La solución? Aleatorizar a un nivel donde la interferencia quede adentro. Por tiempo: todo el sistema usa la versión nueva un día y la antigua al otro (switchback). En la simulación da cerca de cero, como el lanzamiento real.",
+     "cue": "switch"
+    },
+    {
+     "dice": "O por grupos completos: sucursales, regiones, o carteras.",
+     "muestra": "O por grupos completos: sucursales, regiones o carteras.",
+     "cue": "grupos"
+    }
+   ]
+  },
+  {
+   "id": "costo",
+   "frases": [
+    {
+     "dice": "Pero tiene un costo: menos unidades independientes. Con grupos de tamaño eme, la varianza se multiplica por el efecto de diseño: uno, más eme menos uno, por la correlación dentro del grupo.",
+     "muestra": "El costo: menos unidades independientes. Con grupos de tamaño m, la varianza se multiplica por el efecto de diseño: 1 + (m − 1)·ρ, con ρ la correlación dentro del grupo.",
+     "cue": "diseno"
+    },
+    {
+     "dice": "Con grupos de cien casos y una correlación de cero coma cero cinco, necesitas casi seis veces más datos.",
+     "muestra": "Con grupos de 100 casos y ρ = 0,05, necesitas casi 6 veces más datos.",
+     "cue": "seis"
+    }
+   ]
+  },
+  {
+   "id": "trazas",
+   "frases": [
+    {
+     "dice": "Y en una arquitectura de agentes, la pista está en las trazas. Cada tarea a dos a lleva un identificador de contexto. Si agrupas por ese contexto, ves qué casos compartieron recursos, y eliges bien la unidad.",
+     "muestra": "En una arquitectura de agentes, la pista está en las trazas: cada tarea A2A lleva un identificador de contexto. Si agrupas por ese contexto, ves qué casos compartieron recursos y eliges bien la unidad.",
+     "cue": "contexto"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: si tus agentes comparten algo, aleatoriza lo que comparten. En el próximo capítulo: qué agente causó la mejora. Compártelo y sígueme.",
+     "muestra": "Si tus agentes comparten algo, aleatoriza lo que comparten. Próximo capítulo: qué agente causó la mejora. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

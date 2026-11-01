@@ -1,0 +1,124 @@
+{
+ "duracion": 94.189,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 8.827
+  },
+  {
+   "id": "titulo",
+   "inicio": 8.827,
+   "fin": 13.33
+  },
+  {
+   "id": "cadena",
+   "inicio": 13.33,
+   "fin": 28.982
+  },
+  {
+   "id": "mediacion",
+   "inicio": 28.982,
+   "fin": 45.957
+  },
+  {
+   "id": "confusor",
+   "inicio": 45.957,
+   "fin": 62.974
+  },
+  {
+   "id": "caminos",
+   "inicio": 62.974,
+   "fin": 73.151
+  },
+  {
+   "id": "practica",
+   "inicio": 73.151,
+   "fin": 84.673
+  },
+  {
+   "id": "cierre",
+   "inicio": 84.673,
+   "fin": 94.189
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.527,
+   "texto": "Un banco cambia el agente que verifica identidad en su flujo de créditos. La conversión sube 5 puntos. ¿Fue porque el proceso es más rápido, o por algo más?",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 8.827,
+   "fin": 13.03,
+   "texto": "Cuasi-experimentos, capítulo 9: ¿qué agente causó la mejora?",
+   "cue": null
+  },
+  {
+   "escena": "cadena",
+   "inicio": 13.33,
+   "fin": 22.077,
+   "texto": "El flujo es una cadena de agentes: un orquestador, un agente de verificación, uno de riesgo y uno de oferta. Cada uno delega tareas al siguiente por protocolo A2A.",
+   "cue": "cadena"
+  },
+  {
+   "escena": "cadena",
+   "inicio": 22.197,
+   "fin": 28.682,
+   "texto": "Cada tarea deja una traza: quién la pidió, cuánto tardó y qué devolvió. Esas trazas son los datos de un análisis de mediación.",
+   "cue": "trazas"
+  },
+  {
+   "escena": "mediacion",
+   "inicio": 28.982,
+   "fin": 35.083,
+   "texto": "El efecto total se divide en dos: el indirecto, que pasa por el tiempo de decisión, y el directo, todo lo demás.",
+   "cue": "divide"
+  },
+  {
+   "escena": "mediacion",
+   "inicio": 35.203,
+   "fin": 45.657,
+   "texto": "La versión nueva baja el tiempo en 30 minutos, y cada 10 minutos menos suma 1 punto de conversión. Indirecto: (−30)·(−0,1) = 3. Directo: 2. Total: 5.",
+   "cue": "cuenta"
+  },
+  {
+   "escena": "confusor",
+   "inicio": 45.957,
+   "fin": 52.847,
+   "texto": "Ojo: la complejidad del cliente alarga el proceso y también baja la conversión. Es un confusor entre el mediador y el resultado.",
+   "cue": "complejidad"
+  },
+  {
+   "escena": "confusor",
+   "inicio": 52.967,
+   "fin": 62.674,
+   "texto": "Si no la incluyes, el análisis dice: indirecto 8,5 y directo −3,5. Con la complejidad, recupera 3 y 2. Aleatorizar el agente no aleatoriza el tiempo.",
+   "cue": "sesgo"
+  },
+  {
+   "escena": "caminos",
+   "inicio": 62.974,
+   "fin": 72.851,
+   "texto": "Con más agentes en la cadena hay más caminos. Los efectos específicos por camino (Avin, Shpitser y Pearl) separan cuánto pasa por cada agente. Pero cada camino agrega un supuesto.",
+   "cue": "caminos"
+  },
+  {
+   "escena": "practica",
+   "inicio": 73.151,
+   "fin": 84.373,
+   "texto": "En la práctica: propaga el identificador de traza entre agentes, guarda la duración de cada tarea y registra los atributos del cliente que cada agente usó. Así tienes el grafo, el mediador y los confusores.",
+   "cue": "practica"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 84.673,
+   "fin": 93.889,
+   "texto": "Las trazas dicen por dónde pasó el efecto, pero solo si mides lo que confunde el camino. Próximo capítulo: el modelo de lenguaje como juez. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}
