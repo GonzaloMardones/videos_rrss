@@ -1,0 +1,170 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y un modelo de siete mil millones de parámetros pesa veintiocho gigas en efe pe treinta y dos. En be efe dieciséis, catorce. En efe pe ocho, siete.",
+     "muestra": "Un modelo de 7.000 millones de parámetros pesa 28 GB en FP32. En BF16, 14. En FP8, 7.",
+     "cue": "pesos"
+    },
+    {
+     "dice": "Entender cómo vive un número en la memoria es la primera etapa del data scientist de dos mil veintisiete.",
+     "muestra": "Entender cómo vive un número en la memoria es la primera etapa del data scientist de 2027.",
+     "cue": "etapa",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie data scientist dos mil veintisiete, etapa uno: tensores, y páitorch por dentro.",
+     "muestra": "Data Scientist 2027, etapa 1: tensores y PyTorch por dentro."
+    }
+   ]
+  },
+  {
+   "id": "strides",
+   "frases": [
+    {
+     "dice": "Y un tensor no es una tabla. Es un bloque plano de memoria, más una receta para recorrerlo: los stráids.",
+     "muestra": "Un tensor no es una tabla. Es un bloque plano de memoria, más una receta para recorrerlo: los strides.",
+     "cue": "plano"
+    },
+    {
+     "dice": "En una matriz de dos por tres en efe pe treinta y dos, para bajar una fila saltas doce bytes, y para avanzar una columna, cuatro.",
+     "muestra": "En una matriz de 2×3 en FP32, para bajar una fila saltas 12 bytes, y para avanzar una columna, 4.",
+     "cue": "bytes"
+    },
+    {
+     "dice": "La dirección de cada elemento es el inicio, más la suma de cada índice por su stráid. Y transponer no copia nada: solo intercambia los stráids. Por eso el resultado deja de ser contiguo.",
+     "muestra": "La dirección de cada elemento es el inicio más la suma de cada índice por su stride. Transponer no copia nada: solo intercambia los strides. Por eso el resultado deja de ser contiguo.",
+     "cue": "direccion"
+    }
+   ]
+  },
+  {
+   "id": "autograd",
+   "frases": [
+    {
+     "dice": "Entonces, el autográd. Páitorch anota cada operación en un grafo, y al llamar bákuard lo recorre al revés, aplicando la regla de la cadena.",
+     "muestra": "El autograd: PyTorch anota cada operación en un grafo, y al llamar backward lo recorre al revés, aplicando la regla de la cadena.",
+     "cue": "grafo"
+    },
+    {
+     "dice": "Ese modo inverso obtiene millones de derivadas por el costo de una pasada hacia adelante. El modo directo necesitaría una pasada por cada parámetro.",
+     "muestra": "El modo inverso obtiene millones de derivadas por el costo de una pasada hacia adelante. El modo directo necesitaría una pasada por cada parámetro.",
+     "cue": "inverso"
+    },
+    {
+     "dice": "Y si necesitas un gradiente a medida, defines tu propia función con su fóruard y su bákuard.",
+     "muestra": "Si necesitas un gradiente a medida, defines tu propia función con su forward y su backward.",
+     "cue": "custom"
+    }
+   ]
+  },
+  {
+   "id": "memoria",
+   "frases": [
+    {
+     "dice": "Y en la tarjeta gráfica, la memoria es una pirámide: registros, memoria compartida, caché, y la memoria principal. Más abajo, más grande, y más lenta.",
+     "muestra": "En la GPU, la memoria es una pirámide: registros, memoria compartida, caché L2 y la memoria principal (HBM). Más abajo, más grande y más lenta.",
+     "cue": "piramide"
+    },
+    {
+     "dice": "Y una hache cien hace novecientos ochenta y nueve billones de operaciones por segundo en be efe dieciséis. Pero su memoria entrega tres coma treinta y cinco terabytes por segundo.",
+     "muestra": "Una H100 hace 989 billones de operaciones por segundo en BF16. Pero su memoria entrega 3,35 terabytes por segundo.",
+     "cue": "h100"
+    }
+   ]
+  },
+  {
+   "id": "roofline",
+   "frases": [
+    {
+     "dice": "Entonces, para no esperar datos, necesitas unas doscientas noventa y cinco operaciones por cada byte que lees. Esa razón se llama intensidad aritmética, y es la base del modelo rúflain.",
+     "muestra": "Para no esperar datos, necesitas unas 295 operaciones por cada byte que lees. Esa razón se llama intensidad aritmética, y es la base del modelo roofline.",
+     "cue": "intensidad"
+    },
+    {
+     "dice": "Una suma elemento a elemento hace apenas un sexto de operación por byte: está limitada por la memoria. Una multiplicación de matrices de cuatro mil noventa y seis hace más de mil: está limitada por el cómputo.",
+     "muestra": "Una suma elemento a elemento hace apenas 1/6 de operación por byte: está limitada por la memoria. Una multiplicación de matrices de 4096 hace más de mil: está limitada por el cómputo.",
+     "cue": "casos"
+    }
+   ]
+  },
+  {
+   "id": "fusion",
+   "frases": [
+    {
+     "dice": "Y por eso existe la fusión de operadores. Si encadenas tres operaciones elemento a elemento, cada una lee y escribe en la memoria principal: seis viajes.",
+     "muestra": "Por eso existe la fusión de operadores. Si encadenas tres operaciones elemento a elemento, cada una lee y escribe en la memoria principal: seis viajes.",
+     "cue": "seis"
+    },
+    {
+     "dice": "Y fusionadas en un solo kernel, el dato se lee una vez y se escribe una vez: dos viajes, tres veces menos tráfico. Es lo que hace torch punto compáil, y la idea detrás de flash aténshon.",
+     "muestra": "Fusionadas en un solo kernel, el dato se lee una vez y se escribe una vez: dos viajes, tres veces menos tráfico. Es lo que hace torch.compile, y la idea detrás de FlashAttention.",
+     "cue": "dos"
+    }
+   ]
+  },
+  {
+   "id": "precision",
+   "frases": [
+    {
+     "dice": "Y ahora, la precisión mixta. Efe pe treinta y dos usa ocho bits de exponente y veintitrés de mantisa. Be efe dieciséis conserva los ocho de exponente y deja siete de mantisa: el mismo rango, con menos precisión.",
+     "muestra": "Precisión mixta: FP32 usa 8 bits de exponente y 23 de mantisa. BF16 conserva los 8 de exponente y deja 7 de mantisa: el mismo rango, con menos precisión.",
+     "cue": "bits"
+    },
+    {
+     "dice": "Efe pe dieciséis tiene más mantisa, pero su máximo es sesenta y cinco mil quinientos cuatro, y por eso necesita escalar la pérdida.",
+     "muestra": "FP16 tiene más mantisa, pero su máximo es 65.504, y por eso necesita escalar la pérdida.",
+     "cue": "fp16"
+    },
+    {
+     "dice": "Y efe pe ocho tiene dos versiones: e cuatro eme tres, hasta cuatrocientos cuarenta y ocho, para pesos y activaciones; y e cinco eme dos, hasta cincuenta y siete mil trescientos cuarenta y cuatro, para gradientes.",
+     "muestra": "FP8 tiene dos versiones: E4M3, hasta 448, para pesos y activaciones; y E5M2, hasta 57.344, para gradientes.",
+     "cue": "fp8"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en la nube de Google: las te pe u multiplican matrices en be efe dieciséis y acumulan en efe pe treinta y dos. Y las máquinas a tres, con hache cien, permiten entrenar en efe pe ocho.",
+     "muestra": "En Google Cloud: las TPU multiplican matrices en BF16 y acumulan en FP32. Y las máquinas A3, con H100, permiten entrenar en FP8.",
+     "cue": "tpu"
+    }
+   ]
+  },
+  {
+   "id": "entrevista",
+   "frases": [
+    {
+     "dice": "¿Y qué te van a preguntar en una entrevista? Por qué transponer no copia. Cuándo una operación está limitada por memoria. Y por qué be efe dieciséis casi nunca necesita escalar la pérdida.",
+     "muestra": "¿Qué te van a preguntar en una entrevista? Por qué transponer no copia. Cuándo una operación está limitada por memoria. Y por qué BF16 casi nunca necesita escalar la pérdida.",
+     "cue": "preguntas"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: primero entiende cómo viven los números en la memoria. Próxima etapa: curación de datos y pipelines sintéticos. Compártelo y sígueme.",
+     "muestra": "Primero entiende cómo viven los números en la memoria. Próxima etapa: curación de datos y pipelines sintéticos. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}
