@@ -22,49 +22,67 @@ const Cabeza: React.FC<{ at: number; titulo: string; tam?: number }> = ({ at, ti
   </>
 );
 
-const Barra: React.FC<{ lab: string; val: number; max: number; col: string; k: number; sufijo?: string }> = ({ lab, val, max, col, k, sufijo = " min" }) => (
-  <div style={{ marginTop: 20, opacity: Math.min(1, k * 2) }}>
-    <div style={{ display: "flex", justifyContent: "space-between", fontSize: 28 }}>
-      <span>{lab}</span>
-      <span style={{ fontFamily: serif, fontSize: 44, color: col }}>
-        {(val * k).toFixed(1).replace(".", ",")}
-        {sufijo}
-      </span>
-    </div>
-    <div style={{ height: 36, borderRadius: 10, background: "#16161B", marginTop: 8 }}>
-      <div style={{ height: 36, width: `${(val / max) * 100 * k}%`, borderRadius: 10, background: col }} />
-    </div>
-  </div>
-);
-
 // ─── Gancho ───────────────────────────────────────────────────────────────────
+// Dos tarjetas: lo que dijo la prueba por caso y lo que pasó al lanzar a todos.
+const Comparacion: React.FC<{ y: number; at: number; titulo: string; filas: [string, number, string][]; cifra: string; color: string }> = ({ y, at, titulo, filas, cifra, color }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const k = transicion(frame, at + 6, fps, 800, EXPO_OUT);
+  const res = transicion(frame, at + 20, fps, 500, backOut);
+  return (
+    <Panel caja={{ x: 0, y, w: 912, h: 290 }} at={at} color={color} estilo={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <span style={{ fontFamily: mono, fontSize: 24, color: v.niebla }}>{titulo}</span>
+        <span style={{ fontFamily: serif, fontSize: 64, color, display: "inline-block", transform: `scale(${res})`, transformOrigin: "right" }}>{cifra}</span>
+      </div>
+      {filas.map(([n, val, col]) => (
+        <div key={n} style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <span style={{ width: 210, fontSize: 26 }}>{n}</span>
+          <div style={{ flex: 1, height: 26, borderRadius: 8, background: "#16161B" }}>
+            <div style={{ height: 26, width: `${(val / 20) * 100 * k}%`, borderRadius: 8, background: col }} />
+          </div>
+          <span style={{ width: 170, textAlign: "right", whiteSpace: "nowrap", fontFamily: serif, fontSize: 34, color: col }}>{(val * k).toFixed(1).replace(".", ",")} min</span>
+        </div>
+      ))}
+    </Panel>
+  );
+};
+
 export const Gancho: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const cA = useCue("ab");
   const cD = useCue("desaparece");
-  const largo = useCueAt("ab", 1) - cA;
-  const t = (a: number) => transicion(frame, a, fps, 700, EXPO_OUT);
-  const res = transicion(frame, cA + largo * 0.7, fps, 500, backOut);
   return (
     <Escena>
-      <Escenario alto={660}>
-        <div style={{ display: "flex", alignItems: "center", gap: 14, fontSize: 30, opacity: t(cA) }}>
+      <Escenario alto={700}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, fontSize: 30, opacity: transicion(frame, cA, fps, 400, EXPO_OUT) }}>
           <ShieldAlert size={42} strokeWidth={1.5} color={v.azafran} /> espera hasta resolver una alerta de fraude
         </div>
-        <div style={{ position: "absolute", left: 0, top: 50, width: 912 }}>
-          <div style={{ fontFamily: mono, fontSize: 22, color: v.niebla, marginTop: 10, opacity: t(cA + 10) }}>prueba A/B por caso</div>
-          <Barra lab="agente antiguo" val={17.9} max={20} col={VIEJO} k={t(cA + largo * 0.3)} />
-          <Barra lab="agente nuevo" val={10.5} max={20} col={NUEVO} k={t(cA + largo * 0.5)} />
-        </div>
-        <div style={{ position: "absolute", left: 0, top: 290, fontFamily: serif, fontSize: 64, color: NUEVO, opacity: Math.min(1, res) }}>−41 % en la prueba</div>
-        <div style={{ position: "absolute", left: 0, top: 390, width: 912, opacity: t(cD) }}>
-          <div style={{ fontFamily: mono, fontSize: 22, color: v.niebla }}>lanzamiento a todos</div>
-          <Barra lab="antes" val={13.0} max={20} col={VIEJO} k={t(cD + 4)} />
-          <Barra lab="después" val={12.8} max={20} col={ROJO} k={t(cD + 14)} />
-        </div>
+        <Comparacion
+          y={70}
+          at={cA + 10}
+          titulo="prueba A/B por caso"
+          cifra="−41 %"
+          color={NUEVO}
+          filas={[
+            ["agente antiguo", 17.9, VIEJO],
+            ["agente nuevo", 10.5, NUEVO],
+          ]}
+        />
+        <Comparacion
+          y={390}
+          at={cD}
+          titulo="lanzamiento a todos"
+          cifra="−2 %"
+          color={ROJO}
+          filas={[
+            ["antes", 13.0, VIEJO],
+            ["después", 12.8, ROJO],
+          ]}
+        />
       </Escenario>
-      <div style={{ marginTop: 10 }}>
+      <div style={{ marginTop: 20 }}>
         <Cinetico at={cD + 30} texto="La mejora *desapareció.*" style={{ fontSize: 90 }} />
       </div>
     </Escena>
