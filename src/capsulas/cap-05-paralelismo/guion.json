@@ -1,0 +1,190 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.25,
+ "pausaFrase": 0.1,
+ "pausaEscena": 0.26,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y entrenar un modelo de siete mil quinientos millones de parámetros con ádam necesita ciento veinte giga baits de memoria.",
+     "muestra": "Entrenar un modelo de 7.500 millones de parámetros con Adam necesita 120 GB de memoria.",
+     "en": "Training a 7.5-billion-parameter model with Adam needs 120 GB of memory.",
+     "cue": "120"
+    },
+    {
+     "dice": "Y repartido en sesenta y cuatro yi pi iús con zíro tres: uno coma nueve por yi pi iú.",
+     "muestra": "Repartido en 64 GPUs con ZeRO-3: 1,9 GB por GPU.",
+     "en": "Spread across 64 GPUs with ZeRO-3: 1.9 GB per GPU.",
+     "cue": "19",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Y en esta cápsula técnica: entrenamiento distribuido, y paralelismo tres dé.",
+     "muestra": "Cápsula técnica: entrenamiento distribuido y paralelismo 3D.",
+     "en": "Tech capsule: distributed training and 3D parallelism."
+    }
+   ]
+  },
+  {
+   "id": "memoria",
+   "frases": [
+    {
+     "dice": "Y ¿de dónde salen dieciséis baits por parámetro? Dos de pesos en dieciséis bits, dos de gradientes, y doce del optimizador.",
+     "muestra": "¿De dónde salen 16 bytes por parámetro? 2 de pesos en 16 bits, 2 de gradientes y 12 del optimizador.",
+     "en": "Where do 16 bytes per parameter come from? 2 for 16-bit weights, 2 for gradients and 12 for the optimizer.",
+     "cue": "16"
+    },
+    {
+     "dice": "Y ádam guarda una copia en treinta y dos bits, más el momento y la varianza: tres veces cuatro baits.",
+     "muestra": "Adam guarda una copia en 32 bits, más el momento y la varianza: 3 × 4 bytes.",
+     "en": "Adam keeps a 32-bit copy, plus momentum and variance: 3 × 4 bytes.",
+     "cue": "adam"
+    }
+   ]
+  },
+  {
+   "id": "datos",
+   "frases": [
+    {
+     "dice": "Y el paralelismo de datos copia el modelo en cada yi pi iú, y reparte el lote.",
+     "muestra": "El paralelismo de datos copia el modelo en cada GPU y reparte el lote.",
+     "en": "Data parallelism copies the model to every GPU and splits the batch.",
+     "cue": "dp"
+    },
+    {
+     "dice": "Y luego promedian gradientes con un ol ridiús en anillo: cada yi pi iú envía casi el doble del modelo, sin importar cuántas sean.",
+     "muestra": "Luego promedian gradientes con un all-reduce en anillo: cada GPU envía casi el doble del modelo, sin importar cuántas sean.",
+     "en": "Then they average gradients with a ring all-reduce: each GPU sends about twice the model, no matter how many there are.",
+     "cue": "ring"
+    }
+   ]
+  },
+  {
+   "id": "zero",
+   "frases": [
+    {
+     "dice": "Y el problema: cada yi pi iú repite los dieciséis baits por parámetro. Y el método zíro elimina esa redundancia.",
+     "muestra": "El problema: cada GPU repite los 16 bytes por parámetro. ZeRO elimina esa redundancia.",
+     "en": "The problem: every GPU repeats all 16 bytes per parameter. ZeRO removes that redundancy.",
+     "cue": "copias"
+    },
+    {
+     "dice": "Y en tres etapas reparte el optimizador, los gradientes y los pesos: de ciento veinte, a treinta y uno, a dieciséis, a menos de dos giga baits. Ef es di pi, en páitorch, hace lo mismo.",
+     "muestra": "En tres etapas reparte el optimizador, los gradientes y los pesos: de 120 a 31, a 16, a menos de 2 GB. FSDP, en PyTorch, hace lo mismo.",
+     "en": "In three stages it shards the optimizer, the gradients and the weights: from 120 to 31, to 16, to under 2 GB. FSDP in PyTorch does the same.",
+     "cue": "etapas"
+    }
+   ]
+  },
+  {
+   "id": "tensor",
+   "frases": [
+    {
+     "dice": "Y si una sola capa no cabe, el paralelismo de tensores parte sus matrices entre yi pi iús.",
+     "muestra": "Si una sola capa no cabe, el paralelismo de tensores parte sus matrices entre GPUs.",
+     "en": "If a single layer does not fit, tensor parallelism splits its matrices across GPUs.",
+     "cue": "tp"
+    },
+    {
+     "dice": "Y mégatron corta la primera matriz por columnas y la segunda por filas: un solo ol ridiús por bloque. Pero exige conexiones rapidísimas, dentro del mismo servidor.",
+     "muestra": "Megatron corta la primera matriz por columnas y la segunda por filas: un solo all-reduce por bloque. Pero exige conexiones rapidísimas, dentro del mismo servidor.",
+     "en": "Megatron cuts the first matrix by columns and the second by rows: a single all-reduce per block. But it needs very fast links, inside one server.",
+     "cue": "columnas"
+    }
+   ]
+  },
+  {
+   "id": "pipeline",
+   "frases": [
+    {
+     "dice": "Y el paralelismo de páiplain reparte las capas en etapas, como una línea de montaje.",
+     "muestra": "El paralelismo de pipeline reparte las capas en etapas, como una línea de montaje.",
+     "en": "Pipeline parallelism splits the layers into stages, like an assembly line.",
+     "cue": "etapa"
+    },
+    {
+     "dice": "Y el costo es la burbuja: tiempo ocioso igual a pe menos uno, sobre eme más pe menos uno. Con cuatro etapas y cuatro micro lotes, cuarenta y tres por ciento. Con treinta y dos micro lotes, nueve por ciento.",
+     "muestra": "El costo es la burbuja: tiempo ocioso = (p − 1)/(m + p − 1). Con 4 etapas y 4 microlotes, 43 %. Con 32, 9 %.",
+     "en": "The cost is the bubble: idle time = (p − 1)/(m + p − 1). With 4 stages and 4 micro-batches, 43%. With 32, 9%.",
+     "cue": "burbuja"
+    }
+   ]
+  },
+  {
+   "id": "tresd",
+   "frases": [
+    {
+     "dice": "Y el paralelismo tres dé combina los tres: tensores dentro del servidor, páiplain entre servidores, y datos encima.",
+     "muestra": "El paralelismo 3D combina los tres: tensores dentro del servidor, pipeline entre servidores y datos encima.",
+     "en": "3D parallelism combines all three: tensors inside a server, pipeline across servers and data on top.",
+     "cue": "3d"
+    },
+    {
+     "dice": "Y así se entrenó un modelo de un billón de parámetros en tres mil setenta y dos yi pi iús, al cincuenta y dos por ciento del pico teórico.",
+     "muestra": "Así se entrenó un modelo de un billón de parámetros en 3.072 GPUs, al 52 % del pico teórico.",
+     "en": "That is how a 1-trillion-parameter model trained on 3,072 GPUs, at 52% of theoretical peak.",
+     "cue": "trillon"
+    }
+   ]
+  },
+  {
+   "id": "checkpoint",
+   "frases": [
+    {
+     "dice": "Y otro truco: gradient chékpointing. No guardas todas las activaciones: las recalculas en el bákuerd.",
+     "muestra": "Otro truco: gradient checkpointing. No guardas todas las activaciones: las recalculas en el backward.",
+     "en": "Another trick: gradient checkpointing. You do not store every activation: you recompute them in the backward pass.",
+     "cue": "ckpt"
+    },
+    {
+     "dice": "Y con ene capas, la memoria baja a raíz de ene, a cambio de un fóruerd extra: más o menos un tercio más de cómputo.",
+     "muestra": "Con n capas, la memoria baja a √n, a cambio de un forward extra: ≈ un tercio más de cómputo.",
+     "en": "With n layers, memory drops to √n, for one extra forward pass: ≈ a third more compute.",
+     "cue": "raiz"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en gúgol claud, los ti pi iú vi cinco pi se conectan en un toro tres dé de hasta ocho mil novecientos sesenta chips; y con yax, el mismo código se reparte con anotaciones de sharding. Para yi pi iús, yi kei i orquesta el entrenamiento en varios nodos.",
+     "muestra": "En Google Cloud, los TPU v5p se conectan en un toro 3D de hasta 8.960 chips; con JAX, el mismo código se reparte con anotaciones de sharding. Para GPUs, GKE orquesta el entrenamiento en varios nodos.",
+     "en": "On Google Cloud, TPU v5p chips connect in a 3D torus of up to 8,960 chips; with JAX, the same code is sharded through annotations. For GPUs, GKE orchestrates multi-node training.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "Y las bases: dieciséis baits por parámetro, ol ridiús igual a ridiús escáter más ol gáder, la burbuja del páiplain, y que la comunicación también es cómputo.",
+     "muestra": "Las bases: 16 bytes por parámetro, all-reduce = reduce-scatter + all-gather, la burbuja del pipeline, y que la comunicación también es cómputo.",
+     "en": "The basics: 16 bytes per parameter, all-reduce = reduce-scatter + all-gather, the pipeline bubble, and that communication is compute too.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

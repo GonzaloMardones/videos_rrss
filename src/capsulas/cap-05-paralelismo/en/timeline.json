@@ -1,0 +1,227 @@
+{
+ "duracion": 140.317,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.666
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.666,
+   "fin": 15.279
+  },
+  {
+   "id": "memoria",
+   "inicio": 15.279,
+   "fin": 27.549
+  },
+  {
+   "id": "datos",
+   "inicio": 27.549,
+   "fin": 39.967
+  },
+  {
+   "id": "zero",
+   "inicio": 39.967,
+   "fin": 56.887
+  },
+  {
+   "id": "tensor",
+   "inicio": 56.887,
+   "fin": 71.546
+  },
+  {
+   "id": "pipeline",
+   "inicio": 71.546,
+   "fin": 88.162
+  },
+  {
+   "id": "tresd",
+   "inicio": 88.162,
+   "fin": 102.33
+  },
+  {
+   "id": "checkpoint",
+   "inicio": 102.33,
+   "fin": 115.03
+  },
+  {
+   "id": "nube",
+   "inicio": 115.03,
+   "fin": 129.651
+  },
+  {
+   "id": "bases",
+   "inicio": 129.651,
+   "fin": 138.576
+  },
+  {
+   "id": "cierre",
+   "inicio": 138.576,
+   "fin": 140.317
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 6.351,
+   "texto": "Training a 7.5-billion-parameter model with Adam needs 120 GB of memory.",
+   "cue": "120",
+   "es": "Entrenar un modelo de 7.500 millones de parámetros con Adam necesita 120 GB de memoria."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 6.431,
+   "fin": 11.466,
+   "texto": "Spread across 64 GPUs with ZeRO-3: 1.9 GB per GPU.",
+   "cue": "19",
+   "es": "Repartido en 64 GPUs con ZeRO-3: 1,9 GB por GPU."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.666,
+   "fin": 15.079,
+   "texto": "Tech capsule: distributed training and 3D parallelism.",
+   "cue": null,
+   "es": "Cápsula técnica: entrenamiento distribuido y paralelismo 3D."
+  },
+  {
+   "escena": "memoria",
+   "inicio": 15.279,
+   "fin": 22.426,
+   "texto": "Where do 16 bytes per parameter come from? 2 for 16-bit weights, 2 for gradients and 12 for the optimizer.",
+   "cue": "16",
+   "es": "¿De dónde salen 16 bytes por parámetro? 2 de pesos en 16 bits, 2 de gradientes y 12 del optimizador."
+  },
+  {
+   "escena": "memoria",
+   "inicio": 22.506,
+   "fin": 27.349,
+   "texto": "Adam keeps a 32-bit copy, plus momentum and variance: 3 × 4 bytes.",
+   "cue": "adam",
+   "es": "Adam guarda una copia en 32 bits, más el momento y la varianza: 3 × 4 bytes."
+  },
+  {
+   "escena": "datos",
+   "inicio": 27.549,
+   "fin": 32.626,
+   "texto": "Data parallelism copies the model to every GPU and splits the batch.",
+   "cue": "dp",
+   "es": "El paralelismo de datos copia el modelo en cada GPU y reparte el lote."
+  },
+  {
+   "escena": "datos",
+   "inicio": 32.706,
+   "fin": 39.767,
+   "texto": "Then they average gradients with a ring all-reduce: each GPU sends about twice the model, no matter how many there are.",
+   "cue": "ring",
+   "es": "Luego promedian gradientes con un all-reduce en anillo: cada GPU envía casi el doble del modelo, sin importar cuántas sean."
+  },
+  {
+   "escena": "zero",
+   "inicio": 39.967,
+   "fin": 46.218,
+   "texto": "The problem: every GPU repeats all 16 bytes per parameter. ZeRO removes that redundancy.",
+   "cue": "copias",
+   "es": "El problema: cada GPU repite los 16 bytes por parámetro. ZeRO elimina esa redundancia."
+  },
+  {
+   "escena": "zero",
+   "inicio": 46.298,
+   "fin": 56.687,
+   "texto": "In three stages it shards the optimizer, the gradients and the weights: from 120 to 31, to 16, to under 2 GB. FSDP in PyTorch does the same.",
+   "cue": "etapas",
+   "es": "En tres etapas reparte el optimizador, los gradientes y los pesos: de 120 a 31, a 16, a menos de 2 GB. FSDP, en PyTorch, hace lo mismo."
+  },
+  {
+   "escena": "tensor",
+   "inicio": 56.887,
+   "fin": 62.199,
+   "texto": "If a single layer does not fit, tensor parallelism splits its matrices across GPUs.",
+   "cue": "tp",
+   "es": "Si una sola capa no cabe, el paralelismo de tensores parte sus matrices entre GPUs."
+  },
+  {
+   "escena": "tensor",
+   "inicio": 62.279,
+   "fin": 71.346,
+   "texto": "Megatron cuts the first matrix by columns and the second by rows: a single all-reduce per block. But it needs very fast links, inside one server.",
+   "cue": "columnas",
+   "es": "Megatron corta la primera matriz por columnas y la segunda por filas: un solo all-reduce por bloque. Pero exige conexiones rapidísimas, dentro del mismo servidor."
+  },
+  {
+   "escena": "pipeline",
+   "inicio": 71.546,
+   "fin": 75.829,
+   "texto": "Pipeline parallelism splits the layers into stages, like an assembly line.",
+   "cue": "etapa",
+   "es": "El paralelismo de pipeline reparte las capas en etapas, como una línea de montaje."
+  },
+  {
+   "escena": "pipeline",
+   "inicio": 75.909,
+   "fin": 87.962,
+   "texto": "The cost is the bubble: idle time = (p − 1)/(m + p − 1). With 4 stages and 4 micro-batches, 43%. With 32, 9%.",
+   "cue": "burbuja",
+   "es": "El costo es la burbuja: tiempo ocioso = (p − 1)/(m + p − 1). Con 4 etapas y 4 microlotes, 43 %. Con 32, 9 %."
+  },
+  {
+   "escena": "tresd",
+   "inicio": 88.162,
+   "fin": 94.882,
+   "texto": "3D parallelism combines all three: tensors inside a server, pipeline across servers and data on top.",
+   "cue": "3d",
+   "es": "El paralelismo 3D combina los tres: tensores dentro del servidor, pipeline entre servidores y datos encima."
+  },
+  {
+   "escena": "tresd",
+   "inicio": 94.962,
+   "fin": 102.13,
+   "texto": "That is how a 1-trillion-parameter model trained on 3,072 GPUs, at 52% of theoretical peak.",
+   "cue": "trillon",
+   "es": "Así se entrenó un modelo de un billón de parámetros en 3.072 GPUs, al 52 % del pico teórico."
+  },
+  {
+   "escena": "checkpoint",
+   "inicio": 102.33,
+   "fin": 108.602,
+   "texto": "Another trick: gradient checkpointing. You do not store every activation: you recompute them in the backward pass.",
+   "cue": "ckpt",
+   "es": "Otro truco: gradient checkpointing. No guardas todas las activaciones: las recalculas en el backward."
+  },
+  {
+   "escena": "checkpoint",
+   "inicio": 108.682,
+   "fin": 114.83,
+   "texto": "With n layers, memory drops to √n, for one extra forward pass: ≈ a third more compute.",
+   "cue": "raiz",
+   "es": "Con n capas, la memoria baja a √n, a cambio de un forward extra: ≈ un tercio más de cómputo."
+  },
+  {
+   "escena": "nube",
+   "inicio": 115.03,
+   "fin": 129.451,
+   "texto": "On Google Cloud, TPU v5p chips connect in a 3D torus of up to 8,960 chips; with JAX, the same code is sharded through annotations. For GPUs, GKE orchestrates multi-node training.",
+   "cue": "gcp",
+   "es": "En Google Cloud, los TPU v5p se conectan en un toro 3D de hasta 8.960 chips; con JAX, el mismo código se reparte con anotaciones de sharding. Para GPUs, GKE orquesta el entrenamiento en varios nodos."
+  },
+  {
+   "escena": "bases",
+   "inicio": 129.651,
+   "fin": 138.376,
+   "texto": "The basics: 16 bytes per parameter, all-reduce = reduce-scatter + all-gather, the pipeline bubble, and that communication is compute too.",
+   "cue": "bases",
+   "es": "Las bases: 16 bytes por parámetro, all-reduce = reduce-scatter + all-gather, la burbuja del pipeline, y que la comunicación también es cómputo."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 138.576,
+   "fin": 140.117,
+   "texto": "If this helped, share and follow.",
+   "cue": "cta",
+   "es": "Si te sirvió, compártelo y sígueme."
+  }
+ ]
+}

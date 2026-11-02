@@ -53,6 +53,8 @@ import { Cap03Peft, CAP03PEFT_FRAMES } from "./capsulas/cap-03-peft/Cap03Peft";
 import { Cap03PeftEN, CAP03PEFTEN_FRAMES } from "./capsulas/cap-03-peft/Cap03PeftEN";
 import { Cap04Alineamiento, CAP04ALINEAMIENTO_FRAMES } from "./capsulas/cap-04-alineamiento/Cap04Alineamiento";
 import { Cap04AlineamientoEN, CAP04ALINEAMIENTOEN_FRAMES } from "./capsulas/cap-04-alineamiento/Cap04AlineamientoEN";
+import { Cap05Paralelismo, CAP05PARALELISMO_FRAMES } from "./capsulas/cap-05-paralelismo/Cap05Paralelismo";
+import { Cap05ParalelismoEN, CAP05PARALELISMOEN_FRAMES } from "./capsulas/cap-05-paralelismo/Cap05ParalelismoEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -698,6 +700,32 @@ export const RemotionRoot: React.FC = () => {
         id="Cap04-Alineamiento-EN"
         component={Cap04AlineamientoEN}
         durationInFrames={CAP04ALINEAMIENTOEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap05-Paralelismo"
+        component={Cap05Paralelismo}
+        durationInFrames={CAP05PARALELISMO_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap05-Paralelismo-EN"
+        component={Cap05ParalelismoEN}
+        durationInFrames={CAP05PARALELISMOEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
