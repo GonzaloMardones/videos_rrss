@@ -51,6 +51,8 @@ import { DS27Datos, DS27DATOS_FRAMES } from "./capsulas/ds27-02-datos/DS27Datos"
 import { DS27DatosEN, DS27DATOSEN_FRAMES } from "./capsulas/ds27-02-datos/DS27DatosEN";
 import { Cap03Peft, CAP03PEFT_FRAMES } from "./capsulas/cap-03-peft/Cap03Peft";
 import { Cap03PeftEN, CAP03PEFTEN_FRAMES } from "./capsulas/cap-03-peft/Cap03PeftEN";
+import { Cap04Alineamiento, CAP04ALINEAMIENTO_FRAMES } from "./capsulas/cap-04-alineamiento/Cap04Alineamiento";
+import { Cap04AlineamientoEN, CAP04ALINEAMIENTOEN_FRAMES } from "./capsulas/cap-04-alineamiento/Cap04AlineamientoEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -670,6 +672,32 @@ export const RemotionRoot: React.FC = () => {
         id="Cap03-PEFT-EN"
         component={Cap03PeftEN}
         durationInFrames={CAP03PEFTEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap04-Alineamiento"
+        component={Cap04Alineamiento}
+        durationInFrames={CAP04ALINEAMIENTO_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap04-Alineamiento-EN"
+        component={Cap04AlineamientoEN}
+        durationInFrames={CAP04ALINEAMIENTOEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

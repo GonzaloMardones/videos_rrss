@@ -1,0 +1,248 @@
+{
+ "duracion": 128.199,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.127
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.127,
+   "fin": 14.715
+  },
+  {
+   "id": "rlhf",
+   "inicio": 14.715,
+   "fin": 28.025
+  },
+  {
+   "id": "bradley",
+   "inicio": 28.025,
+   "fin": 41.675
+  },
+  {
+   "id": "bayes",
+   "inicio": 41.675,
+   "fin": 54.537
+  },
+  {
+   "id": "dpo",
+   "inicio": 54.537,
+   "fin": 67.782
+  },
+  {
+   "id": "kto",
+   "inicio": 67.782,
+   "fin": 76.483
+  },
+  {
+   "id": "orpo",
+   "inicio": 76.483,
+   "fin": 87.297
+  },
+  {
+   "id": "rechazo",
+   "inicio": 87.297,
+   "fin": 98.579
+  },
+  {
+   "id": "hacking",
+   "inicio": 98.579,
+   "fin": 112.849
+  },
+  {
+   "id": "nube",
+   "inicio": 112.849,
+   "fin": 120.661
+  },
+  {
+   "id": "bases",
+   "inicio": 120.661,
+   "fin": 125.998
+  },
+  {
+   "id": "cierre",
+   "inicio": 125.998,
+   "fin": 128.199
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 6.543,
+   "texto": "En 2022, un modelo de 1.300 millones de parámetros le ganó a uno de 175.000 millones.",
+   "cue": "13",
+   "en": "In 2022, a 1.3-billion-parameter model beat a 175-billion one."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 6.643,
+   "fin": 10.867,
+   "texto": "No fue por tamaño: las personas preferían sus respuestas, porque estaba alineado.",
+   "cue": "pref",
+   "en": "Not because of size: people preferred its answers, because it was aligned."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.127,
+   "fin": 14.455,
+   "texto": "Cápsula técnica: alineamiento y optimización por preferencias.",
+   "cue": null,
+   "en": "Tech capsule: alignment and preference optimization."
+  },
+  {
+   "escena": "rlhf",
+   "inicio": 14.715,
+   "fin": 23.761,
+   "texto": "La receta clásica, RLHF, tiene tres pasos: ajuste supervisado (SFT), un modelo de recompensa entrenado con comparaciones humanas y aprendizaje por refuerzo con PPO.",
+   "cue": "sft",
+   "en": "The classic recipe, RLHF, has three steps: supervised fine-tuning (SFT), a reward model trained on human comparisons, and reinforcement learning with PPO."
+  },
+  {
+   "escena": "rlhf",
+   "inicio": 23.861,
+   "fin": 27.765,
+   "texto": "Una penalización KL evita que el modelo se aleje demasiado del original.",
+   "cue": "kl",
+   "en": "A KL penalty keeps the model from drifting too far from the original."
+  },
+  {
+   "escena": "bradley",
+   "inicio": 28.025,
+   "fin": 33.507,
+   "texto": "¿Cómo se convierte una comparación en un número? Con el modelo de Bradley-Terry (1952).",
+   "cue": "bt",
+   "en": "How does a comparison become a number? With the Bradley-Terry model (1952)."
+  },
+  {
+   "escena": "bradley",
+   "inicio": 33.607,
+   "fin": 41.415,
+   "texto": "La probabilidad de preferir A sobre B es la sigmoide de la diferencia de recompensas: si A le saca 1 punto, gana el 73 % de las veces.",
+   "cue": "sigma",
+   "en": "The chance of preferring A over B is the sigmoid of the reward difference: one point ahead wins 73% of the time."
+  },
+  {
+   "escena": "bayes",
+   "inicio": 41.675,
+   "fin": 49.057,
+   "texto": "Aquí entra Bayes. La política óptima es el modelo original multiplicado por exp(recompensa / β): un previo por una verosimilitud.",
+   "cue": "prior",
+   "en": "Here comes Bayes. The optimal policy is the original model times exp(reward / β): a prior times a likelihood."
+  },
+  {
+   "escena": "bayes",
+   "inicio": 49.157,
+   "fin": 54.277,
+   "texto": "β es la confianza: con β grande te quedas cerca del previo; con β chico, la recompensa manda.",
+   "cue": "beta",
+   "en": "β sets the trust: a large β stays near the prior; a small β lets the reward take over."
+  },
+  {
+   "escena": "dpo",
+   "inicio": 54.537,
+   "fin": 59.379,
+   "texto": "DPO despeja la recompensa de esa fórmula: el propio modelo es el modelo de recompensa.",
+   "cue": "dpo",
+   "en": "DPO solves that formula for the reward: the model itself is the reward model."
+  },
+  {
+   "escena": "dpo",
+   "inicio": 59.479,
+   "fin": 67.522,
+   "texto": "La pérdida es una clasificación: subir la preferida y bajar la rechazada, sin aprendizaje por refuerzo. Parte en ln 2 ≈ 0,69.",
+   "cue": "perdida",
+   "en": "The loss is a classification: push the chosen answer up and the rejected one down, no reinforcement learning. It starts at ln 2 ≈ 0.69."
+  },
+  {
+   "escena": "kto",
+   "inicio": 67.782,
+   "fin": 71.195,
+   "texto": "Si solo tienes pulgares arriba o abajo, sin pares, usas KTO.",
+   "cue": "kto",
+   "en": "If you only have thumbs up or down, with no pairs, you use KTO."
+  },
+  {
+   "escena": "kto",
+   "inicio": 71.295,
+   "fin": 76.223,
+   "texto": "Se basa en la teoría prospectiva de Kahneman y Tversky: las pérdidas pesan más que las ganancias.",
+   "cue": "kahneman",
+   "en": "It builds on Kahneman and Tversky's prospect theory: losses weigh more than gains."
+  },
+  {
+   "escena": "orpo",
+   "inicio": 76.483,
+   "fin": 83.161,
+   "texto": "ORPO elimina hasta el modelo de referencia: suma al ajuste supervisado un término de razón de odds.",
+   "cue": "odds",
+   "en": "ORPO even drops the reference model: it adds an odds-ratio term to supervised fine-tuning."
+  },
+  {
+   "escena": "orpo",
+   "inicio": 83.261,
+   "fin": 87.037,
+   "texto": "En memoria se nota: PPO carga 4 modelos, DPO 2 y ORPO 1.",
+   "cue": "modelos",
+   "en": "Memory shows it: PPO loads 4 models, DPO 2, and ORPO just 1."
+  },
+  {
+   "escena": "rechazo",
+   "inicio": 87.297,
+   "fin": 92.097,
+   "texto": "La línea base más simple es rejection sampling (best-of-n): generas n respuestas y te quedas con la mejor.",
+   "cue": "bon",
+   "en": "The simplest baseline is rejection sampling (best-of-n): generate n answers and keep the best one."
+  },
+  {
+   "escena": "rechazo",
+   "inicio": 92.197,
+   "fin": 98.319,
+   "texto": "Su costo en KL tiene fórmula cerrada: log n − (n−1)/n. Con 16, ≈ 1,8 nats.",
+   "cue": "klbon",
+   "en": "Its KL cost has a closed form: log n − (n−1)/n. With 16, ≈ 1.8 nats."
+  },
+  {
+   "escena": "hacking",
+   "inicio": 98.579,
+   "fin": 104.297,
+   "texto": "El gran riesgo es el reward hacking. Ley de Goodhart: cuando una medida se vuelve objetivo, deja de ser buena medida.",
+   "cue": "goodhart",
+   "en": "The big risk is reward hacking. Goodhart's law: when a measure becomes a target, it stops being a good measure."
+  },
+  {
+   "escena": "hacking",
+   "inicio": 104.397,
+   "fin": 112.589,
+   "texto": "La recompensa aproximada sigue subiendo, pero la real llega a un máximo y cae. Por eso: penalización KL, varios modelos de recompensa y detenerse a tiempo.",
+   "cue": "curva",
+   "en": "The proxy reward keeps climbing, but the true reward peaks and falls. So: a KL penalty, reward-model ensembles and early stopping."
+  },
+  {
+   "escena": "nube",
+   "inicio": 112.849,
+   "fin": 120.401,
+   "texto": "En Google Cloud, Vertex AI ofrece preference tuning para Gemini: pares de respuesta preferida y rechazada, después de un ajuste supervisado.",
+   "cue": "gcp",
+   "en": "On Google Cloud, Vertex AI offers preference tuning for Gemini: pairs of preferred and rejected answers, after supervised fine-tuning."
+  },
+  {
+   "escena": "bases",
+   "inicio": 120.661,
+   "fin": 125.738,
+   "texto": "Las bases para seguir: la sigmoide, la divergencia KL, la regla de Bayes y la máxima verosimilitud.",
+   "cue": "bases",
+   "en": "The basics to keep going: the sigmoid, KL divergence, Bayes' rule and maximum likelihood."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 125.998,
+   "fin": 127.939,
+   "texto": "Si te sirvió, compártelo y sígueme.",
+   "cue": "cta",
+   "en": "If this helped, share and follow."
+  }
+ ]
+}

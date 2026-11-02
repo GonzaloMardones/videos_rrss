@@ -1,0 +1,207 @@
+{
+ "motor": "kokoro",
+ "voz": "am_michael",
+ "idioma": "en-us",
+ "velocidad": 1.27,
+ "pausaFrase": 0.08,
+ "pausaEscena": 0.2,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "In twenty twenty-two, a one point three billion parameter model beat a one hundred seventy-five billion one.",
+     "muestra": "In 2022, a 1.3-billion-parameter model beat a 175-billion one.",
+     "es": "En 2022, un modelo de 1.300 millones de parámetros le ganó a uno de 175.000 millones.",
+     "cue": "13"
+    },
+    {
+     "dice": "Not because of size: people preferred its answers, because it was aligned.",
+     "muestra": "Not because of size: people preferred its answers, because it was aligned.",
+     "es": "No fue por tamaño: las personas preferían sus respuestas, porque estaba alineado.",
+     "cue": "pref",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Tech capsule: alignment, and preference optimization.",
+     "muestra": "Tech capsule: alignment and preference optimization.",
+     "es": "Cápsula técnica: alineamiento y optimización por preferencias."
+    }
+   ]
+  },
+  {
+   "id": "rlhf",
+   "frases": [
+    {
+     "dice": "The classic recipe, R L H F, has three steps: supervised fine-tuning, a reward model trained on human comparisons, and reinforcement learning with P P O.",
+     "muestra": "The classic recipe, RLHF, has three steps: supervised fine-tuning (SFT), a reward model trained on human comparisons, and reinforcement learning with PPO.",
+     "es": "La receta clásica, RLHF, tiene tres pasos: ajuste supervisado (SFT), un modelo de recompensa entrenado con comparaciones humanas y aprendizaje por refuerzo con PPO.",
+     "cue": "sft"
+    },
+    {
+     "dice": "And a K L penalty keeps the model from drifting too far from the original.",
+     "muestra": "A KL penalty keeps the model from drifting too far from the original.",
+     "es": "Una penalización KL evita que el modelo se aleje demasiado del original.",
+     "cue": "kl"
+    }
+   ]
+  },
+  {
+   "id": "bradley",
+   "frases": [
+    {
+     "dice": "So how does a comparison become a number? With the Bradley Terry model, from nineteen fifty-two.",
+     "muestra": "How does a comparison become a number? With the Bradley-Terry model (1952).",
+     "es": "¿Cómo se convierte una comparación en un número? Con el modelo de Bradley-Terry (1952).",
+     "cue": "bt"
+    },
+    {
+     "dice": "The chance of preferring A over B is the sigmoid of the reward difference: one point ahead wins seventy-three percent of the time.",
+     "muestra": "The chance of preferring A over B is the sigmoid of the reward difference: one point ahead wins 73% of the time.",
+     "es": "La probabilidad de preferir A sobre B es la sigmoide de la diferencia de recompensas: si A le saca 1 punto, gana el 73 % de las veces.",
+     "cue": "sigma"
+    }
+   ]
+  },
+  {
+   "id": "bayes",
+   "frases": [
+    {
+     "dice": "And here comes Bayes. The optimal policy is the original model times the exponential of the reward: a prior times a likelihood.",
+     "muestra": "Here comes Bayes. The optimal policy is the original model times exp(reward / β): a prior times a likelihood.",
+     "es": "Aquí entra Bayes. La política óptima es el modelo original multiplicado por exp(recompensa / β): un previo por una verosimilitud.",
+     "cue": "prior"
+    },
+    {
+     "dice": "Beta sets the trust: a large beta stays near the prior; a small beta lets the reward take over.",
+     "muestra": "β sets the trust: a large β stays near the prior; a small β lets the reward take over.",
+     "es": "β es la confianza: con β grande te quedas cerca del previo; con β chico, la recompensa manda.",
+     "cue": "beta"
+    }
+   ]
+  },
+  {
+   "id": "dpo",
+   "frases": [
+    {
+     "dice": "And D P O solves that formula for the reward: the model itself is the reward model.",
+     "muestra": "DPO solves that formula for the reward: the model itself is the reward model.",
+     "es": "DPO despeja la recompensa de esa fórmula: el propio modelo es el modelo de recompensa.",
+     "cue": "dpo"
+    },
+    {
+     "dice": "So the loss is a classification: push the chosen answer up, and the rejected one down, with no reinforcement learning. It starts at log two: zero point six nine.",
+     "muestra": "The loss is a classification: push the chosen answer up and the rejected one down, no reinforcement learning. It starts at ln 2 ≈ 0.69.",
+     "es": "La pérdida es una clasificación: subir la preferida y bajar la rechazada, sin aprendizaje por refuerzo. Parte en ln 2 ≈ 0,69.",
+     "cue": "perdida"
+    }
+   ]
+  },
+  {
+   "id": "kto",
+   "frases": [
+    {
+     "dice": "And if you only have thumbs up or down, with no pairs, you use K T O.",
+     "muestra": "If you only have thumbs up or down, with no pairs, you use KTO.",
+     "es": "Si solo tienes pulgares arriba o abajo, sin pares, usas KTO.",
+     "cue": "kto"
+    },
+    {
+     "dice": "It builds on Kahneman and Tversky's prospect theory: losses weigh more than gains.",
+     "muestra": "It builds on Kahneman and Tversky's prospect theory: losses weigh more than gains.",
+     "es": "Se basa en la teoría prospectiva de Kahneman y Tversky: las pérdidas pesan más que las ganancias.",
+     "cue": "kahneman"
+    }
+   ]
+  },
+  {
+   "id": "orpo",
+   "frases": [
+    {
+     "dice": "And Orpo even drops the reference model: it adds an odds ratio term to supervised fine-tuning.",
+     "muestra": "ORPO even drops the reference model: it adds an odds-ratio term to supervised fine-tuning.",
+     "es": "ORPO elimina hasta el modelo de referencia: suma al ajuste supervisado un término de razón de odds.",
+     "cue": "odds"
+    },
+    {
+     "dice": "And memory shows it: P P O loads four models, D P O two, and Orpo just one.",
+     "muestra": "Memory shows it: PPO loads 4 models, DPO 2, and ORPO just 1.",
+     "es": "En memoria se nota: PPO carga 4 modelos, DPO 2 y ORPO 1.",
+     "cue": "modelos"
+    }
+   ]
+  },
+  {
+   "id": "rechazo",
+   "frases": [
+    {
+     "dice": "The simplest baseline is rejection sampling: generate n answers, and keep the best one.",
+     "muestra": "The simplest baseline is rejection sampling (best-of-n): generate n answers and keep the best one.",
+     "es": "La línea base más simple es rejection sampling (best-of-n): generas n respuestas y te quedas con la mejor.",
+     "cue": "bon"
+    },
+    {
+     "dice": "Its K L cost has a closed form: log n, minus n minus one over n. With sixteen, about one point eight.",
+     "muestra": "Its KL cost has a closed form: log n − (n−1)/n. With 16, ≈ 1.8 nats.",
+     "es": "Su costo en KL tiene fórmula cerrada: log n − (n−1)/n. Con 16, ≈ 1,8 nats.",
+     "cue": "klbon"
+    }
+   ]
+  },
+  {
+   "id": "hacking",
+   "frases": [
+    {
+     "dice": "The big risk is reward hacking. Goodhart's law: when a measure becomes a target, it stops being a good measure.",
+     "muestra": "The big risk is reward hacking. Goodhart's law: when a measure becomes a target, it stops being a good measure.",
+     "es": "El gran riesgo es el reward hacking. Ley de Goodhart: cuando una medida se vuelve objetivo, deja de ser buena medida.",
+     "cue": "goodhart"
+    },
+    {
+     "dice": "The proxy reward keeps climbing, but the true reward peaks and falls. So: a K L penalty, reward model ensembles, and early stopping.",
+     "muestra": "The proxy reward keeps climbing, but the true reward peaks and falls. So: a KL penalty, reward-model ensembles and early stopping.",
+     "es": "La recompensa aproximada sigue subiendo, pero la real llega a un máximo y cae. Por eso: penalización KL, varios modelos de recompensa y detenerse a tiempo.",
+     "cue": "curva"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "On Google Cloud, Vertex AI offers preference tuning for Gemini: pairs of preferred and rejected answers, after supervised fine-tuning.",
+     "muestra": "On Google Cloud, Vertex AI offers preference tuning for Gemini: pairs of preferred and rejected answers, after supervised fine-tuning.",
+     "es": "En Google Cloud, Vertex AI ofrece preference tuning para Gemini: pares de respuesta preferida y rechazada, después de un ajuste supervisado.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "The basics to keep going: the sigmoid, K L divergence, Bayes' rule, and maximum likelihood.",
+     "muestra": "The basics to keep going: the sigmoid, KL divergence, Bayes' rule and maximum likelihood.",
+     "es": "Las bases para seguir: la sigmoide, la divergencia KL, la regla de Bayes y la máxima verosimilitud.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "If this helped, share and follow.",
+     "muestra": "If this helped, share and follow.",
+     "es": "Si te sirvió, compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}
