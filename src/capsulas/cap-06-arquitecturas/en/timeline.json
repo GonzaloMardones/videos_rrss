@@ -1,0 +1,227 @@
+{
+ "duracion": 128.309,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.79
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.79,
+   "fin": 14.423
+  },
+  {
+   "id": "atencion",
+   "inicio": 14.423,
+   "fin": 24.303
+  },
+  {
+   "id": "gqa",
+   "inicio": 24.303,
+   "fin": 38.77
+  },
+  {
+   "id": "moe",
+   "inicio": 38.77,
+   "fin": 51.064
+  },
+  {
+   "id": "router",
+   "inicio": 51.064,
+   "fin": 65.979
+  },
+  {
+   "id": "lineal",
+   "inicio": 65.979,
+   "fin": 78.974
+  },
+  {
+   "id": "ssm",
+   "inicio": 78.974,
+   "fin": 92.48
+  },
+  {
+   "id": "mamba",
+   "inicio": 92.48,
+   "fin": 105.731
+  },
+  {
+   "id": "nube",
+   "inicio": 105.731,
+   "fin": 119.926
+  },
+  {
+   "id": "bases",
+   "inicio": 119.926,
+   "fin": 126.568
+  },
+  {
+   "id": "cierre",
+   "inicio": 126.568,
+   "fin": 128.309
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.857,
+   "texto": "Going from 4,096 to 131,072 tokens multiplies the text by 32.",
+   "cue": "x32",
+   "es": "Pasar de 4.096 a 131.072 tokens multiplica el texto por 32."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.937,
+   "fin": 11.59,
+   "texto": "And the cost of attention by 1,024. That is why there is life beyond the dense Transformer.",
+   "cue": "x1024",
+   "es": "Y el costo de la atención, por 1.024. Por eso hay vida más allá del Transformer denso."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.79,
+   "fin": 14.223,
+   "texto": "Tech capsule: beyond the dense Transformer.",
+   "cue": null,
+   "es": "Cápsula técnica: más allá del Transformer denso."
+  },
+  {
+   "escena": "atencion",
+   "inicio": 14.423,
+   "fin": 18.668,
+   "texto": "Attention compares every token with every other one: n² comparisons.",
+   "cue": "n2",
+   "es": "La atención compara cada token con todos los demás: n² comparaciones."
+  },
+  {
+   "escena": "atencion",
+   "inicio": 18.748,
+   "fin": 24.103,
+   "texto": "It also stores the keys and values of every token: the KV cache grows with the context.",
+   "cue": "kv",
+   "es": "Además guarda las claves y los valores de cada token: la caché KV crece con el contexto."
+  },
+  {
+   "escena": "gqa",
+   "inicio": 24.303,
+   "fin": 28.036,
+   "texto": "Grouped-query attention (GQA) shares keys and values across several heads.",
+   "cue": "gqa",
+   "es": "La atención con consultas agrupadas (GQA) comparte claves y valores entre varias cabezas."
+  },
+  {
+   "escena": "gqa",
+   "inicio": 28.116,
+   "fin": 38.57,
+   "texto": "In a 70-billion-parameter model, with 8 groups instead of 64 heads, the cache per token drops from 2.5 to 0.31 MiB: 8× less.",
+   "cue": "ocho",
+   "es": "En un modelo de 70.000 millones, con 8 grupos en vez de 64 cabezas, la caché por token baja de 2,5 a 0,31 MiB: 8 veces menos."
+  },
+  {
+   "escena": "moe",
+   "inicio": 38.77,
+   "fin": 44.615,
+   "texto": "A mixture of experts (MoE) replaces one big network with several small ones, and a router picks which to use.",
+   "cue": "expertos",
+   "es": "La mezcla de expertos (MoE) reemplaza una red grande por varias pequeñas, y un enrutador elige cuáles usar."
+  },
+  {
+   "escena": "moe",
+   "inicio": 44.695,
+   "fin": 50.864,
+   "texto": "Mixtral has 47 billion parameters, but each token uses only 13: 2 experts out of 8.",
+   "cue": "mixtral",
+   "es": "Mixtral tiene 47.000 millones de parámetros, pero cada token usa solo 13: 2 expertos de 8."
+  },
+  {
+   "escena": "router",
+   "inicio": 51.064,
+   "fin": 58.829,
+   "texto": "The idea dates back to 1991: a mixture model, where the output is the average of the experts weighted by their probability.",
+   "cue": "mezcla",
+   "es": "La idea es de 1991: un modelo de mezcla, donde la salida es el promedio de los expertos ponderado por su probabilidad."
+  },
+  {
+   "escena": "router",
+   "inicio": 58.909,
+   "fin": 65.779,
+   "texto": "Today the router is a softmax: it keeps the top 2, and a load-balancing loss stops the same expert from always winning.",
+   "cue": "topk",
+   "es": "Hoy el enrutador es una softmax: se queda con los 2 más probables, y una pérdida de balance evita que gane siempre el mismo."
+  },
+  {
+   "escena": "lineal",
+   "inicio": 65.979,
+   "fin": 71.739,
+   "texto": "Linear attention changes the order of the multiplications: keys times values first, then the queries.",
+   "cue": "asociar",
+   "es": "La atención lineal cambia el orden de las multiplicaciones: primero claves por valores y después las consultas."
+  },
+  {
+   "escena": "lineal",
+   "inicio": 71.819,
+   "fin": 78.773,
+   "texto": "The cost goes from n²·d to n·d²: a Transformer that behaves like a recurrent network.",
+   "cue": "rnn",
+   "es": "El costo pasa de n²·d a n·d²: un Transformer que se comporta como una red recurrente."
+  },
+  {
+   "escena": "ssm",
+   "inicio": 78.974,
+   "fin": 85.907,
+   "texto": "State space models (SSMs) summarize the whole past in a fixed-size state: hₜ = A·hₜ₋₁ + B·xₜ.",
+   "cue": "estado",
+   "es": "Los modelos de espacio de estados (SSM) resumen todo el pasado en un estado de tamaño fijo: hₜ = A·hₜ₋₁ + B·xₜ."
+  },
+  {
+   "escena": "ssm",
+   "inicio": 85.987,
+   "fin": 92.28,
+   "texto": "They train in parallel like a convolution and generate like a recurrent network: linear cost and constant memory.",
+   "cue": "conv",
+   "es": "Entrenan en paralelo como una convolución y generan como una recurrente: costo lineal y memoria constante."
+  },
+  {
+   "escena": "mamba",
+   "inicio": 92.48,
+   "fin": 98.816,
+   "texto": "Mamba makes B, C and the step Δ depend on the input: the model decides what to remember and what to forget.",
+   "cue": "selectivo",
+   "es": "Mamba hace que B, C y el paso Δ dependan de la entrada: el modelo decide qué recordar y qué olvidar."
+  },
+  {
+   "escena": "mamba",
+   "inicio": 98.896,
+   "fin": 105.531,
+   "texto": "It reports up to 5× higher inference throughput than a Transformer. And hybrids, like Jamba, mix both ideas.",
+   "cue": "hibrido",
+   "es": "Reporta hasta 5× más rendimiento en inferencia que un Transformer. Y los híbridos, como Jamba, mezclan las dos ideas."
+  },
+  {
+   "escena": "nube",
+   "inicio": 105.731,
+   "fin": 119.726,
+   "texto": "On Google Cloud, Gemini 1.5 Pro is a mixture-of-experts Transformer. And large-scale MoE grew up on TPUs: GShard trained 600 billion parameters on 2,048 TPUs.",
+   "cue": "gcp",
+   "es": "En Google Cloud, Gemini 1.5 Pro es un Transformer de mezcla de expertos. Y la MoE a gran escala creció sobre TPUs: GShard entrenó 600.000 millones de parámetros en 2.048 TPUs."
+  },
+  {
+   "escena": "bases",
+   "inicio": 119.926,
+   "fin": 126.368,
+   "texto": "The basics: the quadratic cost of attention, the KV cache, softmax and mixture models, and linear recurrences.",
+   "cue": "bases",
+   "es": "Las bases: el costo cuadrático de la atención, la caché KV, la softmax y los modelos de mezcla, y las recurrencias lineales."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 126.568,
+   "fin": 128.109,
+   "texto": "If this helped, share and follow.",
+   "cue": "cta",
+   "es": "Si te sirvió, compártelo y sígueme."
+  }
+ ]
+}

@@ -55,6 +55,8 @@ import { Cap04Alineamiento, CAP04ALINEAMIENTO_FRAMES } from "./capsulas/cap-04-a
 import { Cap04AlineamientoEN, CAP04ALINEAMIENTOEN_FRAMES } from "./capsulas/cap-04-alineamiento/Cap04AlineamientoEN";
 import { Cap05Paralelismo, CAP05PARALELISMO_FRAMES } from "./capsulas/cap-05-paralelismo/Cap05Paralelismo";
 import { Cap05ParalelismoEN, CAP05PARALELISMOEN_FRAMES } from "./capsulas/cap-05-paralelismo/Cap05ParalelismoEN";
+import { Cap06Arquitecturas, CAP06ARQUITECTURAS_FRAMES } from "./capsulas/cap-06-arquitecturas/Cap06Arquitecturas";
+import { Cap06ArquitecturasEN, CAP06ARQUITECTURASEN_FRAMES } from "./capsulas/cap-06-arquitecturas/Cap06ArquitecturasEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -726,6 +728,32 @@ export const RemotionRoot: React.FC = () => {
         id="Cap05-Paralelismo-EN"
         component={Cap05ParalelismoEN}
         durationInFrames={CAP05PARALELISMOEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap06-Arquitecturas"
+        component={Cap06Arquitecturas}
+        durationInFrames={CAP06ARQUITECTURAS_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap06-Arquitecturas-EN"
+        component={Cap06ArquitecturasEN}
+        durationInFrames={CAP06ARQUITECTURASEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
