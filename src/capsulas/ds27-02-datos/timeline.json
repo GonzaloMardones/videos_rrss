@@ -1,0 +1,235 @@
+{
+ "duracion": 160.963,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 10.018
+  },
+  {
+   "id": "titulo",
+   "inicio": 10.018,
+   "fin": 15.462
+  },
+  {
+   "id": "jaccard",
+   "inicio": 15.462,
+   "fin": 28.963
+  },
+  {
+   "id": "minhash",
+   "inicio": 28.963,
+   "fin": 53.167
+  },
+  {
+   "id": "lsh",
+   "inicio": 53.167,
+   "fin": 71.298
+  },
+  {
+   "id": "escala",
+   "inicio": 71.298,
+   "fin": 88.661
+  },
+  {
+   "id": "sintetico",
+   "inicio": 88.661,
+   "fin": 98.563
+  },
+  {
+   "id": "verificador",
+   "inicio": 98.563,
+   "fin": 121.167
+  },
+  {
+   "id": "colapso",
+   "inicio": 121.167,
+   "fin": 138.231
+  },
+  {
+   "id": "nube",
+   "inicio": 138.231,
+   "fin": 146.961
+  },
+  {
+   "id": "bases",
+   "inicio": 146.961,
+   "fin": 156.778
+  },
+  {
+   "id": "cierre",
+   "inicio": 156.778,
+   "fin": 160.963
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.306,
+   "texto": "En el dataset C4, una sola frase de 61 palabras aparecía más de 60.000 veces.",
+   "cue": "c4",
+   "en": "In the C4 dataset, a single 61-word sentence appeared more than 60,000 times."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.406,
+   "fin": 9.758,
+   "texto": "Al quitar los duplicados, los modelos repitieron texto memorizado diez veces menos.",
+   "cue": "diez",
+   "en": "After removing duplicates, models emitted memorized text 10× less often."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 10.018,
+   "fin": 15.202,
+   "texto": "Data Scientist 2027, etapa 2: curación de datos y pipelines sintéticos.",
+   "cue": null,
+   "en": "Data Scientist 2027, stage 2: data curation and synthetic pipelines."
+  },
+  {
+   "escena": "jaccard",
+   "inicio": 15.462,
+   "fin": 21.201,
+   "texto": "¿Cómo se mide si dos textos son casi iguales? Los cortas en trozos de tres palabras, llamados shingles.",
+   "cue": "shingles",
+   "en": "First, how do you tell if two texts are near duplicates? You cut them into three-word pieces, called shingles."
+  },
+  {
+   "escena": "jaccard",
+   "inicio": 21.301,
+   "fin": 28.703,
+   "texto": "La similitud de Jaccard es los trozos en común dividido por todos los trozos distintos. En este ejemplo, 8 de 11: 0,73.",
+   "cue": "indice",
+   "en": "Jaccard similarity is the shared pieces divided by all distinct pieces. In this example, 8 out of 11: 0.73."
+  },
+  {
+   "escena": "minhash",
+   "inicio": 28.963,
+   "fin": 35.641,
+   "texto": "Pero con mil millones de documentos, comparar todos los pares son 5 · 10¹⁷ comparaciones. Crece como n².",
+   "cue": "pares",
+   "en": "But with a billion documents, comparing every pair means 5 · 10¹⁷ comparisons. It grows as n²."
+  },
+  {
+   "escena": "minhash",
+   "inicio": 35.741,
+   "fin": 46.087,
+   "texto": "El truco de MinHash: ordenas los trozos con una función hash al azar y te quedas con el mínimo. La probabilidad de que dos textos compartan ese mínimo es exactamente su similitud de Jaccard.",
+   "cue": "truco",
+   "en": "Here's the MinHash trick: order the pieces with a random hash and keep the minimum. The probability that two texts share that minimum is exactly their Jaccard similarity."
+  },
+  {
+   "escena": "minhash",
+   "inicio": 46.187,
+   "fin": 52.907,
+   "texto": "Con 128 funciones hash, cada documento queda resumido en una firma corta, y el error de la estimación ronda los 3 puntos.",
+   "cue": "firma",
+   "en": "With 128 hash functions, each document becomes a short signature, and the estimate is off by about 3 points."
+  },
+  {
+   "escena": "lsh",
+   "inicio": 53.167,
+   "fin": 61.85,
+   "texto": "Para no comparar firmas de a pares se usan bandas (LSH): divides la firma en 20 bandas de 5 valores, y solo comparas documentos que coinciden en alguna banda.",
+   "cue": "bandas",
+   "en": "To avoid comparing signatures pairwise, use bands (LSH): split the signature into 20 bands of 5 values, and only compare documents that match in some band."
+  },
+  {
+   "escena": "lsh",
+   "inicio": 61.95,
+   "fin": 71.038,
+   "texto": "Con similitud 0,8, la probabilidad de ser candidatos es 99,96%. Con 0,3, menos del 5%. El costo pasa a ser casi lineal.",
+   "cue": "curva",
+   "en": "At similarity 0.8, the chance of becoming candidates is 99.96%. At 0.3, under 5%. The cost becomes nearly linear."
+  },
+  {
+   "escena": "escala",
+   "inicio": 71.298,
+   "fin": 79.298,
+   "texto": "¿Cuántos datos necesitas? El estudio Chinchilla mostró que, con un cómputo fijo, datos y parámetros deben crecer juntos: unos 20 tokens por parámetro.",
+   "cue": "chinchilla",
+   "en": "How much data do you need? The Chinchilla study showed that, for fixed compute, data and parameters should grow together: about 20 tokens per parameter."
+  },
+  {
+   "escena": "escala",
+   "inicio": 79.398,
+   "fin": 88.401,
+   "texto": "Su modelo de 70.000 millones de parámetros usó 1,4 billones de tokens. Y la mezcla también importa: cuánto pesa la web, el código o los libros es un hiperparámetro.",
+   "cue": "mezcla",
+   "en": "Its 70-billion-parameter model used 1.4 trillion tokens. And the mix matters too: how much weight goes to web, code, or books is a hyperparameter."
+  },
+  {
+   "escena": "sintetico",
+   "inicio": 88.661,
+   "fin": 98.303,
+   "texto": "Cuando faltan datos, se fabrican. Evol-Instruct le pide a un modelo reescribir instrucciones: más profundas (restricciones, pasos de razonamiento) o más amplias (temas nuevos).",
+   "cue": "evol",
+   "en": "When data runs short, you make it. Evol-Instruct asks a model to rewrite instructions: deeper (constraints, reasoning steps) or broader (new topics)."
+  },
+  {
+   "escena": "verificador",
+   "inicio": 98.563,
+   "fin": 104.259,
+   "texto": "Pero muchas respuestas sintéticas están mal. Por eso un modelo verificador filtra las trazas. Y aquí entra Bayes.",
+   "cue": "filtro",
+   "en": "But many synthetic answers are wrong. So a verifier model filters the traces. This is where Bayes comes in."
+  },
+  {
+   "escena": "verificador",
+   "inicio": 104.359,
+   "fin": 115.111,
+   "texto": "Si el generador acierta 60%, y el verificador aprueba 90 de cada 100 correctas pero también 20 de cada 100 incorrectas, lo que pasa el filtro es correcto en un 87%.",
+   "cue": "bayes",
+   "en": "If the generator is right 60% of the time, and the verifier passes 90 in 100 correct answers but also 20 in 100 wrong ones, what passes is correct 87% of the time."
+  },
+  {
+   "escena": "verificador",
+   "inicio": 115.211,
+   "fin": 120.907,
+   "texto": "Es la regla de Bayes: la creencia previa (60%) se actualiza con la evidencia de que pasó el filtro.",
+   "cue": "posterior",
+   "en": "That's Bayes' rule: the prior (60%) is updated by the evidence that it passed the filter."
+  },
+  {
+   "escena": "colapso",
+   "inicio": 121.167,
+   "fin": 128.186,
+   "texto": "Ojo: si entrenas una y otra vez con datos que tú mismo generaste, las colas de la distribución desaparecen. Se llama colapso del modelo.",
+   "cue": "cola",
+   "en": "Careful: if you train again and again on data you generated yourself, the tails of the distribution vanish. It's called model collapse."
+  },
+  {
+   "escena": "colapso",
+   "inicio": 128.286,
+   "fin": 137.971,
+   "texto": "En una simulación simple, una normal reajustada con 20 muestras por generación pierde tres cuartos de su dispersión en 50 generaciones. La cura: mezclar siempre datos reales.",
+   "cue": "sigma",
+   "en": "In a simple simulation, a normal refit on 20 samples per generation loses three quarters of its spread in 50 generations. The cure: always mix in real data."
+  },
+  {
+   "escena": "nube",
+   "inicio": 138.231,
+   "fin": 146.701,
+   "texto": "En Google Cloud: Dataflow ejecuta el pipeline de limpieza, BigQuery guarda las firmas y encuentra duplicados, y Vertex AI genera y verifica los datos sintéticos.",
+   "cue": "gcp",
+   "en": "On Google Cloud: Dataflow runs the cleaning pipeline, BigQuery stores signatures and finds duplicates, and Vertex AI generates and verifies synthetic data."
+  },
+  {
+   "escena": "bases",
+   "inicio": 146.961,
+   "fin": 156.518,
+   "texto": "Con esto tienes las bases: MinHash convierte comparar textos en comparar firmas. LSH evita el costo cuadrático. Y lo sintético necesita un verificador y datos reales en la mezcla.",
+   "cue": "bases",
+   "en": "The basics: MinHash turns comparing texts into comparing signatures. LSH avoids the quadratic cost. Synthetic data needs a verifier, plus real data in the mix."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 156.778,
+   "fin": 160.703,
+   "texto": "Próxima etapa: ajuste eficiente (PEFT) y fusión de modelos. Compártelo y sígueme.",
+   "cue": "cta",
+   "en": "Next: efficient fine-tuning (PEFT) and model merging. Share and follow."
+  }
+ ]
+}

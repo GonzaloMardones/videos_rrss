@@ -47,6 +47,8 @@ import { Cuasi10Juez, CUASI10JUEZ_FRAMES } from "./capsulas/cuasi-10-juez/Cuasi1
 import { Cuasi11Equipo, CUASI11EQUIPO_FRAMES } from "./capsulas/cuasi-11-equipo/Cuasi11Equipo";
 import { DS27Tensores, DS27TENSORES_FRAMES } from "./capsulas/ds27-01-tensores/DS27Tensores";
 import { DS27TensoresEN, DS27TENSORESEN_FRAMES } from "./capsulas/ds27-01-tensores/DS27TensoresEN";
+import { DS27Datos, DS27DATOS_FRAMES } from "./capsulas/ds27-02-datos/DS27Datos";
+import { DS27DatosEN, DS27DATOSEN_FRAMES } from "./capsulas/ds27-02-datos/DS27DatosEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -614,6 +616,32 @@ export const RemotionRoot: React.FC = () => {
         id="DS27-01-Tensores-EN"
         component={DS27TensoresEN}
         durationInFrames={DS27TENSORESEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Data Scientist 2027",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="DS27-02-Datos"
+        component={DS27Datos}
+        durationInFrames={DS27DATOS_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Data Scientist 2027",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="DS27-02-Datos-EN"
+        component={DS27DatosEN}
+        durationInFrames={DS27DATOSEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
