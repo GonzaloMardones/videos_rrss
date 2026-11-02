@@ -57,6 +57,8 @@ import { Cap05Paralelismo, CAP05PARALELISMO_FRAMES } from "./capsulas/cap-05-par
 import { Cap05ParalelismoEN, CAP05PARALELISMOEN_FRAMES } from "./capsulas/cap-05-paralelismo/Cap05ParalelismoEN";
 import { Cap06Arquitecturas, CAP06ARQUITECTURAS_FRAMES } from "./capsulas/cap-06-arquitecturas/Cap06Arquitecturas";
 import { Cap06ArquitecturasEN, CAP06ARQUITECTURASEN_FRAMES } from "./capsulas/cap-06-arquitecturas/Cap06ArquitecturasEN";
+import { Cap07Multimodal, CAP07MULTIMODAL_FRAMES } from "./capsulas/cap-07-multimodal/Cap07Multimodal";
+import { Cap07MultimodalEN, CAP07MULTIMODALEN_FRAMES } from "./capsulas/cap-07-multimodal/Cap07MultimodalEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -754,6 +756,32 @@ export const RemotionRoot: React.FC = () => {
         id="Cap06-Arquitecturas-EN"
         component={Cap06ArquitecturasEN}
         durationInFrames={CAP06ARQUITECTURASEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap07-Multimodal"
+        component={Cap07Multimodal}
+        durationInFrames={CAP07MULTIMODAL_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap07-Multimodal-EN"
+        component={Cap07MultimodalEN}
+        durationInFrames={CAP07MULTIMODALEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
