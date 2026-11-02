@@ -1,0 +1,227 @@
+{
+ "duracion": 144.287,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.405
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.405,
+   "fin": 14.459
+  },
+  {
+   "id": "lora",
+   "inicio": 14.459,
+   "fin": 35.293
+  },
+  {
+   "id": "rango",
+   "inicio": 35.293,
+   "fin": 50.842
+  },
+  {
+   "id": "qlora",
+   "inicio": 50.842,
+   "fin": 66.754
+  },
+  {
+   "id": "dora",
+   "inicio": 66.754,
+   "fin": 75.633
+  },
+  {
+   "id": "vectores",
+   "inicio": 75.633,
+   "fin": 86.489
+  },
+  {
+   "id": "slerp",
+   "inicio": 86.489,
+   "fin": 99.691
+  },
+  {
+   "id": "ties",
+   "inicio": 99.691,
+   "fin": 120.105
+  },
+  {
+   "id": "nube",
+   "inicio": 120.105,
+   "fin": 132.034
+  },
+  {
+   "id": "bases",
+   "inicio": 132.034,
+   "fin": 142.086
+  },
+  {
+   "id": "cierre",
+   "inicio": 142.086,
+   "fin": 144.287
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.058,
+   "texto": "Ajustar un modelo de 65.000 millones de parámetros en 16 bits necesita más de 780 GB de memoria de GPU.",
+   "cue": "780",
+   "en": "Fine-tuning a 65-billion-parameter model in 16-bit needs more than 780 GB of GPU memory."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 8.158,
+   "fin": 11.145,
+   "texto": "Con QLoRA, menos de 48: una sola GPU.",
+   "cue": "48",
+   "en": "With QLoRA, less than 48: a single GPU."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.405,
+   "fin": 14.199,
+   "texto": "Cápsula técnica: ajuste eficiente (PEFT) y fusión de modelos.",
+   "cue": null,
+   "en": "Tech capsule: parameter-efficient fine-tuning (PEFT) and model merging."
+  },
+  {
+   "escena": "lora",
+   "inicio": 14.459,
+   "fin": 19.238,
+   "texto": "La idea de LoRA es simple: congelas los pesos originales y aprendes solo una corrección pequeña.",
+   "cue": "congela",
+   "en": "The idea behind LoRA is simple: freeze the original weights, and learn only a small correction."
+  },
+  {
+   "escena": "lora",
+   "inicio": 19.338,
+   "fin": 26.165,
+   "texto": "Esa corrección es el producto de dos matrices delgadas, B·A, de rango r. En vez de d·k parámetros, entrenas r·(d + k).",
+   "cue": "ba",
+   "en": "That correction is the product of two thin matrices, B·A, with rank r. Instead of d·k parameters, you train r·(d + k)."
+  },
+  {
+   "escena": "lora",
+   "inicio": 26.265,
+   "fin": 35.033,
+   "texto": "Con una capa de 4096 × 4096 y rango 8: 65.536 parámetros en vez de 16,8 millones. El 0,39%.",
+   "cue": "pct",
+   "en": "For a 4096 × 4096 layer with rank 8: 65,536 parameters instead of 16.8 million. 0.39%."
+  },
+  {
+   "escena": "rango",
+   "inicio": 35.293,
+   "fin": 42.695,
+   "texto": "¿Por qué basta un rango tan bajo? Porque el cambio que necesita el modelo para una tarea nueva concentra casi toda su energía en pocas direcciones.",
+   "cue": "svd",
+   "en": "Why is such a low rank enough? Because the change a model needs for a new task concentrates almost all its energy in a few directions."
+  },
+  {
+   "escena": "rango",
+   "inicio": 42.795,
+   "fin": 50.582,
+   "texto": "En GPT-3, LoRA entrenó 10.000 veces menos parámetros, con 3 veces menos memoria. Y al terminar, sumas B·A a los pesos: cero latencia extra.",
+   "cue": "gpt3",
+   "en": "On GPT-3, LoRA trained 10,000× fewer parameters, with 3× less memory. When done, you add B·A into the weights: zero extra latency."
+  },
+  {
+   "escena": "qlora",
+   "inicio": 50.842,
+   "fin": 58.159,
+   "texto": "QLoRA va más allá: guarda el modelo congelado en 4 bits, con un formato llamado NormalFloat 4, y entrena los adaptadores LoRA encima.",
+   "cue": "nf4",
+   "en": "QLoRA goes further: it stores the frozen model in 4 bits, with a format called NormalFloat 4, and trains LoRA adapters on top."
+  },
+  {
+   "escena": "qlora",
+   "inicio": 58.259,
+   "fin": 66.494,
+   "texto": "Además, cuantiza las propias constantes de cuantización (ahorra 0,37 bits por parámetro) y pagina el optimizador para evitar picos de memoria.",
+   "cue": "doble",
+   "en": "It also quantizes the quantization constants themselves, saving 0.37 bits per parameter, and pages the optimizer to avoid memory spikes."
+  },
+  {
+   "escena": "dora",
+   "inicio": 66.754,
+   "fin": 75.373,
+   "texto": "DoRA separa cada peso en magnitud y dirección: aplica LoRA solo a la dirección y entrena la magnitud aparte. Con el mismo rango, suele acercarse más al ajuste completo.",
+   "cue": "dora",
+   "en": "DoRA splits each weight into magnitude and direction: LoRA on the direction only, magnitude trained separately. At the same rank, it usually gets closer to full fine-tuning."
+  },
+  {
+   "escena": "vectores",
+   "inicio": 75.633,
+   "fin": 81.691,
+   "texto": "Ahora, fusionar modelos. Si restas el modelo base al modelo ajustado, obtienes un vector de tarea: lo que el ajuste cambió.",
+   "cue": "tarea",
+   "en": "Now, model merging. Subtract the base model from a fine-tuned model, and you get a task vector: what fine-tuning changed."
+  },
+  {
+   "escena": "vectores",
+   "inicio": 81.791,
+   "fin": 86.229,
+   "texto": "Sumando vectores de varias tareas a la base, combinas habilidades sin volver a entrenar.",
+   "cue": "suma",
+   "en": "Add task vectors from several tasks to the base, and you combine skills without retraining."
+  },
+  {
+   "escena": "slerp",
+   "inicio": 86.489,
+   "fin": 93.593,
+   "texto": "Pero promediar en línea recta tiene un problema: entre dos vectores perpendiculares de largo 1, el punto medio mide solo 0,71.",
+   "cue": "lerp",
+   "en": "But averaging in a straight line has a problem: between two perpendicular unit vectors, the midpoint is only 0.71 long."
+  },
+  {
+   "escena": "slerp",
+   "inicio": 93.693,
+   "fin": 99.431,
+   "texto": "SLERP interpola por el arco de la esfera y conserva el largo. Por eso es una forma común de mezclar dos modelos.",
+   "cue": "arco",
+   "en": "SLERP interpolates along the arc of the sphere and keeps the length. That's why it's a common way to blend two models."
+  },
+  {
+   "escena": "ties",
+   "inicio": 99.691,
+   "fin": 110.209,
+   "texto": "Con más de dos modelos, TIES resuelve los choques en tres pasos: recorta (deja el 20% de cambios más grandes), elige un signo por parámetro y promedia solo los que coinciden.",
+   "cue": "pasos",
+   "en": "With more than two models, TIES resolves conflicts in three steps: trim (keep the top 20% of changes), elect one sign per parameter, and average only the values that agree."
+  },
+  {
+   "escena": "ties",
+   "inicio": 110.309,
+   "fin": 119.845,
+   "texto": "Si tres modelos cambian un parámetro en +0,5, +0,3 y −0,6, el promedio simple casi lo anula: 0,07. TIES da 0,4.",
+   "cue": "ejemplo",
+   "en": "If three models change a parameter by +0.5, +0.3 and −0.6, a plain average almost cancels it: 0.07. TIES gives 0.4."
+  },
+  {
+   "escena": "nube",
+   "inicio": 120.105,
+   "fin": 131.774,
+   "texto": "En Google Cloud, Vertex AI ofrece ajuste supervisado y modelos abiertos como Gemma para adaptar con LoRA. Y una máquina con una GPU L4 de 24 GB alcanza para QLoRA sobre un modelo de 7.000 millones.",
+   "cue": "gcp",
+   "en": "On Google Cloud, Vertex AI offers supervised tuning and open models like Gemma to adapt with LoRA. One 24 GB L4 GPU is enough for QLoRA on a 7B model."
+  },
+  {
+   "escena": "bases",
+   "inicio": 132.034,
+   "fin": 141.826,
+   "texto": "Con esto tienes las bases: LoRA aprende una corrección de bajo rango; QLoRA la entrena sobre un modelo en 4 bits; y para fusionar, SLERP conserva el largo y TIES evita que los signos se anulen.",
+   "cue": "bases",
+   "en": "The basics: LoRA learns a low-rank correction. QLoRA trains it on a 4-bit model. For merging, SLERP keeps the length and TIES stops signs from cancelling out."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 142.086,
+   "fin": 144.027,
+   "texto": "Si te sirvió, compártelo y sígueme.",
+   "cue": "cta",
+   "en": "If this helped, share and follow."
+  }
+ ]
+}
