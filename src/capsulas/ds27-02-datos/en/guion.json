@@ -28,9 +28,9 @@
    "id": "titulo",
    "frases": [
     {
-     "dice": "Data Scientist twenty twenty-seven, stage two: data curation and synthetic pipelines.",
-     "muestra": "Data Scientist 2027, stage 2: data curation and synthetic pipelines.",
-     "es": "Data Scientist 2027, etapa 2: curación de datos y pipelines sintéticos."
+     "dice": "Tech capsule: data curation and synthetic data.",
+     "muestra": "Tech capsule: data curation and synthetic data.",
+     "es": "Cápsula técnica: curación de datos y datos sintéticos."
     }
    ]
   },
@@ -185,9 +185,9 @@
    "id": "cierre",
    "frases": [
     {
-     "dice": "Next: efficient fine-tuning and model merging. Share and follow.",
-     "muestra": "Next: efficient fine-tuning (PEFT) and model merging. Share and follow.",
-     "es": "Próxima etapa: ajuste eficiente (PEFT) y fusión de modelos. Compártelo y sígueme.",
+     "dice": "If this helped, share and follow.",
+     "muestra": "If this helped, share and follow.",
+     "es": "Si te sirvió, compártelo y sígueme.",
      "cue": "cta"
     }
    ]

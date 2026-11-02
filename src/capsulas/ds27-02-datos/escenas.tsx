@@ -7,22 +7,8 @@ import { Cabeza, Chip, Cinetico, Ejes, Escena, FormulaCard, Frac, Nota, Op, Pild
 import { codigo, n, tipo } from "../../estilos/nube/tokens";
 import { SIGMA, TEXTO_A, TEXTO_B } from "./datos";
 
-const SERIE = "Data Scientist 2027 · stage 2";
+const SERIE = "Tech capsule · Data curation & synthetic data";
 
-const Ruta: React.FC<{ at: number; actual: number }> = ({ at, actual }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const colores = [n.azul, n.amarillo, n.verde];
-  return (
-    <div style={{ display: "flex", gap: 12 }}>
-      {Array.from({ length: 12 }, (_, i) => {
-        const k = transicion(frame, at + i * 2, fps, 400, EXPO_OUT);
-        const on = i === actual;
-        return <div key={i} style={{ width: on ? 64 : 40, height: 14, borderRadius: 7, background: on ? colores[i % 3] : n.borde, opacity: k }} />;
-      })}
-    </div>
-  );
-};
 
 const shingles = (t: string) => {
   const w = t.split(" ");
@@ -73,8 +59,7 @@ export const Gancho: React.FC = () => {
 export const Titulo: React.FC<{ serie: string; autor: string }> = ({ autor }) => (
   <Escena>
     <div style={{ marginTop: 300 }}>
-      <Ruta at={0} actual={1} />
-      <div style={{ ...tipo.rotulo, color: n.texto2, marginTop: 40 }}>DATA SCIENTIST 2027 · STAGE 2 OF 12</div>
+      <div style={{ ...tipo.rotulo, color: n.azul }}>TECH CAPSULE</div>
       <Cinetico at={8} texto="Data curation &|*synthetic pipelines.*" tam={100} style={{ marginTop: 18 }} />
       <Sube at={28}>
         <div style={{ ...tipo.cuerpo, color: n.texto2, marginTop: 24 }}>MinHash · LSH · scaling laws · Evol-Instruct · verifiers · by {autor}</div>
@@ -576,7 +561,6 @@ export const Cierre: React.FC<{ autor: string }> = ({ autor }) => {
   return (
     <Escena>
       <div style={{ marginTop: 240 }}>
-        <Ruta at={at - 10} actual={2} />
         <Cinetico at={at} texto="Clean data,|*better models.*" tam={96} style={{ marginTop: 40 }} />
         <div style={{ marginTop: 40, display: "flex", alignItems: "center", gap: 28 }}>
           <Pildora at={at + 20}>Share · Follow</Pildora>
@@ -584,11 +568,6 @@ export const Cierre: React.FC<{ autor: string }> = ({ autor }) => {
             <div style={{ fontSize: 30, color: n.texto2 }}>{autor}</div>
           </Sube>
         </div>
-        <Sube at={at + 34} style={{ marginTop: 26 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 28, color: n.texto2 }}>
-            <Check size={30} strokeWidth={2} color={n.verde} /> next: stage 3 · PEFT & model merging
-          </div>
-        </Sube>
       </div>
     </Escena>
   );

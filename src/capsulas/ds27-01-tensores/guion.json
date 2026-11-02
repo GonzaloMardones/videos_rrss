@@ -28,9 +28,9 @@
    "id": "titulo",
    "frases": [
     {
-     "dice": "Esta es la serie deita sáientist dos mil veintisiete, etapa uno: tensores, y páitorch por dentro.",
-     "muestra": "Data Scientist 2027, etapa 1: tensores y PyTorch por dentro.",
-     "en": "Data Scientist 2027, stage 1: tensors and PyTorch internals."
+     "dice": "Cápsula técnica: tensores, y páitorch por dentro.",
+     "muestra": "Cápsula técnica: tensores y PyTorch por dentro.",
+     "en": "Tech capsule: tensors and PyTorch internals."
     }
    ]
   },
@@ -203,9 +203,9 @@
    "id": "cierre",
    "frases": [
     {
-     "dice": "Y en la próxima etapa: curación de datos y páiplains sintéticos. Compártelo y sígueme.",
-     "muestra": "Próxima etapa: curación de datos y pipelines sintéticos. Compártelo y sígueme.",
-     "en": "Next stage: data curation and synthetic pipelines. Share and follow.",
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
      "cue": "cta"
     }
    ]

@@ -1,5 +1,5 @@
 {
- "duracion": 174.965,
+ "duracion": 170.335,
  "escenas": [
   {
    "id": "gancho",
@@ -9,57 +9,57 @@
   {
    "id": "titulo",
    "inicio": 10.038,
-   "fin": 15.267
+   "fin": 12.857
   },
   {
    "id": "strides",
-   "inicio": 15.267,
-   "fin": 34.542
+   "inicio": 12.857,
+   "fin": 32.131
   },
   {
    "id": "autograd",
-   "inicio": 34.542,
-   "fin": 52.387
+   "inicio": 32.131,
+   "fin": 49.977
   },
   {
    "id": "memoria",
-   "inicio": 52.387,
-   "fin": 68.575
+   "inicio": 49.977,
+   "fin": 66.165
   },
   {
    "id": "roofline",
-   "inicio": 68.575,
-   "fin": 87.217
+   "inicio": 66.165,
+   "fin": 84.806
   },
   {
    "id": "fusion",
-   "inicio": 87.217,
-   "fin": 100.333
+   "inicio": 84.806,
+   "fin": 97.922
   },
   {
    "id": "mantisa",
-   "inicio": 100.333,
-   "fin": 121.165
+   "inicio": 97.922,
+   "fin": 118.754
   },
   {
    "id": "precision",
-   "inicio": 121.165,
-   "fin": 151.725
+   "inicio": 118.754,
+   "fin": 149.314
   },
   {
    "id": "nube",
-   "inicio": 151.725,
-   "fin": 159.919
+   "inicio": 149.314,
+   "fin": 157.509
   },
   {
    "id": "bases",
-   "inicio": 159.919,
-   "fin": 170.525
+   "inicio": 157.509,
+   "fin": 168.114
   },
   {
    "id": "cierre",
-   "inicio": 170.525,
-   "fin": 174.965
+   "inicio": 168.114,
+   "fin": 170.335
   }
  ],
  "frases": [
@@ -82,178 +82,178 @@
   {
    "escena": "titulo",
    "inicio": 10.038,
-   "fin": 14.987,
-   "texto": "Data Scientist 2027, etapa 1: tensores y PyTorch por dentro.",
+   "fin": 12.577,
+   "texto": "Cápsula técnica: tensores y PyTorch por dentro.",
    "cue": null,
-   "en": "Data Scientist 2027, stage 1: tensors and PyTorch internals."
+   "en": "Tech capsule: tensors and PyTorch internals."
   },
   {
    "escena": "strides",
-   "inicio": 15.267,
-   "fin": 20.281,
+   "inicio": 12.857,
+   "fin": 17.87,
    "texto": "Un tensor no es una tabla: es un bloque plano de memoria, más una receta para recorrerlo, los strides.",
    "cue": "plano",
    "en": "A tensor isn't a table: it's a flat block of memory plus a recipe to walk it, the strides."
   },
   {
    "escena": "strides",
-   "inicio": 20.381,
-   "fin": 25.927,
+   "inicio": 17.97,
+   "fin": 23.517,
    "texto": "En una matriz de 2×3 en FP32, bajar una fila salta 12 bytes, y avanzar una columna, 4.",
    "cue": "bytes",
    "en": "In a 2×3 FP32 matrix, moving down a row skips 12 bytes; moving across a column, 4."
   },
   {
    "escena": "strides",
-   "inicio": 26.027,
-   "fin": 34.262,
+   "inicio": 23.617,
+   "fin": 31.851,
    "texto": "La dirección de cada elemento es la base más cada índice por su stride. Transponer no copia nada: solo intercambia los strides, y el resultado deja de ser contiguo.",
    "cue": "direccion",
    "en": "Each element's address is the base plus each index times its stride. Transposing copies nothing: it just swaps the strides, so the result is no longer contiguous."
   },
   {
    "escena": "autograd",
-   "inicio": 34.542,
-   "fin": 40.579,
+   "inicio": 32.131,
+   "fin": 38.169,
    "texto": "Autograd: PyTorch anota cada operación en un grafo, y backward lo recorre al revés con la regla de la cadena.",
    "cue": "grafo",
    "en": "Autograd: PyTorch records every operation in a graph, and backward walks it in reverse with the chain rule."
   },
   {
    "escena": "autograd",
-   "inicio": 40.679,
-   "fin": 47.911,
+   "inicio": 38.269,
+   "fin": 45.501,
    "texto": "El modo inverso obtiene millones de derivadas por el costo de una pasada hacia adelante. El modo directo necesitaría una pasada por parámetro.",
    "cue": "inverso",
    "en": "Reverse mode gets millions of derivatives for the cost of one forward pass. Forward mode would need one pass per parameter."
   },
   {
    "escena": "autograd",
-   "inicio": 48.011,
-   "fin": 52.107,
+   "inicio": 45.601,
+   "fin": 49.697,
    "texto": "Para un gradiente a medida, defines tu propia función con su forward y su backward.",
    "cue": "custom",
    "en": "For a custom gradient, you define your own function with its forward and backward."
   },
   {
    "escena": "memoria",
-   "inicio": 52.387,
-   "fin": 58.979,
+   "inicio": 49.977,
+   "fin": 56.569,
    "texto": "En la GPU, la memoria es una pirámide: registros, memoria compartida, caché L2 y HBM. Más abajo, más grande y más lenta.",
    "cue": "piramide",
    "en": "On a GPU, memory is a pyramid: registers, shared memory, L2 cache, and HBM. Lower means bigger and slower."
   },
   {
    "escena": "memoria",
-   "inicio": 59.079,
-   "fin": 68.295,
+   "inicio": 56.669,
+   "fin": 65.885,
    "texto": "Una H100 hace 989 billones de operaciones por segundo en BF16, pero su memoria entrega 3,35 terabytes por segundo.",
    "cue": "h100",
    "en": "An H100 does 989 trillion operations per second in BF16, but its memory delivers 3.35 terabytes per second."
   },
   {
    "escena": "roofline",
-   "inicio": 68.575,
-   "fin": 77.535,
+   "inicio": 66.165,
+   "fin": 75.125,
    "texto": "Para no esperar datos, necesitas unas 295 operaciones por cada byte que lees. Esa razón es la intensidad aritmética, la base del modelo roofline.",
    "cue": "intensidad",
    "en": "To avoid waiting on data, you need about 295 operations per byte read. That ratio is arithmetic intensity, the basis of the roofline model."
   },
   {
    "escena": "roofline",
-   "inicio": 77.635,
-   "fin": 86.937,
+   "inicio": 75.225,
+   "fin": 84.526,
    "texto": "Una suma elemento a elemento hace 1/6 de operación por byte: la limita la memoria. Una multiplicación de matrices de 4096 hace más de mil: la limita el cómputo.",
    "cue": "casos",
    "en": "An element-wise add does 1/6 of an operation per byte: memory-bound. A 4096 matrix multiply does over a thousand: compute-bound."
   },
   {
    "escena": "fusion",
-   "inicio": 87.217,
-   "fin": 92.763,
+   "inicio": 84.806,
+   "fin": 90.353,
    "texto": "Por eso se fusionan operadores. Tres operaciones elemento a elemento leen y escriben en memoria: seis viajes.",
    "cue": "seis",
    "en": "That's why we fuse operators. Three element-wise ops each read and write memory: six trips."
   },
   {
    "escena": "fusion",
-   "inicio": 92.863,
-   "fin": 100.053,
+   "inicio": 90.453,
+   "fin": 97.642,
    "texto": "Fusionadas en un solo kernel son dos viajes: tres veces menos tráfico. Es lo que hace torch.compile, y la idea detrás de FlashAttention.",
    "cue": "dos",
    "en": "Fused into one kernel, it's two trips: 3× less traffic. That's what torch.compile does, and the idea behind FlashAttention."
   },
   {
    "escena": "mantisa",
-   "inicio": 100.333,
-   "fin": 106.434,
+   "inicio": 97.922,
+   "fin": 104.023,
    "texto": "¿Qué es la mantisa? Un número de punto flotante se guarda como signo × mantisa × 2 elevado al exponente.",
    "cue": "flotante",
    "en": "What is the mantissa? A floating-point number is stored as sign × mantissa × 2 to the exponent."
   },
   {
    "escena": "mantisa",
-   "inicio": 106.534,
-   "fin": 112.635,
+   "inicio": 104.123,
+   "fin": 110.225,
    "texto": "El exponente da la escala: qué tan grande o pequeño puede ser. La mantisa guarda los dígitos significativos: la precisión.",
    "cue": "partes",
    "en": "The exponent sets the scale: how big or small it can be. The mantissa holds the significant digits: the precision."
   },
   {
    "escena": "mantisa",
-   "inicio": 112.735,
-   "fin": 120.885,
+   "inicio": 110.325,
+   "fin": 118.474,
    "texto": "Por ejemplo, π en FP32 es 3,141593. Con los 7 bits de mantisa de BF16, queda en 3,1406.",
    "cue": "pi",
    "en": "For example, π in FP32 is 3.141593. With BF16's 7 mantissa bits, it becomes 3.1406."
   },
   {
    "escena": "precision",
-   "inicio": 121.165,
-   "fin": 133.325,
+   "inicio": 118.754,
+   "fin": 130.914,
    "texto": "FP significa floating point. FP32 usa 8 bits de exponente y 23 de mantisa. BF16 (brain floating point) conserva los 8 de exponente y deja 7 de mantisa: el mismo rango, con menos precisión.",
    "cue": "bits",
    "en": "FP means floating point. FP32 uses 8 exponent bits and 23 mantissa bits. BF16 (brain floating point) keeps the 8 exponent bits and leaves 7 for the mantissa: same range, less precision."
   },
   {
    "escena": "precision",
-   "inicio": 133.425,
-   "fin": 140.699,
+   "inicio": 131.014,
+   "fin": 138.289,
    "texto": "FP16 tiene más mantisa pero menos exponente: su máximo es 65.504, y por eso hay que escalar la pérdida.",
    "cue": "fp16",
    "en": "FP16 has more mantissa but less exponent: its max is 65,504, so you need loss scaling."
   },
   {
    "escena": "precision",
-   "inicio": 140.799,
-   "fin": 151.445,
+   "inicio": 138.389,
+   "fin": 149.034,
    "texto": "FP8 es punto flotante en solo 8 bits. El nombre dice el reparto: E5M2 son 5 bits de exponente y 2 de mantisa, para gradientes. E4M3 son 4 y 3, para pesos y activaciones.",
    "cue": "fp8",
    "en": "FP8 is floating point in just 8 bits. The name tells the split: E5M2 is 5 exponent bits and 2 mantissa bits, for gradients. E4M3 is 4 and 3, for weights and activations."
   },
   {
    "escena": "nube",
-   "inicio": 151.725,
-   "fin": 159.639,
+   "inicio": 149.314,
+   "fin": 157.229,
    "texto": "En Google Cloud, las TPU multiplican en BF16 y acumulan en FP32. Y las máquinas A3, con H100, entrenan en FP8.",
    "cue": "tpu",
    "en": "On Google Cloud, TPUs multiply in BF16 and accumulate in FP32. And A3 machines with H100s train in FP8."
   },
   {
    "escena": "bases",
-   "inicio": 159.919,
-   "fin": 170.245,
+   "inicio": 157.509,
+   "fin": 167.834,
    "texto": "Con esto tienes las bases: transponer no copia, porque solo cambian los strides. Con intensidad baja, manda la memoria: fusiona. Y BF16 no escala la pérdida, porque tiene el rango de FP32.",
    "cue": "bases",
    "en": "Now you have the basics: transposing doesn't copy, because only the strides change. Low intensity means memory-bound: fuse. And BF16 skips loss scaling, because it has FP32's range."
   },
   {
    "escena": "cierre",
-   "inicio": 170.525,
-   "fin": 174.685,
-   "texto": "Próxima etapa: curación de datos y pipelines sintéticos. Compártelo y sígueme.",
+   "inicio": 168.114,
+   "fin": 170.055,
+   "texto": "Si te sirvió, compártelo y sígueme.",
    "cue": "cta",
-   "en": "Next stage: data curation and synthetic pipelines. Share and follow."
+   "en": "If this helped, share and follow."
   }
  ]
 }

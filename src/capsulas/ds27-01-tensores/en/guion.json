@@ -28,9 +28,9 @@
    "id": "titulo",
    "frases": [
     {
-     "dice": "Data Scientist twenty twenty-seven, stage one: tensors and PyTorch internals.",
-     "muestra": "Data Scientist 2027, stage 1: tensors and PyTorch internals.",
-     "es": "Data Scientist 2027, etapa 1: tensores y PyTorch por dentro."
+     "dice": "Tech capsule: tensors and PyTorch internals.",
+     "muestra": "Tech capsule: tensors and PyTorch internals.",
+     "es": "Cápsula técnica: tensores y PyTorch por dentro."
     }
    ]
   },
@@ -203,9 +203,9 @@
    "id": "cierre",
    "frases": [
     {
-     "dice": "Next: data curation and synthetic pipelines. Share and follow.",
-     "muestra": "Next: data curation and synthetic pipelines. Share and follow.",
-     "es": "Próxima etapa: curación de datos y pipelines sintéticos. Compártelo y sígueme.",
+     "dice": "If this helped, share and follow.",
+     "muestra": "If this helped, share and follow.",
+     "es": "Si te sirvió, compártelo y sígueme.",
      "cue": "cta"
     }
    ]

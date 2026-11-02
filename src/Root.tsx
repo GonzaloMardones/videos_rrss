@@ -607,7 +607,7 @@ export const RemotionRoot: React.FC = () => {
         width={VIDEO.width}
         height={VIDEO.height}
         defaultProps={{
-          serie: "Data Scientist 2027",
+          serie: "Cápsulas técnicas",
           autor: "Gonzalo Mardones",
           volumenMusica: 0.14,
         }}
@@ -620,7 +620,7 @@ export const RemotionRoot: React.FC = () => {
         width={VIDEO.width}
         height={VIDEO.height}
         defaultProps={{
-          serie: "Data Scientist 2027",
+          serie: "Cápsulas técnicas",
           autor: "Gonzalo Mardones",
           volumenMusica: 0.14,
         }}
@@ -633,7 +633,7 @@ export const RemotionRoot: React.FC = () => {
         width={VIDEO.width}
         height={VIDEO.height}
         defaultProps={{
-          serie: "Data Scientist 2027",
+          serie: "Cápsulas técnicas",
           autor: "Gonzalo Mardones",
           volumenMusica: 0.14,
         }}
@@ -646,7 +646,7 @@ export const RemotionRoot: React.FC = () => {
         width={VIDEO.width}
         height={VIDEO.height}
         defaultProps={{
-          serie: "Data Scientist 2027",
+          serie: "Cápsulas técnicas",
           autor: "Gonzalo Mardones",
           volumenMusica: 0.14,
         }}

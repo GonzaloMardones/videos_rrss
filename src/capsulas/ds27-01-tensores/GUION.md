@@ -1,6 +1,6 @@
 # Data Scientist 2027 · Etapa 1 · Tensores y PyTorch por dentro
 
-Serie **Data Scientist 2027** (12 etapas). Estilo **nube** (`src/estilos/nube`): fondo blanco, Google Sans y Google Sans Code (OFL-1.1), barra de tres colores, tarjetas con borde fino. Sin logotipos ni marcas.
+Cápsula técnica independiente (sin numeración de serie). Estilo **nube** (`src/estilos/nube`): fondo blanco, Google Sans y Google Sans Code (OFL-1.1), barra de tres colores, tarjetas con borde fino. Sin logotipos ni marcas.
 
 **Formato bilingüe:** todo el texto en pantalla está en inglés; la voz explica en español; los subtítulos muestran el español (con la palabra activa) y debajo la traducción al inglés (campo `en` de cada frase en `guion.json`).
 Composiciones (mismas escenas, distinta voz):

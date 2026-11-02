@@ -1,6 +1,6 @@
 # Data Scientist 2027 · Etapa 2 · Curación de datos y pipelines sintéticos
 
-Serie **Data Scientist 2027**, estilo **nube** bilingüe (pantalla en inglés).
+Cápsula técnica independiente (sin numeración de serie).
 Composiciones (mismas escenas y cues):
 - `DS27-02-Datos` · voz en español (Kokoro `em_alex`) · subtítulos ES + EN · ~2:43 · `guion.json`.
 - `DS27-02-Datos-EN` · voz en inglés (Kokoro `am_michael`) · subtítulos EN + ES · ~2:55 · `en/guion.json`.

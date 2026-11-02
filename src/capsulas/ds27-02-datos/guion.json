@@ -28,9 +28,9 @@
    "id": "titulo",
    "frases": [
     {
-     "dice": "Esta es la serie deita sáientist dos mil veintisiete, etapa dos: curación de datos y páiplains sintéticos.",
-     "muestra": "Data Scientist 2027, etapa 2: curación de datos y pipelines sintéticos.",
-     "en": "Data Scientist 2027, stage 2: data curation and synthetic pipelines."
+     "dice": "Cápsula técnica: curación de datos, y datos sintéticos.",
+     "muestra": "Cápsula técnica: curación de datos y datos sintéticos.",
+     "en": "Tech capsule: data curation and synthetic data."
     }
    ]
   },
@@ -185,9 +185,9 @@
    "id": "cierre",
    "frases": [
     {
-     "dice": "Y en la próxima etapa: ajuste eficiente y fusión de modelos. Compártelo y sígueme.",
-     "muestra": "Próxima etapa: ajuste eficiente (PEFT) y fusión de modelos. Compártelo y sígueme.",
-     "en": "Next: efficient fine-tuning (PEFT) and model merging. Share and follow.",
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
      "cue": "cta"
     }
    ]

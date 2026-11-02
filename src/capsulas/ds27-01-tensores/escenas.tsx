@@ -6,23 +6,7 @@ import { backOut, EXPO_IN_OUT, EXPO_OUT, transicion } from "../../estilos/vacio/
 import { Cabeza, Chip, Cinetico, Codigo, Ejes, Escena, FormulaCard, Nota, Op, Pildora, Sube, sx, Tarjeta, Var } from "../../estilos/nube/kit";
 import { codigo, n, tipo } from "../../estilos/nube/tokens";
 
-const SERIE = "Data Scientist 2027 · stage 1";
-
-// Las 12 etapas de la hoja de ruta, como puntos de avance.
-const Ruta: React.FC<{ at: number; actual: number }> = ({ at, actual }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const colores = [n.azul, n.amarillo, n.verde];
-  return (
-    <div style={{ display: "flex", gap: 12 }}>
-      {Array.from({ length: 12 }, (_, i) => {
-        const k = transicion(frame, at + i * 2, fps, 400, EXPO_OUT);
-        const on = i === actual;
-        return <div key={i} style={{ width: on ? 64 : 40, height: 14, borderRadius: 7, background: on ? colores[i % 3] : n.borde, opacity: k }} />;
-      })}
-    </div>
-  );
-};
+const SERIE = "Tech capsule · Tensors & PyTorch internals";
 
 // ─── Gancho ───────────────────────────────────────────────────────────────────
 export const Gancho: React.FC = () => {
@@ -68,8 +52,7 @@ export const Gancho: React.FC = () => {
 export const Titulo: React.FC<{ serie: string; autor: string }> = ({ autor }) => (
   <Escena>
     <div style={{ marginTop: 300 }}>
-      <Ruta at={0} actual={0} />
-      <div style={{ ...tipo.rotulo, color: n.texto2, marginTop: 40 }}>DATA SCIENTIST 2027 · STAGE 1 OF 12</div>
+      <div style={{ ...tipo.rotulo, color: n.azul }}>TECH CAPSULE</div>
       <Cinetico at={8} texto="Tensors &|*PyTorch internals.*" tam={110} style={{ marginTop: 18 }} />
       <Sube at={28}>
         <div style={{ ...tipo.cuerpo, color: n.texto2, marginTop: 24 }}>strides · autograd · memory · precision · by {autor}</div>
@@ -624,7 +607,6 @@ export const Cierre: React.FC<{ autor: string }> = ({ autor }) => {
   return (
     <Escena>
       <div style={{ marginTop: 240 }}>
-        <Ruta at={at - 10} actual={1} />
         <Cinetico at={at} texto="First, learn how|*numbers live.*" tam={96} style={{ marginTop: 40 }} />
         <div style={{ marginTop: 40, display: "flex", alignItems: "center", gap: 28 }}>
           <Pildora at={at + 20}>Share · Follow</Pildora>
@@ -632,11 +614,6 @@ export const Cierre: React.FC<{ autor: string }> = ({ autor }) => {
             <div style={{ fontSize: 30, color: n.texto2 }}>{autor}</div>
           </Sube>
         </div>
-        <Sube at={at + 34} style={{ marginTop: 26 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 28, color: n.texto2 }}>
-            <Check size={30} strokeWidth={2} color={n.verde} /> next: stage 2 · data curation & synthetic pipelines
-          </div>
-        </Sube>
       </div>
     </Escena>
   );
