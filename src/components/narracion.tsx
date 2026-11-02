@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from "react";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 
-export type Frase = { escena: string; inicio: number; fin: number; texto: string; cue: string | null; en?: string };
+export type Frase = { escena: string; inicio: number; fin: number; texto: string; cue: string | null; en?: string; es?: string };
 export type Timeline = {
   duracion: number;
   escenas: { id: string; inicio: number; fin: number }[];

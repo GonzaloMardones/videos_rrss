@@ -122,7 +122,7 @@ class ElevenLabs:
         return np.frombuffer(pcm, dtype=np.float32).copy()
 
 
-def cargar_transcriptor(modelos: str):
+def cargar_transcriptor(modelos: str, idioma: str = "es"):
     import sherpa_onnx
 
     carpeta = os.path.join(modelos, "sherpa-onnx-whisper-small")
@@ -130,7 +130,7 @@ def cargar_transcriptor(modelos: str):
         encoder=os.path.join(carpeta, "small-encoder.int8.onnx"),
         decoder=os.path.join(carpeta, "small-decoder.int8.onnx"),
         tokens=os.path.join(carpeta, "small-tokens.txt"),
-        language="es",
+        language=idioma,
         num_threads=4,
     )
 
@@ -176,7 +176,7 @@ def main() -> None:
         voz = Kokoro(modelos, guion["voz"], guion.get("idioma", "es-419"))
     else:
         voz = Piper(modelos, guion["voz"])
-    rec = cargar_transcriptor(modelos) if verificar else None
+    rec = cargar_transcriptor(modelos, guion.get("idioma", "es")[:2]) if verificar else None
 
     piezas: list[np.ndarray] = []
     t = 0.25  # pequeño respiro antes de la primera palabra
@@ -204,7 +204,7 @@ def main() -> None:
                     "fin": round(t + duracion, 3),
                     "texto": frase["muestra"],
                     "cue": frase.get("cue"),
-                    **({"en": frase["en"]} if "en" in frase else {}),
+                    **{k: frase[k] for k in ("en", "es") if k in frase},
                 }
             )
             piezas.append(muestras)

@@ -258,7 +258,7 @@ export const FormulaCard: React.FC<{ at: number; tam?: number; formula: React.Re
   );
 };
 
-// Subtítulos bilingües: español con la palabra que suena en azul y, debajo, la traducción al inglés.
+// Subtítulos bilingües: el idioma de la voz con la palabra que suena en azul y, debajo, la traducción (EN o ES).
 export const SubtitulosNube: React.FC<{ timeline: Timeline }> = ({ timeline }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -278,7 +278,7 @@ export const SubtitulosNube: React.FC<{ timeline: Timeline }> = ({ timeline }) =
   const entra = interpolate(frame - Math.round(frase.inicio * fps), [0, 10], [0, 1], clamp);
   return (
     <div style={{ position: "absolute", left: 60, right: 60, top: SAFE.captionsTop, opacity: entra, transform: `translateY(${(1 - entra) * 12}px)` }}>
-      <div style={{ fontFamily: fuente, fontWeight: 500, fontSize: frase.en ? 42 : 48, lineHeight: 1.22, color: n.texto, background: "rgba(255,255,255,0.94)", borderRadius: 24, padding: "18px 24px", border: `2px solid ${n.borde}` }}>
+      <div style={{ fontFamily: fuente, fontWeight: 500, fontSize: frase.en || frase.es ? 42 : 48, lineHeight: 1.22, color: n.texto, background: "rgba(255,255,255,0.94)", borderRadius: 24, padding: "18px 24px", border: `2px solid ${n.borde}` }}>
         {palabras.map((w, i) => {
           const activa = t >= inicios[i] && (i === palabras.length - 1 || t < inicios[i + 1]);
           const dicha = t >= inicios[i];
@@ -288,10 +288,10 @@ export const SubtitulosNube: React.FC<{ timeline: Timeline }> = ({ timeline }) =
             </span>
           );
         })}
-        {frase.en ? (
+        {frase.en || frase.es ? (
           <div style={{ marginTop: 12, paddingTop: 12, borderTop: `2px solid ${n.borde}`, fontSize: 32, fontWeight: 400, lineHeight: 1.25, color: n.texto2 }}>
-            <span style={{ fontFamily: codigo, fontSize: 20, fontWeight: 500, color: n.azul, marginRight: 12, verticalAlign: "2px" }}>EN</span>
-            {frase.en}
+            <span style={{ fontFamily: codigo, fontSize: 20, fontWeight: 500, color: n.azul, marginRight: 12, verticalAlign: "2px" }}>{frase.en ? "EN" : "ES"}</span>
+            {frase.en ?? frase.es}
           </div>
         ) : null}
       </div>

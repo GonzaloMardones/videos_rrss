@@ -3,7 +3,11 @@
 Serie **Data Scientist 2027** (12 etapas). Estilo **nube** (`src/estilos/nube`): fondo blanco, Google Sans y Google Sans Code (OFL-1.1), barra de tres colores, tarjetas con borde fino. Sin logotipos ni marcas.
 
 **Formato bilingüe:** todo el texto en pantalla está en inglés; la voz explica en español; los subtítulos muestran el español (con la palabra activa) y debajo la traducción al inglés (campo `en` de cada frase en `guion.json`).
-Composición: `DS27-01-Tensores` · 1080×1920 · 30 fps · ~2:57.
+Composiciones (mismas escenas, distinta voz):
+- `DS27-01-Tensores` · voz en español (Kokoro `em_alex`, es-419) · subtítulos ES con traducción EN · ~2:57 · `guion.json`, `timeline.json`, `public/ds27-01-tensores/`.
+- `DS27-01-Tensores-EN` · voz en inglés (Kokoro `am_michael`, en-us) · subtítulos EN con traducción ES · ~3:00 · `en/guion.json`, `en/timeline.json`, `public/ds27-01-tensores-en/`.
+
+Ambas duran menos de 3 minutos (límite de un reel). La versión en inglés condensa algunas frases para caber en ese tiempo, con el mismo contenido y los mismos cues.
 Nota de voz: los términos que aparecen en inglés se pronuncian en inglés con grafía fonética en `dice`: byte → `bait`, FP32 → `ef pi térti tu`, BF16 → `bi ef sixtín`, FP8 → `ef pi eit`, E5M2 → `i faiv em tu`, E4M3 → `i for em tri`, H100 → `eich uan jándred`, GPU → `yi pi iú`, TPU → `ti pi iú`, A3 → `ei tri`, HBM → `eich bi em`, L2 cache → `el tu cash`, kernel → `kérnel`, autograd → `ótograd`, backward/forward → `bákuerd`/`fóruerd`, torch.compile → `torch dot compáil`, FlashAttention → `flash aténshon`, roofline → `rúflain`, floating point → `flóuting point`, data scientist → `deita sáientist`, Google Cloud → `gúgol claud`.
 
 ## Guion (resumen)
