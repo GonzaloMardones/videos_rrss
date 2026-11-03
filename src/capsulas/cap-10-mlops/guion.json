@@ -1,0 +1,184 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.25,
+ "pausaFrase": 0.1,
+ "pausaEscena": 0.26,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y corriste el mismo entrenamiento dos veces, con la misma configuración, y salió distinto. ¿Cuál era el bueno?",
+     "muestra": "Corriste el mismo entrenamiento dos veces, con la misma configuración, y salió distinto. ¿Cuál era el bueno?",
+     "en": "You ran the same training twice, with the same configuration, and got different results. Which one was right?",
+     "cue": "dos"
+    },
+    {
+     "dice": "Y en un sistema real de machine learning, el código del modelo es la caja más pequeña. El resto es datos, configuración, y operación.",
+     "muestra": "En un sistema real de machine learning, el código del modelo es la caja más pequeña. El resto es datos, configuración y operación.",
+     "en": "In a real machine learning system, the model code is the smallest box. The rest is data, configuration and operations.",
+     "cue": "caja",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Y en esta cápsula técnica: em el ops, y seguimiento de experimentos.",
+     "muestra": "Cápsula técnica: MLOps y seguimiento de experimentos.",
+     "en": "Tech capsule: MLOps and experiment tracking."
+    }
+   ]
+  },
+  {
+   "id": "run",
+   "frases": [
+    {
+     "dice": "Y un experimento reproducible guarda cinco cosas: la versión del código, la versión de los datos, la configuración, la semilla, y el entorno.",
+     "muestra": "Un experimento reproducible guarda cinco cosas: la versión del código, la versión de los datos, la configuración, la semilla y el entorno.",
+     "en": "A reproducible experiment records five things: the code version, the data version, the configuration, the seed and the environment.",
+     "cue": "registro"
+    },
+    {
+     "dice": "Y de salida: métricas, curvas y artefactos. Si falta una entrada, no puedes volver a ese resultado.",
+     "muestra": "De salida: métricas, curvas y artefactos. Si falta una entrada, no puedes volver a ese resultado.",
+     "en": "As outputs: metrics, curves and artifacts. If one input is missing, you cannot get back to that result.",
+     "cue": "metricas"
+    }
+   ]
+  },
+  {
+   "id": "semillas",
+   "frases": [
+    {
+     "dice": "Y la semilla sola mueve los resultados: al ajustar modelos de lenguaje en tareas pequeñas, cambiar solo la semilla puede cambiar mucho el puntaje.",
+     "muestra": "La semilla sola mueve los resultados: al ajustar modelos de lenguaje en tareas pequeñas, cambiar solo la semilla puede cambiar mucho el puntaje.",
+     "en": "The seed alone moves results: when fine-tuning language models on small tasks, changing only the seed can change the score a lot.",
+     "cue": "varianza"
+    },
+    {
+     "dice": "Y por eso reportas media y desviación sobre varias semillas, no tu mejor corrida.",
+     "muestra": "Por eso reportas media y desviación sobre varias semillas, no tu mejor corrida.",
+     "en": "So you report the mean and standard deviation over several seeds, not your best run.",
+     "cue": "reportar"
+    }
+   ]
+  },
+  {
+   "id": "busqueda",
+   "frases": [
+    {
+     "dice": "Y para buscar hiperparámetros, la grilla desperdicia intentos: con nueve pruebas en dos dimensiones, solo ves tres valores del parámetro que importa.",
+     "muestra": "Para buscar hiperparámetros, la grilla desperdicia intentos: con 9 pruebas en 2 dimensiones, solo ves 3 valores del parámetro que importa.",
+     "en": "To search hyperparameters, a grid wastes trials: with 9 trials in 2 dimensions, you only see 3 values of the parameter that matters.",
+     "cue": "grilla"
+    },
+    {
+     "dice": "Y la búsqueda aleatoria, en cambio, ve nueve valores. Y con sesenta pruebas al azar, tienes noventa y cinco por ciento de probabilidad de caer en el mejor cinco por ciento.",
+     "muestra": "La búsqueda aleatoria ve 9. Y con 60 pruebas al azar, tienes 95 % de probabilidad de caer en el mejor 5 %.",
+     "en": "Random search sees 9. And with 60 random trials, you have a 95% chance of landing in the top 5%.",
+     "cue": "azar"
+    }
+   ]
+  },
+  {
+   "id": "bayes",
+   "frases": [
+    {
+     "dice": "Y la optimización beisiana aprende de cada prueba: un proceso gaussiano da, para cada punto, una predicción y su incertidumbre.",
+     "muestra": "La optimización bayesiana aprende de cada prueba: un proceso gaussiano da, para cada punto, una predicción y su incertidumbre.",
+     "en": "Bayesian optimization learns from every trial: a Gaussian process gives, for each point, a prediction and its uncertainty.",
+     "cue": "gp"
+    },
+    {
+     "dice": "Y elige el siguiente punto sumando la predicción más dos veces la incertidumbre: explora donde no sabe. Aquí, con cuatro pruebas, encuentra el máximo.",
+     "muestra": "Elige el siguiente punto sumando la predicción más dos veces la incertidumbre: explora donde no sabe. Aquí, con 4 pruebas, encuentra el máximo.",
+     "en": "It picks the next point by adding the prediction plus twice the uncertainty: it explores where it does not know. Here, after 4 trials, it finds the maximum.",
+     "cue": "ucb"
+    }
+   ]
+  },
+  {
+   "id": "hyperband",
+   "frases": [
+    {
+     "dice": "Y para no gastar en malas ideas, se cortan temprano: empiezas con ochenta y una configuraciones, y en cada ronda te quedas con un tercio.",
+     "muestra": "Para no gastar en malas ideas, se cortan temprano: empiezas con 81 configuraciones y en cada ronda te quedas con un tercio.",
+     "en": "To avoid spending on bad ideas, you cut them early: start with 81 configurations and keep a third each round.",
+     "cue": "mitades"
+    },
+    {
+     "dice": "Y las que sobreviven reciben tres veces más presupuesto. Así funciona jáiperband.",
+     "muestra": "Las que sobreviven reciben 3 veces más presupuesto. Así funciona Hyperband.",
+     "en": "The survivors get 3× more budget. That is how Hyperband works.",
+     "cue": "presupuesto"
+    }
+   ]
+  },
+  {
+   "id": "datos",
+   "frases": [
+    {
+     "dice": "Y los datos también se versionan: un jash del contenido identifica exactamente qué datos entrenaron cada modelo.",
+     "muestra": "Los datos también se versionan: un hash del contenido identifica exactamente qué datos entrenaron cada modelo.",
+     "en": "Data is versioned too: a hash of the content identifies exactly which data trained each model.",
+     "cue": "hash"
+    },
+    {
+     "dice": "Y el riesgo clásico es la diferencia entre entrenamiento y producción: los mismos datos, procesados de dos formas distintas.",
+     "muestra": "El riesgo clásico es la diferencia entre entrenamiento y producción: los mismos datos, procesados de dos formas distintas.",
+     "en": "The classic risk is training-serving skew: the same data, processed in two different ways.",
+     "cue": "sesgo"
+    }
+   ]
+  },
+  {
+   "id": "niveles",
+   "frases": [
+    {
+     "dice": "Y la madurez tiene niveles: en el cero todo es manual. En el uno, un páiplain reentrena solo cuando llegan datos nuevos. En el dos, el propio páiplain se prueba y despliega con integración continua.",
+     "muestra": "La madurez tiene niveles: en el 0 todo es manual. En el 1, un pipeline reentrena solo cuando llegan datos nuevos. En el 2, el propio pipeline se prueba y despliega con integración continua.",
+     "en": "Maturity has levels: at 0, everything is manual. At 1, a pipeline retrains on its own when new data arrives. At 2, the pipeline itself is tested and deployed with continuous integration.",
+     "cue": "nivel"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en gúgol claud: vértex ei ai experiments registra corridas y métricas; vízier hace la optimización beisiana; y vértex páiplains y el model registry automatizan el ciclo.",
+     "muestra": "En Google Cloud: Vertex AI Experiments registra corridas y métricas; Vizier hace la optimización bayesiana; y Vertex AI Pipelines y Model Registry automatizan el ciclo.",
+     "en": "On Google Cloud: Vertex AI Experiments records runs and metrics; Vizier runs Bayesian optimization; and Vertex AI Pipelines and Model Registry automate the cycle.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "Y las bases: reproducibilidad, varianza entre semillas, probabilidad en la búsqueda aleatoria, y procesos gaussianos.",
+     "muestra": "Las bases: reproducibilidad, varianza entre semillas, probabilidad en la búsqueda aleatoria y procesos gaussianos.",
+     "en": "The basics: reproducibility, variance across seeds, probability in random search and Gaussian processes.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

@@ -63,6 +63,8 @@ import { Cap08Evaluacion, CAP08EVALUACION_FRAMES } from "./capsulas/cap-08-evalu
 import { Cap08EvaluacionEN, CAP08EVALUACIONEN_FRAMES } from "./capsulas/cap-08-evaluacion/Cap08EvaluacionEN";
 import { Cap09Inferencia, CAP09INFERENCIA_FRAMES } from "./capsulas/cap-09-inferencia/Cap09Inferencia";
 import { Cap09InferenciaEN, CAP09INFERENCIAEN_FRAMES } from "./capsulas/cap-09-inferencia/Cap09InferenciaEN";
+import { Cap10MLOps, CAP10MLOPS_FRAMES } from "./capsulas/cap-10-mlops/Cap10MLOps";
+import { Cap10MLOpsEN, CAP10MLOPSEN_FRAMES } from "./capsulas/cap-10-mlops/Cap10MLOpsEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -838,6 +840,32 @@ export const RemotionRoot: React.FC = () => {
         id="Cap09-Inferencia-EN"
         component={Cap09InferenciaEN}
         durationInFrames={CAP09INFERENCIAEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap10-MLOps"
+        component={Cap10MLOps}
+        durationInFrames={CAP10MLOPS_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap10-MLOps-EN"
+        component={Cap10MLOpsEN}
+        durationInFrames={CAP10MLOPSEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
