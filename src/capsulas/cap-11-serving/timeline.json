@@ -1,5 +1,5 @@
 {
- "duracion": 111.33,
+ "duracion": 111.266,
  "escenas": [
   {
    "id": "gancho",
@@ -44,17 +44,17 @@
   {
    "id": "nube",
    "inicio": 95.745,
-   "fin": 105.071
+   "fin": 105.007
   },
   {
    "id": "bases",
-   "inicio": 105.071,
-   "fin": 109.129
+   "inicio": 105.007,
+   "fin": 109.065
   },
   {
    "id": "cierre",
-   "inicio": 109.129,
-   "fin": 111.33
+   "inicio": 109.065,
+   "fin": 111.266
   }
  ],
  "frases": [
@@ -181,23 +181,23 @@
   {
    "escena": "nube",
    "inicio": 95.745,
-   "fin": 104.811,
+   "fin": 104.747,
    "texto": "En Google Cloud: Cloud Run con GPUs L4 escala a cero cuando no hay tráfico; y GKE Inference Gateway enruta cada pedido según la carga, la caché KV y el adaptador LoRA.",
    "cue": "gcp",
    "en": "On Google Cloud: Cloud Run with L4 GPUs scales to zero when there is no traffic; and GKE Inference Gateway routes each request by load, KV cache and LoRA adapter."
   },
   {
    "escena": "bases",
-   "inicio": 105.071,
-   "fin": 108.869,
+   "inicio": 105.007,
+   "fin": 108.805,
    "texto": "Las bases: memoria paginada, teoría de colas, percentiles y valor esperado.",
    "cue": "bases",
    "en": "The basics: paged memory, queueing theory, percentiles and expected value."
   },
   {
    "escena": "cierre",
-   "inicio": 109.129,
-   "fin": 111.07,
+   "inicio": 109.065,
+   "fin": 111.006,
    "texto": "Si te sirvió, compártelo y sígueme.",
    "cue": "cta",
    "en": "If this helped, share and follow."
