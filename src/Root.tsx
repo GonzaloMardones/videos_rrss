@@ -61,6 +61,8 @@ import { Cap07Multimodal, CAP07MULTIMODAL_FRAMES } from "./capsulas/cap-07-multi
 import { Cap07MultimodalEN, CAP07MULTIMODALEN_FRAMES } from "./capsulas/cap-07-multimodal/Cap07MultimodalEN";
 import { Cap08Evaluacion, CAP08EVALUACION_FRAMES } from "./capsulas/cap-08-evaluacion/Cap08Evaluacion";
 import { Cap08EvaluacionEN, CAP08EVALUACIONEN_FRAMES } from "./capsulas/cap-08-evaluacion/Cap08EvaluacionEN";
+import { Cap09Inferencia, CAP09INFERENCIA_FRAMES } from "./capsulas/cap-09-inferencia/Cap09Inferencia";
+import { Cap09InferenciaEN, CAP09INFERENCIAEN_FRAMES } from "./capsulas/cap-09-inferencia/Cap09InferenciaEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -810,6 +812,32 @@ export const RemotionRoot: React.FC = () => {
         id="Cap08-Evaluacion-EN"
         component={Cap08EvaluacionEN}
         durationInFrames={CAP08EVALUACIONEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap09-Inferencia"
+        component={Cap09Inferencia}
+        durationInFrames={CAP09INFERENCIA_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap09-Inferencia-EN"
+        component={Cap09InferenciaEN}
+        durationInFrames={CAP09INFERENCIAEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
