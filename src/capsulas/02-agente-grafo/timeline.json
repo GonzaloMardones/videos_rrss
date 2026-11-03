@@ -1,0 +1,237 @@
+{
+ "duracion": 129.449,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 9.433
+  },
+  {
+   "id": "titulo",
+   "inicio": 9.433,
+   "fin": 13.935
+  },
+  {
+   "id": "estado",
+   "inicio": 13.935,
+   "fin": 23.443
+  },
+  {
+   "id": "nodos",
+   "inicio": 23.443,
+   "fin": 39.109
+  },
+  {
+   "id": "porque",
+   "inicio": 39.109,
+   "fin": 50.323
+  },
+  {
+   "id": "frontend",
+   "inicio": 50.323,
+   "fin": 65.797
+  },
+  {
+   "id": "backend",
+   "inicio": 65.797,
+   "fin": 81.811
+  },
+  {
+   "id": "nube",
+   "inicio": 81.811,
+   "fin": 96.282
+  },
+  {
+   "id": "config",
+   "inicio": 96.282,
+   "fin": 107.667
+  },
+  {
+   "id": "detalles",
+   "inicio": 107.667,
+   "fin": 121.605
+  },
+  {
+   "id": "cierre",
+   "inicio": 121.605,
+   "fin": 129.449
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 4.346,
+   "texto": "¿Dónde vive tu agente de IA? No vive en el prompt que escribes.",
+   "cue": "donde"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 4.546,
+   "fin": 9.133,
+   "texto": "Tu agente vive en un grafo, detrás de un servidor, sobre una nube. Veamos cómo conversan.",
+   "cue": "conversan"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.433,
+   "fin": 13.635,
+   "texto": "Cápsula técnica 02: el agente como grafo de estados.",
+   "cue": null
+  },
+  {
+   "escena": "estado",
+   "inicio": 13.935,
+   "fin": 20.271,
+   "texto": "Tu agente es un grafo de estados. El estado es un objeto: la petición, el usuario, el contexto recuperado, la respuesta.",
+   "cue": "objeto"
+  },
+  {
+   "escena": "estado",
+   "inicio": 20.391,
+   "fin": 23.143,
+   "texto": "Cada nodo lo lee, lo enriquece, y lo pasa al siguiente.",
+   "cue": "pasa"
+  },
+  {
+   "escena": "nodos",
+   "inicio": 23.443,
+   "fin": 29.246,
+   "texto": "Con 3 nodos basta. El primero reúne contexto: lanza en paralelo la búsqueda en el RAG y la memoria del tema.",
+   "cue": "reunir"
+  },
+  {
+   "escena": "nodos",
+   "inicio": 29.366,
+   "fin": 34.849,
+   "texto": "El segundo razona: arma el prompt con ese contexto, llama al modelo, y valida la salida contra un esquema.",
+   "cue": "razonar"
+  },
+  {
+   "escena": "nodos",
+   "inicio": 34.969,
+   "fin": 38.809,
+   "texto": "El tercero guarda: persiste lo aprendido, solo si se cumple una condición.",
+   "cue": "guardar"
+  },
+  {
+   "escena": "porque",
+   "inicio": 39.109,
+   "fin": 45.21,
+   "texto": "¿Por qué un grafo y no una cadena de prompts? Porque cada nodo se prueba solo, se mide solo, y tiene su propio plan B.",
+   "cue": "planb"
+  },
+  {
+   "escena": "porque",
+   "inicio": 45.33,
+   "fin": 50.023,
+   "texto": "Y si el grafo entero falla, el backend llama al modelo directo. El usuario nunca ve el error.",
+   "cue": "directo"
+  },
+  {
+   "escena": "frontend",
+   "inicio": 50.323,
+   "fin": 53.865,
+   "texto": "¿Cómo conversa con el frontend? El frontend no sabe que hay un grafo.",
+   "cue": "nosabe"
+  },
+  {
+   "escena": "frontend",
+   "inicio": 53.985,
+   "fin": 60.406,
+   "texto": "Solo hace una petición a un endpoint, muestra un estado de carga, y recibe un objeto tipado: tipo, confianza, recomendación.",
+   "cue": "tipado"
+  },
+  {
+   "escena": "frontend",
+   "inicio": 60.526,
+   "fin": 65.497,
+   "texto": "Su única tarea es renderizar, no razonar. Así puedes cambiar el agente sin tocar la interfaz.",
+   "cue": "renderizar"
+  },
+  {
+   "escena": "backend",
+   "inicio": 65.797,
+   "fin": 75.418,
+   "texto": "Y en el backend, el código se organiza en rebanadas verticales. Por cada capacidad: un router que solo habla HTTP, un servicio con la lógica, y un esquema con los tipos.",
+   "cue": "rebanadas"
+  },
+  {
+   "escena": "backend",
+   "inicio": 75.538,
+   "fin": 81.511,
+   "texto": "Tu agente es un servicio más. Y la autenticación se inyecta como dependencia: ningún endpoint la implementa a mano.",
+   "cue": "auth"
+  },
+  {
+   "escena": "nube",
+   "inicio": 81.811,
+   "fin": 86.313,
+   "texto": "Vamos a la nube. El modelo y los embeddings son servicios administrados en una región.",
+   "cue": "administrados"
+  },
+  {
+   "escena": "nube",
+   "inicio": 86.433,
+   "fin": 90.337,
+   "texto": "Los vectores van a una base de documentos; los metadatos, a una relacional.",
+   "cue": "bases"
+  },
+  {
+   "escena": "nube",
+   "inicio": 90.457,
+   "fin": 95.982,
+   "texto": "Y la aplicación corre en contenedores sin servidor, detrás de un proxy que valida la identidad de cada usuario.",
+   "cue": "proxy"
+  },
+  {
+   "escena": "config",
+   "inicio": 96.282,
+   "fin": 103.109,
+   "texto": "Todo lo que cambia entre ambientes (local, desarrollo y producción) vive en configuración: el modelo, los umbrales, el tamaño de los trozos.",
+   "cue": "ambientes"
+  },
+  {
+   "escena": "config",
+   "inicio": 103.229,
+   "fin": 107.367,
+   "texto": "Y la infraestructura se declara como código, con un espacio de trabajo por ambiente.",
+   "cue": "iac"
+  },
+  {
+   "escena": "detalles",
+   "inicio": 107.667,
+   "fin": 112.361,
+   "texto": "Dos detalles de producción. Toda llamada a la nube es asíncrona, para no bloquear el servidor.",
+   "cue": "async"
+  },
+  {
+   "escena": "detalles",
+   "inicio": 112.481,
+   "fin": 116.363,
+   "texto": "Y los clientes de cada servicio se crean una sola vez y se reutilizan.",
+   "cue": "singleton"
+  },
+  {
+   "escena": "detalles",
+   "inicio": 116.483,
+   "fin": 121.305,
+   "texto": "Y un endpoint de salud, sin autenticación, para que la plataforma sepa que el servicio sigue vivo.",
+   "cue": "salud"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 121.605,
+   "fin": 126.149,
+   "texto": "Tu agente es el cerebro. Pero sin servidor, interfaz y nube, es solo un experimento.",
+   "cue": "cerebro"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 126.269,
+   "fin": 129.149,
+   "texto": "Compártelo y sígueme para la cápsula 3.",
+   "cue": "cta"
+  }
+ ]
+}

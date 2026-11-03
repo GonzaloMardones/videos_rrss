@@ -1,0 +1,126 @@
+{
+ "duracion": 109.489,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 8.678
+  },
+  {
+   "id": "titulo",
+   "inicio": 8.678,
+   "fin": 14.162
+  },
+  {
+   "id": "caso",
+   "inicio": 14.162,
+   "fin": 41.014
+  },
+  {
+   "id": "equipo",
+   "inicio": 41.014,
+   "fin": 64.615
+  },
+  {
+   "id": "a2a",
+   "inicio": 64.615,
+   "fin": 80.267
+  },
+  {
+   "id": "riesgo",
+   "inicio": 80.267,
+   "fin": 99.738
+  },
+  {
+   "id": "cierre",
+   "inicio": 99.738,
+   "fin": 109.489
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.378,
+   "texto": "¿Y si un equipo de agentes pudiera responder una pregunta causal de punta a punta? Por ejemplo: subir el límite de la tarjeta, ¿aumenta el endeudamiento?",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 8.678,
+   "fin": 13.862,
+   "texto": "Cuasi-experimentos, capítulo 11: un equipo de agentes que hace inferencia causal.",
+   "cue": null
+  },
+  {
+   "escena": "caso",
+   "inicio": 14.162,
+   "fin": 27.666,
+   "texto": "Esa pregunta ya se respondió con datos reales. Sumit Agarwal y coautores usaron 8,5 millones de tarjetas en EE. UU. y 743 discontinuidades: los bancos cambian el límite en cortes del puntaje de crédito.",
+   "cue": "agarwal"
+  },
+  {
+   "escena": "caso",
+   "inicio": 27.786,
+   "fin": 40.714,
+   "texto": "Quienes tienen puntajes bajos se endeudan más con cada dólar extra de límite. Pero los bancos les suben menos el límite: US$127 por cada punto de menor costo de fondos, contra US$2.203 a los de puntaje alto.",
+   "cue": "hallazgo"
+  },
+  {
+   "escena": "equipo",
+   "inicio": 41.014,
+   "fin": 47.862,
+   "texto": "El equipo: un agente planificador formula la pregunta y deja escrito el plan de análisis antes de ver los resultados.",
+   "cue": "planificador"
+  },
+  {
+   "escena": "equipo",
+   "inicio": 47.982,
+   "fin": 56.281,
+   "texto": "Un agente de datos arma la base. Un agente de identificación busca la regla de asignación: aquí, cortes de puntaje, así que propone una regresión discontinua.",
+   "cue": "identifica"
+  },
+  {
+   "escena": "equipo",
+   "inicio": 56.401,
+   "fin": 64.315,
+   "texto": "Un agente estimador calcula el efecto. Y un agente crítico intenta romperlo: cortes falsos, la prueba de McCrary y el análisis de sensibilidad.",
+   "cue": "critico"
+  },
+  {
+   "escena": "a2a",
+   "inicio": 64.615,
+   "fin": 74.813,
+   "texto": "Se coordinan por protocolo A2A: cada agente publica una tarjeta con sus habilidades, y el trabajo avanza como tareas con estados: enviada, en curso, completada o requiere información.",
+   "cue": "tarjeta"
+  },
+  {
+   "escena": "a2a",
+   "inicio": 74.933,
+   "fin": 79.967,
+   "texto": "Si el crítico encuentra un problema, la tarea queda en «requiere información» y vuelve a una persona.",
+   "cue": "persona"
+  },
+  {
+   "escena": "riesgo",
+   "inicio": 80.267,
+   "fin": 89.931,
+   "texto": "¿El riesgo? Con agentes, probar 100 especificaciones cuesta casi nada. Es el jardín de los senderos que se bifurcan: si pruebas muchas, alguna sale significativa por azar.",
+   "cue": "senderos"
+  },
+  {
+   "escena": "riesgo",
+   "inicio": 90.051,
+   "fin": 99.438,
+   "texto": "Con 100 pruebas al 5%, la probabilidad de al menos un falso positivo es 99%. Por eso el plan se escribe antes, y el crítico lleva la cuenta.",
+   "cue": "cuenta"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 99.738,
+   "fin": 109.189,
+   "texto": "Los agentes aceleran el trabajo, pero el diseño, los supuestos y la decisión siguen siendo humanos. Con esto cerramos la serie Cuasi-experimentos. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

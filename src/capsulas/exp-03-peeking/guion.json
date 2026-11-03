@@ -1,0 +1,125 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que miras tu experimento cada mañana. El día nueve sale significativo, y lo detienes. Acabas de más que triplicar tu probabilidad de equivocarte.",
+          "muestra": "Imagina que miras tu experimento cada mañana. El día 9 sale significativo, y lo detienes. Acabas de más que triplicar tu probabilidad de equivocarte.",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea tres del mapa de la experimentación: mirar antes de tiempo.",
+          "muestra": "Idea 3 del mapa de la experimentación: mirar antes de tiempo (peeking)."
+        }
+      ]
+    },
+    {
+      "id": "paseo",
+      "frases": [
+        {
+          "dice": "Aunque el tratamiento no haga nada, el estadístico sube y baja con el azar, como un paseo aleatorio.",
+          "muestra": "Aunque el tratamiento no haga nada, el estadístico sube y baja con el azar, como un paseo aleatorio.",
+          "cue": "paseo"
+        },
+        {
+          "dice": "El umbral de uno coma noventa y seis está pensado para mirar una sola vez. Cada vistazo extra es otra oportunidad de cruzarlo por suerte.",
+          "muestra": "El umbral de 1,96 está pensado para mirar una sola vez. Cada vistazo extra es otra oportunidad de cruzarlo por suerte.",
+          "cue": "vistazo"
+        }
+      ]
+    },
+    {
+      "id": "cuanto",
+      "frases": [
+        {
+          "dice": "¿Cuánto crece el error? Con una mirada, cinco por ciento. Con cinco miradas, catorce. Con diez, diecinueve. Y mirando todos los días durante un mes, casi treinta por ciento.",
+          "muestra": "¿Cuánto crece el error? Con una mirada, 5%. Con cinco, 14%. Con diez, 19%. Y mirando todos los días durante un mes, casi 30%.",
+          "cue": "cuanto"
+        }
+      ]
+    },
+    {
+      "id": "fijo",
+      "frases": [
+        {
+          "dice": "La primera solución es la más simple: calcula el tamaño de muestra antes, con el efecto mínimo detectable, y mira una sola vez al final.",
+          "muestra": "La primera solución es la más simple: calcula el tamaño de muestra antes, con el MDE, y mira una sola vez al final.",
+          "cue": "fijo"
+        }
+      ]
+    },
+    {
+      "id": "grupos",
+      "frases": [
+        {
+          "dice": "La segunda: un diseño secuencial por grupos. Decides de antemano cuántas veces vas a mirar, y repartes el cinco por ciento entre esas miradas.",
+          "muestra": "La segunda: un diseño secuencial por grupos. Decides de antemano cuántas veces vas a mirar, y repartes el 5% entre esas miradas.",
+          "cue": "grupos"
+        },
+        {
+          "dice": "Con la regla de O'Brien y Fleming, y cinco miradas, el umbral parte en cuatro coma cincuenta y seis, y baja hasta dos coma cero cuatro al final.",
+          "muestra": "Con O'Brien-Fleming y cinco miradas, el umbral parte en 4,56 y baja hasta 2,04 al final.",
+          "cue": "obf"
+        },
+        {
+          "dice": "Es muy exigente al principio, y casi normal al final. Así puedes detener temprano solo si el efecto es enorme.",
+          "muestra": "Muy exigente al principio, casi normal al final. Así puedes detener temprano solo si el efecto es enorme.",
+          "cue": "exigente"
+        }
+      ]
+    },
+    {
+      "id": "pocock",
+      "frases": [
+        {
+          "dice": "Y la regla de Pócok, en cambio, usa el mismo umbral en cada mirada: dos coma cuarenta y uno.",
+          "muestra": "Pocock, en cambio, usa el mismo umbral en cada mirada: 2,41.",
+          "cue": "pocock"
+        }
+      ]
+    },
+    {
+      "id": "siempre",
+      "frases": [
+        {
+          "dice": "Y la tercera: pruebas siempre válidas, como la secuencial de razón de verosimilitud mezclada. Te dejan mirar cuando quieras, a cambio de un poco menos de poder.",
+          "muestra": "La tercera: p-valores siempre válidos (como mSPRT). Te dejan mirar cuando quieras, a cambio de un poco menos de poder.",
+          "cue": "siempre"
+        }
+      ]
+    },
+    {
+      "id": "regla",
+      "frases": [
+        {
+          "dice": "La regla práctica: antes de lanzar, escribe cuánto dura, cuántas veces miras, y qué te hace parar. Y corre semanas completas, para no confundir el efecto con el día de la semana.",
+          "muestra": "La regla práctica: antes de lanzar, escribe cuánto dura, cuántas veces miras, y qué te hace parar. Y corre semanas completas, para no confundir el efecto con el día de la semana.",
+          "cue": "regla"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Mirar no es el problema. Decidir mirando, sí. En la próxima idea, qué pasa cuando mides veinte métricas a la vez. Compártelo y sígueme.",
+          "muestra": "Mirar no es el problema. Decidir mirando, sí. En la próxima idea: qué pasa cuando mides 20 métricas a la vez. Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

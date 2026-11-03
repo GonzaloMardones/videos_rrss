@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* Tokens con los nombres de shadcn/ui, mapeados al estilo "vacío" de las cápsulas técnicas.
+   Los componentes de src/components/ui usan bg-background, bg-muted, text-foreground, etc. */
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-muted: #111114;
+  --color-muted-foreground: #9a9a9a;
+  --color-border: #27272a;
+  --color-primary: #8052ff;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #ffb829;
+  --color-accent-foreground: #000000;
+  --radius-lg: 0.75rem;
+}

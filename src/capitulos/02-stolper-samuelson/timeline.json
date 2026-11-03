@@ -1,0 +1,201 @@
+{
+ "duracion": 71.687,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 4.967
+  },
+  {
+   "id": "titulo",
+   "inicio": 4.967,
+   "fin": 8.425
+  },
+  {
+   "id": "idea",
+   "inicio": 8.425,
+   "fin": 19.775
+  },
+  {
+   "id": "recetas",
+   "inicio": 19.775,
+   "fin": 27.889
+  },
+  {
+   "id": "experimento",
+   "inicio": 27.889,
+   "fin": 43.175
+  },
+  {
+   "id": "cerezas",
+   "inicio": 43.175,
+   "fin": 49.547
+  },
+  {
+   "id": "realidad",
+   "inicio": 49.547,
+   "fin": 62.989
+  },
+  {
+   "id": "cierre",
+   "inicio": 62.989,
+   "fin": 71.687
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 2.127,
+   "texto": "El cobre está en precio récord.",
+   "cue": "cobre"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 2.427,
+   "fin": 4.667,
+   "texto": "¿Entonces por qué tu sueldo no subió?",
+   "cue": "sueldo"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 4.967,
+   "fin": 8.125,
+   "texto": "Capítulo 2: cuando sube el cobre, ¿quién gana y quién pierde?",
+   "cue": null
+  },
+  {
+   "escena": "idea",
+   "inicio": 8.425,
+   "fin": 11.177,
+   "texto": "Hay una idea clásica de la economía que lo explica.",
+   "cue": "idea"
+  },
+  {
+   "escena": "idea",
+   "inicio": 11.297,
+   "fin": 13.601,
+   "texto": "Se llama teorema de Stolper-Samuelson.",
+   "cue": "nombre"
+  },
+  {
+   "escena": "idea",
+   "inicio": 13.801,
+   "fin": 19.475,
+   "texto": "Y dice algo simple: cuando sube el precio de algo, gana, y mucho, quien aporta lo que más se usa para hacerlo.",
+   "cue": "regla"
+  },
+  {
+   "escena": "recetas",
+   "inicio": 19.775,
+   "fin": 21.823,
+   "texto": "Pensemos en dos productos chilenos.",
+   "cue": "dos"
+  },
+  {
+   "escena": "recetas",
+   "inicio": 21.943,
+   "fin": 24.653,
+   "texto": "El cobre, que necesita mucha maquinaria: capital.",
+   "cue": "cobre"
+  },
+  {
+   "escena": "recetas",
+   "inicio": 24.773,
+   "fin": 27.589,
+   "texto": "Y las cerezas, que necesitan muchas manos: trabajo.",
+   "cue": "cerezas"
+  },
+  {
+   "escena": "experimento",
+   "inicio": 27.889,
+   "fin": 30.683,
+   "texto": "Ahora, subamos el precio del cobre un 10%.",
+   "cue": "sube"
+  },
+  {
+   "escena": "experimento",
+   "inicio": 30.803,
+   "fin": 34.387,
+   "texto": "Las mineras quieren producir más, y compiten por más capital.",
+   "cue": "demanda"
+  },
+  {
+   "escena": "experimento",
+   "inicio": 34.507,
+   "fin": 37.729,
+   "texto": "El capital gana más que el cobre: casi 14%.",
+   "cue": "capital"
+  },
+  {
+   "escena": "experimento",
+   "inicio": 37.849,
+   "fin": 40.473,
+   "texto": "Y el salario, en la práctica, baja casi 5%.",
+   "cue": "salario"
+  },
+  {
+   "escena": "experimento",
+   "inicio": 40.593,
+   "fin": 42.875,
+   "texto": "A eso se le llama efecto magnificación.",
+   "cue": "magnificacion"
+  },
+  {
+   "escena": "cerezas",
+   "inicio": 43.175,
+   "fin": 45.885,
+   "texto": "Pero si lo que sube son las cerezas, pasa al revés:",
+   "cue": "sube"
+  },
+  {
+   "escena": "cerezas",
+   "inicio": 46.005,
+   "fin": 49.247,
+   "texto": "ganan los trabajadores, porque son el ingrediente principal.",
+   "cue": "trabajo"
+  },
+  {
+   "escena": "realidad",
+   "inicio": 49.547,
+   "fin": 51.574,
+   "texto": "Ojo, que en la vida real hay matices.",
+   "cue": null
+  },
+  {
+   "escena": "realidad",
+   "inicio": 51.774,
+   "fin": 57.79,
+   "texto": "Pero un minero no se vuelve temporero de un día para otro. En el corto plazo, ganan los que ya están en la minería.",
+   "cue": "minero"
+  },
+  {
+   "escena": "realidad",
+   "inicio": 57.91,
+   "fin": 62.689,
+   "texto": "Y un cobre caro fortalece el peso, lo que golpea a otros exportadores, como la fruta.",
+   "cue": "peso"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 62.989,
+   "fin": 65.869,
+   "texto": "La gran lección: el comercio hace crecer la torta…",
+   "cue": "torta"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 65.989,
+   "fin": 67.503,
+   "texto": "pero no la reparte igual.",
+   "cue": "reparte"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 67.803,
+   "fin": 71.387,
+   "texto": "En el próximo capítulo: ¿quién tiene la culpa de la inflación? Sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

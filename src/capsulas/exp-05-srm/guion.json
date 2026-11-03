@@ -1,0 +1,120 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que pediste mitad y mitad, y llegaron cincuenta mil ochocientos usuarios a un grupo y cuarenta y nueve mil doscientos al otro. ¿Azar? No. Tu experimento está roto.",
+          "muestra": "Imagina que pediste mitad y mitad, y llegaron 50.800 usuarios a un grupo y 49.200 al otro. ¿Azar? No. Tu experimento está roto.",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea cinco del mapa de la experimentación: el desbalance de muestra, o ese erre eme.",
+          "muestra": "Idea 5 del mapa de la experimentación: el desbalance de muestra (SRM, sample ratio mismatch)."
+        }
+      ]
+    },
+    {
+      "id": "que",
+      "frases": [
+        {
+          "dice": "Ocurre cuando la proporción de usuarios que llegó a cada grupo no es la que diseñaste.",
+          "muestra": "Ocurre cuando la proporción de usuarios que llegó a cada grupo no es la que diseñaste.",
+          "cue": "que"
+        }
+      ]
+    },
+    {
+      "id": "prueba",
+      "frases": [
+        {
+          "dice": "Se detecta con una prueba de chi cuadrado. Para cada grupo, restas lo esperado a lo observado, lo elevas al cuadrado, y lo divides por lo esperado.",
+          "muestra": "Se detecta con una prueba de χ². Para cada grupo, restas lo esperado a lo observado, lo elevas al cuadrado, y lo divides por lo esperado.",
+          "cue": "formula"
+        },
+        {
+          "dice": "Con ochocientos al cuadrado, sobre cincuenta mil, por dos grupos: veinticinco coma seis. Un p-valor de cuatro en diez millones.",
+          "muestra": "800² / 50.000, por dos grupos: χ² = 25,6. Un p-valor de 4 en 10 millones.",
+          "cue": "cuenta"
+        }
+      ]
+    },
+    {
+      "id": "intuicion",
+      "frases": [
+        {
+          "dice": "La intuición: con cien mil usuarios, el azar mueve la proporción en apenas cero coma dieciséis puntos. Cero coma ocho son cinco veces eso.",
+          "muestra": "La intuición: con 100.000 usuarios, el azar mueve la proporción en apenas 0,16 puntos. 0,8 son cinco veces eso.",
+          "cue": "intuicion"
+        },
+        {
+          "dice": "Cincuenta coma uno contra cuarenta y nueve coma nueve es normal. Cincuenta coma ocho, no.",
+          "muestra": "50,1 contra 49,9 es normal (p = 0,53). 50,8, no.",
+          "cue": "normal"
+        }
+      ]
+    },
+    {
+      "id": "porque",
+      "frases": [
+        {
+          "dice": "¿Por qué importa tanto? Porque los usuarios que faltan no faltan al azar.",
+          "muestra": "¿Por qué importa tanto? Porque los usuarios que faltan no faltan al azar.",
+          "cue": "porque"
+        },
+        {
+          "dice": "Si tu variante carga más lento, los impacientes se van antes de ser contados. Quedan solo los pacientes, y la variante parece mejor de lo que es.",
+          "muestra": "Si tu variante carga más lento, los impacientes se van antes de ser contados. Quedan solo los pacientes, y la variante parece mejor de lo que es.",
+          "cue": "lento"
+        }
+      ]
+    },
+    {
+      "id": "causas",
+      "frases": [
+        {
+          "dice": "Las causas típicas: una variante más lenta, redirecciones, bots filtrados distinto en cada grupo, errores en la asignación, o datos que se pierden en el camino.",
+          "muestra": "Las causas típicas: una variante más lenta, redirecciones, bots filtrados distinto en cada grupo, errores en la asignación, o datos que se pierden en el camino.",
+          "cue": "causas"
+        }
+      ]
+    },
+    {
+      "id": "hacer",
+      "frases": [
+        {
+          "dice": "Y entonces, ¿qué hacer? No lo analices. El efecto que veas está sesgado. Busca la causa, corrígela, y vuelve a correr el experimento.",
+          "muestra": "¿Qué hacer? No lo analices. El efecto que veas está sesgado. Busca la causa, corrígela, y vuelve a correr el experimento.",
+          "cue": "hacer"
+        },
+        {
+          "dice": "Y revisa el desbalance primero, en cada experimento, de forma automática. Un umbral común es un p-valor menor a cero coma cero cero uno.",
+          "muestra": "Y revisa el SRM primero, en cada experimento, de forma automática. Un umbral común: p < 0,001.",
+          "cue": "primero"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Antes de leer el resultado, cuenta a la gente. En la próxima idea, las métricas que no pueden empeorar. Compártelo y sígueme.",
+          "muestra": "Antes de leer el resultado, cuenta a la gente. En la próxima idea, las métricas que no pueden empeorar. Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

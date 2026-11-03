@@ -1,0 +1,185 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Este año, las a efe pe perdieron más de siete mil millones de dólares de los ahorros de la gente.",
+          "muestra": "Este año, las AFP perdieron más de US$7.000 millones de los ahorros de la gente.",
+          "cue": "perdieron",
+          "pausa": 0.2
+        },
+        {
+          "dice": "¿Y a las administradoras, cuánto les costó? Veamos los números.",
+          "muestra": "¿Y a las administradoras, cuánto les costó? Veamos los números.",
+          "cue": "cuanto"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Capítulo seis: quién gana cuando el fondo pierde.",
+          "muestra": "Capítulo 6: ¿quién gana cuando el fondo pierde?"
+        }
+      ]
+    },
+    {
+      "id": "comision",
+      "frases": [
+        {
+          "dice": "Primero, la comisión. Las a efe pe cobran un porcentaje de tu sueldo, no de lo que tienes ahorrado.",
+          "muestra": "Primero, la comisión. Las AFP cobran un porcentaje de tu sueldo, no de lo que tienes ahorrado.",
+          "cue": "comision"
+        },
+        {
+          "dice": "Entre cero coma cuarenta y seis y uno coma cuarenta y cinco por ciento, según la a efe pe.",
+          "muestra": "Entre 0,46% y 1,45%, según la AFP.",
+          "cue": "rango"
+        },
+        {
+          "dice": "Y si el fondo sube o baja, la comisión es la misma.",
+          "muestra": "Y si el fondo sube o baja, la comisión es la misma.",
+          "cue": "misma"
+        }
+      ]
+    },
+    {
+      "id": "utilidades",
+      "frases": [
+        {
+          "dice": "Resultado: en el primer semestre, mientras el fondo E caía, las siete a efe pe ingresaron seiscientos veintidós mil millones de pesos.",
+          "muestra": "Resultado: en el primer semestre, mientras el fondo E caía, las siete AFP ingresaron $622 mil millones.",
+          "cue": "ingresos"
+        },
+        {
+          "dice": "Y ganaron trescientos setenta y ocho mil millones: trece por ciento más que el año anterior.",
+          "muestra": "Y ganaron $378 mil millones: 13% más que el año anterior.",
+          "cue": "ganaron"
+        }
+      ]
+    },
+    {
+      "id": "encaje",
+      "frases": [
+        {
+          "dice": "Entonces, ¿las a efe pe no pierden nada? Un poco. Deben tener un uno por ciento de cada fondo con plata propia: el encaje.",
+          "muestra": "Entonces, ¿las AFP no pierden nada? Un poco. Deben tener un 1% de cada fondo con plata propia: el encaje.",
+          "cue": "encaje"
+        },
+        {
+          "dice": "En el fondo E, eso son unos veintiocho millones de dólares de pérdida entre las siete.",
+          "muestra": "En el fondo E, eso son unos US$28 millones de pérdida entre las siete.",
+          "cue": "veintiocho"
+        },
+        {
+          "dice": "Y hay otra regla: la rentabilidad mínima compara a cada a efe pe con el promedio. Si todas pierden juntas, ninguna tiene que compensar.",
+          "muestra": "Y hay otra regla: la rentabilidad mínima compara a cada AFP con el promedio. Si todas pierden juntas, ninguna tiene que compensar.",
+          "cue": "minima"
+        }
+      ]
+    },
+    {
+      "id": "bonos",
+      "frases": [
+        {
+          "dice": "¿Y qué pasa con los bonos de los ejecutivos? Nadie lo sabe: son información reservada.",
+          "muestra": "¿Y qué pasa con los bonos de los ejecutivos? Nadie lo sabe: son información reservada.",
+          "cue": "bonos"
+        },
+        {
+          "dice": "Mario Marcel, exministro de Hacienda, pidió conocerlos. Hasta hoy, no hay antecedentes públicos que liguen bonos a estas operaciones.",
+          "muestra": "Mario Marcel, exministro de Hacienda, pidió conocerlos. Hasta hoy, no hay antecedentes públicos que liguen bonos a estas operaciones.",
+          "cue": "marcel"
+        }
+      ]
+    },
+    {
+      "id": "iguales",
+      "frases": [
+        {
+          "dice": "¿Todas hicieron lo mismo? Sí, las siete.",
+          "muestra": "¿Todas hicieron lo mismo? Sí, las siete.",
+          "cue": "todas"
+        },
+        {
+          "dice": "La que más cayó perdió diez coma nueve por ciento; la que menos, nueve coma nueve. Un punto de diferencia.",
+          "muestra": "La que más cayó perdió 10,9%; la que menos, 9,9%. Un punto de diferencia.",
+          "cue": "punto"
+        }
+      ]
+    },
+    {
+      "id": "otrolado",
+      "frases": [
+        {
+          "dice": "¿Quién está al otro lado? Un suap es un juego de suma cero: lo que pierde el fondo, lo gana la contraparte.",
+          "muestra": "¿Quién está al otro lado? Un swap es un juego de suma cero: lo que pierde el fondo, lo gana la contraparte.",
+          "cue": "sumacero"
+        },
+        {
+          "dice": "Hasta septiembre, las mayores eran Bank of América, Société Générale y BNP Paribás, con más de mil millones de dólares cada uno.",
+          "muestra": "Hasta septiembre, las mayores eran Bank of America, Société Générale y BNP Paribas, con más de US$1.000 millones cada uno.",
+          "cue": "bancos"
+        },
+        {
+          "dice": "Los dueños de las a efe pe son grupos como Sura, MetLife, Principal, Prudential y Generali, entre otros.",
+          "muestra": "Los dueños de las AFP son grupos como Sura, MetLife, Principal, Prudential y Generali, entre otros.",
+          "cue": "duenos"
+        },
+        {
+          "dice": "Y no hay evidencia pública de vínculos entre esos grupos y los bancos de la contraparte.",
+          "muestra": "Y no hay evidencia pública de vínculos entre esos grupos y los bancos de la contraparte.",
+          "cue": "sinvinculo"
+        }
+      ]
+    },
+    {
+      "id": "politica",
+      "frases": [
+        {
+          "dice": "Veamos ahora el lado político. El superintendente actual fue gerente de inversiones y presidente de Provida, y director en filiales de Habitat. Sus críticos hablan de puerta giratoria.",
+          "muestra": "Veamos ahora el lado político. El superintendente actual fue gerente de inversiones y presidente de Provida, y director en filiales de Habitat. Sus críticos hablan de puerta giratoria.",
+          "cue": "puerta"
+        },
+        {
+          "dice": "El gobierno culpa al gobierno anterior. El anterior responde que se hagan cargo.",
+          "muestra": "El gobierno culpa al gobierno anterior. El anterior responde que se hagan cargo.",
+          "cue": "culpa"
+        },
+        {
+          "dice": "Y hay denuncias por administración desleal en Fiscalía, y una comisión investigadora en trámite.",
+          "muestra": "Y hay denuncias por administración desleal en Fiscalía, y una comisión investigadora en trámite.",
+          "cue": "fiscalia"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Entonces, la pregunta no es solo si hubo mala intención. Es que el diseño no alinea incentivos: comisión fija, pérdidas compartidas y bonos reservados.",
+          "muestra": "Entonces, la pregunta no es solo si hubo mala intención. Es que el diseño no alinea incentivos: comisión fija, pérdidas compartidas y bonos reservados.",
+          "cue": "diseno"
+        },
+        {
+          "dice": "Por eso hoy se discute cobrar sobre el saldo, transparentar los bonos y poner límites de duración.",
+          "muestra": "Por eso hoy se discute cobrar sobre el saldo, transparentar los bonos y poner límites de duración.",
+          "cue": "propuestas"
+        },
+        {
+          "dice": "Compártelo y sígueme para el capítulo siete.",
+          "muestra": "Compártelo y sígueme para el capítulo 7.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

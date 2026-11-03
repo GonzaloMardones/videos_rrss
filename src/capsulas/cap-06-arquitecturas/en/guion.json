@@ -1,0 +1,190 @@
+{
+ "motor": "kokoro",
+ "voz": "am_michael",
+ "idioma": "en-us",
+ "velocidad": 1.27,
+ "pausaFrase": 0.08,
+ "pausaEscena": 0.2,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Going from four thousand to one hundred twenty-eight thousand tokens multiplies the text by thirty-two.",
+     "muestra": "Going from 4,096 to 131,072 tokens multiplies the text by 32.",
+     "es": "Pasar de 4.096 a 131.072 tokens multiplica el texto por 32.",
+     "cue": "x32"
+    },
+    {
+     "dice": "And the cost of attention by one thousand twenty-four. That is why there is life beyond the dense Transformer.",
+     "muestra": "And the cost of attention by 1,024. That is why there is life beyond the dense Transformer.",
+     "es": "Y el costo de la atención, por 1.024. Por eso hay vida más allá del Transformer denso.",
+     "cue": "x1024",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Tech capsule: beyond the dense Transformer.",
+     "muestra": "Tech capsule: beyond the dense Transformer.",
+     "es": "Cápsula técnica: más allá del Transformer denso."
+    }
+   ]
+  },
+  {
+   "id": "atencion",
+   "frases": [
+    {
+     "dice": "Attention compares every token with every other one: n squared comparisons.",
+     "muestra": "Attention compares every token with every other one: n² comparisons.",
+     "es": "La atención compara cada token con todos los demás: n² comparaciones.",
+     "cue": "n2"
+    },
+    {
+     "dice": "It also stores the keys and values of every token: the K V cache grows with the context.",
+     "muestra": "It also stores the keys and values of every token: the KV cache grows with the context.",
+     "es": "Además guarda las claves y los valores de cada token: la caché KV crece con el contexto.",
+     "cue": "kv"
+    }
+   ]
+  },
+  {
+   "id": "gqa",
+   "frases": [
+    {
+     "dice": "And grouped query attention shares keys and values across several heads.",
+     "muestra": "Grouped-query attention (GQA) shares keys and values across several heads.",
+     "es": "La atención con consultas agrupadas (GQA) comparte claves y valores entre varias cabezas.",
+     "cue": "gqa"
+    },
+    {
+     "dice": "In a seventy billion parameter model, with eight groups instead of sixty-four heads, the cache per token drops from two point five to zero point three megabytes: eight times less.",
+     "muestra": "In a 70-billion-parameter model, with 8 groups instead of 64 heads, the cache per token drops from 2.5 to 0.31 MiB: 8× less.",
+     "es": "En un modelo de 70.000 millones, con 8 grupos en vez de 64 cabezas, la caché por token baja de 2,5 a 0,31 MiB: 8 veces menos.",
+     "cue": "ocho"
+    }
+   ]
+  },
+  {
+   "id": "moe",
+   "frases": [
+    {
+     "dice": "A mixture of experts replaces one big network with several small ones, and a router picks which to use.",
+     "muestra": "A mixture of experts (MoE) replaces one big network with several small ones, and a router picks which to use.",
+     "es": "La mezcla de expertos (MoE) reemplaza una red grande por varias pequeñas, y un enrutador elige cuáles usar.",
+     "cue": "expertos"
+    },
+    {
+     "dice": "Mixtral has forty-seven billion parameters, but each token uses only thirteen: two experts out of eight.",
+     "muestra": "Mixtral has 47 billion parameters, but each token uses only 13: 2 experts out of 8.",
+     "es": "Mixtral tiene 47.000 millones de parámetros, pero cada token usa solo 13: 2 expertos de 8.",
+     "cue": "mixtral"
+    }
+   ]
+  },
+  {
+   "id": "router",
+   "frases": [
+    {
+     "dice": "The idea dates back to nineteen ninety-one: a mixture model, where the output is the average of the experts, weighted by their probability.",
+     "muestra": "The idea dates back to 1991: a mixture model, where the output is the average of the experts weighted by their probability.",
+     "es": "La idea es de 1991: un modelo de mezcla, donde la salida es el promedio de los expertos ponderado por su probabilidad.",
+     "cue": "mezcla"
+    },
+    {
+     "dice": "Today the router is a softmax: it keeps the top two, and a load balancing loss stops the same expert from always winning.",
+     "muestra": "Today the router is a softmax: it keeps the top 2, and a load-balancing loss stops the same expert from always winning.",
+     "es": "Hoy el enrutador es una softmax: se queda con los 2 más probables, y una pérdida de balance evita que gane siempre el mismo.",
+     "cue": "topk"
+    }
+   ]
+  },
+  {
+   "id": "lineal",
+   "frases": [
+    {
+     "dice": "Linear attention changes the order of the multiplications: keys times values first, then the queries.",
+     "muestra": "Linear attention changes the order of the multiplications: keys times values first, then the queries.",
+     "es": "La atención lineal cambia el orden de las multiplicaciones: primero claves por valores y después las consultas.",
+     "cue": "asociar"
+    },
+    {
+     "dice": "The cost goes from n squared times d, to n times d squared: a Transformer that behaves like a recurrent network.",
+     "muestra": "The cost goes from n²·d to n·d²: a Transformer that behaves like a recurrent network.",
+     "es": "El costo pasa de n²·d a n·d²: un Transformer que se comporta como una red recurrente.",
+     "cue": "rnn"
+    }
+   ]
+  },
+  {
+   "id": "ssm",
+   "frases": [
+    {
+     "dice": "State space models summarize the whole past in a fixed-size state: the new h equals A times h, plus B times x.",
+     "muestra": "State space models (SSMs) summarize the whole past in a fixed-size state: hₜ = A·hₜ₋₁ + B·xₜ.",
+     "es": "Los modelos de espacio de estados (SSM) resumen todo el pasado en un estado de tamaño fijo: hₜ = A·hₜ₋₁ + B·xₜ.",
+     "cue": "estado"
+    },
+    {
+     "dice": "They train in parallel like a convolution, and generate like a recurrent network: linear cost and constant memory.",
+     "muestra": "They train in parallel like a convolution and generate like a recurrent network: linear cost and constant memory.",
+     "es": "Entrenan en paralelo como una convolución y generan como una recurrente: costo lineal y memoria constante.",
+     "cue": "conv"
+    }
+   ]
+  },
+  {
+   "id": "mamba",
+   "frases": [
+    {
+     "dice": "Mamba makes B, C and the step delta depend on the input: the model decides what to remember, and what to forget.",
+     "muestra": "Mamba makes B, C and the step Δ depend on the input: the model decides what to remember and what to forget.",
+     "es": "Mamba hace que B, C y el paso Δ dependan de la entrada: el modelo decide qué recordar y qué olvidar.",
+     "cue": "selectivo"
+    },
+    {
+     "dice": "It reports up to five times higher inference throughput than a Transformer. And hybrids, like Jamba, mix both ideas.",
+     "muestra": "It reports up to 5× higher inference throughput than a Transformer. And hybrids, like Jamba, mix both ideas.",
+     "es": "Reporta hasta 5× más rendimiento en inferencia que un Transformer. Y los híbridos, como Jamba, mezclan las dos ideas.",
+     "cue": "hibrido"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "On Google Cloud, Gemini one point five Pro is a mixture of experts Transformer. And large-scale mixture of experts grew up on T P Us: G Shard trained six hundred billion parameters on two thousand forty-eight T P Us.",
+     "muestra": "On Google Cloud, Gemini 1.5 Pro is a mixture-of-experts Transformer. And large-scale MoE grew up on TPUs: GShard trained 600 billion parameters on 2,048 TPUs.",
+     "es": "En Google Cloud, Gemini 1.5 Pro es un Transformer de mezcla de expertos. Y la MoE a gran escala creció sobre TPUs: GShard entrenó 600.000 millones de parámetros en 2.048 TPUs.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "The basics: the quadratic cost of attention, the K V cache, softmax and mixture models, and linear recurrences.",
+     "muestra": "The basics: the quadratic cost of attention, the KV cache, softmax and mixture models, and linear recurrences.",
+     "es": "Las bases: el costo cuadrático de la atención, la caché KV, la softmax y los modelos de mezcla, y las recurrencias lineales.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "If this helped, share and follow.",
+     "muestra": "If this helped, share and follow.",
+     "es": "Si te sirvió, compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

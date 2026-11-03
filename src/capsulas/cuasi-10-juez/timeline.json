@@ -1,0 +1,131 @@
+{
+ "duracion": 99.343,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.174
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.174,
+   "fin": 15.997
+  },
+  {
+   "id": "juez",
+   "inicio": 15.997,
+   "fin": 31.542
+  },
+  {
+   "id": "instrumento",
+   "inicio": 31.542,
+   "fin": 41.613
+  },
+  {
+   "id": "ppi",
+   "inicio": 41.613,
+   "fin": 64.723
+  },
+  {
+   "id": "numeros",
+   "inicio": 64.723,
+   "fin": 79.309
+  },
+  {
+   "id": "bayes",
+   "inicio": 79.309,
+   "fin": 90.019
+  },
+  {
+   "id": "cierre",
+   "inicio": 90.019,
+   "fin": 99.343
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 10.874,
+   "texto": "Un banco usa un modelo de lenguaje para revisar si 10.000 conversaciones con clientes cumplen la normativa. El modelo dice: 84,6% cumplen. La cifra real es 80%.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.174,
+   "fin": 15.697,
+   "texto": "Cuasi-experimentos, capítulo 10: el modelo de lenguaje como juez.",
+   "cue": null
+  },
+  {
+   "escena": "juez",
+   "inicio": 15.997,
+   "fin": 25.106,
+   "texto": "Usar un modelo como juez es barato y rápido. Lianmin Zheng y su equipo mostraron que los jueces más fuertes coinciden con personas más del 80% de las veces.",
+   "cue": "barato"
+  },
+  {
+   "escena": "juez",
+   "inicio": 25.226,
+   "fin": 31.242,
+   "texto": "Pero también tienen sesgos: prefieren la respuesta que aparece primero, las más largas y las que se parecen a las suyas.",
+   "cue": "sesgos"
+  },
+  {
+   "escena": "instrumento",
+   "inicio": 31.542,
+   "fin": 41.313,
+   "texto": "En un experimento, el juez es tu instrumento de medición. Si es indulgente, sesga la métrica. Y si cambias de juez a mitad de la prueba, es la amenaza de instrumentación del capítulo 3.",
+   "cue": "instrumento"
+  },
+  {
+   "escena": "ppi",
+   "inicio": 41.613,
+   "fin": 50.893,
+   "texto": "¿La solución? La inferencia potenciada por predicción (Angelopoulos y coautores). Calificas una muestra pequeña con personas, por ejemplo 300 conversaciones.",
+   "cue": "muestra"
+  },
+  {
+   "escena": "ppi",
+   "inicio": 51.013,
+   "fin": 58.095,
+   "texto": "Con ella mides cuánto se equivoca el juez en promedio, el rectificador, y lo restas del promedio del juez sobre las 10.000.",
+   "cue": "rectificador"
+  },
+  {
+   "escena": "ppi",
+   "inicio": 58.215,
+   "fin": 64.423,
+   "texto": "En fórmula: el promedio del juez en todos los casos, menos el promedio de su error en los casos revisados por personas.",
+   "cue": "formula"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 64.723,
+   "fin": 75.667,
+   "texto": "En la simulación: el juez solo dice 84,6% y su intervalo nunca contiene la verdad. Las personas solas: 80% ± 4,5. Combinados: 80% ± 3,5.",
+   "cue": "sim"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 75.787,
+   "fin": 79.009,
+   "texto": "Las 300 etiquetas humanas rinden como unas 500.",
+   "cue": "rinden"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 79.309,
+   "fin": 89.719,
+   "texto": "Es el mismo principio del capítulo 1: el juez aporta mucha información con sesgo, las personas poca sin sesgo, y la combinación pesa cada fuente según lo que sabe.",
+   "cue": "principio"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 90.019,
+   "fin": 99.043,
+   "texto": "Un juez automático escala la medición, pero las personas la calibran. Próximo capítulo: un equipo de agentes que hace inferencia causal. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

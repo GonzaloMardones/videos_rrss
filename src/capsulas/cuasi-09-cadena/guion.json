@@ -1,0 +1,105 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y un banco cambia el agente que verifica identidad en su flujo de créditos. La conversión sube cinco puntos. ¿Fue porque el proceso es más rápido, o por algo más?",
+     "muestra": "Un banco cambia el agente que verifica identidad en su flujo de créditos. La conversión sube 5 puntos. ¿Fue porque el proceso es más rápido, o por algo más?",
+     "cue": "gancho",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo nueve: qué agente causó la mejora.",
+     "muestra": "Cuasi-experimentos, capítulo 9: ¿qué agente causó la mejora?"
+    }
+   ]
+  },
+  {
+   "id": "cadena",
+   "frases": [
+    {
+     "dice": "Y el flujo es una cadena de agentes: un orquestador, un agente de verificación, uno de riesgo, y uno de oferta. Cada uno le delega tareas al siguiente por protocolo a dos a.",
+     "muestra": "El flujo es una cadena de agentes: un orquestador, un agente de verificación, uno de riesgo y uno de oferta. Cada uno delega tareas al siguiente por protocolo A2A.",
+     "cue": "cadena"
+    },
+    {
+     "dice": "Y cada tarea deja una traza: quién la pidió, cuánto tardó, y qué devolvió. Esas trazas son los datos de un análisis de mediación.",
+     "muestra": "Cada tarea deja una traza: quién la pidió, cuánto tardó y qué devolvió. Esas trazas son los datos de un análisis de mediación.",
+     "cue": "trazas"
+    }
+   ]
+  },
+  {
+   "id": "mediacion",
+   "frases": [
+    {
+     "dice": "Entonces, el efecto total se divide en dos. El indirecto, que pasa por el tiempo de decisión. Y el directo, todo lo demás.",
+     "muestra": "El efecto total se divide en dos: el indirecto, que pasa por el tiempo de decisión, y el directo, todo lo demás.",
+     "cue": "divide"
+    },
+    {
+     "dice": "La versión nueva baja el tiempo en treinta minutos. Y cada diez minutos menos suma un punto de conversión. El indirecto es menos treinta, por menos cero coma uno, y eso da tres. Directo: dos. Total: cinco.",
+     "muestra": "La versión nueva baja el tiempo en 30 minutos, y cada 10 minutos menos suma 1 punto de conversión. Indirecto: (−30)·(−0,1) = 3. Directo: 2. Total: 5.",
+     "cue": "cuenta"
+    }
+   ]
+  },
+  {
+   "id": "confusor",
+   "frases": [
+    {
+     "dice": "Pero ojo: la complejidad del cliente alarga el proceso, y también baja la conversión. Es un confusor entre el mediador y el resultado.",
+     "muestra": "Ojo: la complejidad del cliente alarga el proceso y también baja la conversión. Es un confusor entre el mediador y el resultado.",
+     "cue": "complejidad"
+    },
+    {
+     "dice": "Y si no la incluyes, el análisis dice: indirecto ocho coma cinco, y directo menos tres coma cinco. Con la complejidad, recupera tres y dos. Aleatorizar el agente no aleatoriza el tiempo.",
+     "muestra": "Si no la incluyes, el análisis dice: indirecto 8,5 y directo −3,5. Con la complejidad, recupera 3 y 2. Aleatorizar el agente no aleatoriza el tiempo.",
+     "cue": "sesgo"
+    }
+   ]
+  },
+  {
+   "id": "caminos",
+   "frases": [
+    {
+     "dice": "Y con más agentes en la cadena, hay más caminos. Los efectos específicos por camino, de Ávin, Shpítser y Perl, separan cuánto pasa por cada agente. Pero cada camino agrega un supuesto.",
+     "muestra": "Con más agentes en la cadena hay más caminos. Los efectos específicos por camino (Avin, Shpitser y Pearl) separan cuánto pasa por cada agente. Pero cada camino agrega un supuesto.",
+     "cue": "caminos"
+    }
+   ]
+  },
+  {
+   "id": "practica",
+   "frases": [
+    {
+     "dice": "Entonces, en la práctica: propaga el identificador de traza entre agentes, guarda la duración de cada tarea, y registra los atributos del cliente que cada agente usó. Así tienes el grafo, el mediador, y los confusores.",
+     "muestra": "En la práctica: propaga el identificador de traza entre agentes, guarda la duración de cada tarea y registra los atributos del cliente que cada agente usó. Así tienes el grafo, el mediador y los confusores.",
+     "cue": "practica"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: las trazas dicen por dónde pasó el efecto, pero solo si mides lo que confunde el camino. En el próximo capítulo: el modelo de lenguaje como juez. Compártelo y sígueme.",
+     "muestra": "Las trazas dicen por dónde pasó el efecto, pero solo si mides lo que confunde el camino. Próximo capítulo: el modelo de lenguaje como juez. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

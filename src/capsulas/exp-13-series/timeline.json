@@ -1,0 +1,171 @@
+{
+ "duracion": 123.377,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 8.87
+  },
+  {
+   "id": "titulo",
+   "inicio": 8.87,
+   "fin": 13.479
+  },
+  {
+   "id": "idea",
+   "inicio": 13.479,
+   "fin": 27.446
+  },
+  {
+   "id": "formula",
+   "inicio": 27.446,
+   "fin": 51.061
+  },
+  {
+   "id": "lectura",
+   "inicio": 51.061,
+   "fin": 66.969
+  },
+  {
+   "id": "impacto",
+   "inicio": 66.969,
+   "fin": 86.303
+  },
+  {
+   "id": "real",
+   "inicio": 86.303,
+   "fin": 97.953
+  },
+  {
+   "id": "cuidado",
+   "inicio": 97.953,
+   "fin": 115.226
+  },
+  {
+   "id": "cierre",
+   "inicio": 115.226,
+   "fin": 123.377
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.57,
+   "texto": "Subes el precio de tu app. En los meses siguientes vendes 11 más al día que antes. ¿Te fue bien? No: en realidad pierdes unas 33 ventas diarias.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 8.87,
+   "fin": 13.179,
+   "texto": "Idea 13 del mapa de la experimentación: series de tiempo interrumpidas.",
+   "cue": null
+  },
+  {
+   "escena": "idea",
+   "inicio": 13.479,
+   "fin": 19.005,
+   "texto": "Cuando no tienes grupo de control, ni donantes para un control sintético, el control es tu propio pasado.",
+   "cue": "pasado"
+  },
+  {
+   "escena": "idea",
+   "inicio": 19.125,
+   "fin": 27.146,
+   "texto": "Aprendes la tendencia y la estacionalidad antes del cambio, y las proyectas hacia adelante. Esa proyección es lo que habría pasado sin el cambio.",
+   "cue": "proyecta"
+  },
+  {
+   "escena": "formula",
+   "inicio": 27.446,
+   "fin": 32.95,
+   "texto": "La herramienta clásica es la regresión segmentada. Las ventas en el mes t dependen de cuatro cosas.",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 33.07,
+   "fin": 36.953,
+   "texto": "β₁ es la tendencia de antes: subías 1,5 ventas por mes.",
+   "cue": "b1"
+  },
+  {
+   "escena": "formula",
+   "inicio": 37.073,
+   "fin": 44.091,
+   "texto": "D es un interruptor: vale 0 antes del cambio y 1 después. β₂ es el salto de nivel: −23 de golpe.",
+   "cue": "b2"
+  },
+  {
+   "escena": "formula",
+   "inicio": 44.211,
+   "fin": 50.761,
+   "texto": "β₃ es el cambio de pendiente: cada mes, 0,8 menos que antes. Se suma la estacionalidad, y listo.",
+   "cue": "b3"
+  },
+  {
+   "escena": "lectura",
+   "inicio": 51.061,
+   "fin": 57.226,
+   "texto": "En el gráfico: la línea punteada sigue la tendencia de antes. La real cae de golpe, y además sube más lento.",
+   "cue": "grafico"
+  },
+  {
+   "escena": "lectura",
+   "inicio": 57.346,
+   "fin": 66.669,
+   "texto": "El efecto es la distancia entre ambas: en promedio, 33 ventas menos al día. Por eso el antes y después ingenuo engaña: ignora que venías subiendo.",
+   "cue": "efecto"
+  },
+  {
+   "escena": "impacto",
+   "inicio": 66.969,
+   "fin": 72.131,
+   "texto": "Google llevó esta idea más lejos con CausalImpact: un modelo bayesiano de series de tiempo.",
+   "cue": "google"
+  },
+  {
+   "escena": "impacto",
+   "inicio": 72.251,
+   "fin": 82.598,
+   "texto": "Además de tu pasado, usa series de control que el cambio no tocó: búsquedas, o ventas en otro país. Con eso pronostica el contrafactual, con una banda de incertidumbre que se abre con el tiempo.",
+   "cue": "banda"
+  },
+  {
+   "escena": "impacto",
+   "inicio": 82.718,
+   "fin": 86.003,
+   "texto": "El efecto acumulado es la suma de todas las brechas, mes a mes.",
+   "cue": "acumulado"
+  },
+  {
+   "escena": "real",
+   "inicio": 86.303,
+   "fin": 97.653,
+   "texto": "Así se evaluó la prohibición de fumar en lugares públicos en Italia (2005): los ingresos hospitalarios por eventos coronarios en menores de 70 años bajaron cerca de 4%.",
+   "cue": "real"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 97.953,
+   "fin": 109.409,
+   "texto": "Ojo con cuatro trampas: otro evento en la misma fecha; errores que se arrastran de un mes al siguiente (achican falsamente tus intervalos); pocos meses antes y después; y efectos que se anticipan o llegan de a poco.",
+   "cue": "ojo"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 109.529,
+   "fin": 114.926,
+   "texto": "Si puedes sumar un grupo de control, hazlo: vuelves a diferencias en diferencias, o a control sintético.",
+   "cue": "control"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 115.226,
+   "fin": 123.077,
+   "texto": "Sin grupo de control, tu pasado es el control. En la próxima idea: grafos causales, puertas traseras y colisionadores. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

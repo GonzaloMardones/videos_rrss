@@ -1,0 +1,173 @@
+{
+ "motor": "kokoro",
+ "voz": "am_michael",
+ "idioma": "en-us",
+ "velocidad": 1.27,
+ "pausaFrase": 0.08,
+ "pausaEscena": 0.2,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Early language model servers wasted sixty to eighty percent of their K V cache memory.",
+     "muestra": "Early LLM servers wasted 60 to 80% of their KV cache memory.",
+     "es": "Los primeros servidores de LLM desperdiciaban entre el 60 y el 80 % de la memoria de la caché KV.",
+     "cue": "60"
+    },
+    {
+     "dice": "Organizing it like an operating system's virtual memory raised throughput two to four times.",
+     "muestra": "Organizing it like an operating system's virtual memory raised throughput 2 to 4×.",
+     "es": "Organizarla como la memoria virtual de un sistema operativo multiplicó el rendimiento entre 2 y 4 veces.",
+     "cue": "4",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Tech capsule: serving models in production, and routing.",
+     "muestra": "Tech capsule: serving models in production and routing.",
+     "es": "Cápsula técnica: servir modelos en producción y enrutar."
+    }
+   ]
+  },
+  {
+   "id": "fases",
+   "frases": [
+    {
+     "dice": "Every request has two phases: prefill reads the whole prompt at once, and sets the time to first token.",
+     "muestra": "Every request has two phases: prefill reads the whole prompt at once and sets the time to first token.",
+     "es": "Cada pedido tiene dos fases: el prefill lee todo el prompt de una vez y limita el tiempo hasta el primer token.",
+     "cue": "prefill"
+    },
+    {
+     "dice": "Decoding generates one token at a time, and sets the time between tokens. One is compute-bound; the other, memory-bound.",
+     "muestra": "Decode generates one token at a time and sets the time between tokens. One is compute-bound; the other, memory-bound.",
+     "es": "El decode genera de a un token y limita el tiempo entre tokens. Una se limita por cómputo; la otra, por memoria.",
+     "cue": "decode"
+    }
+   ]
+  },
+  {
+   "id": "paged",
+   "frases": [
+    {
+     "dice": "Paged Attention splits the cache into small blocks, like pages: each request uses only the blocks it needs, instead of reserving the maximum length.",
+     "muestra": "PagedAttention splits the cache into small blocks, like pages: each request uses only the blocks it needs, instead of reserving the maximum length.",
+     "es": "PagedAttention parte la caché en bloques pequeños, como páginas: cada pedido usa solo los bloques que necesita y no reserva el largo máximo.",
+     "cue": "bloques"
+    },
+    {
+     "dice": "And blocks are shared: if a thousand requests start with the same system prompt, that prefix is computed only once.",
+     "muestra": "Blocks are shared: if a thousand requests start with the same system prompt, that prefix is computed only once.",
+     "es": "Los bloques se comparten: si mil pedidos empiezan con el mismo prompt de sistema, ese prefijo se calcula una sola vez.",
+     "cue": "prefijo"
+    }
+   ]
+  },
+  {
+   "id": "batching",
+   "frases": [
+    {
+     "dice": "With static batches, everyone waits for the longest answer: with lengths of one hundred, then four hundred, then fifty, and two hundred fifty tokens, half the batch sits idle.",
+     "muestra": "With static batches, everyone waits for the longest answer: with lengths of 100, 400, 50 and 250 tokens, half the batch sits idle.",
+     "es": "Con lotes estáticos, todos esperan a la respuesta más larga: con largos de 100, 400, 50 y 250 tokens, la mitad del lote queda ociosa.",
+     "cue": "estatico"
+    },
+    {
+     "dice": "Continuous batching decides at every step: when one request finishes, another takes its place.",
+     "muestra": "Continuous batching decides at every step: when one request finishes, another takes its place.",
+     "es": "El batching continuo decide en cada paso: cuando un pedido termina, otro entra en su lugar.",
+     "cue": "continuo"
+    }
+   ]
+  },
+  {
+   "id": "little",
+   "frases": [
+    {
+     "dice": "To size the system, use Little's law: requests in flight equal arrival rate times latency. Fifty per second, at four seconds each, means two hundred at once.",
+     "muestra": "To size the system, use Little's law: requests in flight = arrival rate × latency. 50 per second, at 4 seconds each, means 200 at once.",
+     "es": "Para dimensionar, la ley de Little: pedidos en curso = tasa de llegada × latencia. 50 por segundo, con 4 segundos cada uno, son 200 simultáneos.",
+     "cue": "ley"
+    },
+    {
+     "dice": "And watch percentiles, not the average: the p ninety-nine is what the unluckiest user feels.",
+     "muestra": "Watch percentiles, not the average: the p99 is what the unluckiest user feels.",
+     "es": "Mira los percentiles, no el promedio: el p99 es lo que siente el usuario con peor suerte.",
+     "cue": "p99"
+    }
+   ]
+  },
+  {
+   "id": "ruteo",
+   "frases": [
+    {
+     "dice": "Not every question needs the big model. In a cascade, the small one answers first, and only escalates when it is unsure.",
+     "muestra": "Not every question needs the big model. In a cascade, the small one answers first and only escalates when it is unsure.",
+     "es": "No todas las preguntas necesitan el modelo grande. En una cascada, responde primero el pequeño y solo escala si no está seguro.",
+     "cue": "cascada"
+    },
+    {
+     "dice": "If the big one costs twenty times more and you escalate thirty percent, the expected cost drops sixty-five percent.",
+     "muestra": "If the big one costs 20× more and you escalate 30%, the expected cost drops 65%.",
+     "es": "Si el grande cuesta 20 veces más y escalas el 30 %, el costo esperado baja un 65 %.",
+     "cue": "costo"
+    }
+   ]
+  },
+  {
+   "id": "semantico",
+   "frases": [
+    {
+     "dice": "Semantic routing turns the question into an embedding, and sends it to the model or tool of the nearest intent.",
+     "muestra": "Semantic routing turns the question into an embedding and sends it to the model or tool of the nearest intent.",
+     "es": "El enrutamiento semántico convierte la pregunta en un embedding y la manda al modelo o herramienta de la intención más cercana.",
+     "cue": "intencion"
+    },
+    {
+     "dice": "At the edge, small quantized models run on the device itself: on a Mac, with M L X, without sending data to the cloud.",
+     "muestra": "At the edge, small quantized models run on the device itself: on a Mac, with MLX, without sending data to the cloud.",
+     "es": "En el borde, modelos pequeños y cuantizados corren en el propio dispositivo: en un Mac, con MLX, sin enviar datos a la nube.",
+     "cue": "borde"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "On Google Cloud: Cloud Run with L four G P Us scales to zero when there is no traffic; and the G K E Inference Gateway routes each request by load, K V cache, and Lora adapter.",
+     "muestra": "On Google Cloud: Cloud Run with L4 GPUs scales to zero when there is no traffic; and GKE Inference Gateway routes each request by load, KV cache and LoRA adapter.",
+     "es": "En Google Cloud: Cloud Run con GPUs L4 escala a cero cuando no hay tráfico; y GKE Inference Gateway enruta cada pedido según la carga, la caché KV y el adaptador LoRA.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "The basics: paged memory, queueing theory, percentiles, and expected value.",
+     "muestra": "The basics: paged memory, queueing theory, percentiles and expected value.",
+     "es": "Las bases: memoria paginada, teoría de colas, percentiles y valor esperado.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "If this helped, share and follow.",
+     "muestra": "If this helped, share and follow.",
+     "es": "Si te sirvió, compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

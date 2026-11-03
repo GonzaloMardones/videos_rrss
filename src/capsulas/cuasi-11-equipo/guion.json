@@ -1,0 +1,105 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "¿Y si un equipo de agentes pudiera responder una pregunta causal de punta a punta? Por ejemplo: subir el límite de la tarjeta de crédito, ¿aumenta el endeudamiento?",
+     "muestra": "¿Y si un equipo de agentes pudiera responder una pregunta causal de punta a punta? Por ejemplo: subir el límite de la tarjeta, ¿aumenta el endeudamiento?",
+     "cue": "gancho",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo once: un equipo de agentes que hace inferencia causal.",
+     "muestra": "Cuasi-experimentos, capítulo 11: un equipo de agentes que hace inferencia causal."
+    }
+   ]
+  },
+  {
+   "id": "caso",
+   "frases": [
+    {
+     "dice": "Y esa pregunta ya se respondió con datos reales. Un equipo liderado por Súmit Agárwal usó ocho coma cinco millones de tarjetas en Estados Unidos, y setecientas cuarenta y tres discontinuidades: los bancos cambian el límite en cortes del puntaje de crédito.",
+     "muestra": "Esa pregunta ya se respondió con datos reales. Sumit Agarwal y coautores usaron 8,5 millones de tarjetas en EE. UU. y 743 discontinuidades: los bancos cambian el límite en cortes del puntaje de crédito.",
+     "cue": "agarwal"
+    },
+    {
+     "dice": "Encontraron que quienes tienen puntajes bajos se endeudan más con cada dólar extra de límite. Pero los bancos les suben menos el límite: ciento veintisiete dólares por cada punto de menor costo de fondos, contra dos mil doscientos tres a los de puntaje alto.",
+     "muestra": "Quienes tienen puntajes bajos se endeudan más con cada dólar extra de límite. Pero los bancos les suben menos el límite: US$127 por cada punto de menor costo de fondos, contra US$2.203 a los de puntaje alto.",
+     "cue": "hallazgo"
+    }
+   ]
+  },
+  {
+   "id": "equipo",
+   "frases": [
+    {
+     "dice": "Entonces, el equipo. Un agente planificador formula la pregunta, y deja escrito el plan de análisis antes de ver los resultados.",
+     "muestra": "El equipo: un agente planificador formula la pregunta y deja escrito el plan de análisis antes de ver los resultados.",
+     "cue": "planificador"
+    },
+    {
+     "dice": "Un agente de datos arma la base. Un agente de identificación busca la regla de asignación: aquí, cortes de puntaje, así que propone una regresión discontinua.",
+     "muestra": "Un agente de datos arma la base. Un agente de identificación busca la regla de asignación: aquí, cortes de puntaje, así que propone una regresión discontinua.",
+     "cue": "identifica"
+    },
+    {
+     "dice": "Un agente estimador calcula el efecto. Y un agente crítico intenta romperlo: cortes falsos, la prueba de McCrary, y el análisis de sensibilidad.",
+     "muestra": "Un agente estimador calcula el efecto. Y un agente crítico intenta romperlo: cortes falsos, la prueba de McCrary y el análisis de sensibilidad.",
+     "cue": "critico"
+    }
+   ]
+  },
+  {
+   "id": "a2a",
+   "frases": [
+    {
+     "dice": "Y se coordinan por protocolo a dos a. Cada agente publica una tarjeta con sus habilidades, y el trabajo avanza como tareas con estados: enviada, en curso, completada, o requiere información.",
+     "muestra": "Se coordinan por protocolo A2A: cada agente publica una tarjeta con sus habilidades, y el trabajo avanza como tareas con estados: enviada, en curso, completada o requiere información.",
+     "cue": "tarjeta"
+    },
+    {
+     "dice": "Y si el crítico encuentra un problema, la tarea queda en requiere información, y vuelve a una persona.",
+     "muestra": "Si el crítico encuentra un problema, la tarea queda en «requiere información» y vuelve a una persona.",
+     "cue": "persona"
+    }
+   ]
+  },
+  {
+   "id": "riesgo",
+   "frases": [
+    {
+     "dice": "¿Y el riesgo? Con agentes, probar cien versiones del análisis cuesta casi nada. Ese es el jardín de los senderos que se bifurcan: si pruebas muchas, alguna sale significativa por azar.",
+     "muestra": "¿El riesgo? Con agentes, probar 100 especificaciones cuesta casi nada. Es el jardín de los senderos que se bifurcan: si pruebas muchas, alguna sale significativa por azar.",
+     "cue": "senderos"
+    },
+    {
+     "dice": "Con cien pruebas al cinco por ciento, la probabilidad de al menos un falso positivo es noventa y nueve por ciento. Por eso el plan se escribe antes, y el crítico lleva la cuenta.",
+     "muestra": "Con 100 pruebas al 5%, la probabilidad de al menos un falso positivo es 99%. Por eso el plan se escribe antes, y el crítico lleva la cuenta.",
+     "cue": "cuenta"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: los agentes aceleran el trabajo, pero el diseño, los supuestos y la decisión siguen siendo humanos. Con esto cerramos la serie cuasi experimentos. Compártelo y sígueme.",
+     "muestra": "Los agentes aceleran el trabajo, pero el diseño, los supuestos y la decisión siguen siendo humanos. Con esto cerramos la serie Cuasi-experimentos. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

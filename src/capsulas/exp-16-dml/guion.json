@@ -1,0 +1,145 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y tu regresión dice que cada peso de descuento sube el gasto en cero coma nueve. Agregas controles: cero coma noventa y uno. El efecto real es cero coma cinco. El problema no es qué controlas. Es cómo.",
+     "muestra": "Tu regresión dice que cada peso de descuento sube el gasto en 0,9. Agregas controles: 0,91. El efecto real es 0,5. El problema no es qué controlas. Es cómo.",
+     "cue": "gancho",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la idea dieciséis del mapa de la experimentación: double machine learning.",
+     "muestra": "Idea 16 del mapa de la experimentación: double machine learning."
+    }
+   ]
+  },
+  {
+   "id": "problema",
+   "frases": [
+    {
+     "dice": "Y el historial del cliente influye en el descuento y en el gasto, pero no en línea recta. Una regresión lineal no alcanza a quitar esa confusión.",
+     "muestra": "El historial del cliente influye en el descuento y en el gasto, pero no en línea recta. Una regresión lineal no alcanza a quitar esa confusión.",
+     "cue": "curvas"
+    },
+    {
+     "dice": "Y si usas machine learning directo, tampoco: está hecho para predecir, no para estimar un efecto. Regulariza, y ese sesgo se cuela en el coeficiente. Además, no te da un intervalo de confianza.",
+     "muestra": "Y machine learning directo tampoco: está hecho para predecir, no para estimar un efecto. Regulariza, y ese sesgo se cuela en el coeficiente. Además, no te da un intervalo de confianza.",
+     "cue": "ml"
+    }
+   ]
+  },
+  {
+   "id": "residuos",
+   "frases": [
+    {
+     "dice": "Entonces, la idea viene de los años treinta: Frish, Uó y Lóvel. Para aislar el efecto del descuento, quitas del descuento y del gasto todo lo que el historial explica.",
+     "muestra": "La idea viene de los años 30 (Frisch–Waugh–Lovell): para aislar el efecto del descuento, quitas del descuento y del gasto todo lo que el historial explica.",
+     "cue": "fwl"
+    },
+    {
+     "dice": "Primero, un modelo predice el descuento. Otro predice el gasto. Te quedas con lo que ninguno pudo predecir: los residuos.",
+     "muestra": "Un modelo predice el descuento. Otro predice el gasto. Te quedas con lo que ninguno pudo predecir: los residuos.",
+     "cue": "dos"
+    },
+    {
+     "dice": "Y la pendiente entre residuos es el efecto. En esta corrida, cero coma cincuenta y cinco.",
+     "muestra": "La pendiente entre residuos es el efecto. En esta corrida, 0,55.",
+     "cue": "pendiente"
+    }
+   ]
+  },
+  {
+   "id": "formula",
+   "frases": [
+    {
+     "dice": "Y en fórmula: theta es la suma de residuo del descuento por residuo del gasto, dividida por la suma del residuo del descuento al cuadrado.",
+     "muestra": "En fórmula: θ es la suma de residuo del descuento por residuo del gasto, dividida por la suma del residuo del descuento al cuadrado.",
+     "cue": "formula"
+    },
+    {
+     "dice": "Y el residuo del descuento es el descuento, menos lo que predice el primer modelo.",
+     "muestra": "El residuo del descuento es el descuento, menos lo que predice el primer modelo.",
+     "cue": "dres"
+    },
+    {
+     "dice": "Y el residuo del gasto es el gasto, menos lo que predice el segundo. Cada modelo puede ser cualquier machine learning: bosques, boosting, lasso.",
+     "muestra": "El residuo del gasto es el gasto, menos lo que predice el segundo. Cada modelo puede ser cualquier machine learning: bosques, boosting, lasso.",
+     "cue": "yres"
+    }
+   ]
+  },
+  {
+   "id": "ortogonal",
+   "frases": [
+    {
+     "dice": "¿Y por qué funciona, si los modelos se equivocan? Por la ortogonalidad de Néyman: los errores de los dos modelos entran multiplicados.",
+     "muestra": "¿Por qué funciona, si los modelos se equivocan? Por la ortogonalidad de Neyman: los errores de los dos modelos entran multiplicados.",
+     "cue": "neyman"
+    },
+    {
+     "dice": "Y si cada uno se equivoca del orden de uno sobre la raíz cuarta de ene, el producto es uno sobre la raíz de ene. El mismo orden que el error estadístico normal. Por eso bastan modelos decentes, no perfectos.",
+     "muestra": "Si cada uno se equivoca del orden de n^(−1/4), el producto es n^(−1/2): el mismo orden que el error estadístico normal. Por eso bastan modelos decentes, no perfectos.",
+     "cue": "orden"
+    }
+   ]
+  },
+  {
+   "id": "cruzado",
+   "frases": [
+    {
+     "dice": "Y el segundo truco es el cross fíting. Divides los datos en cinco partes. Cada fila se predice con un modelo que nunca la vio.",
+     "muestra": "El segundo truco es el cross-fitting. Divides los datos en cinco partes. Cada fila se predice con un modelo que nunca la vio.",
+     "cue": "partes"
+    },
+    {
+     "dice": "Y así, el sobreajuste no se confunde con efecto. Y como rotas las partes, usas todos los datos.",
+     "muestra": "Así, el sobreajuste no se confunde con efecto. Y como rotas las partes, usas todos los datos.",
+     "cue": "rota"
+    }
+   ]
+  },
+  {
+   "id": "resultado",
+   "frases": [
+    {
+     "dice": "Y en trescientas simulaciones: la regresión ingenua da cero coma noventa. Con controles lineales, cero coma noventa y uno. Double machine learning, cero coma cinco. Y su intervalo del noventa y cinco por ciento contiene el valor real el noventa y cinco por ciento de las veces.",
+     "muestra": "En 300 simulaciones: la regresión ingenua da 0,90. Con controles lineales, 0,91. Double machine learning, 0,50. Y su intervalo del 95% contiene el valor real el 95% de las veces.",
+     "cue": "sims"
+    }
+   ]
+  },
+  {
+   "id": "cuando",
+   "frases": [
+    {
+     "dice": "Entonces, úsalo cuando tienes muchos controles, o relaciones no lineales. Pero ojo: no arregla confusores que no mediste. Sigue necesitando un buen grafo causal, y un análisis de sensibilidad.",
+     "muestra": "Úsalo cuando tienes muchos controles, o relaciones no lineales. Pero ojo: no arregla confusores que no mediste. Sigue necesitando un buen grafo causal, y un análisis de sensibilidad.",
+     "cue": "usar"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: deja que el machine learning limpie la confusión, y que la estadística estime el efecto. En la próxima y última idea: mediación. Compártelo y sígueme.",
+     "muestra": "Deja que el machine learning limpie la confusión, y que la estadística estime el efecto. En la próxima y última idea: mediación. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

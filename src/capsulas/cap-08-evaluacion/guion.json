@@ -1,0 +1,190 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.25,
+ "pausaFrase": 0.1,
+ "pausaEscena": 0.26,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y tu modelo nuevo saca dos puntos más en un benchmark de quinientas preguntas. ¿Es mejor?",
+     "muestra": "Tu modelo nuevo saca 2 puntos más en un benchmark de 500 preguntas. ¿Es mejor?",
+     "en": "Your new model scores 2 points higher on a 500-question benchmark. Is it better?",
+     "cue": "dos"
+    },
+    {
+     "dice": "Y el intervalo de esa diferencia es de más menos cinco puntos: todavía no lo sabes.",
+     "muestra": "El intervalo de esa diferencia es de ±4,9 puntos: todavía no lo sabes.",
+     "en": "The interval on that difference is ±4.9 points: you still do not know.",
+     "cue": "nose",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Y en esta cápsula técnica: evaluaciones, y red tíming.",
+     "muestra": "Cápsula técnica: evaluaciones y red teaming.",
+     "en": "Tech capsule: evaluations and red teaming."
+    }
+   ]
+  },
+  {
+   "id": "error",
+   "frases": [
+    {
+     "dice": "Y una precisión es una proporción, y tiene error estándar: raíz de pe por uno menos pe, sobre ene.",
+     "muestra": "Una precisión es una proporción, y tiene error estándar: √(p(1 − p)/n).",
+     "en": "Accuracy is a proportion, and it has a standard error: √(p(1 − p)/n).",
+     "cue": "se"
+    },
+    {
+     "dice": "Y con cien preguntas, el margen es de casi ocho puntos. Por eso: más preguntas, y comparar los modelos sobre las mismas preguntas, en pares.",
+     "muestra": "Con 100 preguntas, el margen es de casi 8 puntos. Por eso: más preguntas, y comparar los modelos sobre las mismas preguntas, en pares.",
+     "en": "With 100 questions, the margin is almost 8 points. So: more questions, and compare models on the same questions, in pairs.",
+     "cue": "pares"
+    }
+   ]
+  },
+  {
+   "id": "contaminacion",
+   "frases": [
+    {
+     "dice": "Y si las preguntas del test se filtraron al entrenamiento, el puntaje miente. Con un set nuevo de matemáticas escolares, algunos modelos cayeron hasta ocho puntos.",
+     "muestra": "Si las preguntas del test se filtraron al entrenamiento, el puntaje miente. Con un set nuevo de matemáticas escolares, algunos modelos cayeron hasta 8 puntos.",
+     "en": "If the test questions leaked into training, the score lies. On a fresh set of grade-school math, some models dropped up to 8 points.",
+     "cue": "fuga"
+    },
+    {
+     "dice": "Y se detecta buscando secuencias de trece palabras repetidas, o mirando si el modelo encuentra el texto sospechosamente fácil.",
+     "muestra": "Se detecta buscando secuencias de 13 palabras repetidas, o mirando si el modelo encuentra el texto sospechosamente fácil.",
+     "en": "You detect it by searching for repeated 13-word sequences, or by checking whether the model finds the text suspiciously easy.",
+     "cue": "detectar"
+    }
+   ]
+  },
+  {
+   "id": "dinamicas",
+   "frases": [
+    {
+     "dice": "Y la defensa: evaluaciones dinámicas, con preguntas nuevas, posteriores a la fecha de corte del modelo.",
+     "muestra": "La defensa: evaluaciones dinámicas, con preguntas nuevas, posteriores a la fecha de corte del modelo.",
+     "en": "The defense: dynamic evaluations, with fresh questions written after the model's cutoff date.",
+     "cue": "vivas"
+    },
+    {
+     "dice": "Y desarrollo guiado por evaluaciones: escribes la evaluación antes del cambio, como un test, y la corres en cada versión.",
+     "muestra": "Desarrollo guiado por evaluaciones: escribes la evaluación antes del cambio, como un test, y la corres en cada versión.",
+     "en": "Eval-driven development: write the evaluation before the change, like a test, and run it on every version.",
+     "cue": "tests"
+    }
+   ]
+  },
+  {
+   "id": "juez",
+   "frases": [
+    {
+     "dice": "Y cuando un modelo de lenguaje es el juez, trae sesgos: prefiere la primera respuesta, la más larga, o la suya.",
+     "muestra": "Cuando un LLM es el juez, trae sesgos: prefiere la primera respuesta, la más larga o la suya.",
+     "en": "When an LLM is the judge, it brings biases: it prefers the first answer, the longest one, or its own.",
+     "cue": "sesgos"
+    },
+    {
+     "dice": "Y se calibra: intercambias el orden, usas una rúbrica, y mides su acuerdo con personas. Uno bueno supera el ochenta por ciento, como dos humanos entre sí.",
+     "muestra": "Se calibra: intercambias el orden, usas una rúbrica y mides su acuerdo con personas. Uno bueno supera el 80 %, como dos humanos entre sí.",
+     "en": "You calibrate it: swap the order, use a rubric and measure its agreement with people. A good one passes 80%, like two humans with each other.",
+     "cue": "calibrar"
+    }
+   ]
+  },
+  {
+   "id": "ppi",
+   "frases": [
+    {
+     "dice": "Y con pocas etiquetas humanas puedes corregir al juez: tomas su promedio en diez mil casos, y le restas el sesgo medido en trescientos.",
+     "muestra": "Con pocas etiquetas humanas puedes corregir al juez: tomas su promedio en 10.000 casos y le restas el sesgo medido en 300.",
+     "en": "With a few human labels you can correct the judge: take its average over 10,000 cases and subtract the bias measured on 300.",
+     "cue": "rectificar"
+    },
+    {
+     "dice": "Y el intervalo baja de cuatro coma ocho a tres coma seis puntos: como tener quinientas cuarenta etiquetas humanas con solo trescientas.",
+     "muestra": "El intervalo baja de ±4,8 a ±3,6 puntos: como tener 543 etiquetas humanas con solo 300.",
+     "en": "The interval shrinks from ±4.8 to ±3.6 points: like having 543 human labels with only 300.",
+     "cue": "ganancia"
+    }
+   ]
+  },
+  {
+   "id": "redteam",
+   "frases": [
+    {
+     "dice": "Y el red tíming busca fallas a propósito: yéilbreiks, e inyección de instrucciones escondidas en documentos o páginas web.",
+     "muestra": "El red teaming busca fallas a propósito: jailbreaks e inyección de instrucciones escondidas en documentos o páginas web.",
+     "en": "Red teaming looks for failures on purpose: jailbreaks, and prompt injection hidden in documents or web pages.",
+     "cue": "ataques"
+    },
+    {
+     "dice": "Y hay ataques automáticos: un sufijo optimizado por gradiente puede transferirse a otros modelos. La métrica es la tasa de éxito del ataque.",
+     "muestra": "Hay ataques automáticos: un sufijo optimizado por gradiente puede transferirse a otros modelos. La métrica es la tasa de éxito del ataque.",
+     "en": "There are automatic attacks: a gradient-optimized suffix can transfer to other models. The metric is the attack success rate.",
+     "cue": "sufijos"
+    }
+   ]
+  },
+  {
+   "id": "cero",
+   "frases": [
+    {
+     "dice": "Y si cien ataques fallan, ¿el riesgo es cero? No. Con una beta como previo, el riesgo plausible llega hasta el tres por ciento.",
+     "muestra": "Si 100 ataques fallan, ¿el riesgo es cero? No. Con una Beta como previo, el riesgo plausible llega hasta el 3 %.",
+     "en": "If 100 attacks fail, is the risk zero? No. With a Beta prior, the plausible risk goes up to 3%.",
+     "cue": "cien"
+    },
+    {
+     "dice": "Y es la regla del tres: con cero éxitos en ene intentos, el límite superior es tres sobre ene.",
+     "muestra": "Es la regla del tres: con 0 éxitos en n intentos, el límite superior es 3/n.",
+     "en": "It is the rule of three: with 0 successes in n tries, the upper bound is 3/n.",
+     "cue": "tres"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en gúgol claud, el servicio de evaluación de vértex ei ai compara modelos con jueces automáticos, puntuales o por pares. Y model ármor revisa prompts y respuestas contra inyección y yéilbreiks.",
+     "muestra": "En Google Cloud, el Gen AI evaluation service de Vertex AI compara modelos con jueces automáticos, puntuales o por pares. Y Model Armor revisa prompts y respuestas contra inyección y jailbreaks.",
+     "en": "On Google Cloud, the Vertex AI Gen AI evaluation service compares models with automatic judges, pointwise or pairwise. And Model Armor screens prompts and responses for injection and jailbreaks.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "Y las bases: error estándar y comparaciones pareadas, contaminación, calibrar al juez, y la distribución beta.",
+     "muestra": "Las bases: error estándar y comparaciones pareadas, contaminación, calibrar al juez y la distribución Beta.",
+     "en": "The basics: standard error and paired comparisons, contamination, calibrating the judge and the Beta distribution.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

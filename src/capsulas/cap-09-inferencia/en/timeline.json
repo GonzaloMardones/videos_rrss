@@ -1,0 +1,206 @@
+{
+ "duracion": 137.911,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 14.589
+  },
+  {
+   "id": "titulo",
+   "inicio": 14.589,
+   "fin": 17.775
+  },
+  {
+   "id": "memoria",
+   "inicio": 17.775,
+   "fin": 36.253
+  },
+  {
+   "id": "cuantizar",
+   "inicio": 36.253,
+   "fin": 52.575
+  },
+  {
+   "id": "outliers",
+   "inicio": 52.575,
+   "fin": 67.191
+  },
+  {
+   "id": "especulativa",
+   "inicio": 67.191,
+   "fin": 86.245
+  },
+  {
+   "id": "rope",
+   "inicio": 86.245,
+   "fin": 104.551
+  },
+  {
+   "id": "sumideros",
+   "inicio": 104.551,
+   "fin": 117.887
+  },
+  {
+   "id": "nube",
+   "inicio": 117.887,
+   "fin": 131.271
+  },
+  {
+   "id": "bases",
+   "inicio": 131.271,
+   "fin": 136.17
+  },
+  {
+   "id": "cierre",
+   "inicio": 136.17,
+   "fin": 137.911
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 7.781,
+   "texto": "A 70-billion-parameter model in 16-bit weighs 140 GB. To generate each token, you must read all of it.",
+   "cue": "140",
+   "es": "Un modelo de 70.000 millones en 16 bits pesa 140 GB. Para generar cada token, hay que leerlos todos."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 7.861,
+   "fin": 14.389,
+   "texto": "On an H100, that takes at least 42 ms: generation is limited by memory, not compute.",
+   "cue": "42",
+   "es": "En una H100, eso toma al menos 42 ms: generar está limitado por la memoria, no por el cómputo."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 14.589,
+   "fin": 17.575,
+   "texto": "Tech capsule: the physics of inference and quantization.",
+   "cue": null,
+   "es": "Cápsula técnica: la física de la inferencia y la cuantización."
+  },
+  {
+   "escena": "memoria",
+   "inicio": 17.775,
+   "fin": 26.437,
+   "texto": "With a batch of 1, each parameter does 2 operations for every 2 bytes read: 1 operation per byte. The GPU needs about 300.",
+   "cue": "intensidad",
+   "es": "Con un lote de 1, cada parámetro hace 2 operaciones por cada 2 bytes leídos: 1 operación por byte. La GPU necesita cerca de 300."
+  },
+  {
+   "escena": "memoria",
+   "inicio": 26.517,
+   "fin": 36.053,
+   "texto": "That is why requests are batched: one read of the weights serves the whole batch. But the KV cache grows: 32 users with 4,096 tokens take 40 GiB.",
+   "cue": "lote",
+   "es": "Por eso se agrupan pedidos: una lectura de pesos sirve a todo el lote. Pero la caché KV crece: 32 usuarios con 4.096 tokens ocupan 40 GiB."
+  },
+  {
+   "escena": "cuantizar",
+   "inicio": 36.253,
+   "fin": 43.485,
+   "texto": "Quantizing means storing the weights with fewer bits. Divide by a scale, round to integers, and multiply back when you use them.",
+   "cue": "escala",
+   "es": "Cuantizar es guardar los pesos con menos bits. Divides por una escala, redondeas a enteros y al usarlos multiplicas de vuelta."
+  },
+  {
+   "escena": "cuantizar",
+   "inicio": 43.565,
+   "fin": 52.375,
+   "texto": "The rounding error has variance Δ²/12. In 4 bits, the model drops from 140 to 35 GB: 4× less to read.",
+   "cue": "bits",
+   "es": "El error de redondeo tiene varianza Δ²/12. En 4 bits, el modelo pasa de 140 a 35 GB: 4 veces menos que leer."
+  },
+  {
+   "escena": "outliers",
+   "inicio": 52.575,
+   "fin": 57.397,
+   "texto": "The problem is outliers: a few huge dimensions that ruin the scale for all the others.",
+   "cue": "raros",
+   "es": "El problema son los valores atípicos: unas pocas dimensiones enormes que arruinan la escala de todas las demás."
+  },
+  {
+   "escena": "outliers",
+   "inicio": 57.477,
+   "fin": 66.991,
+   "texto": "GPTQ compensates each weight's error with second-order information. AWQ protects the 1% most important weights, based on activation size.",
+   "cue": "gptq",
+   "es": "GPTQ compensa el error de cada peso con información de segundo orden. AWQ protege el 1 % de pesos más importantes, según el tamaño de las activaciones."
+  },
+  {
+   "escena": "especulativa",
+   "inicio": 67.191,
+   "fin": 74.231,
+   "texto": "Speculative decoding uses a small model that drafts several tokens, and the big one verifies them all in a single pass.",
+   "cue": "borrador",
+   "es": "La decodificación especulativa usa un modelo pequeño que propone varios tokens, y el grande los verifica todos en una sola pasada."
+  },
+  {
+   "escena": "especulativa",
+   "inicio": 74.311,
+   "fin": 86.045,
+   "texto": "It accepts each one with probability min(1, p/q): the output has exactly the same distribution. With 80% acceptance and 4 drafts, it gets 3.4 tokens per pass.",
+   "cue": "aceptar",
+   "es": "Acepta cada uno con probabilidad min(1, p/q): la salida tiene exactamente la misma distribución. Con 80 % de aceptación y 4 borradores, saca 3,4 tokens por pasada."
+  },
+  {
+   "escena": "rope",
+   "inicio": 86.245,
+   "fin": 94.842,
+   "texto": "Position is encoded by rotation: RoPE turns each pair of dimensions by the position, and the dot product depends only on the distance between tokens.",
+   "cue": "rotar",
+   "es": "La posición se codifica rotando: RoPE gira cada par de dimensiones según la posición, y el producto punto solo depende de la distancia entre tokens."
+  },
+  {
+   "escena": "rope",
+   "inicio": 94.922,
+   "fin": 104.351,
+   "texto": "To extend the context, positions are interpolated: dividing them by 16 takes a model from 2,048 to 32,768 tokens, with little fine-tuning.",
+   "cue": "estirar",
+   "es": "Para alargar el contexto se interpolan las posiciones: dividirlas por 16 lleva un modelo de 2.048 a 32.768 tokens, con poco ajuste."
+  },
+  {
+   "escena": "sumideros",
+   "inicio": 104.551,
+   "fin": 111.57,
+   "texto": "A curious finding: models pour a lot of attention onto the first tokens, even when they mean nothing. They are attention sinks.",
+   "cue": "sink",
+   "es": "Un hallazgo curioso: los modelos vuelcan mucha atención en los primeros tokens, aunque no signifiquen nada. Son sumideros de atención."
+  },
+  {
+   "escena": "sumideros",
+   "inicio": 111.65,
+   "fin": 117.687,
+   "texto": "If you keep those 4 tokens plus a recent window, the model handles streams of 4 million tokens stably.",
+   "cue": "ventana",
+   "es": "Si guardas esos 4 tokens más una ventana reciente, el modelo procesa flujos de 4 millones de tokens de forma estable."
+  },
+  {
+   "escena": "nube",
+   "inicio": 117.887,
+   "fin": 131.071,
+   "texto": "On Google Cloud, JetStream serves models on TPUs with int8 quantization of weights, activations and cache. On GPUs, GKE runs vLLM with AWQ or GPTQ models.",
+   "cue": "gcp",
+   "es": "En Google Cloud, JetStream sirve modelos en TPUs con cuantización int8 de pesos, activaciones y caché. En GPUs, GKE corre vLLM con modelos AWQ o GPTQ."
+  },
+  {
+   "escena": "bases",
+   "inicio": 131.271,
+   "fin": 135.97,
+   "texto": "The basics: memory bandwidth, quantization error, rejection sampling and rotations.",
+   "cue": "bases",
+   "es": "Las bases: ancho de banda de memoria, error de cuantización, muestreo por rechazo y rotaciones."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 136.17,
+   "fin": 137.711,
+   "texto": "If this helped, share and follow.",
+   "cue": "cta",
+   "es": "Si te sirvió, compártelo y sígueme."
+  }
+ ]
+}

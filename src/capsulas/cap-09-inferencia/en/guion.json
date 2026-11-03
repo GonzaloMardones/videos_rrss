@@ -1,0 +1,173 @@
+{
+ "motor": "kokoro",
+ "voz": "am_michael",
+ "idioma": "en-us",
+ "velocidad": 1.27,
+ "pausaFrase": 0.08,
+ "pausaEscena": 0.2,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "A seventy billion parameter model in sixteen-bit weighs one hundred forty gigabytes. To generate each token, you must read all of it.",
+     "muestra": "A 70-billion-parameter model in 16-bit weighs 140 GB. To generate each token, you must read all of it.",
+     "es": "Un modelo de 70.000 millones en 16 bits pesa 140 GB. Para generar cada token, hay que leerlos todos.",
+     "cue": "140"
+    },
+    {
+     "dice": "On an H one hundred, that takes at least forty-two milliseconds: generation is limited by memory, not compute.",
+     "muestra": "On an H100, that takes at least 42 ms: generation is limited by memory, not compute.",
+     "es": "En una H100, eso toma al menos 42 ms: generar está limitado por la memoria, no por el cómputo.",
+     "cue": "42",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Tech capsule: the physics of inference, and quantization.",
+     "muestra": "Tech capsule: the physics of inference and quantization.",
+     "es": "Cápsula técnica: la física de la inferencia y la cuantización."
+    }
+   ]
+  },
+  {
+   "id": "memoria",
+   "frases": [
+    {
+     "dice": "With a batch of one, each parameter does two operations for every two bytes read: one operation per byte. The G P U needs about three hundred.",
+     "muestra": "With a batch of 1, each parameter does 2 operations for every 2 bytes read: 1 operation per byte. The GPU needs about 300.",
+     "es": "Con un lote de 1, cada parámetro hace 2 operaciones por cada 2 bytes leídos: 1 operación por byte. La GPU necesita cerca de 300.",
+     "cue": "intensidad"
+    },
+    {
+     "dice": "That is why requests are batched: one read of the weights serves the whole batch. But the K V cache grows: thirty-two users with four thousand tokens take forty gigabytes.",
+     "muestra": "That is why requests are batched: one read of the weights serves the whole batch. But the KV cache grows: 32 users with 4,096 tokens take 40 GiB.",
+     "es": "Por eso se agrupan pedidos: una lectura de pesos sirve a todo el lote. Pero la caché KV crece: 32 usuarios con 4.096 tokens ocupan 40 GiB.",
+     "cue": "lote"
+    }
+   ]
+  },
+  {
+   "id": "cuantizar",
+   "frases": [
+    {
+     "dice": "Quantizing means storing the weights with fewer bits. Divide by a scale, round to integers, and multiply back when you use them.",
+     "muestra": "Quantizing means storing the weights with fewer bits. Divide by a scale, round to integers, and multiply back when you use them.",
+     "es": "Cuantizar es guardar los pesos con menos bits. Divides por una escala, redondeas a enteros y al usarlos multiplicas de vuelta.",
+     "cue": "escala"
+    },
+    {
+     "dice": "The rounding error has variance delta squared over twelve. In four bits, the model drops from one forty to thirty-five gigabytes: four times less to read.",
+     "muestra": "The rounding error has variance Δ²/12. In 4 bits, the model drops from 140 to 35 GB: 4× less to read.",
+     "es": "El error de redondeo tiene varianza Δ²/12. En 4 bits, el modelo pasa de 140 a 35 GB: 4 veces menos que leer.",
+     "cue": "bits"
+    }
+   ]
+  },
+  {
+   "id": "outliers",
+   "frases": [
+    {
+     "dice": "The problem is outliers: a few huge dimensions that ruin the scale for all the others.",
+     "muestra": "The problem is outliers: a few huge dimensions that ruin the scale for all the others.",
+     "es": "El problema son los valores atípicos: unas pocas dimensiones enormes que arruinan la escala de todas las demás.",
+     "cue": "raros"
+    },
+    {
+     "dice": "G P T Q compensates each weight's error with second-order information. A W Q protects the one percent most important weights, based on activation size.",
+     "muestra": "GPTQ compensates each weight's error with second-order information. AWQ protects the 1% most important weights, based on activation size.",
+     "es": "GPTQ compensa el error de cada peso con información de segundo orden. AWQ protege el 1 % de pesos más importantes, según el tamaño de las activaciones.",
+     "cue": "gptq"
+    }
+   ]
+  },
+  {
+   "id": "especulativa",
+   "frases": [
+    {
+     "dice": "Speculative decoding uses a small model that drafts several tokens, and the big one verifies them all in a single pass.",
+     "muestra": "Speculative decoding uses a small model that drafts several tokens, and the big one verifies them all in a single pass.",
+     "es": "La decodificación especulativa usa un modelo pequeño que propone varios tokens, y el grande los verifica todos en una sola pasada.",
+     "cue": "borrador"
+    },
+    {
+     "dice": "It accepts each one with probability min of one and p over q: the output has exactly the same distribution. With eighty percent acceptance and four drafts, it gets three point four tokens per pass.",
+     "muestra": "It accepts each one with probability min(1, p/q): the output has exactly the same distribution. With 80% acceptance and 4 drafts, it gets 3.4 tokens per pass.",
+     "es": "Acepta cada uno con probabilidad min(1, p/q): la salida tiene exactamente la misma distribución. Con 80 % de aceptación y 4 borradores, saca 3,4 tokens por pasada.",
+     "cue": "aceptar"
+    }
+   ]
+  },
+  {
+   "id": "rope",
+   "frases": [
+    {
+     "dice": "Position is encoded by rotation: Rope turns each pair of dimensions by the position, and the dot product depends only on the distance between tokens.",
+     "muestra": "Position is encoded by rotation: RoPE turns each pair of dimensions by the position, and the dot product depends only on the distance between tokens.",
+     "es": "La posición se codifica rotando: RoPE gira cada par de dimensiones según la posición, y el producto punto solo depende de la distancia entre tokens.",
+     "cue": "rotar"
+    },
+    {
+     "dice": "To extend the context, positions are interpolated: dividing them by sixteen takes a model from two thousand to thirty-two thousand tokens, with little fine-tuning.",
+     "muestra": "To extend the context, positions are interpolated: dividing them by 16 takes a model from 2,048 to 32,768 tokens, with little fine-tuning.",
+     "es": "Para alargar el contexto se interpolan las posiciones: dividirlas por 16 lleva un modelo de 2.048 a 32.768 tokens, con poco ajuste.",
+     "cue": "estirar"
+    }
+   ]
+  },
+  {
+   "id": "sumideros",
+   "frases": [
+    {
+     "dice": "A curious finding: models pour a lot of attention onto the first tokens, even when they mean nothing. They are attention sinks.",
+     "muestra": "A curious finding: models pour a lot of attention onto the first tokens, even when they mean nothing. They are attention sinks.",
+     "es": "Un hallazgo curioso: los modelos vuelcan mucha atención en los primeros tokens, aunque no signifiquen nada. Son sumideros de atención.",
+     "cue": "sink"
+    },
+    {
+     "dice": "If you keep those four tokens plus a recent window, the model handles streams of four million tokens stably.",
+     "muestra": "If you keep those 4 tokens plus a recent window, the model handles streams of 4 million tokens stably.",
+     "es": "Si guardas esos 4 tokens más una ventana reciente, el modelo procesa flujos de 4 millones de tokens de forma estable.",
+     "cue": "ventana"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "On Google Cloud, JetStream serves models on T P Us with int eight quantization of weights, activations and cache. On G P Us, G K E runs v L L M with A W Q or G P T Q models.",
+     "muestra": "On Google Cloud, JetStream serves models on TPUs with int8 quantization of weights, activations and cache. On GPUs, GKE runs vLLM with AWQ or GPTQ models.",
+     "es": "En Google Cloud, JetStream sirve modelos en TPUs con cuantización int8 de pesos, activaciones y caché. En GPUs, GKE corre vLLM con modelos AWQ o GPTQ.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "The basics: memory bandwidth, quantization error, rejection sampling, and rotations.",
+     "muestra": "The basics: memory bandwidth, quantization error, rejection sampling and rotations.",
+     "es": "Las bases: ancho de banda de memoria, error de cuantización, muestreo por rechazo y rotaciones.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "If this helped, share and follow.",
+     "muestra": "If this helped, share and follow.",
+     "es": "Si te sirvió, compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

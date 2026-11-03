@@ -1,0 +1,120 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y en Ghana, cerca de las minas de oro más contaminantes, la productividad agrícola es casi cuarenta por ciento menor que en zonas más lejanas. Nadie sorteó dónde poner las minas. ¿Cómo se sabe que es causal?",
+     "muestra": "En Ghana, cerca de las minas de oro más contaminantes, la productividad agrícola es casi 40% menor que en zonas más lejanas. Nadie sorteó dónde poner las minas. ¿Cómo se sabe que es causal?",
+     "cue": "ghana",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la serie cuasi experimentos, capítulo siete: experimentos naturales.",
+     "muestra": "Cuasi-experimentos, capítulo 7: experimentos naturales."
+    }
+   ]
+  },
+  {
+   "id": "snow",
+   "frases": [
+    {
+     "dice": "Y el primero fue en Londres, en mil ochocientos cincuenta y cuatro. Dos compañías de agua abastecían las mismas calles. Una tomaba agua contaminada del Támesis. La otra, río arriba.",
+     "muestra": "El primero fue en Londres, en 1854. Dos compañías de agua abastecían las mismas calles: una tomaba agua contaminada del Támesis, la otra río arriba.",
+     "cue": "londres"
+    },
+    {
+     "dice": "Los vecinos no elegían su compañía según su salud. Jon Snou contó las muertes por cólera: trescientas quince por cada diez mil casas con agua contaminada, treinta y siete con agua limpia.",
+     "muestra": "Los vecinos no elegían su compañía según su salud. John Snow contó las muertes por cólera: 315 por cada 10.000 casas con agua contaminada, 37 con agua limpia.",
+     "cue": "colera"
+    }
+   ]
+  },
+  {
+   "id": "comosi",
+   "frases": [
+    {
+     "dice": "Entonces, un experimento natural es eso: algo que nadie diseñó, pero que asignó el tratamiento como si fuera al azar.",
+     "muestra": "Un experimento natural es eso: algo que nadie diseñó, pero que asignó el tratamiento como si fuera al azar.",
+     "cue": "comosi"
+    },
+    {
+     "dice": "Y la pregunta clave es siempre la misma: ¿qué tan creíble es ese como si fuera al azar? Ahí no hay fórmula que te salve. Hay que conocer el terreno.",
+     "muestra": "La pregunta clave es siempre la misma: ¿qué tan creíble es ese «como si fuera al azar»? Ahí no hay fórmula que te salve: hay que conocer el terreno.",
+     "cue": "creible"
+    }
+   ]
+  },
+  {
+   "id": "peru",
+   "frases": [
+    {
+     "dice": "Y en Perú, Fernando Aragón y Juan Pablo Rud estudiaron la mina de oro Yanacocha, en Cajamarca, con datos de hogares de mil novecientos noventa y siete a dos mil seis.",
+     "muestra": "En Perú, Fernando Aragón y Juan Pablo Rud estudiaron la mina de oro Yanacocha, en Cajamarca, con datos de hogares de 1997 a 2006.",
+     "cue": "yanacocha"
+    },
+    {
+     "dice": "Cuando la mina empezó a comprar más insumos locales, el ingreso real subió en la ciudad que la abastecía y en las zonas cercanas, incluso para trabajadores fuera de la minería. Y también subieron los precios locales.",
+     "muestra": "Cuando la mina empezó a comprar más insumos locales, el ingreso real subió en la ciudad que la abastecía y en zonas cercanas, incluso para trabajadores fuera de la minería. También subieron los precios locales.",
+     "cue": "compras"
+    }
+   ]
+  },
+  {
+   "id": "ghana",
+   "frases": [
+    {
+     "dice": "Y en Ghana, los mismos autores compararon zonas agrícolas según su distancia a las minas, y a lo largo del tiempo.",
+     "muestra": "En Ghana, los mismos autores compararon zonas agrícolas según su distancia a las minas, y a lo largo del tiempo.",
+     "cue": "distancia"
+    },
+    {
+     "dice": "El efecto llega hasta unos veinte kilómetros, y se debilita con la distancia. Y con datos satelitales de dióxido de nitrógeno, mostraron que la contaminación sigue el mismo patrón.",
+     "muestra": "El efecto llega hasta unos 20 km y se debilita con la distancia. Con datos satelitales de dióxido de nitrógeno, mostraron que la contaminación sigue el mismo patrón.",
+     "cue": "satelite"
+    }
+   ]
+  },
+  {
+   "id": "dosis",
+   "frases": [
+    {
+     "dice": "Ese patrón de dosis y respuesta es lo que da credibilidad: más cerca, más contaminación, más daño. Es el mismo argumento que GRADE usa para subir la confianza de un estudio observacional.",
+     "muestra": "Ese patrón de dosis-respuesta da credibilidad: más cerca, más contaminación, más daño. Es el mismo argumento que GRADE usa para subir la confianza de un observacional.",
+     "cue": "dosis"
+    }
+   ]
+  },
+  {
+   "id": "ia",
+   "frases": [
+    {
+     "dice": "Y aquí entra la computación. Las imágenes satelitales y los modelos de visión permiten medir contaminación, cultivos y actividad en zonas sin estadísticas. Un pipeline de agentes puede descargar, procesar y alinear esos datos con cada faena.",
+     "muestra": "Aquí entra la computación: imágenes satelitales y modelos de visión permiten medir contaminación, cultivos y actividad en zonas sin estadísticas. Un pipeline de agentes puede descargar, procesar y alinear esos datos con cada faena.",
+     "cue": "satelital"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: la naturaleza, la geografía y la historia hacen experimentos todo el tiempo. Tu trabajo es reconocerlos, y defender su como si fuera al azar. Compártelo y sígueme.",
+     "muestra": "La naturaleza, la geografía y la historia hacen experimentos todo el tiempo. Tu trabajo es reconocerlos y defender su «como si fuera al azar». Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

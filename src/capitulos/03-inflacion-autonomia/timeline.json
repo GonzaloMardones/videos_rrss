@@ -1,0 +1,234 @@
+{
+ "duracion": 106.877,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 7.541
+  },
+  {
+   "id": "titulo",
+   "inicio": 7.541,
+   "fin": 10.572
+  },
+  {
+   "id": "mandato",
+   "inicio": 10.572,
+   "fin": 19.923
+  },
+  {
+   "id": "volatiles",
+   "inicio": 19.923,
+   "fin": 31.129
+  },
+  {
+   "id": "abril",
+   "inicio": 31.129,
+   "fin": 47.427
+  },
+  {
+   "id": "herramienta",
+   "inicio": 47.427,
+   "fin": 61.343
+  },
+  {
+   "id": "autonomia",
+   "inicio": 61.343,
+   "fin": 78.373
+  },
+  {
+   "id": "turquia",
+   "inicio": 78.373,
+   "fin": 90.3
+  },
+  {
+   "id": "cierre",
+   "inicio": 90.3,
+   "fin": 106.877
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.199,
+   "texto": "La inflación no baja, y el ministro de Hacienda dijo que es responsabilidad del Banco Central.",
+   "cue": "quiroz"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.449,
+   "fin": 7.241,
+   "texto": "¿Tiene razón? Veamos los números.",
+   "cue": "numeros"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 7.541,
+   "fin": 10.272,
+   "texto": "Capítulo 3: ¿quién tiene la culpa de la inflación?",
+   "cue": null
+  },
+  {
+   "escena": "mandato",
+   "inicio": 10.572,
+   "fin": 13.089,
+   "texto": "Primero, en lo formal, el ministro tiene razón.",
+   "cue": "formal"
+  },
+  {
+   "escena": "mandato",
+   "inicio": 13.209,
+   "fin": 17.775,
+   "texto": "La ley le encarga al Banco Central que los precios suban cerca de 3% al año.",
+   "cue": "meta"
+  },
+  {
+   "escena": "mandato",
+   "inicio": 17.895,
+   "fin": 19.623,
+   "texto": "Y hoy van en 4,1%.",
+   "cue": "hoy"
+  },
+  {
+   "escena": "volatiles",
+   "inicio": 19.923,
+   "fin": 22.269,
+   "texto": "Pero miremos de dónde viene esa inflación.",
+   "cue": "donde"
+  },
+  {
+   "escena": "volatiles",
+   "inicio": 22.389,
+   "fin": 28.811,
+   "texto": "Si sacamos los precios más volátiles, como los combustibles, queda entre 3,2% y 3,4%: casi en la meta.",
+   "cue": "sinvolatiles"
+  },
+  {
+   "escena": "volatiles",
+   "inicio": 28.931,
+   "fin": 30.829,
+   "texto": "El problema son los combustibles.",
+   "cue": "combustibles"
+  },
+  {
+   "escena": "abril",
+   "inicio": 31.129,
+   "fin": 34.905,
+   "texto": "En abril, los precios subieron 1,3% en un solo mes,",
+   "cue": "abril"
+  },
+  {
+   "escena": "abril",
+   "inicio": 35.025,
+   "fin": 38.545,
+   "texto": "y tres cuartas partes de ese salto vinieron de los combustibles.",
+   "cue": "tresCuartos"
+  },
+  {
+   "escena": "abril",
+   "inicio": 38.665,
+   "fin": 40.649,
+   "texto": "¿Por qué? Por la guerra en Medio Oriente,",
+   "cue": "guerra"
+  },
+  {
+   "escena": "abril",
+   "inicio": 40.769,
+   "fin": 47.127,
+   "texto": "y por un cambio al Mepco, el mecanismo que suaviza el precio de los combustibles, que hizo el propio Ministerio de Hacienda.",
+   "cue": "mepco"
+  },
+  {
+   "escena": "herramienta",
+   "inicio": 47.427,
+   "fin": 50.861,
+   "texto": "Ahora, el Banco Central tiene una herramienta: la tasa de interés.",
+   "cue": "tasa"
+  },
+  {
+   "escena": "herramienta",
+   "inicio": 50.981,
+   "fin": 55.76,
+   "texto": "Pero la tasa no baja el precio del petróleo, y tarda entre 1 y 2 años en hacer efecto.",
+   "cue": "rezago"
+  },
+  {
+   "escena": "herramienta",
+   "inicio": 55.88,
+   "fin": 61.043,
+   "texto": "Y subirla hoy enfriaría una economía que casi no crece, con casi 10% de desempleo.",
+   "cue": "costo"
+  },
+  {
+   "escena": "autonomia",
+   "inicio": 61.343,
+   "fin": 66.825,
+   "texto": "Por eso el Banco Central es autónomo: para decidir mirando el largo plazo, y no la próxima elección.",
+   "cue": "autonomo"
+  },
+  {
+   "escena": "autonomia",
+   "inicio": 66.945,
+   "fin": 74.988,
+   "texto": "Antes de su autonomía, entre 1940 y 1989, la inflación promedió 55% al año.",
+   "cue": "antes"
+  },
+  {
+   "escena": "autonomia",
+   "inicio": 75.108,
+   "fin": 78.073,
+   "texto": "En las dos décadas antes de la pandemia: 3,2%.",
+   "cue": "despues"
+  },
+  {
+   "escena": "turquia",
+   "inicio": 78.373,
+   "fin": 81.509,
+   "texto": "¿Y qué pasa cuando un gobierno presiona a su banco central?",
+   "cue": "presion"
+  },
+  {
+   "escena": "turquia",
+   "inicio": 81.709,
+   "fin": 85.464,
+   "texto": "En Turquía, el presidente pidió bajar las tasas con la inflación alta.",
+   "cue": "turquia"
+  },
+  {
+   "escena": "turquia",
+   "inicio": 85.584,
+   "fin": 90.0,
+   "texto": "En octubre de 2022, la inflación llegó a 85%.",
+   "cue": "ochenta"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 90.3,
+   "fin": 92.049,
+   "texto": "Entonces, ¿quién tiene la culpa?",
+   "cue": "culpa"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 92.299,
+   "fin": 98.635,
+   "texto": "El Banco Central responde por la meta, pero esta inflación vino sobre todo de los combustibles: de la guerra, y del Mepco.",
+   "cue": "reparto"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 98.755,
+   "fin": 103.257,
+   "texto": "La clave es que Hacienda y el Banco Central se coordinen, cada uno con su herramienta.",
+   "cue": "coordinar"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 103.377,
+   "fin": 106.577,
+   "texto": "Si te sirvió, compártelo. Y sígueme para el capítulo 4.",
+   "cue": "cta"
+  }
+ ]
+}

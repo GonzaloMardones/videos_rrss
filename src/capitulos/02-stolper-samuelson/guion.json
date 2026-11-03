@@ -1,0 +1,163 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.12,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "El cobre está en precio récord.",
+          "muestra": "El cobre está en precio récord.",
+          "cue": "cobre",
+          "pausa": 0.3
+        },
+        {
+          "dice": "¿Entonces... por qué tu sueldo no subió?",
+          "muestra": "¿Entonces por qué tu sueldo no subió?",
+          "cue": "sueldo",
+          "velocidad": 1.0
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Capítulo dos: cuando sube el cobre, ¿quién gana y quién pierde?",
+          "muestra": "Capítulo 2: cuando sube el cobre, ¿quién gana y quién pierde?"
+        }
+      ]
+    },
+    {
+      "id": "idea",
+      "frases": [
+        {
+          "dice": "Hay una idea clásica de la economía que lo explica.",
+          "muestra": "Hay una idea clásica de la economía que lo explica.",
+          "cue": "idea"
+        },
+        {
+          "dice": "Se llama teorema de Stolper Samuelson.",
+          "muestra": "Se llama teorema de Stolper-Samuelson.",
+          "cue": "nombre",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Y dice algo simple: cuando sube el precio de algo, gana, y mucho, quien aporta lo que más se usa para hacerlo.",
+          "muestra": "Y dice algo simple: cuando sube el precio de algo, gana, y mucho, quien aporta lo que más se usa para hacerlo.",
+          "cue": "regla"
+        }
+      ]
+    },
+    {
+      "id": "recetas",
+      "frases": [
+        {
+          "dice": "Pensemos en dos productos chilenos.",
+          "muestra": "Pensemos en dos productos chilenos.",
+          "cue": "dos"
+        },
+        {
+          "dice": "El cobre, que necesita mucha maquinaria: capital.",
+          "muestra": "El cobre, que necesita mucha maquinaria: capital.",
+          "cue": "cobre"
+        },
+        {
+          "dice": "Y las cerezas, que necesitan muchas manos: trabajo.",
+          "muestra": "Y las cerezas, que necesitan muchas manos: trabajo.",
+          "cue": "cerezas"
+        }
+      ]
+    },
+    {
+      "id": "experimento",
+      "frases": [
+        {
+          "dice": "Ahora, subamos el precio del cobre un diez por ciento.",
+          "muestra": "Ahora, subamos el precio del cobre un 10%.",
+          "cue": "sube"
+        },
+        {
+          "dice": "Las mineras quieren producir más, y compiten por más capital.",
+          "muestra": "Las mineras quieren producir más, y compiten por más capital.",
+          "cue": "demanda"
+        },
+        {
+          "dice": "El capital gana más que el cobre: casi catorce por ciento.",
+          "muestra": "El capital gana más que el cobre: casi 14%.",
+          "cue": "capital"
+        },
+        {
+          "dice": "Y el salario, en la práctica, baja casi cinco.",
+          "muestra": "Y el salario, en la práctica, baja casi 5%.",
+          "cue": "salario"
+        },
+        {
+          "dice": "A eso se le llama efecto magnificación.",
+          "muestra": "A eso se le llama efecto magnificación.",
+          "cue": "magnificacion"
+        }
+      ]
+    },
+    {
+      "id": "cerezas",
+      "frases": [
+        {
+          "dice": "Pero si lo que sube son las cerezas, pasa al revés:",
+          "muestra": "Pero si lo que sube son las cerezas, pasa al revés:",
+          "cue": "sube"
+        },
+        {
+          "dice": "ganan los trabajadores, porque son el ingrediente principal.",
+          "muestra": "ganan los trabajadores, porque son el ingrediente principal.",
+          "cue": "trabajo"
+        }
+      ]
+    },
+    {
+      "id": "realidad",
+      "frases": [
+        {
+          "dice": "Ojo, que en la vida real hay matices.",
+          "muestra": "Ojo, que en la vida real hay matices.",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Pero un minero no se vuelve temporero de un día para otro. En el corto plazo, ganan los que ya están en la minería.",
+          "muestra": "Pero un minero no se vuelve temporero de un día para otro. En el corto plazo, ganan los que ya están en la minería.",
+          "cue": "minero"
+        },
+        {
+          "dice": "Y un cobre caro fortalece el peso, lo que golpea a otros exportadores, como la fruta.",
+          "muestra": "Y un cobre caro fortalece el peso, lo que golpea a otros exportadores, como la fruta.",
+          "cue": "peso"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "La gran lección: el comercio hace crecer la torta...",
+          "muestra": "La gran lección: el comercio hace crecer la torta…",
+          "cue": "torta"
+        },
+        {
+          "dice": "pero no la reparte igual.",
+          "muestra": "pero no la reparte igual.",
+          "cue": "reparte",
+          "pausa": 0.3
+        },
+        {
+          "dice": "En el próximo capítulo: ¿quién tiene la culpa de la inflación? Sígueme.",
+          "muestra": "En el próximo capítulo: ¿quién tiene la culpa de la inflación? Sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

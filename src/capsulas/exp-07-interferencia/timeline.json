@@ -1,0 +1,150 @@
+{
+ "duracion": 92.958,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 9.979
+  },
+  {
+   "id": "titulo",
+   "inicio": 9.979,
+   "fin": 13.821
+  },
+  {
+   "id": "sutva",
+   "inicio": 13.821,
+   "fin": 25.867
+  },
+  {
+   "id": "donde",
+   "inicio": 25.867,
+   "fin": 35.469
+  },
+  {
+   "id": "sesgo",
+   "inicio": 35.469,
+   "fin": 49.606
+  },
+  {
+   "id": "cluster",
+   "inicio": 49.606,
+   "fin": 65.847
+  },
+  {
+   "id": "switchback",
+   "inicio": 65.847,
+   "fin": 77.147
+  },
+  {
+   "id": "dilema",
+   "inicio": 77.147,
+   "fin": 86.322
+  },
+  {
+   "id": "cierre",
+   "inicio": 86.322,
+   "fin": 92.958
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 9.679,
+   "texto": "Imagina que en una app de transporte le das un descuento a la mitad de los pasajeros. Ellos piden más viajes, y los conductores se acaban para la otra mitad. Tu experimento acaba de mentir.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.979,
+   "fin": 13.521,
+   "texto": "Idea 7 del mapa de la experimentación: interferencia, y la unidad de aleatorización.",
+   "cue": null
+  },
+  {
+   "escena": "sutva",
+   "inicio": 13.821,
+   "fin": 20.669,
+   "texto": "Todo experimento supone algo que casi nunca se dice: mi resultado depende solo de mi tratamiento, no del tratamiento de los demás.",
+   "cue": "supuesto"
+  },
+  {
+   "escena": "sutva",
+   "inicio": 20.789,
+   "fin": 25.567,
+   "texto": "Se llama SUTVA: el valor del tratamiento es estable por unidad. Y se rompe más seguido de lo que crees.",
+   "cue": "nombre"
+  },
+  {
+   "escena": "donde",
+   "inicio": 25.867,
+   "fin": 35.169,
+   "texto": "Se rompe en marketplaces, donde tratados y control comparten la misma oferta. En redes sociales, donde tus amigos te influyen. Y en vacunas, donde mi vacuna también te protege a ti.",
+   "cue": "donde"
+  },
+  {
+   "escena": "sesgo",
+   "inicio": 35.469,
+   "fin": 42.445,
+   "texto": "En el marketplace, los tratados le quitan conductores al control. El control empeora, el tratamiento mejora, y la diferencia se infla.",
+   "cue": "infla"
+  },
+  {
+   "escena": "sesgo",
+   "inicio": 42.565,
+   "fin": 49.306,
+   "texto": "El experimento dice +10% de viajes. Lanzado a todos, como ya nadie le quita a nadie, el efecto real es mucho menor.",
+   "cue": "real"
+  },
+  {
+   "escena": "cluster",
+   "inicio": 49.606,
+   "fin": 54.79,
+   "texto": "La solución: aleatoriza por grupos que no se mezclan. Ciudades, zonas, o comunidades de la red.",
+   "cue": "grupos"
+  },
+  {
+   "escena": "cluster",
+   "inicio": 54.91,
+   "fin": 59.667,
+   "texto": "El precio es el efecto de diseño: DEFF = 1 + (m − 1)·ρ, por la correlación dentro del grupo.",
+   "cue": "deff"
+  },
+  {
+   "escena": "cluster",
+   "inicio": 59.787,
+   "fin": 65.547,
+   "texto": "Con 100 personas por grupo y ρ = 0,05: DEFF = 5,95. Necesitas casi seis veces más datos.",
+   "cue": "seis"
+  },
+  {
+   "escena": "switchback",
+   "inicio": 65.847,
+   "fin": 73.677,
+   "texto": "Otra opción, muy usada en delivery y transporte: el switchback. Toda la zona pasa a la versión A una hora, y a la B la siguiente, alternando al azar.",
+   "cue": "switchback"
+  },
+  {
+   "escena": "switchback",
+   "inicio": 73.797,
+   "fin": 76.847,
+   "texto": "Funciona si el efecto de una hora no se arrastra a la siguiente.",
+   "cue": "arrastre"
+  },
+  {
+   "escena": "dilema",
+   "inicio": 77.147,
+   "fin": 86.022,
+   "texto": "El dilema de fondo: aleatorizar por usuario es preciso pero sesgado. Aleatorizar por grupo es insesgado, pero ruidoso. Elige según cuánto se contagian tus unidades.",
+   "cue": "dilema"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 86.322,
+   "fin": 92.658,
+   "texto": "Antes de sortear, pregúntate a quién afecta el tratamiento. En la próxima idea, el zoológico de efectos. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

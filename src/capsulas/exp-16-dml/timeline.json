@@ -1,0 +1,176 @@
+{
+ "duracion": 134.351,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 10.641
+  },
+  {
+   "id": "titulo",
+   "inicio": 10.641,
+   "fin": 14.994
+  },
+  {
+   "id": "problema",
+   "inicio": 14.994,
+   "fin": 32.737
+  },
+  {
+   "id": "residuos",
+   "inicio": 32.737,
+   "fin": 52.562
+  },
+  {
+   "id": "formula",
+   "inicio": 52.562,
+   "fin": 71.214
+  },
+  {
+   "id": "ortogonal",
+   "inicio": 71.214,
+   "fin": 88.786
+  },
+  {
+   "id": "cruzado",
+   "inicio": 88.786,
+   "fin": 101.046
+  },
+  {
+   "id": "resultado",
+   "inicio": 101.046,
+   "fin": 115.511
+  },
+  {
+   "id": "cuando",
+   "inicio": 115.511,
+   "fin": 125.902
+  },
+  {
+   "id": "cierre",
+   "inicio": 125.902,
+   "fin": 134.351
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 10.341,
+   "texto": "Tu regresión dice que cada peso de descuento sube el gasto en 0,9. Agregas controles: 0,91. El efecto real es 0,5. El problema no es qué controlas. Es cómo.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 10.641,
+   "fin": 14.694,
+   "texto": "Idea 16 del mapa de la experimentación: double machine learning.",
+   "cue": null
+  },
+  {
+   "escena": "problema",
+   "inicio": 14.994,
+   "fin": 22.439,
+   "texto": "El historial del cliente influye en el descuento y en el gasto, pero no en línea recta. Una regresión lineal no alcanza a quitar esa confusión.",
+   "cue": "curvas"
+  },
+  {
+   "escena": "problema",
+   "inicio": 22.559,
+   "fin": 32.437,
+   "texto": "Y machine learning directo tampoco: está hecho para predecir, no para estimar un efecto. Regulariza, y ese sesgo se cuela en el coeficiente. Además, no te da un intervalo de confianza.",
+   "cue": "ml"
+  },
+  {
+   "escena": "residuos",
+   "inicio": 32.737,
+   "fin": 41.099,
+   "texto": "La idea viene de los años 30 (Frisch–Waugh–Lovell): para aislar el efecto del descuento, quitas del descuento y del gasto todo lo que el historial explica.",
+   "cue": "fwl"
+  },
+  {
+   "escena": "residuos",
+   "inicio": 41.219,
+   "fin": 47.385,
+   "texto": "Un modelo predice el descuento. Otro predice el gasto. Te quedas con lo que ninguno pudo predecir: los residuos.",
+   "cue": "dos"
+  },
+  {
+   "escena": "residuos",
+   "inicio": 47.505,
+   "fin": 52.262,
+   "texto": "La pendiente entre residuos es el efecto. En esta corrida, 0,55.",
+   "cue": "pendiente"
+  },
+  {
+   "escena": "formula",
+   "inicio": 52.562,
+   "fin": 59.431,
+   "texto": "En fórmula: θ es la suma de residuo del descuento por residuo del gasto, dividida por la suma del residuo del descuento al cuadrado.",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 59.551,
+   "fin": 63.797,
+   "texto": "El residuo del descuento es el descuento, menos lo que predice el primer modelo.",
+   "cue": "dres"
+  },
+  {
+   "escena": "formula",
+   "inicio": 63.917,
+   "fin": 70.914,
+   "texto": "El residuo del gasto es el gasto, menos lo que predice el segundo. Cada modelo puede ser cualquier machine learning: bosques, boosting, lasso.",
+   "cue": "yres"
+  },
+  {
+   "escena": "ortogonal",
+   "inicio": 71.214,
+   "fin": 77.913,
+   "texto": "¿Por qué funciona, si los modelos se equivocan? Por la ortogonalidad de Neyman: los errores de los dos modelos entran multiplicados.",
+   "cue": "neyman"
+  },
+  {
+   "escena": "ortogonal",
+   "inicio": 78.033,
+   "fin": 88.486,
+   "texto": "Si cada uno se equivoca del orden de n^(−1/4), el producto es n^(−1/2): el mismo orden que el error estadístico normal. Por eso bastan modelos decentes, no perfectos.",
+   "cue": "orden"
+  },
+  {
+   "escena": "cruzado",
+   "inicio": 88.786,
+   "fin": 95.485,
+   "texto": "El segundo truco es el cross-fitting. Divides los datos en cinco partes. Cada fila se predice con un modelo que nunca la vio.",
+   "cue": "partes"
+  },
+  {
+   "escena": "cruzado",
+   "inicio": 95.605,
+   "fin": 100.746,
+   "texto": "Así, el sobreajuste no se confunde con efecto. Y como rotas las partes, usas todos los datos.",
+   "cue": "rota"
+  },
+  {
+   "escena": "resultado",
+   "inicio": 101.046,
+   "fin": 115.211,
+   "texto": "En 300 simulaciones: la regresión ingenua da 0,90. Con controles lineales, 0,91. Double machine learning, 0,50. Y su intervalo del 95% contiene el valor real el 95% de las veces.",
+   "cue": "sims"
+  },
+  {
+   "escena": "cuando",
+   "inicio": 115.511,
+   "fin": 125.602,
+   "texto": "Úsalo cuando tienes muchos controles, o relaciones no lineales. Pero ojo: no arregla confusores que no mediste. Sigue necesitando un buen grafo causal, y un análisis de sensibilidad.",
+   "cue": "usar"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 125.902,
+   "fin": 134.051,
+   "texto": "Deja que el machine learning limpie la confusión, y que la estadística estime el efecto. En la próxima y última idea: mediación. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+ "duracion": 117.505,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 13.555
+  },
+  {
+   "id": "titulo",
+   "inicio": 13.555,
+   "fin": 18.122
+  },
+  {
+   "id": "pipeline",
+   "inicio": 18.122,
+   "fin": 35.523
+  },
+  {
+   "id": "sutva",
+   "inicio": 35.523,
+   "fin": 50.45
+  },
+  {
+   "id": "numeros",
+   "inicio": 50.45,
+   "fin": 66.998
+  },
+  {
+   "id": "solucion",
+   "inicio": 66.998,
+   "fin": 82.906
+  },
+  {
+   "id": "costo",
+   "inicio": 82.906,
+   "fin": 98.601
+  },
+  {
+   "id": "trazas",
+   "inicio": 98.601,
+   "fin": 109.631
+  },
+  {
+   "id": "cierre",
+   "inicio": 109.631,
+   "fin": 117.505
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 10.191,
+   "texto": "Un banco prueba un nuevo agente de IA que clasifica alertas de fraude. En la prueba A/B, los casos del agente nuevo se resuelven 41% más rápido.",
+   "cue": "ab"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 10.311,
+   "fin": 13.255,
+   "texto": "Lo lanzan para todos los casos. Y la mejora desaparece.",
+   "cue": "desaparece"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 13.555,
+   "fin": 17.822,
+   "texto": "Cuasi-experimentos, capítulo 8: interferencia entre agentes.",
+   "cue": null
+  },
+  {
+   "escena": "pipeline",
+   "inicio": 18.122,
+   "fin": 28.021,
+   "texto": "El sistema tiene dos agentes que se hablan por protocolo A2A. El primero clasifica cada alerta y marca las urgentes. El segundo resuelve los casos, y atiende primero los urgentes.",
+   "cue": "dos"
+  },
+  {
+   "escena": "pipeline",
+   "inicio": 28.141,
+   "fin": 35.223,
+   "texto": "El agente nuevo marca más casos como urgentes. En la prueba, sus casos se adelantan en la fila, a costa de los casos del grupo de control.",
+   "cue": "fila"
+  },
+  {
+   "escena": "sutva",
+   "inicio": 35.523,
+   "fin": 42.969,
+   "texto": "Se rompió un supuesto: el de no interferencia (SUTVA). Dice que tu resultado depende solo de tu tratamiento, no del de los demás.",
+   "cue": "supuesto"
+  },
+  {
+   "escena": "sutva",
+   "inicio": 43.089,
+   "fin": 50.15,
+   "texto": "Aquí, el tiempo de un caso depende de cuántos otros casos son urgentes: su resultado depende del vector completo de asignaciones.",
+   "cue": "vector"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 50.45,
+   "fin": 60.05,
+   "texto": "En la simulación: la prueba por caso dice −41%. El lanzamiento total, −2%: dentro del ruido. La prioridad no crea capacidad: solo reordena la fila.",
+   "cue": "sim"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 60.17,
+   "fin": 66.698,
+   "texto": "Ramesh Johari y coautores mostraron, en plataformas de dos lados, que este sesgo puede ser tan grande como el efecto mismo.",
+   "cue": "johari"
+  },
+  {
+   "escena": "solucion",
+   "inicio": 66.998,
+   "fin": 79.371,
+   "texto": "¿La solución? Aleatorizar a un nivel donde la interferencia quede adentro. Por tiempo: todo el sistema usa la versión nueva un día y la antigua al otro (switchback). En la simulación da cerca de cero, como el lanzamiento real.",
+   "cue": "switch"
+  },
+  {
+   "escena": "solucion",
+   "inicio": 79.491,
+   "fin": 82.606,
+   "texto": "O por grupos completos: sucursales, regiones o carteras.",
+   "cue": "grupos"
+  },
+  {
+   "escena": "costo",
+   "inicio": 82.906,
+   "fin": 92.613,
+   "texto": "El costo: menos unidades independientes. Con grupos de tamaño m, la varianza se multiplica por el efecto de diseño: 1 + (m − 1)·ρ, con ρ la correlación dentro del grupo.",
+   "cue": "diseno"
+  },
+  {
+   "escena": "costo",
+   "inicio": 92.733,
+   "fin": 98.301,
+   "texto": "Con grupos de 100 casos y ρ = 0,05, necesitas casi 6 veces más datos.",
+   "cue": "seis"
+  },
+  {
+   "escena": "trazas",
+   "inicio": 98.601,
+   "fin": 109.331,
+   "texto": "En una arquitectura de agentes, la pista está en las trazas: cada tarea A2A lleva un identificador de contexto. Si agrupas por ese contexto, ves qué casos compartieron recursos y eliges bien la unidad.",
+   "cue": "contexto"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 109.631,
+   "fin": 117.205,
+   "texto": "Si tus agentes comparten algo, aleatoriza lo que comparten. Próximo capítulo: qué agente causó la mejora. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

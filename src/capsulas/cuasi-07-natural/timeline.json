@@ -1,0 +1,143 @@
+{
+ "duracion": 116.603,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 11.195
+  },
+  {
+   "id": "titulo",
+   "inicio": 11.195,
+   "fin": 15.549
+  },
+  {
+   "id": "snow",
+   "inicio": 15.549,
+   "fin": 35.361
+  },
+  {
+   "id": "comosi",
+   "inicio": 35.361,
+   "fin": 48.581
+  },
+  {
+   "id": "peru",
+   "inicio": 48.581,
+   "fin": 68.627
+  },
+  {
+   "id": "ghana",
+   "inicio": 68.627,
+   "fin": 84.173
+  },
+  {
+   "id": "dosis",
+   "inicio": 84.173,
+   "fin": 94.307
+  },
+  {
+   "id": "ia",
+   "inicio": 94.307,
+   "fin": 107.429
+  },
+  {
+   "id": "cierre",
+   "inicio": 107.429,
+   "fin": 116.603
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 10.895,
+   "texto": "En Ghana, cerca de las minas de oro más contaminantes, la productividad agrícola es casi 40% menor que en zonas más lejanas. Nadie sorteó dónde poner las minas. ¿Cómo se sabe que es causal?",
+   "cue": "ghana"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 11.195,
+   "fin": 15.249,
+   "texto": "Cuasi-experimentos, capítulo 7: experimentos naturales.",
+   "cue": null
+  },
+  {
+   "escena": "snow",
+   "inicio": 15.549,
+   "fin": 24.999,
+   "texto": "El primero fue en Londres, en 1854. Dos compañías de agua abastecían las mismas calles: una tomaba agua contaminada del Támesis, la otra río arriba.",
+   "cue": "londres"
+  },
+  {
+   "escena": "snow",
+   "inicio": 25.119,
+   "fin": 35.061,
+   "texto": "Los vecinos no elegían su compañía según su salud. John Snow contó las muertes por cólera: 315 por cada 10.000 casas con agua contaminada, 37 con agua limpia.",
+   "cue": "colera"
+  },
+  {
+   "escena": "comosi",
+   "inicio": 35.361,
+   "fin": 41.27,
+   "texto": "Un experimento natural es eso: algo que nadie diseñó, pero que asignó el tratamiento como si fuera al azar.",
+   "cue": "comosi"
+  },
+  {
+   "escena": "comosi",
+   "inicio": 41.39,
+   "fin": 48.281,
+   "texto": "La pregunta clave es siempre la misma: ¿qué tan creíble es ese «como si fuera al azar»? Ahí no hay fórmula que te salve: hay que conocer el terreno.",
+   "cue": "creible"
+  },
+  {
+   "escena": "peru",
+   "inicio": 48.581,
+   "fin": 57.178,
+   "texto": "En Perú, Fernando Aragón y Juan Pablo Rud estudiaron la mina de oro Yanacocha, en Cajamarca, con datos de hogares de 1997 a 2006.",
+   "cue": "yanacocha"
+  },
+  {
+   "escena": "peru",
+   "inicio": 57.298,
+   "fin": 68.327,
+   "texto": "Cuando la mina empezó a comprar más insumos locales, el ingreso real subió en la ciudad que la abastecía y en zonas cercanas, incluso para trabajadores fuera de la minería. También subieron los precios locales.",
+   "cue": "compras"
+  },
+  {
+   "escena": "ghana",
+   "inicio": 68.627,
+   "fin": 74.43,
+   "texto": "En Ghana, los mismos autores compararon zonas agrícolas según su distancia a las minas, y a lo largo del tiempo.",
+   "cue": "distancia"
+  },
+  {
+   "escena": "ghana",
+   "inicio": 74.55,
+   "fin": 83.873,
+   "texto": "El efecto llega hasta unos 20 km y se debilita con la distancia. Con datos satelitales de dióxido de nitrógeno, mostraron que la contaminación sigue el mismo patrón.",
+   "cue": "satelite"
+  },
+  {
+   "escena": "dosis",
+   "inicio": 84.173,
+   "fin": 94.007,
+   "texto": "Ese patrón de dosis-respuesta da credibilidad: más cerca, más contaminación, más daño. Es el mismo argumento que GRADE usa para subir la confianza de un observacional.",
+   "cue": "dosis"
+  },
+  {
+   "escena": "ia",
+   "inicio": 94.307,
+   "fin": 107.129,
+   "texto": "Aquí entra la computación: imágenes satelitales y modelos de visión permiten medir contaminación, cultivos y actividad en zonas sin estadísticas. Un pipeline de agentes puede descargar, procesar y alinear esos datos con cada faena.",
+   "cue": "satelital"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 107.429,
+   "fin": 116.303,
+   "texto": "La naturaleza, la geografía y la historia hacen experimentos todo el tiempo. Tu trabajo es reconocerlos y defender su «como si fuera al azar». Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

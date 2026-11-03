@@ -1,0 +1,206 @@
+{
+ "duracion": 116.93,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 12.199
+  },
+  {
+   "id": "titulo",
+   "inicio": 12.199,
+   "fin": 15.578
+  },
+  {
+   "id": "tokens",
+   "inicio": 15.578,
+   "fin": 31.175
+  },
+  {
+   "id": "contraste",
+   "inicio": 31.175,
+   "fin": 42.438
+  },
+  {
+   "id": "infonce",
+   "inicio": 42.438,
+   "fin": 57.224
+  },
+  {
+   "id": "siglip",
+   "inicio": 57.224,
+   "fin": 72.053
+  },
+  {
+   "id": "fusion",
+   "inicio": 72.053,
+   "fin": 84.685
+  },
+  {
+   "id": "propios",
+   "inicio": 84.685,
+   "fin": 98.768
+  },
+  {
+   "id": "nube",
+   "inicio": 98.768,
+   "fin": 109.635
+  },
+  {
+   "id": "bases",
+   "inicio": 109.635,
+   "fin": 115.189
+  },
+  {
+   "id": "cierre",
+   "inicio": 115.189,
+   "fin": 116.93
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 7.802,
+   "texto": "In 2021, a model matched ResNet-50 on ImageNet without seeing a single one of its 1.28 million labels.",
+   "cue": "clip",
+   "es": "En 2021, un modelo igualó a ResNet-50 en ImageNet sin ver ni una de sus 1,28 millones de etiquetas."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 7.882,
+   "fin": 11.999,
+   "texto": "It only learned from 400 million image-text pairs from the internet.",
+   "cue": "pares",
+   "es": "Solo aprendió de 400 millones de pares de imagen y texto de internet."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 12.199,
+   "fin": 15.378,
+   "texto": "Tech capsule: multimodal fusion and custom embeddings.",
+   "cue": null,
+   "es": "Cápsula técnica: fusión multimodal y embeddings propios."
+  },
+  {
+   "escena": "tokens",
+   "inicio": 15.578,
+   "fin": 23.194,
+   "texto": "First, everything becomes tokens. A 224-pixel image in 16-pixel patches is 196 tokens.",
+   "cue": "parches",
+   "es": "Primero, todo se vuelve tokens. Una imagen de 224 píxeles en parches de 16 son 196 tokens."
+  },
+  {
+   "escena": "tokens",
+   "inicio": 23.274,
+   "fin": 30.975,
+   "texto": "Audio too: Whisper turns 30 seconds into 1,500 tokens, and a neural codec compresses speech to 6 kbit/s.",
+   "cue": "audio",
+   "es": "El audio también: Whisper convierte 30 segundos en 1.500 tokens, y un códec neuronal comprime la voz a 6 kbit/s."
+  },
+  {
+   "escena": "contraste",
+   "inicio": 31.175,
+   "fin": 37.426,
+   "texto": "The trick behind CLIP is contrastive learning: in a batch of N pairs, every image is compared with all N texts.",
+   "cue": "matriz",
+   "es": "El truco de CLIP es el aprendizaje contrastivo: en un lote de N pares, cada imagen se compara con los N textos."
+  },
+  {
+   "escena": "contraste",
+   "inicio": 37.506,
+   "fin": 42.238,
+   "texto": "The diagonal holds the correct pairs: pull them together and push everything else apart.",
+   "cue": "diagonal",
+   "es": "La diagonal son los pares correctos: hay que acercarlos y alejar todo lo demás."
+  },
+  {
+   "escena": "infonce",
+   "inicio": 42.438,
+   "fin": 51.718,
+   "texto": "The loss is a classification: with a softmax, which of the N texts belongs to this image? With a uniform prior, it is the posterior probability of each text.",
+   "cue": "clasificar",
+   "es": "La pérdida es una clasificación: con una softmax, ¿cuál de los N textos corresponde a esta imagen? Con previo uniforme, es la probabilidad posterior de cada texto."
+  },
+  {
+   "escena": "infonce",
+   "inicio": 51.798,
+   "fin": 57.024,
+   "texto": "It also bounds the mutual information: at most log N. That is why large batches help.",
+   "cue": "cota",
+   "es": "Además acota la información mutua: como mucho log N. Por eso los lotes grandes ayudan."
+  },
+  {
+   "escena": "siglip",
+   "inicio": 57.224,
+   "fin": 64.712,
+   "texto": "SigLIP swaps the softmax for a sigmoid: each pair is a yes-or-no question, with no normalization over the whole batch.",
+   "cue": "sigmoide",
+   "es": "SigLIP cambia la softmax por una sigmoide: cada par es una pregunta de sí o no, sin normalizar sobre todo el lote."
+  },
+  {
+   "escena": "siglip",
+   "inicio": 64.792,
+   "fin": 71.853,
+   "texto": "Since almost every pair is negative, it starts with a bias of −10: it begins believing that almost no pair matches.",
+   "cue": "sesgo",
+   "es": "Como los negativos son casi todos, arranca con un sesgo de −10: parte creyendo que casi ningún par coincide."
+  },
+  {
+   "escena": "fusion",
+   "inicio": 72.053,
+   "fin": 77.024,
+   "texto": "To combine modalities there are three routes: early fusion, late fusion or cross-attention.",
+   "cue": "tipos",
+   "es": "Para combinar modalidades hay tres caminos: fusión temprana, fusión tardía o atención cruzada."
+  },
+  {
+   "escena": "fusion",
+   "inicio": 77.104,
+   "fin": 84.485,
+   "texto": "Flamingo inserts cross-attention layers into a frozen language model; LLaVA just projects the image into the model's token space.",
+   "cue": "flamingo",
+   "es": "Flamingo inserta capas de atención cruzada en un modelo de lenguaje congelado; LLaVA solo proyecta la imagen al espacio de tokens del modelo."
+  },
+  {
+   "escena": "propios",
+   "inicio": 84.685,
+   "fin": 92.472,
+   "texto": "For your own embeddings, fine-tune with the same contrastive loss on your pairs and add hard negatives: the ones that look similar but are not.",
+   "cue": "negativos",
+   "es": "Para tus embeddings propios, ajustas con la misma pérdida contrastiva sobre tus pares y agregas negativos difíciles: los que se parecen pero no son."
+  },
+  {
+   "escena": "propios",
+   "inicio": 92.552,
+   "fin": 98.568,
+   "texto": "With Matryoshka embeddings, the first numbers already work on their own: you can cut the vector and save memory.",
+   "cue": "matrioska",
+   "es": "Con embeddings Matryoshka, los primeros números ya sirven solos: puedes cortar el vector y ahorrar memoria."
+  },
+  {
+   "escena": "nube",
+   "inicio": 98.768,
+   "fin": 109.435,
+   "texto": "On Google Cloud, Vertex AI offers multimodal embeddings: image and text in the same 1,408-dimensional space. And Vector Search finds nearest neighbors at scale.",
+   "cue": "gcp",
+   "es": "En Google Cloud, Vertex AI ofrece embeddings multimodales: imagen y texto en el mismo espacio de 1.408 dimensiones. Y Vector Search busca vecinos cercanos a gran escala."
+  },
+  {
+   "escena": "bases",
+   "inicio": 109.635,
+   "fin": 114.989,
+   "texto": "The basics: cosine similarity, softmax vs sigmoid, temperature and mutual information.",
+   "cue": "bases",
+   "es": "Las bases: similitud coseno, softmax contra sigmoide, la temperatura y la información mutua."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 115.189,
+   "fin": 116.73,
+   "texto": "If this helped, share and follow.",
+   "cue": "cta",
+   "es": "Si te sirvió, compártelo y sígueme."
+  }
+ ]
+}

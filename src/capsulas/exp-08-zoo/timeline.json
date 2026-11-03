@@ -1,0 +1,148 @@
+{
+ "duracion": 84.997,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 7.249
+  },
+  {
+   "id": "titulo",
+   "inicio": 7.249,
+   "fin": 11.367
+  },
+  {
+   "id": "dios",
+   "inicio": 11.367,
+   "fin": 22.39
+  },
+  {
+   "id": "ate",
+   "inicio": 22.39,
+   "fin": 29.261
+  },
+  {
+   "id": "att",
+   "inicio": 29.261,
+   "fin": 39.366
+  },
+  {
+   "id": "cate",
+   "inicio": 39.366,
+   "fin": 46.066
+  },
+  {
+   "id": "late",
+   "inicio": 46.066,
+   "fin": 54.11
+  },
+  {
+   "id": "ingenuo",
+   "inicio": 54.11,
+   "fin": 65.261
+  },
+  {
+   "id": "metodos",
+   "inicio": 65.261,
+   "fin": 78.553
+  },
+  {
+   "id": "cierre",
+   "inicio": 78.553,
+   "fin": 84.997
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 6.949,
+   "texto": "Imagina que dos analistas miran el mismo experimento. Uno dice que el efecto es cuatro. El otro dice cinco. Y los dos tienen razón.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 7.249,
+   "fin": 11.067,
+   "texto": "Idea 8 del mapa de la experimentación: el zoológico de efectos.",
+   "cue": null
+  },
+  {
+   "escena": "dios",
+   "inicio": 11.367,
+   "fin": 17.597,
+   "texto": "Para verlo, hagamos trampa. Ocho personas, y por una vez vemos sus dos mundos: su resultado con tratamiento, y sin él.",
+   "cue": "dios"
+  },
+  {
+   "escena": "dios",
+   "inicio": 17.717,
+   "fin": 22.09,
+   "texto": "La diferencia de cada persona es su efecto individual. En la vida real, nunca lo vemos.",
+   "cue": "individual"
+  },
+  {
+   "escena": "ate",
+   "inicio": 22.39,
+   "fin": 28.961,
+   "texto": "El promedio de todos es el ATE, el efecto promedio del tratamiento: 32 / 8 = 4.",
+   "cue": "ate"
+  },
+  {
+   "escena": "att",
+   "inicio": 29.261,
+   "fin": 34.658,
+   "texto": "Si promedias solo a los que recibieron el tratamiento, tienes el ATT, el efecto en los tratados: 5.",
+   "cue": "att"
+  },
+  {
+   "escena": "att",
+   "inicio": 34.778,
+   "fin": 39.066,
+   "texto": "Y en los que no lo recibieron, el ATU: 3. El ATE es la mezcla de ambos: ½ · 5 + ½ · 3 = 4.",
+   "cue": "atu"
+  },
+  {
+   "escena": "cate",
+   "inicio": 39.366,
+   "fin": 45.766,
+   "texto": "Si promedias dentro de un subgrupo, tienes el CATE, el efecto condicional. Jóvenes: 6,5. Mayores: 1,5.",
+   "cue": "cate"
+  },
+  {
+   "escena": "late",
+   "inicio": 46.066,
+   "fin": 53.81,
+   "texto": "Y si un instrumento empuja a algunos a tratarse, el LATE es el efecto solo en ellos, los que cambiaron por el empujón: 3,75.",
+   "cue": "late"
+  },
+  {
+   "escena": "ingenuo",
+   "inicio": 54.11,
+   "fin": 58.867,
+   "texto": "¿Y la comparación ingenua, tratados contra no tratados? Da 18 − 12 = 6. No es ninguno de los anteriores.",
+   "cue": "ingenuo"
+  },
+  {
+   "escena": "ingenuo",
+   "inicio": 58.987,
+   "fin": 64.961,
+   "texto": "Es el ATT (5) más un sesgo de selección de 1: los tratados ya estaban mejor sin tratamiento.",
+   "cue": "sesgo"
+  },
+  {
+   "escena": "metodos",
+   "inicio": 65.261,
+   "fin": 78.253,
+   "texto": "Cada método estima un animal distinto. Experimento: ATE. Emparejamiento y DiD: usualmente ATT. Variable instrumental: LATE. Regresión discontinua: el efecto en el corte.",
+   "cue": "metodos"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 78.553,
+   "fin": 84.697,
+   "texto": "Antes de discutir el número, pregunta en quién. En la próxima idea, efectos heterogéneos a fondo. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

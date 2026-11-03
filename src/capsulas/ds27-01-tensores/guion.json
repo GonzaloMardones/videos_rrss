@@ -1,0 +1,214 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.25,
+ "pausaFrase": 0.1,
+ "pausaEscena": 0.28,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y un modelo de siete mil millones de parámetros pesa veintiocho giga baits en ef pi térti tu, catorce en bi ef sixtín, y siete en ef pi eit.",
+     "muestra": "Un modelo de 7.000 millones de parámetros pesa 28 GB en FP32, 14 en BF16 y 7 en FP8.",
+     "en": "A 7-billion-parameter model weighs 28 GB in FP32, 14 in BF16, and 7 in FP8.",
+     "cue": "pesos"
+    },
+    {
+     "dice": "Y la diferencia está en cómo se guarda cada número.",
+     "muestra": "La diferencia está en cómo se guarda cada número.",
+     "en": "The difference is how each number is stored.",
+     "cue": "etapa",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Cápsula técnica: tensores, y páitorch por dentro.",
+     "muestra": "Cápsula técnica: tensores y PyTorch por dentro.",
+     "en": "Tech capsule: tensors and PyTorch internals."
+    }
+   ]
+  },
+  {
+   "id": "strides",
+   "frases": [
+    {
+     "dice": "Y un tensor no es una tabla: es un bloque plano de memoria, más una receta para recorrerlo, los stráids.",
+     "muestra": "Un tensor no es una tabla: es un bloque plano de memoria, más una receta para recorrerlo, los strides.",
+     "en": "A tensor isn't a table: it's a flat block of memory plus a recipe to walk it, the strides.",
+     "cue": "plano"
+    },
+    {
+     "dice": "En una matriz de dos por tres en ef pi térti tu, bajar una fila salta doce baits, y avanzar una columna, cuatro.",
+     "muestra": "En una matriz de 2×3 en FP32, bajar una fila salta 12 bytes, y avanzar una columna, 4.",
+     "en": "In a 2×3 FP32 matrix, moving down a row skips 12 bytes; moving across a column, 4.",
+     "cue": "bytes"
+    },
+    {
+     "dice": "La dirección de cada elemento es la base, más cada índice por su stráid. Y transponer no copia nada: solo intercambia los stráids, y el resultado deja de ser contiguo.",
+     "muestra": "La dirección de cada elemento es la base más cada índice por su stride. Transponer no copia nada: solo intercambia los strides, y el resultado deja de ser contiguo.",
+     "en": "Each element's address is the base plus each index times its stride. Transposing copies nothing: it just swaps the strides, so the result is no longer contiguous.",
+     "cue": "direccion"
+    }
+   ]
+  },
+  {
+   "id": "autograd",
+   "frases": [
+    {
+     "dice": "Entonces, el ótograd. Páitorch anota cada operación en un grafo, y el bákuerd lo recorre al revés con la regla de la cadena.",
+     "muestra": "Autograd: PyTorch anota cada operación en un grafo, y backward lo recorre al revés con la regla de la cadena.",
+     "en": "Autograd: PyTorch records every operation in a graph, and backward walks it in reverse with the chain rule.",
+     "cue": "grafo"
+    },
+    {
+     "dice": "Ese modo inverso obtiene millones de derivadas por el costo de una pasada hacia adelante. El modo directo necesitaría una pasada por parámetro.",
+     "muestra": "El modo inverso obtiene millones de derivadas por el costo de una pasada hacia adelante. El modo directo necesitaría una pasada por parámetro.",
+     "en": "Reverse mode gets millions of derivatives for the cost of one forward pass. Forward mode would need one pass per parameter.",
+     "cue": "inverso"
+    },
+    {
+     "dice": "Y para un gradiente a medida, defines tu propia función con su fóruerd y su bákuerd.",
+     "muestra": "Para un gradiente a medida, defines tu propia función con su forward y su backward.",
+     "en": "For a custom gradient, you define your own function with its forward and backward.",
+     "cue": "custom"
+    }
+   ]
+  },
+  {
+   "id": "memoria",
+   "frases": [
+    {
+     "dice": "Y en la yi pi iú, la memoria es una pirámide: registros, memoria compartida, el tu cash, y eich bi em. Más abajo, más grande y más lenta.",
+     "muestra": "En la GPU, la memoria es una pirámide: registros, memoria compartida, caché L2 y HBM. Más abajo, más grande y más lenta.",
+     "en": "On a GPU, memory is a pyramid: registers, shared memory, L2 cache, and HBM. Lower means bigger and slower.",
+     "cue": "piramide"
+    },
+    {
+     "dice": "Y una eich uan jándred hace novecientos ochenta y nueve billones de operaciones por segundo en bi ef sixtín, pero su memoria entrega tres coma treinta y cinco tera baits por segundo.",
+     "muestra": "Una H100 hace 989 billones de operaciones por segundo en BF16, pero su memoria entrega 3,35 terabytes por segundo.",
+     "en": "An H100 does 989 trillion operations per second in BF16, but its memory delivers 3.35 terabytes per second.",
+     "cue": "h100"
+    }
+   ]
+  },
+  {
+   "id": "roofline",
+   "frases": [
+    {
+     "dice": "Entonces, para no esperar datos, necesitas unas doscientas noventa y cinco operaciones por cada bait que lees. Esa razón es la intensidad aritmética, la base del modelo rúflain.",
+     "muestra": "Para no esperar datos, necesitas unas 295 operaciones por cada byte que lees. Esa razón es la intensidad aritmética, la base del modelo roofline.",
+     "en": "To avoid waiting on data, you need about 295 operations per byte read. That ratio is arithmetic intensity, the basis of the roofline model.",
+     "cue": "intensidad"
+    },
+    {
+     "dice": "Y una suma elemento a elemento hace un sexto de operación por bait: la limita la memoria. Una multiplicación de matrices de cuatro mil noventa y seis hace más de mil: la limita el cómputo.",
+     "muestra": "Una suma elemento a elemento hace 1/6 de operación por byte: la limita la memoria. Una multiplicación de matrices de 4096 hace más de mil: la limita el cómputo.",
+     "en": "An element-wise add does 1/6 of an operation per byte: memory-bound. A 4096 matrix multiply does over a thousand: compute-bound.",
+     "cue": "casos"
+    }
+   ]
+  },
+  {
+   "id": "fusion",
+   "frases": [
+    {
+     "dice": "Y por eso se fusionan operadores. Tres operaciones elemento a elemento leen y escriben en memoria: seis viajes.",
+     "muestra": "Por eso se fusionan operadores. Tres operaciones elemento a elemento leen y escriben en memoria: seis viajes.",
+     "en": "That's why we fuse operators. Three element-wise ops each read and write memory: six trips.",
+     "cue": "seis"
+    },
+    {
+     "dice": "Y fusionadas en un solo kérnel, son dos viajes: tres veces menos tráfico. Es lo que hace torch dot compáil, y la idea detrás de flash aténshon.",
+     "muestra": "Fusionadas en un solo kernel son dos viajes: tres veces menos tráfico. Es lo que hace torch.compile, y la idea detrás de FlashAttention.",
+     "en": "Fused into one kernel, it's two trips: 3× less traffic. That's what torch.compile does, and the idea behind FlashAttention.",
+     "cue": "dos"
+    }
+   ]
+  },
+  {
+   "id": "mantisa",
+   "frases": [
+    {
+     "dice": "Y ahora, ¿qué es la mantisa? Un número de punto flotante se guarda como signo, por mantisa, por dos elevado al exponente.",
+     "muestra": "¿Qué es la mantisa? Un número de punto flotante se guarda como signo × mantisa × 2 elevado al exponente.",
+     "en": "What is the mantissa? A floating-point number is stored as sign × mantissa × 2 to the exponent.",
+     "cue": "flotante"
+    },
+    {
+     "dice": "Y el exponente da la escala: qué tan grande o pequeño puede ser. La mantisa guarda los dígitos significativos: la precisión.",
+     "muestra": "El exponente da la escala: qué tan grande o pequeño puede ser. La mantisa guarda los dígitos significativos: la precisión.",
+     "en": "The exponent sets the scale: how big or small it can be. The mantissa holds the significant digits: the precision.",
+     "cue": "partes"
+    },
+    {
+     "dice": "Por ejemplo, pi en ef pi térti tu es tres coma uno cuatro uno cinco nueve tres. Con los siete bits de mantisa de bi ef sixtín, queda en tres coma uno cuatro cero seis.",
+     "muestra": "Por ejemplo, π en FP32 es 3,141593. Con los 7 bits de mantisa de BF16, queda en 3,1406.",
+     "en": "For example, π in FP32 is 3.141593. With BF16's 7 mantissa bits, it becomes 3.1406.",
+     "cue": "pi"
+    }
+   ]
+  },
+  {
+   "id": "precision",
+   "frases": [
+    {
+     "dice": "Entonces, ef pi significa flóuting point. Ef pi térti tu usa ocho bits de exponente y veintitrés de mantisa. Bi ef sixtín, brein flóuting point, conserva los ocho de exponente y deja siete de mantisa: el mismo rango, con menos precisión.",
+     "muestra": "FP significa floating point. FP32 usa 8 bits de exponente y 23 de mantisa. BF16 (brain floating point) conserva los 8 de exponente y deja 7 de mantisa: el mismo rango, con menos precisión.",
+     "en": "FP means floating point. FP32 uses 8 exponent bits and 23 mantissa bits. BF16 (brain floating point) keeps the 8 exponent bits and leaves 7 for the mantissa: same range, less precision.",
+     "cue": "bits"
+    },
+    {
+     "dice": "Y ef pi sixtín tiene más mantisa pero menos exponente: su máximo es sesenta y cinco mil quinientos cuatro, y por eso hay que escalar la pérdida.",
+     "muestra": "FP16 tiene más mantisa pero menos exponente: su máximo es 65.504, y por eso hay que escalar la pérdida.",
+     "en": "FP16 has more mantissa but less exponent: its max is 65,504, so you need loss scaling.",
+     "cue": "fp16"
+    },
+    {
+     "dice": "Y ef pi eit es punto flotante en solo ocho bits. El nombre dice el reparto: i faiv em tu son cinco bits de exponente y dos de mantisa, para gradientes. Y i for em tri son cuatro y tres, para pesos y activaciones.",
+     "muestra": "FP8 es punto flotante en solo 8 bits. El nombre dice el reparto: E5M2 son 5 bits de exponente y 2 de mantisa, para gradientes. E4M3 son 4 y 3, para pesos y activaciones.",
+     "en": "FP8 is floating point in just 8 bits. The name tells the split: E5M2 is 5 exponent bits and 2 mantissa bits, for gradients. E4M3 is 4 and 3, for weights and activations.",
+     "cue": "fp8"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en gúgol claud, las ti pi iús multiplican en bi ef sixtín y acumulan en ef pi térti tu. Y las máquinas ei tri, con eich uan jándred, entrenan en ef pi eit.",
+     "muestra": "En Google Cloud, las TPU multiplican en BF16 y acumulan en FP32. Y las máquinas A3, con H100, entrenan en FP8.",
+     "en": "On Google Cloud, TPUs multiply in BF16 and accumulate in FP32. And A3 machines with H100s train in FP8.",
+     "cue": "tpu"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "Y con esto tienes las bases: transponer no copia, porque solo cambian los stráids. Con intensidad baja, manda la memoria: fusiona. Y bi ef sixtín no escala la pérdida, porque tiene el rango de ef pi térti tu.",
+     "muestra": "Con esto tienes las bases: transponer no copia, porque solo cambian los strides. Con intensidad baja, manda la memoria: fusiona. Y BF16 no escala la pérdida, porque tiene el rango de FP32.",
+     "en": "Now you have the basics: transposing doesn't copy, because only the strides change. Low intensity means memory-bound: fuse. And BF16 skips loss scaling, because it has FP32's range.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

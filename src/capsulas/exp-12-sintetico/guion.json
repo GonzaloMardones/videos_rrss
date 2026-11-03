@@ -1,0 +1,145 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.2,
+ "pausaFrase": 0.12,
+ "pausaEscena": 0.3,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y en mil novecientos ochenta y ocho, California aprobó la Proposición noventa y nueve: veinticinco centavos más de impuesto por cajetilla. ¿Bajó el consumo por eso? No puedes repetir la historia sin el impuesto. Pero sí puedes construirla.",
+     "muestra": "En 1988, California aprobó la Proposición 99: 25 centavos más de impuesto por cajetilla. ¿Bajó el consumo por eso? No puedes repetir la historia sin el impuesto. Pero sí puedes construirla.",
+     "cue": "gancho",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esta es la idea doce del mapa de la experimentación: control sintético.",
+     "muestra": "Idea 12 del mapa de la experimentación: control sintético."
+    }
+   ]
+  },
+  {
+   "id": "problema",
+   "frases": [
+    {
+     "dice": "Y el problema es este: hay un solo estado tratado, y ningún estado se parece a California.",
+     "muestra": "El problema: hay un solo estado tratado, y ningún estado se parece a California.",
+     "cue": "uno"
+    },
+    {
+     "dice": "Si lo comparas con el promedio de los otros treinta y ocho, las curvas ya se separaban antes del impuesto. Diferencia en diferencias necesita tendencias paralelas, y aquí no las hay.",
+     "muestra": "Si lo comparas con el promedio de los otros 38, las curvas ya se separaban antes del impuesto. Diferencias en diferencias necesita tendencias paralelas, y aquí no las hay.",
+     "cue": "promedio"
+    }
+   ]
+  },
+  {
+   "id": "receta",
+   "frases": [
+    {
+     "dice": "Entonces, la idea de Alberto Abadie: si no existe un gemelo, lo fabricas. Mezclas estados de control con pesos, hasta que la mezcla copie a California antes del impuesto.",
+     "muestra": "La idea de Alberto Abadie: si no existe un gemelo, lo fabricas. Mezclas estados de control con pesos, hasta que la mezcla copie a California antes del impuesto.",
+     "cue": "mezcla"
+    },
+    {
+     "dice": "En este caso: Iúta, treinta y tres por ciento. Nevada, veintitrés. Montana, veinte. Colorado, dieciséis. Y Conéticut, siete.",
+     "muestra": "En este caso: Utah 33%, Nevada 23%, Montana 20%, Colorado 16% y Connecticut 7%.",
+     "cue": "pesos"
+    }
+   ]
+  },
+  {
+   "id": "formula",
+   "frases": [
+    {
+     "dice": "Ahora, escrito en fórmula: el California sintético en el año t es la suma, sobre cada estado donante j, de su peso w j, por su consumo en ese año.",
+     "muestra": "En fórmula: el California sintético en el año t es la suma, sobre cada estado donante j, de su peso w_j por su consumo en ese año.",
+     "cue": "formula"
+    },
+    {
+     "dice": "Los pesos tienen dos reglas: no son negativos, y suman uno. Así, el gemelo nunca sale del rango de los datos reales: no extrapola.",
+     "muestra": "Los pesos tienen dos reglas: no son negativos, y suman uno. Así, el gemelo nunca sale del rango de los datos reales: no extrapola.",
+     "cue": "reglas"
+    },
+    {
+     "dice": "Y se eligen minimizando la distancia con California antes del tratamiento. Con jota donantes, es un problema cuadrático de jota variables: con treinta y ocho estados, se resuelve al instante.",
+     "muestra": "Se eligen minimizando la distancia con California antes del tratamiento. Con J donantes, es un problema cuadrático de J variables: con 38 estados, se resuelve al instante.",
+     "cue": "minimo"
+    }
+   ]
+  },
+  {
+   "id": "ajuste",
+   "frases": [
+    {
+     "dice": "Y funciona: antes de mil novecientos ochenta y nueve, el gemelo calza casi perfecto. Se equivoca, en promedio, en menos de dos cajetillas por persona al año.",
+     "muestra": "Antes de 1989, el gemelo calza casi perfecto: se equivoca, en promedio, en menos de dos cajetillas por persona al año.",
+     "cue": "ajuste"
+    }
+   ]
+  },
+  {
+   "id": "efecto",
+   "frases": [
+    {
+     "dice": "Y después, las curvas se abren. En el año dos mil, California vende unas cuarenta y dos cajetillas por persona. Su gemelo, unas sesenta y siete.",
+     "muestra": "Después, las curvas se abren. En el año 2000, California vende unas 42 cajetillas por persona. Su gemelo, unas 67.",
+     "cue": "abre"
+    },
+    {
+     "dice": "Y esa brecha es el efecto: casi veintiséis cajetillas menos por persona, cerca de cuarenta por ciento.",
+     "muestra": "Esa brecha es el efecto: casi 26 cajetillas menos por persona, cerca de 40%.",
+     "cue": "brecha"
+    }
+   ]
+  },
+  {
+   "id": "placebo",
+   "frases": [
+    {
+     "dice": "¿Y si fue suerte? Se hace un placebo: aplicas el mismo método a cada uno de los otros treinta y ocho estados, como si ellos hubieran subido el impuesto.",
+     "muestra": "¿Y si fue suerte? Se hace un placebo: aplicas el mismo método a cada uno de los otros 38 estados, como si ellos hubieran subido el impuesto.",
+     "cue": "placebo"
+    },
+    {
+     "dice": "Y California queda en el extremo. En el estudio original, su brecha, comparada con qué tan bien calzaba antes, es la mayor de los treinta y nueve estados. Por puro azar, eso pasaría una vez en treinta y nueve: menos de tres por ciento.",
+     "muestra": "California queda en el extremo. En el estudio original, su brecha (relativa a qué tan bien calzaba antes) es la mayor de los 39 estados. Por puro azar, eso pasaría 1 vez en 39: menos de 3%.",
+     "cue": "extremo"
+    }
+   ]
+  },
+  {
+   "id": "cuidado",
+   "frases": [
+    {
+     "dice": "Pero ojo con tres cosas. Necesitas muchos años antes del tratamiento. Los donantes no pueden recibir el efecto, por ejemplo, gente que cruza la frontera a comprar. Y no puede haber otro cambio al mismo tiempo.",
+     "muestra": "Ojo con tres cosas: necesitas muchos años antes del tratamiento; los donantes no pueden recibir el efecto (gente que cruza la frontera a comprar); y no puede haber otro cambio al mismo tiempo.",
+     "cue": "ojo"
+    },
+    {
+     "dice": "Y si el gemelo no calza antes, no confíes en lo que dice después.",
+     "muestra": "Si el gemelo no calza antes, no confíes en lo que dice después.",
+     "cue": "calza"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y en resumen: si no tienes grupo de control, constrúyelo. En la próxima idea: series de tiempo interrumpidas, cuando no tienes ni siquiera donantes. Compártelo y sígueme.",
+     "muestra": "Si no tienes grupo de control, constrúyelo. En la próxima idea: series de tiempo interrumpidas, cuando no tienes ni siquiera donantes. Compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

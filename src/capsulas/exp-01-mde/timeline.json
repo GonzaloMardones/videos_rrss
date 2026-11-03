@@ -1,0 +1,188 @@
+{
+ "duracion": 113.105,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 7.569
+  },
+  {
+   "id": "titulo",
+   "inicio": 7.569,
+   "fin": 11.943
+  },
+  {
+   "id": "errores",
+   "inicio": 11.943,
+   "fin": 28.065
+  },
+  {
+   "id": "curvas",
+   "inicio": 28.065,
+   "fin": 40.943
+  },
+  {
+   "id": "formula",
+   "inicio": 40.943,
+   "fin": 53.059
+  },
+  {
+   "id": "regla",
+   "inicio": 53.059,
+   "fin": 62.981
+  },
+  {
+   "id": "ejemplo",
+   "inicio": 62.981,
+   "fin": 78.753
+  },
+  {
+   "id": "cuadruple",
+   "inicio": 78.753,
+   "fin": 86.519
+  },
+  {
+   "id": "palancas",
+   "inicio": 86.519,
+   "fin": 96.569
+  },
+  {
+   "id": "trampa",
+   "inicio": 96.569,
+   "fin": 106.447
+  },
+  {
+   "id": "cierre",
+   "inicio": 106.447,
+   "fin": 113.105
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 7.269,
+   "texto": "Lanzaste un experimento, y no salió significativo. ¿Es que no funciona, o tu experimento era demasiado chico para verlo?",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 7.569,
+   "fin": 11.643,
+   "texto": "Idea 1 del mapa de la experimentación: el efecto mínimo detectable (MDE).",
+   "cue": null
+  },
+  {
+   "escena": "errores",
+   "inicio": 11.943,
+   "fin": 20.327,
+   "texto": "Todo experimento puede equivocarse de dos formas. Falso positivo: dices que funciona, y no funciona. Su probabilidad es α, normalmente 5%.",
+   "cue": "positivo"
+  },
+  {
+   "escena": "errores",
+   "inicio": 20.447,
+   "fin": 27.765,
+   "texto": "Y falso negativo: el efecto existe, y no lo ves. Su probabilidad es β. 1 − β es el poder: la probabilidad de detectar un efecto real.",
+   "cue": "negativo"
+  },
+  {
+   "escena": "curvas",
+   "inicio": 28.065,
+   "fin": 32.395,
+   "texto": "Imagina dos campanas. Una, si no hay efecto. Otra, corrida en el tamaño del efecto.",
+   "cue": "campanas"
+  },
+  {
+   "escena": "curvas",
+   "inicio": 32.515,
+   "fin": 40.643,
+   "texto": "El umbral de significancia las corta. Lo que cae de la segunda campana a la izquierda del corte, es beta. Si las campanas están muy encimadas, el poder se cae.",
+   "cue": "corte"
+  },
+  {
+   "escena": "formula",
+   "inicio": 40.943,
+   "fin": 43.802,
+   "texto": "De ahí sale la fórmula del efecto mínimo detectable.",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 43.922,
+   "fin": 47.527,
+   "texto": "Arriba, cuánta seguridad pides: z de α más z de β.",
+   "cue": "z"
+  },
+  {
+   "escena": "formula",
+   "inicio": 47.647,
+   "fin": 50.015,
+   "texto": "Después, cuánto ruido tiene tu métrica: σ.",
+   "cue": "sigma"
+  },
+  {
+   "escena": "formula",
+   "inicio": 50.135,
+   "fin": 52.759,
+   "texto": "Y al final, el tamaño de muestra, dentro de una raíz.",
+   "cue": "raiz"
+  },
+  {
+   "escena": "regla",
+   "inicio": 53.059,
+   "fin": 62.681,
+   "texto": "Con 5% de significancia, 80% de poder y grupos iguales, todo se resume en 16: necesitas 16·σ²/δ² por grupo.",
+   "cue": "regla"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 62.981,
+   "fin": 68.783,
+   "texto": "Un ejemplo. Tu conversión es 10%, y quieres detectar un punto más. La varianza es p(1 − p) = 0,09.",
+   "cue": "conversion"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 68.903,
+   "fin": 75.602,
+   "texto": "16 × 0,09 / 0,01² = 14.400 personas por grupo.",
+   "cue": "cuenta"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 75.722,
+   "fin": 78.453,
+   "texto": "Con 2.000 visitas al día, son unas dos semanas.",
+   "cue": "dias"
+  },
+  {
+   "escena": "cuadruple",
+   "inicio": 78.753,
+   "fin": 86.219,
+   "texto": "Y si quieres detectar medio punto, no necesitas el doble, sino el cuádruple: 57.600 por grupo. El efecto entra al cuadrado.",
+   "cue": "mitad"
+  },
+  {
+   "escena": "palancas",
+   "inicio": 86.519,
+   "fin": 96.269,
+   "texto": "Para bajar el MDE tienes tres palancas: más muestra, menos ruido, y grupos parejos. Repartir 90/10 en vez de 50/50 te obliga a tener casi el triple de datos.",
+   "cue": "palancas"
+  },
+  {
+   "escena": "trampa",
+   "inicio": 96.569,
+   "fin": 106.147,
+   "texto": "La trampa más común: no significativo no es lo mismo que no hay efecto. Con 14.400 por grupo, un efecto real de medio punto solo se detecta 3 de cada 10 veces.",
+   "cue": "trampa"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 106.447,
+   "fin": 112.805,
+   "texto": "Calcula el MDE antes de lanzar, no después. En la próxima idea: cómo bajar el ruido gratis (CUPED). Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

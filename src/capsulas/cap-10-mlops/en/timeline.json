@@ -1,0 +1,219 @@
+{
+ "duracion": 126.474,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 13.46
+  },
+  {
+   "id": "titulo",
+   "inicio": 13.46,
+   "fin": 16.521
+  },
+  {
+   "id": "run",
+   "inicio": 16.521,
+   "fin": 29.878
+  },
+  {
+   "id": "semillas",
+   "inicio": 29.878,
+   "fin": 42.254
+  },
+  {
+   "id": "busqueda",
+   "inicio": 42.254,
+   "fin": 57.864
+  },
+  {
+   "id": "bayes",
+   "inicio": 57.864,
+   "fin": 73.782
+  },
+  {
+   "id": "hyperband",
+   "inicio": 73.782,
+   "fin": 84.579
+  },
+  {
+   "id": "datos",
+   "inicio": 84.579,
+   "fin": 95.44
+  },
+  {
+   "id": "niveles",
+   "inicio": 95.44,
+   "fin": 107.374
+  },
+  {
+   "id": "nube",
+   "inicio": 107.374,
+   "fin": 118.518
+  },
+  {
+   "id": "bases",
+   "inicio": 118.518,
+   "fin": 124.734
+  },
+  {
+   "id": "cierre",
+   "inicio": 124.734,
+   "fin": 126.474
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.905,
+   "texto": "You ran the same training twice, with the same configuration, and got different results. Which one was right?",
+   "cue": "dos",
+   "es": "Corriste el mismo entrenamiento dos veces, con la misma configuración, y salió distinto. ¿Cuál era el bueno?"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.985,
+   "fin": 13.26,
+   "texto": "In a real machine learning system, the model code is the smallest box. The rest is data, configuration and operations.",
+   "cue": "caja",
+   "es": "En un sistema real de machine learning, el código del modelo es la caja más pequeña. El resto es datos, configuración y operación."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 13.46,
+   "fin": 16.321,
+   "texto": "Tech capsule: MLOps and experiment tracking.",
+   "cue": null,
+   "es": "Cápsula técnica: MLOps y seguimiento de experimentos."
+  },
+  {
+   "escena": "run",
+   "inicio": 16.521,
+   "fin": 23.838,
+   "texto": "A reproducible experiment records five things: the code version, the data version, the configuration, the seed and the environment.",
+   "cue": "registro",
+   "es": "Un experimento reproducible guarda cinco cosas: la versión del código, la versión de los datos, la configuración, la semilla y el entorno."
+  },
+  {
+   "escena": "run",
+   "inicio": 23.918,
+   "fin": 29.678,
+   "texto": "As outputs: metrics, curves and artifacts. If one input is missing, you cannot get back to that result.",
+   "cue": "metricas",
+   "es": "De salida: métricas, curvas y artefactos. Si falta una entrada, no puedes volver a ese resultado."
+  },
+  {
+   "escena": "semillas",
+   "inicio": 29.878,
+   "fin": 37.366,
+   "texto": "The seed alone moves results: when fine-tuning language models on small tasks, changing only the seed can change the score a lot.",
+   "cue": "varianza",
+   "es": "La semilla sola mueve los resultados: al ajustar modelos de lenguaje en tareas pequeñas, cambiar solo la semilla puede cambiar mucho el puntaje."
+  },
+  {
+   "escena": "semillas",
+   "inicio": 37.446,
+   "fin": 42.054,
+   "texto": "So you report the mean and standard deviation over several seeds, not your best run.",
+   "cue": "reportar",
+   "es": "Por eso reportas media y desviación sobre varias semillas, no tu mejor corrida."
+  },
+  {
+   "escena": "busqueda",
+   "inicio": 42.254,
+   "fin": 50.553,
+   "texto": "To search hyperparameters, a grid wastes trials: with 9 trials in 2 dimensions, you only see 3 values of the parameter that matters.",
+   "cue": "grilla",
+   "es": "Para buscar hiperparámetros, la grilla desperdicia intentos: con 9 pruebas en 2 dimensiones, solo ves 3 valores del parámetro que importa."
+  },
+  {
+   "escena": "busqueda",
+   "inicio": 50.633,
+   "fin": 57.664,
+   "texto": "Random search sees 9. And with 60 random trials, you have a 95% chance of landing in the top 5%.",
+   "cue": "azar",
+   "es": "La búsqueda aleatoria ve 9. Y con 60 pruebas al azar, tienes 95 % de probabilidad de caer en el mejor 5 %."
+  },
+  {
+   "escena": "bayes",
+   "inicio": 57.864,
+   "fin": 64.819,
+   "texto": "Bayesian optimization learns from every trial: a Gaussian process gives, for each point, a prediction and its uncertainty.",
+   "cue": "gp",
+   "es": "La optimización bayesiana aprende de cada prueba: un proceso gaussiano da, para cada punto, una predicción y su incertidumbre."
+  },
+  {
+   "escena": "bayes",
+   "inicio": 64.899,
+   "fin": 73.582,
+   "texto": "It picks the next point by adding the prediction plus twice the uncertainty: it explores where it does not know. Here, after 4 trials, it finds the maximum.",
+   "cue": "ucb",
+   "es": "Elige el siguiente punto sumando la predicción más dos veces la incertidumbre: explora donde no sabe. Aquí, con 4 pruebas, encuentra el máximo."
+  },
+  {
+   "escena": "hyperband",
+   "inicio": 73.782,
+   "fin": 80.566,
+   "texto": "To avoid spending on bad ideas, you cut them early: start with 81 configurations and keep a third each round.",
+   "cue": "mitades",
+   "es": "Para no gastar en malas ideas, se cortan temprano: empiezas con 81 configuraciones y en cada ronda te quedas con un tercio."
+  },
+  {
+   "escena": "hyperband",
+   "inicio": 80.646,
+   "fin": 84.379,
+   "texto": "The survivors get 3× more budget. That is how Hyperband works.",
+   "cue": "presupuesto",
+   "es": "Las que sobreviven reciben 3 veces más presupuesto. Así funciona Hyperband."
+  },
+  {
+   "escena": "datos",
+   "inicio": 84.579,
+   "fin": 90.104,
+   "texto": "Data is versioned too: a hash of the content identifies exactly which data trained each model.",
+   "cue": "hash",
+   "es": "Los datos también se versionan: un hash del contenido identifica exactamente qué datos entrenaron cada modelo."
+  },
+  {
+   "escena": "datos",
+   "inicio": 90.184,
+   "fin": 95.24,
+   "texto": "The classic risk is training-serving skew: the same data, processed in two different ways.",
+   "cue": "sesgo",
+   "es": "El riesgo clásico es la diferencia entre entrenamiento y producción: los mismos datos, procesados de dos formas distintas."
+  },
+  {
+   "escena": "niveles",
+   "inicio": 95.44,
+   "fin": 107.174,
+   "texto": "Maturity has levels: at 0, everything is manual. At 1, a pipeline retrains on its own when new data arrives. At 2, the pipeline itself is tested and deployed with continuous integration.",
+   "cue": "nivel",
+   "es": "La madurez tiene niveles: en el 0 todo es manual. En el 1, un pipeline reentrena solo cuando llegan datos nuevos. En el 2, el propio pipeline se prueba y despliega con integración continua."
+  },
+  {
+   "escena": "nube",
+   "inicio": 107.374,
+   "fin": 118.318,
+   "texto": "On Google Cloud: Vertex AI Experiments records runs and metrics; Vizier runs Bayesian optimization; and Vertex AI Pipelines and Model Registry automate the cycle.",
+   "cue": "gcp",
+   "es": "En Google Cloud: Vertex AI Experiments registra corridas y métricas; Vizier hace la optimización bayesiana; y Vertex AI Pipelines y Model Registry automatizan el ciclo."
+  },
+  {
+   "escena": "bases",
+   "inicio": 118.518,
+   "fin": 124.534,
+   "texto": "The basics: reproducibility, variance across seeds, probability in random search and Gaussian processes.",
+   "cue": "bases",
+   "es": "Las bases: reproducibilidad, varianza entre semillas, probabilidad en la búsqueda aleatoria y procesos gaussianos."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 124.734,
+   "fin": 126.274,
+   "texto": "If this helped, share and follow.",
+   "cue": "cta",
+   "es": "Si te sirvió, compártelo y sígueme."
+  }
+ ]
+}

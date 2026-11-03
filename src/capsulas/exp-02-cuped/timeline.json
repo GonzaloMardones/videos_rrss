@@ -1,0 +1,181 @@
+{
+ "duracion": 96.921,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 6.139
+  },
+  {
+   "id": "titulo",
+   "inicio": 6.139,
+   "fin": 11.431
+  },
+  {
+   "id": "ruido",
+   "inicio": 11.431,
+   "fin": 23.499
+  },
+  {
+   "id": "idea",
+   "inicio": 23.499,
+   "fin": 31.373
+  },
+  {
+   "id": "formula",
+   "inicio": 31.373,
+   "fin": 45.054
+  },
+  {
+   "id": "varianza",
+   "inicio": 45.054,
+   "fin": 51.775
+  },
+  {
+   "id": "ejemplo",
+   "inicio": 51.775,
+   "fin": 63.182
+  },
+  {
+   "id": "sesgo",
+   "inicio": 63.182,
+   "fin": 71.354
+  },
+  {
+   "id": "cuidado",
+   "inicio": 71.354,
+   "fin": 83.478
+  },
+  {
+   "id": "extension",
+   "inicio": 83.478,
+   "fin": 89.154
+  },
+  {
+   "id": "cierre",
+   "inicio": 89.154,
+   "fin": 96.921
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.839,
+   "texto": "Imagina que tu experimento necesita un mes. ¿Y si con los mismos usuarios pudieras terminarlo en dos semanas?",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 6.139,
+   "fin": 11.131,
+   "texto": "Idea 2 del mapa de la experimentación: CUPED, reducir la varianza con datos de antes del experimento.",
+   "cue": null
+  },
+  {
+   "escena": "ruido",
+   "inicio": 11.431,
+   "fin": 18.749,
+   "texto": "¿De dónde viene el ruido? De que las personas ya eran muy distintas antes del experimento. Unos compran todas las semanas, otros casi nunca.",
+   "cue": "distintas"
+  },
+  {
+   "escena": "ruido",
+   "inicio": 18.869,
+   "fin": 23.199,
+   "texto": "Esa diferencia previa no tiene nada que ver con tu tratamiento, pero esconde su efecto.",
+   "cue": "esconde"
+  },
+  {
+   "escena": "idea",
+   "inicio": 23.499,
+   "fin": 31.073,
+   "texto": "La idea de CUPED (Microsoft, 2013): usa la misma métrica, medida antes del experimento, para restar la parte que ya era predecible.",
+   "cue": "idea"
+  },
+  {
+   "escena": "formula",
+   "inicio": 31.373,
+   "fin": 35.981,
+   "texto": "En fórmula: Y′ = Y − θ(X − X̄).",
+   "cue": "formula"
+  },
+  {
+   "escena": "formula",
+   "inicio": 36.101,
+   "fin": 41.135,
+   "texto": "X − X̄: cuánto más compraba esta persona que el resto, antes de empezar.",
+   "cue": "x"
+  },
+  {
+   "escena": "formula",
+   "inicio": 41.255,
+   "fin": 44.754,
+   "texto": "θ = Cov(Y, X) / Var(X): la pendiente, cuánto de esa diferencia se repite después.",
+   "cue": "theta"
+  },
+  {
+   "escena": "varianza",
+   "inicio": 45.054,
+   "fin": 51.475,
+   "texto": "El resultado: la varianza se multiplica por (1 − ρ²), donde ρ es la correlación entre el antes y el durante.",
+   "cue": "varianza"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 51.775,
+   "fin": 58.005,
+   "texto": "Si ρ = 0,7: 1 − 0,49 = 0,51. La varianza queda en la mitad.",
+   "cue": "rho"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 58.125,
+   "fin": 62.882,
+   "texto": "Y como la muestra necesaria es proporcional a la varianza, el mes se convierte en dos semanas.",
+   "cue": "semanas"
+  },
+  {
+   "escena": "sesgo",
+   "inicio": 63.182,
+   "fin": 71.054,
+   "texto": "¿Y no sesga el resultado? No. Como X se midió antes, y el grupo se sorteó, en promedio los dos grupos tienen el mismo X. Solo quitas ruido, no efecto.",
+   "cue": "sesgo"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 71.354,
+   "fin": 75.855,
+   "texto": "Tres cuidados. Equis tiene que medirse antes del tratamiento, nunca durante.",
+   "cue": "antes"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 75.975,
+   "fin": 79.666,
+   "texto": "Los usuarios nuevos no tienen historia: necesitan otra covariable.",
+   "cue": "nuevos"
+  },
+  {
+   "escena": "cuidado",
+   "inicio": 79.786,
+   "fin": 83.178,
+   "texto": "Y funciona mejor con métricas estables, como compras o sesiones.",
+   "cue": "estables"
+  },
+  {
+   "escena": "extension",
+   "inicio": 83.478,
+   "fin": 88.854,
+   "texto": "Su versión moderna, CUPAC, usa la predicción de un modelo de machine learning como covariable.",
+   "cue": "cupac"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 89.154,
+   "fin": 96.621,
+   "texto": "Menos ruido, mismo experimento, la mitad del tiempo. En la próxima idea, por qué no debes mirar el resultado todos los días. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que en una app de transporte le das un descuento a la mitad de los pasajeros. Ellos piden más viajes, y los conductores se acaban para la otra mitad. Tu experimento acaba de mentir.",
+          "muestra": "Imagina que en una app de transporte le das un descuento a la mitad de los pasajeros. Ellos piden más viajes, y los conductores se acaban para la otra mitad. Tu experimento acaba de mentir.",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea siete del mapa de la experimentación: la interferencia.",
+          "muestra": "Idea 7 del mapa de la experimentación: interferencia, y la unidad de aleatorización."
+        }
+      ]
+    },
+    {
+      "id": "sutva",
+      "frases": [
+        {
+          "dice": "Todo experimento supone algo que casi nunca se dice: mi resultado depende solo de mi tratamiento, no del tratamiento de los demás.",
+          "muestra": "Todo experimento supone algo que casi nunca se dice: mi resultado depende solo de mi tratamiento, no del tratamiento de los demás.",
+          "cue": "supuesto"
+        },
+        {
+          "dice": "Se llama estabilidad del valor del tratamiento por unidad. Y se rompe más seguido de lo que crees.",
+          "muestra": "Se llama SUTVA: el valor del tratamiento es estable por unidad. Y se rompe más seguido de lo que crees.",
+          "cue": "nombre"
+        }
+      ]
+    },
+    {
+      "id": "donde",
+      "frases": [
+        {
+          "dice": "Y se rompe en marketplaces, donde tratados y control comparten la misma oferta. En redes sociales, donde tus amigos te influyen. Y en vacunas, donde mi vacuna también te protege a ti.",
+          "muestra": "Se rompe en marketplaces, donde tratados y control comparten la misma oferta. En redes sociales, donde tus amigos te influyen. Y en vacunas, donde mi vacuna también te protege a ti.",
+          "cue": "donde"
+        }
+      ]
+    },
+    {
+      "id": "sesgo",
+      "frases": [
+        {
+          "dice": "En el marketplace, los tratados le quitan conductores al control. El control empeora, el tratamiento mejora, y la diferencia se infla.",
+          "muestra": "En el marketplace, los tratados le quitan conductores al control. El control empeora, el tratamiento mejora, y la diferencia se infla.",
+          "cue": "infla"
+        },
+        {
+          "dice": "El experimento dice más diez por ciento de viajes. Lanzado a todos, como ya nadie le quita a nadie, el efecto real es mucho menor.",
+          "muestra": "El experimento dice +10% de viajes. Lanzado a todos, como ya nadie le quita a nadie, el efecto real es mucho menor.",
+          "cue": "real"
+        }
+      ]
+    },
+    {
+      "id": "cluster",
+      "frases": [
+        {
+          "dice": "La solución: aleatoriza por grupos que no se mezclan. Ciudades, zonas, o comunidades de la red.",
+          "muestra": "La solución: aleatoriza por grupos que no se mezclan. Ciudades, zonas, o comunidades de la red.",
+          "cue": "grupos"
+        },
+        {
+          "dice": "El precio es el efecto de diseño: uno más eme menos uno, por la correlación dentro del grupo.",
+          "muestra": "El precio es el efecto de diseño: DEFF = 1 + (m − 1)·ρ, por la correlación dentro del grupo.",
+          "cue": "deff"
+        },
+        {
+          "dice": "Con cien personas por grupo y una correlación de cero coma cero cinco, necesitas casi seis veces más datos.",
+          "muestra": "Con 100 personas por grupo y ρ = 0,05: DEFF = 5,95. Necesitas casi seis veces más datos.",
+          "cue": "seis"
+        }
+      ]
+    },
+    {
+      "id": "switchback",
+      "frases": [
+        {
+          "dice": "Y otra opción, muy usada en delivery y transporte: el suích bak. Toda la zona pasa a la versión a una hora, y a la versión be la siguiente, alternando al azar.",
+          "muestra": "Otra opción, muy usada en delivery y transporte: el switchback. Toda la zona pasa a la versión A una hora, y a la B la siguiente, alternando al azar.",
+          "cue": "switchback"
+        },
+        {
+          "dice": "Funciona si el efecto de una hora no se arrastra a la siguiente.",
+          "muestra": "Funciona si el efecto de una hora no se arrastra a la siguiente.",
+          "cue": "arrastre"
+        }
+      ]
+    },
+    {
+      "id": "dilema",
+      "frases": [
+        {
+          "dice": "El dilema de fondo: aleatorizar por usuario es preciso pero sesgado. Aleatorizar por grupo es insesgado, pero ruidoso. Elige según cuánto se contagian tus unidades.",
+          "muestra": "El dilema de fondo: aleatorizar por usuario es preciso pero sesgado. Aleatorizar por grupo es insesgado, pero ruidoso. Elige según cuánto se contagian tus unidades.",
+          "cue": "dilema"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Antes de sortear, pregúntate a quién afecta el tratamiento. En la próxima idea, el zoológico de efectos. Compártelo y sígueme.",
+          "muestra": "Antes de sortear, pregúntate a quién afecta el tratamiento. En la próxima idea, el zoológico de efectos. Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

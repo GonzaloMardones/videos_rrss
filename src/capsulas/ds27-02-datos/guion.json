@@ -1,0 +1,196 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.25,
+ "pausaFrase": 0.1,
+ "pausaEscena": 0.26,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y en el déitaset si for, una sola frase de sesenta y una palabras aparecía más de sesenta mil veces.",
+     "muestra": "En el dataset C4, una sola frase de 61 palabras aparecía más de 60.000 veces.",
+     "en": "In the C4 dataset, a single 61-word sentence appeared more than 60,000 times.",
+     "cue": "c4"
+    },
+    {
+     "dice": "Y al quitar los duplicados, los modelos repitieron texto memorizado diez veces menos.",
+     "muestra": "Al quitar los duplicados, los modelos repitieron texto memorizado diez veces menos.",
+     "en": "After removing duplicates, models emitted memorized text 10× less often.",
+     "cue": "diez",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Cápsula técnica: curación de datos, y datos sintéticos.",
+     "muestra": "Cápsula técnica: curación de datos y datos sintéticos.",
+     "en": "Tech capsule: data curation and synthetic data."
+    }
+   ]
+  },
+  {
+   "id": "jaccard",
+   "frases": [
+    {
+     "dice": "Y primero, ¿cómo se mide si dos textos son casi iguales? Los cortas en trozos de tres palabras, llamados shíngols.",
+     "muestra": "¿Cómo se mide si dos textos son casi iguales? Los cortas en trozos de tres palabras, llamados shingles.",
+     "en": "First, how do you tell if two texts are near duplicates? You cut them into three-word pieces, called shingles.",
+     "cue": "shingles"
+    },
+    {
+     "dice": "Y la similitud de yacárd es los trozos en común, dividido por todos los trozos distintos. En este ejemplo, ocho de once: cero coma setenta y tres.",
+     "muestra": "La similitud de Jaccard es los trozos en común dividido por todos los trozos distintos. En este ejemplo, 8 de 11: 0,73.",
+     "en": "Jaccard similarity is the shared pieces divided by all distinct pieces. In this example, 8 out of 11: 0.73.",
+     "cue": "indice"
+    }
+   ]
+  },
+  {
+   "id": "minhash",
+   "frases": [
+    {
+     "dice": "Pero con mil millones de documentos, comparar todos los pares son quinientos mil billones de comparaciones. Crece como ene al cuadrado.",
+     "muestra": "Pero con mil millones de documentos, comparar todos los pares son 5 · 10¹⁷ comparaciones. Crece como n².",
+     "en": "But with a billion documents, comparing every pair means 5 · 10¹⁷ comparisons. It grows as n².",
+     "cue": "pares"
+    },
+    {
+     "dice": "Entonces, el truco de min jash. Ordenas los trozos con una función jash al azar, y te quedas con el mínimo. La probabilidad de que dos textos compartan ese mínimo es exactamente su similitud de yacárd.",
+     "muestra": "El truco de MinHash: ordenas los trozos con una función hash al azar y te quedas con el mínimo. La probabilidad de que dos textos compartan ese mínimo es exactamente su similitud de Jaccard.",
+     "en": "Here's the MinHash trick: order the pieces with a random hash and keep the minimum. The probability that two texts share that minimum is exactly their Jaccard similarity.",
+     "cue": "truco"
+    },
+    {
+     "dice": "Con ciento veintiocho funciones jash, cada documento queda resumido en una firma corta, y el error de la estimación ronda los tres puntos.",
+     "muestra": "Con 128 funciones hash, cada documento queda resumido en una firma corta, y el error de la estimación ronda los 3 puntos.",
+     "en": "With 128 hash functions, each document becomes a short signature, and the estimate is off by about 3 points.",
+     "cue": "firma"
+    }
+   ]
+  },
+  {
+   "id": "lsh",
+   "frases": [
+    {
+     "dice": "Y para no comparar firmas de a pares, se usan bandas: el es eich. Divides la firma en veinte bandas de cinco valores, y solo comparas documentos que coinciden en alguna banda.",
+     "muestra": "Para no comparar firmas de a pares se usan bandas (LSH): divides la firma en 20 bandas de 5 valores, y solo comparas documentos que coinciden en alguna banda.",
+     "en": "To avoid comparing signatures pairwise, use bands (LSH): split the signature into 20 bands of 5 values, and only compare documents that match in some band.",
+     "cue": "bandas"
+    },
+    {
+     "dice": "Con similitud cero coma ocho, la probabilidad de ser candidatos es noventa y nueve coma nueve por ciento. Con cero coma tres, menos del cinco. El costo pasa a ser casi lineal.",
+     "muestra": "Con similitud 0,8, la probabilidad de ser candidatos es 99,96%. Con 0,3, menos del 5%. El costo pasa a ser casi lineal.",
+     "en": "At similarity 0.8, the chance of becoming candidates is 99.96%. At 0.3, under 5%. The cost becomes nearly linear.",
+     "cue": "curva"
+    }
+   ]
+  },
+  {
+   "id": "escala",
+   "frases": [
+    {
+     "dice": "Y cuántos datos necesitas: el estudio chinchilla mostró que, con un cómputo fijo, datos y parámetros deben crecer juntos. Unos veinte tóukens por parámetro.",
+     "muestra": "¿Cuántos datos necesitas? El estudio Chinchilla mostró que, con un cómputo fijo, datos y parámetros deben crecer juntos: unos 20 tokens por parámetro.",
+     "en": "How much data do you need? The Chinchilla study showed that, for fixed compute, data and parameters should grow together: about 20 tokens per parameter.",
+     "cue": "chinchilla"
+    },
+    {
+     "dice": "Su modelo de setenta mil millones de parámetros usó uno coma cuatro billones de tóukens. Y la mezcla también importa: cuánto pesa la web, el código o los libros es un hiperparámetro.",
+     "muestra": "Su modelo de 70.000 millones de parámetros usó 1,4 billones de tokens. Y la mezcla también importa: cuánto pesa la web, el código o los libros es un hiperparámetro.",
+     "en": "Its 70-billion-parameter model used 1.4 trillion tokens. And the mix matters too: how much weight goes to web, code, or books is a hyperparameter.",
+     "cue": "mezcla"
+    }
+   ]
+  },
+  {
+   "id": "sintetico",
+   "frases": [
+    {
+     "dice": "Y cuando faltan datos, se fabrican. Évol instráct le pide a un modelo reescribir instrucciones: más profundas, con restricciones y pasos de razonamiento, o más amplias, con temas nuevos.",
+     "muestra": "Cuando faltan datos, se fabrican. Evol-Instruct le pide a un modelo reescribir instrucciones: más profundas (restricciones, pasos de razonamiento) o más amplias (temas nuevos).",
+     "en": "When data runs short, you make it. Evol-Instruct asks a model to rewrite instructions: deeper (constraints, reasoning steps) or broader (new topics).",
+     "cue": "evol"
+    }
+   ]
+  },
+  {
+   "id": "verificador",
+   "frases": [
+    {
+     "dice": "Pero muchas respuestas sintéticas están mal. Por eso un modelo verificador filtra las trazas. Y aquí entra beis.",
+     "muestra": "Pero muchas respuestas sintéticas están mal. Por eso un modelo verificador filtra las trazas. Y aquí entra Bayes.",
+     "en": "But many synthetic answers are wrong. So a verifier model filters the traces. This is where Bayes comes in.",
+     "cue": "filtro"
+    },
+    {
+     "dice": "Y si el generador acierta sesenta por ciento, y el verificador aprueba noventa de cada cien correctas, pero también veinte de cada cien incorrectas, lo que pasa el filtro es correcto en un ochenta y siete por ciento.",
+     "muestra": "Si el generador acierta 60%, y el verificador aprueba 90 de cada 100 correctas pero también 20 de cada 100 incorrectas, lo que pasa el filtro es correcto en un 87%.",
+     "en": "If the generator is right 60% of the time, and the verifier passes 90 in 100 correct answers but also 20 in 100 wrong ones, what passes is correct 87% of the time.",
+     "cue": "bayes"
+    },
+    {
+     "dice": "Y es la regla de beis: la creencia previa, sesenta por ciento, se actualiza con la evidencia de que pasó el filtro.",
+     "muestra": "Es la regla de Bayes: la creencia previa (60%) se actualiza con la evidencia de que pasó el filtro.",
+     "en": "That's Bayes' rule: the prior (60%) is updated by the evidence that it passed the filter.",
+     "cue": "posterior"
+    }
+   ]
+  },
+  {
+   "id": "colapso",
+   "frases": [
+    {
+     "dice": "Pero ojo: si entrenas una y otra vez con datos que tú mismo generaste, las colas de la distribución desaparecen. Se llama colapso del modelo.",
+     "muestra": "Ojo: si entrenas una y otra vez con datos que tú mismo generaste, las colas de la distribución desaparecen. Se llama colapso del modelo.",
+     "en": "Careful: if you train again and again on data you generated yourself, the tails of the distribution vanish. It's called model collapse.",
+     "cue": "cola"
+    },
+    {
+     "dice": "Y en una simulación simple, una normal reajustada con veinte muestras por generación pierde tres cuartos de su dispersión en cincuenta generaciones. La cura es mezclar siempre datos reales.",
+     "muestra": "En una simulación simple, una normal reajustada con 20 muestras por generación pierde tres cuartos de su dispersión en 50 generaciones. La cura: mezclar siempre datos reales.",
+     "en": "In a simple simulation, a normal refit on 20 samples per generation loses three quarters of its spread in 50 generations. The cure: always mix in real data.",
+     "cue": "sigma"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en gúgol claud: déitaflou ejecuta el páiplain de limpieza, big cuíri guarda las firmas y encuentra duplicados, y vértex ei ai genera y verifica los datos sintéticos.",
+     "muestra": "En Google Cloud: Dataflow ejecuta el pipeline de limpieza, BigQuery guarda las firmas y encuentra duplicados, y Vertex AI genera y verifica los datos sintéticos.",
+     "en": "On Google Cloud: Dataflow runs the cleaning pipeline, BigQuery stores signatures and finds duplicates, and Vertex AI generates and verifies synthetic data.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "Y con esto tienes las bases: min jash convierte comparar textos en comparar firmas. El es eich evita el costo cuadrático. Y lo sintético necesita un verificador, y datos reales en la mezcla.",
+     "muestra": "Con esto tienes las bases: MinHash convierte comparar textos en comparar firmas. LSH evita el costo cuadrático. Y lo sintético necesita un verificador y datos reales en la mezcla.",
+     "en": "The basics: MinHash turns comparing texts into comparing signatures. LSH avoids the quadratic cost. Synthetic data needs a verifier, plus real data in the mix.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

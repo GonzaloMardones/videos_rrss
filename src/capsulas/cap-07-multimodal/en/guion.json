@@ -1,0 +1,173 @@
+{
+ "motor": "kokoro",
+ "voz": "am_michael",
+ "idioma": "en-us",
+ "velocidad": 1.27,
+ "pausaFrase": 0.08,
+ "pausaEscena": 0.2,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "In twenty twenty-one, a model matched ResNet fifty on ImageNet without seeing a single one of its one point two eight million labels.",
+     "muestra": "In 2021, a model matched ResNet-50 on ImageNet without seeing a single one of its 1.28 million labels.",
+     "es": "En 2021, un modelo igualó a ResNet-50 en ImageNet sin ver ni una de sus 1,28 millones de etiquetas.",
+     "cue": "clip"
+    },
+    {
+     "dice": "It only learned from four hundred million image and text pairs from the internet.",
+     "muestra": "It only learned from 400 million image-text pairs from the internet.",
+     "es": "Solo aprendió de 400 millones de pares de imagen y texto de internet.",
+     "cue": "pares",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Tech capsule: multimodal fusion, and custom embeddings.",
+     "muestra": "Tech capsule: multimodal fusion and custom embeddings.",
+     "es": "Cápsula técnica: fusión multimodal y embeddings propios."
+    }
+   ]
+  },
+  {
+   "id": "tokens",
+   "frases": [
+    {
+     "dice": "First, everything becomes tokens. A two hundred twenty-four pixel image, in patches of sixteen, is one hundred ninety-six tokens.",
+     "muestra": "First, everything becomes tokens. A 224-pixel image in 16-pixel patches is 196 tokens.",
+     "es": "Primero, todo se vuelve tokens. Una imagen de 224 píxeles en parches de 16 son 196 tokens.",
+     "cue": "parches"
+    },
+    {
+     "dice": "Audio too: Whisper turns thirty seconds into fifteen hundred tokens, and a neural codec compresses speech to six kilobits per second.",
+     "muestra": "Audio too: Whisper turns 30 seconds into 1,500 tokens, and a neural codec compresses speech to 6 kbit/s.",
+     "es": "El audio también: Whisper convierte 30 segundos en 1.500 tokens, y un códec neuronal comprime la voz a 6 kbit/s.",
+     "cue": "audio"
+    }
+   ]
+  },
+  {
+   "id": "contraste",
+   "frases": [
+    {
+     "dice": "The trick behind CLIP is contrastive learning: in a batch of N pairs, every image is compared with all N texts.",
+     "muestra": "The trick behind CLIP is contrastive learning: in a batch of N pairs, every image is compared with all N texts.",
+     "es": "El truco de CLIP es el aprendizaje contrastivo: en un lote de N pares, cada imagen se compara con los N textos.",
+     "cue": "matriz"
+    },
+    {
+     "dice": "The diagonal holds the correct pairs: pull them together, and push everything else apart.",
+     "muestra": "The diagonal holds the correct pairs: pull them together and push everything else apart.",
+     "es": "La diagonal son los pares correctos: hay que acercarlos y alejar todo lo demás.",
+     "cue": "diagonal"
+    }
+   ]
+  },
+  {
+   "id": "infonce",
+   "frases": [
+    {
+     "dice": "The loss is a classification: with a softmax, which of the N texts belongs to this image? With a uniform prior, it is the posterior probability of each text.",
+     "muestra": "The loss is a classification: with a softmax, which of the N texts belongs to this image? With a uniform prior, it is the posterior probability of each text.",
+     "es": "La pérdida es una clasificación: con una softmax, ¿cuál de los N textos corresponde a esta imagen? Con previo uniforme, es la probabilidad posterior de cada texto.",
+     "cue": "clasificar"
+    },
+    {
+     "dice": "It also bounds the mutual information: at most log N. That is why large batches help.",
+     "muestra": "It also bounds the mutual information: at most log N. That is why large batches help.",
+     "es": "Además acota la información mutua: como mucho log N. Por eso los lotes grandes ayudan.",
+     "cue": "cota"
+    }
+   ]
+  },
+  {
+   "id": "siglip",
+   "frases": [
+    {
+     "dice": "SigLIP swaps the softmax for a sigmoid: each pair is a yes or no question, with no normalization over the whole batch.",
+     "muestra": "SigLIP swaps the softmax for a sigmoid: each pair is a yes-or-no question, with no normalization over the whole batch.",
+     "es": "SigLIP cambia la softmax por una sigmoide: cada par es una pregunta de sí o no, sin normalizar sobre todo el lote.",
+     "cue": "sigmoide"
+    },
+    {
+     "dice": "Since almost every pair is negative, it starts with a bias of minus ten: it begins believing that almost no pair matches.",
+     "muestra": "Since almost every pair is negative, it starts with a bias of −10: it begins believing that almost no pair matches.",
+     "es": "Como los negativos son casi todos, arranca con un sesgo de −10: parte creyendo que casi ningún par coincide.",
+     "cue": "sesgo"
+    }
+   ]
+  },
+  {
+   "id": "fusion",
+   "frases": [
+    {
+     "dice": "To combine modalities there are three routes: early fusion, late fusion, or cross attention.",
+     "muestra": "To combine modalities there are three routes: early fusion, late fusion or cross-attention.",
+     "es": "Para combinar modalidades hay tres caminos: fusión temprana, fusión tardía o atención cruzada.",
+     "cue": "tipos"
+    },
+    {
+     "dice": "Flamingo inserts cross attention layers into a frozen language model; Lava just projects the image into the model's token space.",
+     "muestra": "Flamingo inserts cross-attention layers into a frozen language model; LLaVA just projects the image into the model's token space.",
+     "es": "Flamingo inserta capas de atención cruzada en un modelo de lenguaje congelado; LLaVA solo proyecta la imagen al espacio de tokens del modelo.",
+     "cue": "flamingo"
+    }
+   ]
+  },
+  {
+   "id": "propios",
+   "frases": [
+    {
+     "dice": "For your own embeddings, fine-tune with the same contrastive loss on your pairs, and add hard negatives: the ones that look similar but are not.",
+     "muestra": "For your own embeddings, fine-tune with the same contrastive loss on your pairs and add hard negatives: the ones that look similar but are not.",
+     "es": "Para tus embeddings propios, ajustas con la misma pérdida contrastiva sobre tus pares y agregas negativos difíciles: los que se parecen pero no son.",
+     "cue": "negativos"
+    },
+    {
+     "dice": "With Matryoshka embeddings, the first numbers already work on their own: you can cut the vector and save memory.",
+     "muestra": "With Matryoshka embeddings, the first numbers already work on their own: you can cut the vector and save memory.",
+     "es": "Con embeddings Matryoshka, los primeros números ya sirven solos: puedes cortar el vector y ahorrar memoria.",
+     "cue": "matrioska"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "On Google Cloud, Vertex AI offers multimodal embeddings: image and text in the same fourteen hundred eight dimensional space. And Vector Search finds nearest neighbors at scale.",
+     "muestra": "On Google Cloud, Vertex AI offers multimodal embeddings: image and text in the same 1,408-dimensional space. And Vector Search finds nearest neighbors at scale.",
+     "es": "En Google Cloud, Vertex AI ofrece embeddings multimodales: imagen y texto en el mismo espacio de 1.408 dimensiones. Y Vector Search busca vecinos cercanos a gran escala.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "The basics: cosine similarity, softmax versus sigmoid, temperature, and mutual information.",
+     "muestra": "The basics: cosine similarity, softmax vs sigmoid, temperature and mutual information.",
+     "es": "Las bases: similitud coseno, softmax contra sigmoide, la temperatura y la información mutua.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "If this helped, share and follow.",
+     "muestra": "If this helped, share and follow.",
+     "es": "Si te sirvió, compártelo y sígueme.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

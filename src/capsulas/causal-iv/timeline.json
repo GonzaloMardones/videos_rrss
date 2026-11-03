@@ -1,0 +1,183 @@
+{
+ "duracion": 94.807,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 10.777
+  },
+  {
+   "id": "titulo",
+   "inicio": 10.777,
+   "fin": 14.149
+  },
+  {
+   "id": "idea",
+   "inicio": 14.149,
+   "fin": 25.449
+  },
+  {
+   "id": "condiciones",
+   "inicio": 25.449,
+   "fin": 37.509
+  },
+  {
+   "id": "ejemplo",
+   "inicio": 37.509,
+   "fin": 47.785
+  },
+  {
+   "id": "wald",
+   "inicio": 47.785,
+   "fin": 61.722
+  },
+  {
+   "id": "etapas",
+   "inicio": 61.722,
+   "fin": 72.019
+  },
+  {
+   "id": "debil",
+   "inicio": 72.019,
+   "fin": 79.893
+  },
+  {
+   "id": "late",
+   "inicio": 79.893,
+   "fin": 89.451
+  },
+  {
+   "id": "cierre",
+   "inicio": 89.451,
+   "fin": 94.807
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 4.943,
+   "texto": "¿Estudiar un año más sube tu sueldo? Parece fácil de medir: quienes estudian más, ganan más.",
+   "cue": "pregunta"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.143,
+   "fin": 10.477,
+   "texto": "Pero los más motivados estudian más, y también ganan más. La motivación no se ve, y lo confunde todo.",
+   "cue": "motivacion"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 10.777,
+   "fin": 13.849,
+   "texto": "Métodos causales: variable instrumental.",
+   "cue": null
+  },
+  {
+   "escena": "idea",
+   "inicio": 14.149,
+   "fin": 18.927,
+   "texto": "La idea: busca algo que empuje a estudiar más, pero que no toque el sueldo por ningún otro camino.",
+   "cue": "empuje"
+  },
+  {
+   "escena": "idea",
+   "inicio": 19.047,
+   "fin": 25.149,
+   "texto": "Eso es un instrumento. Usas solo la parte de los estudios que el instrumento movió, y esa parte no viene de la motivación.",
+   "cue": "parte"
+  },
+  {
+   "escena": "condiciones",
+   "inicio": 25.449,
+   "fin": 30.334,
+   "texto": "Un buen instrumento cumple tres condiciones. Uno, relevancia: de verdad mueve el tratamiento.",
+   "cue": "relevancia"
+  },
+  {
+   "escena": "condiciones",
+   "inicio": 30.454,
+   "fin": 33.889,
+   "texto": "Dos, exclusión: afecta el resultado solo a través del tratamiento.",
+   "cue": "exclusion"
+  },
+  {
+   "escena": "condiciones",
+   "inicio": 34.009,
+   "fin": 37.209,
+   "texto": "Y tres, independencia: no está relacionado con lo que no ves.",
+   "cue": "independencia"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 37.509,
+   "fin": 40.943,
+   "texto": "Un ejemplo famoso, de Angrist y Krueger: el trimestre de nacimiento.",
+   "cue": "trimestre"
+  },
+  {
+   "escena": "ejemplo",
+   "inicio": 41.063,
+   "fin": 47.485,
+   "texto": "Por las leyes de escolaridad obligatoria, según cuándo naciste podías dejar el colegio con un poco más o menos de estudios.",
+   "cue": "leyes"
+  },
+  {
+   "escena": "wald",
+   "inicio": 47.785,
+   "fin": 52.35,
+   "texto": "La cuenta más simple es una división. Arriba, cuánto cambia el sueldo con el instrumento.",
+   "cue": "arriba"
+  },
+  {
+   "escena": "wald",
+   "inicio": 52.47,
+   "fin": 55.201,
+   "texto": "Abajo, cuánto cambian los estudios con el instrumento.",
+   "cue": "abajo"
+  },
+  {
+   "escena": "wald",
+   "inicio": 55.321,
+   "fin": 61.422,
+   "texto": "Si el instrumento sube el sueldo un 1%, y los estudios en 0,1 años, cada año vale un 10%.",
+   "cue": "cuenta"
+  },
+  {
+   "escena": "etapas",
+   "inicio": 61.722,
+   "fin": 66.394,
+   "texto": "En la práctica se hace en dos etapas. Primero, predices los estudios usando el instrumento.",
+   "cue": "primera"
+  },
+  {
+   "escena": "etapas",
+   "inicio": 66.514,
+   "fin": 71.719,
+   "texto": "Después, explicas el sueldo con esa predicción. Por eso se llama mínimos cuadrados en dos etapas.",
+   "cue": "segunda"
+  },
+  {
+   "escena": "debil",
+   "inicio": 72.019,
+   "fin": 79.593,
+   "texto": "Si el instrumento mueve poco el tratamiento, es débil, y el resultado se vuelve poco confiable. La regla clásica: estadístico F mayor que 10.",
+   "cue": "debil"
+  },
+  {
+   "escena": "late",
+   "inicio": 79.893,
+   "fin": 89.151,
+   "texto": "Un detalle fino: el efecto vale para quienes el instrumento hizo cambiar. Se llama efecto local (LATE). Por ideas como esa, Angrist e Imbens ganaron el Nobel 2021.",
+   "cue": "local"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 89.451,
+   "fin": 94.507,
+   "texto": "Un empujón limpio, tres condiciones, y una división. Compártelo y sígueme para el siguiente método.",
+   "cue": "cta"
+  }
+ ]
+}

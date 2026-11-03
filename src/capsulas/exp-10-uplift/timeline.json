@@ -1,0 +1,157 @@
+{
+ "duracion": 94.593,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 8.849
+  },
+  {
+   "id": "titulo",
+   "inicio": 8.849,
+   "fin": 13.543
+  },
+  {
+   "id": "segmentos",
+   "inicio": 13.543,
+   "fin": 28.083
+  },
+  {
+   "id": "propension",
+   "inicio": 28.083,
+   "fin": 36.383
+  },
+  {
+   "id": "formula",
+   "inicio": 36.383,
+   "fin": 45.174
+  },
+  {
+   "id": "cuenta",
+   "inicio": 45.174,
+   "fin": 57.762
+  },
+  {
+   "id": "qini",
+   "inicio": 57.762,
+   "fin": 78.483
+  },
+  {
+   "id": "datos",
+   "inicio": 78.483,
+   "fin": 87.061
+  },
+  {
+   "id": "cierre",
+   "inicio": 87.061,
+   "fin": 94.593
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.549,
+   "texto": "Imagina que mandar un cupón a tus 10.000 clientes te da 400 compras extra. Y mandarlo solo a 2.000 te da 600. Menos cupones, más ventas.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 8.849,
+   "fin": 13.243,
+   "texto": "Idea 10 del mapa de la experimentación: uplift, tratar solo a quien cambia.",
+   "cue": null
+  },
+  {
+   "escena": "segmentos",
+   "inicio": 13.543,
+   "fin": 15.805,
+   "texto": "Cada cliente cae en uno de cuatro grupos.",
+   "cue": "cuatro"
+  },
+  {
+   "escena": "segmentos",
+   "inicio": 15.925,
+   "fin": 18.805,
+   "texto": "Los persuadibles compran solo si les mandas el cupón.",
+   "cue": "persuadibles"
+  },
+  {
+   "escena": "segmentos",
+   "inicio": 18.925,
+   "fin": 21.933,
+   "texto": "Los seguros compran igual: el cupón es plata regalada.",
+   "cue": "seguros"
+  },
+  {
+   "escena": "segmentos",
+   "inicio": 22.053,
+   "fin": 23.866,
+   "texto": "Los perdidos no compran nunca.",
+   "cue": "perdidos"
+  },
+  {
+   "escena": "segmentos",
+   "inicio": 23.986,
+   "fin": 27.783,
+   "texto": "Y los de no molestar compran menos si los contactas: el mensaje los espanta.",
+   "cue": "molestar"
+  },
+  {
+   "escena": "propension",
+   "inicio": 28.083,
+   "fin": 36.083,
+   "texto": "El error clásico: elegir a quién mandarle el cupón con un modelo que predice quién va a comprar. Ese modelo elige primero a los seguros, que compran igual.",
+   "cue": "propension"
+  },
+  {
+   "escena": "formula",
+   "inicio": 36.383,
+   "fin": 44.874,
+   "texto": "El uplift mide otra cosa: u(x) = P(compra | T = 1, x) − P(compra | T = 0, x). Es el CATE de la idea 09, usado para decidir.",
+   "cue": "formula"
+  },
+  {
+   "escena": "cuenta",
+   "inicio": 45.174,
+   "fin": 57.462,
+   "texto": "La cuenta: 2.000 persuadibles × 30% = +600. 1.000 de no molestar × −20% = −200. A todos: +400. Solo a persuadibles: +600.",
+   "cue": "cuenta"
+  },
+  {
+   "escena": "qini",
+   "inicio": 57.762,
+   "fin": 66.359,
+   "texto": "¿Cómo sabes si tu modelo de uplift es bueno? Con la curva Qini. Ordenas a los clientes por uplift predicho, y vas sumando las compras extra a medida que tratas a más.",
+   "cue": "qini"
+  },
+  {
+   "escena": "qini",
+   "inicio": 66.479,
+   "fin": 73.967,
+   "texto": "Si eliges al azar, es una línea recta. Un buen modelo sube rápido al principio, se aplana, y cae al final, cuando llegas a los que no hay que molestar.",
+   "cue": "forma"
+  },
+  {
+   "escena": "qini",
+   "inicio": 74.087,
+   "fin": 78.183,
+   "texto": "El área entre la curva y la recta es el coeficiente Qini: cuánto mejor que el azar.",
+   "cue": "area"
+  },
+  {
+   "escena": "datos",
+   "inicio": 78.483,
+   "fin": 86.761,
+   "texto": "Clave: para entrenar un modelo de uplift necesitas un experimento previo, con tratados y control al azar. Sin eso, el modelo aprende sesgos, no efectos.",
+   "cue": "datos"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 87.061,
+   "fin": 94.293,
+   "texto": "No trates a quien va a comprar. Trata a quien cambia. En la próxima idea: experimentos que aprenden mientras corren (bandits). Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

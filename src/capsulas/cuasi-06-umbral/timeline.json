@@ -1,0 +1,145 @@
+{
+ "duracion": 103.082,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 15.027
+  },
+  {
+   "id": "titulo",
+   "inicio": 15.027,
+   "fin": 19.999
+  },
+  {
+   "id": "idea",
+   "inicio": 19.999,
+   "fin": 34.99
+  },
+  {
+   "id": "salto",
+   "inicio": 34.99,
+   "fin": 51.495
+  },
+  {
+   "id": "formula",
+   "inicio": 51.495,
+   "fin": 66.571
+  },
+  {
+   "id": "trampa",
+   "inicio": 66.571,
+   "fin": 79.706
+  },
+  {
+   "id": "ia",
+   "inicio": 79.706,
+   "fin": 94.59
+  },
+  {
+   "id": "cierre",
+   "inicio": 94.59,
+   "fin": 103.082
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 6.586,
+   "texto": "Un camión minero tiene una cámara que mide la fatiga del operador. Si el puntaje pasa de 0,6, suena una alarma.",
+   "cue": "camion"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 6.706,
+   "fin": 14.727,
+   "texto": "Comparas horas con y sin alarma: con alarma hay más incidentes. ¿La alarma empeora las cosas? No: suena justo cuando hay más fatiga.",
+   "cue": "paradoja"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 15.027,
+   "fin": 19.699,
+   "texto": "Cuasi-experimentos, capítulo 6: umbrales y regresión discontinua.",
+   "cue": null
+  },
+  {
+   "escena": "idea",
+   "inicio": 19.999,
+   "fin": 29.898,
+   "texto": "La idea nació en 1960, con Thistlethwaite y Campbell. Justo en el umbral, un operador con 0,59 y otro con 0,61 son prácticamente iguales.",
+   "cue": "umbral"
+  },
+  {
+   "escena": "idea",
+   "inicio": 30.018,
+   "fin": 34.69,
+   "texto": "La única diferencia es que a uno le sonó la alarma. Ahí, la regla funciona como un sorteo.",
+   "cue": "sorteo"
+  },
+  {
+   "escena": "salto",
+   "inicio": 34.99,
+   "fin": 42.713,
+   "texto": "Graficas incidentes según el puntaje. La curva sube con la fatiga, y en 0,6 cae de golpe. Ese salto es el efecto de la alarma.",
+   "cue": "grafico"
+  },
+  {
+   "escena": "salto",
+   "inicio": 42.833,
+   "fin": 51.195,
+   "texto": "En la simulación: la comparación ingenua dice +4 puntos de incidentes. La discontinuidad dice −6,3, y el efecto real es −6.",
+   "cue": "numeros"
+  },
+  {
+   "escena": "formula",
+   "inicio": 51.495,
+   "fin": 57.234,
+   "texto": "En fórmula: el efecto es el límite de la curva justo a la derecha del corte menos el límite justo a la izquierda.",
+   "cue": "limites"
+  },
+  {
+   "escena": "formula",
+   "inicio": 57.354,
+   "fin": 66.271,
+   "texto": "Para estimarlo ajustas una recta a cada lado, solo con datos cerca del corte, dentro de un ancho de banda h. Más angosto: menos sesgo, más ruido. Más ancho: al revés.",
+   "cue": "banda"
+  },
+  {
+   "escena": "trampa",
+   "inicio": 66.571,
+   "fin": 73.611,
+   "texto": "Ojo con la manipulación: si las personas pueden mover su puntaje para quedar del lado que les conviene, el corte deja de ser un sorteo.",
+   "cue": "manipula"
+  },
+  {
+   "escena": "trampa",
+   "inicio": 73.731,
+   "fin": 79.406,
+   "texto": "La prueba de McCrary lo revisa: si hay un amontonamiento de casos justo a un lado del umbral, desconfía.",
+   "cue": "mccrary"
+  },
+  {
+   "escena": "ia",
+   "inicio": 79.706,
+   "fin": 88.815,
+   "texto": "La IA está llena de umbrales: si la confianza del modelo es menor a 0,7, el caso va a un geólogo; si el riesgo supera un valor, se detiene el equipo.",
+   "cue": "confianza"
+  },
+  {
+   "escena": "ia",
+   "inicio": 88.935,
+   "fin": 94.29,
+   "texto": "Si guardas el puntaje continuo, no solo la decisión, cada umbral te regala una regresión discontinua.",
+   "cue": "guarda"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 94.59,
+   "fin": 102.782,
+   "texto": "Donde hay un umbral, hay un experimento escondido. Próximo capítulo: experimentos naturales, con minas en Perú y Ghana. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

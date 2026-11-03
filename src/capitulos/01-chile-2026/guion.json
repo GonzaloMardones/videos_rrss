@@ -1,0 +1,294 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.18,
+  "pausaFrase": 0.1,
+  "pausaEscena": 0.25,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "El cobre está en el precio más alto de su historia.",
+          "muestra": "El cobre está en el precio más alto de su historia.",
+          "cue": "cobre",
+          "pausa": 0.3
+        },
+        {
+          "dice": "Y aun así... Chile casi no va a crecer este año.",
+          "muestra": "Y aun así, Chile casi no va a crecer este año.",
+          "cue": "pib",
+          "pausa": 0.3
+        },
+        {
+          "dice": "¿Cómo se explica eso?",
+          "muestra": "¿Cómo se explica eso?",
+          "cue": "pregunta",
+          "velocidad": 0.96
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Vamos por partes.",
+          "muestra": "Vamos por partes."
+        }
+      ]
+    },
+    {
+      "id": "crecimiento",
+      "frases": [
+        {
+          "dice": "Partamos por el PIB: todo lo que produce el país. El tamaño de la torta.",
+          "muestra": "Partamos por el PIB: todo lo que produce el país. El tamaño de la torta.",
+          "cue": "definicion"
+        },
+        {
+          "dice": "El año pasado creció dos coma cinco por ciento.",
+          "muestra": "El año pasado creció 2,5%.",
+          "cue": "barras"
+        },
+        {
+          "dice": "Este año, el Banco Central espera menos de uno.",
+          "muestra": "Este año, el Banco Central espera menos de 1%.",
+          "cue": "proyeccion"
+        }
+      ]
+    },
+    {
+      "id": "cobre",
+      "frases": [
+        {
+          "dice": "¿Y por qué? Justamente, por el cobre.",
+          "muestra": "¿Y por qué? Justamente, por el cobre.",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Lo que ganamos es precio, por cantidad.",
+          "muestra": "Lo que ganamos es precio × cantidad.",
+          "cue": "ecuacion"
+        },
+        {
+          "dice": "El precio está por las nubes...",
+          "muestra": "El precio está por las nubes…",
+          "cue": "precio"
+        },
+        {
+          "dice": "pero en agosto, las minas produjeron diecisiete por ciento menos.",
+          "muestra": "pero en agosto, las minas produjeron 17% menos.",
+          "cue": "cantidad"
+        },
+        {
+          "dice": "Y eso frenó a toda la economía.",
+          "muestra": "Y eso frenó a toda la economía.",
+          "cue": "total"
+        }
+      ]
+    },
+    {
+      "id": "inflacion",
+      "frases": [
+        {
+          "dice": "Segundo tema: la inflación, lo que pierde tu plata cada año. La meta es tres por ciento.",
+          "muestra": "Segundo tema: la inflación, lo que pierde tu plata cada año. La meta: 3%.",
+          "cue": "meta"
+        },
+        {
+          "dice": "Partimos el año bajo la meta,",
+          "muestra": "Partimos el año bajo la meta,",
+          "cue": "linea"
+        },
+        {
+          "dice": "pero la guerra en Medio Oriente disparó los combustibles.",
+          "muestra": "pero la guerra en Medio Oriente disparó los combustibles.",
+          "cue": "guerra"
+        },
+        {
+          "dice": "Hoy estamos en cuatro coma uno.",
+          "muestra": "Hoy estamos en 4,1%.",
+          "cue": "hoy"
+        }
+      ]
+    },
+    {
+      "id": "bancocentral",
+      "frases": [
+        {
+          "dice": "¿Y quién cuida eso? El Banco Central, que es autónomo: no depende del gobierno de turno.",
+          "muestra": "¿Y quién cuida eso? El Banco Central, que es autónomo: no depende del gobierno de turno.",
+          "cue": "quien",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Su trabajo es mantener la inflación cerca de tres por ciento,",
+          "muestra": "Su trabajo es mantener la inflación cerca de 3%,",
+          "cue": "mision"
+        },
+        {
+          "dice": "y su herramienta es la tasa de interés: el precio del dinero.",
+          "muestra": "y su herramienta es la tasa de interés: el precio del dinero.",
+          "cue": "herramienta"
+        }
+      ]
+    },
+    {
+      "id": "tasa",
+      "frases": [
+        {
+          "dice": "El dilema: con la economía débil, convendría bajar la tasa y abaratar los créditos.",
+          "muestra": "El dilema: con la economía débil, convendría bajar la tasa y abaratar los créditos.",
+          "cue": "bajar"
+        },
+        {
+          "dice": "Pero con los precios subiendo, es arriesgado.",
+          "muestra": "Pero con los precios subiendo, es arriesgado.",
+          "cue": "esperar"
+        },
+        {
+          "dice": "Por eso la dejó quieta, en cuatro coma cinco.",
+          "muestra": "Por eso la dejó quieta, en 4,5%.",
+          "cue": "quieta"
+        }
+      ]
+    },
+    {
+      "id": "empleo",
+      "frases": [
+        {
+          "dice": "Mientras tanto, el desempleo subió a nueve coma seis por ciento.",
+          "muestra": "Mientras tanto, el desempleo subió a 9,6%.",
+          "cue": "tasa"
+        },
+        {
+          "dice": "Casi una de cada diez personas que busca trabajo, no lo encuentra.",
+          "muestra": "Casi 1 de cada 10 personas que busca trabajo no lo encuentra.",
+          "cue": "personas"
+        }
+      ]
+    },
+    {
+      "id": "fiscal",
+      "frases": [
+        {
+          "dice": "¿Y el Estado? Tiene déficit: gasta más de lo que recauda, y la diferencia la paga con deuda.",
+          "muestra": "¿Y el Estado? Tiene déficit: gasta más de lo que recauda, y la diferencia la paga con deuda.",
+          "cue": "definicion"
+        },
+        {
+          "dice": "Este año el déficit baja a uno coma ocho por ciento del PIB.",
+          "muestra": "Este año el déficit baja a 1,8% del PIB.",
+          "cue": "deficit"
+        },
+        {
+          "dice": "Y la deuda sigue bajo el límite prudente.",
+          "muestra": "Y la deuda sigue bajo el límite prudente.",
+          "cue": "deuda"
+        }
+      ]
+    },
+    {
+      "id": "deuda",
+      "frases": [
+        {
+          "dice": "Ahora... ¿y si el país pide mucha deuda, por ejemplo, para más beneficios sociales?",
+          "muestra": "Ahora, ¿y si el país pide mucha deuda, por ejemplo, para más beneficios sociales?",
+          "cue": "pregunta",
+          "pausa": 0.25
+        },
+        {
+          "dice": "La deuda cobra intereses: el año pasado, casi cinco mil millones de dólares.",
+          "muestra": "La deuda cobra intereses: el año pasado, casi US$5.000 millones.",
+          "cue": "intereses"
+        },
+        {
+          "dice": "Y cada peso en intereses, es un peso menos para salud, educación o pensiones.",
+          "muestra": "Y cada peso en intereses es un peso menos para salud, educación o pensiones.",
+          "cue": "peso"
+        },
+        {
+          "dice": "Por eso la regla de oro: gastos permanentes, con ingresos permanentes.",
+          "muestra": "Por eso la regla de oro: gastos permanentes, con ingresos permanentes.",
+          "cue": "regla",
+          "velocidad": 0.97
+        }
+      ]
+    },
+    {
+      "id": "futuro",
+      "frases": [
+        {
+          "dice": "La apuesta para salir de esto es la inversión.",
+          "muestra": "La apuesta para salir de esto es la inversión.",
+          "cue": "apuesta"
+        },
+        {
+          "dice": "Con la nueva Ley de Reconstrucción, el Banco Central espera crecer entre dos y tres por ciento el próximo año.",
+          "muestra": "Con la nueva Ley de Reconstrucción, el Banco Central espera crecer entre 2% y 3% el próximo año.",
+          "cue": "rebote"
+        }
+      ]
+    },
+    {
+      "id": "tu",
+      "frases": [
+        {
+          "dice": "¿Y a ti, cómo te afecta todo esto?",
+          "muestra": "¿Y a ti, cómo te afecta todo esto?",
+          "cue": "pregunta",
+          "pausa": 0.25,
+          "velocidad": 0.97
+        },
+        {
+          "dice": "Si tu sueldo sube menos que los precios, en la práctica ganas menos.",
+          "muestra": "Si tu sueldo sube menos que los precios, en la práctica ganas menos.",
+          "cue": "sueldo"
+        },
+        {
+          "dice": "Por ahora, los créditos no se abaratan.",
+          "muestra": "Por ahora, los créditos no se abaratan.",
+          "cue": "creditos"
+        },
+        {
+          "dice": "Y con más desempleo, conviene tener un colchón para imprevistos.",
+          "muestra": "Y con más desempleo, conviene tener un colchón para imprevistos.",
+          "cue": "colchon"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "En pocas palabras: la economía crece poco,",
+          "muestra": "En pocas palabras: la economía crece poco,",
+          "cue": "uno"
+        },
+        {
+          "dice": "los precios presionan,",
+          "muestra": "los precios presionan,",
+          "cue": "dos"
+        },
+        {
+          "dice": "y falta empleo.",
+          "muestra": "y falta empleo.",
+          "cue": "tres",
+          "pausa": 0.3
+        },
+        {
+          "dice": "Pero ojo: el cobre vale oro, y la inversión puede cambiar la historia.",
+          "muestra": "Pero ojo: el cobre vale oro, y la inversión puede cambiar la historia.",
+          "cue": "pero",
+          "pausa": 0.3
+        },
+        {
+          "dice": "Sígueme para el capítulo dos.",
+          "muestra": "Sígueme para el capítulo 2.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

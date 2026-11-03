@@ -1,0 +1,190 @@
+{
+ "duracion": 160.042,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 17.033
+  },
+  {
+   "id": "titulo",
+   "inicio": 17.033,
+   "fin": 21.407
+  },
+  {
+   "id": "piramide",
+   "inicio": 21.407,
+   "fin": 46.822
+  },
+  {
+   "id": "ecm",
+   "inicio": 46.822,
+   "fin": 62.623
+  },
+  {
+   "id": "meng",
+   "inicio": 62.623,
+   "fin": 80.665
+  },
+  {
+   "id": "bayes",
+   "inicio": 80.665,
+   "fin": 107.509
+  },
+  {
+   "id": "grade",
+   "inicio": 107.509,
+   "fin": 126.382
+  },
+  {
+   "id": "kohavi",
+   "inicio": 126.382,
+   "fin": 136.175
+  },
+  {
+   "id": "ia",
+   "inicio": 136.175,
+   "fin": 151.721
+  },
+  {
+   "id": "cierre",
+   "inicio": 151.721,
+   "fin": 160.042
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 9.402,
+   "texto": "En 1996, un estudio con miles de enfermeras concluyó que la terapia hormonal con progestina bajaba el riesgo coronario en 61%.",
+   "cue": "obs"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 9.522,
+   "fin": 16.733,
+   "texto": "En 2002, un experimento aleatorizado con la misma terapia encontró lo contrario: 29% más riesgo. ¿A cuál le crees?",
+   "cue": "rct"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 17.033,
+   "fin": 21.107,
+   "texto": "Cuasi-experimentos, capítulo 1: la pirámide de la evidencia.",
+   "cue": null
+  },
+  {
+   "escena": "piramide",
+   "inicio": 21.407,
+   "fin": 31.157,
+   "texto": "La medicina basada en evidencia ordena los estudios en una pirámide. Abajo, la opinión de expertos y los casos aislados. Luego, los estudios observacionales: caso-control y cohortes.",
+   "cue": "base"
+  },
+  {
+   "escena": "piramide",
+   "inicio": 31.277,
+   "fin": 39.127,
+   "texto": "Más arriba, los cuasi-experimentos. Después, los experimentos aleatorizados. Y en la cima, las revisiones sistemáticas que combinan muchos estudios.",
+   "cue": "cima"
+  },
+  {
+   "escena": "piramide",
+   "inicio": 39.247,
+   "fin": 46.522,
+   "texto": "En tecnología es igual: la anécdota, el dashboard, el despliegue por región, el A/B y el meta-análisis de muchas pruebas.",
+   "cue": "tech"
+  },
+  {
+   "escena": "ecm",
+   "inicio": 46.822,
+   "fin": 53.627,
+   "texto": "¿Por qué ese orden? Por una fórmula: el error cuadrático de una estimación es el sesgo al cuadrado más la varianza dividida por n.",
+   "cue": "mse"
+  },
+  {
+   "escena": "ecm",
+   "inicio": 53.747,
+   "fin": 62.323,
+   "texto": "Más datos achican la varianza, del orden de 1/n. Pero el sesgo no se mueve con más datos: es de orden 1. Subir en la pirámide es achicar el sesgo, no la muestra.",
+   "cue": "orden"
+  },
+  {
+   "escena": "meng",
+   "inicio": 62.623,
+   "fin": 70.602,
+   "texto": "¿Un millón de datos no vale nada? Xiao-Li Meng (Harvard) lo calculó para las encuestas de la elección de EE. UU. de 2016.",
+   "cue": "meng"
+  },
+  {
+   "escena": "meng",
+   "inicio": 70.722,
+   "fin": 80.365,
+   "texto": "Con una correlación de apenas 0,005 entre responder y la respuesta, 2,3 millones de respuestas equivalían a una muestra al azar de unas 400 personas.",
+   "cue": "cuatrocientos"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 80.665,
+   "fin": 90.691,
+   "texto": "La mirada bayesiana: partes con una creencia, y cada estudio la actualiza. Si todo es normal, la creencia final es un promedio ponderado: cada estudio pesa 1 sobre su varianza.",
+   "cue": "prior"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 90.811,
+   "fin": 99.11,
+   "texto": "Si un estudio puede tener sesgo, a su varianza se le suma la incertidumbre del sesgo, τ². Y su peso queda con un techo: 1/τ².",
+   "cue": "tau"
+  },
+  {
+   "escena": "bayes",
+   "inicio": 99.23,
+   "fin": 107.209,
+   "texto": "En este ejemplo, un estudio observacional infinito vale lo mismo que un experimento de 100 personas. Por eso los datos masivos no te suben en la pirámide.",
+   "cue": "techo"
+  },
+  {
+   "escena": "grade",
+   "inicio": 107.509,
+   "fin": 117.855,
+   "texto": "Pero la pirámide no es una ley. El sistema GRADE baja la confianza de un experimento con problemas: sesgo, inconsistencia, imprecisión, evidencia indirecta o sesgo de publicación.",
+   "cue": "baja"
+  },
+  {
+   "escena": "grade",
+   "inicio": 117.975,
+   "fin": 126.082,
+   "texto": "Y sube la de un observacional con un efecto muy grande, o con dosis-respuesta. Un buen cuasi-experimento puede valer más que un mal experimento.",
+   "cue": "sube"
+  },
+  {
+   "escena": "kohavi",
+   "inicio": 126.382,
+   "fin": 135.875,
+   "texto": "La base de la pirámide, la intuición, falla más de lo que crees. En Microsoft, Ronny Kohavi y su equipo encontraron que solo un tercio de las ideas probadas mejoraba la métrica que buscaba.",
+   "cue": "tercio"
+  },
+  {
+   "escena": "ia",
+   "inicio": 136.175,
+   "fin": 143.151,
+   "texto": "¿Cuánta evidencia pedir antes de poner un agente de IA en producción? Depende de cuánto cuesta equivocarse.",
+   "cue": "costo"
+  },
+  {
+   "escena": "ia",
+   "inicio": 143.271,
+   "fin": 151.421,
+   "texto": "Un cambio de prompt que puedes revertir en un minuto puede salir con un cuasi-experimento. Reemplazar un proceso humano exige un experimento aleatorizado.",
+   "cue": "revertir"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 151.721,
+   "fin": 159.742,
+   "texto": "La pregunta no es cuántos datos tienes, sino de qué nivel. En el próximo capítulo: qué es exactamente un cuasi-experimento. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

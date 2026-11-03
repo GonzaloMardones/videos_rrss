@@ -11,7 +11,51 @@ Proyecto Remotion dedicado a crear videos para redes sociales (formato vertical 
   </a>
 </p>
 
-Welcome to your Remotion project!
+## Capítulos
+
+| # | Composición | Tema | Guion y fuentes |
+| --- | --- | --- | --- |
+| 1 | `Cap01-Chile2026` | ¿Cómo está Chile en 2026? | [GUION.md](src/capitulos/01-chile-2026/GUION.md) |
+| 2 | `Cap02-StolperSamuelson` | Cuando sube el cobre, ¿quién gana? | [GUION.md](src/capitulos/02-stolper-samuelson/GUION.md) |
+| 3 | `Cap03-InflacionAutonomia` | ¿Quién tiene la culpa de la inflación? | [GUION.md](src/capitulos/03-inflacion-autonomia/GUION.md) |
+| 4 | `Cap04-ZanjaFrontera` | La zanja de la frontera norte | [GUION.md](src/capitulos/04-zanja-frontera/GUION.md) |
+| 5 | `Cap05-ApuestaAFP` | La apuesta de las AFP (swaps y fondo E) | [GUION.md](src/capitulos/05-apuesta-afp/GUION.md) |
+| 6 | `Cap06-QuienGana` | ¿Quién gana cuando el fondo pierde? (incentivos y política) | [GUION.md](src/capitulos/06-quien-gana/GUION.md) |
+
+Cada capítulo vive en `src/capitulos/<nn>-<tema>/`: el guion de la voz en `guion.json`, las cifras y fuentes en `data.ts` y las escenas en `escenas/`. Los componentes compartidos (estructura de capítulo, fondo animado, subtítulos, gráficos, ilustraciones y transiciones) están en `src/components/` y la paleta en `src/theme.ts`.
+
+## Voz en off, música y efectos
+
+La voz se genera localmente con [Kokoro](https://github.com/thewh1teagle/kokoro-onnx) (voz `em_alex` con fonética latinoamericana `es-419`), se procesa con ffmpeg para que suene más cálida y se verifica con Whisper vía [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx). Las animaciones se sincronizan con cada frase mediante `timeline.json`.
+
+```console
+pip install kokoro-onnx sherpa-onnx soundfile numpy
+
+# Modelos (una sola vez), en una carpeta fuera del repo, p. ej. ~/modelos-voz
+curl -L -o ~/modelos-voz/kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+curl -L -o ~/modelos-voz/voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+curl -L https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-small.tar.bz2 | tar xj -C ~/modelos-voz
+
+# Voz + línea de tiempo (con --verificar transcribe cada frase para revisar la pronunciación)
+python3 scripts/narrar.py src/capitulos/01-chile-2026 public/cap01 ~/modelos-voz --verificar
+
+# Música de fondo y efectos (sintetizados, sin derechos de autor)
+python3 scripts/musica.py 136 public/cap01/musica.mp3 public/sfx
+```
+
+Otras voces Kokoro en español: `ef_dora` (femenina), `em_santa`. También funcionan voces Piper (`"motor": "piper"`, p. ej. `es_MX-claude-high`). Se cambia en `guion.json`.
+
+### Voz con ElevenLabs (recomendada)
+
+```console
+export ELEVENLABS_API_KEY=...          # nunca la escribas en el repo
+python3 scripts/voces_elevenlabs.py buscar chilean male     # voces con acento chileno
+python3 scripts/voces_elevenlabs.py agregar <public_owner_id> <voice_id> "Narrador"
+```
+
+Luego, en `guion.json`: `"motor": "elevenlabs"`, `"voz": "<voice_id>"` y, opcionalmente, `"modelo"` y `"ajustes"` (stability, similarity_boost, style). Cada frase se genera con la anterior y la siguiente como contexto para que el relato fluya. El capítulo 1 usa unos 2.300 caracteres, dentro del plan gratis.
+
+Para la voz más humana posible, graba la tuya leyendo el guion de `GUION.md` y reemplaza `narracion.mp3` (ajustando los tiempos de `timeline.json`).
 
 ## Commands
 
@@ -30,7 +74,9 @@ npm run dev
 **Render video**
 
 ```console
-npm run render   # -> out/video.mp4
+npm run render -- Cap04-ZanjaFrontera cap04-zanja-frontera
+# -> out/cap04-zanja-frontera.mp4 y out/cap04-zanja-frontera-movil.mp4
+#    (un solo .mp4 con video y audio: -14 LUFS, 48 kHz, faststart)
 ```
 
 **Upgrade Remotion**
@@ -54,3 +100,12 @@ Found an issue with Remotion? [File an issue here](https://github.com/remotion-d
 ## License
 
 Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+
+## Cápsulas técnicas
+
+Serie aparte, para profesionales que trabajan en IA. Misma tubería (guion → narración → escenas), carpeta `src/capsulas/`.
+
+| # | Composición | Tema | Guion |
+|---|---|---|---|
+| 01 | `Tec01-AnatomiaIA` | Anatomía de un proyecto de IA: las 5 capas y por qué el RAG acelera | [GUION.md](src/capsulas/01-anatomia-ia/GUION.md) |
+| 02 | `Tec02-AgenteGrafo` | El agente como grafo de estados y cómo conversa con frontend, backend y nube | [GUION.md](src/capsulas/02-agente-grafo/GUION.md) |

@@ -1,0 +1,167 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.25,
+ "pausaFrase": 0.1,
+ "pausaEscena": 0.26,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Y una línea en tu currículum dice: sé ajustar modelos de lenguaje.",
+     "muestra": "Una línea en tu currículum dice: «sé ajustar modelos de lenguaje».",
+     "en": "A line on your resume says: “I can fine-tune language models.”",
+     "cue": "linea"
+    },
+    {
+     "dice": "Y un repositorio con el modelo, la evaluación y su ficha técnica lo demuestra. Esa diferencia es evidencia.",
+     "muestra": "Un repositorio con el modelo, la evaluación y su ficha técnica lo demuestra. Esa diferencia es evidencia.",
+     "en": "A repository with the model, the evaluation and its model card proves it. That difference is evidence.",
+     "cue": "repo",
+     "pausa": 0.2
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Y en esta cápsula técnica: código abierto, y un portafolio que se pueda verificar.",
+     "muestra": "Cápsula técnica: código abierto y un portafolio que se pueda verificar.",
+     "en": "Tech capsule: open source and a portfolio that can be verified."
+    }
+   ]
+  },
+  {
+   "id": "evidencia",
+   "frases": [
+    {
+     "dice": "Y en clave beisiana: las chances posteriores son las chances previas por la razón de verosimilitud.",
+     "muestra": "En clave bayesiana: las chances posteriores son las chances previas × la razón de verosimilitud.",
+     "en": "In Bayesian terms: posterior odds = prior odds × the likelihood ratio.",
+     "cue": "odds"
+    },
+    {
+     "dice": "Y si un reclutador cree que el diez por ciento de los candidatos sabe hacerlo, y tu proyecto es nueve veces más probable si sabes, su creencia sube al cincuenta por ciento.",
+     "muestra": "Si un reclutador cree que el 10 % de los candidatos sabe hacerlo, y tu proyecto es 9 veces más probable si sabes, su creencia sube al 50 %.",
+     "en": "If a recruiter believes 10% of candidates can do it, and your project is 9× more likely if you can, their belief rises to 50%.",
+     "cue": "diez"
+    }
+   ]
+  },
+  {
+   "id": "finetune",
+   "frases": [
+    {
+     "dice": "Y publicar un ajuste es liviano: un adaptador lora de rango dieciséis sobre un modelo de siete mil millones pesa unos diecisiete megas, frente a catorce giga baits del modelo base.",
+     "muestra": "Publicar un ajuste es liviano: un adaptador LoRA de rango 16 sobre un modelo de 7.000 millones pesa unos 17 MB, frente a 14 GB del modelo base.",
+     "en": "Publishing a fine-tune is light: a rank-16 LoRA adapter on a 7-billion-parameter model weighs about 17 MB, versus 14 GB for the base model.",
+     "cue": "adaptador"
+    },
+    {
+     "dice": "Y súbelo al hub de jáguin feis con su licencia, y deja claro qué modelo base usaste.",
+     "muestra": "Súbelo al Hub de Hugging Face con su licencia, y deja claro qué modelo base usaste.",
+     "en": "Push it to the Hugging Face Hub with its license, and state clearly which base model you used.",
+     "cue": "licencia"
+    }
+   ]
+  },
+  {
+   "id": "ficha",
+   "frases": [
+    {
+     "dice": "Y la ficha técnica del modelo responde lo esencial: para qué sirve, con qué datos se entrenó, cómo se evaluó, y dónde falla.",
+     "muestra": "La ficha técnica del modelo (model card) responde lo esencial: para qué sirve, con qué datos se entrenó, cómo se evaluó y dónde falla.",
+     "en": "The model card answers the essentials: what it is for, what data trained it, how it was evaluated, and where it fails.",
+     "cue": "secciones"
+    },
+    {
+     "dice": "Y las métricas se reportan por grupos, no solo en promedio: un modelo puede ir bien en general y mal para un segmento.",
+     "muestra": "Las métricas se reportan por grupos, no solo en promedio: un modelo puede ir bien en general y mal para un segmento.",
+     "en": "Metrics are reported by group, not just on average: a model can do well overall and badly for one segment.",
+     "cue": "grupos"
+    }
+   ]
+  },
+  {
+   "id": "reproducir",
+   "frases": [
+    {
+     "dice": "Y reproducir un péiper es el mejor entrenamiento: implementas el método, corres con varias semillas, y comparas tu número con el reportado.",
+     "muestra": "Reproducir un paper es el mejor entrenamiento: implementas el método, corres con varias semillas y comparas tu número con el reportado.",
+     "en": "Reproducing a paper is the best training: implement the method, run several seeds, and compare your number with the reported one.",
+     "cue": "paper"
+    },
+    {
+     "dice": "Y si no coincide, también es un resultado: documenta la diferencia, y qué detalle faltaba en el péiper.",
+     "muestra": "Si no coincide, también es un resultado: documenta la diferencia y qué detalle faltaba en el paper.",
+     "en": "If it does not match, that is a result too: document the gap and which detail was missing from the paper.",
+     "cue": "honesto"
+    }
+   ]
+  },
+  {
+   "id": "desmontar",
+   "frases": [
+    {
+     "dice": "Y desmontar un benchmark enseña mucho: en diez test sets famosos, al menos el tres coma tres por ciento de las etiquetas estaban mal. En ImageNet, el seis por ciento.",
+     "muestra": "Desmontar un benchmark enseña mucho: en 10 test sets famosos, al menos el 3,3 % de las etiquetas estaban mal. En ImageNet, el 6 %.",
+     "en": "Tearing down a benchmark teaches a lot: across 10 famous test sets, at least 3.3% of labels were wrong. In ImageNet, 6%.",
+     "cue": "errores"
+    },
+    {
+     "dice": "Y con un poco más de etiquetas erróneas, un ResNet dieciocho le gana a un ResNet cincuenta. El ranking era frágil.",
+     "muestra": "Con un poco más de etiquetas erróneas, un ResNet-18 le gana a un ResNet-50. El ranking era frágil.",
+     "en": "With a few more wrong labels, a ResNet-18 beats a ResNet-50. The ranking was fragile.",
+     "cue": "ranking"
+    }
+   ]
+  },
+  {
+   "id": "estructura",
+   "frases": [
+    {
+     "dice": "Y cada proyecto, con la misma estructura: el problema, una línea base, tu método, la evaluación con barras de error, la ficha técnica, una demo, y un texto corto que lo explique.",
+     "muestra": "Cada proyecto, con la misma estructura: el problema, una línea base, tu método, la evaluación con barras de error, la ficha técnica, una demo y un texto corto que lo explique.",
+     "en": "Every project, with the same structure: the problem, a baseline, your method, the evaluation with error bars, the model card, a demo and a short write-up.",
+     "cue": "pasos"
+    }
+   ]
+  },
+  {
+   "id": "nube",
+   "frases": [
+    {
+     "dice": "Y en gúgol claud, model garden despliega modelos de jáguin feis con un clic en vértex ei ai; y clau run sirve tu demo, y escala a cero cuando nadie la usa.",
+     "muestra": "En Google Cloud, Model Garden despliega modelos de Hugging Face con un clic en Vertex AI; y Cloud Run sirve tu demo y escala a cero cuando nadie la usa.",
+     "en": "On Google Cloud, Model Garden deploys Hugging Face models to Vertex AI with one click; and Cloud Run serves your demo and scales to zero when nobody is using it.",
+     "cue": "gcp"
+    }
+   ]
+  },
+  {
+   "id": "bases",
+   "frases": [
+    {
+     "dice": "Y las bases: chances y razón de verosimilitud, el tamaño de un adaptador, reproducir con barras de error, y el ruido en las etiquetas.",
+     "muestra": "Las bases: chances y razón de verosimilitud, el tamaño de un adaptador, reproducir con barras de error y el ruido en las etiquetas.",
+     "en": "The basics: odds and likelihood ratios, the size of an adapter, reproducing with error bars and label noise.",
+     "cue": "bases"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Y si te sirvió, compártelo y sígueme.",
+     "muestra": "Si te sirvió, compártelo y sígueme.",
+     "en": "If this helped, share and follow.",
+     "cue": "cta"
+    }
+   ]
+  }
+ ]
+}

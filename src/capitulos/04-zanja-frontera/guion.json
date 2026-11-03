@@ -1,0 +1,241 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Hoy, en el norte de Chile se construye una zanja de tres metros de ancho y tres de profundidad.",
+          "muestra": "Hoy, en el norte de Chile se construye una zanja de 3 metros de ancho y 3 de profundidad.",
+          "cue": "zanja",
+          "pausa": 0.2
+        },
+        {
+          "dice": "La promesa es frenar el ingreso irregular. ¿Funciona? Veamos los números.",
+          "muestra": "La promesa es frenar el ingreso irregular. ¿Funciona? Veamos los números.",
+          "cue": "numeros"
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Capítulo cuatro: la zanja de la frontera norte.",
+          "muestra": "Capítulo 4: la zanja de la frontera norte."
+        }
+      ]
+    },
+    {
+      "id": "tamano",
+      "frases": [
+        {
+          "dice": "La meta del gobierno es cavar sesenta kilómetros.",
+          "muestra": "La meta del gobierno es cavar 60 kilómetros.",
+          "cue": "meta"
+        },
+        {
+          "dice": "Pero la frontera norte mide más de mil kilómetros.",
+          "muestra": "Pero la frontera norte mide más de 1.000 kilómetros.",
+          "cue": "frontera"
+        },
+        {
+          "dice": "La zanja cubre apenas un seis por ciento del total.",
+          "muestra": "La zanja cubre apenas un 6% del total.",
+          "cue": "seis"
+        }
+      ]
+    },
+    {
+      "id": "costo",
+      "frases": [
+        {
+          "dice": "¿Y cuánto cuesta? Construirla, cerca de cuatro mil millones de pesos.",
+          "muestra": "¿Y cuánto cuesta? Construirla, cerca de $4.000 millones.",
+          "cue": "obras"
+        },
+        {
+          "dice": "Mantener las obras, unos seis mil millones al año.",
+          "muestra": "Mantener las obras, unos $6.000 millones al año.",
+          "cue": "anual"
+        },
+        {
+          "dice": "Y lo que cuestan los mil cien militares desplegados, no se ha informado.",
+          "muestra": "Y lo que cuestan los 1.100 militares desplegados, no se ha informado.",
+          "cue": "militares"
+        }
+      ]
+    },
+    {
+      "id": "resultados",
+      "frases": [
+        {
+          "dice": "Según el gobierno, entre enero y agosto las personas detectadas por la policía en la frontera norte bajaron un noventa y tres por ciento.",
+          "muestra": "Según el gobierno, entre enero y agosto las personas detectadas por la PDI en la frontera norte bajaron un 93%.",
+          "cue": "noventa"
+        },
+        {
+          "dice": "En Colchane, pasaron de cuatro mil ochenta y siete personas a solo ochenta y cinco personas.",
+          "muestra": "En Colchane, pasaron de 4.087 personas a solo 85.",
+          "cue": "colchane"
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "frases": [
+        {
+          "dice": "Pero ojo: detectar menos no es lo mismo que entrar menos.",
+          "muestra": "Pero ojo: detectar menos no es lo mismo que entrar menos.",
+          "cue": "ojo",
+          "pausa": 0.2
+        },
+        {
+          "dice": "Si la gente evita los puntos vigilados, también bajan las detecciones.",
+          "muestra": "Si la gente evita los puntos vigilados, también bajan las detecciones.",
+          "cue": "evita"
+        },
+        {
+          "dice": "De hecho, las denuncias por ingreso clandestino cayeron solo un treinta y tres por ciento.",
+          "muestra": "De hecho, las denuncias por ingreso clandestino cayeron solo un 33%.",
+          "cue": "denuncias"
+        }
+      ]
+    },
+    {
+      "id": "causas",
+      "frases": [
+        {
+          "dice": "Además, la zanja no llegó sola.",
+          "muestra": "Además, la zanja no llegó sola.",
+          "cue": "sola"
+        },
+        {
+          "dice": "Llegaron más militares, más controles y más tecnología al mismo tiempo.",
+          "muestra": "Llegaron más militares, más controles y más tecnología al mismo tiempo.",
+          "cue": "juntos"
+        },
+        {
+          "dice": "Y los ingresos ya venían bajando desde antes. Separar el efecto de la zanja no es fácil.",
+          "muestra": "Y los ingresos ya venían bajando desde antes. Separar el efecto de la zanja no es fácil.",
+          "cue": "antes"
+        }
+      ]
+    },
+    {
+      "id": "beneficio",
+      "frases": [
+        {
+          "dice": "Entonces, ¿cuál es el beneficio real?",
+          "muestra": "Entonces, ¿cuál es el beneficio real?",
+          "cue": "real"
+        },
+        {
+          "dice": "La zanja frena sobre todo a los vehículos: el contrabando y los autos robados.",
+          "muestra": "La zanja frena sobre todo a los vehículos: el contrabando y los autos robados.",
+          "cue": "autos"
+        },
+        {
+          "dice": "Pero una persona a pie puede rodearla en pocos minutos.",
+          "muestra": "Pero una persona a pie puede rodearla en pocos minutos.",
+          "cue": "pie"
+        }
+      ]
+    },
+    {
+      "id": "riesgos",
+      "frases": [
+        {
+          "dice": "Y tiene riesgos.",
+          "muestra": "Y tiene riesgos.",
+          "cue": "riesgos"
+        },
+        {
+          "dice": "Quienes igual cruzan buscan rutas más peligrosas, con frío extremo y sin agua.",
+          "muestra": "Quienes igual cruzan buscan rutas más peligrosas, con frío extremo y sin agua.",
+          "cue": "rutas"
+        },
+        {
+          "dice": "Las obras pueden dañar bofedales y fauna del altiplano.",
+          "muestra": "Las obras pueden dañar bofedales y fauna del altiplano.",
+          "cue": "bofedales"
+        },
+        {
+          "dice": "Y mantener a tantos militares por años es difícil de sostener.",
+          "muestra": "Y mantener a tantos militares por años es difícil de sostener.",
+          "cue": "sostener"
+        }
+      ]
+    },
+    {
+      "id": "calculo",
+      "frases": [
+        {
+          "dice": "Hagamos un cálculo propio.",
+          "muestra": "Hagamos un cálculo propio.",
+          "cue": "calculo"
+        },
+        {
+          "dice": "Cada kilómetro cuesta unos sesenta y siete millones de pesos.",
+          "muestra": "Cada kilómetro cuesta unos $67 millones.",
+          "cue": "km"
+        },
+        {
+          "dice": "Cubrir toda la frontera costaría casi setenta mil millones, sin contar la mantención.",
+          "muestra": "Cubrir toda la frontera costaría casi $70.000 millones, sin contar la mantención.",
+          "cue": "total"
+        },
+        {
+          "dice": "Y si toda la baja de denuncias fuera por el plan, cada ingreso menos costaría más de seiscientos mil pesos al año, solo en mantención.",
+          "muestra": "Y si toda la baja de denuncias fuera por el plan, cada ingreso menos costaría más de $600 mil al año, solo en mantención.",
+          "cue": "porIngreso"
+        }
+      ]
+    },
+    {
+      "id": "falta",
+      "frases": [
+        {
+          "dice": "¿Qué falta? Primero, conocer el costo total, incluidos los militares.",
+          "muestra": "¿Qué falta? Primero, conocer el costo total, incluidos los militares.",
+          "cue": "falta"
+        },
+        {
+          "dice": "Segundo, evaluar con un grupo de comparación: tramos con zanja y tramos sin ella.",
+          "muestra": "Segundo, evaluar con un grupo de comparación: tramos con zanja y tramos sin ella.",
+          "cue": "comparar"
+        },
+        {
+          "dice": "Y tercero, coordinarse con Perú y Bolivia.",
+          "muestra": "Y tercero, coordinarse con Perú y Bolivia.",
+          "cue": "vecinos"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "La zanja puede ayudar en algunos tramos, pero no basta por sí sola.",
+          "muestra": "La zanja puede ayudar en algunos tramos, pero no basta por sí sola.",
+          "cue": "ayuda"
+        },
+        {
+          "dice": "Y si no se mide bien, nunca sabremos si valió la pena.",
+          "muestra": "Y si no se mide bien, nunca sabremos si valió la pena.",
+          "cue": "medir"
+        },
+        {
+          "dice": "Compártelo y sígueme para el capítulo cinco.",
+          "muestra": "Compártelo y sígueme para el capítulo 5.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}

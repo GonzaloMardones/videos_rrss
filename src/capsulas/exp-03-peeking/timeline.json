@@ -1,0 +1,148 @@
+{
+ "duracion": 93.317,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 8.657
+  },
+  {
+   "id": "titulo",
+   "inicio": 8.657,
+   "fin": 12.797
+  },
+  {
+   "id": "paseo",
+   "inicio": 12.797,
+   "fin": 25.441
+  },
+  {
+   "id": "cuanto",
+   "inicio": 25.441,
+   "fin": 34.637
+  },
+  {
+   "id": "fijo",
+   "inicio": 34.637,
+   "fin": 41.934
+  },
+  {
+   "id": "grupos",
+   "inicio": 41.934,
+   "fin": 63.445
+  },
+  {
+   "id": "pocock",
+   "inicio": 63.445,
+   "fin": 68.502
+  },
+  {
+   "id": "siempre",
+   "inicio": 68.502,
+   "fin": 77.058
+  },
+  {
+   "id": "regla",
+   "inicio": 77.058,
+   "fin": 86.318
+  },
+  {
+   "id": "cierre",
+   "inicio": 86.318,
+   "fin": 93.317
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.357,
+   "texto": "Imagina que miras tu experimento cada mañana. El día 9 sale significativo, y lo detienes. Acabas de más que triplicar tu probabilidad de equivocarte.",
+   "cue": "gancho"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 8.657,
+   "fin": 12.497,
+   "texto": "Idea 3 del mapa de la experimentación: mirar antes de tiempo (peeking).",
+   "cue": null
+  },
+  {
+   "escena": "paseo",
+   "inicio": 12.797,
+   "fin": 17.639,
+   "texto": "Aunque el tratamiento no haga nada, el estadístico sube y baja con el azar, como un paseo aleatorio.",
+   "cue": "paseo"
+  },
+  {
+   "escena": "paseo",
+   "inicio": 17.759,
+   "fin": 25.141,
+   "texto": "El umbral de 1,96 está pensado para mirar una sola vez. Cada vistazo extra es otra oportunidad de cruzarlo por suerte.",
+   "cue": "vistazo"
+  },
+  {
+   "escena": "cuanto",
+   "inicio": 25.441,
+   "fin": 34.337,
+   "texto": "¿Cuánto crece el error? Con una mirada, 5%. Con cinco, 14%. Con diez, 19%. Y mirando todos los días durante un mes, casi 30%.",
+   "cue": "cuanto"
+  },
+  {
+   "escena": "fijo",
+   "inicio": 34.637,
+   "fin": 41.634,
+   "texto": "La primera solución es la más simple: calcula el tamaño de muestra antes, con el MDE, y mira una sola vez al final.",
+   "cue": "fijo"
+  },
+  {
+   "escena": "grupos",
+   "inicio": 41.934,
+   "fin": 49.721,
+   "texto": "La segunda: un diseño secuencial por grupos. Decides de antemano cuántas veces vas a mirar, y repartes el 5% entre esas miradas.",
+   "cue": "grupos"
+  },
+  {
+   "escena": "grupos",
+   "inicio": 49.841,
+   "fin": 57.073,
+   "texto": "Con O'Brien-Fleming y cinco miradas, el umbral parte en 4,56 y baja hasta 2,04 al final.",
+   "cue": "obf"
+  },
+  {
+   "escena": "grupos",
+   "inicio": 57.193,
+   "fin": 63.145,
+   "texto": "Muy exigente al principio, casi normal al final. Así puedes detener temprano solo si el efecto es enorme.",
+   "cue": "exigente"
+  },
+  {
+   "escena": "pocock",
+   "inicio": 63.445,
+   "fin": 68.202,
+   "texto": "Pocock, en cambio, usa el mismo umbral en cada mirada: 2,41.",
+   "cue": "pocock"
+  },
+  {
+   "escena": "siempre",
+   "inicio": 68.502,
+   "fin": 76.758,
+   "texto": "La tercera: p-valores siempre válidos (como mSPRT). Te dejan mirar cuando quieras, a cambio de un poco menos de poder.",
+   "cue": "siempre"
+  },
+  {
+   "escena": "regla",
+   "inicio": 77.058,
+   "fin": 86.018,
+   "texto": "La regla práctica: antes de lanzar, escribe cuánto dura, cuántas veces miras, y qué te hace parar. Y corre semanas completas, para no confundir el efecto con el día de la semana.",
+   "cue": "regla"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 86.318,
+   "fin": 93.017,
+   "texto": "Mirar no es el problema. Decidir mirando, sí. En la próxima idea: qué pasa cuando mides 20 métricas a la vez. Compártelo y sígueme.",
+   "cue": "cta"
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+  "motor": "kokoro",
+  "voz": "em_alex",
+  "idioma": "es-419",
+  "velocidad": 1.2,
+  "pausaFrase": 0.12,
+  "pausaEscena": 0.3,
+  "escenas": [
+    {
+      "id": "gancho",
+      "frases": [
+        {
+          "dice": "Imagina que dos analistas miran el mismo experimento. Uno dice que el efecto es cuatro. El otro dice cinco. Y los dos tienen razón.",
+          "muestra": "Imagina que dos analistas miran el mismo experimento. Uno dice que el efecto es cuatro. El otro dice cinco. Y los dos tienen razón.",
+          "cue": "gancho",
+          "pausa": 0.2
+        }
+      ]
+    },
+    {
+      "id": "titulo",
+      "frases": [
+        {
+          "dice": "Esta es la idea ocho del mapa de la experimentación: el zoológico de efectos.",
+          "muestra": "Idea 8 del mapa de la experimentación: el zoológico de efectos."
+        }
+      ]
+    },
+    {
+      "id": "dios",
+      "frases": [
+        {
+          "dice": "Para verlo, hagamos trampa. Ocho personas, y por una vez vemos sus dos mundos: su resultado con tratamiento, y sin él.",
+          "muestra": "Para verlo, hagamos trampa. Ocho personas, y por una vez vemos sus dos mundos: su resultado con tratamiento, y sin él.",
+          "cue": "dios"
+        },
+        {
+          "dice": "La diferencia de cada persona es su efecto individual. En la vida real, nunca lo vemos.",
+          "muestra": "La diferencia de cada persona es su efecto individual. En la vida real, nunca lo vemos.",
+          "cue": "individual"
+        }
+      ]
+    },
+    {
+      "id": "ate",
+      "frases": [
+        {
+          "dice": "El promedio de todos los efectos es el efecto promedio del tratamiento, el ate. Aquí, treinta y dos dividido por ocho: cuatro.",
+          "muestra": "El promedio de todos es el ATE, el efecto promedio del tratamiento: 32 / 8 = 4.",
+          "cue": "ate"
+        }
+      ]
+    },
+    {
+      "id": "att",
+      "frases": [
+        {
+          "dice": "Y si promedias solo a los que recibieron el tratamiento, tienes el ate te: el efecto en los tratados. Aquí, cinco.",
+          "muestra": "Si promedias solo a los que recibieron el tratamiento, tienes el ATT, el efecto en los tratados: 5.",
+          "cue": "att"
+        },
+        {
+          "dice": "Y en los que no lo recibieron, el ate u: tres. El efecto promedio es la mezcla de ambos.",
+          "muestra": "Y en los que no lo recibieron, el ATU: 3. El ATE es la mezcla de ambos: ½ · 5 + ½ · 3 = 4.",
+          "cue": "atu"
+        }
+      ]
+    },
+    {
+      "id": "cate",
+      "frases": [
+        {
+          "dice": "Si promedias dentro de un subgrupo, tienes el cate: el efecto condicional. Jóvenes, seis coma cinco. Mayores, uno coma cinco.",
+          "muestra": "Si promedias dentro de un subgrupo, tienes el CATE, el efecto condicional. Jóvenes: 6,5. Mayores: 1,5.",
+          "cue": "cate"
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "frases": [
+        {
+          "dice": "Y si un instrumento empuja a algunos a tratarse, el late es el efecto solo en ellos, los que cambiaron por el empujón. Aquí, tres coma setenta y cinco.",
+          "muestra": "Y si un instrumento empuja a algunos a tratarse, el LATE es el efecto solo en ellos, los que cambiaron por el empujón: 3,75.",
+          "cue": "late"
+        }
+      ]
+    },
+    {
+      "id": "ingenuo",
+      "frases": [
+        {
+          "dice": "¿Y la comparación ingenua, tratados contra no tratados? Da seis. No es ninguno de los anteriores.",
+          "muestra": "¿Y la comparación ingenua, tratados contra no tratados? Da 18 − 12 = 6. No es ninguno de los anteriores.",
+          "cue": "ingenuo"
+        },
+        {
+          "dice": "Es el efecto en los tratados, cinco, más un sesgo de selección de uno: los tratados ya estaban mejor sin tratamiento.",
+          "muestra": "Es el ATT (5) más un sesgo de selección de 1: los tratados ya estaban mejor sin tratamiento.",
+          "cue": "sesgo"
+        }
+      ]
+    },
+    {
+      "id": "metodos",
+      "frases": [
+        {
+          "dice": "Cada método estima un animal distinto. Un experimento con sorteo, el ate. El emparejamiento y las diferencias en diferencias, usualmente el ate te. La variable instrumental, el efecto local, o late. Y la regresión discontinua, el efecto justo en el corte.",
+          "muestra": "Cada método estima un animal distinto. Experimento: ATE. Emparejamiento y DiD: usualmente ATT. Variable instrumental: LATE. Regresión discontinua: el efecto en el corte.",
+          "cue": "metodos"
+        }
+      ]
+    },
+    {
+      "id": "cierre",
+      "frases": [
+        {
+          "dice": "Antes de discutir el número, pregunta en quién. En la próxima idea, efectos heterogéneos a fondo. Compártelo y sígueme.",
+          "muestra": "Antes de discutir el número, pregunta en quién. En la próxima idea, efectos heterogéneos a fondo. Compártelo y sígueme.",
+          "cue": "cta"
+        }
+      ]
+    }
+  ]
+}
