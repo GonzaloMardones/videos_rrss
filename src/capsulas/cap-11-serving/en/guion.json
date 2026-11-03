@@ -44,7 +44,7 @@
      "cue": "prefill"
     },
     {
-     "dice": "Decode generates one token at a time, and sets the time between tokens. One is compute-bound; the other, memory-bound.",
+     "dice": "Decoding generates one token at a time, and sets the time between tokens. One is compute-bound; the other, memory-bound.",
      "muestra": "Decode generates one token at a time and sets the time between tokens. One is compute-bound; the other, memory-bound.",
      "es": "El decode genera de a un token y limita el tiempo entre tokens. Una se limita por cómputo; la otra, por memoria.",
      "cue": "decode"
@@ -55,7 +55,7 @@
    "id": "paged",
    "frases": [
     {
-     "dice": "PagedAttention splits the cache into small blocks, like pages: each request uses only the blocks it needs, instead of reserving the maximum length.",
+     "dice": "Paged Attention splits the cache into small blocks, like pages: each request uses only the blocks it needs, instead of reserving the maximum length.",
      "muestra": "PagedAttention splits the cache into small blocks, like pages: each request uses only the blocks it needs, instead of reserving the maximum length.",
      "es": "PagedAttention parte la caché en bloques pequeños, como páginas: cada pedido usa solo los bloques que necesita y no reserva el largo máximo.",
      "cue": "bloques"
@@ -72,7 +72,7 @@
    "id": "batching",
    "frases": [
     {
-     "dice": "With static batches, everyone waits for the longest answer: with lengths of one hundred, four hundred, fifty and two hundred fifty tokens, half the batch sits idle.",
+     "dice": "With static batches, everyone waits for the longest answer: with lengths of one hundred, then four hundred, then fifty, and two hundred fifty tokens, half the batch sits idle.",
      "muestra": "With static batches, everyone waits for the longest answer: with lengths of 100, 400, 50 and 250 tokens, half the batch sits idle.",
      "es": "Con lotes estáticos, todos esperan a la respuesta más larga: con largos de 100, 400, 50 y 250 tokens, la mitad del lote queda ociosa.",
      "cue": "estatico"

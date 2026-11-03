@@ -65,6 +65,10 @@ import { Cap09Inferencia, CAP09INFERENCIA_FRAMES } from "./capsulas/cap-09-infer
 import { Cap09InferenciaEN, CAP09INFERENCIAEN_FRAMES } from "./capsulas/cap-09-inferencia/Cap09InferenciaEN";
 import { Cap10MLOps, CAP10MLOPS_FRAMES } from "./capsulas/cap-10-mlops/Cap10MLOps";
 import { Cap10MLOpsEN, CAP10MLOPSEN_FRAMES } from "./capsulas/cap-10-mlops/Cap10MLOpsEN";
+import { Cap11Serving, CAP11SERVING_FRAMES } from "./capsulas/cap-11-serving/Cap11Serving";
+import { Cap11ServingEN, CAP11SERVINGEN_FRAMES } from "./capsulas/cap-11-serving/Cap11ServingEN";
+import { Cap12Portafolio, CAP12PORTAFOLIO_FRAMES } from "./capsulas/cap-12-portafolio/Cap12Portafolio";
+import { Cap12PortafolioEN, CAP12PORTAFOLIOEN_FRAMES } from "./capsulas/cap-12-portafolio/Cap12PortafolioEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -866,6 +870,58 @@ export const RemotionRoot: React.FC = () => {
         id="Cap10-MLOps-EN"
         component={Cap10MLOpsEN}
         durationInFrames={CAP10MLOPSEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap11-Serving"
+        component={Cap11Serving}
+        durationInFrames={CAP11SERVING_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap11-Serving-EN"
+        component={Cap11ServingEN}
+        durationInFrames={CAP11SERVINGEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap12-Portafolio"
+        component={Cap12Portafolio}
+        durationInFrames={CAP12PORTAFOLIO_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap12-Portafolio-EN"
+        component={Cap12PortafolioEN}
+        durationInFrames={CAP12PORTAFOLIOEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}

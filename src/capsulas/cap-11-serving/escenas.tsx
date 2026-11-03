@@ -79,7 +79,7 @@ export const Fases: React.FC = () => {
           prompt · all at once
         </div>
         {Array.from({ length: 14 }, (_, i) => (
-          <div key={i} style={{ width: 30, height: 56, borderRadius: 6, background: n.verde, opacity: i / 14 <= kD ? 1 : 0 }} />
+          <div key={i} style={{ width: 30, height: 56, borderRadius: 6, background: n.verde, opacity: kD > 0 && i / 14 < kD ? 1 : 0 }} />
         ))}
       </div>
       <div style={{ display: "flex", gap: 16, marginTop: 20 }}>
@@ -286,7 +286,7 @@ export const Little: React.FC = () => {
         columnas={3}
       />
       <div style={{ marginTop: 26 }}>
-        <Ejes ancho={912} alto={400} x={[0, 12]} y={[0, 0.32]} at={cP} rotuloX="latency (s) →" rotuloY="share of requests" marcasX={[0, 2, 4, 6, 8, 10, 12].map((m) => ({ v: m, t: String(m) }))}>
+        <Ejes ancho={912} alto={400} x={[0, 12]} y={[0, 0.38]} at={cP} rotuloX="latency (s) →" rotuloY="share of requests" marcasX={[0, 2, 4, 6, 8, 10, 12].map((m) => ({ v: m, t: String(m) }))}>
           {({ px, py }) => (
             <g opacity={kH}>
               <path d={`M${px(xs[0])},${py(0)} ${xs.map((x) => `L${px(x)},${py(dens(x))}`).join(" ")} L${px(xs[xs.length - 1])},${py(0)} Z`} fill={n.azulClaro} />
@@ -380,7 +380,7 @@ export const Semantico: React.FC = () => {
   const centros: [string, number, number, string][] = [
     ["billing", 180, 120, n.azul],
     ["fraud alert", 690, 150, n.rojo],
-    ["general chat", 420, 330, n.verde],
+    ["general chat", 300, 330, n.verde],
   ];
   const q: [number, number] = [610, 210];
   const kQ = transicion(frame, cI + largoI * 0.45, fps, 500, EXPO_OUT);
@@ -396,7 +396,7 @@ export const Semantico: React.FC = () => {
               <circle key={j} cx={x + 60 * Math.cos(j * 2.3 + i)} cy={y + 45 * Math.sin(j * 1.7 + i)} r={7} fill={col} opacity={0.35} />
             ))}
             <circle cx={x} cy={y} r={16} fill={col} />
-            <text x={x} y={y - 26} textAnchor="middle" fontFamily={codigo} fontSize={24} fill={col}>
+            <text x={x} y={y - 64} textAnchor="middle" fontFamily={codigo} fontSize={24} fill={col}>
               {t}
             </text>
           </g>
@@ -404,7 +404,7 @@ export const Semantico: React.FC = () => {
         <g opacity={kQ}>
           <line x1={q[0]} y1={q[1]} x2={690} y2={150} stroke={n.rojo} strokeWidth={4} strokeDasharray="8 6" opacity={kL} />
           <rect x={q[0] - 12} y={q[1] - 12} width={24} height={24} transform={`rotate(45 ${q[0]} ${q[1]})`} fill={n.texto} />
-          <text x={q[0] - 20} y={q[1] + 50} textAnchor="middle" fontFamily={codigo} fontSize={22} fill={n.texto}>
+          <text x={q[0] - 10} y={q[1] + 46} textAnchor="middle" fontFamily={codigo} fontSize={22} fill={n.texto}>
             “a charge I don’t recognize”
           </text>
         </g>

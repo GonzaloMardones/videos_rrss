@@ -89,13 +89,13 @@
    "id": "reproducir",
    "frases": [
     {
-     "dice": "Y reproducir un paper es el mejor entrenamiento: implementas el método, corres con varias semillas, y comparas tu número con el reportado.",
+     "dice": "Y reproducir un péiper es el mejor entrenamiento: implementas el método, corres con varias semillas, y comparas tu número con el reportado.",
      "muestra": "Reproducir un paper es el mejor entrenamiento: implementas el método, corres con varias semillas y comparas tu número con el reportado.",
      "en": "Reproducing a paper is the best training: implement the method, run several seeds, and compare your number with the reported one.",
      "cue": "paper"
     },
     {
-     "dice": "Y si no coincide, también es un resultado: documenta la diferencia, y qué detalle faltaba en el paper.",
+     "dice": "Y si no coincide, también es un resultado: documenta la diferencia, y qué detalle faltaba en el péiper.",
      "muestra": "Si no coincide, también es un resultado: documenta la diferencia y qué detalle faltaba en el paper.",
      "en": "If it does not match, that is a result too: document the gap and which detail was missing from the paper.",
      "cue": "honesto"

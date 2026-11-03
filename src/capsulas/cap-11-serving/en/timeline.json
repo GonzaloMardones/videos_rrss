@@ -1,0 +1,206 @@
+{
+ "duracion": 116.475,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 10.642
+  },
+  {
+   "id": "titulo",
+   "inicio": 10.642,
+   "fin": 13.786
+  },
+  {
+   "id": "fases",
+   "inicio": 13.786,
+   "fin": 27.207
+  },
+  {
+   "id": "paged",
+   "inicio": 27.207,
+   "fin": 42.591
+  },
+  {
+   "id": "batching",
+   "inicio": 42.591,
+   "fin": 57.207
+  },
+  {
+   "id": "little",
+   "inicio": 57.207,
+   "fin": 72.015
+  },
+  {
+   "id": "ruteo",
+   "inicio": 72.015,
+   "fin": 85.373
+  },
+  {
+   "id": "semantico",
+   "inicio": 85.373,
+   "fin": 98.847
+  },
+  {
+   "id": "nube",
+   "inicio": 98.847,
+   "fin": 110.353
+  },
+  {
+   "id": "bases",
+   "inicio": 110.353,
+   "fin": 114.735
+  },
+  {
+   "id": "cierre",
+   "inicio": 114.735,
+   "fin": 116.475
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.157,
+   "texto": "Early LLM servers wasted 60 to 80% of their KV cache memory.",
+   "cue": "60",
+   "es": "Los primeros servidores de LLM desperdiciaban entre el 60 y el 80 % de la memoria de la caché KV."
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.237,
+   "fin": 10.442,
+   "texto": "Organizing it like an operating system's virtual memory raised throughput 2 to 4×.",
+   "cue": "4",
+   "es": "Organizarla como la memoria virtual de un sistema operativo multiplicó el rendimiento entre 2 y 4 veces."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 10.642,
+   "fin": 13.586,
+   "texto": "Tech capsule: serving models in production and routing.",
+   "cue": null,
+   "es": "Cápsula técnica: servir modelos en producción y enrutar."
+  },
+  {
+   "escena": "fases",
+   "inicio": 13.786,
+   "fin": 19.781,
+   "texto": "Every request has two phases: prefill reads the whole prompt at once and sets the time to first token.",
+   "cue": "prefill",
+   "es": "Cada pedido tiene dos fases: el prefill lee todo el prompt de una vez y limita el tiempo hasta el primer token."
+  },
+  {
+   "escena": "fases",
+   "inicio": 19.861,
+   "fin": 27.007,
+   "texto": "Decode generates one token at a time and sets the time between tokens. One is compute-bound; the other, memory-bound.",
+   "cue": "decode",
+   "es": "El decode genera de a un token y limita el tiempo entre tokens. Una se limita por cómputo; la otra, por memoria."
+  },
+  {
+   "escena": "paged",
+   "inicio": 27.207,
+   "fin": 35.805,
+   "texto": "PagedAttention splits the cache into small blocks, like pages: each request uses only the blocks it needs, instead of reserving the maximum length.",
+   "cue": "bloques",
+   "es": "PagedAttention parte la caché en bloques pequeños, como páginas: cada pedido usa solo los bloques que necesita y no reserva el largo máximo."
+  },
+  {
+   "escena": "paged",
+   "inicio": 35.885,
+   "fin": 42.391,
+   "texto": "Blocks are shared: if a thousand requests start with the same system prompt, that prefix is computed only once.",
+   "cue": "prefijo",
+   "es": "Los bloques se comparten: si mil pedidos empiezan con el mismo prompt de sistema, ese prefijo se calcula una sola vez."
+  },
+  {
+   "escena": "batching",
+   "inicio": 42.591,
+   "fin": 51.637,
+   "texto": "With static batches, everyone waits for the longest answer: with lengths of 100, 400, 50 and 250 tokens, half the batch sits idle.",
+   "cue": "estatico",
+   "es": "Con lotes estáticos, todos esperan a la respuesta más larga: con largos de 100, 400, 50 y 250 tokens, la mitad del lote queda ociosa."
+  },
+  {
+   "escena": "batching",
+   "inicio": 51.717,
+   "fin": 57.007,
+   "texto": "Continuous batching decides at every step: when one request finishes, another takes its place.",
+   "cue": "continuo",
+   "es": "El batching continuo decide en cada paso: cuando un pedido termina, otro entra en su lugar."
+  },
+  {
+   "escena": "little",
+   "inicio": 57.207,
+   "fin": 66.509,
+   "texto": "To size the system, use Little's law: requests in flight = arrival rate × latency. 50 per second, at 4 seconds each, means 200 at once.",
+   "cue": "ley",
+   "es": "Para dimensionar, la ley de Little: pedidos en curso = tasa de llegada × latencia. 50 por segundo, con 4 segundos cada uno, son 200 simultáneos."
+  },
+  {
+   "escena": "little",
+   "inicio": 66.589,
+   "fin": 71.815,
+   "texto": "Watch percentiles, not the average: the p99 is what the unluckiest user feels.",
+   "cue": "p99",
+   "es": "Mira los percentiles, no el promedio: el p99 es lo que siente el usuario con peor suerte."
+  },
+  {
+   "escena": "ruteo",
+   "inicio": 72.015,
+   "fin": 78.757,
+   "texto": "Not every question needs the big model. In a cascade, the small one answers first and only escalates when it is unsure.",
+   "cue": "cascada",
+   "es": "No todas las preguntas necesitan el modelo grande. En una cascada, responde primero el pequeño y solo escala si no está seguro."
+  },
+  {
+   "escena": "ruteo",
+   "inicio": 78.837,
+   "fin": 85.173,
+   "texto": "If the big one costs 20× more and you escalate 30%, the expected cost drops 65%.",
+   "cue": "costo",
+   "es": "Si el grande cuesta 20 veces más y escalas el 30 %, el costo esperado baja un 65 %."
+  },
+  {
+   "escena": "semantico",
+   "inicio": 85.373,
+   "fin": 91.356,
+   "texto": "Semantic routing turns the question into an embedding and sends it to the model or tool of the nearest intent.",
+   "cue": "intencion",
+   "es": "El enrutamiento semántico convierte la pregunta en un embedding y la manda al modelo o herramienta de la intención más cercana."
+  },
+  {
+   "escena": "semantico",
+   "inicio": 91.436,
+   "fin": 98.647,
+   "texto": "At the edge, small quantized models run on the device itself: on a Mac, with MLX, without sending data to the cloud.",
+   "cue": "borde",
+   "es": "En el borde, modelos pequeños y cuantizados corren en el propio dispositivo: en un Mac, con MLX, sin enviar datos a la nube."
+  },
+  {
+   "escena": "nube",
+   "inicio": 98.847,
+   "fin": 110.153,
+   "texto": "On Google Cloud: Cloud Run with L4 GPUs scales to zero when there is no traffic; and GKE Inference Gateway routes each request by load, KV cache and LoRA adapter.",
+   "cue": "gcp",
+   "es": "En Google Cloud: Cloud Run con GPUs L4 escala a cero cuando no hay tráfico; y GKE Inference Gateway enruta cada pedido según la carga, la caché KV y el adaptador LoRA."
+  },
+  {
+   "escena": "bases",
+   "inicio": 110.353,
+   "fin": 114.535,
+   "texto": "The basics: paged memory, queueing theory, percentiles and expected value.",
+   "cue": "bases",
+   "es": "Las bases: memoria paginada, teoría de colas, percentiles y valor esperado."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 114.735,
+   "fin": 116.275,
+   "texto": "If this helped, share and follow.",
+   "cue": "cta",
+   "es": "Si te sirvió, compártelo y sígueme."
+  }
+ ]
+}

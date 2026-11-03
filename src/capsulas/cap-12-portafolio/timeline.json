@@ -1,0 +1,198 @@
+{
+ "duracion": 106.622,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 9.293
+  },
+  {
+   "id": "titulo",
+   "inicio": 9.293,
+   "fin": 13.542
+  },
+  {
+   "id": "evidencia",
+   "inicio": 13.542,
+   "fin": 27.449
+  },
+  {
+   "id": "finetune",
+   "inicio": 27.449,
+   "fin": 41.142
+  },
+  {
+   "id": "ficha",
+   "inicio": 41.142,
+   "fin": 53.278
+  },
+  {
+   "id": "reproducir",
+   "inicio": 53.278,
+   "fin": 65.649
+  },
+  {
+   "id": "desmontar",
+   "inicio": 65.649,
+   "fin": 80.579
+  },
+  {
+   "id": "estructura",
+   "inicio": 80.579,
+   "fin": 89.394
+  },
+  {
+   "id": "nube",
+   "inicio": 89.394,
+   "fin": 97.611
+  },
+  {
+   "id": "bases",
+   "inicio": 97.611,
+   "fin": 104.421
+  },
+  {
+   "id": "cierre",
+   "inicio": 104.421,
+   "fin": 106.622
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 3.578,
+   "texto": "Una línea en tu currículum dice: «sé ajustar modelos de lenguaje».",
+   "cue": "linea",
+   "en": "A line on your resume says: “I can fine-tune language models.”"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 3.678,
+   "fin": 9.033,
+   "texto": "Un repositorio con el modelo, la evaluación y su ficha técnica lo demuestra. Esa diferencia es evidencia.",
+   "cue": "repo",
+   "en": "A repository with the model, the evaluation and its model card proves it. That difference is evidence."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.293,
+   "fin": 13.282,
+   "texto": "Cápsula técnica: código abierto y un portafolio que se pueda verificar.",
+   "cue": null,
+   "en": "Tech capsule: open source and a portfolio that can be verified."
+  },
+  {
+   "escena": "evidencia",
+   "inicio": 13.542,
+   "fin": 18.491,
+   "texto": "En clave bayesiana: las chances posteriores son las chances previas × la razón de verosimilitud.",
+   "cue": "odds",
+   "en": "In Bayesian terms: posterior odds = prior odds × the likelihood ratio."
+  },
+  {
+   "escena": "evidencia",
+   "inicio": 18.591,
+   "fin": 27.189,
+   "texto": "Si un reclutador cree que el 10 % de los candidatos sabe hacerlo, y tu proyecto es 9 veces más probable si sabes, su creencia sube al 50 %.",
+   "cue": "diez",
+   "en": "If a recruiter believes 10% of candidates can do it, and your project is 9× more likely if you can, their belief rises to 50%."
+  },
+  {
+   "escena": "finetune",
+   "inicio": 27.449,
+   "fin": 36.515,
+   "texto": "Publicar un ajuste es liviano: un adaptador LoRA de rango 16 sobre un modelo de 7.000 millones pesa unos 17 MB, frente a 14 GB del modelo base.",
+   "cue": "adaptador",
+   "en": "Publishing a fine-tune is light: a rank-16 LoRA adapter on a 7-billion-parameter model weighs about 17 MB, versus 14 GB for the base model."
+  },
+  {
+   "escena": "finetune",
+   "inicio": 36.615,
+   "fin": 40.882,
+   "texto": "Súbelo al Hub de Hugging Face con su licencia, y deja claro qué modelo base usaste.",
+   "cue": "licencia",
+   "en": "Push it to the Hugging Face Hub with its license, and state clearly which base model you used."
+  },
+  {
+   "escena": "ficha",
+   "inicio": 41.142,
+   "fin": 47.115,
+   "texto": "La ficha técnica del modelo (model card) responde lo esencial: para qué sirve, con qué datos se entrenó, cómo se evaluó y dónde falla.",
+   "cue": "secciones",
+   "en": "The model card answers the essentials: what it is for, what data trained it, how it was evaluated, and where it fails."
+  },
+  {
+   "escena": "ficha",
+   "inicio": 47.215,
+   "fin": 53.018,
+   "texto": "Las métricas se reportan por grupos, no solo en promedio: un modelo puede ir bien en general y mal para un segmento.",
+   "cue": "grupos",
+   "en": "Metrics are reported by group, not just on average: a model can do well overall and badly for one segment."
+  },
+  {
+   "escena": "reproducir",
+   "inicio": 53.278,
+   "fin": 60.403,
+   "texto": "Reproducir un paper es el mejor entrenamiento: implementas el método, corres con varias semillas y comparas tu número con el reportado.",
+   "cue": "paper",
+   "en": "Reproducing a paper is the best training: implement the method, run several seeds, and compare your number with the reported one."
+  },
+  {
+   "escena": "reproducir",
+   "inicio": 60.503,
+   "fin": 65.389,
+   "texto": "Si no coincide, también es un resultado: documenta la diferencia y qué detalle faltaba en el paper.",
+   "cue": "honesto",
+   "en": "If it does not match, that is a result too: document the gap and which detail was missing from the paper."
+  },
+  {
+   "escena": "desmontar",
+   "inicio": 65.649,
+   "fin": 74.417,
+   "texto": "Desmontar un benchmark enseña mucho: en 10 test sets famosos, al menos el 3,3 % de las etiquetas estaban mal. En ImageNet, el 6 %.",
+   "cue": "errores",
+   "en": "Tearing down a benchmark teaches a lot: across 10 famous test sets, at least 3.3% of labels were wrong. In ImageNet, 6%."
+  },
+  {
+   "escena": "desmontar",
+   "inicio": 74.517,
+   "fin": 80.319,
+   "texto": "Con un poco más de etiquetas erróneas, un ResNet-18 le gana a un ResNet-50. El ranking era frágil.",
+   "cue": "ranking",
+   "en": "With a few more wrong labels, a ResNet-18 beats a ResNet-50. The ranking was fragile."
+  },
+  {
+   "escena": "estructura",
+   "inicio": 80.579,
+   "fin": 89.134,
+   "texto": "Cada proyecto, con la misma estructura: el problema, una línea base, tu método, la evaluación con barras de error, la ficha técnica, una demo y un texto corto que lo explique.",
+   "cue": "pasos",
+   "en": "Every project, with the same structure: the problem, a baseline, your method, the evaluation with error bars, the model card, a demo and a short write-up."
+  },
+  {
+   "escena": "nube",
+   "inicio": 89.394,
+   "fin": 97.351,
+   "texto": "En Google Cloud, Model Garden despliega modelos de Hugging Face con un clic en Vertex AI; y Cloud Run sirve tu demo y escala a cero cuando nadie la usa.",
+   "cue": "gcp",
+   "en": "On Google Cloud, Model Garden deploys Hugging Face models to Vertex AI with one click; and Cloud Run serves your demo and scales to zero when nobody is using it."
+  },
+  {
+   "escena": "bases",
+   "inicio": 97.611,
+   "fin": 104.161,
+   "texto": "Las bases: chances y razón de verosimilitud, el tamaño de un adaptador, reproducir con barras de error y el ruido en las etiquetas.",
+   "cue": "bases",
+   "en": "The basics: odds and likelihood ratios, the size of an adapter, reproducing with error bars and label noise."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 104.421,
+   "fin": 106.362,
+   "texto": "Si te sirvió, compártelo y sígueme.",
+   "cue": "cta",
+   "en": "If this helped, share and follow."
+  }
+ ]
+}
