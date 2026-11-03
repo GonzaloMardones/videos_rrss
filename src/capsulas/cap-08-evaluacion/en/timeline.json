@@ -1,0 +1,227 @@
+{
+ "duracion": 126.885,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 9.597
+  },
+  {
+   "id": "titulo",
+   "inicio": 9.597,
+   "fin": 12.378
+  },
+  {
+   "id": "error",
+   "inicio": 12.378,
+   "fin": 26.226
+  },
+  {
+   "id": "contaminacion",
+   "inicio": 26.226,
+   "fin": 41.077
+  },
+  {
+   "id": "dinamicas",
+   "inicio": 41.077,
+   "fin": 52.685
+  },
+  {
+   "id": "juez",
+   "inicio": 52.685,
+   "fin": 66.88
+  },
+  {
+   "id": "ppi",
+   "inicio": 66.88,
+   "fin": 82.115
+  },
+  {
+   "id": "redteam",
+   "inicio": 82.115,
+   "fin": 95.622
+  },
+  {
+   "id": "cero",
+   "inicio": 95.622,
+   "fin": 106.995
+  },
+  {
+   "id": "nube",
+   "inicio": 106.995,
+   "fin": 118.608
+  },
+  {
+   "id": "bases",
+   "inicio": 118.608,
+   "fin": 125.144
+  },
+  {
+   "id": "cierre",
+   "inicio": 125.144,
+   "fin": 126.885
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 4.901,
+   "texto": "Your new model scores 2 points higher on a 500-question benchmark. Is it better?",
+   "cue": "dos",
+   "es": "Tu modelo nuevo saca 2 puntos más en un benchmark de 500 preguntas. ¿Es mejor?"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 4.981,
+   "fin": 9.397,
+   "texto": "The interval on that difference is ±4.9 points: you still do not know.",
+   "cue": "nose",
+   "es": "El intervalo de esa diferencia es de ±4,9 puntos: todavía no lo sabes."
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.597,
+   "fin": 12.178,
+   "texto": "Tech capsule: evaluations and red teaming.",
+   "cue": null,
+   "es": "Cápsula técnica: evaluaciones y red teaming."
+  },
+  {
+   "escena": "error",
+   "inicio": 12.378,
+   "fin": 18.565,
+   "texto": "Accuracy is a proportion, and it has a standard error: √(p(1 − p)/n).",
+   "cue": "se",
+   "es": "Una precisión es una proporción, y tiene error estándar: √(p(1 − p)/n)."
+  },
+  {
+   "escena": "error",
+   "inicio": 18.645,
+   "fin": 26.026,
+   "texto": "With 100 questions, the margin is almost 8 points. So: more questions, and compare models on the same questions, in pairs.",
+   "cue": "pares",
+   "es": "Con 100 preguntas, el margen es de casi 8 puntos. Por eso: más preguntas, y comparar los modelos sobre las mismas preguntas, en pares."
+  },
+  {
+   "escena": "contaminacion",
+   "inicio": 26.226,
+   "fin": 33.543,
+   "texto": "If the test questions leaked into training, the score lies. On a fresh set of grade-school math, some models dropped up to 8 points.",
+   "cue": "fuga",
+   "es": "Si las preguntas del test se filtraron al entrenamiento, el puntaje miente. Con un set nuevo de matemáticas escolares, algunos modelos cayeron hasta 8 puntos."
+  },
+  {
+   "escena": "contaminacion",
+   "inicio": 33.623,
+   "fin": 40.877,
+   "texto": "You detect it by searching for repeated 13-word sequences, or by checking whether the model finds the text suspiciously easy.",
+   "cue": "detectar",
+   "es": "Se detecta buscando secuencias de 13 palabras repetidas, o mirando si el modelo encuentra el texto sospechosamente fácil."
+  },
+  {
+   "escena": "dinamicas",
+   "inicio": 41.077,
+   "fin": 46.282,
+   "texto": "The defense: dynamic evaluations, with fresh questions written after the model's cutoff date.",
+   "cue": "vivas",
+   "es": "La defensa: evaluaciones dinámicas, con preguntas nuevas, posteriores a la fecha de corte del modelo."
+  },
+  {
+   "escena": "dinamicas",
+   "inicio": 46.362,
+   "fin": 52.485,
+   "texto": "Eval-driven development: write the evaluation before the change, like a test, and run it on every version.",
+   "cue": "tests",
+   "es": "Desarrollo guiado por evaluaciones: escribes la evaluación antes del cambio, como un test, y la corres en cada versión."
+  },
+  {
+   "escena": "juez",
+   "inicio": 52.685,
+   "fin": 58.622,
+   "texto": "When an LLM is the judge, it brings biases: it prefers the first answer, the longest one, or its own.",
+   "cue": "sesgos",
+   "es": "Cuando un LLM es el juez, trae sesgos: prefiere la primera respuesta, la más larga o la suya."
+  },
+  {
+   "escena": "juez",
+   "inicio": 58.702,
+   "fin": 66.68,
+   "texto": "You calibrate it: swap the order, use a rubric and measure its agreement with people. A good one passes 80%, like two humans with each other.",
+   "cue": "calibrar",
+   "es": "Se calibra: intercambias el orden, usas una rúbrica y mides su acuerdo con personas. Uno bueno supera el 80 %, como dos humanos entre sí."
+  },
+  {
+   "escena": "ppi",
+   "inicio": 66.88,
+   "fin": 74.432,
+   "texto": "With a few human labels you can correct the judge: take its average over 10,000 cases and subtract the bias measured on 300.",
+   "cue": "rectificar",
+   "es": "Con pocas etiquetas humanas puedes corregir al juez: tomas su promedio en 10.000 casos y le restas el sesgo medido en 300."
+  },
+  {
+   "escena": "ppi",
+   "inicio": 74.512,
+   "fin": 81.915,
+   "texto": "The interval shrinks from ±4.8 to ±3.6 points: like having 543 human labels with only 300.",
+   "cue": "ganancia",
+   "es": "El intervalo baja de ±4,8 a ±3,6 puntos: como tener 543 etiquetas humanas con solo 300."
+  },
+  {
+   "escena": "redteam",
+   "inicio": 82.115,
+   "fin": 88.387,
+   "texto": "Red teaming looks for failures on purpose: jailbreaks, and prompt injection hidden in documents or web pages.",
+   "cue": "ataques",
+   "es": "El red teaming busca fallas a propósito: jailbreaks e inyección de instrucciones escondidas en documentos o páginas web."
+  },
+  {
+   "escena": "redteam",
+   "inicio": 88.467,
+   "fin": 95.422,
+   "texto": "There are automatic attacks: a gradient-optimized suffix can transfer to other models. The metric is the attack success rate.",
+   "cue": "sufijos",
+   "es": "Hay ataques automáticos: un sufijo optimizado por gradiente puede transferirse a otros modelos. La métrica es la tasa de éxito del ataque."
+  },
+  {
+   "escena": "cero",
+   "inicio": 95.622,
+   "fin": 101.744,
+   "texto": "If 100 attacks fail, is the risk zero? No. With a Beta prior, the plausible risk goes up to 3%.",
+   "cue": "cien",
+   "es": "Si 100 ataques fallan, ¿el riesgo es cero? No. Con una Beta como previo, el riesgo plausible llega hasta el 3 %."
+  },
+  {
+   "escena": "cero",
+   "inicio": 101.824,
+   "fin": 106.795,
+   "texto": "It is the rule of three: with 0 successes in n tries, the upper bound is 3/n.",
+   "cue": "tres",
+   "es": "Es la regla del tres: con 0 éxitos en n intentos, el límite superior es 3/n."
+  },
+  {
+   "escena": "nube",
+   "inicio": 106.995,
+   "fin": 118.408,
+   "texto": "On Google Cloud, the Vertex AI Gen AI evaluation service compares models with automatic judges, pointwise or pairwise. And Model Armor screens prompts and responses for injection and jailbreaks.",
+   "cue": "gcp",
+   "es": "En Google Cloud, el Gen AI evaluation service de Vertex AI compara modelos con jueces automáticos, puntuales o por pares. Y Model Armor revisa prompts y respuestas contra inyección y jailbreaks."
+  },
+  {
+   "escena": "bases",
+   "inicio": 118.608,
+   "fin": 124.944,
+   "texto": "The basics: standard error and paired comparisons, contamination, calibrating the judge and the Beta distribution.",
+   "cue": "bases",
+   "es": "Las bases: error estándar y comparaciones pareadas, contaminación, calibrar al juez y la distribución Beta."
+  },
+  {
+   "escena": "cierre",
+   "inicio": 125.144,
+   "fin": 126.685,
+   "texto": "If this helped, share and follow.",
+   "cue": "cta",
+   "es": "Si te sirvió, compártelo y sígueme."
+  }
+ ]
+}

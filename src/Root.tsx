@@ -59,6 +59,8 @@ import { Cap06Arquitecturas, CAP06ARQUITECTURAS_FRAMES } from "./capsulas/cap-06
 import { Cap06ArquitecturasEN, CAP06ARQUITECTURASEN_FRAMES } from "./capsulas/cap-06-arquitecturas/Cap06ArquitecturasEN";
 import { Cap07Multimodal, CAP07MULTIMODAL_FRAMES } from "./capsulas/cap-07-multimodal/Cap07Multimodal";
 import { Cap07MultimodalEN, CAP07MULTIMODALEN_FRAMES } from "./capsulas/cap-07-multimodal/Cap07MultimodalEN";
+import { Cap08Evaluacion, CAP08EVALUACION_FRAMES } from "./capsulas/cap-08-evaluacion/Cap08Evaluacion";
+import { Cap08EvaluacionEN, CAP08EVALUACIONEN_FRAMES } from "./capsulas/cap-08-evaluacion/Cap08EvaluacionEN";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -782,6 +784,32 @@ export const RemotionRoot: React.FC = () => {
         id="Cap07-Multimodal-EN"
         component={Cap07MultimodalEN}
         durationInFrames={CAP07MULTIMODALEN_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap08-Evaluacion"
+        component={Cap08Evaluacion}
+        durationInFrames={CAP08EVALUACION_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        defaultProps={{
+          serie: "Cápsulas técnicas",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="Cap08-Evaluacion-EN"
+        component={Cap08EvaluacionEN}
+        durationInFrames={CAP08EVALUACIONEN_FRAMES}
         fps={VIDEO.fps}
         width={VIDEO.width}
         height={VIDEO.height}
