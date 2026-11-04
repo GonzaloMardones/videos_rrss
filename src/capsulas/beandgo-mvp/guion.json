@@ -1,0 +1,251 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.12,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.42,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Aterrizas en Punta Arenas con tres niños. Son las nueve de la noche, llueve, y no sabes cómo llegar a Puerto Natales.",
+     "muestra": "Aterrizas en Punta Arenas con tres niños. Son las nueve de la noche, llueve, y no sabes cómo llegar a Puerto Natales.",
+     "cue": "llegada"
+    },
+    {
+     "dice": "Tu teléfono vibra una sola vez.",
+     "muestra": "Tu teléfono vibra una sola vez.",
+     "cue": "push",
+     "pausa": 0.3
+    },
+    {
+     "dice": "Hay un bus a Puerto Natales a las diez, diez mil pesos por persona, y alcanzas a comer algo sin gluten antes de subir.",
+     "muestra": "Hay un bus a Puerto Natales a las 22:00, $10.000 por persona, y alcanzas a comer algo sin gluten antes de subir.",
+     "cue": "solucion"
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Esto es Bi an gou: un copiloto de viaje con inteligencia artificial. Y así se vería su primer eme ve pé.",
+     "muestra": "Esto es Be&Go: un copiloto de viaje con inteligencia artificial. Así se vería su primer MVP.",
+     "cue": "marca"
+    }
+   ]
+  },
+  {
+   "id": "idea",
+   "frases": [
+    {
+     "dice": "La idea es simple: un viajero experto que va contigo antes, durante, y después del viaje.",
+     "muestra": "La idea es simple: un viajero experto que va contigo antes, durante y después del viaje.",
+     "cue": "momentos"
+    },
+    {
+     "dice": "Sabe dónde estás, qué hora es, qué clima viene, cuánto te queda del presupuesto, y qué te gusta.",
+     "muestra": "Sabe dónde estás, qué hora es, qué clima viene, cuánto te queda del presupuesto y qué te gusta.",
+     "cue": "contexto"
+    },
+    {
+     "dice": "Pero no te satura: como máximo tres avisos al día, y nunca de noche.",
+     "muestra": "Pero no te satura: como máximo tres avisos al día, y nunca de noche.",
+     "cue": "calma"
+    }
+   ]
+  },
+  {
+   "id": "funciones",
+   "frases": [
+    {
+     "dice": "El primer eme ve pé tiene cuatro funciones.",
+     "muestra": "El primer MVP tiene cuatro funciones.",
+     "cue": "cuatro"
+    },
+    {
+     "dice": "Mi viaje. Dónde comer. Llegar y moverse. Y vuelo vigilado.",
+     "muestra": "Mi viaje. Dónde comer. Llegar y moverse. Y vuelo vigilado.",
+     "cue": "lista"
+    }
+   ]
+  },
+  {
+   "id": "miviaje",
+   "frases": [
+    {
+     "dice": "Mi viaje parte con el veredicto que Bi an gou ya calcula: si el viaje te alcanza, cuánto falta, y qué ajustar.",
+     "muestra": "Mi viaje parte con el veredicto que Be&Go ya calcula: si el viaje te alcanza, cuánto falta y qué ajustar.",
+     "cue": "veredicto"
+    },
+    {
+     "dice": "Después, una entrevista corta: con quién viajas, si alguien tiene un régimen alimenticio o alergias, y qué les gusta.",
+     "muestra": "Después, una entrevista corta: con quién viajas, si alguien tiene un régimen alimenticio o alergias, y qué les gusta.",
+     "cue": "entrevista"
+    },
+    {
+     "dice": "Eso queda como memoria, visible y editable, y se usa en cada recomendación, de este viaje y de los siguientes.",
+     "muestra": "Eso queda como memoria, visible y editable, y se usa en cada recomendación, de este viaje y de los siguientes.",
+     "cue": "memoria"
+    }
+   ]
+  },
+  {
+   "id": "comer",
+   "frases": [
+    {
+     "dice": "Dónde comer usa tu ubicación para mostrar picadas cercanas, ordenadas por nota y cantidad de reseñas, y filtradas por tu régimen.",
+     "muestra": "Dónde comer usa tu ubicación para mostrar picadas cercanas, ordenadas por nota y cantidad de reseñas, y filtradas por tu régimen.",
+     "cue": "picadas"
+    },
+    {
+     "dice": "Y si llegas al restorán y no sabes qué pedir, le sacas una foto a la carta.",
+     "muestra": "Y si llegas al restorán y no sabes qué pedir, le sacas una foto a la carta.",
+     "cue": "foto"
+    },
+    {
+     "dice": "El agente te propone los tres mejores platos para tu grupo, dentro del presupuesto del día.",
+     "muestra": "El agente te propone los tres mejores platos para tu grupo, dentro del presupuesto del día.",
+     "cue": "platos"
+    }
+   ]
+  },
+  {
+   "id": "moverse",
+   "frases": [
+    {
+     "dice": "Llegar y moverse se activa solo, cuando entras al aeropuerto o al terminal.",
+     "muestra": "Llegar y moverse se activa solo, cuando entras al aeropuerto o al terminal.",
+     "cue": "geocerca"
+    },
+    {
+     "dice": "Te muestra las opciones con los precios publicados por los transportistas, y el úber estimado, con un botón que abre la aplicación con tu destino cargado.",
+     "muestra": "Te muestra las opciones con los precios publicados por los transportistas, y el Uber estimado, con un botón que abre la aplicación con tu destino cargado.",
+     "cue": "opciones"
+    },
+    {
+     "dice": "Si eliges transporte público, te guía a pie hasta el paradero.",
+     "muestra": "Si eliges transporte público, te guía a pie hasta el paradero.",
+     "cue": "pie"
+    },
+    {
+     "dice": "Y si te pierdes, basta una foto del lugar: el agente lee los letreros y te dice hacia dónde ir.",
+     "muestra": "Y si te pierdes, basta una foto del lugar: el agente lee los letreros y te dice hacia dónde ir.",
+     "cue": "letrero"
+    }
+   ]
+  },
+  {
+   "id": "vuelo",
+   "frases": [
+    {
+     "dice": "Vuelo vigilado lee tu reserva, y te avisa cuando abre el chequín, con la página lista: tú solo confirmas.",
+     "muestra": "Vuelo vigilado lee tu reserva y te avisa cuando abre el check-in, con la página lista: tú solo confirmas.",
+     "cue": "checkin"
+    },
+    {
+     "dice": "Y si el vuelo se atrasa o se cancela, en segundos tienes tus derechos con la fuente citada, las alternativas para seguir, y el reclamo redactado.",
+     "muestra": "Y si el vuelo se atrasa o se cancela, en segundos tienes tus derechos con la fuente citada, las alternativas para seguir y el reclamo redactado.",
+     "cue": "cancelado"
+    }
+   ]
+  },
+  {
+   "id": "arquitectura",
+   "frases": [
+    {
+     "dice": "Por dentro, la app es híbrida: la misma web en riáct, empaquetada con Capacitor, para usar el gé pe ese, la cámara y las notificaciones.",
+     "muestra": "Por dentro, la app es híbrida: la misma web en React, empaquetada con Capacitor, para usar el GPS, la cámara y las notificaciones.",
+     "cue": "app"
+    },
+    {
+     "dice": "Unos vigilantes en código, sin inteligencia artificial, revisan el vuelo, el clima, las geocercas y la hora.",
+     "muestra": "Unos vigilantes en código, sin inteligencia artificial, revisan el vuelo, el clima, las geocercas y la hora.",
+     "cue": "vigilantes"
+    },
+    {
+     "dice": "Solo cuando algo cambia, despiertan a un orquestador con clod.",
+     "muestra": "Solo cuando algo cambia, despiertan a un orquestador con Claude.",
+     "cue": "orquestador"
+    },
+    {
+     "dice": "El orquestador llama en paralelo a los especialistas: comida, movilidad, vuelos y derechos, y presupuesto.",
+     "muestra": "El orquestador llama en paralelo a los especialistas: comida, movilidad, vuelos y derechos, y presupuesto.",
+     "cue": "especialistas"
+    },
+    {
+     "dice": "Cada uno usa fuentes intercambiables detrás de adaptadores: mapas y lugares, clima, vuelos, alojamiento, y las tablas propias.",
+     "muestra": "Cada uno usa fuentes intercambiables detrás de adaptadores: mapas y lugares, clima, vuelos, alojamiento y las tablas propias.",
+     "cue": "fuentes"
+    },
+    {
+     "dice": "Y todo se guarda en dos lugares: la memoria del viajero, y el observatorio de precios reales, el activo que crece con cada viaje.",
+     "muestra": "Y todo se guarda en dos lugares: la memoria del viajero y el observatorio de precios reales, el activo que crece con cada viaje.",
+     "cue": "guarda"
+    }
+   ]
+  },
+  {
+   "id": "limites",
+   "frases": [
+    {
+     "dice": "Hay tres cosas que el eme ve pé no promete.",
+     "muestra": "Hay tres cosas que el MVP no promete.",
+     "cue": "tres"
+    },
+    {
+     "dice": "No cotiza el precio real de úber, porque úber no lo entrega: lo estima, y te deriva.",
+     "muestra": "No cotiza el precio real de Uber, porque Uber no lo entrega: lo estima y te deriva.",
+     "cue": "uber"
+    },
+    {
+     "dice": "No hace el chequín por ti: te lo deja listo.",
+     "muestra": "No hace el check-in por ti: te lo deja listo.",
+     "cue": "check"
+    },
+    {
+     "dice": "Y no es realidad aumentada: lee tu foto, y te orienta.",
+     "muestra": "Y no es realidad aumentada: lee tu foto y te orienta.",
+     "cue": "ar"
+    }
+   ]
+  },
+  {
+   "id": "plan",
+   "frases": [
+    {
+     "dice": "El plan para ir probando tiene seis fases, en unas catorce semanas.",
+     "muestra": "El plan para ir probando tiene seis fases, en unas catorce semanas.",
+     "cue": "fases"
+    },
+    {
+     "dice": "Primero la app y la memoria. Luego dónde comer, moverse, el vuelo, y el resumen del día. Y al final, cinco familias en un viaje real.",
+     "muestra": "Primero la app y la memoria. Luego dónde comer, moverse, el vuelo y el resumen del día. Y al final, cinco familias en un viaje real.",
+     "cue": "orden"
+    },
+    {
+     "dice": "Mantenerla encendida costaría entre uno coma cinco y cuatro dólares por viaje, y unos ciento cuarenta mil pesos al mes en el piloto.",
+     "muestra": "Mantenerla encendida costaría entre USD 1,5 y 4 por viaje, y unos $140 mil al mes en el piloto.",
+     "cue": "costo"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Para el veintiocho de noviembre: la app en el teléfono, dónde comer funcionando, y la demo del vuelo cancelado.",
+     "muestra": "Para el 28 de noviembre: la app en el teléfono, dónde comer funcionando y la demo del vuelo cancelado.",
+     "cue": "meta"
+    },
+    {
+     "dice": "Bi an gou. Viaja acompañado.",
+     "muestra": "Be&Go. Viaja acompañado.",
+     "cue": "lema"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "duracion": 193.965,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 16.105
+  },
+  {
+   "id": "titulo",
+   "inicio": 16.105,
+   "fin": 22.199
+  },
+  {
+   "id": "idea",
+   "inicio": 22.199,
+   "fin": 36.505
+  },
+  {
+   "id": "funciones",
+   "inicio": 36.505,
+   "fin": 42.63
+  },
+  {
+   "id": "miviaje",
+   "inicio": 42.63,
+   "fin": 61.266
+  },
+  {
+   "id": "comer",
+   "inicio": 61.266,
+   "fin": 78.75
+  },
+  {
+   "id": "moverse",
+   "inicio": 78.75,
+   "fin": 100.979
+  },
+  {
+   "id": "vuelo",
+   "inicio": 100.979,
+   "fin": 115.446
+  },
+  {
+   "id": "arquitectura",
+   "inicio": 115.446,
+   "fin": 153.203
+  },
+  {
+   "id": "limites",
+   "inicio": 153.203,
+   "fin": 166.43
+  },
+  {
+   "id": "plan",
+   "inicio": 166.43,
+   "fin": 185.706
+  },
+  {
+   "id": "cierre",
+   "inicio": 185.706,
+   "fin": 193.965
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 6.65,
+   "texto": "Aterrizas en Punta Arenas con tres niños. Son las nueve de la noche, llueve, y no sabes cómo llegar a Puerto Natales.",
+   "cue": "llegada"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 6.83,
+   "fin": 8.835,
+   "texto": "Tu teléfono vibra una sola vez.",
+   "cue": "push"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 9.135,
+   "fin": 15.685,
+   "texto": "Hay un bus a Puerto Natales a las 22:00, $10.000 por persona, y alcanzas a comer algo sin gluten antes de subir.",
+   "cue": "solucion"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 16.105,
+   "fin": 21.779,
+   "texto": "Esto es Be&Go: un copiloto de viaje con inteligencia artificial. Así se vería su primer MVP.",
+   "cue": "marca"
+  },
+  {
+   "escena": "idea",
+   "inicio": 22.199,
+   "fin": 27.106,
+   "texto": "La idea es simple: un viajero experto que va contigo antes, durante y después del viaje.",
+   "cue": "momentos"
+  },
+  {
+   "escena": "idea",
+   "inicio": 27.286,
+   "fin": 31.873,
+   "texto": "Sabe dónde estás, qué hora es, qué clima viene, cuánto te queda del presupuesto y qué te gusta.",
+   "cue": "contexto"
+  },
+  {
+   "escena": "idea",
+   "inicio": 32.053,
+   "fin": 36.085,
+   "texto": "Pero no te satura: como máximo tres avisos al día, y nunca de noche.",
+   "cue": "calma"
+  },
+  {
+   "escena": "funciones",
+   "inicio": 36.505,
+   "fin": 38.979,
+   "texto": "El primer MVP tiene cuatro funciones.",
+   "cue": "cuatro"
+  },
+  {
+   "escena": "funciones",
+   "inicio": 39.159,
+   "fin": 42.21,
+   "texto": "Mi viaje. Dónde comer. Llegar y moverse. Y vuelo vigilado.",
+   "cue": "lista"
+  },
+  {
+   "escena": "miviaje",
+   "inicio": 42.63,
+   "fin": 48.539,
+   "texto": "Mi viaje parte con el veredicto que Be&Go ya calcula: si el viaje te alcanza, cuánto falta y qué ajustar.",
+   "cue": "veredicto"
+  },
+  {
+   "escena": "miviaje",
+   "inicio": 48.719,
+   "fin": 54.842,
+   "texto": "Después, una entrevista corta: con quién viajas, si alguien tiene un régimen alimenticio o alergias, y qué les gusta.",
+   "cue": "entrevista"
+  },
+  {
+   "escena": "miviaje",
+   "inicio": 55.022,
+   "fin": 60.846,
+   "texto": "Eso queda como memoria, visible y editable, y se usa en cada recomendación, de este viaje y de los siguientes.",
+   "cue": "memoria"
+  },
+  {
+   "escena": "comer",
+   "inicio": 61.266,
+   "fin": 68.711,
+   "texto": "Dónde comer usa tu ubicación para mostrar picadas cercanas, ordenadas por nota y cantidad de reseñas, y filtradas por tu régimen.",
+   "cue": "picadas"
+  },
+  {
+   "escena": "comer",
+   "inicio": 68.891,
+   "fin": 73.073,
+   "texto": "Y si llegas al restorán y no sabes qué pedir, le sacas una foto a la carta.",
+   "cue": "foto"
+  },
+  {
+   "escena": "comer",
+   "inicio": 73.253,
+   "fin": 78.33,
+   "texto": "El agente te propone los tres mejores platos para tu grupo, dentro del presupuesto del día.",
+   "cue": "platos"
+  },
+  {
+   "escena": "moverse",
+   "inicio": 78.75,
+   "fin": 82.995,
+   "texto": "Llegar y moverse se activa solo, cuando entras al aeropuerto o al terminal.",
+   "cue": "geocerca"
+  },
+  {
+   "escena": "moverse",
+   "inicio": 83.175,
+   "fin": 91.623,
+   "texto": "Te muestra las opciones con los precios publicados por los transportistas, y el Uber estimado, con un botón que abre la aplicación con tu destino cargado.",
+   "cue": "opciones"
+  },
+  {
+   "escena": "moverse",
+   "inicio": 91.803,
+   "fin": 95.131,
+   "texto": "Si eliges transporte público, te guía a pie hasta el paradero.",
+   "cue": "pie"
+  },
+  {
+   "escena": "moverse",
+   "inicio": 95.311,
+   "fin": 100.559,
+   "texto": "Y si te pierdes, basta una foto del lugar: el agente lee los letreros y te dice hacia dónde ir.",
+   "cue": "letrero"
+  },
+  {
+   "escena": "vuelo",
+   "inicio": 100.979,
+   "fin": 106.718,
+   "texto": "Vuelo vigilado lee tu reserva y te avisa cuando abre el check-in, con la página lista: tú solo confirmas.",
+   "cue": "checkin"
+  },
+  {
+   "escena": "vuelo",
+   "inicio": 106.898,
+   "fin": 115.026,
+   "texto": "Y si el vuelo se atrasa o se cancela, en segundos tienes tus derechos con la fuente citada, las alternativas para seguir y el reclamo redactado.",
+   "cue": "cancelado"
+  },
+  {
+   "escena": "arquitectura",
+   "inicio": 115.446,
+   "fin": 122.699,
+   "texto": "Por dentro, la app es híbrida: la misma web en React, empaquetada con Capacitor, para usar el GPS, la cámara y las notificaciones.",
+   "cue": "app"
+  },
+  {
+   "escena": "arquitectura",
+   "inicio": 122.879,
+   "fin": 128.703,
+   "texto": "Unos vigilantes en código, sin inteligencia artificial, revisan el vuelo, el clima, las geocercas y la hora.",
+   "cue": "vigilantes"
+  },
+  {
+   "escena": "arquitectura",
+   "inicio": 128.883,
+   "fin": 132.339,
+   "texto": "Solo cuando algo cambia, despiertan a un orquestador con Claude.",
+   "cue": "orquestador"
+  },
+  {
+   "escena": "arquitectura",
+   "inicio": 132.519,
+   "fin": 138.322,
+   "texto": "El orquestador llama en paralelo a los especialistas: comida, movilidad, vuelos y derechos, y presupuesto.",
+   "cue": "especialistas"
+  },
+  {
+   "escena": "arquitectura",
+   "inicio": 138.502,
+   "fin": 145.606,
+   "texto": "Cada uno usa fuentes intercambiables detrás de adaptadores: mapas y lugares, clima, vuelos, alojamiento y las tablas propias.",
+   "cue": "fuentes"
+  },
+  {
+   "escena": "arquitectura",
+   "inicio": 145.786,
+   "fin": 152.783,
+   "texto": "Y todo se guarda en dos lugares: la memoria del viajero y el observatorio de precios reales, el activo que crece con cada viaje.",
+   "cue": "guarda"
+  },
+  {
+   "escena": "limites",
+   "inicio": 153.203,
+   "fin": 155.507,
+   "texto": "Hay tres cosas que el MVP no promete.",
+   "cue": "tres"
+  },
+  {
+   "escena": "limites",
+   "inicio": 155.687,
+   "fin": 160.167,
+   "texto": "No cotiza el precio real de Uber, porque Uber no lo entrega: lo estima y te deriva.",
+   "cue": "uber"
+  },
+  {
+   "escena": "limites",
+   "inicio": 160.347,
+   "fin": 162.694,
+   "texto": "No hace el check-in por ti: te lo deja listo.",
+   "cue": "check"
+  },
+  {
+   "escena": "limites",
+   "inicio": 162.874,
+   "fin": 166.01,
+   "texto": "Y no es realidad aumentada: lee tu foto y te orienta.",
+   "cue": "ar"
+  },
+  {
+   "escena": "plan",
+   "inicio": 166.43,
+   "fin": 170.121,
+   "texto": "El plan para ir probando tiene seis fases, en unas catorce semanas.",
+   "cue": "fases"
+  },
+  {
+   "escena": "plan",
+   "inicio": 170.301,
+   "fin": 177.767,
+   "texto": "Primero la app y la memoria. Luego dónde comer, moverse, el vuelo y el resumen del día. Y al final, cinco familias en un viaje real.",
+   "cue": "orden"
+  },
+  {
+   "escena": "plan",
+   "inicio": 177.947,
+   "fin": 185.286,
+   "texto": "Mantenerla encendida costaría entre USD 1,5 y 4 por viaje, y unos $140 mil al mes en el piloto.",
+   "cue": "costo"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 185.706,
+   "fin": 191.573,
+   "texto": "Para el 28 de noviembre: la app en el teléfono, dónde comer funcionando y la demo del vuelo cancelado.",
+   "cue": "meta"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 191.753,
+   "fin": 193.545,
+   "texto": "Be&Go. Viaja acompañado.",
+   "cue": "lema"
+  }
+ ]
+}

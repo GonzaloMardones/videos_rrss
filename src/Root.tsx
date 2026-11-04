@@ -46,6 +46,8 @@ import { Cuasi09Cadena, CUASI09CADENA_FRAMES } from "./capsulas/cuasi-09-cadena/
 import { Cuasi10Juez, CUASI10JUEZ_FRAMES } from "./capsulas/cuasi-10-juez/Cuasi10Juez";
 import { Cuasi11Equipo, CUASI11EQUIPO_FRAMES } from "./capsulas/cuasi-11-equipo/Cuasi11Equipo";
 import { DS27Tensores, DS27TENSORES_FRAMES } from "./capsulas/ds27-01-tensores/DS27Tensores";
+import { BeGoMVP, BEGOMVP_FRAMES } from "./capsulas/beandgo-mvp/BeGoMVP";
+import { HD } from "./estilos/beandgo/tokens";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -607,6 +609,19 @@ export const RemotionRoot: React.FC = () => {
           serie: "Data Scientist 2027",
           autor: "Gonzalo Mardones",
           volumenMusica: 0.14,
+        }}
+      />
+      <Composition
+        id="BeGo-MVP"
+        component={BeGoMVP}
+        durationInFrames={BEGOMVP_FRAMES}
+        fps={HD.fps}
+        width={HD.width}
+        height={HD.height}
+        defaultProps={{
+          serie: "Be&Go",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.12,
         }}
       />
       <Composition id="Tec02-Piezas" component={Piezas} durationInFrames={1} fps={VIDEO.fps} width={960} height={540} defaultProps={{ pieza: 0 }} />
