@@ -106,11 +106,13 @@ Note that for some entities a company license is needed. [Read the terms here](h
 | Composición | Tema | Guion |
 |---|---|---|
 | `BeGo-MVP` | Diseño del primer MVP del copiloto de viaje: funciones, pantallas, arquitectura de agentes y plan | [guion.json](src/capsulas/beandgo-mvp/guion.json) |
+| `BeGo-Estado` | Estado del MVP al 8-nov-2026: números medidos, qué puede y qué no, capturas reales del iPhone, cómo encenderla | [guion.json](src/capsulas/beandgo-estado/guion.json) |
 
 Usa el estilo `src/estilos/beandgo/` (identidad de la app: copihue, azul noche, Nunito Sans). Las cifras de las pantallas de ejemplo son ilustrativas y van rotuladas como tales.
 
 ```console
 npm run render -- BeGo-MVP beandgo-mvp
+npm run render -- BeGo-Estado beandgo-estado
 ```
 
 ## Cápsulas técnicas

@@ -1,0 +1,260 @@
+{
+ "duracion": 181.779,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 13.373
+  },
+  {
+   "id": "titulo",
+   "inicio": 13.373,
+   "fin": 17.697
+  },
+  {
+   "id": "numeros",
+   "inicio": 17.697,
+   "fin": 44.278
+  },
+  {
+   "id": "puede",
+   "inicio": 44.278,
+   "fin": 84.126
+  },
+  {
+   "id": "pantalla",
+   "inicio": 84.126,
+   "fin": 97.099
+  },
+  {
+   "id": "dentro",
+   "inicio": 97.099,
+   "fin": 111.502
+  },
+  {
+   "id": "nopuede",
+   "inicio": 111.502,
+   "fin": 150.945
+  },
+  {
+   "id": "pendiente",
+   "inicio": 150.945,
+   "fin": 163.15
+  },
+  {
+   "id": "correr",
+   "inicio": 163.15,
+   "fin": 174.289
+  },
+  {
+   "id": "cierre",
+   "inicio": 174.289,
+   "fin": 181.779
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 8.805,
+   "texto": "Hace una semana, Be&Go era un diseño en un video. Hoy es una app instalada en un iPhone, con 716 tests y una demo que corre sin gastar un peso.",
+   "cue": "hoy"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 8.985,
+   "fin": 12.953,
+   "texto": "Este video dice, con honestidad, qué puede hacer y qué no puede hacer todavía.",
+   "cue": "honesto"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 13.373,
+   "fin": 17.277,
+   "texto": "Be&Go, estado del MVP. 8 de noviembre de 2026.",
+   "cue": "marca"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 17.697,
+   "fin": 21.345,
+   "texto": "Primero los números, porque todos están medidos en el repositorio.",
+   "cue": "intro"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 21.525,
+   "fin": 30.293,
+   "texto": "716 tests en el backend, 126 en el frontend y 34 de punta a punta. Ninguno usa la red: cada API externa está grabada.",
+   "cue": "tests"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 30.473,
+   "fin": 36.318,
+   "texto": "20 boletas leídas de 20, con 0 % de error en el monto y 0 fugas de datos personales.",
+   "cue": "boletas"
+  },
+  {
+   "escena": "numeros",
+   "inicio": 36.498,
+   "fin": 43.858,
+   "texto": "Y la IA de un viaje de 7 días cuesta USD 0,18. El plan estimaba entre 1,5 y 4.",
+   "cue": "costo"
+  },
+  {
+   "escena": "puede",
+   "inicio": 44.278,
+   "fin": 46.582,
+   "texto": "Lo que sí puede hacer hoy, y está verificado.",
+   "cue": "intro"
+  },
+  {
+   "escena": "puede",
+   "inicio": 46.762,
+   "fin": 52.885,
+   "texto": "El veredicto: si el viaje te alcanza, cuánto falta y qué pesa más, con cada precio citado a su fuente y su fecha.",
+   "cue": "veredicto"
+  },
+  {
+   "escena": "puede",
+   "inicio": 53.065,
+   "fin": 60.425,
+   "texto": "Avisos por eventos, no por horario: el copiloto despierta solo cuando algo cambia, y llega como notificación aunque la app esté cerrada.",
+   "cue": "avisos"
+  },
+  {
+   "escena": "puede",
+   "inicio": 60.605,
+   "fin": 65.405,
+   "texto": "Dónde comer con lo que te queda del día; la foto de la carta y tres platos para tu grupo.",
+   "cue": "comer"
+  },
+  {
+   "escena": "puede",
+   "inicio": 65.585,
+   "fin": 73.35,
+   "texto": "La foto de la boleta se convierte en gasto, sin guardar el nombre, el RUT ni la tarjeta, y el sobre del día te avisa al 80 % y al 100 %.",
+   "cue": "boleta"
+  },
+  {
+   "escena": "puede",
+   "inicio": 73.53,
+   "fin": 83.706,
+   "texto": "Si mañana llueve sobre tu excursión, un plan B. Y si te cancelan el vuelo: tus derechos citados del Código Aeronáutico, los vuelos que quedan ese día con precio y el reclamo redactado.",
+   "cue": "vuelo"
+  },
+  {
+   "escena": "pantalla",
+   "inicio": 84.126,
+   "fin": 88.883,
+   "texto": "Así se ve en el teléfono: la app se instala desde Safari, sin App Store ni cuenta de Apple.",
+   "cue": "instala"
+  },
+  {
+   "escena": "pantalla",
+   "inicio": 89.063,
+   "fin": 96.679,
+   "texto": "Mi viaje, con los avisos en vivo; Comer; Gastos, con los sobres; el Chat; y Preferencias, donde la memoria del copiloto es visible y se puede editar.",
+   "cue": "pestanas"
+  },
+  {
+   "escena": "dentro",
+   "inicio": 97.099,
+   "fin": 103.307,
+   "texto": "Por dentro, la IA solo redacta y lee. Las decisiones, los números y las citas son código.",
+   "cue": "regla"
+  },
+  {
+   "escena": "dentro",
+   "inicio": 103.487,
+   "fin": 111.082,
+   "texto": "Un control rechaza cualquier cifra que el modelo no pueda respaldar con un dato citado. Y si una fuente falla, el sistema sigue y lo dice.",
+   "cue": "control"
+  },
+  {
+   "escena": "nopuede",
+   "inicio": 111.502,
+   "fin": 113.721,
+   "texto": "Y ahora, lo que no puede hacer todavía.",
+   "cue": "intro"
+  },
+  {
+   "escena": "nopuede",
+   "inicio": 113.901,
+   "fin": 122.05,
+   "texto": "No reacciona sola cuando llegas al aeropuerto: es una app web, y iOS no le permite geocercas en segundo plano. Eso es la fase E, con Capacitor.",
+   "cue": "llegada"
+  },
+  {
+   "escena": "nopuede",
+   "inicio": 122.23,
+   "fin": 129.249,
+   "texto": "No muestra reseñas de los restoranes, porque falta la clave de Google Places. Sin ella, usa OpenStreetMap, sin notas ni precios.",
+   "cue": "places"
+  },
+  {
+   "escena": "nopuede",
+   "inicio": 129.429,
+   "fin": 138.367,
+   "texto": "No da el precio real de Uber ni hace el check-in por ti. Las dos cosas son a propósito: Uber no lo entrega, y automatizar el sitio de una aerolínea viola sus términos.",
+   "cue": "uber"
+  },
+  {
+   "escena": "nopuede",
+   "inicio": 138.547,
+   "fin": 144.115,
+   "texto": "No detecta una cancelación real: falta la clave de AeroDataBox. Los vuelos de la demo son simulados.",
+   "cue": "vuelos"
+  },
+  {
+   "escena": "nopuede",
+   "inicio": 144.295,
+   "fin": 150.525,
+   "texto": "Y no vive fuera de tu Mac: el backend corre local, detrás de un túnel, en una sola instancia. Producción es otra etapa.",
+   "cue": "prod"
+  },
+  {
+   "escena": "pendiente",
+   "inicio": 150.945,
+   "fin": 160.118,
+   "texto": "Tres cosas están construidas, pero ninguna persona las ha visto funcionar: el push llegando al iPhone con la app cerrada, la foto elegida desde Archivos y la cámara real.",
+   "cue": "tres"
+  },
+  {
+   "escena": "pendiente",
+   "inicio": 160.298,
+   "fin": 162.73,
+   "texto": "Se prueban en 10 minutos con el runbook.",
+   "cue": "runbook"
+  },
+  {
+   "escena": "correr",
+   "inicio": 163.15,
+   "fin": 170.147,
+   "texto": "Para encenderla: el backend con dev:mock; el frontend con Vite; y para el iPhone, un túnel con Tailscale, que da una dirección fija.",
+   "cue": "comandos"
+  },
+  {
+   "escena": "correr",
+   "inicio": 170.327,
+   "fin": 173.869,
+   "texto": "Los 5 pasos de la demo se disparan desde la terminal, uno a uno.",
+   "cue": "pasos"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 174.289,
+   "fin": 179.387,
+   "texto": "Lo que falta para el 28 no es código: es verla correr en el teléfono y contarlo bien.",
+   "cue": "meta"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 179.567,
+   "fin": 181.359,
+   "texto": "Be&Go. Viaja acompañado.",
+   "cue": "lema"
+  }
+ ]
+}

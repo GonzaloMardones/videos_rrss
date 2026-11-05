@@ -1,0 +1,206 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.12,
+ "pausaFrase": 0.18,
+ "pausaEscena": 0.42,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "Hace una semana, Bi an gou era un diseño en un video. Hoy es una app instalada en un iPhone, con setecientos dieciséis tests, y una demo que corre sin gastar un peso.",
+     "muestra": "Hace una semana, Be&Go era un diseño en un video. Hoy es una app instalada en un iPhone, con 716 tests y una demo que corre sin gastar un peso.",
+     "cue": "hoy"
+    },
+    {
+     "dice": "Este video dice, con honestidad, qué puede hacer, y qué no puede hacer todavía.",
+     "muestra": "Este video dice, con honestidad, qué puede hacer y qué no puede hacer todavía.",
+     "cue": "honesto",
+     "pausa": 0.3
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Bi an gou, estado del eme ve pé. Ocho de noviembre de dos mil veintiséis.",
+     "muestra": "Be&Go, estado del MVP. 8 de noviembre de 2026.",
+     "cue": "marca"
+    }
+   ]
+  },
+  {
+   "id": "numeros",
+   "frases": [
+    {
+     "dice": "Primero los números, porque todos están medidos en el repositorio.",
+     "muestra": "Primero los números, porque todos están medidos en el repositorio.",
+     "cue": "intro"
+    },
+    {
+     "dice": "Setecientos dieciséis tests en el backend, ciento veintiséis en el frontend, y treinta y cuatro de punta a punta. Ninguno usa la red: cada API externa está grabada.",
+     "muestra": "716 tests en el backend, 126 en el frontend y 34 de punta a punta. Ninguno usa la red: cada API externa está grabada.",
+     "cue": "tests"
+    },
+    {
+     "dice": "Veinte boletas leídas de veinte, con cero por ciento de error en el monto, y cero fugas de datos personales.",
+     "muestra": "20 boletas leídas de 20, con 0 % de error en el monto y 0 fugas de datos personales.",
+     "cue": "boletas"
+    },
+    {
+     "dice": "Y la inteligencia artificial de un viaje de siete días cuesta dieciocho centavos de dólar. El plan estimaba entre uno coma cinco y cuatro.",
+     "muestra": "Y la IA de un viaje de 7 días cuesta USD 0,18. El plan estimaba entre 1,5 y 4.",
+     "cue": "costo"
+    }
+   ]
+  },
+  {
+   "id": "puede",
+   "frases": [
+    {
+     "dice": "Lo que sí puede hacer hoy, y está verificado.",
+     "muestra": "Lo que sí puede hacer hoy, y está verificado.",
+     "cue": "intro"
+    },
+    {
+     "dice": "El veredicto: si el viaje te alcanza, cuánto falta, y qué pesa más, con cada precio citado a su fuente y su fecha.",
+     "muestra": "El veredicto: si el viaje te alcanza, cuánto falta y qué pesa más, con cada precio citado a su fuente y su fecha.",
+     "cue": "veredicto"
+    },
+    {
+     "dice": "Avisos por eventos, no por horario: el copiloto despierta solo cuando algo cambia, y llega como notificación aunque la app esté cerrada.",
+     "muestra": "Avisos por eventos, no por horario: el copiloto despierta solo cuando algo cambia, y llega como notificación aunque la app esté cerrada.",
+     "cue": "avisos"
+    },
+    {
+     "dice": "Dónde comer con lo que te queda del día; la foto de la carta, y tres platos para tu grupo.",
+     "muestra": "Dónde comer con lo que te queda del día; la foto de la carta y tres platos para tu grupo.",
+     "cue": "comer"
+    },
+    {
+     "dice": "La foto de la boleta se convierte en gasto, sin guardar el nombre, el rut, ni la tarjeta, y el sobre del día te avisa al ochenta y al cien por ciento.",
+     "muestra": "La foto de la boleta se convierte en gasto, sin guardar el nombre, el RUT ni la tarjeta, y el sobre del día te avisa al 80 % y al 100 %.",
+     "cue": "boleta"
+    },
+    {
+     "dice": "Si mañana llueve sobre tu excursión, un plan be. Y si te cancelan el vuelo: tus derechos citados del Código Aeronáutico, los vuelos que quedan ese día con precio, y el reclamo redactado.",
+     "muestra": "Si mañana llueve sobre tu excursión, un plan B. Y si te cancelan el vuelo: tus derechos citados del Código Aeronáutico, los vuelos que quedan ese día con precio y el reclamo redactado.",
+     "cue": "vuelo"
+    }
+   ]
+  },
+  {
+   "id": "pantalla",
+   "frases": [
+    {
+     "dice": "Así se ve en el teléfono: la app se instala desde Safari, sin App Store ni cuenta de Apple.",
+     "muestra": "Así se ve en el teléfono: la app se instala desde Safari, sin App Store ni cuenta de Apple.",
+     "cue": "instala"
+    },
+    {
+     "dice": "Mi viaje, con los avisos en vivo; Comer; Gastos, con los sobres; el Chat; y Preferencias, donde la memoria del copiloto es visible, y se puede editar.",
+     "muestra": "Mi viaje, con los avisos en vivo; Comer; Gastos, con los sobres; el Chat; y Preferencias, donde la memoria del copiloto es visible y se puede editar.",
+     "cue": "pestanas"
+    }
+   ]
+  },
+  {
+   "id": "dentro",
+   "frases": [
+    {
+     "dice": "Por dentro, la inteligencia artificial solo redacta y lee. Las decisiones, los números y las citas, son código.",
+     "muestra": "Por dentro, la IA solo redacta y lee. Las decisiones, los números y las citas son código.",
+     "cue": "regla"
+    },
+    {
+     "dice": "Un control rechaza cualquier cifra que el modelo no pueda respaldar con un dato citado. Y si una fuente falla, el sistema sigue, y lo dice.",
+     "muestra": "Un control rechaza cualquier cifra que el modelo no pueda respaldar con un dato citado. Y si una fuente falla, el sistema sigue y lo dice.",
+     "cue": "control"
+    }
+   ]
+  },
+  {
+   "id": "nopuede",
+   "frases": [
+    {
+     "dice": "Y ahora, lo que no puede hacer todavía.",
+     "muestra": "Y ahora, lo que no puede hacer todavía.",
+     "cue": "intro"
+    },
+    {
+     "dice": "No reacciona sola cuando llegas al aeropuerto: es una app web, y iOS no le permite geocercas en segundo plano. Eso es la fase E, con Capacitor.",
+     "muestra": "No reacciona sola cuando llegas al aeropuerto: es una app web, y iOS no le permite geocercas en segundo plano. Eso es la fase E, con Capacitor.",
+     "cue": "llegada"
+    },
+    {
+     "dice": "No muestra reseñas de los restoranes, porque falta la clave de Google Places. Sin ella, usa Open Street Map, sin notas ni precios.",
+     "muestra": "No muestra reseñas de los restoranes, porque falta la clave de Google Places. Sin ella, usa OpenStreetMap, sin notas ni precios.",
+     "cue": "places"
+    },
+    {
+     "dice": "No da el precio real de Uber, ni hace el chequín por ti. Las dos cosas son a propósito: Uber no lo entrega, y automatizar el sitio de una aerolínea viola sus términos.",
+     "muestra": "No da el precio real de Uber ni hace el check-in por ti. Las dos cosas son a propósito: Uber no lo entrega, y automatizar el sitio de una aerolínea viola sus términos.",
+     "cue": "uber"
+    },
+    {
+     "dice": "No detecta una cancelación real: falta la clave de Aero Data Box. Los vuelos de la demo son simulados.",
+     "muestra": "No detecta una cancelación real: falta la clave de AeroDataBox. Los vuelos de la demo son simulados.",
+     "cue": "vuelos"
+    },
+    {
+     "dice": "Y no vive fuera de tu Mac: el backend corre local, detrás de un túnel, en una sola instancia. Producción es otra etapa.",
+     "muestra": "Y no vive fuera de tu Mac: el backend corre local, detrás de un túnel, en una sola instancia. Producción es otra etapa.",
+     "cue": "prod"
+    }
+   ]
+  },
+  {
+   "id": "pendiente",
+   "frases": [
+    {
+     "dice": "Tres cosas están construidas, pero ninguna persona las ha visto funcionar: el push llegando al iPhone con la app cerrada, la foto elegida desde Archivos, y la cámara real.",
+     "muestra": "Tres cosas están construidas, pero ninguna persona las ha visto funcionar: el push llegando al iPhone con la app cerrada, la foto elegida desde Archivos y la cámara real.",
+     "cue": "tres"
+    },
+    {
+     "dice": "Se prueban en diez minutos con el runbook.",
+     "muestra": "Se prueban en 10 minutos con el runbook.",
+     "cue": "runbook"
+    }
+   ]
+  },
+  {
+   "id": "correr",
+   "frases": [
+    {
+     "dice": "Para encenderla: el backend con de ve mock; el frontend con Vite; y para el iPhone, un túnel con Tailscale, que da una dirección fija.",
+     "muestra": "Para encenderla: el backend con dev:mock; el frontend con Vite; y para el iPhone, un túnel con Tailscale, que da una dirección fija.",
+     "cue": "comandos"
+    },
+    {
+     "dice": "Los cinco pasos de la demo se disparan desde la terminal, uno a uno.",
+     "muestra": "Los 5 pasos de la demo se disparan desde la terminal, uno a uno.",
+     "cue": "pasos"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Lo que falta para el veintiocho no es código: es verla correr en el teléfono, y contarlo bien.",
+     "muestra": "Lo que falta para el 28 no es código: es verla correr en el teléfono y contarlo bien.",
+     "cue": "meta"
+    },
+    {
+     "dice": "Bi an gou. Viaja acompañado.",
+     "muestra": "Be&Go. Viaja acompañado.",
+     "cue": "lema"
+    }
+   ]
+  }
+ ]
+}
