@@ -48,6 +48,7 @@ import { Cuasi11Equipo, CUASI11EQUIPO_FRAMES } from "./capsulas/cuasi-11-equipo/
 import { DS27Tensores, DS27TENSORES_FRAMES } from "./capsulas/ds27-01-tensores/DS27Tensores";
 import { BeGoMVP, BEGOMVP_FRAMES } from "./capsulas/beandgo-mvp/BeGoMVP";
 import { BeGoEstado, BEGOESTADO_FRAMES } from "./capsulas/beandgo-estado/BeGoEstado";
+import { BeGoApp, BEGOAPP_FRAMES } from "./capsulas/beandgo-app/BeGoApp";
 import { HD } from "./estilos/beandgo/tokens";
 
 export const RemotionRoot: React.FC = () => {
@@ -629,6 +630,19 @@ export const RemotionRoot: React.FC = () => {
         id="BeGo-Estado"
         component={BeGoEstado}
         durationInFrames={BEGOESTADO_FRAMES}
+        fps={HD.fps}
+        width={HD.width}
+        height={HD.height}
+        defaultProps={{
+          serie: "Be&Go",
+          autor: "Gonzalo Mardones",
+          volumenMusica: 0.12,
+        }}
+      />
+      <Composition
+        id="BeGo-App"
+        component={BeGoApp}
+        durationInFrames={BEGOAPP_FRAMES}
         fps={HD.fps}
         width={HD.width}
         height={HD.height}

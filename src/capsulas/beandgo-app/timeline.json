@@ -1,0 +1,294 @@
+{
+ "duracion": 182.217,
+ "escenas": [
+  {
+   "id": "gancho",
+   "inicio": 0.25,
+   "fin": 9.348
+  },
+  {
+   "id": "titulo",
+   "inicio": 9.348,
+   "fin": 13.211
+  },
+  {
+   "id": "que",
+   "inicio": 13.211,
+   "fin": 24.741
+  },
+  {
+   "id": "diseno",
+   "inicio": 24.741,
+   "fin": 39.586
+  },
+  {
+   "id": "inicio",
+   "inicio": 39.586,
+   "fin": 50.497
+  },
+  {
+   "id": "veredicto",
+   "inicio": 50.497,
+   "fin": 72.595
+  },
+  {
+   "id": "combinacion",
+   "inicio": 72.595,
+   "fin": 85.853
+  },
+  {
+   "id": "copiloto",
+   "inicio": 85.853,
+   "fin": 104.602
+  },
+  {
+   "id": "bus",
+   "inicio": 104.602,
+   "fin": 126.316
+  },
+  {
+   "id": "mapa",
+   "inicio": 126.316,
+   "fin": 138.102
+  },
+  {
+   "id": "resumen",
+   "inicio": 138.102,
+   "fin": 148.8
+  },
+  {
+   "id": "dentro",
+   "inicio": 148.8,
+   "fin": 162.079
+  },
+  {
+   "id": "honesto",
+   "inicio": 162.079,
+   "fin": 177.044
+  },
+  {
+   "id": "cierre",
+   "inicio": 177.044,
+   "fin": 182.217
+  }
+ ],
+ "frases": [
+  {
+   "escena": "gancho",
+   "inicio": 0.25,
+   "fin": 5.221,
+   "texto": "¿Me alcanza para este viaje? Esa es la pregunta que hace una familia antes de gastar un peso.",
+   "cue": "pregunta"
+  },
+  {
+   "escena": "gancho",
+   "inicio": 5.421,
+   "fin": 8.898,
+   "texto": "Be&Go la responde, y después te acompaña durante el viaje.",
+   "cue": "responde"
+  },
+  {
+   "escena": "titulo",
+   "inicio": 9.348,
+   "fin": 12.761,
+   "texto": "Be&Go: qué es y cómo se ve. Noviembre de 2026.",
+   "cue": "marca"
+  },
+  {
+   "escena": "que",
+   "inicio": 13.211,
+   "fin": 18.993,
+   "texto": "No es un buscador de pasajes. Es un motor que te dice si el viaje te alcanza, cuánto falta y qué pesa más.",
+   "cue": "motor"
+  },
+  {
+   "escena": "que",
+   "inicio": 19.193,
+   "fin": 24.291,
+   "texto": "Y un copiloto que despierta cuando algo cambia: lluvia, un vuelo cancelado, un bus atrasado.",
+   "cue": "copiloto"
+  },
+  {
+   "escena": "diseno",
+   "inicio": 24.741,
+   "fin": 27.685,
+   "texto": "La app de iPhone es nativa y se diseña en Figma.",
+   "cue": "figma"
+  },
+  {
+   "escena": "diseno",
+   "inicio": 27.885,
+   "fin": 34.413,
+   "texto": "La regla es simple: el destino primero. 29 lugares de Chile con ilustraciones propias, sin fotos de terceros.",
+   "cue": "ilustraciones"
+  },
+  {
+   "escena": "diseno",
+   "inicio": 34.613,
+   "fin": 39.136,
+   "texto": "Fondo crema, tarjetas blancas y un solo color para todo lo que se toca: el copihue.",
+   "cue": "paleta"
+  },
+  {
+   "escena": "inicio",
+   "inicio": 39.586,
+   "fin": 42.978,
+   "texto": "Al abrir, Inicio te saluda y te pregunta a dónde quieres ir.",
+   "cue": "hola"
+  },
+  {
+   "escena": "inicio",
+   "inicio": 43.178,
+   "fin": 50.047,
+   "texto": "Si hay un viaje en curso, aparece arriba, con la hora a la que debes salir. Abajo, lo que hay hoy en tu ciudad y lugares para soñar.",
+   "cue": "activo"
+  },
+  {
+   "escena": "veredicto",
+   "inicio": 50.497,
+   "fin": 55.852,
+   "texto": "Cotizar es una hoja corta: origen, destino, fechas, el grupo con sus edades y el presupuesto.",
+   "cue": "hoja"
+  },
+  {
+   "escena": "veredicto",
+   "inicio": 56.052,
+   "fin": 60.852,
+   "texto": "Mientras cotiza, muestra qué está buscando y solo las fuentes que de verdad respondieron.",
+   "cue": "cotizando"
+  },
+  {
+   "escena": "veredicto",
+   "inicio": 61.052,
+   "fin": 72.145,
+   "texto": "Y el veredicto: 2 adultos y 3 niños a Puerto Natales necesitan al menos $1.641.800. Con $1.000.000 no alcanza, y lo que más pesa es el transporte.",
+   "cue": "veredicto"
+  },
+  {
+   "escena": "combinacion",
+   "inicio": 72.595,
+   "fin": 77.31,
+   "texto": "Desde ahí armas tu combinación: vuelos, buses, alojamiento, actividades y comida.",
+   "cue": "pestanas"
+  },
+  {
+   "escena": "combinacion",
+   "inicio": 77.51,
+   "fin": 85.403,
+   "texto": "Cada opción dice si su precio está verificado, es un precio «desde» o es estimado, con su fuente. Y el total se recalcula con cada elección.",
+   "cue": "total"
+  },
+  {
+   "escena": "copiloto",
+   "inicio": 85.853,
+   "fin": 91.144,
+   "texto": "Durante el viaje, la pestaña Copiloto muestra el próximo paso, el recorrido del día y los avisos.",
+   "cue": "tab"
+  },
+  {
+   "escena": "copiloto",
+   "inicio": 91.344,
+   "fin": 98.853,
+   "texto": "Si mañana llueve, un plan B bajo techo. Si te cancelan el vuelo, tus derechos citados del Código Aeronáutico y el reclamo redactado.",
+   "cue": "avisos"
+  },
+  {
+   "escena": "copiloto",
+   "inicio": 99.053,
+   "fin": 104.152,
+   "texto": "Dónde comer con lo que queda del sobre del día, y la foto de la boleta que se convierte en gasto.",
+   "cue": "comer"
+  },
+  {
+   "escena": "bus",
+   "inicio": 104.602,
+   "fin": 110.469,
+   "texto": "El viaje que más hace un chileno es en bus. Subes la foto del pasaje y la IA lo lee.",
+   "cue": "pasaje"
+  },
+  {
+   "escena": "bus",
+   "inicio": 110.669,
+   "fin": 118.071,
+   "texto": "En la pantalla bloqueada ves la cuenta regresiva, el andén y botones para responder sin abrir la app: Ya subí, Ya salió, Todavía no.",
+   "cue": "live"
+  },
+  {
+   "escena": "bus",
+   "inicio": 118.271,
+   "fin": 125.866,
+   "texto": "Si el bus se atrasa, te dice qué hacer, citando el Decreto 212 y la Ley del Consumidor. Si una fuente no lo dice, el aviso tampoco.",
+   "cue": "derechos"
+  },
+  {
+   "escena": "mapa",
+   "inicio": 126.316,
+   "fin": 132.908,
+   "texto": "El mapa del viaje muestra por dónde vas. Marcas dónde te bajas y el teléfono te avisa unos 2 km antes.",
+   "cue": "bajada"
+  },
+  {
+   "escena": "mapa",
+   "inicio": 133.108,
+   "fin": 137.652,
+   "texto": "El recorrido y tus alarmas se quedan en el teléfono. Nunca viajan al servidor.",
+   "cue": "privado"
+  },
+  {
+   "escena": "resumen",
+   "inicio": 138.102,
+   "fin": 144.481,
+   "texto": "Al llegar, el viaje termina solo y llega un resumen: las horas planeadas y las que tú reportaste, nunca inventadas.",
+   "cue": "fin"
+  },
+  {
+   "escena": "resumen",
+   "inicio": 144.681,
+   "fin": 148.35,
+   "texto": "En Perfil se van sumando tus viajes, tus buses y tu puntualidad.",
+   "cue": "perfil"
+  },
+  {
+   "escena": "dentro",
+   "inicio": 148.8,
+   "fin": 152.597,
+   "texto": "Por dentro, la app conversa con un backend en Google Cloud, en Santiago.",
+   "cue": "nube"
+  },
+  {
+   "escena": "dentro",
+   "inicio": 152.797,
+   "fin": 161.629,
+   "texto": "La IA solo lee y redacta. Los números, las decisiones y las citas son código. Y cada fuente se puede cambiar sin que cambie el veredicto.",
+   "cue": "regla"
+  },
+  {
+   "escena": "honesto",
+   "inicio": 162.079,
+   "fin": 167.562,
+   "texto": "El 9 de noviembre hizo su primer viaje real: un bus de Santiago a Curicó, con la app en un iPhone.",
+   "cue": "curico"
+  },
+  {
+   "escena": "honesto",
+   "inicio": 167.762,
+   "fin": 176.594,
+   "texto": "Lo que falta es lo que no se programa: precios de bus para una fecha, que exigen un acuerdo con las empresas, y familias que la usen para medir cuánto se equivoca.",
+   "cue": "falta"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 177.044,
+   "fin": 179.775,
+   "texto": "Te dice si te alcanza, antes de gastar un peso.",
+   "cue": "lema1"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 179.975,
+   "fin": 181.767,
+   "texto": "Be&Go. Viaja acompañado.",
+   "cue": "lema"
+  }
+ ]
+}

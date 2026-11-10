@@ -1,0 +1,236 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.1,
+ "pausaFrase": 0.2,
+ "pausaEscena": 0.45,
+ "escenas": [
+  {
+   "id": "gancho",
+   "frases": [
+    {
+     "dice": "¿Me alcanza para este viaje? Esa es la pregunta que hace una familia antes de gastar un peso.",
+     "muestra": "¿Me alcanza para este viaje? Esa es la pregunta que hace una familia antes de gastar un peso.",
+     "cue": "pregunta"
+    },
+    {
+     "dice": "Bi an gou la responde, y después te acompaña durante el viaje.",
+     "muestra": "Be&Go la responde, y después te acompaña durante el viaje.",
+     "cue": "responde",
+     "pausa": 0.3
+    }
+   ]
+  },
+  {
+   "id": "titulo",
+   "frases": [
+    {
+     "dice": "Bi an gou: qué es, y cómo se ve. Noviembre de dos mil veintiséis.",
+     "muestra": "Be&Go: qué es y cómo se ve. Noviembre de 2026.",
+     "cue": "marca"
+    }
+   ]
+  },
+  {
+   "id": "que",
+   "frases": [
+    {
+     "dice": "No es un buscador de pasajes. Es un motor que te dice si el viaje te alcanza, cuánto falta, y qué pesa más.",
+     "muestra": "No es un buscador de pasajes. Es un motor que te dice si el viaje te alcanza, cuánto falta y qué pesa más.",
+     "cue": "motor"
+    },
+    {
+     "dice": "Y un copiloto que despierta cuando algo cambia: lluvia, un vuelo cancelado, un bus atrasado.",
+     "muestra": "Y un copiloto que despierta cuando algo cambia: lluvia, un vuelo cancelado, un bus atrasado.",
+     "cue": "copiloto"
+    }
+   ]
+  },
+  {
+   "id": "diseno",
+   "frases": [
+    {
+     "dice": "La app de aifon es nativa, y se diseña en Figma.",
+     "muestra": "La app de iPhone es nativa y se diseña en Figma.",
+     "cue": "figma"
+    },
+    {
+     "dice": "La regla es simple: el destino primero. Veintinueve lugares de Chile, con ilustraciones propias, sin fotos de terceros.",
+     "muestra": "La regla es simple: el destino primero. 29 lugares de Chile con ilustraciones propias, sin fotos de terceros.",
+     "cue": "ilustraciones"
+    },
+    {
+     "dice": "Fondo crema, tarjetas blancas, y un solo color para todo lo que se toca: el copihue.",
+     "muestra": "Fondo crema, tarjetas blancas y un solo color para todo lo que se toca: el copihue.",
+     "cue": "paleta"
+    }
+   ]
+  },
+  {
+   "id": "inicio",
+   "frases": [
+    {
+     "dice": "Al abrir, Inicio te saluda y te pregunta a dónde quieres ir.",
+     "muestra": "Al abrir, Inicio te saluda y te pregunta a dónde quieres ir.",
+     "cue": "hola"
+    },
+    {
+     "dice": "Si hay un viaje en curso, aparece arriba, con la hora a la que debes salir. Abajo, lo que hay hoy en tu ciudad, y lugares para soñar.",
+     "muestra": "Si hay un viaje en curso, aparece arriba, con la hora a la que debes salir. Abajo, lo que hay hoy en tu ciudad y lugares para soñar.",
+     "cue": "activo"
+    }
+   ]
+  },
+  {
+   "id": "veredicto",
+   "frases": [
+    {
+     "dice": "Cotizar es una hoja corta: origen, destino, fechas, el grupo con sus edades, y el presupuesto.",
+     "muestra": "Cotizar es una hoja corta: origen, destino, fechas, el grupo con sus edades y el presupuesto.",
+     "cue": "hoja"
+    },
+    {
+     "dice": "Mientras cotiza, muestra qué está buscando, y solo las fuentes que de verdad respondieron.",
+     "muestra": "Mientras cotiza, muestra qué está buscando y solo las fuentes que de verdad respondieron.",
+     "cue": "cotizando"
+    },
+    {
+     "dice": "Y el veredicto: dos adultos y tres niños a Puerto Natales necesitan al menos un millón seiscientos cuarenta y un mil ochocientos pesos. Con un millón, no alcanza, y lo que más pesa es el transporte.",
+     "muestra": "Y el veredicto: 2 adultos y 3 niños a Puerto Natales necesitan al menos $1.641.800. Con $1.000.000 no alcanza, y lo que más pesa es el transporte.",
+     "cue": "veredicto"
+    }
+   ]
+  },
+  {
+   "id": "combinacion",
+   "frases": [
+    {
+     "dice": "Desde ahí armas tu combinación: vuelos, buses, alojamiento, actividades y comida.",
+     "muestra": "Desde ahí armas tu combinación: vuelos, buses, alojamiento, actividades y comida.",
+     "cue": "pestanas"
+    },
+    {
+     "dice": "Cada opción dice si su precio está verificado, es un precio desde, o es estimado, con su fuente. Y el total se recalcula con cada elección.",
+     "muestra": "Cada opción dice si su precio está verificado, es un precio «desde» o es estimado, con su fuente. Y el total se recalcula con cada elección.",
+     "cue": "total"
+    }
+   ]
+  },
+  {
+   "id": "copiloto",
+   "frases": [
+    {
+     "dice": "Durante el viaje, la pestaña Copiloto muestra el próximo paso, el recorrido del día, y los avisos.",
+     "muestra": "Durante el viaje, la pestaña Copiloto muestra el próximo paso, el recorrido del día y los avisos.",
+     "cue": "tab"
+    },
+    {
+     "dice": "Si mañana llueve, un plan be bajo techo. Si te cancelan el vuelo, tus derechos citados del Código Aeronáutico, y el reclamo redactado.",
+     "muestra": "Si mañana llueve, un plan B bajo techo. Si te cancelan el vuelo, tus derechos citados del Código Aeronáutico y el reclamo redactado.",
+     "cue": "avisos"
+    },
+    {
+     "dice": "Dónde comer con lo que queda del sobre del día, y la foto de la boleta que se convierte en gasto.",
+     "muestra": "Dónde comer con lo que queda del sobre del día, y la foto de la boleta que se convierte en gasto.",
+     "cue": "comer"
+    }
+   ]
+  },
+  {
+   "id": "bus",
+   "frases": [
+    {
+     "dice": "El viaje que más hace un chileno es en bus. Subes la foto del pasaje, y la inteligencia artificial lo lee.",
+     "muestra": "El viaje que más hace un chileno es en bus. Subes la foto del pasaje y la IA lo lee.",
+     "cue": "pasaje"
+    },
+    {
+     "dice": "En la pantalla bloqueada ves la cuenta regresiva, el andén, y botones para responder sin abrir la app: ya subí, ya salió, todavía no.",
+     "muestra": "En la pantalla bloqueada ves la cuenta regresiva, el andén y botones para responder sin abrir la app: Ya subí, Ya salió, Todavía no.",
+     "cue": "live"
+    },
+    {
+     "dice": "Si el bus se atrasa, te dice qué hacer, citando el Decreto doscientos doce y la Ley del Consumidor. Si una fuente no lo dice, el aviso tampoco.",
+     "muestra": "Si el bus se atrasa, te dice qué hacer, citando el Decreto 212 y la Ley del Consumidor. Si una fuente no lo dice, el aviso tampoco.",
+     "cue": "derechos"
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "frases": [
+    {
+     "dice": "El mapa del viaje muestra por dónde vas. Marcas dónde te bajas, y el teléfono te avisa unos dos kilómetros antes.",
+     "muestra": "El mapa del viaje muestra por dónde vas. Marcas dónde te bajas y el teléfono te avisa unos 2 km antes.",
+     "cue": "bajada"
+    },
+    {
+     "dice": "El recorrido y tus alarmas se quedan en el teléfono. Nunca viajan al servidor.",
+     "muestra": "El recorrido y tus alarmas se quedan en el teléfono. Nunca viajan al servidor.",
+     "cue": "privado"
+    }
+   ]
+  },
+  {
+   "id": "resumen",
+   "frases": [
+    {
+     "dice": "Al llegar, el viaje termina solo, y llega un resumen: las horas planeadas y las que tú reportaste, nunca inventadas.",
+     "muestra": "Al llegar, el viaje termina solo y llega un resumen: las horas planeadas y las que tú reportaste, nunca inventadas.",
+     "cue": "fin"
+    },
+    {
+     "dice": "En Perfil se van sumando tus viajes, tus buses, y tu puntualidad.",
+     "muestra": "En Perfil se van sumando tus viajes, tus buses y tu puntualidad.",
+     "cue": "perfil"
+    }
+   ]
+  },
+  {
+   "id": "dentro",
+   "frases": [
+    {
+     "dice": "Por dentro, la app conversa con un backend en Google Cloud, en Santiago.",
+     "muestra": "Por dentro, la app conversa con un backend en Google Cloud, en Santiago.",
+     "cue": "nube"
+    },
+    {
+     "dice": "La inteligencia artificial solo lee y redacta. Los números, las decisiones y las citas son código. Y cada fuente se puede cambiar sin que cambie el veredicto.",
+     "muestra": "La IA solo lee y redacta. Los números, las decisiones y las citas son código. Y cada fuente se puede cambiar sin que cambie el veredicto.",
+     "cue": "regla"
+    }
+   ]
+  },
+  {
+   "id": "honesto",
+   "frases": [
+    {
+     "dice": "El nueve de noviembre hizo su primer viaje real: un bus de Santiago a Curicó, con la app en un aifon.",
+     "muestra": "El 9 de noviembre hizo su primer viaje real: un bus de Santiago a Curicó, con la app en un iPhone.",
+     "cue": "curico"
+    },
+    {
+     "dice": "Lo que falta es lo que no se programa: precios de bus para una fecha, que exigen un acuerdo con las empresas, y familias que la usen para medir cuánto se equivoca.",
+     "muestra": "Lo que falta es lo que no se programa: precios de bus para una fecha, que exigen un acuerdo con las empresas, y familias que la usen para medir cuánto se equivoca.",
+     "cue": "falta"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Te dice si te alcanza, antes de gastar un peso.",
+     "muestra": "Te dice si te alcanza, antes de gastar un peso.",
+     "cue": "lema1"
+    },
+    {
+     "dice": "Bi an gou. Viaja acompañado.",
+     "muestra": "Be&Go. Viaja acompañado.",
+     "cue": "lema"
+    }
+   ]
+  }
+ ]
+}

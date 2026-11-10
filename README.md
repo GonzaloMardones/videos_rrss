@@ -107,12 +107,16 @@ Note that for some entities a company license is needed. [Read the terms here](h
 |---|---|---|
 | `BeGo-MVP` | Diseño del primer MVP del copiloto de viaje: funciones, pantallas, arquitectura de agentes y plan | [guion.json](src/capsulas/beandgo-mvp/guion.json) |
 | `BeGo-Estado` | Estado del MVP al 8-nov-2026: números medidos, qué puede y qué no, capturas reales del iPhone, cómo encenderla | [guion.json](src/capsulas/beandgo-estado/guion.json) |
+| `BeGo-App` | Qué es Be&Go y cómo se ve la app nativa de iPhone según el diseño de Figma (10-nov-2026): Inicio, veredicto, combinación, copiloto, viaje en bus con Live Activity, mapa y resumen | [guion.json](src/capsulas/beandgo-app/guion.json) |
 
 Usa el estilo `src/estilos/beandgo/` (identidad de la app: copihue, azul noche, Nunito Sans). Las cifras de las pantallas de ejemplo son ilustrativas y van rotuladas como tales.
+
+`BeGo-App` usa en cambio el kit `src/capsulas/beandgo-app/ios.tsx`, copiado de `DESIGN.md` y `Theme.swift` de la app iOS (fondo crema, tarjetas de radio 28, copihue como único color de acción) y las 29 ilustraciones propias de `ios/BeGo/Resources/Assets.xcassets/Illustrations` en `public/beandgo-app/art/`. SF Pro no se puede usar fuera de Apple: Nunito hace de SF Rounded e Inter de SF Pro Text. Cada pantalla va rotulada: "según Figma" (armada para el video con datos del repo) o "captura real".
 
 ```console
 npm run render -- BeGo-MVP beandgo-mvp
 npm run render -- BeGo-Estado beandgo-estado
+npm run render -- BeGo-App beandgo-app
 ```
 
 ## Cápsulas técnicas
