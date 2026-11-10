@@ -584,7 +584,7 @@ export const PasoAtraso: React.FC = () => (
 // ---------- Mapa del viaje ----------
 export const MapaViaje: React.FC<{ avance: number; alerta: number }> = ({ avance, alerta }) => {
   // Ruta estilizada Santiago (arriba) → Curicó (abajo).
-  const ruta = "M 120 120 C 150 190, 110 250, 160 320 S 230 420, 210 500 S 250 600, 262 640";
+  const ruta = "M 120 120 C 150 176, 110 224, 160 280 S 230 360, 210 424 S 250 504, 262 536";
   return (
     <AbsoluteFill style={{ background: "#EEF2E6" }}>
       <svg width={393} height={852} viewBox="0 0 393 852" style={{ position: "absolute", inset: 0 }}>
@@ -595,20 +595,20 @@ export const MapaViaje: React.FC<{ avance: number; alerta: number }> = ({ avance
         <path d="M 300 0 L 330 852" stroke="#FFFFFF" strokeWidth="4" fill="none" />
         <path d={ruta} stroke="#C9BFB0" strokeWidth="7" fill="none" strokeLinecap="round" />
         <path d={ruta} stroke={t.copihue} strokeWidth="7" fill="none" strokeLinecap="round" pathLength={1} strokeDasharray={`${avance} 1`} />
-        <circle cx="262" cy="640" r={70} fill={`${t.copihue}12`} stroke={t.copihue} strokeWidth="2" strokeDasharray="6 6" />
+        <circle cx="262" cy="536" r={70} fill={`${t.copihue}12`} stroke={t.copihue} strokeWidth="2" strokeDasharray="6 6" />
         <circle cx="120" cy="120" r="9" fill={t.navy} stroke="#fff" strokeWidth="3" />
         <text x="136" y="116" fontFamily={texto} fontWeight="700" fontSize="13" fill={t.ink}>
           Terminal Sur
         </text>
-        <text x="190" y="700" fontFamily={texto} fontWeight="700" fontSize="13" fill={t.ink}>
+        <text x="22" y="540" fontFamily={texto} fontWeight="700" fontSize="13" fill={t.ink}>
           Plaza de Armas de Curicó
         </text>
-        <text x="206" y="582" fontFamily={texto} fontWeight="600" fontSize="11.5" fill={t.copihue}>
+        <text x="206" y="478" fontFamily={texto} fontWeight="600" fontSize="11.5" fill={t.copihue}>
           ~2 km
         </text>
       </svg>
       <BusEnRuta avance={avance} />
-      <div style={{ position: "absolute", left: 250, top: 612, color: t.copihue }}>
+      <div style={{ position: "absolute", left: 248, top: 508, color: t.copihue }}>
         <MapPin size={28} fill={t.copihue} color="#fff" strokeWidth={1.6} />
       </div>
       <div style={{ position: "absolute", top: 62, left: 16, right: 16, display: "flex", justifyContent: "space-between" }}>
@@ -667,12 +667,12 @@ const BusEnRuta: React.FC<{ avance: number }> = ({ avance }) => {
   // Posición aproximada sobre la curva por tramos rectos (suficiente para el video).
   const pts = [
     [120, 120],
-    [140, 230],
-    [160, 320],
-    [215, 420],
-    [210, 500],
-    [240, 590],
-    [262, 640],
+    [140, 208],
+    [160, 280],
+    [215, 360],
+    [210, 424],
+    [240, 496],
+    [262, 536],
   ];
   const k = avance * (pts.length - 1);
   const i = Math.min(pts.length - 2, Math.floor(k));
