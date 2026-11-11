@@ -1,0 +1,195 @@
+{
+ "motor": "kokoro",
+ "voz": "em_alex",
+ "idioma": "es-419",
+ "velocidad": 1.1,
+ "pausaFrase": 0.2,
+ "pausaEscena": 0.45,
+ "escenas": [
+  {
+   "id": "intro",
+   "frases": [
+    {
+     "dice": "Si nunca has usado Bi an gou, esto es lo que hace, y por dónde puedes entrar.",
+     "muestra": "Si nunca has usado Be&Go, esto es lo que hace, y por dónde puedes entrar.",
+     "cue": "hola"
+    },
+    {
+     "dice": "Antes del viaje te dice si te alcanza. Durante el viaje te acompaña. Y después, te ayuda si algo salió mal.",
+     "muestra": "Antes del viaje te dice si te alcanza. Durante el viaje te acompaña. Y después, te ayuda si algo salió mal.",
+     "cue": "tres"
+    }
+   ]
+  },
+  {
+   "id": "mapa",
+   "frases": [
+    {
+     "dice": "La app tiene cuatro pestañas: Inicio, Viajes, Copiloto, y Perfil.",
+     "muestra": "La app tiene cuatro pestañas: Inicio, Viajes, Copiloto y Perfil.",
+     "cue": "tabs"
+    },
+    {
+     "dice": "Y siete flujos: cotizar, armar tu ruta, el aviso antes de salir, el viaje en bus, la boleta rápida, lo que la app aprende de ti, y los reclamos.",
+     "muestra": "Y siete flujos: cotizar, armar tu ruta, el aviso antes de salir, el viaje en bus, la boleta rápida, lo que la app aprende de ti y los reclamos.",
+     "cue": "flujos"
+    }
+   ]
+  },
+  {
+   "id": "cotizar",
+   "frases": [
+    {
+     "dice": "Flujo uno, cotizar. Dices de dónde sales, a dónde vas, quiénes viajan, y cuánto tienes, con un deslizador.",
+     "muestra": "1. Cotizar. Dices de dónde sales, a dónde vas, quiénes viajan y cuánto tienes, con un deslizador.",
+     "cue": "hoja"
+    },
+    {
+     "dice": "Si marcas soy flexible, Bi an gou mueve el viaje hasta tres días antes o después, y cotiza las fechas más baratas.",
+     "muestra": "Si marcas «Soy flexible», Be&Go mueve el viaje hasta 3 días antes o después y cotiza las fechas más baratas.",
+     "cue": "flexible"
+    },
+    {
+     "dice": "El veredicto dice si alcanza, cuánto falta, y qué pesa más. Eliges tu combinación, y lo guardas como viaje, con su plan estimado.",
+     "muestra": "El veredicto dice si alcanza, cuánto falta y qué pesa más. Eliges tu combinación y lo guardas como viaje, con su plan estimado.",
+     "cue": "veredicto"
+    }
+   ]
+  },
+  {
+   "id": "ruta",
+   "frases": [
+    {
+     "dice": "Flujo dos, tu ruta. El viaje de puerta a puerta, como un trayecto: salgo de, tu bus, y llego a.",
+     "muestra": "2. Tu ruta. El viaje de puerta a puerta, como un trayecto: «Salgo de», tu bus y «Llego a».",
+     "cue": "trayecto"
+    },
+    {
+     "dice": "Cada extremo elige cómo llegar: metro, micro, auto, a pie, o Uber, con un precio aproximado calculado con tarifas publicadas.",
+     "muestra": "Cada extremo elige cómo llegar: Metro, micro, auto, a pie o Uber, con un precio aproximado calculado con tarifas publicadas.",
+     "cue": "modos"
+    },
+    {
+     "dice": "El mapa dibuja cada línea con su color, y puedes marcar paradas con alarma en el camino.",
+     "muestra": "El mapa dibuja cada línea con su color, y puedes marcar paradas con alarma en el camino.",
+     "cue": "paradas"
+    }
+   ]
+  },
+  {
+   "id": "antes",
+   "frases": [
+    {
+     "dice": "Flujo tres, el aviso antes de salir. Un día antes llega un resumen escrito con datos, no con un modelo.",
+     "muestra": "3. El aviso antes de salir. Un día antes llega un resumen escrito con datos, no con un modelo.",
+     "cue": "aviso"
+    },
+    {
+     "dice": "El pronóstico en el origen, en el destino, y a mitad de camino. El tráfico previsto. Y el estado de las rutas del Ministerio de Obras Públicas.",
+     "muestra": "El pronóstico en el origen, en el destino y a mitad de camino. El tráfico previsto. Y el estado de las rutas del MOP.",
+     "cue": "datos"
+    }
+   ]
+  },
+  {
+   "id": "bus",
+   "frases": [
+    {
+     "dice": "Flujo cuatro, el viaje en bus. Subes la foto del pasaje, y en la pantalla bloqueada ves la cuenta regresiva y respondes con un botón.",
+     "muestra": "4. El viaje en bus. Subes la foto del pasaje, y en la pantalla bloqueada ves la cuenta regresiva y respondes con un botón.",
+     "cue": "pasaje"
+    },
+    {
+     "dice": "Si tu viaje tiene dos buses, por ejemplo Curicó, Santiago, Viña del Mar, la app los une en un solo trayecto.",
+     "muestra": "Si tu viaje tiene dos buses, por ejemplo Curicó → Santiago → Viña del Mar, la app los une en un solo trayecto.",
+     "cue": "dos"
+    },
+    {
+     "dice": "Y si el primero se atrasa tanto que puedes perder el segundo, te avisa con urgencia, con la hora a la que llegarías.",
+     "muestra": "Y si el primero se atrasa tanto que puedes perder el segundo, te avisa con urgencia, con la hora a la que llegarías.",
+     "cue": "riesgo"
+    }
+   ]
+  },
+  {
+   "id": "boleta",
+   "frases": [
+    {
+     "dice": "Flujo cinco, la boleta rápida. Un botón en la pantalla bloqueada, o el botón de acción del aifon.",
+     "muestra": "5. La boleta rápida. Un botón en la pantalla bloqueada, o el botón de Acción del iPhone.",
+     "cue": "control"
+    },
+    {
+     "dice": "Tu cara desbloquea, la cámara ya está abierta, la foto, y confirmar. El gasto queda anotado, y sigues tu viaje.",
+     "muestra": "Face ID, la cámara ya abierta, la foto y confirmar. El gasto queda anotado y sigues tu viaje.",
+     "cue": "pasos"
+    }
+   ]
+  },
+  {
+   "id": "contexto",
+   "frases": [
+    {
+     "dice": "Flujo seis, lo que la app aprende de ti. Un grafo de contexto une tus viajes, tus gastos, y los avisos que abres o ignoras.",
+     "muestra": "6. Lo que la app aprende de ti. Un grafo de contexto une tus viajes, tus gastos y los avisos que abres o ignoras.",
+     "cue": "grafo"
+    },
+    {
+     "dice": "Si casi siempre compras algo en el terminal, al llegar te pregunta: ¿algo para el viaje?, con el botón de la boleta.",
+     "muestra": "Si casi siempre compras algo en el terminal, al llegar te pregunta «¿Algo para el viaje?», con el botón de la boleta.",
+     "cue": "habito"
+    },
+    {
+     "dice": "Nunca guarda tu ubicación, y el nombre de cada tienda queda cifrado con tu propia clave.",
+     "muestra": "Nunca guarda tu ubicación, y el nombre de cada tienda queda cifrado con tu propia clave.",
+     "cue": "privado"
+    }
+   ]
+  },
+  {
+   "id": "reclamos",
+   "frases": [
+    {
+     "dice": "Flujo siete, los reclamos. Si te cancelan el bus, o se atrasa mucho, cada reclamo abre tu caso, en Perfil, mis reclamos.",
+     "muestra": "7. Los reclamos. Si te cancelan el bus o se atrasa mucho, cada reclamo abre «Tu caso», en Perfil → Mis reclamos.",
+     "cue": "caso"
+    },
+    {
+     "dice": "Te dice por separado si es para un reclamo o para una demanda. Las reglas deciden, y la inteligencia artificial solo redacta.",
+     "muestra": "Te dice por separado si es para un reclamo o para una demanda. Las reglas deciden y la IA solo redacta.",
+     "cue": "evaluacion"
+    },
+    {
+     "dice": "Además, suma los gastos que te causó el problema, deja la carta lista para el Sernac, y si quieres, pides la revisión de un abogado.",
+     "muestra": "Suma los gastos que te causó el problema, deja la carta lista para SERNAC y, si quieres, pides la revisión de un abogado.",
+     "cue": "carta"
+    }
+   ]
+  },
+  {
+   "id": "probado",
+   "frases": [
+    {
+     "dice": "Cada uno de los setenta y seis avisos se puede probar en el teléfono, con los mismos textos de producción, y cada flujo tiene su demo de punta a punta.",
+     "muestra": "Cada uno de los 76 avisos se puede probar en el teléfono, con los mismos textos de producción, y cada flujo tiene su demo de punta a punta.",
+     "cue": "pruebas"
+    }
+   ]
+  },
+  {
+   "id": "cierre",
+   "frases": [
+    {
+     "dice": "Antes, durante, y después.",
+     "muestra": "Antes, durante y después.",
+     "cue": "lema1"
+    },
+    {
+     "dice": "Bi an gou. Viaja acompañado.",
+     "muestra": "Be&Go. Viaja acompañado.",
+     "cue": "lema"
+    }
+   ]
+  }
+ ]
+}

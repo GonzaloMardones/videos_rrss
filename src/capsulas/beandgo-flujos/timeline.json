@@ -1,0 +1,244 @@
+{
+ "duracion": 160.883,
+ "escenas": [
+  {
+   "id": "intro",
+   "inicio": 0.25,
+   "fin": 10.969
+  },
+  {
+   "id": "mapa",
+   "inicio": 10.969,
+   "fin": 23.097
+  },
+  {
+   "id": "cotizar",
+   "inicio": 23.097,
+   "fin": 43.275
+  },
+  {
+   "id": "ruta",
+   "inicio": 43.275,
+   "fin": 61.511
+  },
+  {
+   "id": "antes",
+   "inicio": 61.511,
+   "fin": 75.644
+  },
+  {
+   "id": "bus",
+   "inicio": 75.644,
+   "fin": 95.481
+  },
+  {
+   "id": "boleta",
+   "inicio": 95.481,
+   "fin": 107.651
+  },
+  {
+   "id": "contexto",
+   "inicio": 107.651,
+   "fin": 126.271
+  },
+  {
+   "id": "reclamos",
+   "inicio": 126.271,
+   "fin": 147.921
+  },
+  {
+   "id": "probado",
+   "inicio": 147.921,
+   "fin": 156.777
+  },
+  {
+   "id": "cierre",
+   "inicio": 156.777,
+   "fin": 160.883
+  }
+ ],
+ "frases": [
+  {
+   "escena": "intro",
+   "inicio": 0.25,
+   "fin": 4.175,
+   "texto": "Si nunca has usado Be&Go, esto es lo que hace, y por dónde puedes entrar.",
+   "cue": "hola"
+  },
+  {
+   "escena": "intro",
+   "inicio": 4.375,
+   "fin": 10.519,
+   "texto": "Antes del viaje te dice si te alcanza. Durante el viaje te acompaña. Y después, te ayuda si algo salió mal.",
+   "cue": "tres"
+  },
+  {
+   "escena": "mapa",
+   "inicio": 10.969,
+   "fin": 14.681,
+   "texto": "La app tiene cuatro pestañas: Inicio, Viajes, Copiloto y Perfil.",
+   "cue": "tabs"
+  },
+  {
+   "escena": "mapa",
+   "inicio": 14.881,
+   "fin": 22.647,
+   "texto": "Y siete flujos: cotizar, armar tu ruta, el aviso antes de salir, el viaje en bus, la boleta rápida, lo que la app aprende de ti y los reclamos.",
+   "cue": "flujos"
+  },
+  {
+   "escena": "cotizar",
+   "inicio": 23.097,
+   "fin": 28.921,
+   "texto": "1. Cotizar. Dices de dónde sales, a dónde vas, quiénes viajan y cuánto tienes, con un deslizador.",
+   "cue": "hoja"
+  },
+  {
+   "escena": "cotizar",
+   "inicio": 29.121,
+   "fin": 35.542,
+   "texto": "Si marcas «Soy flexible», Be&Go mueve el viaje hasta 3 días antes o después y cotiza las fechas más baratas.",
+   "cue": "flexible"
+  },
+  {
+   "escena": "cotizar",
+   "inicio": 35.742,
+   "fin": 42.825,
+   "texto": "El veredicto dice si alcanza, cuánto falta y qué pesa más. Eliges tu combinación y lo guardas como viaje, con su plan estimado.",
+   "cue": "veredicto"
+  },
+  {
+   "escena": "ruta",
+   "inicio": 43.275,
+   "fin": 48.544,
+   "texto": "2. Tu ruta. El viaje de puerta a puerta, como un trayecto: «Salgo de», tu bus y «Llego a».",
+   "cue": "trayecto"
+  },
+  {
+   "escena": "ruta",
+   "inicio": 48.744,
+   "fin": 55.912,
+   "texto": "Cada extremo elige cómo llegar: Metro, micro, auto, a pie o Uber, con un precio aproximado calculado con tarifas publicadas.",
+   "cue": "modos"
+  },
+  {
+   "escena": "ruta",
+   "inicio": 56.112,
+   "fin": 61.061,
+   "texto": "El mapa dibuja cada línea con su color, y puedes marcar paradas con alarma en el camino.",
+   "cue": "paradas"
+  },
+  {
+   "escena": "antes",
+   "inicio": 61.511,
+   "fin": 67.314,
+   "texto": "3. El aviso antes de salir. Un día antes llega un resumen escrito con datos, no con un modelo.",
+   "cue": "aviso"
+  },
+  {
+   "escena": "antes",
+   "inicio": 67.514,
+   "fin": 75.194,
+   "texto": "El pronóstico en el origen, en el destino y a mitad de camino. El tráfico previsto. Y el estado de las rutas del MOP.",
+   "cue": "datos"
+  },
+  {
+   "escena": "bus",
+   "inicio": 75.644,
+   "fin": 82.876,
+   "texto": "4. El viaje en bus. Subes la foto del pasaje, y en la pantalla bloqueada ves la cuenta regresiva y respondes con un botón.",
+   "cue": "pasaje"
+  },
+  {
+   "escena": "bus",
+   "inicio": 83.076,
+   "fin": 88.793,
+   "texto": "Si tu viaje tiene dos buses, por ejemplo Curicó → Santiago → Viña del Mar, la app los une en un solo trayecto.",
+   "cue": "dos"
+  },
+  {
+   "escena": "bus",
+   "inicio": 88.993,
+   "fin": 95.031,
+   "texto": "Y si el primero se atrasa tanto que puedes perder el segundo, te avisa con urgencia, con la hora a la que llegarías.",
+   "cue": "riesgo"
+  },
+  {
+   "escena": "boleta",
+   "inicio": 95.481,
+   "fin": 100.899,
+   "texto": "5. La boleta rápida. Un botón en la pantalla bloqueada, o el botón de Acción del iPhone.",
+   "cue": "control"
+  },
+  {
+   "escena": "boleta",
+   "inicio": 101.099,
+   "fin": 107.201,
+   "texto": "Face ID, la cámara ya abierta, la foto y confirmar. El gasto queda anotado y sigues tu viaje.",
+   "cue": "pasos"
+  },
+  {
+   "escena": "contexto",
+   "inicio": 107.651,
+   "fin": 114.349,
+   "texto": "6. Lo que la app aprende de ti. Un grafo de contexto une tus viajes, tus gastos y los avisos que abres o ignoras.",
+   "cue": "grafo"
+  },
+  {
+   "escena": "contexto",
+   "inicio": 114.549,
+   "fin": 120.672,
+   "texto": "Si casi siempre compras algo en el terminal, al llegar te pregunta «¿Algo para el viaje?», con el botón de la boleta.",
+   "cue": "habito"
+  },
+  {
+   "escena": "contexto",
+   "inicio": 120.872,
+   "fin": 125.821,
+   "texto": "Nunca guarda tu ubicación, y el nombre de cada tienda queda cifrado con tu propia clave.",
+   "cue": "privado"
+  },
+  {
+   "escena": "reclamos",
+   "inicio": 126.271,
+   "fin": 133.162,
+   "texto": "7. Los reclamos. Si te cancelan el bus o se atrasa mucho, cada reclamo abre «Tu caso», en Perfil → Mis reclamos.",
+   "cue": "caso"
+  },
+  {
+   "escena": "reclamos",
+   "inicio": 133.362,
+   "fin": 140.445,
+   "texto": "Te dice por separado si es para un reclamo o para una demanda. Las reglas deciden y la IA solo redacta.",
+   "cue": "evaluacion"
+  },
+  {
+   "escena": "reclamos",
+   "inicio": 140.645,
+   "fin": 147.471,
+   "texto": "Suma los gastos que te causó el problema, deja la carta lista para SERNAC y, si quieres, pides la revisión de un abogado.",
+   "cue": "carta"
+  },
+  {
+   "escena": "probado",
+   "inicio": 147.921,
+   "fin": 156.327,
+   "texto": "Cada uno de los 76 avisos se puede probar en el teléfono, con los mismos textos de producción, y cada flujo tiene su demo de punta a punta.",
+   "cue": "pruebas"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 156.777,
+   "fin": 158.441,
+   "texto": "Antes, durante y después.",
+   "cue": "lema1"
+  },
+  {
+   "escena": "cierre",
+   "inicio": 158.641,
+   "fin": 160.433,
+   "texto": "Be&Go. Viaja acompañado.",
+   "cue": "lema"
+  }
+ ]
+}

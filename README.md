@@ -108,15 +108,19 @@ Note that for some entities a company license is needed. [Read the terms here](h
 | `BeGo-MVP` | Diseño del primer MVP del copiloto de viaje: funciones, pantallas, arquitectura de agentes y plan | [guion.json](src/capsulas/beandgo-mvp/guion.json) |
 | `BeGo-Estado` | Estado del MVP al 8-nov-2026: números medidos, qué puede y qué no, capturas reales del iPhone, cómo encenderla | [guion.json](src/capsulas/beandgo-estado/guion.json) |
 | `BeGo-App` | Qué es Be&Go y cómo se ve la app nativa de iPhone según el diseño de Figma (10-nov-2026): Inicio, veredicto, combinación, copiloto, viaje en bus con Live Activity, mapa y resumen | [guion.json](src/capsulas/beandgo-app/guion.json) |
+| `BeGo-Flujos` | Be&Go para quien no la conoce (11-nov-2026): cuatro pestañas y siete flujos (cotizar con «Soy flexible», Tu ruta, aviso antes de salir, viaje en bus con dos buses, boleta rápida, grafo de contexto, reclamos), con estilo Material 3 Expressive y Google Sans | [guion.json](src/capsulas/beandgo-flujos/guion.json) |
 
 Usa el estilo `src/estilos/beandgo/` (identidad de la app: copihue, azul noche, Nunito Sans). Las cifras de las pantallas de ejemplo son ilustrativas y van rotuladas como tales.
 
 `BeGo-App` usa en cambio el kit `src/capsulas/beandgo-app/ios.tsx`, copiado de `DESIGN.md` y `Theme.swift` de la app iOS (fondo crema, tarjetas de radio 28, copihue como único color de acción) y las 29 ilustraciones propias de `ios/BeGo/Resources/Assets.xcassets/Illustrations` en `public/beandgo-app/art/`. SF Pro no se puede usar fuera de Apple: Nunito hace de SF Rounded e Inter de SF Pro Text. Cada pantalla va rotulada: "según Figma" (armada para el video con datos del repo) o "captura real".
 
+`BeGo-Flujos` usa el kit `src/capsulas/beandgo-flujos/m3.tsx`: Google Sans, formas expresivas de Material 3 (galleta, trébol, sol) que se morfan, las curvas de movimiento de Material (emphasized decelerate/accelerate, standard) y springs deterministas por fotograma, revelados en secuencia y transición de eje compartido entre escenas. La paleta no es la de Google: es un esquema tonal de Material construido desde el copihue (primario), el azul noche (secundario) y el ámbar (terciario). Las pantallas del teléfono siguen siendo las de la app (kit de `beandgo-app`).
+
 ```console
 npm run render -- BeGo-MVP beandgo-mvp
 npm run render -- BeGo-Estado beandgo-estado
 npm run render -- BeGo-App beandgo-app
+npm run render -- BeGo-Flujos beandgo-flujos
 ```
 
 ## Cápsulas técnicas
