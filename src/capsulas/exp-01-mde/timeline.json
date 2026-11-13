@@ -4,56 +4,56 @@
   {
    "id": "gancho",
    "inicio": 0.25,
-   "fin": 7.569
+   "fin": 7.825
   },
   {
    "id": "titulo",
-   "inicio": 7.569,
-   "fin": 11.943
+   "inicio": 7.825,
+   "fin": 11.773
   },
   {
    "id": "errores",
-   "inicio": 11.943,
-   "fin": 28.065
+   "inicio": 11.773,
+   "fin": 27.681
   },
   {
    "id": "curvas",
-   "inicio": 28.065,
-   "fin": 40.943
+   "inicio": 27.681,
+   "fin": 40.858
   },
   {
    "id": "formula",
-   "inicio": 40.943,
-   "fin": 53.059
+   "inicio": 40.858,
+   "fin": 51.886
   },
   {
    "id": "regla",
-   "inicio": 53.059,
-   "fin": 62.981
+   "inicio": 51.886,
+   "fin": 60.613
   },
   {
    "id": "ejemplo",
-   "inicio": 62.981,
-   "fin": 78.753
+   "inicio": 60.613,
+   "fin": 77.345
   },
   {
    "id": "cuadruple",
-   "inicio": 78.753,
-   "fin": 86.519
+   "inicio": 77.345,
+   "fin": 85.943
   },
   {
    "id": "palancas",
-   "inicio": 86.519,
-   "fin": 96.569
+   "inicio": 85.943,
+   "fin": 95.225
   },
   {
    "id": "trampa",
-   "inicio": 96.569,
-   "fin": 106.447
+   "inicio": 95.225,
+   "fin": 104.677
   },
   {
    "id": "cierre",
-   "inicio": 106.447,
+   "inicio": 104.677,
    "fin": 113.105
   }
  ],
@@ -61,127 +61,127 @@
   {
    "escena": "gancho",
    "inicio": 0.25,
-   "fin": 7.269,
-   "texto": "Lanzaste un experimento, y no salió significativo. ¿Es que no funciona, o tu experimento era demasiado chico para verlo?",
+   "fin": 7.525,
+   "texto": "Lanzaste un test A/B y no salió significativo. Antes de concluir que la idea no funciona, revisa si el test tenía tamaño para verlo.",
    "cue": "gancho"
   },
   {
    "escena": "titulo",
-   "inicio": 7.569,
-   "fin": 11.643,
-   "texto": "Idea 1 del mapa de la experimentación: el efecto mínimo detectable (MDE).",
+   "inicio": 7.825,
+   "fin": 11.473,
+   "texto": "El mapa de la experimentación, parte 1: el efecto mínimo detectable (MDE).",
    "cue": null
   },
   {
    "escena": "errores",
-   "inicio": 11.943,
-   "fin": 20.327,
-   "texto": "Todo experimento puede equivocarse de dos formas. Falso positivo: dices que funciona, y no funciona. Su probabilidad es α, normalmente 5%.",
+   "inicio": 11.773,
+   "fin": 20.349,
+   "texto": "Un experimento falla de dos maneras. La primera es el falso positivo: das por bueno algo que no sirve. Pasa con probabilidad α, que suele ser 5%.",
    "cue": "positivo"
   },
   {
    "escena": "errores",
-   "inicio": 20.447,
-   "fin": 27.765,
-   "texto": "Y falso negativo: el efecto existe, y no lo ves. Su probabilidad es β. 1 − β es el poder: la probabilidad de detectar un efecto real.",
+   "inicio": 20.469,
+   "fin": 27.381,
+   "texto": "La segunda es el falso negativo: el efecto existe y no lo detectas. Pasa con probabilidad β, y 1 − β es el poder del test.",
    "cue": "negativo"
   },
   {
    "escena": "curvas",
-   "inicio": 28.065,
-   "fin": 32.395,
-   "texto": "Imagina dos campanas. Una, si no hay efecto. Otra, corrida en el tamaño del efecto.",
+   "inicio": 27.681,
+   "fin": 32.929,
+   "texto": "Fíjate en estas dos campanas. La primera es lo que verías sin efecto; la segunda, con el efecto real.",
    "cue": "campanas"
   },
   {
    "escena": "curvas",
-   "inicio": 32.515,
-   "fin": 40.643,
-   "texto": "El umbral de significancia las corta. Lo que cae de la segunda campana a la izquierda del corte, es beta. Si las campanas están muy encimadas, el poder se cae.",
+   "inicio": 33.049,
+   "fin": 40.558,
+   "texto": "La línea de significancia las separa. Lo que queda de la segunda campana antes de la línea es β. Mientras más se superponen, menos poder tienes.",
    "cue": "corte"
   },
   {
    "escena": "formula",
-   "inicio": 40.943,
-   "fin": 43.802,
-   "texto": "De ahí sale la fórmula del efecto mínimo detectable.",
+   "inicio": 40.858,
+   "fin": 43.909,
+   "texto": "Con eso se arma la fórmula del efecto mínimo detectable.",
    "cue": "formula"
   },
   {
    "escena": "formula",
-   "inicio": 43.922,
-   "fin": 47.527,
-   "texto": "Arriba, cuánta seguridad pides: z de α más z de β.",
+   "inicio": 44.029,
+   "fin": 47.058,
+   "texto": "Arriba va la exigencia: z de α más z de β.",
    "cue": "z"
   },
   {
    "escena": "formula",
-   "inicio": 47.647,
-   "fin": 50.015,
-   "texto": "Después, cuánto ruido tiene tu métrica: σ.",
+   "inicio": 47.178,
+   "fin": 49.055,
+   "texto": "Luego, el ruido de la métrica: σ.",
    "cue": "sigma"
   },
   {
    "escena": "formula",
-   "inicio": 50.135,
-   "fin": 52.759,
-   "texto": "Y al final, el tamaño de muestra, dentro de una raíz.",
+   "inicio": 49.175,
+   "fin": 51.586,
+   "texto": "Y abajo, el tamaño de muestra, bajo una raíz.",
    "cue": "raiz"
   },
   {
    "escena": "regla",
-   "inicio": 53.059,
-   "fin": 62.681,
-   "texto": "Con 5% de significancia, 80% de poder y grupos iguales, todo se resume en 16: necesitas 16·σ²/δ² por grupo.",
+   "inicio": 51.886,
+   "fin": 60.313,
+   "texto": "Con 5% de significancia, 80% de poder y grupos del mismo tamaño, la cuenta queda en 16·σ²/δ² por grupo.",
    "cue": "regla"
   },
   {
    "escena": "ejemplo",
-   "inicio": 62.981,
-   "fin": 68.783,
-   "texto": "Un ejemplo. Tu conversión es 10%, y quieres detectar un punto más. La varianza es p(1 − p) = 0,09.",
+   "inicio": 60.613,
+   "fin": 66.735,
+   "texto": "Un caso concreto: convierte el 10% y quieres detectar un punto más. La varianza es p(1 − p) = 0,09.",
    "cue": "conversion"
   },
   {
    "escena": "ejemplo",
-   "inicio": 68.903,
-   "fin": 75.602,
-   "texto": "16 × 0,09 / 0,01² = 14.400 personas por grupo.",
+   "inicio": 66.855,
+   "fin": 73.789,
+   "texto": "16 × 0,09 / 0,01² da 14.400 personas por grupo.",
    "cue": "cuenta"
   },
   {
    "escena": "ejemplo",
-   "inicio": 75.722,
-   "fin": 78.453,
-   "texto": "Con 2.000 visitas al día, son unas dos semanas.",
+   "inicio": 73.909,
+   "fin": 77.045,
+   "texto": "Con 2.000 visitas diarias, son unas dos semanas de test.",
    "cue": "dias"
   },
   {
    "escena": "cuadruple",
-   "inicio": 78.753,
-   "fin": 86.219,
-   "texto": "Y si quieres detectar medio punto, no necesitas el doble, sino el cuádruple: 57.600 por grupo. El efecto entra al cuadrado.",
+   "inicio": 77.345,
+   "fin": 85.643,
+   "texto": "Si quieres detectar medio punto, la muestra no se duplica: se cuadruplica. 57.600 por grupo, porque el efecto va al cuadrado en la fórmula.",
    "cue": "mitad"
   },
   {
    "escena": "palancas",
-   "inicio": 86.519,
-   "fin": 96.269,
-   "texto": "Para bajar el MDE tienes tres palancas: más muestra, menos ruido, y grupos parejos. Repartir 90/10 en vez de 50/50 te obliga a tener casi el triple de datos.",
+   "inicio": 85.943,
+   "fin": 94.925,
+   "texto": "Para bajar el MDE hay tres palancas: más muestra, menos ruido y grupos parejos. Un reparto 90/10 exige casi el triple de datos que uno 50/50.",
    "cue": "palancas"
   },
   {
    "escena": "trampa",
-   "inicio": 96.569,
-   "fin": 106.147,
-   "texto": "La trampa más común: no significativo no es lo mismo que no hay efecto. Con 14.400 por grupo, un efecto real de medio punto solo se detecta 3 de cada 10 veces.",
+   "inicio": 95.225,
+   "fin": 104.377,
+   "texto": "Ojo con esto: no significativo no quiere decir sin efecto. Con 14.400 por grupo, un efecto real de medio punto se detecta apenas 3 de cada 10 veces.",
    "cue": "trampa"
   },
   {
    "escena": "cierre",
-   "inicio": 106.447,
+   "inicio": 104.677,
    "fin": 112.805,
-   "texto": "Calcula el MDE antes de lanzar, no después. En la próxima idea: cómo bajar el ruido gratis (CUPED). Compártelo y sígueme.",
+   "texto": "Calcula el MDE antes de lanzar, no después. En la siguiente parte: cómo bajar el ruido sin pedir más tráfico (CUPED). Si te sirvió, compártelo y sígueme.",
    "cue": "cta"
   }
  ]
